@@ -1,0 +1,26 @@
+# File: A44.globaltech_intgains.csv
+# Title: Internal gain ratios (heat released per unit of energy input)
+# Units: Unitless
+# Note: this table should include all techs of non-thermal services (even zeroes)
+# Column types: cccn
+# ----------
+supplysector,subsector,technology,input.ratio
+resid_rural hot water_cooking,gas,gas water heater,0.112
+resid_rural hot water_cooking,electricity,electric resistance water heater,0.112
+resid_rural hot water_cooking,refined liquids,fuel water heater,0.112
+resid_rural hot water_cooking,coal,coal water heater,0.112
+resid_rural hot water_cooking,trad biomass,wood water heater,0.112
+resid_rural lighting,electricity,elec light,0.803
+resid_rural appliances,electricity,electric appliances,0.632
+resid_urban hot water_cooking,gas,gas water heater,0.112
+resid_urban hot water_cooking,electricity,electric resistance water heater,0.112
+resid_urban hot water_cooking,refined liquids,fuel water heater,0.112
+resid_urban hot water_cooking,coal,coal water heater,0.112
+resid_urban lighting,electricity,elec light,0.803
+resid_urban appliances,electricity,electric appliances,0.632
+comm hot water_cooking,gas,gas water heater,0.112
+comm hot water_cooking,electricity,electric resistance water heater,0.112
+comm hot water_cooking,refined liquids,fuel water heater,0.112
+comm hot water_cooking,coal,coal water heater,0.112
+comm lighting,electricity,elec light,0.803
+comm appliances,electricity,electric appliances,0.632

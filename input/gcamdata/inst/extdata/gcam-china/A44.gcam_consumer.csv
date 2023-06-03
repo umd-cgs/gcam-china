@@ -1,0 +1,9 @@
+# File: A44.gcam_consumer.csv
+# Title: GCAM consumer attributes
+# Units: Unitless
+# Column types: cccncc
+# ----------
+gcam.consumer,nodeInput,building.node.input,price.exponent,internal.gains.market.name,internal.gains.unit
+resid_urban,resid_urban,resid_urban_building,-0.1,resid_urban-internal-gains-trial-market,EJ
+resid_rural,resid_rural,resid_rural_building,-0.1,resid_rural-internal-gains-trial-market,EJ
+comm,comm,comm_building,-0.1,comm-internal-gains-trial-market,EJ

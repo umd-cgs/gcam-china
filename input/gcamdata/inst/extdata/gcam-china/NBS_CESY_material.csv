@@ -1,0 +1,39 @@
+# File: NBS_CESY_material.csv
+# Title: Mapping from China energy statistical yearbook energy balance Material to intermediate fuel names
+# Units: NA
+# Column types: cc
+# ----------
+EBMaterial,fuel
+Bitumen Asphalt,
+Blast Furnace Gas,coal
+Coal Briquettes,coal
+Coal Cleaned,coal
+Coal Gas not Coke Source,gas
+Coal Raw,coal
+Coal Washed,coal
+Coke,coal
+Coke Other Products,coal
+Coke Oven Gas,coal
+Converter Gas,gas
+Crude Oil,crude oil
+Diesel Oil,refined liquids
+Electricity,electricity
+Fuel Oil,refined liquids
+Gangue,coal
+Gasoline,refined liquids
+Heat,heat
+Kerosene,refined liquids
+Liquid Petroleum Gas,refined liquids
+LNG,gas
+Lubricants,refined liquids
+Naphtha,refined liquids
+Natural Gas,gas
+Other Energy,
+Petroleum Coke,refined liquids
+Petroleum Other Products,refined liquids
+Petroleum Waxes,refined liquids
+Refinery Gas,refined liquids
+Solvents,
+Total Coal,
+Total Energy,
+Total Petroleum,

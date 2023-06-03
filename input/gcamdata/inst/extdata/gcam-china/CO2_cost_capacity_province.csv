@@ -1,0 +1,39 @@
+# File: CO2_cost_capacity_province.csv
+# Title: Smooth resource curve parameters for carbon storage by province
+# Units: price unit: 2010 $/tCO2; Capacity unit: MtCO2
+# Description: Note: base price depends on value added potential. Zero if there is potential. 10% of mid price if Low # potential. 30% of mid price if No potential; Note: Hainan and Tibet mid price of 100 arbitrarily set to be similar to other provinces with zero storage
+# Source: Bob Dahowski and Casie Davidson - PNNL
+# Column types: cnnnc
+# ----------
+province.name,maxSubResource,mid.price,base.price,value.added.potential
+Anhui,12300,6.4,0.64,Low
+Beijing,4400,2.6,0.26,Low
+Chongqing,6000,6.3,0.63,Low
+Fujian,0,95.4,28.62,No
+Gansu,2800,8.4,0.84,Low
+Guangdong,0,105.8,31.74,No
+Guangxi,0,56.7,17.01,No
+Guizhou,8600,8.4,2.52,No
+Hainan,0,100,30,No
+Hebei,23600,2.9,0,Yes
+Heilongjiang,7900,3.8,0,Yes
+Henan,19900,3.2,0,Yes
+Hubei,12900,3.2,0.96,No
+Hunan,6700,4.7,1.41,No
+Inner Mongolia,20200,3.4,0,Yes
+Jiangsu,28300,4.8,1.44,No
+Jiangxi,5500,6.8,2.04,No
+Jilin,5400,4.5,0,Yes
+Liaoning,15900,4.4,0,Yes
+Ningxia,3500,3.9,0.39,Low
+Qinghai,100,7.3,2.19,No
+Shaanxi,8500,6.5,0,Yes
+Shandong,37100,3.7,0,Yes
+Shanghai,10300,7,2.1,No
+Shanxi,19800,4.7,0,Yes
+Sichuan,6200,6.5,1.95,No
+Tianjin,5800,2.4,0.72,No
+Tibet,0,100,30,No
+Xinjiang,3100,4.6,0,Yes
+Yunnan,1200,8.4,0,Yes
+Zhejiang,16400,8.5,2.55,No

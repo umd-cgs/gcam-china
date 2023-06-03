@@ -1,0 +1,41 @@
+# File: unallocated_CStorage_province.csv
+# Title: unallocated CO2 storage by province
+# Units: Mt CO2
+# Description: Provincial unallocated CO2
+# Source: PNNL's research based on Dahowski et al. (2010, 2017) and Yu et al. (2018)
+# Column types: cn
+# ----------
+province.name,MtCO2
+Anhui,44000
+Beijing,10000
+Chongqing,15000
+Fujian,0
+Guangdong,0
+Gansu,174000
+Guangxi,0
+Guizhou,14000
+Henan,71000
+Hubei,18000
+Hebei,36000
+Hainan,0
+Hong Kong,0
+Heilongjiang,164000
+Hunan,7500
+Jilin,66000
+Jiangsu,32000
+Jiangxi,5700
+Liaoning,14000
+Macau,0
+Inner Mongolia,191000
+Ningxia,39000
+Qinghai,21000
+Sichuan,23000
+Shandong,63000
+Shanghai,6000
+Shaanxi,84000
+Shanxi,48000
+Tianjin,7400
+Xinjiang,834000
+Tibet,0
+Yunnan,1700
+Zhejiang,12000

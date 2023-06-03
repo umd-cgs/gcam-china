@@ -1,0 +1,46 @@
+# File: NBS_CESY_process.csv
+# Title: Mapping from China energy statistical yearbook energy balance Process to intermediate sector names
+# Units: NA
+# Column types: cc
+# ----------
+EBProcess,sector
+Agriculture,industry
+Briquettes,
+Chinese Vessels Refueling Abroad,
+Coal Washing,
+Coking,
+Construction,industry
+Export,
+Foreign Vessels Refueling in China,trn_intl_shp
+Gas Works,gas_processing
+Gas Works - Coke input,gas_processing
+Heating Supply,heat
+Heavy Industry,industry
+Import,
+Indigenous Production,resource
+Indigenous Production - Hydro Power,elec_hydro
+Indigenous Production - Nuclear Power,elec_nuc
+Industry,industry
+Industry - NonEnergy Use,industry_feedstocks
+Interprovincial Exports,
+Interprovincial Imports,
+Light Industry,industry
+Losses in Transformation,
+Material Producing Sectors,industry
+Natural Gas Liquefaction,refinery
+Non-Material Sectors,industry
+Other,industry
+Petroleum Refineries,refinery
+Petroleum Refineries - Petroleum Products Input,refinery
+Recovery of Energy,
+Residential consumption,resid
+Residential consumption - Rural,resid_rural
+Residential consumption - Urban,resid_urban
+Statistical Difference,
+Stock Change,
+Thermal Power,electricity
+Total Consumption,
+Total Primary Energy Supply,
+Total Transformation,
+"Transportation, Telecommunications, Postal",trn_all
+"Wholesale, Retail Trade, and Catering Service",comm

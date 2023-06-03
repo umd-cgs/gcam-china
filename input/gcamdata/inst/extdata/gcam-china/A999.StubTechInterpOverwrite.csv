@@ -1,0 +1,23 @@
+# File: A999.StubTechInterpOverwrite.csv
+# Title: Apply ccs shareweights overwrite methods to all provinces
+# Units: Unitless
+# Description: Assign shareweight overwrite methods to China provinces. Remove N fertilizer sector from XZ province
+# Source: from the former csv file
+# Column types: ccccncnnc
+# ----------
+region,supplysector,subsector,stub.technology,delete,apply.to,from.year,to.year,interpolation.function
+China,N fertilizer,coal,coal CCS,1,share-weight,2050,2100,linear
+China,N fertilizer,gas,gas CCS,1,share-weight,2050,2100,linear
+China,cement,cement,cement CCS,1,share-weight,2050,2100,linear
+China,electricity,coal,coal (conv pul CCS),1,share-weight,2050,2100,linear
+China,electricity,coal,coal (IGCC CCS),1,share-weight,2050,2100,linear
+China,electricity,gas,gas (CC CCS),1,share-weight,2050,2100,linear
+China,electricity,refined liquids,refined liquids (CC CCS),1,share-weight,2050,2100,linear
+China,electricity,biomass,biomass (conv CCS),1,share-weight,2050,2100,linear
+China,electricity,biomass,biomass (IGCC CCS),1,share-weight,2050,2100,linear
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,1,share-weight,2050,2100,linear
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,1,share-weight,2050,2100,linear
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,1,share-weight,2050,2100,linear
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,1,share-weight,2050,2100,linear
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,1,share-weight,2050,2100,linear
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,1,share-weight,2050,2100,linear

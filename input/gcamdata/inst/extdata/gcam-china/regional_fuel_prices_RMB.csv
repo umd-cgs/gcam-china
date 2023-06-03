@@ -1,0 +1,39 @@
+# File: regional_fuel_prices_RMB.csv
+# Title: regional fuel prices
+# Units: Refined liquids unit: 2014 RMB/t, Gas unit: 2015 RMB/thousand m3, Coal units: 2015 RMB/t
+# Source: Refined liquids source: LBL 2014 China Key Energy Statistics price cap on diesel, Gas source: NDRC http://www.ndrc.gov.cn/zcfb/zcfbtz/201502/t20150228_665694.html accessed 10/14/2015, Coal Source: from http://www.coal-link.com/coal/list/79/ accessed 4/9/2015"
+# Description: Price for diesel fuel in Tibet is the mean of the prices in its grid region weighted by 2010 diesel consumption from L101.NBS_use_all_Mtce, Prices for natural gas in Fujian and Tibet are means of prices in the respective grid regions weighted by 2010 LNG+NG consumption from L101.NBS_use_all_Mtce, For provinces having multiple coal markets: the median of the lowest and highest prices across markets are used. For provinces where coal price data was not available: the average of the prices in the relevant grid region weighted by 2010 coal use was used. The price for Guangxi is the 2014 coal import price.
+# Column types: cnnn
+# ----------
+province.name,coal,refined.liquids,gas
+Anhui,415,8465,2790
+Beijing,360.5,8980,2700
+Chongqing,480,8625,2340
+Fujian,544.4,8480,2859.482498
+Gansu,412.5,8435,2130
+Guangdong,545.2,8855,2880
+Guangxi,650,8550,2710
+Guizhou,527.5,8575,2410
+Hainan,545.2,8920,2340
+Hebei,340,8415,2680
+Heilongjiang,445,8415,2460
+Henan,380,8435,2710
+Hubei,605,8440,2660
+Hunan,480,8500,2660
+Inner Mongolia,222.5,8430,2040
+Jiangsu,415,8455,2860
+Jiangxi,480,8475,2660
+Jilin,387.5,8415,2460
+Liaoning,365,8415,2680
+Ningxia,317.5,8415,2210
+Qinghai,345,8460,1970
+Shaanxi,305,8425,2040
+Shandong,480,8425,2680
+Shanghai,544.4,8950,2880
+Shanxi,327.5,8470,2610
+Sichuan,387.5,8650,2350
+Tianjin,360.5,8415,2700
+Tibet,297.8,8396.548626,1985.929565
+Xinjiang,185,8310,1850
+Yunnan,480,8605,2410
+Zhejiang,965,8470,2870

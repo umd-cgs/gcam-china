@@ -1,0 +1,47 @@
+# File: calibrated_techs_bld_china.csv
+# Title: Building technologies mapping file for China
+# Units: NA
+# Description: Mapping between the sectors / services / fuels in Level1 processing to the technology names in GCAM
+# Column types: ccccccc
+# ----------
+supplysector,subsector,technology,minicam.energy.input,sector,fuel,service
+resid_rural heating,trad biomass,trad wood furnace,traditional biomass,resid_rural,traditional biomass,Heating
+resid_rural heating,biomass,wood furnace,delivered biomass,resid_rural,biomass,Heating
+resid_rural heating,coal,coal furnace,delivered coal,resid_rural,coal,Heating
+resid_rural heating,gas,gas furnace,delivered gas,resid_rural,gas,Heating
+resid_rural heating,electricity,electric furnace,elect_td_bld,resid_rural,electricity,Heating
+resid_rural heating,refined liquids,fuel furnace,refined liquids enduse,resid_rural,refined liquids,Heating
+resid_rural cooling,electricity,air conditioning,elect_td_bld,resid_rural,electricity,Cooling
+resid_rural hot water_cooking,gas,gas water heater,delivered gas,resid_rural,gas,WH & C
+resid_rural hot water_cooking,electricity,electric resistance water heater,elect_td_bld,resid_rural,electricity,WH & C
+resid_rural hot water_cooking,refined liquids,fuel water heater,refined liquids enduse,resid_rural,refined liquids,WH & C
+resid_rural hot water_cooking,coal,coal water heater,delivered coal,resid_rural,coal,WH & C
+resid_rural hot water_cooking,trad biomass,wood water heater,traditional biomass,resid_rural,traditional biomass,WH & C
+resid_rural lighting,electricity,elec light,elect_td_bld,resid_rural,electricity,Lighting
+resid_rural appliances,electricity,electric appliances,elect_td_bld,resid_rural,electricity,Appliance
+resid_urban heating,biomass,wood furnace,delivered biomass,resid_urban,biomass,Heating
+resid_urban heating,coal,coal furnace,delivered coal,resid_urban,coal,Heating
+resid_urban heating,gas,gas furnace,delivered gas,resid_urban,gas,Heating
+resid_urban heating,electricity,electric furnace,elect_td_bld,resid_urban,electricity,Heating
+resid_urban heating,refined liquids,fuel furnace,refined liquids enduse,resid_urban,refined liquids,Heating
+resid_urban heating,heat,district heat,district heat,resid_urban,heat,Heating
+resid_urban cooling,electricity,air conditioning,elect_td_bld,resid_urban,electricity,Cooling
+resid_urban hot water_cooking,gas,gas water heater,delivered gas,resid_urban,gas,WH & C
+resid_urban hot water_cooking,electricity,electric resistance water heater,elect_td_bld,resid_urban,electricity,WH & C
+resid_urban hot water_cooking,refined liquids,fuel water heater,refined liquids enduse,resid_urban,refined liquids,WH & C
+resid_urban hot water_cooking,coal,coal water heater,delivered coal,resid_urban,coal,WH & C
+resid_urban lighting,electricity,elec light,elect_td_bld,resid_urban,electricity,Lighting
+resid_urban appliances,electricity,electric appliances,elect_td_bld,resid_urban,electricity,Appliance
+comm heating,biomass,wood furnace,delivered biomass,comm,biomass,Heating
+comm heating,coal,coal furnace,delivered coal,comm,coal,Heating
+comm heating,gas,gas furnace,delivered gas,comm,gas,Heating
+comm heating,electricity,electric furnace,elect_td_bld,comm,electricity,Heating
+comm heating,refined liquids,fuel furnace,refined liquids enduse,comm,refined liquids,Heating
+comm heating,heat,district heat,district heat,comm,heat,Heating
+comm cooling,electricity,air conditioning,elect_td_bld,comm,electricity,Cooling
+comm hot water_cooking,gas,gas water heater,delivered gas,comm,gas,WH & C
+comm hot water_cooking,electricity,electric resistance water heater,elect_td_bld,comm,electricity,WH & C
+comm hot water_cooking,refined liquids,fuel water heater,refined liquids enduse,comm,refined liquids,WH & C
+comm hot water_cooking,coal,coal water heater,delivered coal,comm,coal,WH & C
+comm lighting,electricity,elec light,elect_td_bld,comm,electricity,Lighting
+comm appliances,electricity,electric appliances,elect_td_bld,comm,electricity,Appliance

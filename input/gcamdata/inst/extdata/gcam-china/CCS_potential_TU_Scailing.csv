@@ -1,0 +1,40 @@
+# File: CCS_potential_TU_Scailing.csv
+# Title: Total CCS capacity from TU study
+# Units: CO2-Mt
+# Description: Provincial CO2 potential
+# Source: TU, Chujie Bu (Assessment of carbon dioxide storage potential and costs in county-level onshore basins using multi-criteria assessment)
+# Column types: cnnnnnc
+# ----------
+Province,GCAM,Unfiltered,Filter_prohibited_indicators _by_county,Direct_filter_prohibited_indicators,Yiming_Wie_JCP2022,Note
+Anhui,12201,120045,9192,61011,457300,
+Beijing,4323,7608,1589,2700,3200,
+Chongqing,5962,27876,5071,13264,20300,
+Fujian,0,0,0,0,0,
+Gansu,2721,94501,76133,73037,62200,"GCAM data does not seem to consider the Jiuxi Jiudong Basin, and the result of screening by county in the case of the Yingen Basin alone is 3622, which is close"
+Guangdong,0,0,0,0,0,
+Guangxi,0,0,0,0,0,
+Guizhou,8522,2251,107,545,5000,
+Hebei,22731,84873,6548,25548,473000,
+Heilongjiang,7167,161411,138720,119408,153700,Results vary widely
+Henan,246367,193500,19293,22833,924500,
+Hubei,12866,37085,5248,7896,40900,
+Hunan,6743,21391,1150,8160,28200,
+Inner Mongolia,19944,594237,569682,537123,231400,Results vary widely
+Jiangsu,28132,65672,12421,32603,39200,
+Jiangxi,5477,0,0,0,0,The basin currently under consideration does not include the basin located in Jiangxi
+Jilin,4838,70283,59355,53926,68800,
+Liaoning,15258,30455,22830,23489,25700,
+Ningxia,3450,21002,20880,17540,20000,
+Qinghai,124,27907,26644,24796,19900,
+Shaanxi,8342,151678,98685,103125,109600,
+Shandong,36138,46953,2855,19036,57900,
+Shanghai,10329,0,0,0,0,The basin currently under consideration does not include the basin located in Shanghai
+Shanxi,39213,84338,33461,45847,8600,
+Sichuan,6217,75783,5314,24784,45700,
+Tianjin,5714,9068,1594,4062,12000,
+Xinjiang,2749,1135947,1093841,992096,972200,Results vary widely
+Yunnan,1106,1225,41,196,1900,
+Zhejiang,16383,0,0,0,0,The basin currently under consideration does not include the basin located in Zhejiang
+Hainan,0,0,0,0,0,
+Tibet,0,0,0,0,0,
+Total ,533017,3065089,2210654,2213025,3781200,

@@ -1,0 +1,52 @@
+# File: tibet_shares_mappings.csv
+# Title: tibet_shares_mappings
+# Units: NA
+# Column types: cccccc
+# ----------
+xz.sector,xz.fuel,EBProcess,EBMaterial,sector,fuel
+Residential Urban,electricity,Residential consumption - Urban,Electricity,resid_urban,electricity
+Residential Urban,traditional biomass,Residential consumption - Urban,,resid_urban,traditional biomass
+Residential Urban,biogas,Residential consumption - Urban,Converter Gas,resid_urban,gas
+Residential Urban,natrual gas,Residential consumption - Urban,Natural Gas,resid_urban,gas
+Residential Urban,LPG,Residential consumption - Urban,Liquid Petroleum Gas,resid_urban,refined liquids
+Residential Urban,oil,Residential consumption - Urban,Diesel Oil,resid_urban,refined liquids
+Residential Urban,coal,Residential consumption - Urban,Coal Raw,resid_urban,coal
+Residential Urban,heat,Residential consumption - Urban,Heat,resid_urban,heat
+Residential Urban,delivered biomass,Residential consumption - Urban,,resid_urban,biomass
+Residential Rural,electricity,Residential consumption - Rural,Electricity,resid_rural,electricity
+Residential Rural,traditional biomass,Residential consumption - Rural,,resid_rural,traditional biomass
+Residential Rural,biogas,Residential consumption - Rural,Converter Gas,resid_rural,gas
+Residential Rural,natrual gas,Residential consumption - Rural,Natural Gas,resid_rural,gas
+Residential Rural,LPG,Residential consumption - Rural,Liquid Petroleum Gas,resid_rural,refined liquids
+Residential Rural,oil,Residential consumption - Rural,Diesel Oil,resid_rural,refined liquids
+Residential Rural,coal,Residential consumption - Rural,Coal Raw,resid_rural,coal
+Residential Rural,heat,Residential consumption - Rural,Heat,resid_rural,heat
+Residential Rural,delivered biomass,Residential consumption - Rural,,resid_rural,biomass
+Commercial,electricity,"Wholesale, Retail Trade, and Catering Service",Electricity,comm,electricity
+Commercial,traditional biomass,"Wholesale, Retail Trade, and Catering Service",,comm,traditional biomass
+Commercial,biogas,"Wholesale, Retail Trade, and Catering Service",Converter Gas,comm,gas
+Commercial,natrual gas,"Wholesale, Retail Trade, and Catering Service",Natural Gas,comm,gas
+Commercial,LPG,"Wholesale, Retail Trade, and Catering Service",Liquid Petroleum Gas,comm,refined liquids
+Commercial,oil,"Wholesale, Retail Trade, and Catering Service",Diesel Oil,comm,refined liquids
+Commercial,coal,"Wholesale, Retail Trade, and Catering Service",Coal Raw,comm,coal
+Commercial,heat,"Wholesale, Retail Trade, and Catering Service",Heat,comm,heat
+Commercial,delivered biomass,"Wholesale, Retail Trade, and Catering Service",,comm,biomass
+Industry,electricity,Industry,Electricity,industry,electricity
+Industry,traditional biomass,Industry,,industry,traditional biomass
+Industry,biogas,Industry,Converter Gas,industry,gas
+Industry,natrual gas,Industry,Natural Gas,industry,gas
+Industry,LPG,Industry,Liquid Petroleum Gas,industry,refined liquids
+Industry,oil,Industry,Diesel Oil,industry,refined liquids
+Industry,coal,Industry,Coal Raw,industry,coal
+Industry,heat,Industry,Heat,industry,heat
+Industry,delivered biomass,Industry,,industry,biomass
+Transportation,electricity,"Transportation, Telecommunications, Postal",Electricity,trn_all,electricity
+Transportation,traditional biomass,"Transportation, Telecommunications, Postal",,trn_all,traditional biomass
+Transportation,biogas,"Transportation, Telecommunications, Postal",Converter Gas,trn_all,gas
+Transportation,natrual gas,"Transportation, Telecommunications, Postal",Natural Gas,trn_all,gas
+Transportation,LPG,"Transportation, Telecommunications, Postal",Liquid Petroleum Gas,trn_all,refined liquids
+Transportation,oil,"Transportation, Telecommunications, Postal",Diesel Oil,trn_all,refined liquids
+Transportation,coal,"Transportation, Telecommunications, Postal",Coal Raw,trn_all,coal
+Transportation,heat,"Transportation, Telecommunications, Postal",Heat,trn_all,heat
+Transportation,delivered biomass,"Transportation, Telecommunications, Postal",,trn_all,biomass
+Industry,oil,Industry - NonEnergy Use,Diesel Oil,industry_feedstocks,refined liquids

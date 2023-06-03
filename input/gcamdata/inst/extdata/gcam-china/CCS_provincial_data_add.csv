@@ -1,0 +1,21 @@
+# File: CCS_provincial_data_add.csv
+# Title: C and Cost(1990USD) by province
+# Units: C-Mt,Cost-1990USD per t C
+# Description: cost grades of provinces without data (Tibet and Hainan) or onshore storage (Fujian, Guangdong, Guangxi, and Qinghai)
+# Source: LA161.Cstorage.R in the old data system
+# Column types: ccnn
+# ----------
+province.name,grade,Cost_1990USDtC,MtC
+Tibet,grade 1,0,0
+Tibet,grade 2,280,0
+Hainan,grade 1,0,0
+Hainan,grade 2,280,0
+Fujian,grade 1,0,0
+Fujian,grade 2,280,0
+Guangdong,grade 1,0,0
+Guangdong,grade 2,280,0
+Guangxi,grade 1,0,0
+Guangxi,grade 2,280,0
+Qinghai,grade 1,0,0
+Qinghai,grade 2,7.26,113.3
+Qinghai,grade 3,12.58,10.3

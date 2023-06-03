@@ -1,0 +1,40 @@
+# File: solar_csp_pv_capacityfactor.csv
+# Title: Capacity factor for centralized PV and CSP by province
+# Units: Unitless
+# Description: Capacity factor for centralized PV and CSP by province
+# Source: He and Kammen 2016
+# Column types: cnn
+# ----------
+province.name,Centralized.PV,CSP
+Beijing,0.1865,0.1855
+Tianjin,0.1797,0.1672
+Hebei,0.1877,0.185
+Shanxi,0.197,0.1998
+Inner Mongolia,0.2031,0.22295
+Liaoning,0.1814,0.1621
+Jilin,0.1784,0.1515
+Heilongjiang,0.1727,0.1562
+Shanghai,0.1682,0.1251
+Jiangsu,0.173,0.1322
+Zhejiang,0.1764,0.1238
+Anhui,0.1734,0.1202
+Fujian,0.1931,0.1223
+Jiangxi,0.1754,0.1128
+Shandong,0.1784,0.154
+Henan,0.1732,0.1241
+Hubei,0.1682,0.1022
+Hunan,0.1642,0.0942
+Guangdong,0.192,0.1088
+Guangxi,0.1841,0.1037
+Hainan,0.216,0.151
+Chongqing,0.1514,0.0805
+Sichuan,0.1924,0.1358
+Guizhou,0.1862,0.1169
+Yunnan,0.2394,0.2094
+Tibet,0.3087,0.3689
+Shaanxi,0.1908,0.1636
+Gansu,0.2143,0.2253
+Qinghai,0.2603,0.2933
+Ningxia,0.214,0.2197
+Xinjiang,0.1928,0.2085
+Average,0.192658065,0.162146774

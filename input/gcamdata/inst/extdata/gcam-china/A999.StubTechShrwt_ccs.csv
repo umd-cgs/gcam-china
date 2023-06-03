@@ -1,0 +1,338 @@
+# File: A999.StubTechShrwt_ccs.csv
+# Title: Apply new ccs shareweights to all provinces
+# Units: Unitless
+# Description: Assign shareweight assumptions of CCS to subtechnologies by China province. Remove N fertilizer sector from XZ province
+# Source: from the former csv file
+# Column types: ccccnn
+# ----------
+region,supplysector,subsector.name,stub.technology,year,share.weight
+China,N fertilizer,coal,coal CCS,1975,0
+China,N fertilizer,gas,gas CCS,1975,0
+China,N fertilizer,coal,coal CCS,1990,0
+China,N fertilizer,gas,gas CCS,1990,0
+China,N fertilizer,coal,coal CCS,2005,0
+China,N fertilizer,gas,gas CCS,2005,0
+China,N fertilizer,coal,coal CCS,2010,0
+China,N fertilizer,gas,gas CCS,2010,0
+China,N fertilizer,coal,coal CCS,2015,0
+China,N fertilizer,gas,gas CCS,2015,0
+China,N fertilizer,coal,coal CCS,2020,0.2
+China,N fertilizer,gas,gas CCS,2020,0.2
+China,N fertilizer,coal,coal CCS,2025,0.4
+China,N fertilizer,gas,gas CCS,2025,0.4
+China,N fertilizer,coal,coal CCS,2030,0.6
+China,N fertilizer,gas,gas CCS,2030,0.6
+China,N fertilizer,coal,coal CCS,2035,0.8
+China,N fertilizer,gas,gas CCS,2035,0.8
+China,N fertilizer,coal,coal CCS,2040,1
+China,N fertilizer,gas,gas CCS,2040,1
+China,N fertilizer,coal,coal CCS,2045,1
+China,N fertilizer,gas,gas CCS,2045,1
+China,N fertilizer,coal,coal CCS,2050,1
+China,N fertilizer,gas,gas CCS,2050,1
+China,N fertilizer,coal,coal CCS,2055,1
+China,N fertilizer,gas,gas CCS,2055,1
+China,N fertilizer,coal,coal CCS,2060,1
+China,N fertilizer,gas,gas CCS,2060,1
+China,N fertilizer,coal,coal CCS,2065,1
+China,N fertilizer,gas,gas CCS,2065,1
+China,N fertilizer,coal,coal CCS,2070,1
+China,N fertilizer,gas,gas CCS,2070,1
+China,N fertilizer,coal,coal CCS,2075,1
+China,N fertilizer,gas,gas CCS,2075,1
+China,N fertilizer,coal,coal CCS,2080,1
+China,N fertilizer,gas,gas CCS,2080,1
+China,N fertilizer,coal,coal CCS,2085,1
+China,N fertilizer,gas,gas CCS,2085,1
+China,N fertilizer,coal,coal CCS,2090,1
+China,N fertilizer,gas,gas CCS,2090,1
+China,N fertilizer,coal,coal CCS,2095,1
+China,N fertilizer,gas,gas CCS,2095,1
+China,N fertilizer,coal,coal CCS,2100,1
+China,N fertilizer,gas,gas CCS,2100,1
+China,cement,cement,cement CCS,1975,0
+China,cement,cement,cement CCS,1990,0
+China,cement,cement,cement CCS,2005,0
+China,cement,cement,cement CCS,2010,0
+China,cement,cement,cement CCS,2015,0
+China,cement,cement,cement CCS,2020,0.2
+China,cement,cement,cement CCS,2025,0.4
+China,cement,cement,cement CCS,2030,0.6
+China,cement,cement,cement CCS,2035,0.8
+China,cement,cement,cement CCS,2040,1
+China,cement,cement,cement CCS,2045,1
+China,cement,cement,cement CCS,2050,1
+China,cement,cement,cement CCS,2055,1
+China,cement,cement,cement CCS,2060,1
+China,cement,cement,cement CCS,2065,1
+China,cement,cement,cement CCS,2070,1
+China,cement,cement,cement CCS,2075,1
+China,cement,cement,cement CCS,2080,1
+China,cement,cement,cement CCS,2085,1
+China,cement,cement,cement CCS,2090,1
+China,cement,cement,cement CCS,2095,1
+China,cement,cement,cement CCS,2100,1
+China,electricity,coal,coal (conv pul CCS),1975,0
+China,electricity,coal,coal (IGCC CCS),1975,0
+China,electricity,gas,gas (CC CCS),1975,0
+China,electricity,refined liquids,refined liquids (CC CCS),1975,0
+China,electricity,biomass,biomass (conv CCS),1975,0
+China,electricity,biomass,biomass (IGCC CCS),1975,0
+China,electricity,coal,coal (conv pul CCS),1990,0
+China,electricity,coal,coal (IGCC CCS),1990,0
+China,electricity,gas,gas (CC CCS),1990,0
+China,electricity,refined liquids,refined liquids (CC CCS),1990,0
+China,electricity,biomass,biomass (conv CCS),1990,0
+China,electricity,biomass,biomass (IGCC CCS),1990,0
+China,electricity,coal,coal (conv pul CCS),2005,0
+China,electricity,coal,coal (IGCC CCS),2005,0
+China,electricity,gas,gas (CC CCS),2005,0
+China,electricity,refined liquids,refined liquids (CC CCS),2005,0
+China,electricity,biomass,biomass (conv CCS),2005,0
+China,electricity,biomass,biomass (IGCC CCS),2005,0
+China,electricity,coal,coal (conv pul CCS),2010,0
+China,electricity,coal,coal (IGCC CCS),2010,0
+China,electricity,gas,gas (CC CCS),2010,0
+China,electricity,refined liquids,refined liquids (CC CCS),2010,0
+China,electricity,biomass,biomass (conv CCS),2010,0
+China,electricity,biomass,biomass (IGCC CCS),2010,0
+China,electricity,coal,coal (conv pul CCS),2015,0
+China,electricity,coal,coal (IGCC CCS),2015,0
+China,electricity,gas,gas (CC CCS),2015,0
+China,electricity,refined liquids,refined liquids (CC CCS),2015,0
+China,electricity,biomass,biomass (conv CCS),2015,0
+China,electricity,biomass,biomass (IGCC CCS),2015,0
+China,electricity,coal,coal (conv pul CCS),2020,0.2
+China,electricity,coal,coal (IGCC CCS),2020,0.2
+China,electricity,gas,gas (CC CCS),2020,0.2
+China,electricity,refined liquids,refined liquids (CC CCS),2020,0.2
+China,electricity,biomass,biomass (conv CCS),2020,0.2
+China,electricity,biomass,biomass (IGCC CCS),2020,0.2
+China,electricity,coal,coal (conv pul CCS),2025,0.4
+China,electricity,coal,coal (IGCC CCS),2025,0.4
+China,electricity,gas,gas (CC CCS),2025,0.4
+China,electricity,refined liquids,refined liquids (CC CCS),2025,0.4
+China,electricity,biomass,biomass (conv CCS),2025,0.4
+China,electricity,biomass,biomass (IGCC CCS),2025,0.4
+China,electricity,coal,coal (conv pul CCS),2030,0.6
+China,electricity,coal,coal (IGCC CCS),2030,0.6
+China,electricity,gas,gas (CC CCS),2030,0.6
+China,electricity,refined liquids,refined liquids (CC CCS),2030,0.6
+China,electricity,biomass,biomass (conv CCS),2030,0.6
+China,electricity,biomass,biomass (IGCC CCS),2030,0.6
+China,electricity,coal,coal (conv pul CCS),2035,0.8
+China,electricity,coal,coal (IGCC CCS),2035,0.8
+China,electricity,gas,gas (CC CCS),2035,0.8
+China,electricity,refined liquids,refined liquids (CC CCS),2035,0.8
+China,electricity,biomass,biomass (conv CCS),2035,0.8
+China,electricity,biomass,biomass (IGCC CCS),2035,0.8
+China,electricity,coal,coal (conv pul CCS),2040,1
+China,electricity,coal,coal (IGCC CCS),2040,1
+China,electricity,gas,gas (CC CCS),2040,1
+China,electricity,refined liquids,refined liquids (CC CCS),2040,1
+China,electricity,biomass,biomass (conv CCS),2040,1
+China,electricity,biomass,biomass (IGCC CCS),2040,1
+China,electricity,coal,coal (conv pul CCS),2045,1
+China,electricity,coal,coal (IGCC CCS),2045,1
+China,electricity,gas,gas (CC CCS),2045,1
+China,electricity,refined liquids,refined liquids (CC CCS),2045,1
+China,electricity,biomass,biomass (conv CCS),2045,1
+China,electricity,biomass,biomass (IGCC CCS),2045,1
+China,electricity,coal,coal (conv pul CCS),2050,1
+China,electricity,coal,coal (IGCC CCS),2050,1
+China,electricity,gas,gas (CC CCS),2050,1
+China,electricity,refined liquids,refined liquids (CC CCS),2050,1
+China,electricity,biomass,biomass (conv CCS),2050,1
+China,electricity,biomass,biomass (IGCC CCS),2050,1
+China,electricity,coal,coal (conv pul CCS),2055,1
+China,electricity,coal,coal (IGCC CCS),2055,1
+China,electricity,gas,gas (CC CCS),2055,1
+China,electricity,refined liquids,refined liquids (CC CCS),2055,1
+China,electricity,biomass,biomass (conv CCS),2055,1
+China,electricity,biomass,biomass (IGCC CCS),2055,1
+China,electricity,coal,coal (conv pul CCS),2060,1
+China,electricity,coal,coal (IGCC CCS),2060,1
+China,electricity,gas,gas (CC CCS),2060,1
+China,electricity,refined liquids,refined liquids (CC CCS),2060,1
+China,electricity,biomass,biomass (conv CCS),2060,1
+China,electricity,biomass,biomass (IGCC CCS),2060,1
+China,electricity,coal,coal (conv pul CCS),2065,1
+China,electricity,coal,coal (IGCC CCS),2065,1
+China,electricity,gas,gas (CC CCS),2065,1
+China,electricity,refined liquids,refined liquids (CC CCS),2065,1
+China,electricity,biomass,biomass (conv CCS),2065,1
+China,electricity,biomass,biomass (IGCC CCS),2065,1
+China,electricity,coal,coal (conv pul CCS),2070,1
+China,electricity,coal,coal (IGCC CCS),2070,1
+China,electricity,gas,gas (CC CCS),2070,1
+China,electricity,refined liquids,refined liquids (CC CCS),2070,1
+China,electricity,biomass,biomass (conv CCS),2070,1
+China,electricity,biomass,biomass (IGCC CCS),2070,1
+China,electricity,coal,coal (conv pul CCS),2075,1
+China,electricity,coal,coal (IGCC CCS),2075,1
+China,electricity,gas,gas (CC CCS),2075,1
+China,electricity,refined liquids,refined liquids (CC CCS),2075,1
+China,electricity,biomass,biomass (conv CCS),2075,1
+China,electricity,biomass,biomass (IGCC CCS),2075,1
+China,electricity,coal,coal (conv pul CCS),2080,1
+China,electricity,coal,coal (IGCC CCS),2080,1
+China,electricity,gas,gas (CC CCS),2080,1
+China,electricity,refined liquids,refined liquids (CC CCS),2080,1
+China,electricity,biomass,biomass (conv CCS),2080,1
+China,electricity,biomass,biomass (IGCC CCS),2080,1
+China,electricity,coal,coal (conv pul CCS),2085,1
+China,electricity,coal,coal (IGCC CCS),2085,1
+China,electricity,gas,gas (CC CCS),2085,1
+China,electricity,refined liquids,refined liquids (CC CCS),2085,1
+China,electricity,biomass,biomass (conv CCS),2085,1
+China,electricity,biomass,biomass (IGCC CCS),2085,1
+China,electricity,coal,coal (conv pul CCS),2090,1
+China,electricity,coal,coal (IGCC CCS),2090,1
+China,electricity,gas,gas (CC CCS),2090,1
+China,electricity,refined liquids,refined liquids (CC CCS),2090,1
+China,electricity,biomass,biomass (conv CCS),2090,1
+China,electricity,biomass,biomass (IGCC CCS),2090,1
+China,electricity,coal,coal (conv pul CCS),2095,1
+China,electricity,coal,coal (IGCC CCS),2095,1
+China,electricity,gas,gas (CC CCS),2095,1
+China,electricity,refined liquids,refined liquids (CC CCS),2095,1
+China,electricity,biomass,biomass (conv CCS),2095,1
+China,electricity,biomass,biomass (IGCC CCS),2095,1
+China,electricity,coal,coal (conv pul CCS),2100,1
+China,electricity,coal,coal (IGCC CCS),2100,1
+China,electricity,gas,gas (CC CCS),2100,1
+China,electricity,refined liquids,refined liquids (CC CCS),2100,1
+China,electricity,biomass,biomass (conv CCS),2100,1
+China,electricity,biomass,biomass (IGCC CCS),2100,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,1975,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,1975,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,1975,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,1975,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,1975,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,1975,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,1990,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,1990,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,1990,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,1990,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,1990,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,1990,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2005,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2005,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2005,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2005,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2005,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2005,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2010,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2010,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2010,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2010,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2010,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2010,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2015,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2015,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2015,0
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2015,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2015,0
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2015,0
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2020,0.2
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2020,0.2
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2020,0.2
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2020,0.2
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2020,0.2
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2020,0.2
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2025,0.4
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2025,0.4
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2025,0.4
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2025,0.4
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2025,0.4
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2025,0.4
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2030,0.6
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2030,0.6
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2030,0.6
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2030,0.6
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2030,0.6
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2030,0.6
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2035,0.8
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2035,0.8
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2035,0.8
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2035,0.8
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2035,0.8
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2035,0.8
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2040,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2040,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2040,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2040,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2040,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2040,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2045,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2045,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2045,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2045,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2045,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2045,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2050,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2050,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2050,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2050,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2050,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2050,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2055,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2055,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2055,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2055,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2055,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2055,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2060,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2060,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2060,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2060,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2060,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2060,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2065,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2065,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2065,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2065,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2065,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2065,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2070,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2070,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2070,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2070,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2070,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2070,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2075,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2075,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2075,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2075,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2075,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2075,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2080,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2080,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2080,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2080,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2080,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2080,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2085,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2085,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2085,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2085,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2085,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2085,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2090,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2090,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2090,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2090,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2090,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2090,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2095,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2095,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2095,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2095,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2095,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2095,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2100,1
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2100,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2100,1
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2100,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2100,1
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2100,1

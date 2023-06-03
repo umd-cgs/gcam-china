@@ -1,0 +1,9 @@
+# File: A44.demandFn_flsp.csv
+# Title: Floorspace demand function type
+# Units: Unitless
+# Column types: ccc
+# ----------
+gcam.consumer,nodeInput,prodDmdFnType
+resid_urban,resid_urban,building-function
+resid_rural,resid_rural,building-function
+comm,comm,building-function

@@ -1,0 +1,46 @@
+# File: A44.globaltech_eff.csv
+# Title: Building default input efficiencies
+# Units: Unitless
+# Column types: ccccnnnnnnnnnn
+# ----------
+supplysector,subsector,technology,minicam.energy.input,1971,1990,2005,2020,2035,2050,2065,2080,2095,2100
+resid_rural heating,trad biomass,trad wood furnace,traditional biomass,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15
+resid_rural heating,biomass,wood furnace,delivered biomass,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
+resid_rural heating,coal,coal furnace,delivered coal,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
+resid_rural heating,gas,gas furnace,delivered gas,0.665,0.665,0.78,0.78,0.792,0.804,0.816,0.828,0.841,0.841
+resid_rural heating,electricity,electric furnace,elect_td_bld,1,1,1,1,1,1,1,1,1,1
+resid_rural heating,refined liquids,fuel furnace,refined liquids enduse,0.725,0.725,0.78,0.78,0.792,0.804,0.816,0.828,0.841,0.841
+resid_rural cooling,electricity,air conditioning,elect_td_bld,2.042,2.042,2.637,2.738,2.842,2.951,3.063,3.18,3.302,3.302
+resid_rural hot water_cooking,gas,gas water heater,delivered gas,1,1,1,1,1,1,1,1,1,1
+resid_rural hot water_cooking,electricity,electric resistance water heater,elect_td_bld,1,1,1,1,1,1,1,1,1,1
+resid_rural hot water_cooking,refined liquids,fuel water heater,refined liquids enduse,1,1,1,1,1,1,1,1,1,1
+resid_rural hot water_cooking,coal,coal water heater,delivered coal,1,1,1,1,1,1,1,1,1,1
+resid_rural hot water_cooking,trad biomass,wood water heater,traditional biomass,1,1,1,1,1,1,1,1,1,1
+resid_rural lighting,electricity,elec light,elect_td_bld,0.021,0.021,0.021,0.021,0.022,0.022,0.022,0.023,0.023,0.023
+resid_rural appliances,electricity,electric appliances,elect_td_bld,0.709,0.709,1,1.108,1.129,1.146,1.163,1.181,1.199,1.199
+resid_urban heating,biomass,wood furnace,delivered biomass,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
+resid_urban heating,coal,coal furnace,delivered coal,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
+resid_urban heating,gas,gas furnace,delivered gas,0.665,0.665,0.78,0.78,0.792,0.804,0.816,0.828,0.841,0.841
+resid_urban heating,electricity,electric furnace,elect_td_bld,1,1,1,1,1,1,1,1,1,1
+resid_urban heating,refined liquids,fuel furnace,refined liquids enduse,0.725,0.725,0.78,0.78,0.792,0.804,0.816,0.828,0.841,0.841
+resid_urban heating,heat,district heat,district heat,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9
+resid_urban cooling,electricity,air conditioning,elect_td_bld,2.042,2.042,2.637,2.738,2.842,2.951,3.063,3.18,3.302,3.302
+resid_urban hot water_cooking,gas,gas water heater,delivered gas,1,1,1,1,1,1,1,1,1,1
+resid_urban hot water_cooking,electricity,electric resistance water heater,elect_td_bld,1,1,1,1,1,1,1,1,1,1
+resid_urban hot water_cooking,refined liquids,fuel water heater,refined liquids enduse,1,1,1,1,1,1,1,1,1,1
+resid_urban hot water_cooking,coal,coal water heater,delivered coal,1,1,1,1,1,1,1,1,1,1
+resid_urban lighting,electricity,elec light,elect_td_bld,0.021,0.021,0.021,0.021,0.022,0.022,0.022,0.023,0.023,0.023
+resid_urban appliances,electricity,electric appliances,elect_td_bld,0.709,0.709,1,1.108,1.129,1.146,1.163,1.181,1.199,1.199
+comm heating,biomass,wood furnace,delivered biomass,0.65,0.65,0.65,0.66,0.67,0.68,0.69,0.701,0.711,0.711
+comm heating,coal,coal furnace,delivered coal,0.65,0.65,0.65,0.66,0.67,0.68,0.69,0.701,0.711,0.711
+comm heating,gas,gas furnace,delivered gas,0.7,0.7,0.7,0.775,0.787,0.799,0.811,0.823,0.835,0.835
+comm heating,electricity,electric furnace,elect_td_bld,1,1,1,1,1,1,1,1,1,1
+comm heating,refined liquids,fuel furnace,refined liquids enduse,0.7,0.7,0.7,0.81,0.822,0.835,0.847,0.86,0.873,0.873
+comm heating,heat,district heat,district heat,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9
+comm cooling,electricity,air conditioning,elect_td_bld,2.4,2.4,2.4,2.782,2.888,2.998,3.113,3.231,3.355,3.355
+comm hot water_cooking,gas,gas water heater,delivered gas,1,1,1,1,1,1,1,1,1,1
+comm hot water_cooking,electricity,electric resistance water heater,elect_td_bld,1,1,1,1,1,1,1,1,1,1
+comm hot water_cooking,refined liquids,fuel water heater,refined liquids enduse,1,1,1,1,1,1,1,1,1,1
+comm hot water_cooking,coal,coal water heater,delivered coal,1,1,1,1,1,1,1,1,1,1
+comm lighting,electricity,elec light,elect_td_bld,0.021,0.021,0.021,0.021,0.022,0.022,0.022,0.023,0.023,0.023
+comm appliances,electricity,electric appliances,elect_td_bld,0.709,0.709,1,1.108,1.129,1.146,1.163,1.181,1.199,1.199

@@ -1,0 +1,46 @@
+# File: A44.globaltech_shrwt.csv
+# Title: Building default technology shareweights
+# Units: Unitless
+# Column types: cccnnn
+# ----------
+supplysector,subsector,technology,1971,2010,2100
+resid_rural heating,trad biomass,trad wood furnace,1,1,1
+resid_rural heating,biomass,wood furnace,1,1,1
+resid_rural heating,coal,coal furnace,1,1,1
+resid_rural heating,gas,gas furnace,1,1,1
+resid_rural heating,electricity,electric furnace,1,1,1
+resid_rural heating,refined liquids,fuel furnace,1,1,1
+resid_rural cooling,electricity,air conditioning,1,1,1
+resid_rural hot water_cooking,gas,gas water heater,1,1,1
+resid_rural hot water_cooking,electricity,electric resistance water heater,1,1,1
+resid_rural hot water_cooking,refined liquids,fuel water heater,1,1,1
+resid_rural hot water_cooking,coal,coal water heater,1,1,1
+resid_rural hot water_cooking,trad biomass,wood water heater,1,1,1
+resid_rural lighting,electricity,elec light,1,1,1
+resid_rural appliances,electricity,electric appliances,1,1,1
+resid_urban heating,biomass,wood furnace,1,1,1
+resid_urban heating,coal,coal furnace,1,1,1
+resid_urban heating,gas,gas furnace,1,1,1
+resid_urban heating,electricity,electric furnace,1,1,1
+resid_urban heating,refined liquids,fuel furnace,1,1,1
+resid_urban heating,heat,district heat,1,1,1
+resid_urban cooling,electricity,air conditioning,1,1,1
+resid_urban hot water_cooking,gas,gas water heater,1,1,1
+resid_urban hot water_cooking,electricity,electric resistance water heater,1,1,1
+resid_urban hot water_cooking,refined liquids,fuel water heater,1,1,1
+resid_urban hot water_cooking,coal,coal water heater,1,1,1
+resid_urban lighting,electricity,elec light,1,1,1
+resid_urban appliances,electricity,electric appliances,1,1,1
+comm heating,biomass,wood furnace,1,1,1
+comm heating,coal,coal furnace,1,1,1
+comm heating,gas,gas furnace,1,1,1
+comm heating,electricity,electric furnace,1,1,1
+comm heating,refined liquids,fuel furnace,1,1,1
+comm heating,heat,district heat,1,1,1
+comm cooling,electricity,air conditioning,1,1,1
+comm hot water_cooking,gas,gas water heater,1,1,1
+comm hot water_cooking,electricity,electric resistance water heater,1,1,1
+comm hot water_cooking,refined liquids,fuel water heater,1,1,1
+comm hot water_cooking,coal,coal water heater,1,1,1
+comm lighting,electricity,elec light,1,1,1
+comm appliances,electricity,electric appliances,1,1,1

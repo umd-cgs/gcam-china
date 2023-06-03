@@ -1,0 +1,51 @@
+# File: Tibet_share.csv
+# Title: Tibet_share
+# Units: %
+# Column types: ccn
+# ----------
+xz.sector,xz.fuel,share
+Residential Urban,electricity,0.055691412
+Residential Urban,traditional biomass,0
+Residential Urban,biogas,0
+Residential Urban,natrual gas,0
+Residential Urban,LPG,0.011286081
+Residential Urban,oil,0
+Residential Urban,coal,0.001432094
+Residential Urban,heat,0
+Residential Urban,delivered biomass,0
+Residential Rural,electricity,0.00741261
+Residential Rural,traditional biomass,0.714946223
+Residential Rural,biogas,0.003592695
+Residential Rural,natrual gas,0
+Residential Rural,LPG,0.001569002
+Residential Rural,oil,0.000148446
+Residential Rural,coal,0.00627601
+Residential Rural,heat,0
+Residential Rural,delivered biomass,0
+Commercial,electricity,0.00901486
+Commercial,traditional biomass,0
+Commercial,biogas,0
+Commercial,natrual gas,0
+Commercial,LPG,0
+Commercial,oil,0.014844643
+Commercial,coal,0.004707007
+Commercial,heat,0
+Commercial,delivered biomass,0
+Industry,electricity,0.01802972
+Industry,traditional biomass,0
+Industry,biogas,0
+Industry,natrual gas,0
+Industry,LPG,0.004707007
+Industry,oil,0.040036002
+Industry,coal,0.012888848
+Industry,heat,0
+Industry,delivered biomass,0
+Transportation,electricity,0
+Transportation,traditional biomass,0
+Transportation,biogas,0
+Transportation,natrual gas,0
+Transportation,LPG,0
+Transportation,oil,0.093417339
+Transportation,coal,0
+Transportation,heat,0
+Transportation,delivered biomass,0

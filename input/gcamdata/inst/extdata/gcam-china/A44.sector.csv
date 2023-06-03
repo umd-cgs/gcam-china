@@ -1,0 +1,21 @@
+# File: A44.sector.csv
+# Title: Building sector default supplysector information (units and logit exponents)
+# Units: Unitless
+# Column types: ccccncc
+# ----------
+supplysector,output.unit,input.unit,price.unit,logit.exponent,logit.type,final.energy
+resid_urban heating,EJ,EJ,1975$/GJ,-3,,building
+resid_urban cooling,EJ,EJ,1975$/GJ,-3,,building
+resid_urban hot water_cooking,EJ,EJ,1975$/GJ,-3,,building
+resid_urban lighting,EJ,EJ,1975$/GJ,-3,,building
+resid_urban appliances,EJ,EJ,1975$/GJ,-2,,building
+resid_rural heating,EJ,EJ,1975$/GJ,-3,,building
+resid_rural cooling,EJ,EJ,1975$/GJ,-3,,building
+resid_rural hot water_cooking,EJ,EJ,1975$/GJ,-3,,building
+resid_rural lighting,EJ,EJ,1975$/GJ,-3,,building
+resid_rural appliances,EJ,EJ,1975$/GJ,-2,,building
+comm heating,EJ,EJ,1975$/GJ,-3,,building
+comm cooling,EJ,EJ,1975$/GJ,-3,,building
+comm hot water_cooking,EJ,EJ,1975$/GJ,-3,,building
+comm lighting,EJ,EJ,1975$/GJ,-3,,building
+comm appliances,EJ,EJ,1975$/GJ,-2,,building

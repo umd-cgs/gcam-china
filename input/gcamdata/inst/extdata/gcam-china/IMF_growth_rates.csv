@@ -1,0 +1,13 @@
+# File: IMF_growth_rates.csv
+# Title: GDP growth rates
+# Units: N/A
+# Description: GDP per capita growth rates
+# Source:  IMF GDP per capita growth rates-World Economic Outlook (April 2020)
+# Column types: nn
+# ----------
+Year,IMF growth rate
+2020,0.00872
+2021,0.08914
+2022,0.0575
+2023,0.056
+2024,0.055

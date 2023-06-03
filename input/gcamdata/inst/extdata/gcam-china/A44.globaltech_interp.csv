@@ -1,0 +1,7 @@
+# File: A44.globaltech_interp.csv
+# Title: Interpolation rule over-writes for selected technologies
+# Units: Unitless
+# Source: Tables_Bld_Data.xlsx
+# Column types: cccnnncn
+# ----------
+supplysector,subsector,technology,apply.to,from.year,to.year,interpolation.function,to.value

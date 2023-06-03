@@ -1,0 +1,18 @@
+# File: A44.globaltech_retirement.csv
+# Title: Retirement function parameters
+# Units: Unitless
+# Column types: cnnnnn
+# ----------
+supplysector,lifetime,half_life_stock,steepness_stock,half_life_new,steepness_new
+resid_urban heating,40,20,0.1219,20,0.1886
+resid_urban cooling,30,15,0.162,18,0.2598
+resid_urban hot water_cooking,30,15,0.162,17,0.2266
+resid_urban appliances,25,13,0.1932,14,0.2752
+resid_resid heating,40,20,0.1219,20,0.1886
+resid_resid cooling,30,15,0.162,18,0.2598
+resid_resid hot water_cooking,30,15,0.162,17,0.2266
+resid_resid appliances,25,13,0.1932,14,0.2752
+comm heating,40,20,0.1219,20,0.1886
+comm cooling,30,15,0.162,18,0.2598
+comm hot water_cooking,30,15,0.162,17,0.2266
+comm appliances,25,13,0.1932,14,0.2752

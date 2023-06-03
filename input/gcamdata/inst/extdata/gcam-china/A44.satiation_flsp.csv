@@ -1,0 +1,39 @@
+# File: A44.satiation_flsp.csv
+# Title: Assumed satiation levels of floorspace
+# Units: m2 per capita
+# Column types: cnnn
+# ----------
+province,resid_urban,resid_rural,comm
+AH,45,55,35
+BJ,45,55,50
+CQ,45,55,35
+FJ,45,55,35
+GS,45,55,35
+GD,45,55,35
+GX,45,55,35
+GZ,45,55,35
+HI,45,55,35
+HE,45,55,35
+HL,45,55,35
+HA,45,55,35
+HB,45,55,35
+HN,45,55,35
+NM,45,55,35
+JS,45,55,35
+JX,45,55,35
+JL,45,55,35
+LN,45,55,35
+NX,45,55,35
+QH,45,55,35
+SN,45,55,35
+SD,45,55,35
+SH,45,70,35
+SX,45,55,35
+SC,45,55,35
+TJ,45,55,60
+XZ,45,55,350
+XJ,45,55,35
+YN,45,55,35
+ZJ,45,70,35
+HK,60,60,35
+MC,60,60,35

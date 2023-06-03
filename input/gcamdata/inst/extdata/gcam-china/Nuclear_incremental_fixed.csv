@@ -1,0 +1,38 @@
+# File: Nuclear_incremental_fixed.csv
+# Title: Electricity generation from nuclear by province
+# Units: EJ
+# Source: 
+# Column types: cnnnn
+# ----------
+province.name,2015,2020,2025,2030
+Anhui,0,0,0,0
+Beijing,0,0,0,0
+Chongqing,0,0,0,0
+Fujian,0.100360166,0.128742566,0.0567648,0.171316166
+Gansu,0,0,0,0
+Guangdong,0.076421729,0.236141568,0,0.207759168
+Guangxi,0,0.0567648,0.0283824,0.141912
+Guizhou,0,0,0,0
+Hainan,0,0.034626528,0,0
+Hebei,0,0,0.0567648,0
+Heilongjiang,0,0,0,0
+Henan,0,0,0,0
+Hubei,0,0,0,0
+Hunan,0,0,0,0.0567648
+Inner Mongolia,0,0,0,0
+Jiangsu,0.00338256,0.056197152,0,0.1135296
+Jiangxi,0,0,0,0.0567648
+Jilin,0,0,0,0
+Liaoning,0.074418653,0.0425736,0.1135296,0
+Ningxia,0,0,0,0
+Qinghai,0,0,0,0
+Shaanxi,0,0,0,0
+Shandong,0,0.06244128,0.13623552,0.0567648
+Shanghai,0,0,0,0
+Shanxi,0,0,0,0
+Sichuan,0,0,0,0
+Tianjin,0,0,0,0
+Tibet,0,0,0,0
+Xinjiang,0,0,0,0
+Yunnan,0,0,0,0
+Zhejiang,0.083625869,0.06003072,-0.008457955,0.1135296

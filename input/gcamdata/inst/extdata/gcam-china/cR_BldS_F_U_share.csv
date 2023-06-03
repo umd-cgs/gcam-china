@@ -1,0 +1,92 @@
+# File: cR_BldS_F_U_share.csv
+# Title: Climate region / building type / fuel / service shares
+# Units: NA
+# Description: rawdata/Buildings/Bld_fuel_service_China_climatezone.xlsx
+# Source: TODO
+# Column types: cccnnnnn
+# ----------
+climate.region,sector,fuel,Heating,Cooling ,Lighting,WH & C,Appliance
+C,resid_urban,biomass,1,0,0,0,0
+C,resid_urban,traditional biomass,0,0,0,0,0
+C,resid_urban,coal,0.9,0,0,0.1,0
+C,resid_urban,electricity,0.006092735,0.110320531,0.401881933,0.011604254,0.470100547
+C,resid_urban,gas,0.273778974,0,0,0.726221026,0
+C,resid_urban,refined liquids,0.30077457,0,0,0.69922543,0
+C,resid_urban,heat,1,0,0,0,0
+C,resid_rural,biomass,0.5,0,0,0.5,0
+C,resid_rural,traditional biomass,0.7,0,0,0.3,0
+C,resid_rural,coal,0.9,0,0,0.1,0
+C,resid_rural,electricity,0.006092735,0.110320531,0.401881933,0.011604254,0.470100547
+C,resid_rural,gas,0.273778974,0,0,0.726221026,0
+C,resid_rural,refined liquids,0.5,0,0,0.5,0
+C,resid_rural,heat,0,0,0,0,0
+C,comm,biomass,1,0,0,0,0
+C,comm,traditional biomass,0,0,0,0,0
+C,comm,coal,0.984117872,0,0,0.015882128,0
+C,comm,electricity,0.085483258,0.204984396,0.283717692,0.023647767,0.402166887
+C,comm,gas,0.721877411,0,0,0.278122589,0
+C,comm,refined liquids,0.747573874,0,0,0.252426126,0
+C,comm,heat,1,0,0,0,0
+HSCW,resid_urban,biomass,1,0,0,0,0
+HSCW,resid_urban,traditional biomass,0,0,0,0,0
+HSCW,resid_urban,coal,0.125,0,0,0.875,0
+HSCW,resid_urban,electricity,0.003644794,0.346640091,0.369692726,0.06558555,0.21443684
+HSCW,resid_urban,gas,0.671164894,0,0,0.328835106,0
+HSCW,resid_urban,refined liquids,0.280081303,0,0,0.719918697,0
+HSCW,resid_urban,heat,1,0,0,0,0
+HSCW,resid_rural,biomass,0.5,0,0,0.5,0
+HSCW,resid_rural,traditional biomass,0.52,0,0,0.48,0
+HSCW,resid_rural,coal,0.125,0,0,0.875,0
+HSCW,resid_rural,electricity,0.003644794,0.346640091,0.369692726,0.06558555,0.21443684
+HSCW,resid_rural,gas,0.671164894,0,0,0.328835106,0
+HSCW,resid_rural,refined liquids,0.5,0,0,0.5,0
+HSCW,resid_rural,heat,0,0,0,0,0
+HSCW,comm,biomass,1,0,0,0,0
+HSCW,comm,traditional biomass,0,0,0,0,0
+HSCW,comm,coal,0.495854218,0,0,0.504145782,0
+HSCW,comm,electricity,0.040161021,0.505831923,0.204970719,0.104964885,0.144071452
+HSCW,comm,gas,0.933564907,0,0,0.066435093,0
+HSCW,comm,refined liquids,0.728152308,0,0,0.271847692,0
+HSCW,comm,heat,1,0,0,0,0
+HSWW,resid_urban,biomass,1,0,0,0,0
+HSWW,resid_urban,traditional biomass,0,0,0,0,0
+HSWW,resid_urban,coal,0,0,0,1,0
+HSWW,resid_urban,electricity,0,0.334799533,0.305128798,0.029846773,0.330224896
+HSWW,resid_urban,gas,0.35138494,0,0,0.64861506,0
+HSWW,resid_urban,refined liquids,0,0,0,1,0
+HSWW,resid_urban,heat,1,0,0,0,0
+HSWW,resid_rural,biomass,0.5,0,0,0.5,0
+HSWW,resid_rural,traditional biomass,0.001,0,0,0.999,0
+HSWW,resid_rural,coal,0,0,0,1,0
+HSWW,resid_rural,electricity,0,0.334799533,0.305128798,0.029846773,0.330224896
+HSWW,resid_rural,gas,0.35138494,0,0,0.64861506,0
+HSWW,resid_rural,refined liquids,0.5,0,0,0.5,0
+HSWW,resid_rural,heat,0,0,0,0,0
+HSWW,comm,biomass,1,0,0,0,0
+HSWW,comm,traditional biomass,0,0,0,0,0
+HSWW,comm,coal,0,0,0,1,0
+HSWW,comm,electricity,0,0.526821903,0.182425545,0.051509198,0.239243354
+HSWW,comm,gas,0.78857706,0,0,0.21142294,0
+HSWW,comm,refined liquids,0,0,0,1,0
+HSWW,comm,heat,0,0,0,0,0
+SC,resid_urban,biomass,1,0,0,0,0
+SC,resid_urban,traditional biomass,0,0,0,0,0
+SC,resid_urban,coal,0.666666667,0,0,0.333333333,0
+SC,resid_urban,electricity,0.002104887,0.006100457,0.425724756,0.078033332,0.488036568
+SC,resid_urban,gas,0.704458607,0,0,0.295541393,0
+SC,resid_urban,refined liquids,0.493884056,0,0,0.506115944,0
+SC,resid_urban,heat,1,0,0,0,0
+SC,resid_rural,biomass,0.5,0,0,0.5,0
+SC,resid_rural,traditional biomass,0.73,0,0,0.27,0
+SC,resid_rural,coal,0.666666667,0,0,0.333333333,0
+SC,resid_rural,electricity,0.002104887,0.006100457,0.425724756,0.078033332,0.488036568
+SC,resid_rural,gas,0.704458607,0,0,0.295541393,0
+SC,resid_rural,refined liquids,0.5,0,0,0.5,0
+SC,resid_rural,heat,0,0,0,0,0
+SC,comm,biomass,1,0,0,0,0
+SC,comm,traditional biomass,0,0,0,0,0
+SC,comm,coal,0.932294026,0,0,0.067705974,0
+SC,comm,electricity,0.032172066,0.012348332,0.327414787,0.17323454,0.454830275
+SC,comm,gas,0.9425648,0,0,0.0574352,0
+SC,comm,refined liquids,0.870440779,0,0,0.129559221,0
+SC,comm,heat,1,0,0,0,0

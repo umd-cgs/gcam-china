@@ -1,0 +1,28 @@
+# File: trnUCD_NBS_mapping.csv
+# Title: trnUCD_NBS_mapping
+# Units: NA
+# Column types: cccc
+# ----------
+mode,fuel,EBProcess,EBMaterial
+Air Domestic,refined liquids,"Transportation, Telecommunications, Postal",Kerosene
+Air International,refined liquids,"Transportation, Telecommunications, Postal",Kerosene
+Bus,gas,"Transportation, Telecommunications, Postal",Natural Gas
+Bus,refined liquids,"Transportation, Telecommunications, Postal",Diesel Oil
+HSR,electricity,"Transportation, Telecommunications, Postal",Electricity
+LDV_2W,electricity,"Transportation, Telecommunications, Postal",Gasoline
+LDV_2W,refined liquids,"Transportation, Telecommunications, Postal",Gasoline
+LDV_2W_3W,electricity,"Transportation, Telecommunications, Postal",Gasoline
+LDV_2W_3W,gas,"Transportation, Telecommunications, Postal",Gasoline
+LDV_2W_3W,refined liquids,"Transportation, Telecommunications, Postal",Gasoline
+LDV_3W,refined liquids,"Transportation, Telecommunications, Postal",Gasoline
+LDV_4W,electricity,"Transportation, Telecommunications, Postal",Gasoline
+LDV_4W,gas,"Transportation, Telecommunications, Postal",Gasoline
+LDV_4W,hydrogen,"Transportation, Telecommunications, Postal",Gasoline
+LDV_4W,refined liquids,"Transportation, Telecommunications, Postal",Gasoline
+Rail,coal,"Transportation, Telecommunications, Postal",Total Coal
+Rail,electricity,"Transportation, Telecommunications, Postal",Electricity
+Rail,refined liquids,"Transportation, Telecommunications, Postal",Diesel Oil
+Ship Domestic,refined liquids,"Transportation, Telecommunications, Postal",Fuel Oil
+Ship International,refined liquids,"Transportation, Telecommunications, Postal",Fuel Oil
+Truck,refined liquids,"Transportation, Telecommunications, Postal",Diesel Oil
+Truck,gas,"Transportation, Telecommunications, Postal",Diesel Oil
