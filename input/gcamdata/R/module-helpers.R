@@ -1197,3 +1197,47 @@ compute_BC_OC_elc <- function(df, BC_OC_assumptions) {
   return (df)
 
 }
+
+#' map_province_name
+#'
+#' Map in alternative province names, optionally dropping the old name
+#'
+#' @param data Data, tibble
+#' @param mapping Table of alternative province names, tibble
+#' @param map_names Name of new province name columns in \code{mapping}, character
+#' @param replace Replace old province name to new name columns? Logical
+#' @return Data with new province name columns added or replaced.
+map_province_name <- function(data, mapping, map_names, replace = FALSE) {
+
+  orig.names <- old.name <- old.index <- new.names <- NULL  # silence package check.
+
+  # Sanity checks
+  assert_that(tibble::is_tibble(data))
+  assert_that(tibble::is_tibble(mapping))
+  assert_that(is.character(map_names))
+
+  orig.names <- names(data)
+  # Some error checking to make sure the mapping names match up.
+  old.name <- names(data)[names(data) %in% names(mapping)]
+  if(length (old.name) != 1) {
+    stop("\nCould not map province: data has zero or many matching column names in mapping.")
+  }
+  if(!all(map_names %in% names(mapping))) {
+    stop("\nCould not map province: one or more map_names do not match column names in mapping.")
+  }
+
+  # Do the name mapping
+  data <- left_join_error_no_match(data, mapping %>% select(old.name, map_names), by = old.name)
+
+  # Attempt to maintain the orgininal column ordering, if we
+  # are replacing then the new column use that position otherwise
+  # will just be added to the end.
+  if(replace) {
+    old.index <- match(old.name, orig.names)
+    new.names <- c(orig.names[seq_along(orig.names) < old.index], map_names, orig.names[seq_along(orig.names) > old.index])
+  } else {
+    new.names <- c(orig.names, map_names)
+  }
+  return(data[, new.names])
+}
+
