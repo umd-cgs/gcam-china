@@ -240,6 +240,37 @@ write_to_all_states <- function(data, names, region_list = gcamusa.STATES) {
     select(names)
 }
 
+#' write_to_all_provinces
+#'
+#' write out data to all provinces
+#'
+#' @param data Base tibble to start from
+#' @param names Character vector indicating the column names of the returned tibble
+#' @param provinces Character vector indicating which provinces to write out to (all provinces, or provinces w/o HK and MC)
+#' @note Used for China national data by GCAM region, which is repeated for each China province
+#' @return Tibble with data written out to all China provinces
+write_to_all_provinces <- function(data, names, provinces) {
+
+  assert_that(is_tibble(data))
+  assert_that(is.character(names))
+  assert_that(is.character(provinces))
+
+  region <- NULL  # silence package check notes
+
+  if("logit.year.fillout" %in% names) {
+    data$logit.year.fillout <- "start-year"
+  }
+
+  if("price.exp.year.fillout" %in% names) {
+    data$price.exp.year.fillout <- "start-year"
+  }
+
+  data %>%
+    set_years %>%
+    mutate(region = NULL) %>% # remove region column if it exists
+    repeat_add_columns(tibble(region = provinces)) %>%
+    select(names)
+}
 
 #' set_subsector_shrwt
 #'
