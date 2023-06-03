@@ -1067,3 +1067,88 @@ gcamusa.DUST <- TRUE
 # MODEL_FUTURE_YEARS <- seq(2010, 2100, 5)  # normally seq(2015, 2100, 5)
 # MODEL_BASE_YEARS <- c(1975, 1990, 2005)   # normally (1975, 1990, 2005, 2010)
 # MODEL_YEARS <- c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)
+
+# GCAM-China constants ======================================================================
+
+# GCAM-China region ID
+gcamchina.REGION_ID <-11
+gcamchina.REGION <- "China"
+
+# GCAM-China time
+gcamchina.WIND_BASE_COST_YEAR <- 2005
+
+# Assumption about the total national share of energy that belongs to Tibet as it is
+# not explicitly included in the national energy balance
+gcamchina.TIBET_NATIONAL_ENERGY_SHARE <- 0.01
+
+# Time constants
+gcamchina.ELEC_HISTORICAL_YEARS <- c(HISTORICAL_YEARS)
+
+# GCAM-China provinces
+gcamchina.PROVINCES_ALL <- c("AH", "BJ", "CQ", "FJ", "GD", "GS", "GX", "GZ", "HA", "HB", "HE", "HI", "HK", "HL", "HN", "JL", "JS", "JX", "LN", "MC", "NM", "NX", "QH", "SC", "SD", "SH",
+                             "SN", "SX", "TJ", "XJ", "XZ", "YN", "ZJ")
+
+gcamchina.PROVINCES_NOHKMC <- c("AH", "BJ", "CQ", "FJ", "GD", "GS", "GX", "GZ", "HA", "HB", "HE", "HI", "HL", "HN", "JL", "JS", "JX", "LN", "NM", "NX", "QH", "SC", "SD", "SH",
+                                "SN", "SX", "TJ", "XJ", "XZ", "YN", "ZJ")
+
+# Resources that will be modeled at the province level
+gcamchina.PROVINCE_RENEWABLE_RESOURCES <- c("distributed_solar", "geothermal", "onshore wind resource", "offshore wind resource")
+gcamchina.PROVINCE_UNLIMITED_RESOURCES <- c("global solar resource", "limestone")
+
+# Fuels whose markets will be modeled at the regional level
+gcamchina.REGIONAL_FUEL_MARKETS <- c("regional coal", "delivered coal", "wholesale gas", "delivered gas",
+                                     "refined liquids industrial", "refined liquids enduse","district heat")
+
+# Number of digits for model input data
+gcamchina.DIGITS_CALOUTPUT          <- 7    # production
+
+# GCAM-CHINA default constants
+gcamchina.DEFAULT_COEFFICIENT <- 1
+gcamchina.DEFAULT_LOGIT_TYPE  <- NA  # default logit type
+gcamchina.DEFAULT_LOGITEXP    <- -3
+gcamchina.DEFAULT_MARKET      <- gcamchina.REGION
+gcamchina.DEFAULT_SHAREWEIGHT <- 1
+
+gcamchina.ELECT_TD_SECTORS  <- c("elect_td_bld", "elect_td_ind", "elect_td_trn")
+
+# Indicate whether to use regional as opposed to national fuel markets (FALSE = national markets)
+gcamchina.USE_REGIONAL_FUEL_MARKETS  <- TRUE
+
+# Indicate whether to use regional as opposed to national elec markets (FALSE = national markets)
+gcamchina.USE_REGIONAL_ELEC_MARKETS  <- TRUE
+
+# Indicate whether to use uniform (national) Cstorage markets as opposed to province markets (FALSE = province markets)
+gcamchina.USE_UNIFORM_CSTORAGE_MARKET <- FALSE
+
+#regional_fuel_markets: fuels whose markets will be modeled at the level of the provinces, with prices calibrated
+gcamchina.REGIONAL_FUEL_MARKETS <- c("regional coal", "delivered coal", "wholesale gas", "delivered gas",
+                                     "refined liquids industrial", "refined liquids enduse","district heat")
+
+# Number of digits for model input data
+gcamchina.DIGITS_TRNCHINA_DEFAULT <- 3 # Reduce rounding in detailed China transport for compatability with mode
+gcamchina.DIGITS_FLOORSPACE <- 3
+
+# GCAM-CHINA fertlizer constants
+gcamchina.FERT_LOGIT_EXP  <- -3             # Define default logit expoent used in the fertlizer subsector
+gcamchina.FERT_LOGIT_TYPE <- NA
+gcamchina.FERT_NAME       <- "N fertilizer" # Define GCAM-China category name of fertilizer
+
+# minimum base building size
+gcamchina.MIN_BASE_BUILDING_SIZE <- 0.001
+
+# RMB conversions
+gcamchina.CONV_2015_2010_RMB <- 0.6795
+gcamchina.CONV_2014_2010_RMB <- 0.7366
+gcamchina.CONV_2010_RMB_USD <-  0.1477
+
+# Logit exponents regulating competition between different grid regions in China electricity market
+# (single market approach only)
+gcamchina.GRID.REGION_LOGIT      <- -3
+gcamchina.GRID.REGION_PROVINCE_LOGIT      <- -6
+
+gcamchina.GRID.REGION_LOGIT_TYPE <- "relative-cost-logit"
+
+
+
+
+
