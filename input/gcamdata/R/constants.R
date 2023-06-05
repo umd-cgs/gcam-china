@@ -8,7 +8,7 @@ COMMENT_CHAR             <- "#"
 UNDER_TIMESHIFT          <- FALSE
 YEAR_PATTERN             <- "^(1|2)[0-9]{3}$"   # a 1 or 2 followed by three digits, and nothing else
 LOGIT_TYPE_COLNAME       <- "logit.type"        # will be removed by test code before old-new comparison
-DISABLED_MODULES         <- "NONE"
+DISABLED_MODULES         <- "gcamusa"
 
 
 # Flags ======================================================================
@@ -95,6 +95,7 @@ CONV_BIL_THOUS  <- 1e6
 CONV_THOUS_BIL  <- 1 / CONV_BIL_THOUS
 CONV_MIL_THOUS  <- 1000
 CONV_ONES_THOUS <- 0.001
+CONV_ONES_BIL   <- 1e9
 
 # Mass
 CONV_TON_MEGATON <- 1e-6
@@ -133,6 +134,7 @@ CONV_THA_KGM2       <- 0.1            # tons C/ha -> kg C/m2
 CONV_TON_MEGATON    <- 1e-6
 CONV_TONNE_GJ_DISTILLATE  <- 42.91    # tons to GJ distillate
 CONV_TONNE_GJ_RFO   <- 40.87          # tons to GJ residual fuel oil
+CONV_TONNE_GJ_DIESEL <- 45.766        # tons to GJ diesel
 
 # Time
 CONV_YEAR_HOURS <- 24 * 365.25
@@ -155,6 +157,8 @@ CONV_MJ_BTU <- 947.777
 CONV_BTU_KJ <- 1.0551
 CONV_MMBTU_KGH2 <- 0.113939965425114 # MMBTU/kg H2 - LHV Source: H2 CCTP Workbook.xls (Used for older GCAM assumptions)
 CONV_GJ_KGH2 <- 0.12021 #GJ/kg H2 - LHV
+CONV_EJ_MTCE <- 34.12                   #EJ to Metric tons of coal equivalent
+CONV_BCM_EJ <- 0.04                     #billion m^3 to EJ
 
 # Distance
 CONV_MILE_KM <- 1.60934 # Mile to km

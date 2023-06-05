@@ -435,6 +435,8 @@ StubTechLifetime, world/+{name}region, region/+{name}supplysector, supplysector/
 
 StubTechProfitShutdown, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, profit-shutdown-decider/+median-shutdown-point, profit-shutdown-decider/+steepness, scenario, scenario/world, period/{name=profit}profit-shutdown-decider
 
+StubTechInterpOverwrite, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{delete}interpolation-rule, stub-technology/+{apply-to}interpolation-rule, stub-technology/+{from-year}interpolation-rule, stub-technology/+{to-year}interpolation-rule, interpolation-rule/+{name}interpolation-function, scenario/world, scenario
+
 #####, STUB TRANSPORTATION TECHNOLOGY
 
 
