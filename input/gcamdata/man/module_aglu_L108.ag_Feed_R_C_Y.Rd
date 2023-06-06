@@ -14,7 +14,8 @@ module_aglu_L108.ag_Feed_R_C_Y(command, ...)
 \value{
 Depends on \code{command}: either a vector of required inputs,
 a vector of output names, or (if \code{command} is "MAKE") all
-the generated outputs: \code{L108.ag_Feed_Mt_R_C_Y}, \code{L108.ag_NetExp_Mt_R_FodderHerb_Y}, \code{L107.an_Feed_Mt_R_C_Sys_Fd_Y_adj}
+the generated outputs: \code{L108.ag_Feed_Mt_R_C_Y}, \code{L108.ag_NetExp_Mt_R_FodderHerb_Y}. The corresponding file in the
+original data system was \code{LA108.ag_Feed_R_C_Y.R} (aglu level1).
 }
 \description{
 Compute (1) feed by GCAM commodity, region, and year, and (2) net exports of FodderHerb.
@@ -27,5 +28,5 @@ Excess supply is mapped to OtherUses. Excess demand is mapped to other sources (
 This information is used to calculate net exports of FodderHerb too.
 }
 \author{
-KVC April 2017 XZ 2022
+KVC April 2017
 }

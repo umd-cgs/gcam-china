@@ -7,7 +7,7 @@
 return_data(...)
 }
 \arguments{
-\item{...}{Objects to handle; could be a vector of char including object names}
+\item{...}{Objects to handle}
 }
 \value{
 Object ready for insertion into the data system data structure.
