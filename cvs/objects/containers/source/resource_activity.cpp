@@ -51,8 +51,9 @@ using namespace std;
 
 extern Scenario* scenario;
 
-ResourceActivity::ResourceActivity( AResource* aResource, const string& aRegionName ):
+ResourceActivity::ResourceActivity( AResource* aResource, const GDP* aGDP, const string& aRegionName ):
 mResource( aResource ),
+mGDP( aGDP ),
 mRegionName( aRegionName )
 {
 }
@@ -68,7 +69,7 @@ void ResourceActivity::calc( const int aPeriod ) {
         CalibrateResourceVisitor calibrator( mRegionName );
         mResource->accept( &calibrator, aPeriod );
     }
-    mResource->calcSupply( mRegionName, aPeriod );
+    mResource->calcSupply( mRegionName, mGDP, aPeriod );
 }
 
 string ResourceActivity::getDescription() const {

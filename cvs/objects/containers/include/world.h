@@ -109,8 +109,6 @@ public:
     int getGlobalOrderingSize() const {return mGlobalOrdering.size();}
     
     const GlobalTechnologyDatabase* getGlobalTechnologyDatabase() const;
-    
-    Region const* getRegion( const std::string& aRegionName ) const;
 
 	void accept( IVisitor* aVisitor, const int aPeriod ) const;
 

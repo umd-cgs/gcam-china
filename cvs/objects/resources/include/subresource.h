@@ -55,6 +55,7 @@
 
 // Forward declarations.
 class Grade;
+class GDP;
 class IInfo;
 class IVisitor;
 class Tabs;
@@ -75,6 +76,7 @@ class SubResource: public INamed, public IVisitable, private boost::noncopyable
 {
 	friend class XMLDBOutputter;
     friend class CalibrateResourceVisitor;
+    friend class EnergyBalanceTable;
 public:
     SubResource();
     virtual ~SubResource();
@@ -90,14 +92,13 @@ public:
     virtual void postCalc( const std::string& aRegionName, const std::string& aResourceName, const int aPeriod );
     virtual double getCumulProd( const int aPeriod ) const;
     virtual void annualsupply( const std::string& aRegionName, const std::string& aResourceName,
-                               int aPeriod, double aPrice );
+                               int aPeriod, const GDP* aGdp, double aPrice );
     double getAnnualProd( int aPeriod ) const;
     double getAvailable( int aPeriod ) const;
     void updateAvailable( const int period );
     virtual void accept( IVisitor* aVisitor, const int aPeriod ) const;
     virtual double getLowestPrice( const int aPeriod ) const;
     virtual double getHighestPrice( const int aPeriod ) const;
-    double getPriceAdder( int aPeriod ) const;
 protected:
     virtual const std::string& getXMLName() const;
 
@@ -145,7 +146,7 @@ protected:
     )
     
     //!< The subsector's information store.
-    std::unique_ptr<IInfo> mSubresourceInfo;
+    std::auto_ptr<IInfo> mSubresourceInfo;
 };
 
 #endif // _SUBRESOURCE_H_

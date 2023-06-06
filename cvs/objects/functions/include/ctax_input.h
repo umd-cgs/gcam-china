@@ -74,6 +74,7 @@ class Tabs;
  */
 class CTaxInput: public MiniCAMInput
 {
+    friend class InputFactory;
 public:
 
     CTaxInput();

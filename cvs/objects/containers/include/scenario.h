@@ -58,7 +58,6 @@
 class Modeltime;
 class Marketplace;
 class World;
-class Region;
 class Curve;
 class Tabs;
 class Solver;

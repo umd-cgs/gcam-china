@@ -64,10 +64,6 @@ public:
 
     // Non-IVisitor interface methods.
     double getEmissions( const int aPeriod ) const;
-    
-    double getEmissionsPositive( const int aPeriod ) const;
-    
-    double getEmissionsNegative( const int aPeriod ) const;
 
     double areEmissionsSet( const int aPeriod ) const;
     
@@ -76,11 +72,8 @@ private:
     //! The name of the GHG being summed.
     const std::string mGHGName;
 
-    //! The gross positive sum of emissions
-    objects::PeriodVector<Value> mEmissionsByPeriodPositive;
-    
-    //! The gross negative sum of emissions
-    objects::PeriodVector<Value> mEmissionsByPeriodNegative;
+    //! The current sum.
+    objects::PeriodVector<Value> mEmissionsByPeriod;
 };
 
 /*!

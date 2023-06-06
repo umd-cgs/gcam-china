@@ -44,8 +44,6 @@
 #include "containers/include/scenario.h"
 #include "util/base/include/model_time.h"
 #include "containers/include/iinfo.h"
-#include "marketplace/include/marketplace.h"
-#include "containers/include/market_dependency_finder.h"
 
 using namespace std;
 
@@ -86,7 +84,7 @@ const string& InputCapital::getXMLName() const{
 }
 
 //! Constructor
-InputCapital::InputCapital():mTrackingMarketName("capital"), mIsActive(false)
+InputCapital::InputCapital()
 {
 }
 
@@ -105,7 +103,6 @@ void InputCapital::copy( const InputCapital& aOther ) {
     mFixedChargeRate = aOther.mFixedChargeRate;
     mLifetimeCapital = aOther.mLifetimeCapital;
     mCapacityFactor = aOther.mCapacityFactor;
-    mTrackingMarketName = aOther.mTrackingMarketName;
     
     // calculated parameters are not copied.
 }
@@ -166,9 +163,6 @@ void InputCapital::completeInit( const string& aRegionName,
     // These costs may be adjusted by the Technology, for instance for capture
     // penalties.
     fill( mAdjustedCosts.begin(), mAdjustedCosts.end(), mLevelizedCapitalCost );
-    
-    // Note: given we are just tracking capital we do not need to log a dependency
-    // on mTrackingMarketName, however if we had price feedbacks we would
 }
 
 /** Calculate the levelizd capital cost.
@@ -200,8 +194,6 @@ void InputCapital::initCalc( const string& aRegionName,
     // been initialized through copyParam. It may be adjusted
     // later when coefficients are copied forward.
     mAdjustedCoefficients[ aPeriod ] = 1;
-
-    mIsActive = aTechInfo->getBoolean("new-vintage-tech", true);
 }
 
 double InputCapital::getPrice( const string& aRegionName,
@@ -226,10 +218,7 @@ void InputCapital::setPhysicalDemand( double aPhysicalDemand,
                                       const string& aRegionName,
                                       const int aPeriod )
 {
-    if(mIsActive) {
-        mCapitalValue = mAdjustedCosts[aPeriod] * mAdjustedCoefficients[aPeriod] / mFixedChargeRate * aPhysicalDemand;
-        scenario->getMarketplace()->addToDemand(mTrackingMarketName, aRegionName, mCapitalValue, aPeriod, false);
-    }
+    // Does not add to the marketplace.
 }
 
 double InputCapital::getCO2EmissionsCoefficient( const string& aGHGName,

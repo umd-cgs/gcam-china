@@ -460,6 +460,6 @@ const Scenario* BatchRunner::getInternalScenario() const {
  * \pre XMLParse has been called.
  * \return The parsed scenario runner.
  */
-unique_ptr<IScenarioRunner>& BatchRunner::ParseHelper::getParsedScenarioRunner(){
+auto_ptr<IScenarioRunner>& BatchRunner::ParseHelper::getParsedScenarioRunner(){
     return mScenarioRunner;
 }

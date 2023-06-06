@@ -46,12 +46,9 @@
 #include "technologies/include/ioutput.h"
 #include "technologies/include/icapture_component.h"
 #include "marketplace/include/cached_market.h"
-#include "containers/include/scenario.h"
 #include "marketplace/include/marketplace.h"
 
 using namespace std;
-
-extern Scenario* scenario;
 
 //! Default Constructor with default emissions unit and name.
 CO2Emissions::CO2Emissions() {
@@ -229,6 +226,7 @@ double CO2Emissions::calcInputCO2Emissions( const vector<IInput*>& aInputs, cons
 void CO2Emissions::calcEmission( const std::string& aRegionName,
                                  const std::vector<IInput*>& aInputs,
                                  const std::vector<IOutput*>& aOutputs,
+                                 const GDP* aGDP,
                                  ICaptureComponent* aSequestrationDevice,
                                  const int aPeriod )
 {

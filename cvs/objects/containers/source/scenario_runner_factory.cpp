@@ -70,37 +70,37 @@ bool ScenarioRunnerFactory::isOfType( const string& aType ) {
 /*!
  * \brief Return a new instance of a component of the requested type.
  * \param aType Type of IScenarioRunner to return.
- * \return A newly created IScenarioRunner wrapped in an unique_ptr. The pointer
+ * \return A newly created IScenarioRunner wrapped in an auto_ptr. The pointer
  *         is null if the type is unknown.
  */
-unique_ptr<IScenarioRunner> ScenarioRunnerFactory::create( const string& aType ) {
+auto_ptr<IScenarioRunner> ScenarioRunnerFactory::create( const string& aType ) {
     // Search the list of known types.
     if( aType == SingleScenarioRunner::getXMLNameStatic() ){
-        return unique_ptr<IScenarioRunner>( new SingleScenarioRunner );
+        return auto_ptr<IScenarioRunner>( new SingleScenarioRunner );
     }
     if( aType == MACGeneratorScenarioRunner::getXMLNameStatic() ){
-        return unique_ptr<IScenarioRunner>( new MACGeneratorScenarioRunner );
+        return auto_ptr<IScenarioRunner>( new MACGeneratorScenarioRunner );
     }
     if( aType == BatchRunner::getXMLNameStatic() ){
-        return unique_ptr<IScenarioRunner>( new BatchRunner );
+        return auto_ptr<IScenarioRunner>( new BatchRunner );
     }
     if( aType == PolicyTargetRunner::getXMLNameStatic() ){
-        return unique_ptr<IScenarioRunner>( new PolicyTargetRunner );
+        return auto_ptr<IScenarioRunner>( new PolicyTargetRunner );
     }
 
     // Unknown type.
     ILogger& mainLog = ILogger::getLogger( "main_log" );
     mainLog.setLevel( ILogger::ERROR );
     mainLog << "Could not create Scenario Runner of type " << aType << "." << endl;
-    return unique_ptr<IScenarioRunner>();
+    return auto_ptr<IScenarioRunner>();
 }
 
 /*!
  * \brief Return a new instance of the SingleScenarioRunner.
- * \return An unique_ptr with a newly created SingleScenarioRunner.
+ * \return An auto_ptr with a newly created SingleScenarioRunner.
  */
-unique_ptr<SingleScenarioRunner> ScenarioRunnerFactory::createSingleScenarioRunner() {
-    return unique_ptr<SingleScenarioRunner>( new SingleScenarioRunner );
+auto_ptr<SingleScenarioRunner> ScenarioRunnerFactory::createSingleScenarioRunner() {
+    return auto_ptr<SingleScenarioRunner>( new SingleScenarioRunner );
 }
 
 /*! 
@@ -114,9 +114,9 @@ unique_ptr<SingleScenarioRunner> ScenarioRunnerFactory::createSingleScenarioRunn
  * \param aExcludedTypes A list of types that should not be created.
  * \return ISingleScenarioRunner type as defined by the configuration file.
  */
-unique_ptr<IScenarioRunner> ScenarioRunnerFactory::createDefault( const list<string>& aExcludedTypes ){
+auto_ptr<IScenarioRunner> ScenarioRunnerFactory::createDefault( const list<string>& aExcludedTypes ){
     const Configuration* conf = Configuration::getInstance();
-    unique_ptr<IScenarioRunner> defaultRunner;
+    auto_ptr<IScenarioRunner> defaultRunner;
     // Determine the correct type of ScenarioRunner to create. Note that this
     // ordering must be preserved because certain scenario runners can contain
     // other scenario runners.

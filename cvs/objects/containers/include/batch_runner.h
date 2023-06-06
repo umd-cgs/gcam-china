@@ -207,10 +207,10 @@ protected:
      */
     class ParseHelper {
     public:
-        std::unique_ptr<IScenarioRunner>& getParsedScenarioRunner();
+        std::auto_ptr<IScenarioRunner>& getParsedScenarioRunner();
     private:
         //! The IScenarioRunner created by the XMLParse method.
-        std::unique_ptr<IScenarioRunner> mScenarioRunner;
+        std::auto_ptr<IScenarioRunner> mScenarioRunner;
     };
 
 };

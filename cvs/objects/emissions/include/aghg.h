@@ -58,6 +58,7 @@
 #include "util/base/include/data_definition_util.h"
 
 // Forward declarations
+class GDP;
 class IInfo;
 class IOutput;
 class ICaptureComponent;
@@ -168,6 +169,7 @@ public:
     virtual void calcEmission( const std::string& aRegionName, 
                                const std::vector<IInput*>& aInputs,
                                const std::vector<IOutput*>& aOutputs,
+                               const GDP* aGDP,
                                ICaptureComponent* aSequestrationDevice,
                                const int aPeriod ) = 0;
     
@@ -208,7 +210,7 @@ protected:
     
     //! Pre-located market which has been cached from the marketplace to get the price
     //! of this ghg and add demands to the market.
-    std::unique_ptr<CachedMarket> mCachedMarket;
+    std::auto_ptr<CachedMarket> mCachedMarket;
    
     /*!
      * \brief XML debug output stream for derived classes

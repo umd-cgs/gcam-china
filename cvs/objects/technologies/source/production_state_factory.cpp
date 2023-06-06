@@ -77,14 +77,14 @@ using namespace std;
 *        calculated.
 * \param aPeriod Model period.
 */
-unique_ptr<IProductionState> ProductionStateFactory::create( const int aInvestYear,
+auto_ptr<IProductionState> ProductionStateFactory::create( const int aInvestYear,
                                                            const int aLifetimeYears,
                                                            const double aFixedOutput,
                                                            const double aInitialOutput,
                                                            const int aPeriod )
 {
     // Initialize the production state.
-    unique_ptr<IProductionState> newState;
+    auto_ptr<IProductionState> newState;
     int currYear = scenario->getModeltime()->getper_to_yr( aPeriod );
 
     if( aInvestYear == currYear ){

@@ -76,7 +76,6 @@ public:
     
     virtual void setYear( const int aNewYear );
     virtual int getYear() const;
-    virtual bool isVintagingActive() const;
     
     virtual void toDebugXML( const int period, std::ostream& out, Tabs* tabs ) const;
     
@@ -104,10 +103,11 @@ public:
                             const std::string& aSectorName, 
                             double aVariableDemand,
                             double aFixedOutputScaleFactor,
+                            const GDP* aGDP,
                             const int aPeriod );
     
-    virtual double calcShare( const std::string& aRegionName,
-                              const IDiscreteChoice* aChoiceFn,
+    virtual double calcShare( const IDiscreteChoice* aChoiceFn,
+                              const GDP *aGDP,
                               int aPeriod ) const;
     
     virtual void calcCost( const std::string& aRegionName,

@@ -47,6 +47,7 @@
 #include "util/base/include/default_visitor.h"
 #include <string>
 
+class GDP;
 class ITechnology;
 class IDiscreteChoice;
 
@@ -71,7 +72,7 @@ class IDiscreteChoice;
 class CalibrateShareWeightVisitor : public DefaultVisitor {
 public:
 
-    CalibrateShareWeightVisitor( const std::string& aRegionName );
+    CalibrateShareWeightVisitor( const std::string& aRegionName, const GDP* aGDP );
 
     // Documentation for visitor methods is inherited.
     virtual void startVisitSector( const Sector* aSector,
@@ -92,6 +93,9 @@ private:
     //! Name of the sector currently being tabulated.
     std::string mCurrentSectorName;
 
+    //! The GDP for the current region. TODO: is this really necessary
+    const GDP* mGDP;
+    
     template<typename ContainerType>
     void calibrateShareWeights( const ContainerType* aContainer, const int aPeriod ) const;
     

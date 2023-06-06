@@ -465,12 +465,14 @@ protected:
     )
 };
 
+typedef std::unary_function<const ALandAllocatorItem*, bool> SearchPredicate;
+
 /*!
  * \brief SearchPredicate that finds an item with the desired type and name.
  * \details This predicate should be passed to TreeItem's findItem method.
  *          It will be called on each item during the search.
  */
-struct MatchesTypeAndName {
+struct MatchesTypeAndName : public SearchPredicate {
     
     /*!
      * \brief Enum that stores the desired type.

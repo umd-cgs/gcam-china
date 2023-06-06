@@ -55,6 +55,7 @@
 
 // Forward declaration
 class AGHG;
+class GDP;
 class IInfo;
 class ICalData;
 class ILandAllocator;
@@ -117,8 +118,6 @@ public:
 
     virtual void setYear( const int aNewYear ) = 0;
     virtual int getYear() const = 0;
-    
-    virtual bool isVintagingActive() const = 0;
 
     virtual void toDebugXML( const int period, std::ostream& out, Tabs* tabs ) const = 0;
     
@@ -144,10 +143,11 @@ public:
                              const std::string& aSectorName, 
                              double aVariableDemand,
                              double aFixedOutputScaleFactor,
+                             const GDP* aGDP,
                              const int aPeriod ) = 0;
 
-    virtual double calcShare( const std::string& aRegionName,
-                              const IDiscreteChoice* aChoiceFn,
+    virtual double calcShare( const IDiscreteChoice* aChoiceFn,
+                              const GDP* aGDP,
                               int aPeriod ) const = 0;
     
     virtual void calcCost( const std::string& aRegionName,

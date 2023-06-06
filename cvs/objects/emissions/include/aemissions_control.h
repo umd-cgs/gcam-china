@@ -52,6 +52,7 @@
 #include "util/base/include/data_definition_util.h"
 
 // Forward declarations
+class GDP;
 class IInfo;
 class NonCO2Emissions;
 class Tabs;
@@ -88,7 +89,7 @@ public:
      */
     virtual const std::string& getXMLName() const = 0;
     
-    double getEmissionsReduction( const std::string& aRegionName, const int aPeriod );
+    double getEmissionsReduction( const std::string& aRegionName, const int aPeriod, const GDP* aGDP );
     
     /*!
      * \brief Set the final emissions coefficient calculated in the given period taking into account all emissions controls which applied.
@@ -142,7 +143,7 @@ protected:
      */
     virtual void toDebugXMLDerived( const int aPeriod, std::ostream& aOut, Tabs* aTabs ) const = 0;
 
-    virtual double calcEmissionsReduction( const std::string& aRegionName, const int aPeriod ) = 0;
+    virtual double calcEmissionsReduction( const std::string& aRegionName, const int aPeriod, const GDP* aGDP ) = 0;
     
     DEFINE_DATA(
         /* Declare all subclasses of AEmissionsControl to allow automatic traversal of the

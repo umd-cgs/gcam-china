@@ -97,8 +97,7 @@ public:
     virtual runModelStatus runModel();
     virtual runModelStatus runModel( const int aPeriod );
     virtual double getConcentration( const std::string& aGasName, const int aYear ) const;
-    virtual double getTemperature( const int aYear, const bool aAdjHistoricalPeriod = false ) const;
-    virtual double getGmst( const int aYear, const bool aAdjHistoricalPeriod = false ) const;
+    virtual double getTemperature( const int aYear ) const;
     virtual double getForcing( const std::string& aGasName, const int aYear ) const;
     virtual double getTotalForcing( const int aYear ) const;
     virtual double getNetTerrestrialUptake( const int aYear ) const;
@@ -165,9 +164,6 @@ private:
 
     //! temperatures retrieved from Hector
     std::vector<double> mTemperatureTable;
-    
-    //! surface temperatures retrieved from Hector
-    std::vector<double> mGmstTable;
 
     //! land fluxes retrieved from Hector
     std::vector<double> mLandFlux;
@@ -180,25 +176,18 @@ private:
     std::map<std::string, double> mUnitConvFac;
 
     //! Hector core object
-    std::unique_ptr<Hector::Core> mHcore;
+    std::auto_ptr<Hector::Core> mHcore;
 
     //! file handle for the outputstream visitor
-    std::unique_ptr<std::ofstream> mOfile;
+    std::auto_ptr<std::ofstream> mOfile;
 
     //! output stream visitor
-    std::unique_ptr<Hector::CSVOutputStreamVisitor> mHosv;
+    std::auto_ptr<Hector::CSVOutputStreamVisitor> mHosv;
     
     // private functions
     
     //! reset the Hector GCAM component and the Hector model for a new run
     void reset( const int aPeriod );
-    
-    //! test if a gas name is LUC related
-    bool isGasLUC( const std::string& aGasName ) const {
-        // simple at the moment but could have some additional logic
-        // if we wanted to be able to configure an NBP constraint
-        return aGasName == "CO2EmissionsLandUse" || aGasName == "CO2UptakeLandUse";
-    }
 
     //! worker routine for setting emissions
     bool setEmissionsByYear( const std::string& aGasName, const int aYear, double aEmissions );

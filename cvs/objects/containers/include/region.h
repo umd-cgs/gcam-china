@@ -65,7 +65,6 @@ class Curve;
 class AResource;
 class IInfo;
 class Tabs;
-class NationalAccountContainer;
 
 // Need to forward declare the subclasses as well.
 class RegionMiniCAM;
@@ -95,8 +94,6 @@ public:
     void setTax( const GHGPolicy* aTax );
     const Curve* getEmissionsQuantityCurve( const std::string& ghgName ) const;
     const Curve* getEmissionsPriceCurve( const std::string& ghgName ) const;
-    
-    virtual NationalAccountContainer const* getNationalAccounts() const = 0;
 
     virtual bool isAllCalibrated( const int period, double calAccuracy, const bool printWarnings ) const { return true; };
 

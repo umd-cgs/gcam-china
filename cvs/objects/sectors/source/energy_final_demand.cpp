@@ -47,13 +47,12 @@
 #include "util/base/include/model_time.h"
 #include "util/base/include/ivisitor.h"
 #include "containers/include/scenario.h"
-#include "containers/include/national_account_container.h"
+#include "containers/include/gdp.h"
 #include "containers/include/iinfo.h"
 #include "marketplace/include/marketplace.h"
 #include "demographics/include/demographic.h"
 #include "sectors/include/energy_final_demand.h"
 #include "sectors/include/sector_utils.h"
-#include "containers/include/market_dependency_finder.h"
 
 using namespace std;
 
@@ -183,14 +182,10 @@ void EnergyFinalDemand::completeInit( const string& aRegionName,
     if( mFinalEnergyConsumer ){
         mFinalEnergyConsumer->completeInit( aRegionName, mName );
     }
-    
-    // Using endogenous gdp calculation to drive final energy demand
-    // create a dependency of FinalEnergyDemand to the GDP market
-    SectorUtils::addGDPDependency( aRegionName, mName );
-
 }
 
 void EnergyFinalDemand::initCalc( const string& aRegionName,
+                                  const GDP* aGDP,
                                   const Demographic* aDemographics,
                                   const int aPeriod )
 {
@@ -210,9 +205,10 @@ void EnergyFinalDemand::initCalc( const string& aRegionName,
 */
 void EnergyFinalDemand::setFinalDemand( const string& aRegionName,
                                         const Demographic* aDemographics,
+                                        const GDP* aGDP,
                                         const int aPeriod )
 {
-    calcFinalDemand( aRegionName, aDemographics, aPeriod );
+    calcFinalDemand( aRegionName, aDemographics, aGDP, aPeriod );
     // Set the service demand into the marketplace.
     Marketplace* marketplace = scenario->getMarketplace();
     marketplace->addToDemand( mName, aRegionName, mServiceDemands[ aPeriod ], aPeriod );
@@ -234,6 +230,7 @@ void EnergyFinalDemand::setFinalDemand( const string& aRegionName,
 */
 double EnergyFinalDemand::calcFinalDemand( const string& aRegionName,
                                            const Demographic* aDemographics,
+                                           const GDP* aGDP,
                                            const int aPeriod )
 {
     if( aPeriod <= scenario->getModeltime()->getFinalCalibrationPeriod() ){
@@ -253,7 +250,8 @@ double EnergyFinalDemand::calcFinalDemand( const string& aRegionName,
         // TODO: preferable to use actual previous service with technical change for
         // current period applied.
         mServiceDemands[ aPeriod ] = mPreTechChangeServiceDemand[ aPeriod - 1 ] > 0 ? 
-            mPreTechChangeServiceDemand[ aPeriod - 1] * calcMacroScaler( aRegionName, aDemographics, aPeriod) : 0;
+            mPreTechChangeServiceDemand[ aPeriod - 1] * calcMacroScaler( aRegionName, aDemographics, aGDP, aPeriod) :
+            0;
 
         assert( mServiceDemands[ aPeriod ] >= 0 );
         mPreTechChangeServiceDemand[ aPeriod ] = mServiceDemands[ aPeriod ];
@@ -280,6 +278,7 @@ double EnergyFinalDemand::calcFinalDemand( const string& aRegionName,
 */
 double EnergyFinalDemand::calcMacroScaler( const string& aRegionName,
                                            const Demographic* aDemographics,
+                                           const GDP* aGDP,
                                            const int aPeriod ) const
 {
     int previousPeriod = 0;
@@ -291,10 +290,9 @@ double EnergyFinalDemand::calcMacroScaler( const string& aRegionName,
                                                      previousPeriod, aPeriod );
     const double cappedPriceRatio = max( priceRatio, SectorUtils::getDemandPriceThreshold() );
 
-    double macroScaler = mDemandFunction->calcDemand( aRegionName, aDemographics,
-                                                      mPriceElasticity[ aPeriod ],
-                                                      mIncomeElasticity[ aPeriod ],
-                                                      cappedPriceRatio,
+    double macroScaler = mDemandFunction->calcDemand( aDemographics,
+                                                      aGDP, mPriceElasticity[ aPeriod ],
+                                                      mIncomeElasticity[ aPeriod ], cappedPriceRatio,
                                                       aPeriod );
     // May need to make an adjustment in case of negative prices.
     if( priceRatio < cappedPriceRatio && mPriceElasticity[ aPeriod ] != 0 ) {
@@ -348,8 +346,9 @@ void EnergyFinalDemand::acceptDerived( IVisitor* aVisitor,
 EnergyFinalDemand::FinalEnergyConsumer::FinalEnergyConsumer() {
 }
 
-double EnergyFinalDemand::PerCapitaGDPDemandFunction::calcDemand( const string& aRegionName,
+double EnergyFinalDemand::PerCapitaGDPDemandFunction::calcDemand(
                                                            const Demographic* aDemographics,
+                                                           const GDP* aGDP,
                                                            const double aPriceElasticity,
                                                            const double aIncomeElasticity,
                                                            const double aPriceRatio,
@@ -361,9 +360,8 @@ double EnergyFinalDemand::PerCapitaGDPDemandFunction::calcDemand( const string& 
         // No changes in price, income and population scales.
         return 1;
     }
-
-    double GDPperCapRatio = SectorUtils::getGDPPerCap( aRegionName, aPeriod )
-                          / SectorUtils::getGDPPerCap( aRegionName, aPeriod-1 );
+    double GDPperCapRatio = aGDP->getGDPperCap( aPeriod )
+                          / aGDP->getGDPperCap( aPeriod - 1);
 
     double populationRatio = aDemographics->getTotal( aPeriod )
                            / aDemographics->getTotal( aPeriod - 1);
@@ -372,21 +370,19 @@ double EnergyFinalDemand::PerCapitaGDPDemandFunction::calcDemand( const string& 
     //! calcMacroScaler will automatically meet this
     //! condition.
     double macroEconomicScaler = pow( aPriceRatio, aPriceElasticity )
-                               * pow( GDPperCapRatio, aIncomeElasticity )
-                               * populationRatio;
+                         * pow( GDPperCapRatio, aIncomeElasticity )
+                         * populationRatio;
 
     return macroEconomicScaler;
 }
 
-double EnergyFinalDemand::TotalGDPDemandFunction::calcDemand( const string& aRegionName,
-                                                              const Demographic* aDemographics,
-                                                              const double aPriceElasticity,
-                                                              const double aIncomeElasticity,
-                                                              const double aPriceRatio,
-                                                              const int aPeriod ) const
+double EnergyFinalDemand::TotalGDPDemandFunction::calcDemand( const Demographic* aDemographics,
+                                                       const GDP* aGDP,
+                                                       const double aPriceElasticity,
+                                                       const double aIncomeElasticity,
+                                                       const double aPriceRatio,
+                                                       const int aPeriod ) const
 {
-    const Marketplace* marketplace = scenario->getMarketplace();
-
     // If not perCapitaBased, service_demand = B * P^r * GDP^r
     // Demand based on price changes and scale of GDP 
     if( aPeriod == 0 ){
@@ -394,14 +390,15 @@ double EnergyFinalDemand::TotalGDPDemandFunction::calcDemand( const string& aReg
         return 1;
     }
 
-    // Get current GDP per capita from marketplace
-    double GDPRatio = SectorUtils::getGDP( aRegionName, aPeriod )
-                    / SectorUtils::getGDP( aRegionName, aPeriod - 1 );
+    // All ratios are based on previous period values.
+    double GDPRatio = aGDP->getGDP( aPeriod )
+                    / aGDP->getGDP( aPeriod - 1 );
+
 
     //! \pre aPriceRatio > 0.  Prices calculated by
     //! calcMacroScaler will automatically meet this
     //! condition.
-    double macroEconomicScaler = pow( aPriceRatio, aPriceElasticity ) 
+    double macroEconomicScaler = pow( aPriceRatio , aPriceElasticity ) 
                                * pow( GDPRatio, aIncomeElasticity );
 
     return macroEconomicScaler;

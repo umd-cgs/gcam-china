@@ -86,10 +86,10 @@ public:
 private:
     //! The scenario runner which controls running the initial scenario, and all
     //! fixed taxed scenarios after.
-    std::unique_ptr<SingleScenarioRunner> mSingleScenario;
+    std::auto_ptr<SingleScenarioRunner> mSingleScenario;
 
     //! The delegate object which calculates total costs.
-    std::unique_ptr<TotalPolicyCostCalculator> mPolicyCostCalculator;
+    std::auto_ptr<TotalPolicyCostCalculator> mPolicyCostCalculator;
     
     // Not totally intuitive but this define data is here for XML parse of scenario
     // components and the contained scenario components don't get initialized from

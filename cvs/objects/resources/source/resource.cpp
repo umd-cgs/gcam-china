@@ -244,14 +244,14 @@ const string& Resource::getName() const {
 }
 
 //! Calculate total resource supply for a period.
-void Resource::calcSupply( const string& aRegionName, const int aPeriod ){
+void Resource::calcSupply( const string& aRegionName, const GDP* aGDP, const int aPeriod ){
     // This code is moved down from Region
     Marketplace* marketplace = scenario->getMarketplace();
 
     double price = marketplace->getPrice( mName, aRegionName, aPeriod );
     
     // calculate annual supply
-    annualsupply( aRegionName, aPeriod, price );
+    annualsupply( aRegionName, aPeriod, aGDP, price );
 }
 
 void Resource::cumulsupply( const string& aRegionName, double aPrice, int aPeriod )
@@ -268,7 +268,7 @@ void Resource::cumulsupply( const string& aRegionName, double aPrice, int aPerio
 }
 
 //! Calculate annual production
-void Resource::annualsupply( const string& aRegionName, int aPeriod, double aPrice )
+void Resource::annualsupply( const string& aRegionName, int aPeriod, const GDP* aGdp, double aPrice )
 {   
     int i = 0;
     mAnnualProd[ aPeriod ] = 0.0;
@@ -279,7 +279,7 @@ void Resource::annualsupply( const string& aRegionName, int aPeriod, double aPri
 
     // sum annual production of each subsector
     for ( i = 0; i < mSubResource.size(); i++) {
-        mSubResource[i]->annualsupply( aRegionName, mName, aPeriod, aPrice );
+        mSubResource[i]->annualsupply( aRegionName, mName, aPeriod, aGdp, aPrice );
         mAnnualProd[ aPeriod ] += Value( mSubResource[i]->getAnnualProd( aPeriod ) );
         mAvailable[ aPeriod ] += Value( mSubResource[i]->getAvailable( aPeriod ) );
     }
@@ -358,7 +358,7 @@ const std::string& RenewableResource::getXMLNameStatic() {
 *
 * \author Steve Smith.  Mod for intermittent by Marshall Wise
 */
-void RenewableResource::annualsupply( const string& aRegionName, int aPeriod, double aPrice )
+void RenewableResource::annualsupply( const string& aRegionName, int aPeriod, const GDP* aGdp, double aPrice )
 {
 
     // calculate cumulative production
@@ -370,7 +370,7 @@ void RenewableResource::annualsupply( const string& aRegionName, int aPeriod, do
     
     // sum annual production of each subsector
     for (int i=0;i<mSubResource.size();i++) {
-        mSubResource[i]->annualsupply( aRegionName, mName, aPeriod, aPrice );
+        mSubResource[i]->annualsupply( aRegionName, mName, aPeriod, aGdp, aPrice );
         mAnnualProd[ aPeriod ] += Value( mSubResource[i]->getAnnualProd( aPeriod ) );
     }
 }

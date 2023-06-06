@@ -132,9 +132,8 @@ public:
 
     virtual double getPhysicalOutput( const int aPeriod ) const;
 
-    virtual void setCurrencyOutput( const double aPysicalOutput,
-                                    const double aCurrencyConversionPrice,
-                                    const std::string& aRegionName,
+    virtual void setCurrencyOutput( const std::string& aRegionName,
+                                    const double aOutput,
                                     const int aPeriod )
     {
         // TODO: This could work by converting from physical to currency with

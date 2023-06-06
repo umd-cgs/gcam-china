@@ -64,10 +64,10 @@ class SupplySector;
 class LandAllocator;
 class GHGPolicy;
 class ILogger;
+class GDP;
 class Curve;
 class AFinalDemand;
 class Consumer;
-class NationalAccountContainer;
 
 /*! 
 * \ingroup Objects
@@ -101,8 +101,6 @@ public:
     virtual void initCalc( const int period );
 
     virtual void postCalc( const int aPeriod );
-    
-    virtual NationalAccountContainer const* getNationalAccounts() const;
 
     virtual bool isAllCalibrated( const int period, double calAccuracy, const bool printWarnings ) const;
     virtual void accept( IVisitor* aVisitor, const int aPeriod ) const;
@@ -112,9 +110,9 @@ protected:
     // subclass together with the data members of the parent classes.
     DEFINE_DATA_WITH_PARENT(
         Region,
-        
-        /*! \brief NationalAccountContainer object. */
-        DEFINE_VARIABLE( CONTAINER, "NationalAccountContainer", mNationalAccountContainer, NationalAccountContainer* ),
+
+        /*! \brief GDP object. */
+        DEFINE_VARIABLE( CONTAINER, "GDP", mGDP, GDP* ),
         
         /*! \brief Regional land allocator. */
         DEFINE_VARIABLE( CONTAINER, "land-allocator", mLandAllocator, LandAllocator* ),
@@ -149,12 +147,19 @@ protected:
 
     void initElementalMembers();
 
+    void calcGDP( const int period );
+    double getEndUseServicePrice( const int period ) const;
+    void adjustGDP( const int period );
+
+    const std::vector<double> calcFutureGDP() const;
+
     void setCO2CoefsIntoMarketplace( const int aPeriod );
 
 private:
     void clear();
+    bool ensureGDP() const;
     bool ensureDemographics() const;
 };
 
-#endif // _REGION_MINICAM_H_
+#endif // _REGION_H_
 

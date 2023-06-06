@@ -188,8 +188,6 @@ public:
     virtual double getNetLandUseChangeEmissionAbove( const int aYear ) const = 0;
     
     virtual double getNetLandUseChangeEmissionBelow( const int aYear ) const = 0;
-    
-    virtual double getGrossPositiveLandUseChangeEmissionAbove( const int aYear ) const = 0;
 
     virtual double getActualAboveGroundCarbonDensity( const int aYear ) const = 0;
     

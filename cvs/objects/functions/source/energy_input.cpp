@@ -94,7 +94,8 @@ const string& EnergyInput::getXMLName() const{
 }
 
 //! Constructor
-EnergyInput::EnergyInput()
+EnergyInput::EnergyInput() :
+    mCachedMarket( 0 )
 {
     
     mCoefficient = 0;
@@ -105,7 +106,7 @@ EnergyInput::EnergyInput()
  * \brief Destructor.
  * \note An explicit constructor must be defined to avoid the compiler inlining
  *       it in the header file before the header file for the type contained in
- *       the unique_ptr is included.
+ *       the auto_ptr is included.
  */
 EnergyInput::~EnergyInput() {
     delete mCoefficient;

@@ -316,11 +316,12 @@ void IntermittentTechnology::production( const string& aRegionName,
                                          const string& aSectorName, 
                                          double aVariableDemand,
                                          double aFixedOutputScaleFactor,
+                                         const GDP* aGDP,
                                          const int aPeriod )
 {
     // Use the base class production to set outputs and inputs.
     Technology::production( aRegionName, aSectorName, aVariableDemand,
-                            aFixedOutputScaleFactor, aPeriod );
+                            aFixedOutputScaleFactor, aGDP, aPeriod );
     
     // For the trial intermittent technology market, set the trial supply amount to
     // the ratio of intermittent-technology output to the electricity output.

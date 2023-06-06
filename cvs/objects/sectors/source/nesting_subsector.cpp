@@ -147,19 +147,21 @@ void NestingSubsector::completeInit( const IInfo* aSectorInfo,
 *          once per period (instead of every iteration) should be placed in this
 *          function.
 * \author Steve Smith, Sonny Kim
+* \param aNationalAccount National accounts container.
 * \param aDemographics Regional demographics container.
 * \param aPeriod Model period
 */
-void NestingSubsector::initCalc( const Demographic* aDemographics,
-                                 const int aPeriod )
+void NestingSubsector::initCalc( NationalAccount* aNationalAccount,
+                          const Demographic* aDemographics,
+                          const int aPeriod )
 {
     // note the order of operations matter here as the base class initCalc will
     // call methods which will trigger recursion down the nest, therefore we must
     // call initCalc on the child subsectors first
     for( auto subsector : mSubsectors ) {
-        subsector->initCalc( aDemographics, aPeriod );
+        subsector->initCalc( aNationalAccount, aDemographics, aPeriod );
     }
-    Subsector::initCalc( aDemographics, aPeriod );
+    Subsector::initCalc( aNationalAccount, aDemographics, aPeriod );
 }
 
 /*!
@@ -171,11 +173,11 @@ void NestingSubsector::initCalc( const Demographic* aDemographics,
  * \param aPeriod model period
  * \return A vector of subsector shares.
 */
-const vector<double> NestingSubsector::calcChildShares( const int aPeriod ) const {
+const vector<double> NestingSubsector::calcChildShares( const GDP* aGDP, const int aPeriod ) const {
     // Calculate unnormalized shares.
     vector<double> subsecShares( mSubsectors.size() );
     for( unsigned int i = 0; i < mSubsectors.size(); ++i ){
-        subsecShares[ i ] = mSubsectors[ i ]->calcShare( mDiscreteChoiceModel, aPeriod );
+        subsecShares[ i ] = mSubsectors[ i ]->calcShare( mDiscreteChoiceModel, aGDP, aPeriod );
     }
 
     // Normalize the shares.  After normalization they will be true shares, not log(shares).
@@ -192,10 +194,10 @@ const vector<double> NestingSubsector::calcChildShares( const int aPeriod ) cons
         // minimum cost subsector.
         assert( subsec.size() > 0 );
         int minPriceIndex = 0;
-        double minPrice = mSubsectors[ minPriceIndex ]->getPrice( aPeriod );
+        double minPrice = mSubsectors[ minPriceIndex ]->getPrice( aGDP, aPeriod );
         subsecShares[ 0 ] = 0.0;
         for( int i = 1; i < mSubsectors.size(); ++i ) {
-            double currPrice = mSubsectors[ i ]->getPrice( aPeriod );
+            double currPrice = mSubsectors[ i ]->getPrice( aGDP, aPeriod );
             subsecShares[ i ] = 0.0;                  // zero out all subsector shares ...
             if( currPrice < minPrice ) {
                 minPrice = currPrice;
@@ -216,12 +218,12 @@ const vector<double> NestingSubsector::calcChildShares( const int aPeriod ) cons
 * \param aGDP Regional GDP object.
 * \param aPeriod Model period
 */
-double NestingSubsector::getPrice( const int aPeriod ) const {
+double NestingSubsector::getPrice( const GDP* aGDP, const int aPeriod ) const {
     double subsectorPrice = 0.0; // initialize to 0 for summing
     double sharesum = 0.0;
-    const vector<double>& techShares = calcChildShares( aPeriod );
+    const vector<double>& techShares = calcChildShares( aGDP, aPeriod );
     for ( unsigned int i = 0; i < mSubsectors.size(); ++i ) {
-        double currCost = mSubsectors[i]->getPrice( aPeriod );
+        double currCost = mSubsectors[i]->getPrice( aGDP, aPeriod );
         // calculate weighted average price for Subsector.
         /*!
          * \note Negative prices may be produced and are valid.
@@ -254,7 +256,7 @@ double NestingSubsector::getPrice( const int aPeriod ) const {
 * \param aPeriod Model period.
 * \return share-weighted fuel price
 */
-double NestingSubsector::getAverageFuelPrice( const int aPeriod ) const {
+double NestingSubsector::getAverageFuelPrice( const GDP* aGDP, const int aPeriod ) const {
     // Determine the average fuel price.
     double fuelPrice = 0;
 
@@ -263,11 +265,11 @@ double NestingSubsector::getAverageFuelPrice( const int aPeriod ) const {
     // current period's are unknown.
     const int sharePeriod = ( aPeriod == 0 ) ? aPeriod : aPeriod - 1;
 
-    const vector<double>& techShares = calcChildShares( sharePeriod );
+    const vector<double>& techShares = calcChildShares( aGDP, sharePeriod );
     for ( unsigned int i = 0; i < mSubsectors.size(); ++i) {
         // calculate weighted average price of fuel only
         // subsector shares are based on total cost
-        fuelPrice += techShares[ i ] * mSubsectors[i]->getAverageFuelPrice( aPeriod );
+        fuelPrice += techShares[ i ] * mSubsectors[i]->getAverageFuelPrice( aGDP, aPeriod );
     }
     /*! \post Fuel price must be positive. */
     assert( fuelPrice >= 0 );
@@ -318,14 +320,15 @@ double NestingSubsector::getFixedOutput( const int aPeriod, const double aMargin
 * \param aGDP Regional GDP container.
 */
 void NestingSubsector::setOutput( const double aSubsectorVariableDemand, 
-                                  const double aFixedOutputScaleFactor,
-                                  const int aPeriod )
+                           const double aFixedOutputScaleFactor,
+                           const GDP* aGDP,
+                           const int aPeriod )
 
 {
-    const vector<double>& subsecShares = calcChildShares( aPeriod );
+    const vector<double>& subsecShares = calcChildShares( aGDP, aPeriod );
     for( size_t i = 0; i < mSubsectors.size(); ++i ) {
         mSubsectors[i]->setOutput( subsecShares[i] * aSubsectorVariableDemand,
-                aFixedOutputScaleFactor, aPeriod );
+                aFixedOutputScaleFactor, aGDP, aPeriod );
     }
 }
 

@@ -51,7 +51,7 @@
 using namespace std;
 
 // Static initializations.
-std::unique_ptr<Configuration> Configuration::gInstance;
+std::auto_ptr<Configuration> Configuration::gInstance;
 
 //! Private constructor to prevent a programmer from creating a second object.
 Configuration::Configuration(): mLogFile( "main_log" ){

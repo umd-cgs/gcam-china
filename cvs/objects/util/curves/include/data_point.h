@@ -92,7 +92,7 @@ class DataPoint : private boost::noncopyable {
         * \brief Binary comparison operator used for DataPoint pointers to order by increasing values. 
         * \author Josh Lurz
         */  
-        struct Lesser
+        struct Lesser : public std::binary_function<DataPoint*,DataPoint*,bool>
         {
             //! Operator which performs comparison. 
             bool operator()( const DataPoint* lhs, const DataPoint* rhs ) const
@@ -104,7 +104,7 @@ class DataPoint : private boost::noncopyable {
         * \brief Binary comparison operator which compares two DataPoints by least X value.
         * \author Josh Lurz
         */  
-        struct LesserX
+        struct LesserX : public std::binary_function<DataPoint*,DataPoint*,bool>
         {
             //! Operator which performs comparison. 
             bool operator()( const DataPoint* lhs, const DataPoint* rhs ) const
@@ -116,7 +116,7 @@ class DataPoint : private boost::noncopyable {
         * \brief Binary comparison operator which compares two DataPoints by least Y value.
         * \author Josh Lurz
         */  
-        struct LesserY
+        struct LesserY : public std::binary_function<DataPoint*,DataPoint*,bool>
         {
             //! Operator which performs comparison. 
             bool operator()( const DataPoint* lhs, const DataPoint* rhs ) const

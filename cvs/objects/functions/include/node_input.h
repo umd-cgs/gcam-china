@@ -233,6 +233,11 @@ public:
                                 const int aLifetimeYears,
                                 const int aPeriod ) {}
 
+    virtual double calcTaxes( const std::string& aRegionName,
+                            NationalAccount* aNationalAccount,
+                            Expenditure* aExpenditure,
+                            const int aPeriod ) const { return 0; }
+
     virtual void doInterpolations( const int aYear, const int aPreviousYear,
                                    const int aNextYear, const IInput* aPreviousInput,
                                    const IInput* aNextInput ) {}

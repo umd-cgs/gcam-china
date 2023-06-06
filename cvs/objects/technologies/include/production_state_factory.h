@@ -62,7 +62,7 @@ class IProductionState;
  */
 class ProductionStateFactory { 
 public:
-    static std::unique_ptr<IProductionState> create( const int aInvestYear,
+    static std::auto_ptr<IProductionState> create( const int aInvestYear,
                                                    const int aLifetimeYears,
                                                    const double aFixedOutput,
                                                    const double aInitialOutput,

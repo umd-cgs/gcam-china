@@ -111,7 +111,7 @@ const std::string& ReserveSubResource::getXMLNameStatic() {
 /*! Takes into account short-term capacity limits.
 Note that cumulsupply() must be called before calling this function. */
 void ReserveSubResource::annualsupply( const string& aRegionName, const string& aResourceName,
-                                       int aPeriod, double aPrice )
+                                       int aPeriod, const GDP* aGdp, double aPrice )
 {
     double prevCumul = aPeriod > 0 ? mCumulProd[ aPeriod - 1] : 0.0;
     double newReserves = mCumulProd[ aPeriod ] - prevCumul;
@@ -137,7 +137,7 @@ void ReserveSubResource::annualsupply( const string& aRegionName, const string& 
     // Calculate production from all vintages
     double totalProduction = 0.0;
     for( auto techIter = mTechnology->getVintageBegin( aPeriod ); techIter != mTechnology->getVintageEnd( aPeriod ); ++techIter ) {
-        (*techIter).second->production( aRegionName, aResourceName, newReserves, fixedScaleFactor, aPeriod );
+        (*techIter).second->production( aRegionName, aResourceName, newReserves, fixedScaleFactor, aGdp, aPeriod );
         totalProduction += (*techIter).second->getOutput( aPeriod );
     }
     mAnnualProd[ aPeriod ] = totalProduction;

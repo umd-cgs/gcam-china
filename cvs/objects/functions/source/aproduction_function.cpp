@@ -80,6 +80,9 @@ double AProductionFunction::calcCosts( const InputSet& input,
 			totalCost += input[i]->getPhysicalDemand( period )
 				         * input[i]->getPricePaid( regionName, period );
 		}
+        else {
+            totalCost += input[i]->calcTaxes( regionName, 0, 0, period );
+        }
 	}
 	return totalCost;
 }

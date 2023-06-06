@@ -50,7 +50,9 @@
 #include "containers/include/iactivity.h"
 
 class Sector;
-/*!
+class GDP;
+
+/*! 
  * \ingroup Objects
  * \brief An adaptor class to generically call a sector to set intermediate prices,
  *        and supplies and demands.
@@ -62,7 +64,7 @@ class Sector;
 class SectorActivity
 {
 public:
-    SectorActivity( Sector* aSector, const std::string& aRegionName );
+    SectorActivity( Sector* aSector, const GDP* aGDP, const std::string& aRegionName );
     ~SectorActivity();
     
     void setPrices( const int aPeriod );
@@ -77,6 +79,9 @@ public:
 private:
     //! The wrapped sector.
     Sector* mSector;
+    
+    //! The regional GDP object which may be required for the sector to calculate.
+    const GDP* mGDP;
     
     //! The name of the region this sector is contained in.
     const std::string& mRegionName;

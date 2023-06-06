@@ -50,7 +50,6 @@ class World;
 class Region;
 class RegionMiniCAM;
 class NationalAccount;
-class NationalAccountContainer;
 class Demographic;
 class Sector;
 class Subsector;
@@ -62,6 +61,7 @@ class AResource;
 class Technology;
 class AFinalDemand;
 class EnergyFinalDemand;
+class Expenditure;
 class AResource;
 class Scenario;
 class AGHG;
@@ -77,6 +77,7 @@ class AgeCohort;
 class Gender;
 class Male;
 class Female;
+class GDP;
 class MiniCAMInput;
 class IOutput;
 class LandLeaf;
@@ -95,9 +96,6 @@ class BuildingNodeInput;
 class FoodDemandInput;
 class GCAMConsumer;
 class NoEmissCarbonCalc;
-class NestedCESProductionFunctionMacro;
-class FactorInputLeaf;
-class FactorInputNode;
 
 /*!
  * \brief An interface to a class which visits every node in the tree and
@@ -203,11 +201,11 @@ public:
     virtual void startVisitNationalAccount( const NationalAccount* aNationalAccount, const int aPeriod ) = 0;
     virtual void endVisitNationalAccount( const NationalAccount* aNationalAccount, const int aPeriod ) = 0;
 
-    virtual void startVisitNationalAccountContainer( const NationalAccountContainer* aNationalAccountContainer, const int aPeriod ) = 0;
-    virtual void endVisitNationalAccountContainer( const NationalAccountContainer* aNationalAccountContainer, const int aPeriod ) = 0;
-
     virtual void startVisitInput( const IInput* aInput, const int aPeriod ) = 0;
     virtual void endVisitInput( const IInput* aInput, const int aPeriod ) = 0;
+
+    virtual void startVisitExpenditure( const Expenditure* aExpenditure, const int aPeriod ) = 0;
+    virtual void endVisitExpenditure( const Expenditure* aExpenditure, const int aPeriod ) = 0;
 
     virtual void startVisitMiniCAMInput( const MiniCAMInput* aInput, const int aPeriod ) = 0;
     virtual void endVisitMiniCAMInput( const MiniCAMInput* aInput, const int aPeriod ) = 0;
@@ -223,6 +221,9 @@ public:
     
     virtual void startVisitMarket( const Market* aMarket, const int aPeriod ) = 0;
     virtual void endVisitMarket( const Market* aMarket, const int aPeriod ) = 0;
+
+    virtual void startVisitGDP( const GDP* aGDP, const int aPeriod ) = 0;
+    virtual void endVisitGDP( const GDP* aGDP, const int aPeriod ) = 0;
     
     virtual void startVisitLandNode( const LandNode* aLandNode, const int aPeriod ) = 0;
     virtual void endVisitLandNode( const LandNode* aLandNode, const int aPeriod ) = 0;
@@ -263,15 +264,6 @@ public:
 
     virtual void startVisitNoEmissCarbonCalc( const NoEmissCarbonCalc* aNoEmissCarbonCalc, const int aPeriod ) = 0;
     virtual void endVisitNoEmissCarbonCalc( const NoEmissCarbonCalc* aNoEmissCarbonCalc, const int aPeriod ) = 0;
-    
-    virtual void startVisitNestedCESProductionFunctionMacro( const NestedCESProductionFunctionMacro* aNestedCESProductionFunctionMacro, const int aPeriod ) = 0;
-    virtual void endVisitNestedCESProductionFunctionMacro( const NestedCESProductionFunctionMacro* aNestedCESProductionFunctionMacro, const int aPeriod ) = 0;
-
-    virtual void startVisitFactorInputNode( const FactorInputNode* aFactorInputNode, const int aPeriod ) = 0;
-    virtual void endVisitFactorInputNode( const FactorInputNode* aFactorInputNode, const int aPeriod ) = 0;
-
-    virtual void startVisitFactorInputLeaf( const FactorInputLeaf* aFactorInputLeaf, const int aPeriod ) = 0;
-    virtual void endVisitFactorInputLeaf( const FactorInputLeaf* aFactorInputLeaf, const int aPeriod ) = 0;
 };
 
 IVisitor::~IVisitor(){
