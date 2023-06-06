@@ -14,7 +14,7 @@ module_gcamusa_L277.ghg_prc_USA(command, ...)
 \value{
 Depends on \code{command}: either a vector of required inputs,
 a vector of output names, or (if \code{command} is "MAKE") all
-the generated outputs: \code{L277.ghg_prc_USA}, \code{L277.MAC_prc_tc_average_USA}, \code{L277.MAC_prc_phaseInTime_USA}.
+the generated outputs: \code{L277.ghg_prc_USA}, \code{L277.MAC_prc_USA}, \code{L277.MAC_prc_tc_average_USA}, \code{L277.MAC_prc_phaseInTime_USA}.
 }
 \description{
 Generates input ghg emissions and marginal abatement curves for industrial processes and urban processes by

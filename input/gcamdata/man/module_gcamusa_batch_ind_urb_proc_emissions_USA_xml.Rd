@@ -14,7 +14,7 @@ module_gcamusa_batch_ind_urb_proc_emissions_USA_xml(command, ...)
 \value{
 Depends on \code{command}: either a vector of required inputs,
 a vector of output names, or (if \code{command} is "MAKE") all
-the generated outputs: \code{ind_urb_proc_emissions_USA.xml}.
+the generated outputs: \code{ind_urb_proc_emissions_USA.xml}, \code{ind_urb_proc_ghg_emissions_USA.xml}.
 }
 \description{
 Construct XML data structure for \code{ind_urb_proc_emissions_USA.xml}.
