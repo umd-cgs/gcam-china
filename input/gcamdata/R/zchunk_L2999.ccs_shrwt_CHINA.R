@@ -37,12 +37,14 @@ module_gcamchina_L2999.ccs_shrwt_CHINA <- function(command, ...) {
     # Apply new ccs shareweights to all provinces
     L9999.StubTechShrwt_CHINA <- StubTechShrwt_ccs %>%
       rename(subsector = subsector.name) %>%
-      write_to_all_provinces(c(LEVEL2_DATA_NAMES[["StubTechShrwt"]]), gcamchina.PROVINCES_ALL) %>%
+      write_to_all_provinces(c(LEVEL2_DATA_NAMES[["StubTechShrwt"]]), gcamchina.PROVINCES_NOHKMC) %>%
       # remove Tibet(XZ) N fertilizer
        filter(!(region == "XZ" & supplysector == "N fertilizer"))
 
     L9999.StubTechInterpOverwrite_CHINA <- StubTechInterpOverwrite %>%
-      write_to_all_provinces(c(LEVEL2_DATA_NAMES[["StubTechInterpOverwrite"]]), gcamchina.PROVINCES_ALL) %>%
+      write_to_all_provinces( c("region", "supplysector", "subsector", "stub.technology", "delete",
+                                "apply.to", "from.year", "to.year", "interpolation.function"),
+                              gcamchina.PROVINCES_NOHKMC) %>%
       # remove Tibet(XZ) N fertilizer
       filter(!(region == "XZ" & supplysector == "N fertilizer"))
 

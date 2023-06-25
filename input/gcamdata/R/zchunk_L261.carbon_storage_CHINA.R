@@ -132,7 +132,7 @@ module_gcam.china_L261.carbon_storage_CHINA <- function(command, ...) {
     # L261.SubsectorLogit_C_CHINA: subsector logit information in the provinces
     L261.SubsectorLogit_C %>%
       filter(region == gcamchina.REGION) %>%
-      write_to_all_provinces(c(LEVEL2_DATA_NAMES[["SubsectorLogit"]], LOGIT_TYPE_COLNAME), gcamchina.PROVINCES_ALL) %>%
+      write_to_all_provinces(c(LEVEL2_DATA_NAMES[["SubsectorLogit"]], LOGIT_TYPE_COLNAME), gcamchina.PROVINCES_NOHKMC) %>%
       #NOTE: This table contains logit values in provinces where no C storage resources may exist at the province level
       left_join_error_no_match(select(province_names_mappings, province), by = c("region" = "province")) %>%
       # Drop the provinces where no carbon storage resources may exist at the grid level

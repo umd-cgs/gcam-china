@@ -226,16 +226,8 @@ module_gcamchina_L2322.Fert_CHINA <- function(command, ...) {
           write_to_all_provinces(names = df_names, gcamchina.PROVINCES_ALL) %>%
           filter(region %in% Fert_provinces[["province"]]) ->
           new_df
-
-        # If the input data frame includes subsector information subset the
-        # data frame for gas since state-level N fertilizer should not include
-        # the Imports subsector and there is no need for the alternative fuels either.
-        check_subsector <- c("subsector" %in% names(new_df))
-        if(check_subsector) {
-          new_df %>%
-            filter(grepl("gas", subsector)) ->
-            new_df
-        }
+        # province-level N fertilizer should not include the Imports subsector.
+        if( "subsector" %in% names( new_df ) )   new_df %>% filter(subsector != "Imports" ) -> new_df
 
       }
       return(new_df)
@@ -328,10 +320,13 @@ module_gcamchina_L2322.Fert_CHINA <- function(command, ...) {
 
     # Then add minicam.energy.input coefficients from the fertilizer production default coefficients data frame
     # by supplysector, subsector, and technology, then add CHINA as the default market name.
+
     L2322.StubTechMarket_Fert_CHINA %>%
-      left_join_error_no_match(A322.globaltech_coef %>%
-                                 select(supplysector, subsector, technology, minicam.energy.input),
-                               by = c("supplysector", "subsector", c("stub.technology" = "technology"))) %>%
+      # use left_join because hydro has two minicam.energy.input (H2 industrial and wholesale gas)
+      # so the number of rows will change
+      left_join(A322.globaltech_coef %>%
+                  select(supplysector, subsector, technology, minicam.energy.input),
+                by = c("supplysector", "subsector", c("stub.technology" = "technology"))) %>%
       mutate(market.name = region) ->
 	  L2322.StubTechMarket_Fert_CHINA
 

@@ -441,6 +441,7 @@ module_gcamchina_L244.building_CHINA <- function(command, ...) {
       # Add floorspace
       # Must use left join, HK and MC have NA base building size, this is retained
       left_join(L244.Floorspace_CHINAbld, by = c(LEVEL2_DATA_NAMES[["BldNodes"]], "year")) %>%
+      na.omit() %>%
       # Add multiplier
       left_join_error_no_match(A44.demand_satiation_mult, by = c("building.service.input" = "supplysector")) %>%
       # Satiation level = service per floorspace * multiplier
@@ -453,6 +454,7 @@ module_gcamchina_L244.building_CHINA <- function(command, ...) {
       # Add floorspace
       # Must use left join, HK and MC have NA base building size, this is retained
       left_join(L244.Floorspace_CHINAbld, by = c(LEVEL2_DATA_NAMES[["BldNodes"]], "year")) %>%
+      na.omit() %>%
       # Add multiplier
       left_join_error_no_match(A44.demand_satiation_mult, by = c("thermal.building.service.input" = "supplysector")) %>%
       # Satiation level = service per floorspace * multiplier
