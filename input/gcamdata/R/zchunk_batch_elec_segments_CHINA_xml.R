@@ -202,7 +202,7 @@ module_gcamchina_batch_elec_segments_CHINA_xml <- function(command, ...) {
 
 
     # Produce outputs
-    create_xml("elec_segments_USA.xml") %>%
+    create_xml("elec_segments_CHINA.xml") %>%
       add_node_equiv_xml("sector") %>%
       add_node_equiv_xml("technology") %>%
       add_xml_data(L2234.PassThroughSector_elecS_CHINA, "PassThroughSector") %>%
