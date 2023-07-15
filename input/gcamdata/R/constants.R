@@ -1095,6 +1095,9 @@ gcamchina.PROVINCES_ALL <- c("AH", "BJ", "CQ", "FJ", "GD", "GS", "GX", "GZ", "HA
 gcamchina.PROVINCES_NOHKMC <- c("AH", "BJ", "CQ", "FJ", "GD", "GS", "GX", "GZ", "HA", "HB", "HE", "HI", "HL", "HN", "JL", "JS", "JX", "LN", "NM", "NX", "QH", "SC", "SD", "SH",
                                 "SN", "SX", "TJ", "XJ", "XZ", "YN", "ZJ")
 
+gcamchina.GRID_REGIONS <- c("East China Grid", "North China Grid", "Central China Grid",
+                            "China Southern Power Grid", "Northwest China Grid", "Northeast China Grid")
+
 # Resources that will be modeled at the province level
 gcamchina.PROVINCE_RENEWABLE_RESOURCES <- c("distributed_solar", "geothermal", "onshore wind resource", "offshore wind resource")
 gcamchina.PROVINCE_UNLIMITED_RESOURCES <- c("global solar resource", "limestone")
@@ -1151,6 +1154,13 @@ gcamchina.GRID.REGION_LOGIT      <- -3
 gcamchina.GRID.REGION_PROVINCE_LOGIT      <- -6
 
 gcamchina.GRID.REGION_LOGIT_TYPE <- "relative-cost-logit"
+
+# Electricity load segments
+gcamchina.LOAD_SEG_CAL_YEARS <- c(2015,2010, 2005, 1990)       # Years for which electricity load segments are calibrated
+gcamchina.ELEC_SEGMENT_BASE <- "base load generation"
+gcamchina.ELEC_SEGMENT_INT <- "intermediate generation"
+gcamchina.ELEC_SEGMENT_SUBPEAK <- "subpeak generation"
+gcamchina.ELEC_SEGMENT_PEAK <- "peak generation"
 
 
 

@@ -1,0 +1,75 @@
+# File: A23.elecS_subsector_shrwt_interpto.csv
+# Title: Multiple Load Segments Subsector Shareweights
+# Units: unitless
+# Comments: Subsector shareweights for subsectors that are not fixed at calibration values. 
+# These subsectors need a to-value which specifies the value to which the shareweight is being interpolated.
+# Column types: ccccccic
+# ----------
+region,supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
+China,base load generation,coal,share-weight,final-calibration-year,2030,1,linear
+China,intermediate generation,coal,share-weight,final-calibration-year,2030,1,linear
+China,subpeak generation,coal,share-weight,final-calibration-year,2030,1,linear
+China,peak generation,coal,share-weight,final-calibration-year,2030,1,linear
+China,base load generation,coal,share-weight,2030,end-year,1,fixed
+China,intermediate generation,coal,share-weight,2030,end-year,1,fixed
+China,subpeak generation,coal,share-weight,2030,end-year,1,fixed
+China,peak generation,coal,share-weight,2030,end-year,1,fixed
+China,base load generation,gas,share-weight,final-calibration-year,2030,1,linear
+China,intermediate generation,gas,share-weight,final-calibration-year,2030,1,linear
+China,subpeak generation,gas,share-weight,final-calibration-year,2030,1,linear
+China,peak generation,gas,share-weight,final-calibration-year,2030,1,linear
+China,base load generation,gas,share-weight,2030,end-year,1,fixed
+China,intermediate generation,gas,share-weight,2030,end-year,1,fixed
+China,subpeak generation,gas,share-weight,2030,end-year,1,fixed
+China,peak generation,gas,share-weight,2030,end-year,1,fixed
+China,base load generation,biomass,share-weight,final-calibration-year,end-year,1,linear
+China,intermediate generation,biomass,share-weight,final-calibration-year,end-year,1,linear
+China,subpeak generation,biomass,share-weight,final-calibration-year,end-year,1,linear
+China,peak generation,biomass,share-weight,final-calibration-year,end-year,1,linear
+China,base load generation,geothermal,share-weight,final-calibration-year,end-year,1,linear
+China,intermediate generation,geothermal,share-weight,final-calibration-year,end-year,1,linear
+China,subpeak generation,geothermal,share-weight,final-calibration-year,end-year,1,linear
+China,peak generation,geothermal,share-weight,final-calibration-year,end-year,1,linear
+China,base load generation,nuclear,share-weight,final-calibration-year,initial-future-year,0,linear
+China,intermediate generation,nuclear,share-weight,final-calibration-year,initial-future-year,0,linear
+China,subpeak generation,nuclear,share-weight,final-calibration-year,initial-future-year,0,linear
+China,peak generation,nuclear,share-weight,final-calibration-year,initial-future-year,0,linear
+China,base load generation,nuclear,share-weight,initial-future-year,2025,0,fixed
+China,intermediate generation,nuclear,share-weight,initial-future-year,2025,0,fixed
+China,subpeak generation,nuclear,share-weight,initial-future-year,2025,0,fixed
+China,peak generation,nuclear,share-weight,initial-future-year,2025,0,fixed
+China,base load generation,nuclear,share-weight,2025,2030,1,linear
+China,intermediate generation,nuclear,share-weight,2025,2030,1,linear
+China,subpeak generation,nuclear,share-weight,2025,2030,1,linear
+China,peak generation,nuclear,share-weight,2025,2030,1,linear
+China,base load generation,nuclear,share-weight,2030,end-year,1,fixed
+China,intermediate generation,nuclear,share-weight,2030,end-year,1,fixed
+China,subpeak generation,nuclear,share-weight,2030,end-year,1,fixed
+China,peak generation,nuclear,share-weight,2030,end-year,1,fixed
+China,base load generation,wind,share-weight,final-calibration-year,2030,1,linear
+China,intermediate generation,wind,share-weight,final-calibration-year,initial-future-year,0,linear
+China,subpeak generation,wind,share-weight,final-calibration-year,initial-future-year,0,linear
+China,peak generation,wind,share-weight,final-calibration-year,initial-future-year,0,linear
+China,base load generation,wind,share-weight,2030,end-year,1,fixed
+China,intermediate generation,wind,share-weight,initial-future-year,end-year,0,fixed
+China,subpeak generation,wind,share-weight,initial-future-year,end-year,0,fixed
+China,peak generation,wind,share-weight,initial-future-year,end-year,0,fixed
+China,base load generation,solar,share-weight,final-calibration-year,2030,1,linear
+China,intermediate generation,solar,share-weight,final-calibration-year,2030,1,linear
+China,subpeak generation,solar,share-weight,final-calibration-year,2030,1,linear
+China,peak generation,solar,share-weight,final-calibration-year,2030,1,linear
+China,base load generation,solar,share-weight,2030,end-year,1,fixed
+China,intermediate generation,solar,share-weight,2030,end-year,1,fixed
+China,subpeak generation,solar,share-weight,2030,end-year,1,fixed
+China,peak generation,solar,share-weight,2030,end-year,1,fixed
+China,elect_td_bld,rooftop_pv,share-weight,final-calibration-year,2030,1,linear
+China,elect_td_bld,rooftop_pv,share-weight,2030,end-year,1,fixed
+China,peak generation,grid_storage,share-weight,final-calibration-year,end-year,1,linear
+China,base load generation,refined liquids,share-weight,final-calibration-year,initial-future-year,0,linear
+China,intermediate generation,refined liquids,share-weight,final-calibration-year,initial-future-year,0,linear
+China,subpeak generation,refined liquids,share-weight,final-calibration-year,initial-future-year,0,linear
+China,peak generation,refined liquids,share-weight,final-calibration-year,initial-future-year,0,linear
+China,base load generation,refined liquids,share-weight,initial-future-year,end-year,0,fixed
+China,intermediate generation,refined liquids,share-weight,initial-future-year,end-year,0,fixed
+China,subpeak generation,refined liquids,share-weight,initial-future-year,end-year,0,fixed
+China,peak generation,refined liquids,share-weight,initial-future-year,end-year,0,fixed

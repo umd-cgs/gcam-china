@@ -362,13 +362,19 @@ module_gcamchina_L223.electricity_CHINA <- function(command, ...) {
     # PART 3: THE PROVINCES
     # All tables for which processing is identical are done by a function.
     # This applies to the supplysectors, subsectors, and stub tech characteristics of the provinces
-    process_CHINA_to_provinces <- function(data) {
+    process_CHINA_to_provinces <- function(data, noHKMC = TRUE) {
       province <- region <- grid.region <- subsector <- market.name <-
         minicam.energy.input <- NULL  # silence package check notes
 
-      data_new <- data %>%
-        filter(region == gcamchina.REGION) %>%
-        write_to_all_provinces(names(data),gcamchina.PROVINCES_NOHKMC)
+      if(noHKMC) {
+        data_new <- data %>%
+          filter(region == gcamchina.REGION) %>%
+          write_to_all_provinces(names(data),gcamchina.PROVINCES_NOHKMC)
+      } else {
+        data_new <- data %>%
+          filter(region == gcamchina.REGION) %>%
+          write_to_all_provinces(names(data),gcamchina.PROVINCES_ALL)
+      }
 
       if("subsector" %in% names(data_new)) {
         data_new <- data_new %>%
@@ -387,9 +393,11 @@ module_gcamchina_L223.electricity_CHINA <- function(command, ...) {
       data_new
     }
 
-    process_CHINA_to_provinces(L223.Supplysector_elec) -> L223.Supplysector_elec_CHINA
-    process_CHINA_to_provinces(L223.ElecReserve) -> L223.ElecReserve_CHINA
-    process_CHINA_to_provinces(L223.SubsectorLogit_elec) -> L223.SubsectorLogit_elec_CHINA
+    # logit tables need to include HK and MC
+    process_CHINA_to_provinces(L223.Supplysector_elec, noHKMC = FALSE) -> L223.Supplysector_elec_CHINA
+    process_CHINA_to_provinces(L223.SubsectorLogit_elec, noHKMC = FALSE) -> L223.SubsectorLogit_elec_CHINA
+    process_CHINA_to_provinces(L223.ElecReserve, noHKMC = FALSE) -> L223.ElecReserve_CHINA
+
     process_CHINA_to_provinces(L223.SubsectorShrwtFllt_elec) -> L223.SubsectorShrwtFllt_elec_CHINA
     process_CHINA_to_provinces(L223.SubsectorShrwt_nuc) -> L223.SubsectorShrwt_nuc_CHINA
     process_CHINA_to_provinces(L223.SubsectorShrwt_renew) -> L223.SubsectorShrwt_renew_CHINA
@@ -539,8 +547,6 @@ module_gcamchina_L223.electricity_CHINA <- function(command, ...) {
       mutate(capacity.factor = round(capacity.factor, digits = energy.DIGITS_CAPACITY_FACTOR)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechCapFactor"]]) ->
       L223.StubTechCapFactor_elec_wind_CHINA
-
-    write.csv(L223.StubTechCapFactor_elec_wind_CHINA, "L223.StubTechCapFactor_elec_wind_CHINA.csv")
 
     # L223.StubTechCapFactor_elec_solar_CHINA: capacity factors by province and solar electric technology
     L119.CapFacScaler_PV_province %>%

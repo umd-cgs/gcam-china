@@ -1,0 +1,27 @@
+<scenario>
+    <world>
+        <region name="HK" delete="1"/>
+        <region name="MC" delete="1"/>
+        <region name="China Southern Power Grid">
+            <supplysector name="electricity">
+                <subsector name="HK electricity" delete="1"/>
+                <subsector name="MC electricity" delete="1"/>
+            </supplysector>
+        </region>
+        <!--region name="China">
+            <supplysector name="refining">
+                <subsector name="biomass liquids">
+                    <technology name="HK biomass liquids" delete="1"/>
+                    <technology name="MC biomass liquids" delete="1"/>
+                </subsector>
+            </supplysector>
+        </region-->
+        <region name="XZ">
+            <supplysector name="trn_pass_road_LDV_4W">
+                <absolute-cost-logit>
+                    <base-value>0.06</base-value>
+                </absolute-cost-logit>
+            </supplysector>
+        </region>
+    </world>
+</scenario>

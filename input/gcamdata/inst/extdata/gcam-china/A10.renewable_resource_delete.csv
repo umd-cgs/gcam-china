@@ -1,0 +1,9 @@
+# File: A10.renewable_resource_delete.csv
+# Title: Regions and renewable resource / technology combinations for which utilization is deemed infeasible
+# Units: NA
+# Comments: to updated into proper China provinces
+# resource_elec_subsector contains both renewable resource names and names of corresponding electricity subsectors
+# Source: assumption
+# Column types: cc
+# ----------
+region,resource_elec_subsector

@@ -1,0 +1,74 @@
+# File: A23.elecS_subsector_shrwt.csv
+# Title: Multiple Load Segments Subsector Shareweights
+# Units: unitless
+# Comments: Subsector shareweights at points of inflection (end-points of interpolation function)
+# Column types: cccci
+# ----------
+region,supplysector,subsector,year,share.weight
+China,base load generation,coal,2030,1
+China,intermediate generation,coal,2030,1
+China,subpeak generation,coal,2030,1
+China,peak generation,coal,2030,1
+China,base load generation,coal,end-year,1
+China,intermediate generation,coal,end-year,1
+China,subpeak generation,coal,end-year,1
+China,peak generation,coal,end-year,1
+China,base load generation,gas,2030,1
+China,intermediate generation,gas,2030,1
+China,subpeak generation,gas,2030,1
+China,peak generation,gas,2030,1
+China,base load generation,gas,end-year,1
+China,intermediate generation,gas,end-year,1
+China,subpeak generation,gas,end-year,1
+China,peak generation,gas,end-year,1
+China,base load generation,biomass,end-year,1
+China,intermediate generation,biomass,end-year,1
+China,subpeak generation,biomass,end-year,1
+China,peak generation,biomass,end-year,1
+China,base load generation,geothermal,end-year,1
+China,intermediate generation,geothermal,end-year,1
+China,subpeak generation,geothermal,end-year,1
+China,peak generation,geothermal,end-year,1
+China,base load generation,nuclear,initial-future-year,0
+China,intermediate generation,nuclear,initial-future-year,0
+China,subpeak generation,nuclear,initial-future-year,0
+China,peak generation,nuclear,initial-future-year,0
+China,base load generation,nuclear,2025,0
+China,intermediate generation,nuclear,2025,0
+China,subpeak generation,nuclear,2025,0
+China,peak generation,nuclear,2025,0
+China,base load generation,nuclear,2030,1
+China,intermediate generation,nuclear,2030,1
+China,subpeak generation,nuclear,2030,1
+China,peak generation,nuclear,2030,1
+China,base load generation,nuclear,end-year,1
+China,intermediate generation,nuclear,end-year,1
+China,subpeak generation,nuclear,end-year,1
+China,peak generation,nuclear,end-year,1
+China,base load generation,wind,end-year,1
+China,intermediate generation,wind,end-year,0
+China,subpeak generation,wind,end-year,0
+China,peak generation,wind,end-year,0
+China,base load generation,wind,2030,1
+China,intermediate generation,wind,initial-future-year,0
+China,subpeak generation,wind,initial-future-year,0
+China,peak generation,wind,initial-future-year,0
+China,base load generation,solar,end-year,1
+China,intermediate generation,solar,end-year,1
+China,subpeak generation,solar,end-year,1
+China,peak generation,solar,end-year,1
+China,base load generation,solar,2030,1
+China,intermediate generation,solar,2030,1
+China,subpeak generation,solar,2030,1
+China,peak generation,solar,2030,1
+China,elect_td_bld,rooftop_pv,end-year,1
+China,elect_td_bld,rooftop_pv,2030,1
+China,peak generation,grid_storage,end-year,1
+China,base load generation,refined liquids,initial-future-year,0
+China,intermediate generation,refined liquids,initial-future-year,0
+China,subpeak generation,refined liquids,initial-future-year,0
+China,peak generation,refined liquids,initial-future-year,0
+China,base load generation,refined liquids,end-year,0
+China,intermediate generation,refined liquids,end-year,0
+China,subpeak generation,refined liquids,end-year,0
+China,peak generation,refined liquids,end-year,0

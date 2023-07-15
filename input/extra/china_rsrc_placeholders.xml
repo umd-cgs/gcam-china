@@ -1,0 +1,38 @@
+<scenario>
+   <world>
+      <region name="China">
+         <supplysector name="H2 central production">
+            <subsector name="geothermal">
+               <relative-cost-logit>
+                   <logit-exponent fillout="1" year="1975">-10</logit-exponent>
+               </relative-cost-logit>
+               <share-weight fillout="1" year="1975">0</share-weight>
+               <technology name="geothermal">
+                   <period year="1975">
+                       <minicam-energy-input name="geothermal">
+                           <efficiency>0.64</efficiency>
+                       </minicam-energy-input>
+                       <minicam-energy-input name="traditional biomass">
+                           <efficiency>0.64</efficiency>
+                       </minicam-energy-input>
+                       <minicam-energy-input name="distributed_solar">
+                           <efficiency>0.64</efficiency>
+                       </minicam-energy-input>
+                       <minicam-energy-input name="limestone">
+                           <efficiency>0.64</efficiency>
+                       </minicam-energy-input>
+                       <minicam-energy-input name="onshore carbon-storage">
+                           <efficiency>0.64</efficiency>
+                       </minicam-energy-input>
+                       <CO2 name="CO2"/>
+                       <minicam-non-energy-input name="non-energy">
+                           <input-cost>2.999</input-cost>
+                       </minicam-non-energy-input>
+                       <share-weight>1</share-weight>
+                   </period>
+               </technology>
+            </subsector>
+        </supplysector>
+    </region>
+</world>
+</scenario>

@@ -19,6 +19,7 @@
 	<ScenarioComponents>
         <Value name = "climate">../input/gcamdata/xml/hector.xml</Value>
 		<Value name = "socioeconomics">../input/gcamdata/xml/socioeconomics_gSSP2.xml</Value>
+
 		<Value name = "resources">../input/gcamdata/xml/resources.xml</Value>
 		<Value name = "energy_supply">../input/gcamdata/xml/en_supply.xml</Value>
 		<Value name = "energy_transformation">../input/gcamdata/xml/en_transformation.xml</Value>
@@ -79,7 +80,8 @@
 		<Value name = "an_water">../input/gcamdata/xml/water_demand_livestock.xml</Value>
 		<Value name = "municipal_water">../input/gcamdata/xml/water_demand_municipal.xml</Value>
 		<Value name = "primary_ene_water">../input/gcamdata/xml/water_demand_primary.xml</Value>
-
+		
+		<!-- Global nonCO2 GHG files -->
 		<Value name = "ind_urb_proc">../input/gcamdata/xml/ind_urb_processing_sectors.xml</Value>
 		<Value name = "nonco2_energy">../input/gcamdata/xml/all_energy_emissions.xml</Value>
 		<Value name = "nonco2_fgas">../input/gcamdata/xml/all_fgas_emissions.xml</Value>
@@ -98,15 +100,42 @@
 		<Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value>
 		<Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget_gSSP2.xml</Value>
 		<Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
-
         <Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
         <Value name = "gas_trade">../input/gcamdata/xml/gas_trade.xml</Value>
+
+		<Value name = "socio_china">../input/gcamdata/xml/socioeconomics_CHINA.xml</Value>
+		<Value name = "intr_china">../input/gcamdata/xml/interest_rate_CHINA.xml</Value>
+		
+		<!-- resource placeholder -->
+		<Value name = "rsrc_hold_china">../input/extra/china_rsrc_placeholders.xml</Value>
+		
+		<Value name = "rsrc_china">../input/gcamdata/xml/resources_CHINA.xml</Value>
+		<Value name = "Cstorage_china">../input/gcamdata/xml/Cstorage_CHINA.xml</Value>
+		<Value name = "prices_china">../input/gcamdata/xml/en_prices_CHINA.xml</Value>
+		<Value name = "tform_china">../input/gcamdata/xml/en_transformation_CHINA.xml</Value>
+		<Value name = "heat_china">../input/gcamdata/xml/heat_china.xml</Value>
+		<Value name = "h2_china">../input/gcamdata/xml/hydrogen_CHINA.xml</Value>
+		<Value name = "elec_china">../input/gcamdata/xml/electricity_CHINA.xml</Value>
+		<Value name = "elec_china">../input/gcamdata/xml/electricity_nuclear_CHINA.xml</Value>
+		<Value name = "elect_td_china">../input/gcamdata/xml/electd_CHINA.xml</Value>
+		<Value name = "bld_china">../input/gcamdata/xml/building_CHINA.xml</Value>
+		<Value name = "trn_china">../input/gcamdata/xml/transportation_CHINA.xml</Value>
+		<Value name = "ind_china">../input/gcamdata/xml/industry_CHINA.xml</Value>
+		<Value name = "cmnt_china">../input/gcamdata/xml/cement_CHINA.xml</Value>
+		<Value name = "fert_china">../input/gcamdata/xml/Fert_CHINA.xml</Value>
+		<Value name = "shrwt">../input/gcamdata/xml/CCS_shrwt_CHINA.xml</Value>
+		
+		<Value name = "liq_lim_china">../input/gcamdata/xml/liquids_limits_CHINA.xml</Value>
+		<Value name = "neg_emiss_china">../input/gcamdata/xml/negative_emissions_budget_CHINA_gSSP2.xml</Value>
+
+			
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 		
+
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">Reference</Value>
-		<Value name="debug-region">USA</Value>
+		<Value name="scenarioName">GCAM_China_Reference</Value>
+		<Value name="debug-region">China</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
 		<Value name="AbatedGasForCostCurves">CO2</Value>

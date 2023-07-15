@@ -1,0 +1,9 @@
+# File: A23.elecS_subsector_shrwt_interpto_province_adj.csv
+# Title: Province-Specific Multiple Load Segments Subsector Shareweight Assumptions
+# Units: unitless
+# Comments: Subsector shareweights for subsectors that are not fixed at calibration values. 
+# These subsectors need a to-value which specifies the value to which the shareweight is being interpolated.
+# This table adjusts shareweights / interpolation functions for particular provinces.
+# Column types: ccccccic
+# ----------
+region,supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function

@@ -248,6 +248,8 @@ module_gcam.china_L226.en_distribution_CHINA <- function(command, ...) {
                                            "gas"))) %>%
         # must use left join, HK and MC have NA values
         left_join(regional_fuel_prices_long, by = c("region", "adj_price")) %>%
+        # drop NAs for HK and MC
+        na.omit() %>%
         mutate(input.cost = round(value, energy.DIGITS_COST)) %>%
         select(-adj_price, value) ->
         L226.TechCost_en_CHINA

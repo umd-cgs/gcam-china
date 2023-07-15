@@ -1,0 +1,14 @@
+# File: elecS_demand_fraction.csv
+# Title: Fraction of grid-level electricity demand by vertical segment
+# Units: unitless (fraction)
+# Comments: This table specifies the fraction of electricity demand supplied by vertical segment; should be updated into China version
+# Source: None (GCAM assumptions). Based on a representative U.S. annual hourly (8760) load duration curve (internal; unpublished).
+# Column types: cnnnn
+# ----------
+grid_region,off.peak.electricity.demand,intermediate.electricity.demand,subpeak.electricity.demand,peak.electricity.demand
+East China Grid,0.415,0.4,0.1,0.085
+North China Grid,0.415,0.4,0.1,0.085
+Central China Grid,0.415,0.4,0.1,0.085
+China Southern Power Grid,0.415,0.4,0.1,0.085
+Northwest China Grid,0.415,0.4,0.1,0.085
+Northeast China Grid,0.415,0.4,0.1,0.085
