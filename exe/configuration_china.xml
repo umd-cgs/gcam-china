@@ -113,7 +113,7 @@
 		<Value name = "Cstorage_china">../input/gcamdata/xml/Cstorage_CHINA.xml</Value>
 		<Value name = "prices_china">../input/gcamdata/xml/en_prices_CHINA.xml</Value>
 		<Value name = "tform_china">../input/gcamdata/xml/en_transformation_CHINA.xml</Value>
-		<Value name = "heat_china">../input/gcamdata/xml/heat_china.xml</Value>
+<!-- 		<Value name = "heat_china">../input/gcamdata/xml/heat_china.xml</Value> -->
 		<Value name = "h2_china">../input/gcamdata/xml/hydrogen_CHINA.xml</Value>
 		<Value name = "elec_china">../input/gcamdata/xml/electricity_CHINA.xml</Value>
 		<Value name = "elec_china">../input/gcamdata/xml/electricity_nuclear_CHINA.xml</Value>

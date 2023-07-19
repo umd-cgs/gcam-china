@@ -110,7 +110,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
     # PART 1: THE CHINA REGION
     # Remove the CHINA electricity sector, and replace with electricity trade
     A23.elec_delete %>%
-      mutate(region = gcamchina.REGION_ID,
+      mutate(region = gcamchina.REGION,
              region = region) -> L2235.DeleteSupplysector_elec_CHINA
 
     # Creating vertical segments in grid regions

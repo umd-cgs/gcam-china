@@ -6,3 +6,4 @@
 # Column types: ccccccc
 # ----------
 region,supplysector,subsector,apply.to,from.year,to.year,interpolation.function
+

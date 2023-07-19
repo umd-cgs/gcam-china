@@ -337,6 +337,8 @@ module_gcamchina_L2322.Fert_CHINA <- function(command, ...) {
       # replace market name with the  region name if the minicam.energy.input is
       # considered a regional fuel market
       mutate(market.name = if_else(minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS,
+                                   region, market.name),
+             market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
                                    region, market.name)) ->
       L2322.StubTechMarket_Fert_CHINA
 

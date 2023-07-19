@@ -287,29 +287,20 @@ module_gcamchina_L2321.cement_CHINA <- function(command, ...) {
                 by =c("region", "supplysector", "minicam.energy.input", "year")) ->
       L2321.StubTechCoef_cement_CHINA
 
-    # Add market information, limestone and process heat are province level markets where as electricity
-    # comes from the CHINA level.
+    # Add market information: default is China replace for fuels with region level markets.
+    # Process heat cement and limestone are also represented at the province level (names referenced from existing objects).
     L2321.StubTechCoef_cement_CHINA %>%
-      mutate(market.name = region,
-             market.name = if_else(grepl("elec", minicam.energy.input), gcamchina.REGION, market.name)) %>%
-      # replace market name with the grid region name if the minicam.energy.input is
-      # considered a regional fuel market
       left_join(province_names_mappings %>%
                   select(region = province, grid.region),
                 by = "region") %>%
-      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS,
+      mutate(market.name = gcamchina.REGION,
+             market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
+                                   region, market.name),
+             market.name = if_else(minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS,
                                    grid.region, market.name)) %>%
-      select(-grid.region) ->
+      select(-grid.region) %>%
+      select(LEVEL2_DATA_NAMES[["StubTechCoef"]]) ->
       L2321.StubTechCoef_cement_CHINA
-
-
-    # Change market name to reflect the fact that electricity is consumed from province markets.
-    L2321.StubTechCoef_cement_CHINA %>%
-      mutate(replace = if_else(minicam.energy.input %in% gcamchina.ELECT_TD_SECTORS, 1, 0),
-             market.name = if_else(replace == 1, region, market.name)) %>%
-      select(-replace) ->
-      L2321.StubTechCoef_cement_CHINA
-
 
     # Create the calibrated input of fuel consumption for producing heat input table.
     #
@@ -374,8 +365,10 @@ module_gcamchina_L2321.cement_CHINA <- function(command, ...) {
       mutate(market.name = gcamchina.REGION) %>%
       select(region, supplysector, subsector, stub.technology, year, minicam.energy.input, market.name) %>%
       # replace market name with the  region name if the minicam.energy.input is
-      # considered a regional fuel market
+      # considered a regional fuel market, and with the province name if it's a province market
       mutate(market.name = if_else(minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS,
+                                   region, market.name),
+             market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
                                    region, market.name)) ->
       L2321.StubTechMarket_cement_CHINA
 

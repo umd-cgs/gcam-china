@@ -51,6 +51,12 @@ module_energy_batch_hydrogen_xml <- function(command, ...) {
     L225.StubTechCost_h2 <- get_data(all_data, "L225.StubTechCost_h2")
     # ===================================================
 
+    # YangOu Aug 2023
+    # GCAM-China
+    # drop water input for GCAM-China runs
+    L225.GlobalTechCoef_h2 <- L225.GlobalTechCoef_h2 %>%
+      filter(!grepl("water_td", minicam.energy.input))
+
     # Produce outputs
     create_xml("hydrogen.xml") %>%
       add_logit_tables_xml(L225.Supplysector_h2, "Supplysector") %>%

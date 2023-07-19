@@ -288,8 +288,8 @@ module_gcam.china_L222.en_transformation_china <- function(command, ...) {
       rename(supplysector = sector.name,
              subsector = subsector.name,
              stub.technology = technology) %>%
-      # Finish L222.StubTechMarket_en_CHINA by Setting electricity to the province markets
-      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.ELECT_TD_SECTORS, region, gcamchina.REGION)) ->
+      # Finish L222.StubTechMarket_en_CHINA by assigning state fuel markets
+      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS, region, gcamchina.REGION)) ->
       L222.StubTechMarket_en_CHINA
 
     #If designated, switch fuel market names to the regional markets

@@ -1102,10 +1102,6 @@ gcamchina.GRID_REGIONS <- c("East China Grid", "North China Grid", "Central Chin
 gcamchina.PROVINCE_RENEWABLE_RESOURCES <- c("distributed_solar", "geothermal", "onshore wind resource", "offshore wind resource")
 gcamchina.PROVINCE_UNLIMITED_RESOURCES <- c("global solar resource", "limestone")
 
-# Fuels whose markets will be modeled at the regional level
-gcamchina.REGIONAL_FUEL_MARKETS <- c("regional coal", "delivered coal", "wholesale gas", "delivered gas",
-                                     "refined liquids industrial", "refined liquids enduse","district heat")
-
 # Number of digits for model input data
 gcamchina.DIGITS_CALOUTPUT          <- 7    # production
 
@@ -1128,8 +1124,17 @@ gcamchina.USE_REGIONAL_ELEC_MARKETS  <- TRUE
 gcamchina.USE_UNIFORM_CSTORAGE_MARKET <- FALSE
 
 #regional_fuel_markets: fuels whose markets will be modeled at the level of the provinces, with prices calibrated
-gcamchina.REGIONAL_FUEL_MARKETS <- c("regional coal", "delivered coal", "wholesale gas", "delivered gas",
+# gcamchina.REGIONAL_FUEL_MARKETS <- c("regional coal", "delivered coal", "wholesale gas", "delivered gas",
+#                                      "refined liquids industrial", "refined liquids enduse","district heat")
+
+gcamchina.REGIONAL_FUEL_MARKETS <- c("delivered coal", "wholesale gas", "delivered gas",
                                      "refined liquids industrial", "refined liquids enduse","district heat")
+
+#Fuels whose markets will be represented with state-specific prices
+gcamchina.PROVINCE_FUEL_MARKETS <- c(gcamchina.ELECT_TD_SECTORS, "H2 industrial", "H2 retail delivery",
+                                     "H2 retail dispensing", "H2 wholesale delivery", "H2 wholesale dispensing",
+                                     "H2 central production","H2 pipeline","H2 liquid truck", "process heat cement")
+
 
 # Number of digits for model input data
 gcamchina.DIGITS_TRNCHINA_DEFAULT <- 3 # Reduce rounding in detailed China transport for compatability with mode
