@@ -157,7 +157,7 @@ module_energy_batch_electricity_xml <- function(command, ...) {
       add_xml_data(L223.StubTechFixOut_hydro, "StubTechFixOut") %>%
       add_xml_data(L223.StubTechProd_elec, "StubTechProd") %>%
       add_xml_data(L223.StubTechEff_elec, "StubTechEff") %>%
-      add_xml_data(L223.StubTechSecOut_desal, "StubTechSecOut") %>%
+      # add_xml_data(L223.StubTechSecOut_desal, "StubTechSecOut") %>%
       add_precursors("L223.Supplysector_elec",
                      "L223.ElecReserve",
                      "L223.SectorUseTrialMarket_elec",

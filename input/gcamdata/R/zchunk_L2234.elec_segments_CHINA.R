@@ -830,15 +830,13 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
     # Remove geothermal in provinces with no geothermal resource
     # Indicate provinces where geothermal subsector and technologies will not be created
     # A vector indicating provinces where geothermal electric technologies will not be created
+    # this is follow the same approach in module_gcamchina_L210.Resources_china to determine no geo provinces
+    # so that these two files (resource and power generation) are consistent
     L1231.out_EJ_province_elec_F_tech %>%
-      filter(fuel == "geothermal") %>%
-      group_by(province) %>%
-      summarise(value = sum(value)) %>%
-      ungroup() %>%
-      filter(value == 0) %>%
-      select(region = province) %>%
-      distinct() %>%
-      unlist() ->
+      filter(fuel == "geothermal", (year == 2010 & value == 0)) %>%
+      select(province) %>%
+      rename(region = province) %>%
+      mutate(renewresource = "geothermal") ->
       geo_provinces_noresource
 
     # Remove geothermal subsector from tables
@@ -851,7 +849,7 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
 
     process_geo_tables <- function(data){
       data %>%
-        filter(!(region %in% geo_provinces_noresource & subsector == "geothermal"))
+        filter(!(region %in% geo_provinces_noresource$region & subsector == "geothermal"))
     }
 
     L2234.geo.tables_rev <- lapply(L2234.geo.tables, process_geo_tables)

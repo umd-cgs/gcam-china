@@ -275,6 +275,9 @@ module_gcam.china_L222.en_transformation_china <- function(command, ...) {
              share.weight.year = year) %>%
       set_subsector_shrwt() %>%
       mutate(tech.share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
+      # Yang Ou July 2023
+      # Somehow HN has a small negative calibration value, update into 0 first, will look into this later
+      mutate(calOutputValue = if_else(calOutputValue < 0, 0, calOutputValue)) %>%
       select(one_of(LEVEL2_DATA_NAMES[["StubTechProd"]])) %>%
       # Remove oil refining tech from provinces that do not have any
       filter((subsector == "oil refining" & region %in% oil_refining_provinces$province) |

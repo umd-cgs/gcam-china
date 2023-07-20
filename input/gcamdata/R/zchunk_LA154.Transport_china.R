@@ -91,6 +91,33 @@ module_gcam.china_LA154.Transport <- function(command, ...) {
         ungroup() ->
         L154.NBS_trn_Mtce_province
 
+      # ----------------------------------------------------------------------------------------------------------------------
+      # YangOu July 2023
+      # Hack: resolve XZ no valid (non zero share weight) technology options issue in 2020
+      # XZ (Tibet) historical years just has Diesel Oil and zero gasoline, as a result, all its
+      # LDV_4W technologies (using gasoline) have zero calibrated output and thus have zero share.weight for all techs
+      # when using absolute cost logit but there were no valid (non zero share weight) technology options
+      # leading to a SEVERE ERROR "In XZ, trn_pass_road_LDV_4W:  invalid or uninitialized base value parameter  -1"
+      # To solve this, we reassign a minor amount of diesel into gasoline to give XZ non-zero refined liquids use in LDV_4W
+      # Here just allocate 10% diesel into gasoline (arbitrary choice)
+      # In the future, we might have better NBS data to fully resolve this
+
+      # step 1: relocate 10% of the total refined liquids as gasoline (remaining 90% will still be diesel)
+      L154.NBS_trn_Mtce_province_XZ_update <- L154.NBS_trn_Mtce_province %>%
+        filter(province == "XZ" & fuel == "refined liquids") %>%
+        mutate(Gasoline = value * 0.1,
+               `Diesel Oil` = value - Gasoline) %>%
+        select(-EBMaterial, -value) %>%
+        gather(EBMaterial, value, -province, -EBProcess, -sector, -fuel, -year) %>%
+        select(names(L154.NBS_trn_Mtce_province))
+
+      # step 2: update the original L154.NBS_trn_Mtce_province table
+      L154.NBS_trn_Mtce_province <- L154.NBS_trn_Mtce_province %>%
+        anti_join(L154.NBS_trn_Mtce_province_XZ_update,
+                  by = c("province", "EBProcess", "EBMaterial", "sector", "fuel", "year")) %>%
+        bind_rows(L154.NBS_trn_Mtce_province_XZ_update)
+      # ----------------------------------------------------------------------------------------------------------------------
+
       # Now the provincial shares can be calculated
       L154.NBS_trn_Mtce_province %>%
         group_by(EBProcess, EBMaterial, year) %>%
