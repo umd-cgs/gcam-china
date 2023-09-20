@@ -1,0 +1,106 @@
+# File:A323.globaltech_retirement.csv
+# Title: Technology retirement parameters
+# Units: #
+# Column types: ccccnnnnnn
+# ----------
+supplysector,subsector,technology,year,lifetime,shutdown.rate,half.life,steepness,median.shutdown.point,profit.shutdown.steepness
+IRONSTL,BLASTFUR,BLASTFUR,final-calibration-year,30,,15,0.15,-0.2,6
+IRONSTL,BLASTFUR,BLASTFUR CCS,final-calibration-year,30,,15,0.15,-0.2,6
+IRONSTL,BLASTFUR,Biomass based,final-calibration-year,30,,15,0.15,-0.2,6
+IRONSTL,EAF with DRI,EAF with DRI,final-calibration-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with DRI,EAF with DRI CCS,final-calibration-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with DRI,Hydrogen based  DRI,final-calibration-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with scrap,EAF with scrap,final-calibration-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with scrap,EAF with scrap CCS,final-calibration-year,20,,10,0.15,-0.2,6
+coke,coke,coke,final-calibration-year,20,,10,0.15,-0.2,6
+coke,coke,coke CCS,final-calibration-year,20,,10,0.15,-0.2,6
+chemicals,chemicals,chemicals,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,coal,coal CCS,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,gas,gas CCS,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,liquid,liquid CCS,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,biomass,biomass,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,hydrogen,hydrogen,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,electricity,electricity,final-calibration-year,20,,10,0.15,-0.2,6
+chemical feedstock,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
+chemical feedstock,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
+chemical feedstock,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
+agriculture energy use,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
+agriculture energy use,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
+agriculture energy use,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
+agriculture energy use,biomass,biomass,final-calibration-year,20,,10,0.15,-0.2,6
+agriculture energy use,hydrogen,hydrogen,final-calibration-year,20,,10,0.15,-0.2,6
+agriculture energy use,electricity,electricity,final-calibration-year,20,,10,0.15,-0.2,6
+mining energy use,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
+mining energy use,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
+mining energy use,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
+mining energy use,biomass,biomass,final-calibration-year,20,,10,0.15,-0.2,6
+mining energy use,hydrogen,hydrogen,final-calibration-year,20,,10,0.15,-0.2,6
+mining energy use,electricity,electricity,final-calibration-year,20,,10,0.15,-0.2,6
+construction,construction,construction,final-calibration-year,20,,10,0.15,-0.2,6
+construction energy use,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
+construction energy use,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
+construction energy use,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
+construction energy use,biomass,biomass,final-calibration-year,20,,10,0.15,-0.2,6
+construction energy use,hydrogen,hydrogen,final-calibration-year,20,,10,0.15,-0.2,6
+construction energy use,electricity,electricity,final-calibration-year,20,,10,0.15,-0.2,6
+construction feedstock,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
+construction feedstock,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
+construction feedstock,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
+IRONSTL,BLASTFUR,BLASTFUR,initial-future-year,40,,20,0.15,-0.2,6
+IRONSTL,BLASTFUR,BLASTFUR CCS,initial-future-year,40,,20,0.15,-0.2,6
+IRONSTL,BLASTFUR,Biomass based,initial-future-year,40,,20,0.15,-0.2,6
+IRONSTL,EAF with DRI,EAF with DRI,initial-future-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with DRI,EAF with DRI CCS,initial-future-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with DRI,Hydrogen based  DRI,initial-future-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with scrap,EAF with scrap,initial-future-year,20,,10,0.15,-0.2,6
+IRONSTL,EAF with scrap,EAF with scrap CCS,initial-future-year,20,,10,0.15,-0.2,6
+coke,coke,coke,initial-future-year,20,,10,0.15,-0.2,6
+coke,coke,coke CCS,initial-future-year,20,,10,0.15,-0.2,6
+chemicals,chemicals,chemicals,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,coal,coal CCS,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,gas,gas CCS,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,liquid,liquid CCS,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,biomass,biomass,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,hydrogen,hydrogen,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,electricity,electricity,initial-future-year,20,,10,0.15,-0.2,6
+chemical feedstock,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
+chemical feedstock,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
+chemical feedstock,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,biomass,biomass,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,hydrogen,hydrogen,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,electricity,electricity,initial-future-year,20,,10,0.15,-0.2,6
+mining energy use,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
+mining energy use,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
+mining energy use,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
+mining energy use,biomass,biomass,initial-future-year,20,,10,0.15,-0.2,6
+mining energy use,hydrogen,hydrogen,initial-future-year,20,,10,0.15,-0.2,6
+mining energy use,electricity,electricity,initial-future-year,20,,10,0.15,-0.2,6
+construction,construction,construction,initial-future-year,20,,10,0.15,-0.2,6
+construction energy use,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
+construction energy use,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
+construction energy use,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
+construction energy use,biomass,biomass,initial-future-year,20,,10,0.15,-0.2,6
+construction energy use,hydrogen,hydrogen,initial-future-year,20,,10,0.15,-0.2,6
+construction energy use,electricity,electricity,initial-future-year,20,,10,0.15,-0.2,6
+construction feedstock,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
+construction feedstock,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
+construction feedstock,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
+chemical energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
+chemical feedstock,Electronic fuel,Electronic fuel,initial-future-year,20,,10,0.15,-0.2,6
+construction energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
+mining energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
+agriculture energy use,district heat,district heat,final-calibration-year,20,,10,0.15,-0.2,6
+chemical energy use,district heat,district heat,final-calibration-year,20,,10,0.15,-0.2,6
+chemical feedstock,Electronic fuel,Electronic fuel,final-calibration-year,20,,10,0.15,-0.2,6
+construction energy use,district heat,district heat,final-calibration-year,20,,10,0.15,-0.2,6
+mining energy use,district heat,district heat,final-calibration-year,20,,10,0.15,-0.2,6

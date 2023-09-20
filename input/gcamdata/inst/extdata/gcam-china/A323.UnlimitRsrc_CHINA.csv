@@ -1,0 +1,40 @@
+# File: A323.UnlimitRsrc_CHINA.csv
+# Title: Information about resources in China
+# Units: Na
+# Source: estimated
+# Column types: cccccn
+# ----------
+region,unlimited.resource,output.unit,price.unit,market,capacity.factor
+AH,scrap,Mt,1975$/kg,global,0
+BJ,scrap,Mt,1975$/kg,global,0
+CQ,scrap,Mt,1975$/kg,global,0
+FJ,scrap,Mt,1975$/kg,global,0
+GD,scrap,Mt,1975$/kg,global,0
+GS,scrap,Mt,1975$/kg,global,0
+GX,scrap,Mt,1975$/kg,global,0
+GZ,scrap,Mt,1975$/kg,global,0
+HA,scrap,Mt,1975$/kg,global,0
+HB,scrap,Mt,1975$/kg,global,0
+HE,scrap,Mt,1975$/kg,global,0
+HI,scrap,Mt,1975$/kg,global,0
+HK,scrap,Mt,1975$/kg,global,0
+HL,scrap,Mt,1975$/kg,global,0
+HN,scrap,Mt,1975$/kg,global,0
+JL,scrap,Mt,1975$/kg,global,0
+JS,scrap,Mt,1975$/kg,global,0
+JX,scrap,Mt,1975$/kg,global,0
+LN,scrap,Mt,1975$/kg,global,0
+MC,scrap,Mt,1975$/kg,global,0
+NM,scrap,Mt,1975$/kg,global,0
+NX,scrap,Mt,1975$/kg,global,0
+QH,scrap,Mt,1975$/kg,global,0
+SC,scrap,Mt,1975$/kg,global,0
+SD,scrap,Mt,1975$/kg,global,0
+SH,scrap,Mt,1975$/kg,global,0
+SN,scrap,Mt,1975$/kg,global,0
+SX,scrap,Mt,1975$/kg,global,0
+TJ,scrap,Mt,1975$/kg,global,0
+XJ,scrap,Mt,1975$/kg,global,0
+XZ,scrap,Mt,1975$/kg,global,0
+YN,scrap,Mt,1975$/kg,global,0
+ZJ,scrap,Mt,1975$/kg,global,0

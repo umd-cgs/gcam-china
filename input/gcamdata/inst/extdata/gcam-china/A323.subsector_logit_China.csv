@@ -1,0 +1,11 @@
+# File: A323.subsector_logit_China.csv
+# Title: default subsector logit exponents
+# Units: Unitless
+# Column types: ccic
+# ----------
+supplysector,subsector,logit.exponent,logit.type
+IRONSTL,IRONSTL,-1,relative-cost-logit
+construction,construction,0,relative-cost-logit
+mining energy use,mining energy use,0,relative-cost-logit
+agriculture energy use,agriculture energy use,0,relative-cost-logit
+chemicals,chemicals,0,relative-cost-logit

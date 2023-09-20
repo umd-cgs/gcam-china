@@ -1,0 +1,23 @@
+# File:A32.IncomeElasticity_ind_China.csv
+# Title: income elasticities
+# Units: NA
+# Column types: ccnn
+# ----------
+region,energy.final.demand,year,income.elasticity
+China,industry,2020,0
+China,industry,2025,0
+China,industry,2030,0
+China,industry,2035,0
+China,industry,2040,0
+China,industry,2045,0
+China,industry,2050,0
+China,industry,2055,0
+China,industry,2060,0
+China,industry,2065,0
+China,industry,2070,0
+China,industry,2075,0
+China,industry,2080,0
+China,industry,2085,0
+China,industry,2090,0
+China,industry,2095,0
+China,industry,2100,0

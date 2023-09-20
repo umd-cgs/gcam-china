@@ -1,0 +1,16 @@
+# File: A323.sector.csv
+# Title: default supplysector information (units and logit exponents)
+# Units: Units-in-table
+# Column types: ccccicc
+# ----------
+supplysector,output.unit,input.unit,price.unit,logit.exponent,final.energy,logit.type
+IRONSTL,Mt,EJ or Mt,1975$/GJ,-3,industry,
+coke,Mt,EJ or Mt,1975$/GJ,-3,industry,
+chemicals,EJ,EJ,1975$/GJ,-3,industry,
+chemical energy use,EJ,EJ,1975$/GJ,-3,industry,
+chemical feedstock,EJ,EJ,1975$/GJ,-3,industry,
+agriculture energy use,EJ,EJ,1975$/GJ,-3,industry,
+mining energy use,EJ,EJ,1975$/GJ,-3,industry,
+construction,EJ,EJ,1975$/GJ,-3,industry,
+construction energy use,EJ,EJ,1975$/GJ,-3,industry,
+construction feedstock,EJ,EJ,1975$/GJ,-3,industry,
