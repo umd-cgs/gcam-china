@@ -1,8 +1,8 @@
-# File: A44.subsector_interp.csv,,,,,,
-# Title: Building default subsector shareweight interpolation,,,,,,
-# Units: Unitless,,,,,,
-# Column types: cccccnc,,,,,,
-# ----------,,,,,,
+# File: A44.subsector_interp.csv
+# Title: Building default subsector shareweight interpolation
+# Units: Unitless
+# Column types: cccccnc
+# ----------
 supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
 resid_rural heating,trad biomass,share-weight,final-calibration-year,2020,,linear
 resid_rural heating,biomass,share-weight,final-calibration-year,2020,,linear

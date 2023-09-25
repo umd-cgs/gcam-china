@@ -1,8 +1,8 @@
-# File: A323.tech_shrwt_China.csv,,,,
-# Title: passthough default shareweights,,,,
-# Units: Unitless,,,,
-# Column types: cccii,,,,
-# ----------,,,,
+# File: A323.tech_shrwt_China.csv
+# Title: passthough default shareweights
+# Units: Unitless
+# Column types: cccii
+# ----------
 supplysector,subsector,technology,1971,2100
 IRONSTL,IRONSTL,IRONSTL,1,1
 coke,coke,coke,1,1

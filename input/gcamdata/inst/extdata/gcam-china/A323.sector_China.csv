@@ -1,8 +1,8 @@
-# File: A323.sector_China.csv,,,,,
-# Title:  China pass-through sector (consumes output of individual provinces industry),,,,,
-# Units: Units-in-table,,,,,
-# Column types: ccccic,,,,,
-# ----------,,,,,
+# File: A323.sector_China.csv
+# Title:  China pass-through sector (consumes output of individual provinces industry)
+# Units: Units-in-table
+# Column types: ccccic
+# ----------
 supplysector,output.unit,input.unit,price.unit,logit.exponent,logit.type
 IRONSTL,Mt,EJ or Mt,1975$/GJ,0,
 coke,Mt,EJ or Mt,1975$/GJ,0,

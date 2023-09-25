@@ -1,4 +1,4 @@
-#' module_gcam.china_LA1323.detailed_industry
+#' module_gcamchina_LA1323.detailed_industry
 #'
 #' To calculate national detailed_industry production, energy inputs and Input-output coefficients to provinces
 #'
@@ -14,7 +14,7 @@
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
 #' @author YangLiu Sep 2020
-module_gcam.china_LA1323.detailed_industry <- function(command, ...) {
+module_gcamchina_LA1323.detailed_industry <- function(command, ...) {
  if(command == driver.DECLARE_INPUTS) {
    return(c( FILE = "gcam-china/province_names_mappings",
              FILE = "gcam-china/detailed_industry_output",
@@ -34,11 +34,11 @@ module_gcam.china_LA1323.detailed_industry <- function(command, ...) {
    sector <- fuel <- province <- year <- value <- NULL   # silence package check notes
 
    # Load required inputs
-   detailed_industry_output <- get_data(all_data, "gcam-china/detailed_industry_output")
-   province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings")
-   IO_detailed_industry <- get_data(all_data, "gcam-china/IO_detailed_industry")
-   L132.in_EJ_province_indnochp_F <- get_data(all_data, "L132.in_EJ_province_indnochp_F")
-   L132.in_EJ_province_indfeed_F <- get_data(all_data, "L132.in_EJ_province_indfeed_F")
+   detailed_industry_output <- get_data(all_data, "gcam-china/detailed_industry_output", strip_attributes = T)
+   province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = T)
+   IO_detailed_industry <- get_data(all_data, "gcam-china/IO_detailed_industry", strip_attributes = T)
+   L132.in_EJ_province_indnochp_F <- get_data(all_data, "L132.in_EJ_province_indnochp_F", strip_attributes = T)
+   L132.in_EJ_province_indfeed_F <- get_data(all_data, "L132.in_EJ_province_indfeed_F", strip_attributes = T)
 
    # ===================================================
     #produce io,energy,output
@@ -106,6 +106,7 @@ module_gcam.china_LA1323.detailed_industry <- function(command, ...) {
    L1323.out_Mt_province_detailed_industry_Yh %>%
      add_title("detailed_industry production by province / technology / historical year", overwrite =TRUE) %>%
      add_units("Mt") %>%
+       add_comments("detailed_industry production") %>%
      add_legacy_name("L1323.out_Mt_province_detailed_industry_Yh") %>%
      add_precursors("gcam-china/detailed_industry_output", "gcam-china/province_names_mappings") ->
      L1323.out_Mt_province_detailed_industry_Yh

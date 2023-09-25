@@ -1,8 +1,8 @@
-# File: A44.fuelprefElasticity.csv,,
-# Title: Fuel preference elasticities for building energy use,,
-# Units: Unitless,,
-# Column types: ccn,,
-# ----------,,
+# File: A44.fuelprefElasticity.csv
+# Title: Fuel preference elasticities for building energy use
+# Units: Unitless
+# Column types: ccn
+# ----------
 supplysector,subsector,fuelprefElasticity
 resid_rural heating,trad biomass,-2
 resid_rural heating,biomass,-1

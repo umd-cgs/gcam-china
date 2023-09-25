@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_gcam.china_L232.industry_CHINA
+#' module_gcamchina_L232.industry_CHINA
 #'
 #' Prepare level 2 industry sector files for CHINA.
 #'
@@ -8,20 +8,21 @@
 #' @param ... other optional parameters, depending on command
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
-#' the generated outputs: \code{L232.StubTechCalInput_indenergy_CHINA}, \code{L232.StubTechCalInput_indfeed_CHINA},
-#' \code{L232.L232.StubTechProd_industry_CHINA}, \code{L232.StubTechCoef_industry_CHINA}, \code{L232.StubTechMarket_ind_CHINA},
+#' the generated outputs:
+#' \code{L232.DeleteSupplysector_CHINAind}, \code{L232.DeleteFinalDemand_CHINAind},\code{L232.Production_reg_imp_CHINA},
+#' \code{L232.StubTechCalInput_indenergy_CHINA}, \code{L232.StubTechCalInput_indfeed_CHINA}, \code{L232.StubTechProd_industry_CHINA},
+#' \code{L232.StubTechCoef_industry_CHINA}, \code{L232.StubTechMarket_ind_CHINA}, \code{L232.StubTechSecMarket_ind_CHINA},
 #' \code{L232.BaseService_ind_CHINA}, \code{L232.DeleteSubsector_ind_CHINA}, \code{L232.Supplysector_ind_CHINA},
-#' \code{L232.FinalEnergyKeyword_ind_CHINA}, \code{L232.SubsectorLogit_ind_CHINA},
-#' \code{L232.SubsectorShrwtFllt_ind_CHINA}, \code{L232.SubsectorInterp_ind_CHINA},
-#' \code{L232.StubTech_ind_CHINA}, \code{L232.StubTechInterp_ind_CHINA},
-#' \code{L232.PerCapitaBased_ind_CHINA}, \code{L232.PriceElasticity_ind_CHINA}, \code{A32.IncomeElasticity_ind_China}.
+#' \code{L232.FinalEnergyKeyword_ind_CHINA}, \code{L232.SubsectorLogit_ind_CHINA}, \code{L232.SubsectorShrwtFllt_ind_CHINA},
+#' \code{L232.SubsectorInterp_ind_CHINA}, \code{L232.StubTech_ind_CHINA}, \code{L232.StubTechInterp_ind_CHINA},
+#' \code{L232.PerCapitaBased_ind_CHINA}, \code{L232.PriceElasticity_ind_CHINA}, \code{L232.IncomeElasticity_ind_gcam3_CHINA}.
 #' The corresponding file in the original data system was \code{L232.industry_CHINA.R} (gcam-china level2).
 #' @details Prepare level 2 industry sector files for CHINA.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows filter if_else group_by left_join mutate select semi_join summarise
 #' @importFrom tidyr gather spread
-#' @author YangLiu December 2019
-module_gcam.china_L232.industry_CHINA <- function(command, ...) {
+#' @author YangLiu December 2019 / YangOu July 2023 / YangLiu September 2023
+module_gcamchina_L232.industry_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",
              FILE = "energy/A32.demand",
@@ -39,29 +40,32 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
             "L232.PriceElasticity_ind",
             "L1323.in_EJ_province_indnochp_F",
             "L1323.in_EJ_province_indfeed_F",
-            "L132.in_EJ_province_indchp_F"))
+            "L132.in_EJ_province_indchp_F",
+            "L238.Production_reg_imp",
+            "L238.Production_tra"))
 
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c("L232.StubTechCalInput_indenergy_CHINA",
-            "L232.StubTechCalInput_indfeed_CHINA",
-            "L232.StubTechProd_industry_CHINA",
-            "L232.StubTechCoef_industry_CHINA",
-            "L232.StubTechMarket_ind_CHINA",
-            "L232.StubTechSecMarket_ind_CHINA",
-            "L232.BaseService_ind_CHINA",
-            "L232.DeleteSubsector_ind_CHINA",
-            "L232.Supplysector_ind_CHINA",
-            "L232.FinalEnergyKeyword_ind_CHINA",
-            "L232.SubsectorLogit_ind_CHINA",
-            "L232.SubsectorShrwtFllt_ind_CHINA",
-            "L232.SubsectorInterp_ind_CHINA",
-            "L232.StubTech_ind_CHINA",
-            "L232.StubTechInterp_ind_CHINA",
-            "L232.PerCapitaBased_ind_CHINA",
-            "L232.PriceElasticity_ind_CHINA",
-            "L232.IncomeElasticity_ind_gcam3_CHINA",
-            "L232.DeleteSupplysector_CHINAind",
-            "L232.DeleteFinalDemand_CHINAind"))
+    return(c("L232.DeleteSupplysector_CHINAind",
+             "L232.DeleteFinalDemand_CHINAind",
+             "L232.Production_reg_imp_CHINA",
+             "L232.StubTechCalInput_indenergy_CHINA",
+             "L232.StubTechCalInput_indfeed_CHINA",
+             "L232.StubTechProd_industry_CHINA",
+             "L232.StubTechCoef_industry_CHINA",
+             "L232.StubTechMarket_ind_CHINA",
+             "L232.StubTechSecMarket_ind_CHINA",
+             "L232.BaseService_ind_CHINA",
+             "L232.DeleteSubsector_ind_CHINA",
+             "L232.Supplysector_ind_CHINA",
+             "L232.FinalEnergyKeyword_ind_CHINA",
+             "L232.SubsectorLogit_ind_CHINA",
+             "L232.SubsectorShrwtFllt_ind_CHINA",
+             "L232.SubsectorInterp_ind_CHINA",
+             "L232.StubTech_ind_CHINA",
+             "L232.StubTechInterp_ind_CHINA",
+             "L232.PerCapitaBased_ind_CHINA",
+             "L232.PriceElasticity_ind_CHINA",
+             "L232.IncomeElasticity_ind_gcam3_CHINA"))
   } else if(command == driver.MAKE) {
 
     # silence check package notes
@@ -74,23 +78,28 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
     all_data <- list(...)[[1]]
 
     # Load required inputs
-    province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings")
-    A32.demand <- get_data(all_data, "energy/A32.demand")
-    A32.globaltech_eff <- get_data(all_data, "energy/A32.globaltech_eff")
-    calibrated_techs <- get_data(all_data, "energy/calibrated_techs")
-    L232.Supplysector_ind <- get_data(all_data, "L232.Supplysector_ind")
-    L232.FinalEnergyKeyword_ind <- get_data(all_data, "L232.FinalEnergyKeyword_ind")
-    L232.SubsectorLogit_ind <- get_data(all_data, "L232.SubsectorLogit_ind")
-    L232.SubsectorShrwtFllt_ind <- get_data(all_data, "L232.SubsectorShrwtFllt_ind")
-    L232.SubsectorInterp_ind <- get_data(all_data, "L232.SubsectorInterp_ind")
-    L232.StubTech_ind <- get_data(all_data, "L232.StubTech_ind")
-    L232.StubTechInterp_ind <- get_data(all_data, "L232.StubTechInterp_ind")
-    L232.PerCapitaBased_ind <- get_data(all_data, "L232.PerCapitaBased_ind")
-    L232.PriceElasticity_ind <- get_data(all_data, "L232.PriceElasticity_ind")
-    A32.IncomeElasticity_ind_China <- get_data(all_data, "gcam-china/A32.IncomeElasticity_ind_China")
-    L1323.in_EJ_province_indnochp_F <- get_data(all_data, "L1323.in_EJ_province_indnochp_F")
-    L1323.in_EJ_province_indfeed_F <- get_data(all_data, "L1323.in_EJ_province_indfeed_F")
-    L132.in_EJ_province_indchp_F <- get_data(all_data, "L132.in_EJ_province_indchp_F")
+
+
+
+    province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = T)
+    A32.demand <- get_data(all_data, "energy/A32.demand", strip_attributes = T)
+    A32.globaltech_eff <- get_data(all_data, "energy/A32.globaltech_eff", strip_attributes = T)
+    A32.IncomeElasticity_ind_China <- get_data(all_data, "gcam-china/A32.IncomeElasticity_ind_China", strip_attributes = T)
+    L1323.in_EJ_province_indnochp_F <- get_data(all_data, "L1323.in_EJ_province_indnochp_F", strip_attributes = T)
+    L1323.in_EJ_province_indfeed_F <- get_data(all_data, "L1323.in_EJ_province_indfeed_F", strip_attributes = T)
+    calibrated_techs <- get_data(all_data, "energy/calibrated_techs", strip_attributes = T)
+    L232.Supplysector_ind <- get_data(all_data, "L232.Supplysector_ind", strip_attributes = T)
+    L232.FinalEnergyKeyword_ind <- get_data(all_data, "L232.FinalEnergyKeyword_ind", strip_attributes = T)
+    L232.SubsectorLogit_ind <- get_data(all_data, "L232.SubsectorLogit_ind", strip_attributes = T)
+    L232.SubsectorShrwtFllt_ind <- get_data(all_data, "L232.SubsectorShrwtFllt_ind", strip_attributes = T)
+    L232.SubsectorInterp_ind <- get_data(all_data, "L232.SubsectorInterp_ind", strip_attributes = T)
+    L232.StubTech_ind <- get_data(all_data, "L232.StubTech_ind", strip_attributes = T)
+    L232.StubTechInterp_ind <- get_data(all_data, "L232.StubTechInterp_ind", strip_attributes = T)
+    L232.PerCapitaBased_ind <- get_data(all_data, "L232.PerCapitaBased_ind", strip_attributes = T)
+    L232.PriceElasticity_ind <- get_data(all_data, "L232.PriceElasticity_ind", strip_attributes = T)
+    L132.in_EJ_province_indchp_F <- get_data(all_data, "L132.in_EJ_province_indchp_F", strip_attributes = T)
+    L238.Production_reg_imp <- get_data(all_data, "L238.Production_reg_imp", strip_attributes = TRUE)
+    L238.Production_tra <- get_data(all_data, "L238.Production_tra", strip_attributes = TRUE)
 
     # ===================================================
     # Data Processing
@@ -172,7 +181,7 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
       L232.in_EJ_province_indenergy_F_Yh
 
     L232.in_EJ_province_indenergy_F_Yh %>%
-	  select(LEVEL2_DATA_NAMES[["StubTechYr"]], "value") %>%
+      select(LEVEL2_DATA_NAMES[["StubTechYr"]], "value") %>%
       left_join_keep_first_only(select(A32.globaltech_eff, subsector, technology, minicam.energy.input),
                                 by = c("subsector", "stub.technology" = "technology")) %>%
       mutate(calibrated.value = round(value, energy.DIGITS_CALOUTPUT),
@@ -190,7 +199,7 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
     L1323.in_EJ_province_indfeed_F %>%
       complete(nesting(province, sector, fuel), year = c(year, MODEL_BASE_YEARS)) %>%
       group_by(province, sector, fuel) %>%
-	    mutate(value = approx_fun(year, value)) %>%
+      mutate(value = approx_fun(year, value)) %>%
       ungroup %>% filter(year %in% MODEL_BASE_YEARS) %>%
       rename(region = province) %>%
       left_join_keep_first_only(calibrated_techs, by = c("sector", "fuel")) %>%
@@ -215,7 +224,7 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
 
     # get industrial sector calibrated output
     A32.globaltech_eff %>%
-	 #First, need to interpolate industrial tech efficiencies
+      #First, need to interpolate industrial tech efficiencies
       complete(nesting(supplysector, subsector, technology, minicam.energy.input, secondary.output),
                year = c(year, MODEL_BASE_YEARS)) %>%
       group_by(supplysector, subsector, technology, minicam.energy.input, secondary.output) %>%
@@ -231,16 +240,16 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
                                 by = c("supplysector", "subsector", "stub.technology" = "technology", "year")) %>%
       mutate(calOutputValue = round(value * efficiency, energy.DIGITS_CALOUTPUT)) ->
       L232.out_EJ_province_ind_serv_F_Yh
-      # ^^ service output, by technology, for energy-use and feedstocks
+    # ^^ service output, by technology, for energy-use and feedstocks
 
     L232.out_EJ_province_ind_serv_F_Yh %>%
       group_by(region, year) %>%
       summarise(calOutputValue = sum(calOutputValue)) %>%
       ungroup %>%
       # ^^ aggregate to get output of industrial sector in each region
-      mutate(supplysector = "industry",
-             subsector = "industry",
-             stub.technology = "industry",
+      mutate(supplysector = "other industry",
+             subsector = "other industry",
+             stub.technology = "other industry",
              share.weight.year = year,
              subs.share.weight = if_else(calOutputValue > 0, 1, 0),
              tech.share.weight = subs.share.weight) %>%
@@ -258,9 +267,9 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
       mutate(coefficient = round(calOutputValue / output_tot, energy.DIGITS_COEFFICIENT)) %>%
       # ^^ get coefficient
       rename(minicam.energy.input = supplysector) %>%
-      mutate(supplysector = "industry",
-             subsector = "industry",
-             stub.technology = "industry",
+      mutate(supplysector = "other industry",
+             subsector = "other industry",
+             stub.technology = "other industry",
              market.name = region) ->
       L232.StubTechCoef_industry_CHINA_base
     # ^^ covers only base years
@@ -296,7 +305,8 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
       mutate(market.name = if_else(minicam.energy.input == "district heat",
                                    region, market.name)) %>%
       #NOTE: electricity is consumed from province markets
-      mutate(market.name = if_else(grepl("elect_td", minicam.energy.input), region, market.name)) ->
+      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
+                                   region, market.name)) ->
       L232.StubTechMarket_ind_CHINA  ## OUTPUT
 
     # markets for the cogenerated electricity (secondary output)
@@ -335,17 +345,20 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["DeleteSupplysector"]]) ->
       L232.DeleteSupplysector_CHINAind  ## OUTPUT
 
+
+
     L232.StubTechMarket_ind_CHINA %>%
       filter(subsector != "hydrogen"  ) %>%
       anti_join(L232.StubTechCalInput_indenergy_CHINA[, LEVEL2_DATA_NAMES[["Subsector"]]] %>%
-                  full_join(L232.StubTechCalInput_indfeed_CHINA[, LEVEL2_DATA_NAMES[["Subsector"]]])) %>%
+                  full_join(L232.StubTechCalInput_indfeed_CHINA[, LEVEL2_DATA_NAMES[["Subsector"]]],
+                            by = c("region", "supplysector", "subsector")),
+                by = c("region", "supplysector", "subsector")) %>%
       select(LEVEL2_DATA_NAMES[["Subsector"]]) %>%
       unique() ->
       L232.DeleteSubsector_ind_CHINA
 
     # ===================================================
     # Produce outputs
-
     L232.DeleteSupplysector_CHINAind %>%
       add_title("CHINA industry supply sectors") %>%
       add_units("NA") %>%
@@ -353,6 +366,14 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
       add_legacy_name("L232.DeleteSupplysector_CHINAind") %>%
       add_precursors("L232.Supplysector_ind") ->
       L232.DeleteSupplysector_CHINAind
+
+    L238.Production_reg_imp %>%
+      add_title("China net imports") %>%
+      add_units("NA") %>%
+      add_comments("China net imports add-on to allow iron and steel trade work for other global regions in GCAM China") %>%
+      add_legacy_name("L232.Production_reg_imp_CHINA") %>%
+      add_precursors("L238.Production_reg_imp", "L238.Production_tra") ->
+      L232.Production_reg_imp_CHINA
 
     L232.DeleteFinalDemand_CHINAind %>%
       add_title("CHINA final energy demand table for industry") %>%
@@ -442,7 +463,6 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
       add_precursors("L232.StubTechMarket_ind_CHINA") ->
       L232.DeleteSubsector_ind_CHINA
 
-
     L232.Supplysector_ind_CHINA %>%
       add_title("Supply sector information for industry sector") %>%
       add_units("NA") %>%
@@ -528,6 +548,9 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
 
 
     return_data(L232.StubTechCalInput_indenergy_CHINA,
+                L232.DeleteSupplysector_CHINAind,
+                L232.DeleteFinalDemand_CHINAind,
+                L232.Production_reg_imp_CHINA,
                 L232.StubTechCalInput_indfeed_CHINA,
                 L232.StubTechProd_industry_CHINA,
                 L232.StubTechCoef_industry_CHINA,
@@ -544,9 +567,8 @@ module_gcam.china_L232.industry_CHINA <- function(command, ...) {
                 L232.StubTechInterp_ind_CHINA,
                 L232.PerCapitaBased_ind_CHINA,
                 L232.PriceElasticity_ind_CHINA,
-                L232.IncomeElasticity_ind_gcam3_CHINA,
-                L232.DeleteSupplysector_CHINAind,
-                L232.DeleteFinalDemand_CHINAind)
+                L232.IncomeElasticity_ind_gcam3_CHINA)
+
   } else {
     stop("Unknown command")
   }

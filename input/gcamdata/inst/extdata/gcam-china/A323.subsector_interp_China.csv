@@ -1,8 +1,8 @@
-# File: A323.subsector_interp_China.csv,,,,,,
-# Title: Subsector interpolation: competition between provinces for producing,,,,,,
-# Units: NA,,,,,,
-# Column types: cccccnc,,,,,,
-# ----------,,,,,,
+# File: A323.subsector_interp_China.csv
+# Title: Subsector interpolation: competition between provinces for producing
+# Units: NA
+# Column types: cccccnc
+# ----------
 supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
 IRONSTL,IRONSTL,share-weight,final-calibration-year,end-year,,fixed
 coke,coke,share-weight,final-calibration-year,end-year,,fixed

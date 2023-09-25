@@ -1,8 +1,8 @@
-# File: A44.globaltech_retirement.csv,,,,,
-# Title: Retirement function parameters,,,,,
-# Units: Unitless,,,,,
-# Column types: cnnnnn,,,,,
-# ----------,,,,,
+# File: A44.globaltech_retirement.csv
+# Title: Retirement function parameters
+# Units: Unitless
+# Column types: cnnnnn
+# ----------
 supplysector,lifetime,half_life_stock,steepness_stock,half_life_new,steepness_new
 resid_urban heating,20,10,0.1219,10,0.1886
 resid_urban cooling,15,8,0.162,8,0.2598

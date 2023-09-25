@@ -1,8 +1,8 @@
-# File: A44.globaltech_cost.csv,,,,,,,,,,,,
-# Title: Building technology costs,,,,,,,,,,,,
-# Units: Unitless,,,,,,,,,,,,
-# Column types: cccnnnnnnnnnn,,,,,,,,,,,,
-# ----------,,,,,,,,,,,,
+# File: A44.globaltech_cost.csv
+# Title: Building technology costs
+# Units: Unitless
+# Column types: cccnnnnnnnnnn
+# ----------
 supplysector,subsector,technology,1971,1990,2005,2020,2035,2050,2065,2080,2095,2100
 resid_rural heating,trad biomass,trad wood furnace,0.1355,0.1355,0.1355,0.1335,0.1315,0.1295,0.1276,0.1257,0.1238,0.1238
 resid_rural heating,biomass,wood furnace,1.355,1.355,1.355,1.335,1.315,1.295,1.276,1.257,1.238,1.238

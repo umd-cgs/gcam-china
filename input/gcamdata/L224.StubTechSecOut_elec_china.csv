@@ -1,0 +1,861 @@
+"","region","supplysector","subsector","stub.technology","year","secondary.output","output.ratio"
+"1","AH","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"2","AH","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"3","AH","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"4","AH","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"5","BJ","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"6","BJ","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"7","BJ","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"8","BJ","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"9","CQ","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"10","CQ","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"11","CQ","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"12","CQ","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"13","FJ","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"14","FJ","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"15","FJ","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"16","FJ","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"17","GD","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"18","GD","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"19","GD","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"20","GD","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"21","GS","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"22","GS","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"23","GS","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"24","GS","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"25","GX","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"26","GX","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"27","GX","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"28","GX","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"29","GZ","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"30","GZ","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"31","GZ","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"32","GZ","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"33","HA","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"34","HA","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"35","HA","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"36","HA","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"37","HB","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"38","HB","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"39","HB","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"40","HB","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"41","HE","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"42","HE","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"43","HE","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"44","HE","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"45","HI","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"46","HI","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"47","HI","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"48","HI","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"49","HL","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"50","HL","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"51","HL","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"52","HL","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"53","HN","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"54","HN","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"55","HN","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"56","HN","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"57","JL","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"58","JL","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"59","JL","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"60","JL","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"61","JS","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"62","JS","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"63","JS","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"64","JS","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"65","JX","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"66","JX","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"67","JX","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"68","JX","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"69","LN","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"70","LN","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"71","LN","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"72","LN","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"73","NM","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"74","NM","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"75","NM","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"76","NM","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"77","NX","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"78","NX","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"79","NX","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"80","NX","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"81","QH","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"82","QH","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"83","QH","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"84","QH","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"85","SC","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"86","SC","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"87","SC","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"88","SC","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"89","SD","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"90","SD","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"91","SD","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"92","SD","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"93","SH","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"94","SH","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"95","SH","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"96","SH","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"97","SN","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"98","SN","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"99","SN","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"100","SN","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"101","SX","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"102","SX","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"103","SX","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"104","SX","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"105","TJ","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"106","TJ","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"107","TJ","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"108","TJ","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"109","XJ","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"110","XJ","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"111","XJ","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"112","XJ","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"113","YN","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"114","YN","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"115","YN","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"116","YN","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"117","ZJ","base load generation","coal","coal_base_conv pul",1975,"district heat",0
+"118","ZJ","intermediate generation","coal","coal_int_conv pul",1975,"district heat",0
+"119","ZJ","subpeak generation","coal","coal_subpeak_conv pul",1975,"district heat",0
+"120","ZJ","peak generation","coal","coal_peak_conv pul",1975,"district heat",0
+"121","AH","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"122","AH","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"123","AH","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"124","AH","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"125","BJ","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"126","BJ","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"127","BJ","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"128","BJ","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"129","CQ","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"130","CQ","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"131","CQ","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"132","CQ","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"133","FJ","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"134","FJ","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"135","FJ","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"136","FJ","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"137","GD","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"138","GD","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"139","GD","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"140","GD","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"141","GS","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"142","GS","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"143","GS","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"144","GS","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"145","GX","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"146","GX","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"147","GX","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"148","GX","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"149","GZ","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"150","GZ","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"151","GZ","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"152","GZ","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"153","HA","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"154","HA","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"155","HA","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"156","HA","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"157","HB","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"158","HB","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"159","HB","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"160","HB","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"161","HE","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"162","HE","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"163","HE","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"164","HE","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"165","HI","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"166","HI","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"167","HI","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"168","HI","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"169","HL","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"170","HL","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"171","HL","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"172","HL","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"173","HN","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"174","HN","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"175","HN","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"176","HN","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"177","JL","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"178","JL","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"179","JL","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"180","JL","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"181","JS","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"182","JS","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"183","JS","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"184","JS","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"185","JX","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"186","JX","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"187","JX","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"188","JX","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"189","LN","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"190","LN","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"191","LN","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"192","LN","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"193","NM","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"194","NM","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"195","NM","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"196","NM","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"197","NX","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"198","NX","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"199","NX","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"200","NX","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"201","QH","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"202","QH","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"203","QH","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"204","QH","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"205","SC","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"206","SC","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"207","SC","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"208","SC","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"209","SD","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"210","SD","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"211","SD","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"212","SD","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"213","SH","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"214","SH","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"215","SH","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"216","SH","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"217","SN","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"218","SN","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"219","SN","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"220","SN","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"221","SX","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"222","SX","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"223","SX","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"224","SX","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"225","TJ","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"226","TJ","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"227","TJ","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"228","TJ","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"229","XJ","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"230","XJ","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"231","XJ","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"232","XJ","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"233","YN","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"234","YN","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"235","YN","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"236","YN","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"237","ZJ","base load generation","coal","coal_base_conv pul",1990,"district heat",0
+"238","ZJ","intermediate generation","coal","coal_int_conv pul",1990,"district heat",0
+"239","ZJ","subpeak generation","coal","coal_subpeak_conv pul",1990,"district heat",0
+"240","ZJ","peak generation","coal","coal_peak_conv pul",1990,"district heat",0
+"241","AH","base load generation","coal","coal_base_conv pul",2005,"district heat",0.171282
+"242","AH","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.171282
+"243","AH","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.171282
+"244","AH","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.171282
+"245","BJ","base load generation","coal","coal_base_conv pul",2005,"district heat",1.2854768
+"246","BJ","intermediate generation","coal","coal_int_conv pul",2005,"district heat",1.2854768
+"247","BJ","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",1.2854768
+"248","BJ","peak generation","coal","coal_peak_conv pul",2005,"district heat",1.2854768
+"249","CQ","base load generation","coal","coal_base_conv pul",2005,"district heat",0.190971
+"250","CQ","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.190971
+"251","CQ","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.190971
+"252","CQ","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.190971
+"253","FJ","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1336203
+"254","FJ","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1336203
+"255","FJ","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1336203
+"256","FJ","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1336203
+"257","GD","base load generation","coal","coal_base_conv pul",2005,"district heat",0.0639509
+"258","GD","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.0639509
+"259","GD","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.0639509
+"260","GD","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.0639509
+"261","GS","base load generation","coal","coal_base_conv pul",2005,"district heat",0.4082843
+"262","GS","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.4082843
+"263","GS","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.4082843
+"264","GS","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.4082843
+"265","GX","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1655157
+"266","GX","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1655157
+"267","GX","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1655157
+"268","GX","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1655157
+"269","GZ","base load generation","coal","coal_base_conv pul",2005,"district heat",0.0206059
+"270","GZ","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.0206059
+"271","GZ","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.0206059
+"272","GZ","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.0206059
+"273","HA","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1523569
+"274","HA","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1523569
+"275","HA","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1523569
+"276","HA","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1523569
+"277","HB","base load generation","coal","coal_base_conv pul",2005,"district heat",0.2105051
+"278","HB","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.2105051
+"279","HB","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.2105051
+"280","HB","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.2105051
+"281","HE","base load generation","coal","coal_base_conv pul",2005,"district heat",0.2223218
+"282","HE","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.2223218
+"283","HE","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.2223218
+"284","HE","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.2223218
+"285","HI","base load generation","coal","coal_base_conv pul",2005,"district heat",0.230004
+"286","HI","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.230004
+"287","HI","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.230004
+"288","HI","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.230004
+"289","HL","base load generation","coal","coal_base_conv pul",2005,"district heat",0.5382425
+"290","HL","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.5382425
+"291","HL","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.5382425
+"292","HL","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.5382425
+"293","HN","base load generation","coal","coal_base_conv pul",2005,"district heat",0.2882414
+"294","HN","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.2882414
+"295","HN","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.2882414
+"296","HN","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.2882414
+"297","JL","base load generation","coal","coal_base_conv pul",2005,"district heat",0.9751022
+"298","JL","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.9751022
+"299","JL","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.9751022
+"300","JL","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.9751022
+"301","JS","base load generation","coal","coal_base_conv pul",2005,"district heat",0.185997
+"302","JS","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.185997
+"303","JS","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.185997
+"304","JS","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.185997
+"305","JX","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1133588
+"306","JX","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1133588
+"307","JX","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1133588
+"308","JX","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1133588
+"309","LN","base load generation","coal","coal_base_conv pul",2005,"district heat",0.845624
+"310","LN","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.845624
+"311","LN","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.845624
+"312","LN","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.845624
+"313","NM","base load generation","coal","coal_base_conv pul",2005,"district heat",0.2291431
+"314","NM","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.2291431
+"315","NM","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.2291431
+"316","NM","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.2291431
+"317","NX","base load generation","coal","coal_base_conv pul",2005,"district heat",0.0702324
+"318","NX","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.0702324
+"319","NX","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.0702324
+"320","NX","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.0702324
+"321","QH","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1542083
+"322","QH","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1542083
+"323","QH","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1542083
+"324","QH","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1542083
+"325","SC","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1670249
+"326","SC","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1670249
+"327","SC","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1670249
+"328","SC","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1670249
+"329","SD","base load generation","coal","coal_base_conv pul",2005,"district heat",0.3335217
+"330","SD","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.3335217
+"331","SD","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.3335217
+"332","SD","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.3335217
+"333","SH","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1799923
+"334","SH","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1799923
+"335","SH","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1799923
+"336","SH","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1799923
+"337","SN","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1269226
+"338","SN","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1269226
+"339","SN","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1269226
+"340","SN","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1269226
+"341","SX","base load generation","coal","coal_base_conv pul",2005,"district heat",0.1129304
+"342","SX","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.1129304
+"343","SX","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.1129304
+"344","SX","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.1129304
+"345","TJ","base load generation","coal","coal_base_conv pul",2005,"district heat",0.691303
+"346","TJ","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.691303
+"347","TJ","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.691303
+"348","TJ","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.691303
+"349","XJ","base load generation","coal","coal_base_conv pul",2005,"district heat",1.261512
+"350","XJ","intermediate generation","coal","coal_int_conv pul",2005,"district heat",1.261512
+"351","XJ","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",1.261512
+"352","XJ","peak generation","coal","coal_peak_conv pul",2005,"district heat",1.261512
+"353","YN","base load generation","coal","coal_base_conv pul",2005,"district heat",0.0408682
+"354","YN","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.0408682
+"355","YN","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.0408682
+"356","YN","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.0408682
+"357","ZJ","base load generation","coal","coal_base_conv pul",2005,"district heat",0.5138
+"358","ZJ","intermediate generation","coal","coal_int_conv pul",2005,"district heat",0.5138
+"359","ZJ","subpeak generation","coal","coal_subpeak_conv pul",2005,"district heat",0.5138
+"360","ZJ","peak generation","coal","coal_peak_conv pul",2005,"district heat",0.5138
+"361","AH","base load generation","coal","coal_base_conv pul",2010,"district heat",0.068344
+"362","AH","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.068344
+"363","AH","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.068344
+"364","AH","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.068344
+"365","BJ","base load generation","coal","coal_base_conv pul",2010,"district heat",0.9076057
+"366","BJ","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.9076057
+"367","BJ","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.9076057
+"368","BJ","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.9076057
+"369","CQ","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1045763
+"370","CQ","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1045763
+"371","CQ","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1045763
+"372","CQ","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1045763
+"373","FJ","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0874806
+"374","FJ","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0874806
+"375","FJ","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0874806
+"376","FJ","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0874806
+"377","GD","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0724968
+"378","GD","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0724968
+"379","GD","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0724968
+"380","GD","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0724968
+"381","GS","base load generation","coal","coal_base_conv pul",2010,"district heat",0.2162328
+"382","GS","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.2162328
+"383","GS","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.2162328
+"384","GS","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.2162328
+"385","GX","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1321621
+"386","GX","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1321621
+"387","GX","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1321621
+"388","GX","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1321621
+"389","GZ","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0033993
+"390","GZ","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0033993
+"391","GZ","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0033993
+"392","GZ","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0033993
+"393","HA","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1111743
+"394","HA","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1111743
+"395","HA","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1111743
+"396","HA","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1111743
+"397","HB","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1496892
+"398","HB","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1496892
+"399","HB","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1496892
+"400","HB","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1496892
+"401","HE","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1633344
+"402","HE","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1633344
+"403","HE","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1633344
+"404","HE","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1633344
+"405","HI","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0250645
+"406","HI","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0250645
+"407","HI","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0250645
+"408","HI","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0250645
+"409","HL","base load generation","coal","coal_base_conv pul",2010,"district heat",0.4945874
+"410","HL","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.4945874
+"411","HL","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.4945874
+"412","HL","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.4945874
+"413","HN","base load generation","coal","coal_base_conv pul",2010,"district heat",0.2542981
+"414","HN","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.2542981
+"415","HN","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.2542981
+"416","HN","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.2542981
+"417","JL","base load generation","coal","coal_base_conv pul",2010,"district heat",0.6541561
+"418","JL","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.6541561
+"419","JL","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.6541561
+"420","JL","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.6541561
+"421","JS","base load generation","coal","coal_base_conv pul",2010,"district heat",0.2213041
+"422","JS","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.2213041
+"423","JS","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.2213041
+"424","JS","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.2213041
+"425","JX","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0470133
+"426","JX","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0470133
+"427","JX","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0470133
+"428","JX","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0470133
+"429","LN","base load generation","coal","coal_base_conv pul",2010,"district heat",0.478432
+"430","LN","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.478432
+"431","LN","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.478432
+"432","LN","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.478432
+"433","NM","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1322148
+"434","NM","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1322148
+"435","NM","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1322148
+"436","NM","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1322148
+"437","NX","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1147632
+"438","NX","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1147632
+"439","NX","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1147632
+"440","NX","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1147632
+"441","QH","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0937249
+"442","QH","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0937249
+"443","QH","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0937249
+"444","QH","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0937249
+"445","SC","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1254586
+"446","SC","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1254586
+"447","SC","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1254586
+"448","SC","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1254586
+"449","SD","base load generation","coal","coal_base_conv pul",2010,"district heat",0.333629
+"450","SD","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.333629
+"451","SD","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.333629
+"452","SD","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.333629
+"453","SH","base load generation","coal","coal_base_conv pul",2010,"district heat",0.1126842
+"454","SH","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.1126842
+"455","SH","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.1126842
+"456","SH","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.1126842
+"457","SN","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0804949
+"458","SN","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0804949
+"459","SN","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0804949
+"460","SN","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0804949
+"461","SX","base load generation","coal","coal_base_conv pul",2010,"district heat",0.0979936
+"462","SX","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.0979936
+"463","SX","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.0979936
+"464","SX","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.0979936
+"465","TJ","base load generation","coal","coal_base_conv pul",2010,"district heat",0.2277183
+"466","TJ","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.2277183
+"467","TJ","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.2277183
+"468","TJ","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.2277183
+"469","XJ","base load generation","coal","coal_base_conv pul",2010,"district heat",0.562382
+"470","XJ","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.562382
+"471","XJ","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.562382
+"472","XJ","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.562382
+"473","YN","base load generation","coal","coal_base_conv pul",2010,"district heat",0.011216
+"474","YN","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.011216
+"475","YN","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.011216
+"476","YN","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.011216
+"477","ZJ","base load generation","coal","coal_base_conv pul",2010,"district heat",0.2770258
+"478","ZJ","intermediate generation","coal","coal_int_conv pul",2010,"district heat",0.2770258
+"479","ZJ","subpeak generation","coal","coal_subpeak_conv pul",2010,"district heat",0.2770258
+"480","ZJ","peak generation","coal","coal_peak_conv pul",2010,"district heat",0.2770258
+"481","AH","base load generation","coal","coal_base_conv pul",2015,"district heat",0.0627405
+"482","AH","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.0627405
+"483","AH","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.0627405
+"484","AH","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.0627405
+"485","BJ","base load generation","coal","coal_base_conv pul",2015,"district heat",0.6097666
+"486","BJ","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.6097666
+"487","BJ","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.6097666
+"488","BJ","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.6097666
+"489","CQ","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1405319
+"490","CQ","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1405319
+"491","CQ","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1405319
+"492","CQ","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1405319
+"493","FJ","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1315285
+"494","FJ","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1315285
+"495","FJ","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1315285
+"496","FJ","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1315285
+"497","GD","base load generation","coal","coal_base_conv pul",2015,"district heat",0.0928512
+"498","GD","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.0928512
+"499","GD","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.0928512
+"500","GD","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.0928512
+"501","GS","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2381653
+"502","GS","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2381653
+"503","GS","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2381653
+"504","GS","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2381653
+"505","GX","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2151247
+"506","GX","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2151247
+"507","GX","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2151247
+"508","GX","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2151247
+"509","GZ","base load generation","coal","coal_base_conv pul",2015,"district heat",0.007642
+"510","GZ","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.007642
+"511","GZ","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.007642
+"512","GZ","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.007642
+"513","HA","base load generation","coal","coal_base_conv pul",2015,"district heat",0.138729
+"514","HA","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.138729
+"515","HA","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.138729
+"516","HA","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.138729
+"517","HB","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1209261
+"518","HB","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1209261
+"519","HB","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1209261
+"520","HB","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1209261
+"521","HE","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2506849
+"522","HE","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2506849
+"523","HE","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2506849
+"524","HE","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2506849
+"525","HI","base load generation","coal","coal_base_conv pul",2015,"district heat",0.0285504
+"526","HI","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.0285504
+"527","HI","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.0285504
+"528","HI","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.0285504
+"529","HL","base load generation","coal","coal_base_conv pul",2015,"district heat",0.6899062
+"530","HL","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.6899062
+"531","HL","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.6899062
+"532","HL","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.6899062
+"533","HN","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2877256
+"534","HN","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2877256
+"535","HN","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2877256
+"536","HN","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2877256
+"537","JL","base load generation","coal","coal_base_conv pul",2015,"district heat",0.5346577
+"538","JL","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.5346577
+"539","JL","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.5346577
+"540","JL","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.5346577
+"541","JS","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1956312
+"542","JS","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1956312
+"543","JS","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1956312
+"544","JS","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1956312
+"545","JX","base load generation","coal","coal_base_conv pul",2015,"district heat",0.0681441
+"546","JX","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.0681441
+"547","JX","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.0681441
+"548","JX","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.0681441
+"549","LN","base load generation","coal","coal_base_conv pul",2015,"district heat",0.5564293
+"550","LN","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.5564293
+"551","LN","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.5564293
+"552","LN","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.5564293
+"553","NM","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1371975
+"554","NM","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1371975
+"555","NM","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1371975
+"556","NM","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1371975
+"557","NX","base load generation","coal","coal_base_conv pul",2015,"district heat",0.0862029
+"558","NX","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.0862029
+"559","NX","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.0862029
+"560","NX","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.0862029
+"561","QH","base load generation","coal","coal_base_conv pul",2015,"district heat",0.0806948
+"562","QH","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.0806948
+"563","QH","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.0806948
+"564","QH","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.0806948
+"565","SC","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2196026
+"566","SC","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2196026
+"567","SC","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2196026
+"568","SC","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2196026
+"569","SD","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2784892
+"570","SD","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2784892
+"571","SD","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2784892
+"572","SD","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2784892
+"573","SH","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1900136
+"574","SH","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1900136
+"575","SH","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1900136
+"576","SH","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1900136
+"577","SN","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1188077
+"578","SN","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1188077
+"579","SN","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1188077
+"580","SN","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1188077
+"581","SX","base load generation","coal","coal_base_conv pul",2015,"district heat",0.1609255
+"582","SX","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.1609255
+"583","SX","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.1609255
+"584","SX","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.1609255
+"585","TJ","base load generation","coal","coal_base_conv pul",2015,"district heat",0.5249952
+"586","TJ","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.5249952
+"587","TJ","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.5249952
+"588","TJ","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.5249952
+"589","XJ","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2136232
+"590","XJ","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2136232
+"591","XJ","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2136232
+"592","XJ","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2136232
+"593","YN","base load generation","coal","coal_base_conv pul",2015,"district heat",0.0329246
+"594","YN","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.0329246
+"595","YN","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.0329246
+"596","YN","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.0329246
+"597","ZJ","base load generation","coal","coal_base_conv pul",2015,"district heat",0.2690525
+"598","ZJ","intermediate generation","coal","coal_int_conv pul",2015,"district heat",0.2690525
+"599","ZJ","subpeak generation","coal","coal_subpeak_conv pul",2015,"district heat",0.2690525
+"600","ZJ","peak generation","coal","coal_peak_conv pul",2015,"district heat",0.2690525
+"601","AH","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"602","AH","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"603","BJ","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"604","BJ","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"605","CQ","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"606","CQ","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"607","GD","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"608","GD","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"609","GS","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"610","GS","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"611","GX","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"612","GX","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"613","GZ","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"614","GZ","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"615","HA","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"616","HA","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"617","HB","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"618","HB","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"619","HE","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"620","HE","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"621","HI","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"622","HI","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"623","HL","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"624","HL","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"625","JL","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"626","JL","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"627","JS","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"628","JS","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"629","LN","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"630","LN","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"631","NM","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"632","NM","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"633","QH","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"634","QH","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"635","SC","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"636","SC","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"637","SD","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"638","SD","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"639","SH","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"640","SH","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"641","SN","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"642","SN","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"643","SX","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"644","SX","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"645","TJ","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"646","TJ","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"647","XJ","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"648","XJ","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"649","YN","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"650","YN","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"651","ZJ","subpeak generation","gas","gas_subpeak_steam/CT",1975,"district heat",0
+"652","ZJ","peak generation","gas","gas_peak_steam/CT",1975,"district heat",0
+"653","AH","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"654","AH","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"655","BJ","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"656","BJ","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"657","CQ","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"658","CQ","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"659","GD","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"660","GD","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"661","GS","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"662","GS","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"663","GX","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"664","GX","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"665","GZ","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"666","GZ","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"667","HA","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"668","HA","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"669","HB","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"670","HB","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"671","HE","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"672","HE","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"673","HI","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"674","HI","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"675","HL","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"676","HL","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"677","JL","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"678","JL","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"679","JS","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"680","JS","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"681","LN","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"682","LN","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"683","NM","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"684","NM","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"685","QH","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"686","QH","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"687","SC","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"688","SC","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"689","SD","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"690","SD","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"691","SH","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"692","SH","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"693","SN","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"694","SN","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"695","SX","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"696","SX","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"697","TJ","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"698","TJ","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"699","XJ","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"700","XJ","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"701","YN","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"702","YN","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"703","ZJ","subpeak generation","gas","gas_subpeak_steam/CT",1990,"district heat",0
+"704","ZJ","peak generation","gas","gas_peak_steam/CT",1990,"district heat",0
+"705","AH","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.235391
+"706","AH","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.235391
+"707","BJ","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",1.011877
+"708","BJ","peak generation","gas","gas_peak_steam/CT",2005,"district heat",1.011877
+"709","CQ","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.6854951
+"710","CQ","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.6854951
+"711","GD","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",1.1969137
+"712","GD","peak generation","gas","gas_peak_steam/CT",2005,"district heat",1.1969137
+"713","GS","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",3.6883425
+"714","GS","peak generation","gas","gas_peak_steam/CT",2005,"district heat",3.6883425
+"715","GX","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.1067331
+"716","GX","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.1067331
+"717","GZ","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.2737958
+"718","GZ","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.2737958
+"719","HA","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",1.28798
+"720","HA","peak generation","gas","gas_peak_steam/CT",2005,"district heat",1.28798
+"721","HB","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",3.7058121
+"722","HB","peak generation","gas","gas_peak_steam/CT",2005,"district heat",3.7058121
+"723","HE","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.504046
+"724","HE","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.504046
+"725","HI","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.0365553
+"726","HI","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.0365553
+"727","HL","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",1.9775305
+"728","HL","peak generation","gas","gas_peak_steam/CT",2005,"district heat",1.9775305
+"729","JL","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",1.8396039
+"730","JL","peak generation","gas","gas_peak_steam/CT",2005,"district heat",1.8396039
+"731","JS","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.7689117
+"732","JS","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.7689117
+"733","LN","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",3.6749567
+"734","LN","peak generation","gas","gas_peak_steam/CT",2005,"district heat",3.6749567
+"735","NM","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.754806
+"736","NM","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.754806
+"737","QH","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.0904865
+"738","QH","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.0904865
+"739","SC","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.2938946
+"740","SC","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.2938946
+"741","SD","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",9.6146847
+"742","SD","peak generation","gas","gas_peak_steam/CT",2005,"district heat",9.6146847
+"743","SH","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.0991438
+"744","SH","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.0991438
+"745","SN","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.5069829
+"746","SN","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.5069829
+"747","SX","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.4212075
+"748","SX","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.4212075
+"749","TJ","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",2.0363006
+"750","TJ","peak generation","gas","gas_peak_steam/CT",2005,"district heat",2.0363006
+"751","XJ","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.6087426
+"752","XJ","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.6087426
+"753","YN","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",0.04687
+"754","YN","peak generation","gas","gas_peak_steam/CT",2005,"district heat",0.04687
+"755","ZJ","subpeak generation","gas","gas_subpeak_steam/CT",2005,"district heat",12.4516417
+"756","ZJ","peak generation","gas","gas_peak_steam/CT",2005,"district heat",12.4516417
+"757","AH","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",9.898033
+"758","AH","peak generation","gas","gas_peak_steam/CT",2010,"district heat",9.898033
+"759","BJ","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.3353365
+"760","BJ","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.3353365
+"761","CQ","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",14.5676433
+"762","CQ","peak generation","gas","gas_peak_steam/CT",2010,"district heat",14.5676433
+"763","GD","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.0743614
+"764","GD","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.0743614
+"765","GS","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",45.6355138
+"766","GS","peak generation","gas","gas_peak_steam/CT",2010,"district heat",45.6355138
+"767","GX","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",1.9174717
+"768","GX","peak generation","gas","gas_peak_steam/CT",2010,"district heat",1.9174717
+"769","GZ","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.0996473
+"770","GZ","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.0996473
+"771","HA","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.401043
+"772","HA","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.401043
+"773","HB","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",17.3807018
+"774","HB","peak generation","gas","gas_peak_steam/CT",2010,"district heat",17.3807018
+"775","HE","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",3.7796935
+"776","HE","peak generation","gas","gas_peak_steam/CT",2010,"district heat",3.7796935
+"777","HI","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.0103284
+"778","HI","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.0103284
+"779","HL","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",4.0573354
+"780","HL","peak generation","gas","gas_peak_steam/CT",2010,"district heat",4.0573354
+"781","JL","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",3.4553076
+"782","JL","peak generation","gas","gas_peak_steam/CT",2010,"district heat",3.4553076
+"783","JS","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.6546036
+"784","JS","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.6546036
+"785","LN","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",218.2092318
+"786","LN","peak generation","gas","gas_peak_steam/CT",2010,"district heat",218.2092318
+"787","NM","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",39.9390192
+"788","NM","peak generation","gas","gas_peak_steam/CT",2010,"district heat",39.9390192
+"789","QH","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.9305587
+"790","QH","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.9305587
+"791","SC","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.1337731
+"792","SC","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.1337731
+"793","SD","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",144.3266243
+"794","SD","peak generation","gas","gas_peak_steam/CT",2010,"district heat",144.3266243
+"795","SH","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.2407821
+"796","SH","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.2407821
+"797","SN","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",2.0022959
+"798","SN","peak generation","gas","gas_peak_steam/CT",2010,"district heat",2.0022959
+"799","SX","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",326.6826735
+"800","SX","peak generation","gas","gas_peak_steam/CT",2010,"district heat",326.6826735
+"801","TJ","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",5.0177804
+"802","TJ","peak generation","gas","gas_peak_steam/CT",2010,"district heat",5.0177804
+"803","XJ","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.8018187
+"804","XJ","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.8018187
+"805","YN","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.3766297
+"806","YN","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.3766297
+"807","ZJ","subpeak generation","gas","gas_subpeak_steam/CT",2010,"district heat",0.7202992
+"808","ZJ","peak generation","gas","gas_peak_steam/CT",2010,"district heat",0.7202992
+"809","AH","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",2.09428
+"810","AH","peak generation","gas","gas_peak_steam/CT",2015,"district heat",2.09428
+"811","BJ","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.1893954
+"812","BJ","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.1893954
+"813","CQ","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",12.2098086
+"814","CQ","peak generation","gas","gas_peak_steam/CT",2015,"district heat",12.2098086
+"815","GD","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.1173318
+"816","GD","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.1173318
+"817","GS","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",29.4217215
+"818","GS","peak generation","gas","gas_peak_steam/CT",2015,"district heat",29.4217215
+"819","GX","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",2.6088084
+"820","GX","peak generation","gas","gas_peak_steam/CT",2015,"district heat",2.6088084
+"821","GZ","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.1461196
+"822","GZ","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.1461196
+"823","HA","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",1.3559326
+"824","HA","peak generation","gas","gas_peak_steam/CT",2015,"district heat",1.3559326
+"825","HB","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",1.8924851
+"826","HB","peak generation","gas","gas_peak_steam/CT",2015,"district heat",1.8924851
+"827","HE","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",2.1186998
+"828","HE","peak generation","gas","gas_peak_steam/CT",2015,"district heat",2.1186998
+"829","HI","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.0357371
+"830","HI","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.0357371
+"831","HL","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",9.5448938
+"832","HL","peak generation","gas","gas_peak_steam/CT",2015,"district heat",9.5448938
+"833","JL","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.6851752
+"834","JL","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.6851752
+"835","JS","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.6356759
+"836","JS","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.6356759
+"837","LN","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",10.0991763
+"838","LN","peak generation","gas","gas_peak_steam/CT",2015,"district heat",10.0991763
+"839","NM","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",39.443951
+"840","NM","peak generation","gas","gas_peak_steam/CT",2015,"district heat",39.443951
+"841","QH","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.1076284
+"842","QH","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.1076284
+"843","SC","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.6258104
+"844","SC","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.6258104
+"845","SD","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",13.9529621
+"846","SD","peak generation","gas","gas_peak_steam/CT",2015,"district heat",13.9529621
+"847","SH","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.2746914
+"848","SH","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.2746914
+"849","SN","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",6.9887881
+"850","SN","peak generation","gas","gas_peak_steam/CT",2015,"district heat",6.9887881
+"851","SX","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",1.4712238
+"852","SX","peak generation","gas","gas_peak_steam/CT",2015,"district heat",1.4712238
+"853","TJ","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",2.7675179
+"854","TJ","peak generation","gas","gas_peak_steam/CT",2015,"district heat",2.7675179
+"855","XJ","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",1.6908224
+"856","XJ","peak generation","gas","gas_peak_steam/CT",2015,"district heat",1.6908224
+"857","YN","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.4143482
+"858","YN","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.4143482
+"859","ZJ","subpeak generation","gas","gas_subpeak_steam/CT",2015,"district heat",0.47283
+"860","ZJ","peak generation","gas","gas_peak_steam/CT",2015,"district heat",0.47283

@@ -78,36 +78,36 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
     all_data <- list(...)[[1]]
     # -----------------------------------------------------------------------------
     # 1. Read files
-    province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings")
-    calibrated_techs <- get_data(all_data, "gcam-china/calibrated_techs")
+    province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = T)
+    calibrated_techs <- get_data(all_data, "gcam-china/calibrated_techs", strip_attributes = T)
 
-    A323.sector <- get_data(all_data, "gcam-china/A323.sector")
-    A323.subsector_interp <- get_data(all_data, "gcam-china/A323.subsector_interp")
-    #A323.subsector_interpTo <- get_data(all_data, "gcam-china/A323.subsector_interpTo")
-    A323.subsector_logit <- get_data(all_data, "gcam-china/A323.subsector_logit")
-    A323.subsector_shrwt <- get_data(all_data, "gcam-china/A323.subsector_shrwt")
-    A323.globaltech_coef <- get_data(all_data, "gcam-china/A323.globaltech_coef")
-    A323.globaltech_cost <- get_data(all_data, "gcam-china/A323.globaltech_cost")
-    A323.globaltech_shrwt <- get_data(all_data, "gcam-china/A323.globaltech_shrwt")
-    A323.globaltech_co2capture <- get_data(all_data, "gcam-china/A323.globaltech_co2capture")
-    A323.demand <- get_data(all_data, "gcam-china/A323.demand")
-    L1323.out_Mt_province_detailed_industry_Yh <- get_data(all_data, "L1323.out_Mt_province_detailed_industry_Yh")
-    L1323.IO_GJkg_province_detailed_industry_F_Yh <- get_data(all_data, "L1323.IO_GJkg_province_detailed_industry_F_Yh")
-    L1323.in_EJ_province_detailed_industry_F_Y <- get_data(all_data, "L1323.in_EJ_province_detailed_industry_F_Y")
-    A323.nonenergy_Cseq <- get_data(all_data, "gcam-china/A323.nonenergy_Cseq")
+    A323.sector <- get_data(all_data, "gcam-china/A323.sector", strip_attributes = T)
+    A323.subsector_interp <- get_data(all_data, "gcam-china/A323.subsector_interp", strip_attributes = T)
+    #A323.subsector_interpTo <- get_data(all_data, "gcam-china/A323.subsector_interpTo", strip_attributes = T)
+    A323.subsector_logit <- get_data(all_data, "gcam-china/A323.subsector_logit", strip_attributes = T)
+    A323.subsector_shrwt <- get_data(all_data, "gcam-china/A323.subsector_shrwt", strip_attributes = T)
+    A323.globaltech_coef <- get_data(all_data, "gcam-china/A323.globaltech_coef", strip_attributes = T)
+    A323.globaltech_cost <- get_data(all_data, "gcam-china/A323.globaltech_cost", strip_attributes = T)
+    A323.globaltech_shrwt <- get_data(all_data, "gcam-china/A323.globaltech_shrwt", strip_attributes = T)
+    A323.globaltech_co2capture <- get_data(all_data, "gcam-china/A323.globaltech_co2capture", strip_attributes = T)
+    A323.demand <- get_data(all_data, "gcam-china/A323.demand", strip_attributes = T)
+    L1323.out_Mt_province_detailed_industry_Yh <- get_data(all_data, "L1323.out_Mt_province_detailed_industry_Yh", strip_attributes = T)
+    L1323.IO_GJkg_province_detailed_industry_F_Yh <- get_data(all_data, "L1323.IO_GJkg_province_detailed_industry_F_Yh", strip_attributes = T)
+    L1323.in_EJ_province_detailed_industry_F_Y <- get_data(all_data, "L1323.in_EJ_province_detailed_industry_F_Y", strip_attributes = T)
+    A323.nonenergy_Cseq <- get_data(all_data, "gcam-china/A323.nonenergy_Cseq", strip_attributes = T)
 
-    A323.inc_elas_output <- get_data(all_data, "gcam-china/A323.inc_elas_output")
+    A323.inc_elas_output <- get_data(all_data, "gcam-china/A323.inc_elas_output", strip_attributes = T)
 
-    A323.efficiency_improve <- get_data(all_data, "gcam-china/A323.efficiency_improve")
+    A323.efficiency_improve <- get_data(all_data, "gcam-china/A323.efficiency_improve", strip_attributes = T)
 
-    A323.globaltech_retirement <- get_data(all_data, "gcam-china/A323.globaltech_retirement")
+    A323.globaltech_retirement <- get_data(all_data, "gcam-china/A323.globaltech_retirement", strip_attributes = T)
 
     # China region tables
-    A323.sector_China <- get_data(all_data, "gcam-china/A323.sector_China")
-    A323.subsector_interp_China <- get_data(all_data, "gcam-china/A323.subsector_interp_China")
-    A323.subsector_logit_China <- get_data(all_data, "gcam-china/A323.subsector_logit_China")
-    A323.tech_coef_China <- get_data(all_data, "gcam-china/A323.tech_coef_China")
-    A323.tech_shrwt_China <- get_data(all_data, "gcam-china/A323.tech_shrwt_China")
+    A323.sector_China <- get_data(all_data, "gcam-china/A323.sector_China", strip_attributes = T)
+    A323.subsector_interp_China <- get_data(all_data, "gcam-china/A323.subsector_interp_China", strip_attributes = T)
+    A323.subsector_logit_China <- get_data(all_data, "gcam-china/A323.subsector_logit_China", strip_attributes = T)
+    A323.tech_coef_China <- get_data(all_data, "gcam-china/A323.tech_coef_China", strip_attributes = T)
+    A323.tech_shrwt_China <- get_data(all_data, "gcam-china/A323.tech_shrwt_China", strip_attributes = T)
 
 
    # detailed_industry_CCS_cost_2000USDtCO2 <- 80
@@ -403,7 +403,7 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
 
     # L2323.BaseService_detailed_industry: base-year service output of detailed_industry
     sector_list = c("IRONSTL","construction","mining energy use",
-                    "agriculture energy use","chemicals",)
+                    "agriculture energy use","chemicals")
 
     L2323.StubTechProd_detailed_industry %>%
       filter(supplysector %in% sector_list) %>%
