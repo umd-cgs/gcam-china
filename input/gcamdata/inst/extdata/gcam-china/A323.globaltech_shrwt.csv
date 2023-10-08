@@ -50,9 +50,7 @@ construction energy use,electricity,electricity,1,1,1,1
 construction feedstock,coal,coal,1,1,1,1
 construction feedstock,gas,gas,1,1,1,1
 construction feedstock,liquid,liquid,1,1,1,1
-industrial energy use,hydrogen,hydrogen,0,0,0,0.1
 agriculture energy use,district heat,district heat,1,1,1,1
 chemical energy use,district heat,district heat,1,1,1,1
 construction energy use,district heat,district heat,1,1,1,1
 mining energy use,district heat,district heat,1,1,1,1
-process heat cement,hydrogen,hydrogen,0,0,0,0.1

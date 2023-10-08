@@ -20,7 +20,7 @@ IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,0.000071,0.000071,0.000071
 IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,0.001315008,0.001315008,0.001315008
 IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,0.000071,0.000071,0.000071
 IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,0.000071,0.000071,0.000071
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 enduse,0.007293,0.007293,0.007293
+IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,0.007293,0.007293,0.007293
 IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,0.001315008,0.001315008,0.001315008
 IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,0.001315008,0.001315008,0.001315008
 IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,0.000071,0.000071,0.000071
@@ -41,7 +41,7 @@ chemical energy use,gas,gas CCS,wholesale gas,0.5,0.5,0.5
 chemical energy use,liquid,liquid,refined liquids industrial,0.3,0.3,0.3
 chemical energy use,liquid,liquid CCS,refined liquids industrial,0.3,0.3,0.3
 chemical energy use,biomass,biomass,delivered biomass,1,1,1
-chemical energy use,hydrogen,hydrogen,H2 enduse,1,1,1
+chemical energy use,hydrogen,hydrogen,H2 industrial,1,1,1
 chemical energy use,electricity,electricity,elect_td_ind,0.5,0.5,0.5
 chemical feedstock,coal,coal,delivered coal,1,1,1
 chemical feedstock,gas,gas,wholesale gas,1,1,1
@@ -50,13 +50,13 @@ agriculture energy use,coal,coal,delivered coal,0.580061692,0.580061692,0.580061
 agriculture energy use,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
 agriculture energy use,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
 agriculture energy use,biomass,biomass,delivered biomass,0.580061692,0.580061692,0.580061692
-agriculture energy use,hydrogen,hydrogen,H2 enduse,0.580061692,0.580061692,0.580061692
+agriculture energy use,hydrogen,hydrogen,H2 industrial,0.580061692,0.580061692,0.580061692
 agriculture energy use,electricity,electricity,elect_td_ind,0.580061692,0.580061692,0.580061692
 mining energy use,coal,coal,delivered coal,0.00366345,0.00366345,0.00366345
 mining energy use,gas,gas,wholesale gas,0.00366345,0.00366345,0.00366345
 mining energy use,liquid,liquid,refined liquids industrial,0.00366345,0.00366345,0.00366345
 mining energy use,biomass,biomass,delivered biomass,0.00366345,0.00366345,0.00366345
-mining energy use,hydrogen,hydrogen,H2 enduse,0.00366345,0.00366345,0.00366345
+mining energy use,hydrogen,hydrogen,H2 industrial,0.00366345,0.00366345,0.00366345
 mining energy use,electricity,electricity,elect_td_ind,0.00366345,0.00366345,0.00366345
 construction,construction,construction,construction energy use,1,1,1
 construction,construction,construction,construction feedstock,0,0,0
@@ -64,7 +64,7 @@ construction energy use,coal,coal,delivered coal,0.580061692,0.580061692,0.58006
 construction energy use,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
 construction energy use,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
 construction energy use,biomass,biomass,delivered biomass,0.580061692,0.580061692,0.580061692
-construction energy use,hydrogen,hydrogen,H2 enduse,0.580061692,0.580061692,0.580061692
+construction energy use,hydrogen,hydrogen,H2 industrial,0.580061692,0.580061692,0.580061692
 construction energy use,electricity,electricity,elect_td_ind,0.580061692,0.580061692,0.580061692
 construction feedstock,coal,coal,delivered coal,0.580061692,0.580061692,0.580061692
 construction feedstock,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692

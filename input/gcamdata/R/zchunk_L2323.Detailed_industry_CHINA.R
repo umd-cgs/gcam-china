@@ -349,7 +349,11 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
       mutate(region = province,
              stub.technology = technology,
              market.name = region) %>%
-      mutate(market.name = if_else(minicam.energy.input %in% c("H2 enduse","delivered biomass","coke"),"China",region)) %>%
+      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS,
+                                   region, market.name)) %>%
+      #NOTE: electricity is consumed from province markets
+      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
+                                   region, market.name)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechCoef"]]) ->
       L2323.StubTechCoef_detailed_industry
 
@@ -391,7 +395,11 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
       filter(!is.na(minicam.energy.input)) %>%
       filter(!(minicam.energy.input %in% c("coke"))) %>%
       mutate(market.name = region) %>%
-      mutate(market.name = if_else(minicam.energy.input %in% c("H2 enduse","delivered biomass"),"China",region)) %>%
+      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS,
+                                   region, market.name)) %>%
+      #NOTE: electricity is consumed from province markets
+      mutate(market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
+                                   region, market.name)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechMarket"]]) ->
       L2323.StubTechMarket_detailed_industry
 
@@ -439,15 +447,16 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
     A323.sector_China %>% select(c(LEVEL2_DATA_NAMES[["Supplysector"]], LOGIT_TYPE_COLNAME)) -> L2323.Supplysector_detailed_industry_China
 
     L2323.SubsectorLogit_detailed_industry_China <- set_years(A323.subsector_logit_China[rep(1:nrow(A323.subsector_logit_China),
-                                              times = length(province_names_mappings$province)),] %>%
-                mutate(subsector = paste(province_names_mappings$province, subsector, sep = " "),
+                                              times = length(province_names_mappings$province)),]%>%
+                mutate(subsector = paste(rep(province_names_mappings$province,
+                                             each = nrow(A323.subsector_logit_China)), subsector, sep = " "),
                        region = "China",logit.year.fillout = 1975) %>%
     select(c(LEVEL2_DATA_NAMES[["SubsectorLogit"]], LOGIT_TYPE_COLNAME)))
 
 
     # Subsector logit tables
     L2323.SubsectorInterp_detailed_industry_China <- set_years(A323.subsector_interp_China[rep(1:nrow(A323.subsector_logit_China),
-                                                                              times = length(province_names_mappings$province)),] %>%
+                                                                              each = length(province_names_mappings$province)),] %>%
       mutate(subsector = paste(province_names_mappings$province, subsector, sep = " "),
              region = "China") %>%
       select(LEVEL2_DATA_NAMES[["SubsectorInterp"]]))
