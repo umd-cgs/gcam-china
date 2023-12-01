@@ -695,8 +695,11 @@ water.DEMAND_FRAC_THRESHOLD <- 1e-4 # Demand fraction of total runoff below whic
 
 # Energy-for-water constants ======================================================================
 
-efw.GW_ABSTRACTION_EFW                    <- 0.000666  # GJ of electricity per cubic meter of groundwater produced
-efw.SW_ABSTRACTION_EFW                    <- 0.000284  # GJ of electricity per cubic meter of surface water produced
+# Nov 2023, Yang Ou; turn off EFW
+# ------
+efw.GW_ABSTRACTION_EFW                    <- 1e-8  # GJ of electricity per cubic meter of groundwater produced
+efw.SW_ABSTRACTION_EFW                    <- 1e-8  # GJ of electricity per cubic meter of surface water produced
+# ------
 efw.MAX_COMMIND_ENERGY_DESAL              <- 0.15      # maximum share of commercial + industrial sector energy consumption that can be re-assigned to desalination
 efw.MAX_AGCOMM_ENERGY_IRR                 <- 0.5       # maximum share of ag + commercial energy that can be re-assigned to irrigation
 efw.MAX_AG_ENERGY_IRR                     <- 1         # maximum share of reported agricultural energy that can be re-assigned to irrigation

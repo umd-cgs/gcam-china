@@ -62,7 +62,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
       mutate(fuel = sub("solar CSP", "solar", fuel),
              fuel = sub("solar PV", "solar", fuel)) %>%
       group_by(grid_region, sector, year, fuel) %>%
-      summarise(tot_generation = sum(generation)) %>%
+      summarise(tot_generation = sum(generation), .groups = "drop") %>%
       ungroup() -> L1236.out_EJ_grid_elec_F
 
     # Join in total generation data by year / grid region / fuel from L1236.out_EJ_grid_elec_F
@@ -84,7 +84,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
                                  mutate(fuel = sub("solar CSP", "solar", fuel),
                                         fuel = sub("solar PV", "solar", fuel)) %>%
                                  group_by(grid_region, sector, year, fuel) %>%
-                                 summarise(tot_generation = sum(generation)) %>%
+                                 summarise(tot_generation = sum(generation), .groups = "drop") %>%
                                  ungroup(),
                                by = c("grid_region", "year", "fuel")) %>%
       select(grid_region, segment, fuel, year, tot_generation, fraction, generation ) -> L1236.grid_elec_supply_non_cal
@@ -113,7 +113,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
                  fuel == elec_fuel &
                  segment != load_segment &
                  year == segment_year) %>%
-        summarise(non_segment_frac = sum(fraction)) %>%
+        summarise(non_segment_frac = sum(fraction), .groups = "drop") %>%
         pull(non_segment_frac)
     }
 
@@ -138,7 +138,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
       }
 
 
-
+      # If fuel == coal, adjust fraction of fuel consumed in base load segment to make sure sum of fractions is 1
       if (L1236.fuel == "hydro" | L1236.fuel == "coal") {
 
         L1236.grid_elec_supply %>%
@@ -155,13 +155,13 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
       # Calculate electricity supply by horizontal segment in each grid region by aggregating all technologies
       L1236.grid_elec_supply %>%
         group_by(grid_region, segment, year) %>%
-        summarise(generation = sum(generation)) %>%
+        summarise(generation = sum(generation), .groups = "drop") %>%
         ungroup() -> L1236.grid_check
 
       # Calculate electricity demand for each horizontal segment in each grid region
       L1236.grid_elec_supply %>%
         group_by(grid_region, year) %>%
-        summarise(tot_demand = sum(generation)) %>%
+        summarise(tot_demand = sum(generation),.groups = "drop") %>%
         ungroup() -> L1236.grid_elec_demand
 
       L1236.grid_check %>%
@@ -302,7 +302,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
     # Calculate total electricity generation by year / grid region
     L1236.out_EJ_grid_elec_F %>%
       group_by(grid_region, sector, year) %>%
-      summarise(grid_total = sum(tot_generation)) %>%
+      summarise(grid_total = sum(tot_generation), .groups = "drop") %>%
       ungroup() -> L1236.grid_total
 
     # Calculate the share of generation from a given fuel across load segment by year / grid region
@@ -377,6 +377,25 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
 
           for (i in unique(dominant_fuels$fuel)){
 
+            # region specific adjustment
+            # 1) several has too many coal and hydro, need to remove all other peak fuels to give them more room in peak
+            if (L1236.region %in% c("East China Grid", "Northeast China Grid", "China Southern Power Grid", "Central China Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.25) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.15) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 1)-> L1236.grid_elec_supply}
+
+            # 2) Northwest has a lot of solar in subpeak, move to intermediate to give more room for coal
+            if (L1236.region %in% c("Northwest China Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_BASE, 0) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_INT, 1) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
+
             #Solve for int
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
@@ -402,6 +421,205 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
             L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
             if(L1236.solved_fraction>0.5){
+              L1236.solved_fraction$root=0.06
+            }else{
+
+
+              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
+
+
+            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+
+            if(L1236.solved_fraction>0.5){
+              L1236.solved_fraction$root=0.01
+            }else{
+
+
+              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_int) -> L1236.grid_elec_supply
+
+
+
+          }
+
+        }
+
+        if (segment_year %in% c(1990)){
+
+          for (i in unique(dominant_fuels$fuel)){
+
+            # region specific adjustment
+            # Part 1: relocate more gas and liquids to non-peak loads, so that coal/hydro could go to peak
+            if (L1236.region %in% c("Central China Grid", "East China Grid", "North China Grid", "Northeast China Grid",
+                                    "Northwest China Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) -> L1236.grid_elec_supply}
+
+            # Part 2 : China Southern Power Grid adjustment
+            if (L1236.region %in% c("China Southern Power Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.7) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.7) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
+
+            #Solve for int
+            L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+
+            if(L1236.solved_fraction_int>0.5){
+              L1236.solved_fraction_int$root=0.3
+            }else{
+
+
+              L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamchina.ELEC_SEGMENT_INT, L1236.solved_fraction_int$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_base
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
+
+            #Solve for sub-peak
+            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+
+            if(L1236.solved_fraction>0.5){
+              L1236.solved_fraction$root=0.06
+            }else{
+
+
+              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
+
+
+            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+
+            if(L1236.solved_fraction>0.5){
+              L1236.solved_fraction$root=0.01
+            }else{
+
+
+              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_int) -> L1236.grid_elec_supply
+
+
+
+          }
+
+        }
+
+        if (segment_year %in% c(2005)){
+
+          for (i in unique(dominant_fuels$fuel)){
+
+            # region specific adjustment
+            # Part 1: relocate more gas and liquids to non-peak loads, so that coal/hydro could go to peak
+            if (L1236.region %in% c("Central China Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.5)  -> L1236.grid_elec_supply}
+            #
+            # # Part 2 : China Southern Power Grid adjustment
+            if (L1236.region %in% c("China Southern Power Grid", "East China Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.7) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
+
+            #Solve for int
+            L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+
+            if(L1236.solved_fraction_int>0.5){
+              print(L1236.region)
+              print(segment_year)
+              print(i)
+              print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_int$root=0.3
+            }else{
+
+
+              L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamchina.ELEC_SEGMENT_INT, L1236.solved_fraction_int$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_base
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
+
+            #Solve for sub-peak
+            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+
+            if(L1236.solved_fraction>0.5){
+              print(L1236.region)
+              print(segment_year)
+              print(i)
               print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
               L1236.solved_fraction$root=0.06
             }else{
@@ -420,13 +638,13 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
-            subpeak_frac <- L1236.solved_fraction$root
-
-
 
             L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
             if(L1236.solved_fraction>0.5){
+              print(L1236.region)
+              print(segment_year)
+              print(i)
               print("Warning peak demand could not solve. So, setting it to a pre-determined value")
               L1236.solved_fraction$root=0.01
             }else{
@@ -451,24 +669,125 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
 
         }
 
-        if (segment_year %in% c(2005, 1990,2010)) {
-          # For years 2005 & 1990, we use solved fractions from the most recent year as a starting point
-          # for calculating the fuel fractions for the current year.
-          # Map fractions from prevoius gcamusa.LOAD_SEG_CAL_YEARS to current segment_year.
-          L1236.grid_elec_supply %>%
-            filter(year == segment_year,
-                   grid_region == L1236.region) %>%
-            left_join_error_no_match(L1236.grid_elec_supply %>%
-                                       filter(year > segment_year) %>%
-                                       # NOTE:  can't combine these filters because doing so filters out all entries
-                                       filter(year == min(year)) %>%
-                                       select(-year, -tot_generation, -generation),
-                                     by = c("grid_region", "segment", "fuel")) %>%
-            mutate(fraction = fraction.y,
-                   generation = tot_generation * fraction) %>%
-            select(grid_region, segment, fuel, year, tot_generation, fraction, generation) %>%
-            bind_rows(L1236.grid_elec_supply %>%
-                        filter(year != segment_year | grid_region != L1236.region)) -> L1236.grid_elec_supply
+        if (segment_year %in% c(2010)){
+
+          for (i in unique(dominant_fuels$fuel)){
+
+            # region specific adjustment
+            # Part 1: China Southern Power Grid
+            if (L1236.region %in% c("China Southern Power Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.5) -> L1236.grid_elec_supply}
+            #
+            # # Part 2 : East China Grid adjustment
+            if (L1236.region %in% c("East China Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.7) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.7) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
+
+            # # Part 3 : Central China Grid
+            if (L1236.region %in% c("Central China Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
+
+            #Solve for int
+            L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+
+            if(L1236.solved_fraction_int>0.5){
+              print(L1236.region)
+              print(segment_year)
+              print(i)
+              print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_int$root=0.3
+            }else{
+
+
+              L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamchina.ELEC_SEGMENT_INT, L1236.solved_fraction_int$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_base
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
+
+            #Solve for sub-peak
+            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+
+            if(L1236.solved_fraction>0.5){
+              print(L1236.region)
+              print(segment_year)
+              print(i)
+              print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction$root=0.06
+            }else{
+
+
+              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
+
+
+            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+
+            if(L1236.solved_fraction>0.5){
+              print(L1236.region)
+              print(segment_year)
+              print(i)
+              print("Warning peak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction$root=0.01
+            }else{
+
+
+              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+
+            }
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+
+            L1236.grid_elec_supply %>%
+              calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
+
+            L1236.grid_elec_supply %>%
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_int) -> L1236.grid_elec_supply
+
+
+
+          }
 
         }
 
@@ -480,7 +799,6 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
     L1236.grid_elec_supply %>%
       bind_rows(L1236.grid_elec_supply_non_cal) %>%
       mutate(generation = tot_generation * fraction) -> L1236.grid_elec_supply
-
     # ===================================================
 
     # Produce outputs

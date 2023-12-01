@@ -40,7 +40,8 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
              "L123.out_EJ_province_ownuse_elec",
              "L126.in_EJ_province_td_elec",
              "L132.out_EJ_province_indchp_F",
-             "L1232.out_EJ_sR_elec_CHINA"))
+             "L1232.out_EJ_sR_elec_CHINA",
+             "L126.in_EJ_R_electd_F_Yh"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L2235.DeleteSupplysector_elec_CHINA",
              "L2235.InterestRate_GRID_CHINA",
@@ -103,6 +104,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
     L126.in_EJ_province_td_elec <- get_data(all_data, "L126.in_EJ_province_td_elec",strip_attributes = TRUE)
     L132.out_EJ_province_indchp_F <- get_data(all_data, "L132.out_EJ_province_indchp_F",strip_attributes = TRUE)
     L1232.out_EJ_sR_elec_CHINA <- get_data(all_data, "L1232.out_EJ_sR_elec_CHINA",strip_attributes = TRUE)
+    L126.in_EJ_R_electd_F_Yh <- get_data(all_data, "L126.in_EJ_R_electd_F_Yh",strip_attributes = TRUE)
 
     # ===================================================
     # Data Processing
@@ -303,7 +305,26 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
                                by = "province") %>%
       group_by(grid_region, year) %>%
       summarise(consumption = sum(value)) %>%
-      ungroup() -> L2235.in_EJ_province_td_elec
+      ungroup() -> L2235.in_EJ_province_td_elec_temp
+
+    # 2023 Nov Yang Ou
+    # adjust electricity TD to align with the global model, so that between-grid electricity trade can be balanced
+    # --------------------------------------------------------------------------------
+    L126.in_EJ_R_electd_F_Yh %>%
+      filter(GCAM_region_ID == gcamchina.REGION_ID & fuel == "electricity") %>%
+      filter(year %in% MODEL_BASE_YEARS) %>%
+      rename(value.core = value) %>%
+      left_join_error_no_match(L2235.in_EJ_province_td_elec_temp %>%
+                                 group_by(year) %>%
+                                 summarise(value.gcamchina = sum(consumption)) %>% ungroup, by = "year") %>%
+      mutate(scalar = if_else(year == 1975, 0.8375, value.core / value.gcamchina)) %>%
+      select(year, scalar) -> L126.in_EJ_R_electd_F_Yh_scalar
+
+    L2235.in_EJ_province_td_elec_temp %>%
+      left_join_error_no_match(L126.in_EJ_R_electd_F_Yh_scalar, by = "year") %>%
+      mutate(consumption = consumption * scalar) %>%
+      select(-scalar) -> L2235.in_EJ_province_td_elec
+    # --------------------------------------------------------------------------------
 
     # Calculating net exports: generation + cogeneration - ownuse - consumption
     L2235.elec_flows_GRID_temp %>%
@@ -397,23 +418,23 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       select(-grid_exports, -grid_imports) ->
       grid_trade_ratio
 
-    L2235.elec_flows_GRID %>%
-      left_join_error_no_match(grid_trade_ratio, by=c("year"="Year","grid_region"="import_grid")) %>%
-      mutate(
-        imports_new = if_else( imports > 0, imports/i2e_ratio,
-                               if_else( imports == 0, (exports/e2i_ratio)-exports, imports)),
-        exports_new = if_else( exports >0, exports/e2i_ratio,
-                               if_else( exports == 0, (imports/i2e_ratio)-imports, exports)),
-        ## The data does not line up in the New York Grid yielding INF so we revert back to previous trade
-        imports_new = if_else(imports_new == Inf,imports,imports_new),
-        exports_new = if_else(exports_new == Inf,exports,exports_new)) %>%
-      select(-imports,-exports, -i2e_ratio, -e2i_ratio) %>%
-      rename(exports=exports_new,
-             imports=imports_new) %>%
-      ## Reassign net.supply to be used as net ownuse to reflect change
-      ## in imports by grid region
-      mutate(net.supply = consumption - imports) ->
-      L2235.elec_flows_GRID
+    # L2235.elec_flows_GRID %>%
+    #   left_join_error_no_match(grid_trade_ratio, by=c("year"="Year","grid_region"="import_grid")) %>%
+    #   mutate(
+    #     imports_new = if_else( imports > 0, imports/i2e_ratio,
+    #                            if_else( imports == 0, (exports/e2i_ratio)-exports, imports)),
+    #     exports_new = if_else( exports >0, exports/e2i_ratio,
+    #                            if_else( exports == 0, (imports/i2e_ratio)-imports, exports)),
+    #     ## The data does not line up in the New York Grid yielding INF so we revert back to previous trade
+    #     imports_new = if_else(imports_new >50,imports,imports_new),
+    #     exports_new = if_else(exports_new >50,exports,exports_new)) %>%
+    #   select(-imports,-exports, -i2e_ratio, -e2i_ratio) %>%
+    #   rename(exports=exports_new,
+    #          imports=imports_new) %>%
+    #   ## Reassign net.supply to be used as net ownuse to reflect change
+    #   ## in imports by grid region
+    #   mutate(net.supply = consumption - imports) ->
+    #   L2235.elec_flows_GRID
 
     # Calibrated exports of electricity from grid regions to shared CHINA region
     L2235.elec_flows_GRID %>%
@@ -684,6 +705,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_precursors("gcam-china/province_names_mappings",
                      "gcam-china/A232.structure",
                      "gcam-china/ABSPI_intra_province_electricity_trade",
+                     "L126.in_EJ_R_electd_F_Yh",
                      "L1232.out_EJ_sR_elec_CHINA",
                      "L132.out_EJ_province_indchp_F",
                      "L123.in_EJ_province_ownuse_elec",
