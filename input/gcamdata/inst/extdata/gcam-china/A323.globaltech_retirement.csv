@@ -46,9 +46,9 @@ construction energy use,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
 construction energy use,biomass,biomass,final-calibration-year,20,,10,0.15,-0.2,6
 construction energy use,hydrogen,hydrogen,final-calibration-year,20,,10,0.15,-0.2,6
 construction energy use,electricity,electricity,final-calibration-year,20,,10,0.15,-0.2,6
-construction feedstock,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
-construction feedstock,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
-construction feedstock,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
+construction feedstocks,coal,coal,final-calibration-year,20,,10,0.15,-0.2,6
+construction feedstocks,gas,gas,final-calibration-year,20,,10,0.15,-0.2,6
+construction feedstocks,liquid,liquid,final-calibration-year,20,,10,0.15,-0.2,6
 IRONSTL,BLASTFUR,BLASTFUR,initial-future-year,40,,20,0.15,-0.2,6
 IRONSTL,BLASTFUR,BLASTFUR CCS,initial-future-year,40,,20,0.15,-0.2,6
 IRONSTL,BLASTFUR,Biomass based,initial-future-year,40,,20,0.15,-0.2,6
@@ -91,12 +91,11 @@ construction energy use,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
 construction energy use,biomass,biomass,initial-future-year,20,,10,0.15,-0.2,6
 construction energy use,hydrogen,hydrogen,initial-future-year,20,,10,0.15,-0.2,6
 construction energy use,electricity,electricity,initial-future-year,20,,10,0.15,-0.2,6
-construction feedstock,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
-construction feedstock,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
-construction feedstock,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
+construction feedstocks,coal,coal,initial-future-year,20,,10,0.15,-0.2,6
+construction feedstocks,gas,gas,initial-future-year,20,,10,0.15,-0.2,6
+construction feedstocks,liquid,liquid,initial-future-year,20,,10,0.15,-0.2,6
 agriculture energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
 chemical energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
-chemical feedstock,Electronic fuel,Electronic fuel,initial-future-year,20,,10,0.15,-0.2,6
 construction energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
 mining energy use,district heat,district heat,initial-future-year,20,,10,0.15,-0.2,6
 agriculture energy use,district heat,district heat,final-calibration-year,20,,10,0.15,-0.2,6

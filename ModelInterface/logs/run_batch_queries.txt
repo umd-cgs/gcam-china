@@ -1,0 +1,1263 @@
+InterfaceMain: batchFile: ..\output\gcam_diagnostics\batch_queries\xmldb_batch_detailed_ind.xml
+Running headless? true
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701690844752
+Before Function: 1701690844752
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+In Function: 1701690844753
+In Function: 1701690844753
+After build Tree: 1701690851330
+After Add table: 1701690851333
+Completed 100.0% of batch queries.
+After build Tree: 1701690852034
+After Add table: 1701690852034
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701690852050
+Before Function: 1701690852050
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]//*[@type='input']/demand-physical/node()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]//*[@type='input']/demand-physical/node()
+In Function: 1701690852051
+In Function: 1701690852051
+After build Tree: 1701690860083
+After Add table: 1701690860084
+Completed 100.0% of batch queries.
+After build Tree: 1701690861127
+After Add table: 1701690861127
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701690861142
+Before Function: 1701690861142
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+In Function: 1701690861143
+In Function: 1701690861143
+After build Tree: 1701690862841
+After Add table: 1701690862842
+Completed 100.0% of batch queries.
+After build Tree: 1701690863599
+After Add table: 1701690863599
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701690863616
+Before Function: 1701690863616
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+            CO2/emissions/node()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+            CO2/emissions/node()
+In Function: 1701690863616
+In Function: 1701690863616
+After build Tree: 1701690983521
+After Add table: 1701690983546
+Completed 100.0% of batch queries.
+After build Tree: 1701690995300
+After Add table: 1701690995301
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701690995562
+Before Function: 1701690995562
+About to perform query:  
+               declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
+	       	 		 let $scn := $parent/ancestor::scenario,
+	       			   	  $rgn := $parent (: /ancestor::region :)
+	       			   return
+	       			   	  document { element scenario {
+	       			 	  					$scn/@*,
+	       			 						element region {
+	       			 							$rgn/@*,
+	       			 							$append
+	       			 						}
+	       			 	  				}
+	       				}
+	       	 		 (: I can get by with just the scenario and region
+	       			 let $new_node := element {local-name($parent)} {$parent/@*, $append} 	
+	       	 		 return
+	       	 		 if(local-name($parent) != 'scenario')
+	       	 		 then local:append-heirarchy($parent/parent::*, $new_node)
+	       	 		 else document { $new_node } :)
+	       	 	 }; 
+	       	 	 declare function local:generate-sector-output-coefs($inputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
+                 if(empty($inputNameQueue)) then $coefs
+                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","IRONSTL" ),
+$inputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$inputNameQueue[1]]))
+then 
+local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs, $is_usa)
+	       				else
+                    let $inputName := $inputNameQueue[1],
+                        $newInputNameQueue := remove($inputNameQueue, 1),
+                        $useInputs := $currTree//*[@type='input' and @name=$inputName],
+                        $useSectors := distinct-values($useInputs/ancestor::*[@type='sector']/@name),
+                        $totalInputSum := for $vintage in distinct-values($useInputs/demand-physical/@vintage)
+                                          return element input {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($useInputs/demand-physical[@vintage=$vintage])
+                                                     }
+                                                 },
+                       $new_coefs := if(empty($useSectors)) then
+                                         $coefs
+                                     else
+                                         $coefs | element sector {
+                                            attribute name { $inputName },
+                                            for $output in $useSectors
+                                            return element output {
+                                                       attribute name { $output },
+                                                       for $inputSum in $totalInputSum
+                                                       let $outputSum := sum($useInputs[ancestor::*[@type='sector' and @name=$output]]/demand-physical[@vintage=$inputSum/@vintage])
+                                                       return element coef {
+                                                                  attribute vintage { $inputSum/@vintage },
+                                                                  text { $outputSum div $inputSum }
+                                                              }
+                                                    }
+                                        }
+                        return 
+                              local:generate-sector-output-coefs(distinct-values(($newInputNameQueue, $useSectors)), $currTree, $new_coefs, $is_usa)
+		};
+        declare function local:apply-coefs($outputName as xs:string, $emissions as node()*, $coefs as node()*) as node()* {
+            if(exists($coefs[@name=$outputName]) and abs(sum($emissions)) > 0.001) then
+                for $output in $coefs[@name=$outputName]/output
+                return local:apply-coefs($output/@name,
+                    for $year in distinct-values($emissions/@year)
+                    let $emissThisVintage := $emissions[@year=$year],
+                        $firstEmiss := $emissThisVintage[1],
+                        $emissSum := sum($emissThisVintage),
+                        $coefThisVintage := $output/coef[@vintage=$year]
+                    where $coefThisVintage > 0
+                    return element { local-name($firstEmiss) } {
+                            $firstEmiss/@*,
+                            text{ $emissSum * $coefThisVintage }
+                        }
+	       			, $coefs)
+            else if( abs(sum($emissions)) > 0.001) then
+                element sector {
+                    attribute name { $outputName },
+                    attribute type { 'sector' },
+                    (: $emissions :) (: TODO: not sure why this doesn't work and we need to create these explicitly :)
+                    for $e in $emissions
+                    return element emissions { $e/@*, text{ $e/text() } }
+                }
+            else
+                (: These are the residuals from chasing simulenaties, I've left this here
+                   for debuging purposes :)
+                element sector {
+                    attribute name { $outputName },
+                    attribute type { 'sector' }(:,
+                    $emissions:)
+                }
+        };
+		declare function local:run-emiss-by-enduse($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* { 	
+			 	 unordered { 	
+			 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 		  then $regions
+			 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 return
+			 	 for $scenario in $scenarios, 	    
+			 	 $region in $regionsG 	
+			 	 let $scenario_split := tokenize($scenario, ' '), 	    
+				 $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
+                 $currEmissSectors := $currTree/*[@type='sector' and descendant::CO2],
+                 $coefs := local:generate-sector-output-coefs(distinct-values($currEmissSectors/@name), $currTree, (), false())
+				 return
+				    for $sectorName in distinct-values($currEmissSectors/@name)
+                    return local:append-heirarchy($currTree, local:apply-coefs($sectorName, $currEmissSectors[@name=$sectorName]//CO2/emissions, $coefs))//text()
+			 	 } 
+	 	 };
+		 local:run-emiss-by-enduse(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('Global'), ())
+               
+               
+About to perform query:  
+               declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
+	       	 		 let $scn := $parent/ancestor::scenario,
+	       			   	  $rgn := $parent (: /ancestor::region :)
+	       			   return
+	       			   	  document { element scenario {
+	       			 	  					$scn/@*,
+	       			 						element region {
+	       			 							$rgn/@*,
+	       			 							$append
+	       			 						}
+	       			 	  				}
+	       				}
+	       	 		 (: I can get by with just the scenario and region
+	       			 let $new_node := element {local-name($parent)} {$parent/@*, $append} 	
+	       	 		 return
+	       	 		 if(local-name($parent) != 'scenario')
+	       	 		 then local:append-heirarchy($parent/parent::*, $new_node)
+	       	 		 else document { $new_node } :)
+	       	 	 }; 
+	       	 	 declare function local:generate-sector-output-coefs($inputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
+                 if(empty($inputNameQueue)) then $coefs
+                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","IRONSTL" ),
+$inputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$inputNameQueue[1]]))
+then 
+local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs, $is_usa)
+	       				else
+                    let $inputName := $inputNameQueue[1],
+                        $newInputNameQueue := remove($inputNameQueue, 1),
+                        $useInputs := $currTree//*[@type='input' and @name=$inputName],
+                        $useSectors := distinct-values($useInputs/ancestor::*[@type='sector']/@name),
+                        $totalInputSum := for $vintage in distinct-values($useInputs/demand-physical/@vintage)
+                                          return element input {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($useInputs/demand-physical[@vintage=$vintage])
+                                                     }
+                                                 },
+                       $new_coefs := if(empty($useSectors)) then
+                                         $coefs
+                                     else
+                                         $coefs | element sector {
+                                            attribute name { $inputName },
+                                            for $output in $useSectors
+                                            return element output {
+                                                       attribute name { $output },
+                                                       for $inputSum in $totalInputSum
+                                                       let $outputSum := sum($useInputs[ancestor::*[@type='sector' and @name=$output]]/demand-physical[@vintage=$inputSum/@vintage])
+                                                       return element coef {
+                                                                  attribute vintage { $inputSum/@vintage },
+                                                                  text { $outputSum div $inputSum }
+                                                              }
+                                                    }
+                                        }
+                        return 
+                              local:generate-sector-output-coefs(distinct-values(($newInputNameQueue, $useSectors)), $currTree, $new_coefs, $is_usa)
+		};
+        declare function local:apply-coefs($outputName as xs:string, $emissions as node()*, $coefs as node()*) as node()* {
+            if(exists($coefs[@name=$outputName]) and abs(sum($emissions)) > 0.001) then
+                for $output in $coefs[@name=$outputName]/output
+                return local:apply-coefs($output/@name,
+                    for $year in distinct-values($emissions/@year)
+                    let $emissThisVintage := $emissions[@year=$year],
+                        $firstEmiss := $emissThisVintage[1],
+                        $emissSum := sum($emissThisVintage),
+                        $coefThisVintage := $output/coef[@vintage=$year]
+                    where $coefThisVintage > 0
+                    return element { local-name($firstEmiss) } {
+                            $firstEmiss/@*,
+                            text{ $emissSum * $coefThisVintage }
+                        }
+	       			, $coefs)
+            else if( abs(sum($emissions)) > 0.001) then
+                element sector {
+                    attribute name { $outputName },
+                    attribute type { 'sector' },
+                    (: $emissions :) (: TODO: not sure why this doesn't work and we need to create these explicitly :)
+                    for $e in $emissions
+                    return element emissions { $e/@*, text{ $e/text() } }
+                }
+            else
+                (: These are the residuals from chasing simulenaties, I've left this here
+                   for debuging purposes :)
+                element sector {
+                    attribute name { $outputName },
+                    attribute type { 'sector' }(:,
+                    $emissions:)
+                }
+        };
+		declare function local:run-emiss-by-enduse($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* { 	
+			 	 unordered { 	
+			 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 		  then $regions
+			 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 return
+			 	 for $scenario in $scenarios, 	    
+			 	 $region in $regionsG 	
+			 	 let $scenario_split := tokenize($scenario, ' '), 	    
+				 $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
+                 $currEmissSectors := $currTree/*[@type='sector' and descendant::CO2],
+                 $coefs := local:generate-sector-output-coefs(distinct-values($currEmissSectors/@name), $currTree, (), false())
+				 return
+				    for $sectorName in distinct-values($currEmissSectors/@name)
+                    return local:append-heirarchy($currTree, local:apply-coefs($sectorName, $currEmissSectors[@name=$sectorName]//CO2/emissions, $coefs))//text()
+			 	 } 
+	 	 };
+		 local:run-emiss-by-enduse(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
+               
+               
+In Function: 1701690995564
+In Function: 1701690995568
+After build Tree: 1701692203124
+After Add table: 1701692203125
+Completed 100.0% of batch queries.
+After build Tree: 1701694679707
+After Add table: 1701694679707
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694679768
+Before Function: 1701694679768
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/Marketplace/market[true() and contains(@name,'CO2')]/price/node()
+In Function: 1701694679768
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/Marketplace/market[true() and contains(@name,'CO2') and ContainedRegion[(child::text() = 'China') or (child::text() = 'AH') or (child::text() = 'BJ') or (child::text() = 'CQ') or (child::text() = 'FJ') or (child::text() = 'GD') or (child::text() = 'GS') or (child::text() = 'GX') or (child::text() = 'GZ') or (child::text() = 'HA') or (child::text() = 'HB') or (child::text() = 'HE') or (child::text() = 'HI') or (child::text() = 'HL') or (child::text() = 'HN') or (child::text() = 'JL') or (child::text() = 'JS') or (child::text() = 'JX') or (child::text() = 'LN') or (child::text() = 'NM') or (child::text() = 'NX') or (child::text() = 'QH') or (child::text() = 'SC') or (child::text() = 'SD') or (child::text() = 'SH') or (child::text() = 'SN') or (child::text() = 'SX') or (child::text() = 'TJ') or (child::text() = 'XJ') or (child::text() = 'XZ') or (child::text() = 'YN') or (child::text() = 'ZJ') ] ]/price/node()
+In Function: 1701694679768
+After build Tree: 1701694682567
+After Add table: 1701694682567
+After build Tree: 1701694682630
+After Add table: 1701694682630
+Completed 100.0% of batch queries.
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694682651
+Before Function: 1701694682652
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+            CO2/emissions-sequestered/node()
+In Function: 1701694682652
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+            CO2/emissions-sequestered/node()
+In Function: 1701694682652
+After build Tree: 1701694707714
+After Add table: 1701694707719
+Completed 100.0% of batch queries.
+After build Tree: 1701694717883
+After Add table: 1701694717883
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694717902
+Before Function: 1701694717902
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='chemical' or (exists(child::keyword[@final-energy='industry'])))]/
+               			*[@type='subsector' ]/*[@type='technology']/cost/text()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical' or (exists(child::keyword[@final-energy='industry'])))]/
+               			*[@type='subsector' ]/*[@type='technology']/cost/text()
+In Function: 1701694717903
+In Function: 1701694717903
+After build Tree: 1701694725264
+After Add table: 1701694725277
+Completed 100.0% of batch queries.
+After build Tree: 1701694728020
+After Add table: 1701694728021
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694728181
+Before Function: 1701694728181
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' ) and not(contains(@name, 'water_td'))]//
+                  *[@type='subsector' and not (@name='elect_td_bld')]//
+                  *[@type='technology' and not(@name='biomass (conv)' or @name='biomass (conv CCS)' or @name='biomass (IGCC)' or @name='biomass (IGCC CCS)'
+                                   or @name='coal (conv pul)' or @name='coal (conv pul CCS)' or @name='coal (IGCC)' or @name='coal (IGCC CCS)'
+                                   or @name='gas (steam/CT)' or @name='gas (CC)' or @name='gas (CC CCS)'
+                                   or @name='refined liquids (steam/CT)' or @name='refined liquids (CC)' or @name='refined liquids (CC CCS)'
+                                   or @name='geothermal' or @name='Gen_II_LWR' or @name='Gen_III'
+                                   or @name='CSP' or @name='CSP_storage')]/
+                   *[@type='input' and not( contains( @name, 'water')) and @name != 'oil-credits']/
+                   demand-physical/node()
+                
+In Function: 1701694728181
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' ) and not(contains(@name, 'water_td'))]//
+                  *[@type='subsector' and not (@name='elect_td_bld')]//
+                  *[@type='technology' and not(@name='biomass (conv)' or @name='biomass (conv CCS)' or @name='biomass (IGCC)' or @name='biomass (IGCC CCS)'
+                                   or @name='coal (conv pul)' or @name='coal (conv pul CCS)' or @name='coal (IGCC)' or @name='coal (IGCC CCS)'
+                                   or @name='gas (steam/CT)' or @name='gas (CC)' or @name='gas (CC CCS)'
+                                   or @name='refined liquids (steam/CT)' or @name='refined liquids (CC)' or @name='refined liquids (CC CCS)'
+                                   or @name='geothermal' or @name='Gen_II_LWR' or @name='Gen_III'
+                                   or @name='CSP' or @name='CSP_storage')]/
+                   *[@type='input' and not( contains( @name, 'water')) and @name != 'oil-credits']/
+                   demand-physical/node()
+                
+In Function: 1701694728181
+After build Tree: 1701694752882
+After Add table: 1701694752887
+Completed 100.0% of batch queries.
+After build Tree: 1701694758841
+After Add table: 1701694758842
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694758919
+Before Function: 1701694758920
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or 
+                        @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or 
+                        @name='elect_td_bld' or @name='industrial energy use')]//
+                        *[@type='subsector']//*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+                        *[@type='output' (:collapse:) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
+                        @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
+                        physical-output/node()
+In Function: 1701694758920
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or 
+                        @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or 
+                        @name='elect_td_bld' or @name='industrial energy use')]//
+                        *[@type='subsector']//*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+                        *[@type='output' (:collapse:) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
+                        @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
+                        physical-output/node()
+In Function: 1701694758920
+After build Tree: 1701694784557
+After Add table: 1701694784562
+Completed 100.0% of batch queries.
+After build Tree: 1701694788501
+After Add table: 1701694788502
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694788971
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' or @name='elect_td_ind'
+               or @name='elect_td_trn')]/cost/text()
+In Function: 1701694788971
+Before Function: 1701694788971
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' or @name='elect_td_ind'
+               or @name='elect_td_trn')]/cost/text()
+In Function: 1701694788971
+After build Tree: 1701694789612
+After Add table: 1701694789612
+Completed 100.0% of batch queries.
+After build Tree: 1701694789734
+After Add table: 1701694789734
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694789753
+Before Function: 1701694789753
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' and
+            not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
+                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn') or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' and
+            not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
+                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn') or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+In Function: 1701694789754
+In Function: 1701694789754
+After build Tree: 1701694832327
+After Add table: 1701694832334
+Completed 100.0% of batch queries.
+After build Tree: 1701694843303
+After Add table: 1701694843303
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694843365
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='wholesale gas' or @name='delivered gas' or
+            @name='delivered coal' or @name='delivered biomass' or @name='traditional biomass' or
+            @name='elect_td_ind' or @name='elect_td_bld' or @name='elect_td_trn' or
+            @name='H2 enduse'or @name='refined liquids industrial' or @name='refined liquids enduse')]/
+            cost/text()
+Before Function: 1701694843366
+In Function: 1701694843366
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='wholesale gas' or @name='delivered gas' or
+            @name='delivered coal' or @name='delivered biomass' or @name='traditional biomass' or
+            @name='elect_td_ind' or @name='elect_td_bld' or @name='elect_td_trn' or
+            @name='H2 enduse'or @name='refined liquids industrial' or @name='refined liquids enduse')]/
+            cost/text()
+In Function: 1701694843366
+After build Tree: 1701694844044
+After Add table: 1701694844045
+Completed 100.0% of batch queries.
+After build Tree: 1701694844248
+After Add table: 1701694844248
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694844290
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/climate-model/global-mean-temperature/text()
+In Function: 1701694844290
+After build Tree: 1701694844341
+After Add table: 1701694844341
+Completed 100.0% of batch queries.
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694844367
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+               *[@type='subsector']/*[@type='technology']/*[@type='input']/
+               demand-physical/node()
+Before Function: 1701694844367
+In Function: 1701694844367
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+               *[@type='subsector']/*[@type='technology']/*[@type='input']/
+               demand-physical/node()
+In Function: 1701694844367
+After build Tree: 1701694848406
+After Add table: 1701694848408
+Completed 100.0% of batch queries.
+After build Tree: 1701694850152
+After Add table: 1701694850152
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694850185
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+               *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
+               physical-output/node()
+Before Function: 1701694850185
+In Function: 1701694850185
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+               *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
+               physical-output/node()
+In Function: 1701694850185
+After build Tree: 1701694852780
+After Add table: 1701694852782
+Completed 100.0% of batch queries.
+After build Tree: 1701694853748
+After Add table: 1701694853748
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694853779
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]/
+               *[@type='subsector']/*[@type='technology']/
+               *[@type='input' and (@name='delivered biomass' or @name='delivered coal' or
+               @name='H2 enduse' or @name='elect_td_ind' or @name='wholesale gas' or
+               @name='refined liquids industrial')]/demand-physical/node()
+In Function: 1701694853779
+Before Function: 1701694853779
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]/
+               *[@type='subsector']/*[@type='technology']/
+               *[@type='input' and (@name='delivered biomass' or @name='delivered coal' or
+               @name='H2 enduse' or @name='elect_td_ind' or @name='wholesale gas' or
+               @name='refined liquids industrial')]/demand-physical/node()
+In Function: 1701694853780
+After build Tree: 1701694867317
+After Add table: 1701694867331
+Completed 100.0% of batch queries.
+After build Tree: 1701694873796
+After Add table: 1701694873797
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694873854
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and contains(@name,'feedstocks')]//
+               *[@type='input' and @name != 'oil-credits']/demand-physical/node()
+In Function: 1701694873854
+Before Function: 1701694873854
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and contains(@name,'feedstocks')]//
+               *[@type='input' and @name != 'oil-credits']/demand-physical/node()
+In Function: 1701694873854
+After build Tree: 1701694874360
+After Add table: 1701694874360
+Completed 100.0% of batch queries.
+After build Tree: 1701694874594
+After Add table: 1701694874594
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694874613
+Before Function: 1701694874613
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
+               output-primary/physical-output/node()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
+               output-primary/physical-output/node()
+In Function: 1701694874613
+In Function: 1701694874613
+After build Tree: 1701694888753
+After Add table: 1701694888756
+Completed 100.0% of batch queries.
+After build Tree: 1701694893296
+After Add table: 1701694893296
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694893319
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='IRONSTL')]//*[@type='input']/demand-physical/node()
+In Function: 1701694893319
+Before Function: 1701694893319
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='IRONSTL')]//*[@type='input']/demand-physical/node()
+In Function: 1701694893319
+After build Tree: 1701694897509
+After Add table: 1701694897509
+After build Tree: 1701694897560
+After Add table: 1701694897560
+Completed 100.0% of batch queries.
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694897579
+Before Function: 1701694897579
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='IRONSTL')]/
+               *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+               *[@type='output']/physical-output/node()
+In Function: 1701694897579
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='IRONSTL')]/
+               *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+               *[@type='output']/physical-output/node()
+In Function: 1701694897579
+After build Tree: 1701694899334
+After Add table: 1701694899336
+After build Tree: 1701694899376
+After Add table: 1701694899376
+Completed 100.0% of batch queries.
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694899421
+Before Function: 1701694899421
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='transportation' or (exists(child::keyword[@final-energy='transportation'])))]/
+               *[@type='subsector']/*[@type='technology']/*[@type='input' and not(@name='renewable')]/
+               demand-physical[@unit='EJ']/node()
+In Function: 1701694899421
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='transportation' or (exists(child::keyword[@final-energy='transportation'])))]/
+               *[@type='subsector']/*[@type='technology']/*[@type='input' and not(@name='renewable')]/
+               demand-physical[@unit='EJ']/node()
+In Function: 1701694899421
+After build Tree: 1701694908459
+After Add table: 1701694908467
+Completed 100.0% of batch queries.
+After build Tree: 1701694911934
+After Add table: 1701694911934
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694911969
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/GDP/gdp-per-capita-mer/text()
+In Function: 1701694911969
+Before Function: 1701694911969
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/GDP/gdp-per-capita-mer/text()
+In Function: 1701694911969
+After build Tree: 1701694912808
+After Add table: 1701694912808
+Completed 100.0% of batch queries.
+After build Tree: 1701694913156
+After Add table: 1701694913156
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694913179
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+In Function: 1701694913179
+Before Function: 1701694913179
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+In Function: 1701694913179
+After build Tree: 1701694913925
+After Add table: 1701694913926
+Completed 100.0% of batch queries.
+After build Tree: 1701694914168
+After Add table: 1701694914168
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694914186
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/demographics/populationMiniCAM/total-population/node()
+In Function: 1701694914186
+Before Function: 1701694914186
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/demographics/populationMiniCAM/total-population/node()
+In Function: 1701694914186
+After build Tree: 1701694914317
+After Add table: 1701694914317
+Completed 100.0% of batch queries.
+After build Tree: 1701694914376
+After Add table: 1701694914376
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694914384
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+Before Function: 1701694914384
+In Function: 1701694914384
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()
+In Function: 1701694914384
+After build Tree: 1701694915124
+After Add table: 1701694915125
+Completed 100.0% of batch queries.
+After build Tree: 1701694915373
+After Add table: 1701694915373
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694915394
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/climate-model/forcing-total/text()
+In Function: 1701694915394
+Before Function: 1701694915394
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/climate-model/forcing-total/text()
+In Function: 1701694915394
+After build Tree: 1701694915418
+After Add table: 1701694915418
+After build Tree: 1701694915418
+After Add table: 1701694915418
+Completed 100.0% of batch queries.
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Didn't find builder for LUC emissions by region query going to use defaults
+Before Function: 1701694915441
+Before Function: 1701694915441
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]//LandNode[@name='root' or @type='LandNode' (:collapse:)]//
+                land-use-change-emission[@year>1970]/text()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region//LandNode[@name='root' or @type='LandNode' (:collapse:)]//
+                land-use-change-emission[@year>1970]/text()
+In Function: 1701694915441
+In Function: 1701694915441
+After build Tree: 1701694945576
+After Add table: 1701694945576
+Completed 100.0% of batch queries.
+After build Tree: 1701694993043
+After Add table: 1701694993043
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701694993060
+Before Function: 1701694993060
+About to perform query:  
+			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
+			 	 		 let $scn := $parent/ancestor::scenario,
+			 			   	  $rgn := $parent/ancestor::region
+			 			   return
+			 			   	  document { element scenario {
+			 			 	  					$scn/@*,
+			 			 						element region {
+			 			 							$rgn/@*,
+			 			 							$append
+			 			 						}
+			 			 	  				}
+			 				}
+			 	 	 };  
+			 	 	 declare function local:get-primary-renewable($outputs as node()*) as node()* {
+			 	 	 unordered { 	
+			 	 	 for $output in $outputs 
+			 	 	 let $new_output :=  
+			 	 	 element input {
+			 	 		 attribute type {'input'},
+			 	 		 attribute name {$output/parent::*/following-sibling::keyword/@primary-renewable},
+			 	 		 element demand-physical {
+			 	 			 attribute vintage {$output/@vintage},
+			 	 			 attribute unit {$output/@unit},
+			 	 			 text { $output }
+			 	 		 }
+			 	 	 },
+			 	 	 $new_root := local:append-heirarchy($output/parent::*/parent::*, $new_output)
+			 	 	 return $new_root//text()
+			 	 	 } 
+			 	 	 };
+			 	 	 declare function local:run-primary-energy($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* { 	
+			 	 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 	 		  then $regions
+			 	 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 	 return
+			 	 	 for $scenario in $scenarios, 	    
+			 	 	 $region in $regionsG 	
+			 	 	 let $scenario_split := tokenize($scenario, ' '), 	    
+                     $scenario_name := string-join($scenario_split[position() < last()], ' '),
+			 	 	 $scenario_date := $scenario_split[last()],
+			 	 	 $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
+			 	 	 return (: get renewables from electricity :)
+					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='electricity' or @name='elect_td_bld' or starts-with(@name,'elec_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 		 	| (: get renewables from H2ProdCS :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 central production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get renewables from H2ProdDist :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 forecourt production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get the primaries :)
+	 	 						$currTree//keyword[fn:exists(@primary-consumption)]/preceding-sibling::input-energy/demand-physical/text()
+                                | (: get traditional biomass :)
+							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
+			 	 	 	
+	 	 }; 
+            	 local:run-primary-energy(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
+                 
+            
+In Function: 1701694993060
+About to perform query:  
+			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
+			 	 		 let $scn := $parent/ancestor::scenario,
+			 			   	  $rgn := $parent/ancestor::region
+			 			   return
+			 			   	  document { element scenario {
+			 			 	  					$scn/@*,
+			 			 						element region {
+			 			 							$rgn/@*,
+			 			 							$append
+			 			 						}
+			 			 	  				}
+			 				}
+			 	 	 };  
+			 	 	 declare function local:get-primary-renewable($outputs as node()*) as node()* {
+			 	 	 unordered { 	
+			 	 	 for $output in $outputs 
+			 	 	 let $new_output :=  
+			 	 	 element input {
+			 	 		 attribute type {'input'},
+			 	 		 attribute name {$output/parent::*/following-sibling::keyword/@primary-renewable},
+			 	 		 element demand-physical {
+			 	 			 attribute vintage {$output/@vintage},
+			 	 			 attribute unit {$output/@unit},
+			 	 			 text { $output }
+			 	 		 }
+			 	 	 },
+			 	 	 $new_root := local:append-heirarchy($output/parent::*/parent::*, $new_output)
+			 	 	 return $new_root//text()
+			 	 	 } 
+			 	 	 };
+			 	 	 declare function local:run-primary-energy($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* { 	
+			 	 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 	 		  then $regions
+			 	 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 	 return
+			 	 	 for $scenario in $scenarios, 	    
+			 	 	 $region in $regionsG 	
+			 	 	 let $scenario_split := tokenize($scenario, ' '), 	    
+                     $scenario_name := string-join($scenario_split[position() < last()], ' '),
+			 	 	 $scenario_date := $scenario_split[last()],
+			 	 	 $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
+			 	 	 return (: get renewables from electricity :)
+					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='electricity' or @name='elect_td_bld' or starts-with(@name,'elec_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 		 	| (: get renewables from H2ProdCS :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 central production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get renewables from H2ProdDist :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 forecourt production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get the primaries :)
+	 	 						$currTree//keyword[fn:exists(@primary-consumption)]/preceding-sibling::input-energy/demand-physical/text()
+                                | (: get traditional biomass :)
+							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
+			 	 	 	
+	 	 }; 
+            	 local:run-primary-energy(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('Global'), ())
+                 
+            
+In Function: 1701694993060
+After build Tree: 1701695037051
+After Add table: 1701695037051
+Completed 100.0% of batch queries.
+After build Tree: 1701695087745
+After Add table: 1701695087745
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701695087774
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='refining' or @name='refined liquids enduse' or
+               @name='refined liquids industrial')]/
+               *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
+               physical-output/node()
+Before Function: 1701695087774
+In Function: 1701695087774
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='refining' or @name='refined liquids enduse' or
+               @name='refined liquids industrial')]/
+               *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
+               physical-output/node()
+In Function: 1701695087774
+After build Tree: 1701695088278
+After Add table: 1701695088278
+Completed 100.0% of batch queries.
+After build Tree: 1701695089888
+After Add table: 1701695089888
+INFO; Successfully ran batch query
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701695089928
+Before Function: 1701695089928
+About to perform query:  
+               declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
+	       	 		 let $scn := $parent/ancestor::scenario,
+	       			   	  $rgn := $parent (: /ancestor::region :)
+	       			   return
+	       			   	  document { element scenario {
+	       			 	  					$scn/@*,
+	       			 						element region {
+	       			 							$rgn/@*,
+	       			 							$append
+	       			 						}
+	       			 	  				}
+	       				}
+	       	 		 (: I can get by with just the scenario and region
+	       			 let $new_node := element {local-name($parent)} {$parent/@*, $append} 	
+	       	 		 return
+	       	 		 if(local-name($parent) != 'scenario')
+	       	 		 then local:append-heirarchy($parent/parent::*, $new_node)
+	       	 		 else document { $new_node } :)
+	       	 	 }; 
+	       	 	 declare function local:generate-sector-input-coefs($outputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
+                 if(empty($outputNameQueue)) then $coefs
+                 else if( exists($coefs[@name = $outputNameQueue[1]]) or exists(index-of(('biomass',
+'traded unconventional oil', 'regional corn for ethanol', 'regional biomassOil', 'regional sugar for ethanol', 'regional sugarbeet for ethanol'),
+$outputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$outputNameQueue[1]]))
+then 
+(:if(not($is_usa) and string-length($currTree/@name) = 2) then
+local:trace-inputs($outputName, $currTree/parent::*/*[@type='region' and @name='USA'], $outputs, true())
+else:)
+local:generate-sector-input-coefs(remove($outputNameQueue, 1), $currTree, $coefs, $is_usa)
+	       				else
+                    let $outputName := $outputNameQueue[1],
+                        $newOutputNameQueue := remove($outputNameQueue, 1),
+                        $useOutputs := $currTree//output-primary[@type='output' and @name=$outputName],
+                        $useInputs := for $out in $useOutputs[not(following-sibling::keyword[exists(@primary-renewable)])]
+                                      return $out/following-sibling::*[@type='input' and not(@name='oil-credits')],
+                        $renewOutputs := for $out in $useOutputs[following-sibling::keyword[exists(@primary-renewable)]]
+                                         return element output {
+                                             attribute name { $out/following-sibling::keyword/@primary-renewable },
+                                             $out/child::*
+                                         },
+                        $totalOutputSum := for $vintage in distinct-values($useOutputs/physical-output/@vintage)
+                                          return element output {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($useOutputs/physical-output[@vintage=$vintage])
+                                                     }
+                                                 },
+                       $new_coefs := $coefs | element sector {
+                                            attribute name { $outputName },
+                                            for $input in distinct-values($useInputs/@name)
+                                            return element input {
+                                                       attribute name { $input },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($useInputs[@name=$input]/demand-physical[@vintage=$outputSum/@vintage])
+                                                       where $inputSum > 0
+                                                       return element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              }
+                                                    },
+                                            for $input in distinct-values($renewOutputs/@name)
+                                            return element input {
+                                                       attribute name { concat($input, ' renewable') },
+                                                       attribute is-renewable { true() },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($renewOutputs[@name=$input]/physical-output[@vintage=$outputSum/@vintage])
+                                                       where $inputSum > 0
+                                                       return element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              }
+                                                    }
+                                        }
+                        return 
+                              local:generate-sector-input-coefs(distinct-values(($newOutputNameQueue, $useInputs/@name)), $currTree, $new_coefs, $is_usa)
+		};
+        declare function local:generate-ccs-coefs($currTree as node(), $coefs as node()*) as node()* {
+            for $sector in $coefs/@name
+            let $currSector := $currTree/*[@type='sector' and @name=$sector],
+                $useInputs := $currSector//*[@type='technology' and not(contains(@name, 'CCS')) and not(child::keyword/@primary-renewable)]/*[@type='input' and not(@name='oil-credits')],
+                $useInputsCCS := $currSector//*[@type='technology' and contains(@name, 'CCS')]/*[@type='input' and not(@name='oil-credits')],
+                $totalOutputSum := for $vintage in distinct-values($useInputs/demand-physical/@vintage | $useInputsCCS/demand-physical/@vintage)
+                                          return element output {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($currSector//output-primary/physical-output[@vintage=$vintage])
+                                                     }
+                                                 }
+            return if(exists($useInputsCCS)) then
+                element sector {
+                                            attribute name { $sector },
+                                            $coefs[@name=$sector]/input[@is-renewable],
+                                            for $input in distinct-values(($useInputs/@name, $useInputsCCS/@name))
+                                            return element input {
+                                                       attribute name { $input },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($useInputs[@name=$input]/demand-physical[@vintage=$outputSum/@vintage]),
+                                                           $inputSumCCS := sum($useInputsCCS[@name=$input]/demand-physical[@vintage=$outputSum/@vintage])
+                                                       return (element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              },
+                                                              element coef_ccs {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSumCCS div $outputSum }
+                                                              })
+                                                    }
+                                        }
+                    else
+                        $coefs[@name=$sector]
+        };
+        declare function local:apply-coefs($outputName as xs:string, $outputs as node()*, $coefs as node()*, $isCCS as xs:boolean) as node()* {
+            if(exists($coefs[@name=$outputName]) and sum($outputs) > 0.001) then
+                for $input in $coefs[@name=$outputName]/input
+                return local:apply-coefs($input/@name,
+                    for $vintage in distinct-values($outputs/@vintage)
+                    let $outputThisVintage := $outputs[@vintage=$vintage],
+                        $firstOutput := $outputThisVintage[1],
+                        $outputSum := sum($outputThisVintage),
+                        $coefThisVintage := $input/coef[@vintage=$vintage]
+                    where $coefThisVintage > 0
+	       		    return element { local-name($firstOutput) } {
+	       				$firstOutput/@*,
+                        text{ $outputSum * $coefThisVintage }
+                        }, $coefs, $isCCS)
+                    | local:apply-coefs($input/@name,
+                    for $vintage in distinct-values($outputs/@vintage)
+                    let $outputThisVintage := $outputs[@vintage=$vintage],
+                        $firstOutput := $outputThisVintage[1],
+                        $outputSum := sum($outputThisVintage),
+                        $coefThisVintage := $input/coef_ccs[@vintage=$vintage]
+                    where exists($coefThisVintage) and $coefThisVintage > 0
+	       		    return element { local-name($firstOutput) } {
+	       				$firstOutput/@*,
+                        text{ $outputSum * $coefThisVintage }
+	       			}, $coefs, true())
+            else if( sum($outputs) > 0.001) then
+                element input {
+                    attribute name { if($isCCS) then concat($outputName, ' CCS') else $outputName },
+                    attribute type { 'input' },
+                    (: $outputs :) (: TODO: not sure why this doesn't work and we need to create these explicitly :)
+                    for $o in $outputs
+                    return element demand-physical { $o/@*, text{ $o/text() } }
+                }
+            else
+                (: These are the residuals from chasing simulenaties, I've left this here
+                   for debuging purposes :)
+                element input {
+                    attribute name { $outputName },
+                    attribute type { 'input' } (:,
+                    $outputs :)
+                }
+        };
+		declare function local:run-input-by-primary($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* { 	
+			 	 unordered { 	
+			 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 		  then $regions
+			 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 return
+			 	 for $scenario in $scenarios, 	    
+			 	 $region in $regionsG 	
+			 	 let $scenario_split := tokenize($scenario, ' '), 	    
+				 $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
+                 $currInputs := $currTree/*[@type='sector' and (@name='unconventional oil production' or exists(child::keyword/@final-energy))]//*[@type='input' and empty(index-of(('trn_pass_road', 'limestone', 'process heat cement', 'industrial energy use', 'industrial feedstocks', 'renewable', 'trn_freight_road', 'trn_pass_road_LDV', 'trn_pass_road_LDV_2W', 'trn_pass_road_LDV_4W', 'unconventional oil', 'oil-credits'), @name))],
+                 $coefs := local:generate-sector-input-coefs(distinct-values($currInputs/@name), $currTree, (), false()),
+                 $ccs_coefs := local:generate-ccs-coefs($currTree, $coefs)
+				 return 
+				    for $inputName in distinct-values($currInputs/@name)
+				    return local:append-heirarchy($currTree, local:apply-coefs($inputName, $currInputs[@name=$inputName]/demand-physical, $ccs_coefs, false()))//text()
+			 	 } 
+	 	 };
+		 local:run-input-by-primary(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
+         
+         
+In Function: 1701695089930
+About to perform query:  
+               declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
+	       	 		 let $scn := $parent/ancestor::scenario,
+	       			   	  $rgn := $parent (: /ancestor::region :)
+	       			   return
+	       			   	  document { element scenario {
+	       			 	  					$scn/@*,
+	       			 						element region {
+	       			 							$rgn/@*,
+	       			 							$append
+	       			 						}
+	       			 	  				}
+	       				}
+	       	 		 (: I can get by with just the scenario and region
+	       			 let $new_node := element {local-name($parent)} {$parent/@*, $append} 	
+	       	 		 return
+	       	 		 if(local-name($parent) != 'scenario')
+	       	 		 then local:append-heirarchy($parent/parent::*, $new_node)
+	       	 		 else document { $new_node } :)
+	       	 	 }; 
+	       	 	 declare function local:generate-sector-input-coefs($outputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
+                 if(empty($outputNameQueue)) then $coefs
+                 else if( exists($coefs[@name = $outputNameQueue[1]]) or exists(index-of(('biomass',
+'traded unconventional oil', 'regional corn for ethanol', 'regional biomassOil', 'regional sugar for ethanol', 'regional sugarbeet for ethanol'),
+$outputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$outputNameQueue[1]]))
+then 
+(:if(not($is_usa) and string-length($currTree/@name) = 2) then
+local:trace-inputs($outputName, $currTree/parent::*/*[@type='region' and @name='USA'], $outputs, true())
+else:)
+local:generate-sector-input-coefs(remove($outputNameQueue, 1), $currTree, $coefs, $is_usa)
+	       				else
+                    let $outputName := $outputNameQueue[1],
+                        $newOutputNameQueue := remove($outputNameQueue, 1),
+                        $useOutputs := $currTree//output-primary[@type='output' and @name=$outputName],
+                        $useInputs := for $out in $useOutputs[not(following-sibling::keyword[exists(@primary-renewable)])]
+                                      return $out/following-sibling::*[@type='input' and not(@name='oil-credits')],
+                        $renewOutputs := for $out in $useOutputs[following-sibling::keyword[exists(@primary-renewable)]]
+                                         return element output {
+                                             attribute name { $out/following-sibling::keyword/@primary-renewable },
+                                             $out/child::*
+                                         },
+                        $totalOutputSum := for $vintage in distinct-values($useOutputs/physical-output/@vintage)
+                                          return element output {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($useOutputs/physical-output[@vintage=$vintage])
+                                                     }
+                                                 },
+                       $new_coefs := $coefs | element sector {
+                                            attribute name { $outputName },
+                                            for $input in distinct-values($useInputs/@name)
+                                            return element input {
+                                                       attribute name { $input },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($useInputs[@name=$input]/demand-physical[@vintage=$outputSum/@vintage])
+                                                       where $inputSum > 0
+                                                       return element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              }
+                                                    },
+                                            for $input in distinct-values($renewOutputs/@name)
+                                            return element input {
+                                                       attribute name { concat($input, ' renewable') },
+                                                       attribute is-renewable { true() },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($renewOutputs[@name=$input]/physical-output[@vintage=$outputSum/@vintage])
+                                                       where $inputSum > 0
+                                                       return element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              }
+                                                    }
+                                        }
+                        return 
+                              local:generate-sector-input-coefs(distinct-values(($newOutputNameQueue, $useInputs/@name)), $currTree, $new_coefs, $is_usa)
+		};
+        declare function local:generate-ccs-coefs($currTree as node(), $coefs as node()*) as node()* {
+            for $sector in $coefs/@name
+            let $currSector := $currTree/*[@type='sector' and @name=$sector],
+                $useInputs := $currSector//*[@type='technology' and not(contains(@name, 'CCS')) and not(child::keyword/@primary-renewable)]/*[@type='input' and not(@name='oil-credits')],
+                $useInputsCCS := $currSector//*[@type='technology' and contains(@name, 'CCS')]/*[@type='input' and not(@name='oil-credits')],
+                $totalOutputSum := for $vintage in distinct-values($useInputs/demand-physical/@vintage | $useInputsCCS/demand-physical/@vintage)
+                                          return element output {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($currSector//output-primary/physical-output[@vintage=$vintage])
+                                                     }
+                                                 }
+            return if(exists($useInputsCCS)) then
+                element sector {
+                                            attribute name { $sector },
+                                            $coefs[@name=$sector]/input[@is-renewable],
+                                            for $input in distinct-values(($useInputs/@name, $useInputsCCS/@name))
+                                            return element input {
+                                                       attribute name { $input },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($useInputs[@name=$input]/demand-physical[@vintage=$outputSum/@vintage]),
+                                                           $inputSumCCS := sum($useInputsCCS[@name=$input]/demand-physical[@vintage=$outputSum/@vintage])
+                                                       return (element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              },
+                                                              element coef_ccs {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSumCCS div $outputSum }
+                                                              })
+                                                    }
+                                        }
+                    else
+                        $coefs[@name=$sector]
+        };
+        declare function local:apply-coefs($outputName as xs:string, $outputs as node()*, $coefs as node()*, $isCCS as xs:boolean) as node()* {
+            if(exists($coefs[@name=$outputName]) and sum($outputs) > 0.001) then
+                for $input in $coefs[@name=$outputName]/input
+                return local:apply-coefs($input/@name,
+                    for $vintage in distinct-values($outputs/@vintage)
+                    let $outputThisVintage := $outputs[@vintage=$vintage],
+                        $firstOutput := $outputThisVintage[1],
+                        $outputSum := sum($outputThisVintage),
+                        $coefThisVintage := $input/coef[@vintage=$vintage]
+                    where $coefThisVintage > 0
+	       		    return element { local-name($firstOutput) } {
+	       				$firstOutput/@*,
+                        text{ $outputSum * $coefThisVintage }
+                        }, $coefs, $isCCS)
+                    | local:apply-coefs($input/@name,
+                    for $vintage in distinct-values($outputs/@vintage)
+                    let $outputThisVintage := $outputs[@vintage=$vintage],
+                        $firstOutput := $outputThisVintage[1],
+                        $outputSum := sum($outputThisVintage),
+                        $coefThisVintage := $input/coef_ccs[@vintage=$vintage]
+                    where exists($coefThisVintage) and $coefThisVintage > 0
+	       		    return element { local-name($firstOutput) } {
+	       				$firstOutput/@*,
+                        text{ $outputSum * $coefThisVintage }
+	       			}, $coefs, true())
+            else if( sum($outputs) > 0.001) then
+                element input {
+                    attribute name { if($isCCS) then concat($outputName, ' CCS') else $outputName },
+                    attribute type { 'input' },
+                    (: $outputs :) (: TODO: not sure why this doesn't work and we need to create these explicitly :)
+                    for $o in $outputs
+                    return element demand-physical { $o/@*, text{ $o/text() } }
+                }
+            else
+                (: These are the residuals from chasing simulenaties, I've left this here
+                   for debuging purposes :)
+                element input {
+                    attribute name { $outputName },
+                    attribute type { 'input' } (:,
+                    $outputs :)
+                }
+        };
+		declare function local:run-input-by-primary($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* { 	
+			 	 unordered { 	
+			 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 		  then $regions
+			 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 return
+			 	 for $scenario in $scenarios, 	    
+			 	 $region in $regionsG 	
+			 	 let $scenario_split := tokenize($scenario, ' '), 	    
+				 $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
+                 $currInputs := $currTree/*[@type='sector' and (@name='unconventional oil production' or exists(child::keyword/@final-energy))]//*[@type='input' and empty(index-of(('trn_pass_road', 'limestone', 'process heat cement', 'industrial energy use', 'industrial feedstocks', 'renewable', 'trn_freight_road', 'trn_pass_road_LDV', 'trn_pass_road_LDV_2W', 'trn_pass_road_LDV_4W', 'unconventional oil', 'oil-credits'), @name))],
+                 $coefs := local:generate-sector-input-coefs(distinct-values($currInputs/@name), $currTree, (), false()),
+                 $ccs_coefs := local:generate-ccs-coefs($currTree, $coefs)
+				 return 
+				    for $inputName in distinct-values($currInputs/@name)
+				    return local:append-heirarchy($currTree, local:apply-coefs($inputName, $currInputs[@name=$inputName]/demand-physical, $ccs_coefs, false()))//text()
+			 	 } 
+	 	 };
+		 local:run-input-by-primary(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('Global'), ())
+         
+         
+In Function: 1701695089930
+Completed 100.0% of batch queries.
+WARNING; Batch queries finished with 1 error.
+The database is not open.
+YES/NO/CANCEL; Could not open the database.  Attempt to create a new one?
+WARNING doing so will delete all files in the directory.; NO
+The database is not open.
+YES/NO/CANCEL; Could not open the database.  Attempt to create a new one?
+WARNING doing so will delete all files in the directory.; NO
+The database is not open.
+YES/NO/CANCEL; Could not open the database.  Attempt to create a new one?
+WARNING doing so will delete all files in the directory.; NO
+The database is not open.
+YES/NO/CANCEL; Could not open the database.  Attempt to create a new one?
+WARNING doing so will delete all files in the directory.; NO
+The database is not open.
+YES/NO/CANCEL; Could not open the database.  Attempt to create a new one?
+WARNING doing so will delete all files in the directory.; NO
+INFO; Finished running batch file

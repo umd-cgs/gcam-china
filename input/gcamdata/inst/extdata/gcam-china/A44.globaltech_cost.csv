@@ -6,41 +6,41 @@
 supplysector,subsector,technology,1971,1990,2005,2020,2035,2050,2065,2080,2095,2100
 resid_rural heating,trad biomass,trad wood furnace,0.1355,0.1355,0.1355,0.1335,0.1315,0.1295,0.1276,0.1257,0.1238,0.1238
 resid_rural heating,biomass,wood furnace,1.355,1.355,1.355,1.335,1.315,1.295,1.276,1.257,1.238,1.238
-resid_rural heating,coal,coal furnace,1.355,1.355,1.355,1.335,3.3375,8.34375,16.6875,10.68,10.68,10.68
-resid_rural heating,gas,gas furnace,2.127,2.127,2.127,2.473,6.1825,15.45625,30.9125,2.329,2.294,2.294
-resid_rural heating,electricity,electric furnace,1.959,1.959,1.959,1.959,1.5672,0.94032,0.329112,1.974719079,1.978668517,1.959
-resid_rural heating,refined liquids,fuel furnace,2.839,2.839,2.839,2.839,7.0975,17.74375,35.4875,2.674,2.634,2.634
-resid_rural cooling,electricity,air conditioning,8.775,8.775,8.775,8.775,7.02,4.212,1.4742,8.845410881,8.863101703,8.775
-resid_rural hot water_cooking,gas,gas water heater,5,5,5,5,12.5,31.25,62.5,5,5,5
-resid_rural hot water_cooking,electricity,electric resistance water heater,5,5,5,5,4,2.4,0.84,5.04012016,5.0502004,5
-resid_rural hot water_cooking,refined liquids,fuel water heater,5,5,5,5,12.5,31.25,62.5,5,5,5
-resid_rural hot water_cooking,coal,coal water heater,5,5,5,5,12.5,31.25,62.5,40,40,40
+resid_rural heating,coal,coal furnace,1.355,1.355,1.355,1.335,1.315,1.295,1.276,1.257,1.238,1.238
+resid_rural heating,gas,gas furnace,2.127,2.127,2.127,2.473,2.436,2.4,2.364,2.329,2.294,2.294
+resid_rural heating,electricity,electric furnace,1.959,1.959,1.959,1.93,1.901,1.873,1.845,1.817,1.79,1.79
+resid_rural heating,refined liquids,fuel furnace,2.839,2.839,2.839,2.839,2.797,2.755,2.714,2.674,2.634,2.634
+resid_rural cooling,electricity,air conditioning,8.775,8.775,8.775,8.775,8.644,8.516,8.389,8.264,8.141,8.141
+resid_rural hot water_cooking,gas,gas water heater,5,5,5,5,5,5,5,5,5,5
+resid_rural hot water_cooking,electricity,electric resistance water heater,5,5,5,5,5,5,5,5,5,5
+resid_rural hot water_cooking,refined liquids,fuel water heater,5,5,5,5,5,5,5,5,5,5
+resid_rural hot water_cooking,coal,coal water heater,5,5,5,5,5,5,5,5,5,5
 resid_rural hot water_cooking,trad biomass,wood water heater,5,5,5,5,5,5,5,5,5,5
-resid_rural lighting,electricity,elec light,33.047,33.047,33.047,33.047,26.4376,15.86256,5.551896,33.31217019,33.37879453,33.047
-resid_rural appliances,electricity,electric appliances,10.672,10.672,10.672,10.672,8.5376,5.12256,1.792896,10.75763247,10.77914773,10.672
+resid_rural lighting,electricity,elec light,33.047,33.047,33.047,32.555,32.07,31.592,31.121,30.658,30.201,30.201
+resid_rural appliances,electricity,electric appliances,10.672,10.672,10.672,10.672,10.513,10.357,10.202,10.05,9.901,9.901
 resid_urban heating,biomass,wood furnace,1.355,1.355,1.355,1.335,1.315,1.295,1.276,1.257,1.238,1.238
-resid_urban heating,coal,coal furnace,1.355,1.355,1.355,1.335,3.3375,8.34375,16.6875,10.68,10.68,10.68
-resid_urban heating,gas,gas furnace,2.127,2.127,2.127,2.473,6.1825,15.45625,30.9125,2.329,2.294,2.294
-resid_urban heating,electricity,electric furnace,1.959,1.959,1.959,1.959,1.5672,0.94032,0.329112,1.974719079,1.978668517,1.959
-resid_urban heating,refined liquids,fuel furnace,2.839,2.839,2.839,2.839,7.0975,17.74375,35.4875,2.674,2.634,2.634
+resid_urban heating,coal,coal furnace,1.355,1.355,1.355,1.335,1.315,1.295,1.276,1.257,1.238,1.238
+resid_urban heating,gas,gas furnace,2.127,2.127,2.127,2.473,2.436,2.4,2.364,2.329,2.294,2.294
+resid_urban heating,electricity,electric furnace,1.959,1.959,1.959,1.93,1.901,1.873,1.845,1.817,1.79,1.79
+resid_urban heating,refined liquids,fuel furnace,2.839,2.839,2.839,2.839,2.797,2.755,2.714,2.674,2.634,2.634
 resid_urban heating,heat,district heat,0.5678,0.5678,0.5678,0.5678,0.5594,0.551,0.5428,0.5348,0.5268,0.5268
-resid_urban cooling,electricity,air conditioning,8.775,8.775,8.775,8.775,7.02,4.212,1.4742,8.845410881,8.863101703,8.775
-resid_urban hot water_cooking,gas,gas water heater,5,5,5,5,12.5,31.25,62.5,5,5,5
-resid_urban hot water_cooking,electricity,electric resistance water heater,5,5,5,5,4,2.4,0.84,5.04012016,5.0502004,5
-resid_urban hot water_cooking,refined liquids,fuel water heater,5,5,5,5,12.5,31.25,62.5,5,5,5
-resid_urban hot water_cooking,coal,coal water heater,5,5,5,5,12.5,31.25,62.5,40,40,40
-resid_urban lighting,electricity,elec light,33.047,33.047,33.047,33.047,26.4376,15.86256,5.551896,33.31217019,33.37879453,33.047
-resid_urban appliances,electricity,electric appliances,10.672,10.672,10.672,10.672,8.5376,5.12256,1.792896,10.75763247,10.77914773,10.672
+resid_urban cooling,electricity,air conditioning,8.775,8.775,8.775,8.775,8.644,8.516,8.389,8.264,8.141,8.141
+resid_urban hot water_cooking,gas,gas water heater,5,5,5,5,5,5,5,5,5,5
+resid_urban hot water_cooking,electricity,electric resistance water heater,5,5,5,5,5,5,5,5,5,5
+resid_urban hot water_cooking,refined liquids,fuel water heater,5,5,5,5,5,5,5,5,5,5
+resid_urban hot water_cooking,coal,coal water heater,5,5,5,5,5,5,5,5,5,5
+resid_urban lighting,electricity,elec light,33.047,33.047,33.047,32.555,32.07,31.592,31.121,30.658,30.201,30.201
+resid_urban appliances,electricity,electric appliances,10.672,10.672,10.672,10.672,10.513,10.357,10.202,10.05,9.901,9.901
 comm heating,biomass,wood furnace,1.355,1.355,1.355,1.335,1.315,1.295,1.276,1.257,1.238,1.238
-comm heating,coal,coal furnace,1.355,1.355,1.355,1.335,3.3375,8.34375,16.6875,10.68,10.68,10.68
-comm heating,gas,gas furnace,2.932,2.932,2.932,2.888,7.22,18.05,36.1,2.72,2.68,2.68
-comm heating,electricity,electric furnace,1.754,1.754,1.754,1.754,1.4032,0.84192,0.294672,1.768074152,1.7716103,1.754
-comm heating,refined liquids,fuel furnace,0.958,0.958,0.958,0.958,2.395,5.9875,11.975,0.902,0.889,0.889
+comm heating,coal,coal furnace,1.355,1.355,1.355,1.335,1.315,1.295,1.276,1.257,1.238,1.238
+comm heating,gas,gas furnace,2.932,2.932,2.932,2.888,2.845,2.803,2.761,2.72,2.68,2.68
+comm heating,electricity,electric furnace,1.754,1.754,1.754,1.728,1.702,1.677,1.652,1.627,1.603,1.603
+comm heating,refined liquids,fuel furnace,0.958,0.958,0.958,0.958,0.944,0.93,0.916,0.902,0.889,0.889
 comm heating,heat,district heat,0.1916,0.1916,0.1916,0.1916,0.1888,0.186,0.1832,0.1804,0.1778,0.1778
-comm cooling,electricity,air conditioning,1.903,1.903,1.903,1.903,1.5224,0.91344,0.319704,1.918269733,1.922106272,1.903
-comm hot water_cooking,gas,gas water heater,5,5,5,5,12.5,31.25,62.5,5,5,5
-comm hot water_cooking,electricity,electric resistance water heater,5,5,5,5,4,2.4,0.84,5.04012016,5.0502004,5
-comm hot water_cooking,refined liquids,fuel water heater,5,5,5,5,12.5,31.25,62.5,5,5,5
-comm hot water_cooking,coal,coal water heater,5,5,5,5,12.5,31.25,62.5,40,40,40
-comm lighting,electricity,elec light,26.188,26.188,26.188,26.188,20.9504,12.57024,4.399584,26.39813335,26.45092962,26.188
-comm appliances,electricity,electric appliances,10.672,10.672,10.672,10.672,8.5376,5.12256,1.792896,10.75763247,10.77914773,10.672
+comm cooling,electricity,air conditioning,1.903,1.903,1.903,2.233,2.2,2.167,2.135,2.103,2.072,2.072
+comm hot water_cooking,gas,gas water heater,5,5,5,5,5,5,5,5,5,5
+comm hot water_cooking,electricity,electric resistance water heater,5,5,5,5,5,5,5,5,5,5
+comm hot water_cooking,refined liquids,fuel water heater,5,5,5,5,5,5,5,5,5,5
+comm hot water_cooking,coal,coal water heater,5,5,5,5,5,5,5,5,5,5
+comm lighting,electricity,elec light,26.188,26.188,26.188,25.798,25.414,25.036,24.663,24.295,23.933,23.933
+comm appliances,electricity,electric appliances,10.672,10.672,10.672,10.672,10.513,10.357,10.202,10.05,9.901,9.901

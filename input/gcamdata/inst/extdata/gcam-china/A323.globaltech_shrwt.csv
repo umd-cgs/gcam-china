@@ -27,7 +27,6 @@ chemical energy use,electricity,electricity,1,1,1,1
 chemical feedstock,coal,coal,1,1,1,1
 chemical feedstock,gas,gas,1,1,1,1
 chemical feedstock,liquid,liquid,1,1,1,1
-chemical feedstock,Electronic fuel,Electronic fuel,1,1,0,0
 agriculture energy use,coal,coal,1,1,1,1
 agriculture energy use,gas,gas,1,1,1,1
 agriculture energy use,liquid,liquid,1,1,1,1
@@ -47,9 +46,9 @@ construction energy use,liquid,liquid,1,1,1,1
 construction energy use,biomass,biomass,1,1,1,1
 construction energy use,hydrogen,hydrogen,0,0,0,0.1
 construction energy use,electricity,electricity,1,1,1,1
-construction feedstock,coal,coal,1,1,1,1
-construction feedstock,gas,gas,1,1,1,1
-construction feedstock,liquid,liquid,1,1,1,1
+construction feedstocks,coal,coal,1,1,1,1
+construction feedstocks,gas,gas,1,1,1,1
+construction feedstocks,liquid,liquid,1,1,1,1
 agriculture energy use,district heat,district heat,1,1,1,1
 chemical energy use,district heat,district heat,1,1,1,1
 construction energy use,district heat,district heat,1,1,1,1

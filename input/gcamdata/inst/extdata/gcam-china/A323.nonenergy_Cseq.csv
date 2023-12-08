@@ -8,7 +8,6 @@ supplysector,subsector,technology,remove.fraction,target.gas
 construction feedstocks,refined liquids,refined liquids,1,CO2
 construction feedstocks,gas,gas,1,CO2
 construction feedstocks,coal,coal,1,CO2
-chemical feedstock,Electronic fuel,Electronic fuel,1,CO2
 chemical feedstock,gas,gas,1,CO2
 chemical feedstock,liquid,liquid,1,CO2
 chemical feedstock,coal,coal,1,CO2

@@ -4,10 +4,10 @@
 # Column types: cccnn
 # ----------
 supplysector,subsector,year.fillout,year,share.weight
-resid_rural heating,trad biomass,2020,,0
-resid_rural heating,biomass,start-year,,0
-resid_rural heating,biomass,2020,,1
-resid_rural heating,coal,2025,,0
+resid_rural heating,trad biomass,start-year,,1
+resid_rural heating,biomass,start-year,,1
+resid_rural heating,biomass,start-year,,1
+resid_rural heating,coal,start-year,,1
 resid_rural heating,gas,start-year,,1
 resid_rural heating,electricity,start-year,,1
 resid_rural heating,refined liquids,start-year,,1
@@ -15,12 +15,12 @@ resid_rural cooling,electricity,start-year,,1
 resid_rural hot water_cooking,gas,start-year,,1
 resid_rural hot water_cooking,electricity,start-year,,1
 resid_rural hot water_cooking,refined liquids,start-year,,1
-resid_rural hot water_cooking,coal,2025,,0
-resid_rural hot water_cooking,trad biomass,2020,,0
+resid_rural hot water_cooking,coal,start-year,,1
+resid_rural hot water_cooking,trad biomass,start-year,,1
 resid_rural lighting,electricity,start-year,,1
 resid_rural appliances,electricity,start-year,,1
 resid_urban heating,biomass,start-year,,1
-resid_urban heating,coal,2025,,0
+resid_urban heating,coal,start-year,,1
 resid_urban heating,gas,start-year,,1
 resid_urban heating,electricity,start-year,,1
 resid_urban heating,refined liquids,start-year,,1
@@ -29,11 +29,11 @@ resid_urban cooling,electricity,start-year,,1
 resid_urban hot water_cooking,gas,start-year,,1
 resid_urban hot water_cooking,electricity,start-year,,1
 resid_urban hot water_cooking,refined liquids,start-year,,1
-resid_urban hot water_cooking,coal,2025,,0
+resid_urban hot water_cooking,coal,start-year,,1
 resid_urban lighting,electricity,start-year,,1
 resid_urban appliances,electricity,start-year,,1
 comm heating,biomass,start-year,,1
-comm heating,coal,2025,,0
+comm heating,coal,start-year,,1
 comm heating,gas,start-year,,1
 comm heating,electricity,start-year,,1
 comm heating,refined liquids,start-year,,1
@@ -42,18 +42,6 @@ comm cooling,electricity,start-year,,1
 comm hot water_cooking,gas,start-year,,1
 comm hot water_cooking,electricity,start-year,,1
 comm hot water_cooking,refined liquids,start-year,,1
-comm hot water_cooking,coal,2025,,0
+comm hot water_cooking,coal,start-year,,1
 comm lighting,electricity,start-year,,1
 comm appliances,electricity,start-year,,1
-resid_rural heating,gas,end-year,,0
-resid_rural hot water_cooking,gas,end-year,,0
-resid_urban heating,gas,end-year,,0
-resid_urban hot water_cooking,gas,end-year,,0
-comm heating,gas,end-year,,0
-comm hot water_cooking,gas,end-year,,0
-resid_rural heating,refined liquids,end-year,,0
-resid_rural hot water_cooking,refined liquids,end-year,,0
-resid_urban heating,refined liquids,end-year,,0
-resid_urban hot water_cooking,refined liquids,end-year,,0
-comm heating,refined liquids,end-year,,0
-comm hot water_cooking,refined liquids,end-year,,0

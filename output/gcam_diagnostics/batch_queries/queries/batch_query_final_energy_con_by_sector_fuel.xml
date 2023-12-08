@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+   
+
+	<aQuery>
+		<region name="China" />
+       	<region name="AH" />
+       	<region name="BJ" />
+		<region name="CQ" />
+		<region name="FJ" />
+       	<region name="GD" />
+		<region name="GS" />
+       	<region name="GX" />
+		<region name="GZ" />
+       	<region name="HA" />
+		<region name="HB" />
+       	<region name="HE" />
+		<region name="HI" />
+       	<region name="HL" />
+		<region name="HN" />
+       	<region name="JL" />
+		<region name="JS" />
+       	<region name="JX" />
+		<region name="LN" />
+       	<region name="NM" />
+		<region name="NX" />
+       	<region name="QH" />
+		<region name="SC" />
+       	<region name="SD" />
+		<region name="SH" />
+       	<region name="SN" />
+		<region name="SX" />
+       	<region name="TJ" />
+		<region name="XJ" />
+       	<region name="XZ" />
+		<region name="YN" />
+       	<region name="ZJ" />
+       	<region name="Global"/>
+
+         <supplyDemandQuery title="final energy consumption by sector and fuel">
+            <axis1 name="input">input</axis1>
+            <axis2 name="Year">demand-physical[@vintage]</axis2>
+            <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' and
+            not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
+                @name='industrial feedstocks' or @name='renewable'  or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()</xPath>
+            <comments/>
+            <labelRewriteList append-values="false">
+               <level name="input">
+                  <rewrite from="delivered biomass" to="biomass"/>
+                  <rewrite from="elect_td_bld" to="electricity"/>
+                  <rewrite from="refined liquids enduse" to="refined liquids"/>
+                  <rewrite from="H2 enduse" to="hydrogen"/>
+                  <rewrite from="delivered coal" to="coal"/>
+                  <rewrite from="elect_td_trn" to="electricity"/>
+                  <rewrite from="elect_td_ind" to="electricity"/>
+                  <rewrite from="delivered gas" to="gas"/>
+                  <rewrite from="wholesale gas" to="gas"/>
+                  <rewrite from="refined liquids industrial" to="refined liquids"/>
+                  <rewrite from="regional coal" to="coal"/>
+                  <rewrite from="regional biomass" to="biomass"/>
+               </level>
+            </labelRewriteList>
+         </supplyDemandQuery>
+	</aQuery>
+
+
+
+</queries>

@@ -1129,11 +1129,11 @@ gcamchina.USE_UNIFORM_CSTORAGE_MARKET <- FALSE
 
 gcamchina.REGIONAL_FUEL_MARKETS <- c("delivered coal", "wholesale gas", "delivered gas",
                                      "refined liquids industrial", "refined liquids enduse")
-
+									 
 #Fuels whose markets will be represented with state-specific prices
 gcamchina.PROVINCE_FUEL_MARKETS <- c(gcamchina.ELECT_TD_SECTORS, "H2 industrial", "H2 retail delivery",
                                      "H2 retail dispensing", "H2 wholesale delivery", "H2 wholesale dispensing",
-                                     "H2 central production","H2 pipeline","H2 liquid truck", "process heat cement","district heat")
+                                     "H2 central production","H2 pipeline","H2 liquid truck", "process heat cement")
 
 
 # Number of digits for model input data

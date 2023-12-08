@@ -59,18 +59,17 @@ mining energy use,biomass,biomass,delivered biomass,0.00366345,0.00366345,0.0036
 mining energy use,hydrogen,hydrogen,H2 industrial,0.00366345,0.00366345,0.00366345
 mining energy use,electricity,electricity,elect_td_ind,0.00366345,0.00366345,0.00366345
 construction,construction,construction,construction energy use,1,1,1
-construction,construction,construction,construction feedstock,0,0,0
+construction,construction,construction,construction feedstocks,0,0,0
 construction energy use,coal,coal,delivered coal,0.580061692,0.580061692,0.580061692
 construction energy use,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
 construction energy use,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
 construction energy use,biomass,biomass,delivered biomass,0.580061692,0.580061692,0.580061692
 construction energy use,hydrogen,hydrogen,H2 industrial,0.580061692,0.580061692,0.580061692
 construction energy use,electricity,electricity,elect_td_ind,0.580061692,0.580061692,0.580061692
-construction feedstock,coal,coal,delivered coal,0.580061692,0.580061692,0.580061692
-construction feedstock,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
-construction feedstock,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
+construction feedstocks,coal,coal,delivered coal,0.580061692,0.580061692,0.580061692
+construction feedstocks,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
+construction feedstocks,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
 agriculture energy use,district heat,district heat,district heat,1,1,1
 chemical energy use,district heat,district heat,district heat,1,1,1
-chemical feedstock,Electronic fuel,Electronic fuel,Electronic fuel,1,1,1
 construction energy use,district heat,district heat,district heat,1,1,1
 mining energy use,district heat,district heat,district heat,1,1,1

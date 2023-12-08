@@ -1,0 +1,873 @@
+<ModelInterfaceBatch>
+    <!-- Note multiple sets of the following are allowed to run several
+         batch queries sequentially.
+      -->
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_cement_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_chem_input_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_chem_input_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_chem_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_chem_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_emissions_by_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_CO2_emissions_by_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_emissions_sector_nobio_v2.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_CO2_emissions_sector_nobio_v2.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_prices.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_CO2_prices.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_squestration_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_CO2_squestration_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cost_industry_techs.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_cost_industry_techs.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_elec_energy_input_by_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_elec_energy_input_by_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_elec_gen_by_gen_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_elec_gen_by_gen_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_elec_prices_sector.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_elec_prices_sector.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_final_energy_con_by_sector_fuel.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_final_energy_con_by_sector_fuel.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_final_energy_prices.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_final_energy_prices.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_global_mean_temp.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_global_mean_temp.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_hydrogen_inputs_by_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_hydrogen_inputs_by_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_hydrogen_production_by_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_hydrogen_production_by_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_industry_energy_tech_fuel.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_industry_energy_tech_fuel.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_industry_feedstocks_type.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_industry_feedstocks_type.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_industry_output_sector.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_industry_output_sector.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_ironsteel_input_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_ironsteel_input_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_ironsteel_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_ironsteel_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_transportation_final_energy_by_tech_fuel.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_transportation_final_energy_by_tech_fuel.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_reg_per_capita_GDP.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_reg_per_capita_GDP.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_cement_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_reg_population.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_reg_population.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_cement_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_total_climate_forcing.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_total_climate_forcing.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_LUC_emissions_by_region.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_LUC_emissions_by_region.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_primary_energy_con_by_region.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_primary_energy_con_by_region.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_ref_liq_production_by_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_ref_liq_production_by_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_primary_energy_consumption_with_CCS_by_region.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_primary_energy_consumption_with_CCS_by_region.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+
+        <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_primary_energy_con_by_region.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_primary_energy_con_by_region.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+
+        <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_cement_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>   
+
+        <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_cement_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>   
+
+        <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_building_energy_tech_fuel.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_building_energy_tech_fuel.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>   
+
+        <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="GCAM_China_Reference"/>
+            <scenario name="GCAM_China_tax_100"/>
+			<scenario name="GCAM_China_tax_25"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_cement_production_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+</ModelInterfaceBatch>
