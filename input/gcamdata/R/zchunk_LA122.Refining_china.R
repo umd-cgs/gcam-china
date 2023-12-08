@@ -44,10 +44,13 @@ module_gcam.china_LA122.Refining <- function(command, ...) {
     # Crude oil consumption by industry is the energy used at refineries (input - output)
 
     # Calculate the percentages of oil consumption in each province
-   L101.inNBS_Mtce_province_S_F %>%
+    L101.inNBS_Mtce_province_S_F %>%
       filter(sector == "refinery", fuel == "crude oil") %>%
       mutate(sector = "oil refining") %>%
       replace_na(list(value = 0)) %>%
+      # YO Nov 2023
+      # Fix data error in HN (Hunan) in 1985, 1986, and 1987
+      mutate(value = if_else(value > 0, -value, value)) %>%
       group_by(year) %>%
       # province percentage of total in each year
       mutate(value = value / sum(value)) %>%
