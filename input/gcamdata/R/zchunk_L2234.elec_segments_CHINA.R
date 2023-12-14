@@ -756,6 +756,9 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
                                       "stub.technology" = "Electric.sector.technology")) %>%
       # join will produce NAs (filtered out later); left_join_error_no_match throws error, so left_join used
       left_join(L223.StubTechEff_elec_CHINA %>%
+                  # Dec 2023, YO, correct market for efficiency table
+                  mutate(market.name = if_else(minicam.energy.input %in% c("refined liquids industrial", "wholesale gas"),
+                                               region, market.name)) %>%
                   select(-supplysector),
                 by = c("region", "subsector", "technology" = "stub.technology",
                        "year", "minicam.energy.input", "market.name")) %>%

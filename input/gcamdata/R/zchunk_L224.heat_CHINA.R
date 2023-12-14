@@ -316,8 +316,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	                                select(supplysector, subsector, stub.technology, minicam.energy.input),
 	                              by = c("supplysector", "subsector", "stub.technology")) %>%
 	    filter(is.na(minicam.energy.input) == FALSE) %>%
-	    #Only setting markets here for the ones that consume fuels.
-	    mutate(market.name = 'China') %>%
+	    mutate(market.name = region) %>%
 	    select(LEVEL2_DATA_NAMES[["StubTechMarket"]]) %>%
 	    mutate(market.name = if_else(minicam.energy.input == 'delivered biomass',
 	                                 'China', market.name)) ->

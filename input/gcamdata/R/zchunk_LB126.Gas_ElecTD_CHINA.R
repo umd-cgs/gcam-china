@@ -38,7 +38,7 @@ module_gcamchina_LB126.Gas_ElecTD <- function(command, ...) {
 
     # Load required inputs
     L126.IO_R_electd_F_Yh <- get_data(all_data, "L126.IO_R_electd_F_Yh") %>%
-      filter(GCAM_region_ID == gcam.USA_CODE) %>%
+      filter(GCAM_region_ID == gcamchina.REGION_ID) %>%
       select(-GCAM_region_ID)
     L122.in_EJ_province_refining_F <- get_data(all_data, "L122.in_EJ_province_refining_F")
     L123.out_EJ_province_elec_F <- get_data(all_data, "L123.out_EJ_province_elec_F")
