@@ -35,6 +35,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
              "L124.out_EJ_R_heatfromelec_F_Yh",
 			       "L1231.out_EJ_province_elec_F_tech",
 			       "L132.in_EJ_province_indnochp_F",
+			       "L2234.StubTechProd_elecS_CHINA",
 			       "L144.in_EJ_province_bld_F_U"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L224.Supplysector_heat_china",
@@ -77,7 +78,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	  L132.in_EJ_province_indnochp_F <- get_data(all_data, "L132.in_EJ_province_indnochp_F", strip_attributes = T)
 	  L144.in_EJ_province_bld_F_U <- get_data(all_data, "L144.in_EJ_province_bld_F_U", strip_attributes = T)
 	  L1231.eff_R_elec_F_tech_Yh <-  get_data(all_data, "L1231.eff_R_elec_F_tech_Yh", strip_attributes = T)
-
+	  L2234.StubTechProd_elecS_CHINA <-  get_data(all_data, "L2234.StubTechProd_elecS_CHINA", strip_attributes = T)
 
 	  # ===================================================
 	  # Data Processing
@@ -92,6 +93,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    filter(fuel == "heat") %>%
 	    select(province,fuel,year,value) %>%
 	    left_join(L144.in_EJ_province_bld_F_U %>%
+	                filter(service == "Heating") %>%
 	                select(province, fuel, year, value) %>%
 	                group_by(province, fuel, year) %>%
 	                summarise(value = sum(value)) %>%
@@ -109,7 +111,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	  # Supply sector information for district heat sectors
 	  A24.sector %>%
 	    mutate(region = "China") %>%
-	    write_to_all_provinces(c(LEVEL2_DATA_NAMES[["Supplysector"]], LOGIT_TYPE_COLNAME), gcamchina.PROVINCES_ALL) ->
+	    write_to_all_provinces(c(LEVEL2_DATA_NAMES[["Supplysector"]], LOGIT_TYPE_COLNAME), gcamchina.PROVINCES_NOHKMC) ->
 	    L224.Supplysector_heat_china
 
 	  # delete heat sector in the CHINA region
@@ -121,21 +123,21 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 
 	  # Subsector logit exponents of district heat sectors
 	  A24.subsector_logit %>%
-	    write_to_all_provinces(c(LEVEL2_DATA_NAMES[["SubsectorLogit"]], LOGIT_TYPE_COLNAME), gcamchina.PROVINCES_ALL) ->
+	    write_to_all_provinces(c(LEVEL2_DATA_NAMES[["SubsectorLogit"]], LOGIT_TYPE_COLNAME), gcamchina.PROVINCES_NOHKMC) ->
 	    L224.SubsectorLogit_heat_china
 
 	  # L224.SubsectorShrwt_heat_china and L224.SubsectorShrwtFllt_heat_china: Subsector shareweights of district heat sectors
 	  if(any(!is.na(A24.subsector_shrwt$year))) {
 	    A24.subsector_shrwt %>%
 	      filter(!is.na(year)) %>%
-	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorShrwt"]], gcamchina.PROVINCES_ALL ) ->
+	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorShrwt"]], gcamchina.PROVINCES_NOHKMC ) ->
 	      L224.SubsectorShrwt_heat_china
 	  }
 
 	  if(any(!is.na(A24.subsector_shrwt$year.fillout))) {
 	    A24.subsector_shrwt %>%
 	      filter(!is.na(year.fillout)) %>%
-	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorShrwtFllt"]], gcamchina.PROVINCES_ALL ) ->
+	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorShrwtFllt"]], gcamchina.PROVINCES_NOHKMC ) ->
 	      L224.SubsectorShrwtFllt_heat_china
 	  }
 
@@ -154,7 +156,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	           subs.share.weight = if_else(calibrated.value == 0, 0, 1),
 	           tech.share.weight = subs.share.weight) %>%
 	    select(-value) %>%
-	    write_to_all_provinces(LEVEL2_DATA_NAMES[["StubTechCalInput"]], gcamchina.PROVINCES_ALL ) %>%
+	    write_to_all_provinces(LEVEL2_DATA_NAMES[["StubTechCalInput"]], gcamchina.PROVINCES_NOHKMC ) %>%
 	    # use province heat consumption to scale
 	    left_join(heat_en_by_province %>% rename(region = province),by = c("region","year")) %>%
 	    mutate(calibrated.value = replace_na(calibrated.value * multiplier,0)) %>%
@@ -164,7 +166,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	  # cal heat produced by CHP by province
 	  L124.out_EJ_R_heatfromelec_F_Yh %>%
 	    filter(GCAM_region_ID == 11) %>%
-	    write_to_all_provinces(c('region','fuel','sector','year','value'), gcamchina.PROVINCES_ALL ) %>%
+	    write_to_all_provinces(c('region','fuel','sector','year','value'), gcamchina.PROVINCES_NOHKMC ) %>%
 	    left_join(heat_en_by_province %>% rename(region = province) ,by = c("region","year")) %>%
 	    mutate(value = replace_na(value * multiplier,0)) %>%
 	    select(-multiplier) ->
@@ -181,12 +183,17 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    mutate(value = replace_na(value,0)) ->
 	    L124.out_EJ_province_heatfromelec_F_Yh
 
-
-	  # Secondary output coefficients on heat produced by main activity CHP plants
-	  L1231.out_EJ_province_elec_F_tech %>%
+	  L2234.StubTechProd_elecS_CHINA %>%
 	    filter(year %in% HISTORICAL_YEARS) %>%
-	    # Select only technologies that have heat output in calibrated techs mapping
+	    left_join(A23.elecS_tech_mapping %>%
+	                select(Electric.sector.technology, technology) %>%
+	                distinct(), by = c("stub.technology" = "Electric.sector.technology")) %>%
+	    na.omit() %>%
 	    filter(technology %in% calibrated_techs$technology[calibrated_techs$secondary.output == "heat"]) %>%
+	    mutate(province = region, sector = "electricity generation", fuel = subsector) %>%
+	    group_by(province, sector, fuel, technology, year) %>%
+	    summarise(value = sum(calOutputValue), .groups = "drop") %>%
+	    ungroup() %>%
 	    left_join_error_no_match(L124.out_EJ_province_heatfromelec_F_Yh %>%
 	                               rename(value_heatfromelec = value,province = region) %>%
 	                               rename(temp = sector), by = c("province", "fuel", "year")) %>%
@@ -196,7 +203,6 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    # Reset missing and infinite values (applicable for CC in the base years) to 0
 	    mutate(value = if_else(is.na(value) | is.infinite(value), 0, value)) ->
 	    L124.heatoutratio_province_elec_F_tech_Yh
-
 
 	  # Drop all rows where value = 0 for all years
 	  # Create a table of all the years of all value = 0
@@ -219,14 +225,14 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	  if(any(is.na(A24.subsector_interp$to.value))) {
 	    A24.subsector_interp %>%
 	      filter(is.na(to.value)) %>%
-	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorInterp"]], gcamchina.PROVINCES_ALL ) ->
+	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorInterp"]], gcamchina.PROVINCES_NOHKMC ) ->
 	      L224.SubsectorInterp_heat_china
 	  }
 
 	  if(any(!is.na(A24.subsector_interp$to.value))) {
 	    A24.subsector_interp %>%
 	      filter(!is.na(to.value)) %>%
-	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorInterpTo"]], gcamchina.PROVINCES_ALL ) ->
+	      write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorInterpTo"]], gcamchina.PROVINCES_NOHKMC ) ->
 	      L224.SubsectorInterpTo_heat_china
 	  }
 
@@ -235,12 +241,9 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	  A24.globaltech_shrwt %>%
 	    select(supplysector, subsector, technology) %>%
 	    distinct %>%
-	    write_to_all_provinces(LEVEL2_DATA_NAMES[["Tech"]], gcamchina.PROVINCES_ALL) %>%
+	    write_to_all_provinces(LEVEL2_DATA_NAMES[["Tech"]], gcamchina.PROVINCES_NOHKMC) %>%
 	    rename(stub.technology = technology)  ->
 	    L224.StubTech_heat_china
-
-
-
 
 	  # Secondary output of heat, applied to electricity generation technologies
 	  # NOTE: This is complicated. Initially tried using historical information for all model periods that fall within historical time
@@ -266,8 +269,6 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    mutate(output.ratio = round(value, energy.DIGITS_CALOUTPUT)) %>%
 	    select(-value) -> L224.StubTechSecOut_elec_china
 
-	  write.csv(L224.StubTechSecOut_elec_china, "L224.StubTechSecOut_elec_china.csv")
-
 	  # Calculate cost adjustment, equal to the output of heat multiplied by the heat price
 	  # (to minimize the distortion of including the secondary output)
 	  L224.StubTechSecOut_elec_china %>%
@@ -284,7 +285,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    filter(year %in% MODEL_YEARS) %>%
 	    rename(efficiency = value) %>%
 	    filter(GCAM_region_ID == 11) %>%
-	    write_to_all_provinces(c('region','sector','fuel','technology','year','efficiency'), gcamchina.PROVINCES_ALL) %>%
+	    write_to_all_provinces(c('region','sector','fuel','technology','year','efficiency'), gcamchina.PROVINCES_NOHKMC) %>%
 	    filter(fuel == "gas") %>%
 	    filter(efficiency < energy.DEFAULT_ELECTRIC_EFFICIENCY) %>%
 	    mutate(cost_modifier = energy.GAS_PRICE * (1 / energy.DEFAULT_ELECTRIC_EFFICIENCY - 1 / efficiency)) ->
@@ -437,6 +438,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    add_comments("filtering for only model base years") %>%
 	    add_legacy_name("L224.StubTechSecOut_elec_china") %>%
 	    add_precursors("L1231.out_EJ_province_elec_F_tech",
+	                   "L2234.StubTechProd_elecS_CHINA",
 	                   "L124.out_EJ_R_heatfromelec_F_Yh",
 	                   "gcam-china/A23.elecS_tech_mapping",
 	                   "gcam-china/A23.elecS_tech_availability",
