@@ -503,7 +503,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
             #Solve for int
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
-            if(L1236.solved_fraction_int>0.5){
+            if(L1236.solved_fraction_int$root>0.5){
               L1236.solved_fraction_int$root=0.3
             }else{
 
@@ -591,7 +591,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
             #Solve for int
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
-            if(L1236.solved_fraction_int>0.5){
+            if(L1236.solved_fraction_int$root>0.5){
               print(L1236.region)
               print(segment_year)
               print(i)
@@ -713,7 +713,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
             #Solve for int
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
-            if(L1236.solved_fraction_int>0.5){
+            if(L1236.solved_fraction_int$root>0.5){
               print(L1236.region)
               print(segment_year)
               print(i)
