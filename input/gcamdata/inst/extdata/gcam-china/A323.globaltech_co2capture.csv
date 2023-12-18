@@ -1,0 +1,13 @@
+# File: A323.globaltech_co2capture.csv
+# Title: CO2 capture rates
+# Units: Unitless
+# Column types: cccnn
+# ----------
+supplysector,subsector,technology,1971,2100
+coke,coke,coke CCS,0.9,0.9
+IRONSTL,BLASTFUR,BLASTFUR CCS,0.9,0.9
+IRONSTL,EAF with DRI,EAF with DRI CCS,0.9,0.9
+IRONSTL,EAF with scrap,EAF with scrap CCS,0.9,0.9
+chemical energy use,coal,coal CCS,0.9,0.9
+chemical energy use,gas,gas CCS,0.9,0.9
+chemical energy use,liquid,liquid CCS,0.9,0.9

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+   
+
+	<aQuery>
+		<region name="China" />
+       	<region name="AH" />
+       	<region name="BJ" />
+		<region name="CQ" />
+		<region name="FJ" />
+       	<region name="GD" />
+		<region name="GS" />
+       	<region name="GX" />
+		<region name="GZ" />
+       	<region name="HA" />
+		<region name="HB" />
+       	<region name="HE" />
+		<region name="HI" />
+       	<region name="HL" />
+		<region name="HN" />
+       	<region name="JL" />
+		<region name="JS" />
+       	<region name="JX" />
+		<region name="LN" />
+       	<region name="NM" />
+		<region name="NX" />
+       	<region name="QH" />
+		<region name="SC" />
+       	<region name="SD" />
+		<region name="SH" />
+       	<region name="SN" />
+		<region name="SX" />
+       	<region name="TJ" />
+		<region name="XJ" />
+       	<region name="XZ" />
+		<region name="YN" />
+       	<region name="ZJ" />
+       	<region name="Global"/>
+        <marketQuery title="CO2 prices">
+            <axis1 name="market">market</axis1>
+            <axis2 name="Year">market</axis2>
+            <xPath buildList="true" dataName="price" group="false" sumAll="false">Marketplace/market[true() and contains(@name,'CO2')]/price/node()</xPath>
+            <comments/>
+        </marketQuery>
+	</aQuery>
+
+
+
+
+
+</queries>

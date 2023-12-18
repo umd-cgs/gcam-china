@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+   
+
+	<aQuery>
+		<region name="China" />
+       	<region name="AH" />
+       	<region name="BJ" />
+		<region name="CQ" />
+		<region name="FJ" />
+       	<region name="GD" />
+		<region name="GS" />
+       	<region name="GX" />
+		<region name="GZ" />
+       	<region name="HA" />
+		<region name="HB" />
+       	<region name="HE" />
+		<region name="HI" />
+       	<region name="HL" />
+		<region name="HN" />
+       	<region name="JL" />
+		<region name="JS" />
+       	<region name="JX" />
+		<region name="LN" />
+       	<region name="NM" />
+		<region name="NX" />
+       	<region name="QH" />
+		<region name="SC" />
+       	<region name="SD" />
+		<region name="SH" />
+       	<region name="SN" />
+		<region name="SX" />
+       	<region name="TJ" />
+		<region name="XJ" />
+       	<region name="XZ" />
+		<region name="YN" />
+       	<region name="ZJ" />
+       	<region name="Global"/>
+         <supplyDemandQuery title="primary energy consumption by region (direct equivalent)">
+            <axis1 name="fuel">input[@name]</axis1>
+            <axis2 name="Year">demand-physical[@vintage]</axis2>
+            <xPath buildList="true" dataName="input" group="false" sumAll="false"> <![CDATA[
+			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
+			 	 		 let $scn := $parent/ancestor::scenario,
+			 			   	  $rgn := $parent/ancestor::region
+			 			   return
+			 			   	  document { element scenario {
+			 			 	  					$scn/@*,
+			 			 						element region {
+			 			 							$rgn/@*,
+			 			 							$append
+			 			 						}
+			 			 	  				}
+			 				}
+			 	 	 };  
+			 	 	 declare function local:get-primary-renewable($outputs as node()*) as node()* {
+			 	 	 unordered { 	
+			 	 	 for $output in $outputs 
+			 	 	 let $new_output :=  
+			 	 	 element input {
+			 	 		 attribute type {'input'},
+			 	 		 attribute name {$output/parent::*/following-sibling::keyword/@primary-renewable},
+			 	 		 element demand-physical {
+			 	 			 attribute vintage {$output/@vintage},
+			 	 			 attribute unit {$output/@unit},
+			 	 			 text { $output }
+			 	 		 }
+			 	 	 },
+			 	 	 $new_root := local:append-heirarchy($output/parent::*/parent::*, $new_output)
+			 	 	 return $new_root//text()
+			 	 	 } 
+			 	 	 };
+			 	 	 declare function local:run-primary-energy($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* { 	
+			 	 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 	 		  then $regions
+			 	 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 	 return
+			 	 	 for $scenario in $scenarios, 	    
+			 	 	 $region in $regionsG 	
+			 	 	 let $scenario_split := tokenize($scenario, ' '), 	    
+                     $scenario_name := string-join($scenario_split[position() < last()], ' '),
+			 	 	 $scenario_date := $scenario_split[last()],
+			 	 	 $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
+			 	 	 return (: get renewables from electricity :)
+					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='electricity' or @name='elect_td_bld' or starts-with(@name,'elec_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 		 	| (: get renewables from H2ProdCS :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 central production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get renewables from H2ProdDist :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 forecourt production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get the primaries :)
+	 	 						$currTree//keyword[fn:exists(@primary-consumption)]/preceding-sibling::input-energy/demand-physical/text()
+                                | (: get traditional biomass :)
+							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
+			 	 	 	
+	 	 }; 
+            	 local:run-primary-energy((:scenarios:), (:regions:), (:collection:))
+                 ]]>
+            </xPath>
+            <comments/>
+            <labelRewriteList append-values="false">
+               <level name="input">
+                  <rewrite from="traditional biomass" to="j traditional biomass"/>
+                  <rewrite from="geothermal-elect" to="i geothermal"/>
+                  <rewrite from="biomass" to="d biomass"/>
+                  <rewrite from="total biomass" to="d biomass"/>
+                  <rewrite from="nuclear-H2" to="e nuclear"/>
+                  <rewrite from="natural gas" to="b natural gas"/>
+                  <rewrite from="wind-elect" to="g wind"/>
+                  <rewrite from="exotic-elect" to="j breakthrough"/>
+                  <rewrite from="elect_td_ind" to=""/>
+                  <rewrite from="k new" to="k new"/>
+                  <rewrite from="solar-elect" to="h solar"/>
+                  <rewrite from="solar-H2" to="h solar"/>
+                  <rewrite from="regional natural gas" to=""/>
+                  <rewrite from="coal" to="c coal"/>
+                  <rewrite from="crude oil" to="a oil"/>
+                  <rewrite from="hydro-elect" to="f hydro"/>
+                  <rewrite from="nuclear-elect" to="e nuclear"/>
+                  <rewrite from="traded unconventional oil" to="a oil"/>
+                  <rewrite from="wind-H2" to="g wind"/>
+                  <rewrite from="seawater" to=""/>
+                  <rewrite from="water_td_pri_C" to=""/>
+                  <rewrite from="water_td_pri_W" to=""/>
+               </level>
+            </labelRewriteList>
+         </supplyDemandQuery>
+	</aQuery>
+
+
+
+
+
+</queries>

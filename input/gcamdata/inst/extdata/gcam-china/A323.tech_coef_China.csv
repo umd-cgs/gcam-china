@@ -1,0 +1,12 @@
+# File: A323.tech_coef_China.csv
+# Title:  China pass-through coefficients
+# Units:  minicam.energy.input (input-output coefficient)
+# Column types: ccccnn
+# ----------
+supplysector,subsector,technology,minicam.energy.input,1971,2100
+IRONSTL,IRONSTL,IRONSTL,IRONSTL,1,1
+coke,coke,coke,coke,1,1
+construction,construction,construction,construction,1,1
+mining energy use,mining energy use,mining energy use,mining energy use,1,1
+agriculture energy use,agriculture energy use,agriculture energy use,agriculture energy use,1,1
+chemicals,chemicals,chemicals,chemicals,1,1

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+   
+
+	<aQuery>
+		<region name="China" />
+       	<region name="AH" />
+       	<region name="BJ" />
+		<region name="CQ" />
+		<region name="FJ" />
+       	<region name="GD" />
+		<region name="GS" />
+       	<region name="GX" />
+		<region name="GZ" />
+       	<region name="HA" />
+		<region name="HB" />
+       	<region name="HE" />
+		<region name="HI" />
+       	<region name="HL" />
+		<region name="HN" />
+       	<region name="JL" />
+		<region name="JS" />
+       	<region name="JX" />
+		<region name="LN" />
+       	<region name="NM" />
+		<region name="NX" />
+       	<region name="QH" />
+		<region name="SC" />
+       	<region name="SD" />
+		<region name="SH" />
+       	<region name="SN" />
+		<region name="SX" />
+       	<region name="TJ" />
+		<region name="XJ" />
+       	<region name="XZ" />
+		<region name="YN" />
+       	<region name="ZJ" />
+       	<region name="Global"/>
+                    <supplyDemandQuery title="chemical production by tech">
+                        <axis1 name="technology">technology</axis1>
+                        <axis2 name="Year">physical-output[@vintage]</axis2>
+                        <xPath buildList="true" dataName="output"
+                            group="false" sumAll="false">*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]/
+            			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
+            			   *[@type='output']/physical-output/node()</xPath>
+                        <comments/>
+                    </supplyDemandQuery>
+	</aQuery>
+
+
+
+
+
+</queries>

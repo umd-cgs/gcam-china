@@ -21,7 +21,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows filter if_else group_by left_join mutate select semi_join summarise
 #' @importFrom tidyr gather spread
-#' @author YangLiu December 2019 / YangOu July 2023
+#' @author YangLiu December 2019 / YangOu July 2023 / YangLiu September 2023
 module_gcamchina_L232.industry_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",
@@ -38,8 +38,8 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
             "L232.PerCapitaBased_ind",
             "L232.PriceElasticity_ind",
             "L232.IncomeElasticity_ind_gcam3",
-            "L132.in_EJ_province_indnochp_F",
-            "L132.in_EJ_province_indfeed_F",
+            "L1323.in_EJ_province_indnochp_F",
+            "L1323.in_EJ_province_indfeed_F",
             "L132.in_EJ_province_indchp_F",
             "L2323.Supplysector_iron_steel",
             "L2324.Supplysector_Off_road",
@@ -95,6 +95,8 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
     province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = T)
     A32.demand <- get_data(all_data, "energy/A32.demand", strip_attributes = T)
     A32.globaltech_eff <- get_data(all_data, "energy/A32.globaltech_eff", strip_attributes = T)
+    L1323.in_EJ_province_indnochp_F <- get_data(all_data, "L1323.in_EJ_province_indnochp_F", strip_attributes = T)
+    L1323.in_EJ_province_indfeed_F <- get_data(all_data, "L1323.in_EJ_province_indfeed_F", strip_attributes = T)
     calibrated_techs <- get_data(all_data, "energy/calibrated_techs", strip_attributes = T)
     L232.Supplysector_ind <- get_data(all_data, "L232.Supplysector_ind", strip_attributes = T)
     L232.FinalEnergyKeyword_ind <- get_data(all_data, "L232.FinalEnergyKeyword_ind", strip_attributes = T)
@@ -106,8 +108,6 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
     L232.PerCapitaBased_ind <- get_data(all_data, "L232.PerCapitaBased_ind", strip_attributes = T)
     L232.PriceElasticity_ind <- get_data(all_data, "L232.PriceElasticity_ind", strip_attributes = T)
     L232.IncomeElasticity_ind_gcam3 <- get_data(all_data, "L232.IncomeElasticity_ind_gcam3", strip_attributes = T)
-    L132.in_EJ_province_indnochp_F <- get_data(all_data, "L132.in_EJ_province_indnochp_F", strip_attributes = T)
-    L132.in_EJ_province_indfeed_F <- get_data(all_data, "L132.in_EJ_province_indfeed_F", strip_attributes = T)
     L132.in_EJ_province_indchp_F <- get_data(all_data, "L132.in_EJ_province_indchp_F", strip_attributes = T)
     L2323.Supplysector_iron_steel <- get_data(all_data, "L2323.Supplysector_iron_steel", strip_attributes = TRUE)
     L2324.Supplysector_Off_road <- get_data(all_data, "L2324.Supplysector_Off_road", strip_attributes = TRUE)
@@ -233,7 +233,7 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
     L232.IncomeElasticity_ind_gcam3_CHINA <- industry_CHINA_processing(L232.IncomeElasticity_ind_gcam3)
 
     # get calibrated input of industrial energy use technologies, including cogen
-    L132.in_EJ_province_indnochp_F %>%
+    L1323.in_EJ_province_indnochp_F %>%
       bind_rows(L132.in_EJ_province_indchp_F) %>%
       complete(nesting(province, sector, fuel), year = c(year, MODEL_BASE_YEARS)) %>%
       group_by(province, sector, fuel) %>%
@@ -261,7 +261,7 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       L232.StubTechCalInput_indenergy_CHINA  ## OUTPUT
 
     # get calibrated input of industrial feedstock technologies
-    L132.in_EJ_province_indfeed_F %>%
+    L1323.in_EJ_province_indfeed_F %>%
       complete(nesting(province, sector, fuel), year = c(year, MODEL_BASE_YEARS)) %>%
       group_by(province, sector, fuel) %>%
       mutate(value = approx_fun(year, value)) %>%
@@ -476,7 +476,7 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       add_units("Unitless") %>%
       add_comments("Shareweights generated from calibrated values") %>%
       add_legacy_name("L232.StubTechCalInput_indenergy_CHINA") %>%
-      add_precursors("L132.in_EJ_province_indnochp_F",
+      add_precursors("L1323.in_EJ_province_indnochp_F",
                      "L132.in_EJ_province_indchp_F",
                      "energy/calibrated_techs",
                      "energy/A32.globaltech_eff") ->
@@ -487,7 +487,7 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       add_units("Unitless") %>%
       add_comments("Shareweights generated from calibrated values") %>%
       add_legacy_name("L232.StubTechCalInput_indfeed_CHINA") %>%
-      add_precursors("L132.in_EJ_province_indfeed_F",
+      add_precursors("L1323.in_EJ_province_indfeed_F",
                      "energy/calibrated_techs",
                      "energy/A32.globaltech_eff") ->
       L232.StubTechCalInput_indfeed_CHINA
@@ -498,8 +498,8 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       add_comments("Service output aggregated to industrial sector for each region") %>%
       add_legacy_name("L232.StubTechProd_industry_CHINA") %>%
       add_precursors("energy/A32.globaltech_eff",
-                     "L132.in_EJ_province_indnochp_F",
-                     "L132.in_EJ_province_indfeed_F") ->
+                     "L1323.in_EJ_province_indnochp_F",
+                     "L1323.in_EJ_province_indfeed_F") ->
       L232.StubTechProd_industry_CHINA
 
     L232.StubTechCoef_industry_CHINA %>%
@@ -508,8 +508,8 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       add_comments("Generated by bind base and future year coefficients") %>%
       add_legacy_name("L232.StubTechCoef_industry_CHINA") %>%
       add_precursors("energy/A32.globaltech_eff",
-                     "L132.in_EJ_province_indnochp_F",
-                     "L132.in_EJ_province_indfeed_F") ->
+                     "L1323.in_EJ_province_indnochp_F",
+                     "L1323.in_EJ_province_indfeed_F") ->
       L232.StubTechCoef_industry_CHINA
 
     L232.StubTechMarket_ind_CHINA %>%
@@ -538,8 +538,8 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       add_comments("base service is equal to the output of the industry supplysector") %>%
       add_legacy_name("L232.BaseService_ind_CHINA") %>%
       add_precursors("energy/A32.globaltech_eff",
-                     "L132.in_EJ_province_indnochp_F",
-                     "L132.in_EJ_province_indfeed_F",
+                     "L1323.in_EJ_province_indnochp_F",
+                     "L1323.in_EJ_province_indfeed_F",
                      "energy/A32.demand") ->
       L232.BaseService_ind_CHINA
 

@@ -1,0 +1,46 @@
+# File: A323.subsector_shrwt.csv
+# Title: Default subsector shareweights
+# Units: Unitless
+# Column types: cccnn
+# ----------
+supplysector,subsector,year.fillout,year,share.weight
+IRONSTL,BLASTFUR,start-year,,0.3
+IRONSTL,EAF with DRI,start-year,,0.5
+IRONSTL,EAF with scrap,start-year,,1
+coke,coke,start-year,,1
+chemicals,chemicals,start-year,,1
+chemical energy use,coal,start-year,,1
+chemical energy use,gas,start-year,,1
+chemical energy use,liquid,start-year,,1
+chemical energy use,biomass,start-year,,1
+chemical energy use,hydrogen,start-year,,0
+chemical energy use,electricity,start-year,,1
+chemical feedstock,coal,start-year,,1
+chemical feedstock,gas,start-year,,1
+chemical feedstock,liquid,start-year,,1
+agriculture energy use,coal,start-year,,1
+agriculture energy use,gas,start-year,,1
+agriculture energy use,liquid,start-year,,1
+agriculture energy use,biomass,start-year,,1
+agriculture energy use,hydrogen,start-year,,0
+agriculture energy use,electricity,start-year,,1
+mining energy use,coal,start-year,,1
+mining energy use,gas,start-year,,1
+mining energy use,liquid,start-year,,1
+mining energy use,biomass,start-year,,1
+mining energy use,hydrogen,start-year,,0
+mining energy use,electricity,start-year,,1
+construction,construction,start-year,,1
+construction energy use,coal,start-year,,1
+construction energy use,gas,start-year,,1
+construction energy use,liquid,start-year,,1
+construction energy use,biomass,start-year,,1
+construction energy use,hydrogen,start-year,,0
+construction energy use,electricity,start-year,,1
+construction feedstocks,coal,start-year,,1
+construction feedstocks,gas,start-year,,1
+construction feedstocks,liquid,start-year,,1
+agriculture energy use,district heat,start-year,,1
+chemical energy use,district heat,start-year,,1
+construction energy use,district heat,start-year,,1
+mining energy use,district heat,start-year,,1

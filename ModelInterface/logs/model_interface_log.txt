@@ -1,0 +1,141 @@
+PROPERTY CHANGEtitle
+PROPERTY CHANGEdocument-replaced
+DOCUMENT REPLACED
+PROPERTY CHANGEdocument-replaced
+DOCUMENT REPLACED
+Going to change controls
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Didn't find builder for detailed land allocation query going to use defaults
+Didn't find builder for detailed historical land allocation query going to use defaults
+Didn't find builder for land allocation by crop query going to use defaults
+Didn't find builder for aggregated land allocation query going to use defaults
+Didn't find builder for aggregated historical land allocation query going to use defaults
+Didn't find builder for land allocation in a specified land use region query going to use defaults
+Didn't find builder for land allocation by crop and water source query going to use defaults
+Didn't find builder for LUC emissions by region query going to use defaults
+Didn't find builder for LUC emissions by LUT query going to use defaults
+Didn't find builder for LUC emissions by LUT in a specified land use region query going to use defaults
+Didn't find builder for vegetative carbon stock by region query going to use defaults
+Didn't find builder for profit rate query going to use defaults
+Didn't find builder for profit rate in a specified land use region query going to use defaults
+Didn't find builder for land leaf shares query going to use defaults
+Didn't find builder for land leaf shares in a specified land use region query going to use defaults
+About to perform query: collection()/singleQueryListCache/cache[@id=-1209976151]/text()
+Time : 1
+Before Function: 1701690190808
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='USA') ]/*[@type='sector' (:collapse:) and
+               (@name='electricity' or @name='elect_td_bld' or @name='industrial energy use')]/
+               *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='output' and (@name='electricity' or @name='elect_td_bld')]/
+               physical-output/node()
+In Function: 1701690190809
+After build Tree: 1701690190989
+After Add table: 1701690190990
+Before Function: 1701690194393
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='SX') ]/*[@type='sector' (:collapse:) and
+               (@name='electricity' or @name='elect_td_bld' or @name='industrial energy use')]/
+               *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='output' and (@name='electricity' or @name='elect_td_bld')]/
+               physical-output/node()
+In Function: 1701690194393
+After build Tree: 1701690194424
+After Add table: 1701690194425
+Before Function: 1701690199041
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='LN') ]/*[@type='sector' (:collapse:) and
+               (@name='electricity' or @name='elect_td_bld' or @name='industrial energy use')]/
+               *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='output' and (@name='electricity' or @name='elect_td_bld')]/
+               physical-output/node()
+In Function: 1701690199041
+After build Tree: 1701690199076
+After Add table: 1701690199076
+About to perform query: collection()/singleQueryListCache/cache[@id=1386213466]/text()
+Time : 1
+Before Function: 1701690205331
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='East China Grid') ]/*[@type='sector' and (@name='electricity' or @name='elect_td_bld' or @name='elect_td_ind'
+               or @name='elect_td_trn')]/cost/text()
+In Function: 1701690205331
+After build Tree: 1701690205356
+After Add table: 1701690205356
+About to perform query: collection()/singleQueryListCache/cache[@id=-1762434599]/text()
+Time : 1
+Before Function: 1701690206616
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='East China Grid') ]/*[@type='sector' and (@name='electricity' or @name='elect_td_bld')]/*[@type='subsector']/
+              *[@type='technology' and not(@name='elect_td_bld')]/cost/text()
+In Function: 1701690206616
+After build Tree: 1701690206639
+After Add table: 1701690206639
+About to perform query: collection()/singleQueryListCache/cache[@id=118729936]/text()
+Time : 2
+Before Function: 1701690211311
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='East China Grid') ]/*[@type='sector' (:collapse:) and (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='subsector' and not (@name='elect_td_bld')]//*[@type='output']/
+               physical-output/node()
+In Function: 1701690211311
+After build Tree: 1701690211319
+After Add table: 1701690211319
+Before Function: 1701690217691
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='East China Grid') ]/*[@type='sector' and (@name='electricity' or @name='elect_td_bld')]/*[@type='subsector']/
+              *[@type='technology' and not(@name='elect_td_bld')]/cost/text()
+In Function: 1701690217692
+After build Tree: 1701690217696
+After Add table: 1701690217696
+About to perform query: collection()/singleQueryListCache/cache[@id=1968388287]/text()
+Time : 1
+Before Function: 1701690224965
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='East China Grid') ]/*[@type = 'sector' and contains(@name,'elec_')]/*[@type = 'subsector']/
+               *[@type = 'technology']/*[@type='input' and (@name='cooling system')]/
+               price-paid[@vintage=parent::*/parent::*/@year]/text()
+In Function: 1701690224966
+Before Function: 1701690231351
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='XJ') ]/*[@type = 'sector' and contains(@name,'elec_')]/*[@type = 'subsector']/
+               *[@type = 'technology']/*[@type='input' and (@name='cooling system')]/
+               price-paid[@vintage=parent::*/parent::*/@year]/text()
+In Function: 1701690231351
+Before Function: 1701690235818
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='SH') ]/*[@type = 'sector' and contains(@name,'elec_')]/*[@type = 'subsector']/
+               *[@type = 'technology']/*[@type='input' and (@name='cooling system')]/
+               price-paid[@vintage=parent::*/parent::*/@year]/text()
+In Function: 1701690235818
+New Table: null
+My Table: ModelInterface.ModelGUI2.tables.TableSorter@12727bbc
+Doing remove because of query/table
+Before Function: 1701690240851
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='QH') ]/*[@type='sector' and (@name='electricity' or @name='elect_td_bld')]/*[@type='subsector']/
+              *[@type='technology' and not(@name='elect_td_bld')]/cost/text()
+In Function: 1701690240851
+After build Tree: 1701690240880
+After Add table: 1701690240880
+New Table: null
+My Table: ModelInterface.ModelGUI2.tables.TableSorter@10126e52
+Doing remove because of query/table
+New Table: null
+My Table: ModelInterface.ModelGUI2.tables.TableSorter@29cf142c
+Doing remove because of query/table
+New Table: null
+My Table: ModelInterface.ModelGUI2.tables.TableSorter@14877818
+Doing remove because of query/table
+New Table: null
+My Table: ModelInterface.ModelGUI2.tables.TableSorter@c3f0e80
+Doing remove because of query/table
+Before Function: 1701690251329
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='Northwest China Grid') ]/*[@type='sector' and (@name='electricity' or @name='elect_td_bld')]/*[@type='subsector']/
+              *[@type='technology' and not(@name='elect_td_bld')]/cost/text()
+In Function: 1701690251329
+After build Tree: 1701690251334
+After Add table: 1701690251334
+Before Function: 1701690255831
+About to perform query: collection()/scenario[ (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='Northwest China Grid') ]/*[@type='sector' (:collapse:) and
+               (@name='electricity' or @name='elect_td_bld' or @name='industrial energy use')]/
+               *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='output' and (@name='electricity' or @name='elect_td_bld')]/
+               physical-output/node()
+In Function: 1701690255832
+New Table: null
+My Table: ModelInterface.ModelGUI2.tables.TableSorter@977f9fe
+Doing remove because of query/table
+Caught the window closing
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control

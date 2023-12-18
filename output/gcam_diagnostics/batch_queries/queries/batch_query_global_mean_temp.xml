@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+   
+
+	<aQuery>
+       	<region name="Global"/>
+         <ClimateQuery title="global mean temperature">
+            <axis1 name="temperature">none</axis1>
+            <axis2 name="Year">global-mean-temperature[@year]</axis2>
+            <xPath buildList="true" dataName="global-mean-temperature" group="false" sumAll="false">climate-model/global-mean-temperature/text()</xPath>
+            <comments/>
+         </ClimateQuery>
+	</aQuery>
+
+
+
+
+
+</queries>

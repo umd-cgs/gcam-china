@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+   
+
+	<aQuery>
+		<region name="China" />
+       	<region name="AH" />
+       	<region name="BJ" />
+		<region name="CQ" />
+		<region name="FJ" />
+       	<region name="GD" />
+		<region name="GS" />
+       	<region name="GX" />
+		<region name="GZ" />
+       	<region name="HA" />
+		<region name="HB" />
+       	<region name="HE" />
+		<region name="HI" />
+       	<region name="HL" />
+		<region name="HN" />
+       	<region name="JL" />
+		<region name="JS" />
+       	<region name="JX" />
+		<region name="LN" />
+       	<region name="NM" />
+		<region name="NX" />
+       	<region name="QH" />
+		<region name="SC" />
+       	<region name="SD" />
+		<region name="SH" />
+       	<region name="SN" />
+		<region name="SX" />
+       	<region name="TJ" />
+		<region name="XJ" />
+       	<region name="XZ" />
+		<region name="YN" />
+       	<region name="ZJ" />
+       	<region name="Global"/>
+                <supplyDemandQuery title="elec energy input by elec gen tech">
+                    <axis1 name="input">input</axis1>
+                    <axis2 name="Year">demand-physical[@vintage]</axis2>
+                    <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' ) and not(contains(@name, 'water_td'))]//
+                  *[@type='subsector' and not (@name='elect_td_bld')]//
+                  *[@type='technology' and not(@name='biomass (conv)' or @name='biomass (conv CCS)' or @name='biomass (IGCC)' or @name='biomass (IGCC CCS)'
+                                   or @name='coal (conv pul)' or @name='coal (conv pul CCS)' or @name='coal (IGCC)' or @name='coal (IGCC CCS)'
+                                   or @name='gas (steam/CT)' or @name='gas (CC)' or @name='gas (CC CCS)'
+                                   or @name='refined liquids (steam/CT)' or @name='refined liquids (CC)' or @name='refined liquids (CC CCS)'
+                                   or @name='geothermal' or @name='Gen_II_LWR' or @name='Gen_III'
+                                   or @name='CSP' or @name='CSP_storage')]/
+                   *[@type='input' and not( contains( @name, 'water')) and @name != 'oil-credits']/
+                   demand-physical/node()
+                </xPath>
+                    <comments/>
+                    <labelRewriteList append-values="false">
+                        <level name="sector">
+                            <rewrite from="intermediate generation" to="electricity"/>
+                            <rewrite from="peak generation" to="electricity"/>
+                            <rewrite from="base load generation" to="electricity"/>
+                            <rewrite from="subpeak generation" to="electricity"/>
+                        </level>
+                        <level name="technology">
+                            <rewrite from="gas_subpeak_CC" to="gas (CC)"/>
+                            <rewrite from="wind_peak_storage" to="wind_storage"/>
+                            <rewrite from="gas_peak_steam/CT" to="gas (steam/CT)"/>
+                            <rewrite from="biomass_peak_IGCC" to="biomass (IGCC)"/>
+                            <rewrite from="wind_subpeak" to="wind"/>
+                            <rewrite from="refined liquids_base_CC_CCS" to="refined liquids (CC CCS)"/>
+                            <rewrite from="coal_subpeak_conv pul_fast_retire" to="coal (conv pul)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1981-1985" to="coal (conv pul)"/>
+                            <rewrite from="coal_peak_conv pul_slow_retire" to="coal (conv pul)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire before 1950" to="coal (conv pul)"/>
+                            <rewrite from="coal_base_conv pul_CCS" to="coal (conv pul CCS)"/>
+                            <rewrite from="refined liquids_peak_CC_CCS" to="refined liquids (CC CCS)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1996-2000" to="coal (conv pul)"/>
+                            <rewrite from="nuc_peak_Gen III" to="Gen_III"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 2011-2015" to="coal (conv pul)"/>
+                            <rewrite from="CSP_base_storage" to="CSP_storage"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1956-1960" to="coal (conv pul)"/>
+                            <rewrite from="coal_int_conv pul" to="coal (conv pul)"/>
+                            <rewrite from="coal_peak_IGCC" to="coal (IGCC)"/>
+                            <rewrite from="gas_subpeak_steam/CT" to="gas (steam/CT)"/>
+                            <rewrite from="CSP_subpeak_storage" to="CSP_storage"/>
+                            <rewrite from="coal_base_IGCC_CCS" to="coal (IGCC CCS)"/>
+                            <rewrite from="gas_base_steam/CT" to="gas (steam/CT)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1976-1980" to="coal (conv pul)"/>
+                            <rewrite from="coal_subpeak_conv pul_CCS" to="coal (conv pul CCS)"/>
+                            <rewrite from="PV_base_storage" to="PV_storage"/>
+                            <rewrite from="gas_peak_CC_CCS" to="gas (CC CCS)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1986-1990" to="coal (conv pul)"/>
+                            <rewrite from="biomass_subpeak_conv" to="biomass (conv)"/>
+                            <rewrite from="geo_int" to="geothermal"/>
+                            <rewrite from="wind_int" to="wind"/>
+                            <rewrite from="geo_peak" to="geothermal"/>
+                            <rewrite from="nuc_subpeak_Gen II" to="Gen_II_LWR"/>
+                            <rewrite from="coal_base_conv pul_fast_retire" to="coal (conv pul)"/>
+                            <rewrite from="coal_base_IGCC" to="coal (IGCC)"/>
+                            <rewrite from="hydro_peak" to="hydro"/>
+                            <rewrite from="nuc_base_Gen III" to="Gen_III"/>
+                            <rewrite from="CSP_base" to="CSP"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1956-1960" to="coal (conv pul)"/>
+                            <rewrite from="gas_int_CC" to="gas (CC)"/>
+                            <rewrite from="CSP_peak" to="CSP"/>
+                            <rewrite from="coal_peak_conv pul" to="coal (conv pul)"/>
+                            <rewrite from="refined liquids_peak_steam/CT" to="refined liquids (steam/CT)"/>
+                            <rewrite from="PV_int" to="PV"/>
+                            <rewrite from="PV_peak" to="PV"/>
+                            <rewrite from="nuc_subpeak_Gen III" to="Gen_III"/>
+                            <rewrite from="PV_subpeak_storage" to="PV_storage"/>
+                            <rewrite from="biomass_base_IGCC_CCS" to="biomass (IGCC CCS)"/>
+                            <rewrite from="refined liquids_int_CC" to="refined liquids (CC)"/>
+                            <rewrite from="coal_subpeak_conv pul" to="coal (conv pul)"/>
+                            <rewrite from="refined liquids_int_steam/CT" to="refined liquids (steam/CT)"/>
+                            <rewrite from="CSP_int" to="CSP"/>
+                            <rewrite from="biomass_subpeak_IGCC" to="biomass (IGCC)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 2011-2015" to="coal (conv pul)"/>
+                            <rewrite from="coal_subpeak_IGCC" to="coal (IGCC)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 2001-2005" to="coal (conv pul)"/>
+                            <rewrite from="coal_subpeak_IGCC_CCS" to="coal (IGCC CCS)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1951-1955" to="coal (conv pul)"/>
+                            <rewrite from="nuc_base_Gen II" to="Gen_II_LWR"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1966-1970" to="coal (conv pul)"/>
+                            <rewrite from="refined liquids_base_CC" to="refined liquids (CC)"/>
+                            <rewrite from="coal_peak_IGCC_CCS" to="coal (IGCC CCS)"/>
+                            <rewrite from="biomass_int_IGCC_CCS" to="biomass (IGCC CCS)"/>
+                            <rewrite from="PV_base" to="PV"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1991-1995" to="coal (conv pul)"/>
+                            <rewrite from="coal_int_IGCC_CCS" to="coal (IGCC CCS)"/>
+                            <rewrite from="gas_base_CC" to="gas (CC)"/>
+                            <rewrite from="nuc_peak_Gen II" to="Gen_II_LWR"/>
+                            <rewrite from="CSP_subpeak" to="CSP"/>
+                            <rewrite from="coal_int_conv pul_CCS" to="coal (conv pul CCS)"/>
+                            <rewrite from="biomass_int_conv_CCS" to="biomass (conv CCS)"/>
+                            <rewrite from="wind_base" to="wind"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1991-1995" to="coal (conv pul)"/>
+                            <rewrite from="refined liquids_int_CC_CCS" to="refined liquids (CC CCS)"/>
+                            <rewrite from="biomass_peak_IGCC_CCS" to="biomass (IGCC CCS)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire" to="coal (conv pul)"/>
+                            <rewrite from="biomass_base_conv_CCS" to="biomass (conv CCS)"/>
+                            <rewrite from="wind_peak" to="wind"/>
+                            <rewrite from="gas_peak_CC" to="gas (CC)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1971-1975" to="coal (conv pul)"/>
+                            <rewrite from="CSP_int_storage" to="CSP_storage"/>
+                            <rewrite from="coal_int_IGCC" to="coal (IGCC)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1961-1965" to="coal (conv pul)"/>
+                            <rewrite from="wind_int_storage" to="wind_storage"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1951-1955" to="coal (conv pul)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 2006-2010" to="coal (conv pul)"/>
+                            <rewrite from="nuc_int_Gen II" to="Gen_II_LWR"/>
+                            <rewrite from="biomass_base_IGCC" to="biomass (IGCC)"/>
+                            <rewrite from="coal_peak_conv pul_fast_retire" to="coal (conv pul)"/>
+                            <rewrite from="biomass_subpeak_IGCC_CCS" to="biomass (IGCC CCS)"/>
+                            <rewrite from="PV_int_storage" to="PV_storage"/>
+                            <rewrite from="gas_int_CC_CCS" to="gas (CC CCS)"/>
+                            <rewrite from="gas_int_steam/CT" to="gas (steam/CT)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1981-1985" to="coal (conv pul)"/>
+                            <rewrite from="biomass_int_conv" to="biomass (conv)"/>
+                            <rewrite from="hydro_base" to="hydro"/>
+                            <rewrite from="geo_base" to="geothermal"/>
+                            <rewrite from="CSP_peak_storage" to="CSP_storage"/>
+                            <rewrite from="coal_peak_conv pul_CCS" to="coal (conv pul CCS)"/>
+                            <rewrite from="biomass_subpeak_conv_CCS" to="biomass (conv CCS)"/>
+                            <rewrite from="PV_subpeak" to="PV"/>
+                            <rewrite from="biomass_base_conv" to="biomass (conv)"/>
+                            <rewrite from="coal_subpeak_conv pul_slow_retire" to="coal (conv pul)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 2001-2005" to="coal (conv pul)"/>
+                            <rewrite from="refined liquids_peak_CC" to="refined liquids (CC)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1966-1970" to="coal (conv pul)"/>
+                            <rewrite from="coal_base_conv pul" to="coal (conv pul)"/>
+                            <rewrite from="refined liquids_subpeak_CC" to="refined liquids (CC)"/>
+                            <rewrite from="geo_subpeak" to="geothermal"/>
+                            <rewrite from="coal_int_conv pul_slow_retire before 1950" to="coal (conv pul)"/>
+                            <rewrite from="biomass_peak_conv_CCS" to="biomass (conv CCS)"/>
+                            <rewrite from="nuc_int_Gen III" to="Gen_III"/>
+                            <rewrite from="hydro_int" to="hydro"/>
+                            <rewrite from="wind_subpeak_storage" to="wind_storage"/>
+                            <rewrite from="refined liquids_base_steam/CT" to="refined liquids (steam/CT)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire" to="coal (conv pul)"/>
+                            <rewrite from="wind_base_storage" to="wind_storage"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1976-1980" to="coal (conv pul)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1961-1965" to="coal (conv pul)"/>
+                            <rewrite from="biomass_int_IGCC" to="biomass (IGCC)"/>
+                            <rewrite from="gas_subpeak_CC_CCS" to="gas (CC CCS)"/>
+                            <rewrite from="refined liquids_subpeak_CC_CCS" to="refined liquids (CC CCS)"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1971-1975" to="coal (conv pul)"/>
+                            <rewrite from="PV_peak_storage" to="PV_storage"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 2006-2010" to="coal (conv pul)"/>
+                            <rewrite from="coal_int_conv pul_slow_retire 1996-2000" to="coal (conv pul)"/>
+                            <rewrite from="refined liquids_subpeak_steam/CT" to="refined liquids (steam/CT)"/>
+                            <rewrite from="coal_int_conv pul_fast_retire" to="coal (conv pul)"/>
+                            <rewrite from="biomass_peak_conv" to="biomass (conv)"/>
+                            <rewrite from="gas_base_CC_CCS" to="gas (CC CCS)"/>
+                            <rewrite from="hydro_subpeak" to="hydro"/>
+                            <rewrite from="coal_base_conv pul_slow_retire 1986-1990" to="coal (conv pul)"/>
+                        </level>
+                    </labelRewriteList>
+                </supplyDemandQuery>
+	</aQuery>
+
+
+
+
+
+</queries>

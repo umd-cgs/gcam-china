@@ -1,4 +1,4 @@
-# File: trnUCD_NBS_mapping.csv
+# File:trnUCD_NBS_mapping.csv
 # Title: trnUCD_NBS_mapping
 # Units: NA
 # Column types: cccc
@@ -8,6 +8,7 @@ Air Domestic,refined liquids,"Transportation, Telecommunications, Postal",Kerose
 Air International,refined liquids,"Transportation, Telecommunications, Postal",Kerosene
 Bus,gas,"Transportation, Telecommunications, Postal",Natural Gas
 Bus,refined liquids,"Transportation, Telecommunications, Postal",Diesel Oil
+Bus,electricity,"Transportation, Telecommunications, Postal",Gasoline
 HSR,electricity,"Transportation, Telecommunications, Postal",Electricity
 LDV_2W,electricity,"Transportation, Telecommunications, Postal",Gasoline
 LDV_2W,refined liquids,"Transportation, Telecommunications, Postal",Gasoline
@@ -26,3 +27,4 @@ Ship Domestic,refined liquids,"Transportation, Telecommunications, Postal",Fuel 
 Ship International,refined liquids,"Transportation, Telecommunications, Postal",Fuel Oil
 Truck,refined liquids,"Transportation, Telecommunications, Postal",Diesel Oil
 Truck,gas,"Transportation, Telecommunications, Postal",Diesel Oil
+Truck,electricity,"Transportation, Telecommunications, Postal",Gasoline

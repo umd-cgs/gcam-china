@@ -1,0 +1,46 @@
+# File: A323.subsector_interp.csv
+# Title:default subsector shareweight interpolation
+# Units: NA
+# Column types: ccccccc
+# ----------
+supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
+IRONSTL,BLASTFUR,share-weight,final-calibration-year,end-year,,linear
+IRONSTL,EAF with DRI,share-weight,final-calibration-year,end-year,,linear
+IRONSTL,EAF with scrap,share-weight,final-calibration-year,end-year,,linear
+coke,coke,share-weight,final-calibration-year,end-year,,fixed
+chemicals,chemicals,share-weight,final-calibration-year,end-year,,fixed
+chemical energy use,coal,share-weight,final-calibration-year,end-year,,fixed
+chemical energy use,gas,share-weight,final-calibration-year,end-year,,fixed
+chemical energy use,liquid,share-weight,final-calibration-year,end-year,,fixed
+chemical energy use,biomass,share-weight,final-calibration-year,end-year,,fixed
+chemical energy use,hydrogen,share-weight,final-calibration-year,end-year,,linear
+chemical energy use,electricity,share-weight,final-calibration-year,end-year,,fixed
+chemical feedstock,coal,share-weight,final-calibration-year,end-year,,fixed
+chemical feedstock,gas,share-weight,final-calibration-year,end-year,,fixed
+chemical feedstock,liquid,share-weight,final-calibration-year,end-year,,fixed
+agriculture energy use,coal,share-weight,final-calibration-year,end-year,,fixed
+agriculture energy use,gas,share-weight,final-calibration-year,end-year,,fixed
+agriculture energy use,liquid,share-weight,final-calibration-year,end-year,,fixed
+agriculture energy use,biomass,share-weight,final-calibration-year,end-year,,fixed
+agriculture energy use,hydrogen,share-weight,final-calibration-year,end-year,,linear
+agriculture energy use,electricity,share-weight,final-calibration-year,2050,,linear
+mining energy use,coal,share-weight,final-calibration-year,end-year,,fixed
+mining energy use,gas,share-weight,final-calibration-year,end-year,,fixed
+mining energy use,liquid,share-weight,final-calibration-year,end-year,,fixed
+mining energy use,biomass,share-weight,final-calibration-year,end-year,,fixed
+mining energy use,hydrogen,share-weight,final-calibration-year,end-year,,linear
+mining energy use,electricity,share-weight,final-calibration-year,2050,,linear
+construction,construction,share-weight,final-calibration-year,end-year,,fixed
+construction energy use,coal,share-weight,final-calibration-year,end-year,,fixed
+construction energy use,gas,share-weight,final-calibration-year,end-year,,fixed
+construction energy use,liquid,share-weight,final-calibration-year,end-year,,fixed
+construction energy use,biomass,share-weight,final-calibration-year,end-year,,fixed
+construction energy use,hydrogen,share-weight,final-calibration-year,end-year,,linear
+construction energy use,electricity,share-weight,final-calibration-year,2050,,linear
+construction feedstocks,coal,share-weight,final-calibration-year,end-year,,fixed
+construction feedstocks,gas,share-weight,final-calibration-year,end-year,,fixed
+construction feedstocks,liquid,share-weight,final-calibration-year,end-year,,fixed
+agriculture energy use,district heat,share-weight,final-calibration-year,end-year,,fixed
+chemical energy use,district heat,share-weight,final-calibration-year,end-year,,fixed
+construction energy use,district heat,share-weight,final-calibration-year,end-year,,fixed
+mining energy use,district heat,share-weight,final-calibration-year,end-year,,fixed

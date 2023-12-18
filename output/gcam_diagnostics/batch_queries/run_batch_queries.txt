@@ -1,0 +1,26 @@
+InterfaceMain: batchFile: ..\batch_queries\test.xml
+Running headless? true
+The database is not open.
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Before Function: 1701850731934
+Before Function: 1701850731934
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' and
+            not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
+                @name='industrial feedstocks' or @name='renewable'  or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' and
+            not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
+                @name='industrial feedstocks' or @name='renewable'  or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+In Function: 1701850731935
+In Function: 1701850731934
+After build Tree: 1701850773107
+After Add table: 1701850773120
+Completed 100.0% of batch queries.
+After build Tree: 1701850784082
+After Add table: 1701850784082
+INFO; Successfully ran batch query
+INFO; Finished running batch file
