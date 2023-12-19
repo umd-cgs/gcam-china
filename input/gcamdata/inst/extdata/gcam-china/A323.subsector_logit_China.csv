@@ -4,9 +4,9 @@
 # Column types: ccic
 # ----------
 supplysector,subsector,logit.exponent,logit.type
-IRONSTL,IRONSTL,-1,relative-cost-logit
+iron and steel,iron and steel,-1,relative-cost-logit
 coke,coke,0,relative-cost-logit
 construction,construction,0,relative-cost-logit
 mining energy use,mining energy use,0,relative-cost-logit
-agriculture energy use,agriculture energy use,0,relative-cost-logit
-chemicals,chemicals,0,relative-cost-logit
+agricultural energy use,agricultural energy use,0,relative-cost-logit
+chemical,chemical,0,relative-cost-logit

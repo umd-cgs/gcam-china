@@ -21,8 +21,10 @@ module_gcamchina_batch_detailed_industry_CHINA_xml <- function(command, ...) {
              "L2323.SubsectorInterp_detailed_industry",
              "L2323.StubTech_detailed_industry",
              "L2323.GlobalTechShrwt_detailed_industry",
+             "L2323.StubTechShrwt_detailed_industry",
              "L2323.GlobalTechCoef_detailed_industry",
              "L2323.GlobalTechCost_detailed_industry",
+             "L2323.StubTechCost_detailed_industry",
              "L2323.GlobalTechCapture_detailed_industry",
              "L2323.StubTechProd_detailed_industry",
              "L2323.StubTechMarket_detailed_industry",
@@ -55,8 +57,10 @@ module_gcamchina_batch_detailed_industry_CHINA_xml <- function(command, ...) {
 	L2323.SubsectorInterp_detailed_industry <- get_data(all_data, "L2323.SubsectorInterp_detailed_industry")
 	L2323.StubTech_detailed_industry <- get_data(all_data, "L2323.StubTech_detailed_industry")
 	L2323.GlobalTechShrwt_detailed_industry <- get_data(all_data, "L2323.GlobalTechShrwt_detailed_industry")
+	L2323.StubTechShrwt_detailed_industry <- get_data(all_data, "L2323.StubTechShrwt_detailed_industry")
 	L2323.GlobalTechCoef_detailed_industry <- get_data(all_data, "L2323.GlobalTechCoef_detailed_industry")
 	L2323.GlobalTechCost_detailed_industry <- get_data(all_data, "L2323.GlobalTechCost_detailed_industry")
+	L2323.StubTechCost_detailed_industry <- get_data(all_data, "L2323.StubTechCost_detailed_industry")
 	L2323.GlobalTechCapture_detailed_industry <- get_data(all_data, "L2323.GlobalTechCapture_detailed_industry")
 	L2323.StubTechProd_detailed_industry <- get_data(all_data, "L2323.StubTechProd_detailed_industry")
 	L2323.StubTechMarket_detailed_industry <- get_data(all_data, "L2323.StubTechMarket_detailed_industry")
@@ -87,9 +91,11 @@ module_gcamchina_batch_detailed_industry_CHINA_xml <- function(command, ...) {
       add_xml_data(L2323.SubsectorShrwtFllt_detailed_industry, "SubsectorShrwtFllt") %>%
       add_xml_data(L2323.SubsectorInterp_detailed_industry, "SubsectorInterp") %>%
       add_xml_data(L2323.StubTech_detailed_industry, "StubTech") %>%
-      add_xml_data(L2323.GlobalTechShrwt_detailed_industry, "GlobalTechShrwt") %>%
-      add_xml_data(L2323.GlobalTechCoef_detailed_industry, "GlobalTechCoef") %>%
-      add_xml_data(L2323.GlobalTechCost_detailed_industry, "GlobalTechCost") %>%
+      #add_xml_data(L2323.GlobalTechShrwt_detailed_industry, "GlobalTechShrwt") %>%
+	    add_xml_data(L2323.StubTechShrwt_detailed_industry, "StubTechShrwt") %>%
+      #add_xml_data(L2323.GlobalTechCoef_detailed_industry, "GlobalTechCoef") %>%
+      #add_xml_data(L2323.GlobalTechCost_detailed_industry, "GlobalTechCost") %>%
+	    add_xml_data(L2323.StubTechCost_detailed_industry, "StubTechCost") %>%
       add_xml_data(L2323.GlobalTechCapture_detailed_industry, "GlobalTechCapture") %>%
       add_xml_data(L2323.StubTechProd_detailed_industry, "StubTechProd") %>%
       add_xml_data(L2323.StubTechMarket_detailed_industry, "StubTechMarket") %>%
@@ -115,9 +121,11 @@ module_gcamchina_batch_detailed_industry_CHINA_xml <- function(command, ...) {
              "L2323.SubsectorShrwtFllt_detailed_industry",
              "L2323.SubsectorInterp_detailed_industry",
              "L2323.StubTech_detailed_industry",
-             "L2323.GlobalTechShrwt_detailed_industry",
-             "L2323.GlobalTechCoef_detailed_industry",
-             "L2323.GlobalTechCost_detailed_industry",
+             #"L2323.GlobalTechShrwt_detailed_industry",
+             "L2323.StubTechShrwt_detailed_industry",
+             #"L2323.GlobalTechCoef_detailed_industry",
+             #"L2323.GlobalTechCost_detailed_industry",
+             "L2323.StubTechCost_detailed_industry",
              "L2323.GlobalTechCapture_detailed_industry",
              "L2323.StubTechProd_detailed_industry",
              "L2323.StubTechMarket_detailed_industry",

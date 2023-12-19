@@ -4,17 +4,16 @@
 # Column types: cccnnnn
 # ----------
 supplysector,subsector,technology,1971,2019,2020,2100
-IRONSTL,BLASTFUR,BLASTFUR,1,1,1,0.1
-IRONSTL,BLASTFUR,BLASTFUR CCS,0,0,1,0.1
-IRONSTL,BLASTFUR,Biomass based,0,0,0,0.1
-IRONSTL,EAF with DRI,EAF with DRI,0,0,1,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,0,0,1,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,0,0,0,0
-IRONSTL,EAF with scrap,EAF with scrap,1,1,1,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,0,0,1,1
+iron and steel,BLASTFUR,BLASTFUR,1,1,1,0.1
+iron and steel,BLASTFUR,BLASTFUR CCS,0,0,1,0.1
+iron and steel,BLASTFUR,Biomass-based,0,0,0,0.1
+iron and steel,EAF with DRI,EAF with DRI,0,0,1,1
+iron and steel,EAF with DRI,EAF with DRI CCS,0,0,1,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,0,0,0,0
+iron and steel,EAF with scrap,EAF with scrap,1,1,1,1
 coke,coke,coke,1,1,1,1
 coke,coke,coke CCS,0,0,1,1
-chemicals,chemicals,chemicals,1,1,1,1
+chemical,chemical,chemical,1,1,1,1
 chemical energy use,coal,coal,1,1,1,1
 chemical energy use,coal,coal CCS,0,0,1,1
 chemical energy use,gas,gas,1,1,1,1
@@ -24,15 +23,15 @@ chemical energy use,liquid,liquid CCS,0,0,1,1
 chemical energy use,biomass,biomass,1,1,1,1
 chemical energy use,hydrogen,hydrogen,0,0,0,0.1
 chemical energy use,electricity,electricity,1,1,1,1
-chemical feedstock,coal,coal,1,1,1,1
-chemical feedstock,gas,gas,1,1,1,1
-chemical feedstock,liquid,liquid,1,1,1,1
-agriculture energy use,coal,coal,1,1,1,1
-agriculture energy use,gas,gas,1,1,1,1
-agriculture energy use,liquid,liquid,1,1,1,1
-agriculture energy use,biomass,biomass,1,1,1,1
-agriculture energy use,hydrogen,hydrogen,0,0,0,0.1
-agriculture energy use,electricity,electricity,1,1,1,1
+chemical feedstocks,coal,coal,1,1,1,1
+chemical feedstocks,gas,gas,1,1,1,1
+chemical feedstocks,liquid,liquid,1,1,1,1
+agricultural energy use,coal,coal,1,1,1,1
+agricultural energy use,gas,gas,1,1,1,1
+agricultural energy use,liquid,liquid,1,1,1,1
+agricultural energy use,biomass,biomass,1,1,1,1
+agricultural energy use,hydrogen,hydrogen,0,0,0,0.1
+agricultural energy use,electricity,electricity,1,1,1,1
 mining energy use,coal,coal,1,1,1,1
 mining energy use,gas,gas,1,1,1,1
 mining energy use,liquid,liquid,1,1,1,1
@@ -49,7 +48,7 @@ construction energy use,electricity,electricity,1,1,1,1
 construction feedstocks,coal,coal,1,1,1,1
 construction feedstocks,gas,gas,1,1,1,1
 construction feedstocks,liquid,liquid,1,1,1,1
-agriculture energy use,district heat,district heat,1,1,1,1
+agricultural energy use,district heat,district heat,1,1,1,1
 chemical energy use,district heat,district heat,1,1,1,1
 construction energy use,district heat,district heat,1,1,1,1
 mining energy use,district heat,district heat,1,1,1,1

@@ -4,9 +4,9 @@
 # Column types: ccccic
 # ----------
 supplysector,output.unit,input.unit,price.unit,logit.exponent,logit.type
-IRONSTL,Mt,EJ or Mt,1975$/GJ,0,
+iron and steel,Mt,EJ or Mt,1975$/GJ,0,
 coke,Mt,EJ or Mt,1975$/GJ,0,
 construction,EJ,EJ,1975$/GJ,0,
 mining energy use,EJ,EJ,1975$/GJ,0,
-agriculture energy use,EJ,EJ,1975$/GJ,0,
-chemicals,EJ,EJ,1975$/GJ,0,
+agricultural energy use,EJ,EJ,1975$/GJ,0,
+chemical,EJ,EJ,1975$/GJ,0,

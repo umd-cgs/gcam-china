@@ -4,26 +4,26 @@
 # Column types: ccic
 # ----------
 supplysector,subsector,logit.exponent,logit.type
-IRONSTL,BLASTFUR,-3,relative-cost-logit
-IRONSTL,EAF with DRI,-3,relative-cost-logit
-IRONSTL,EAF with scrap,-3,relative-cost-logit
+iron and steel,BLASTFUR,-3,relative-cost-logit
+iron and steel,EAF with DRI,-3,relative-cost-logit
+iron and steel,EAF with scrap,-3,relative-cost-logit
 coke,coke,-3,relative-cost-logit
-chemicals,chemicals,-3,relative-cost-logit
+chemical,chemical,-3,relative-cost-logit
 chemical energy use,coal,-3,relative-cost-logit
 chemical energy use,gas,-3,relative-cost-logit
 chemical energy use,liquid,-3,relative-cost-logit
 chemical energy use,biomass,-3,relative-cost-logit
 chemical energy use,hydrogen,-3,relative-cost-logit
 chemical energy use,electricity,-3,relative-cost-logit
-chemical feedstock,coal,-3,relative-cost-logit
-chemical feedstock,gas,-3,relative-cost-logit
-chemical feedstock,liquid,-3,relative-cost-logit
-agriculture energy use,coal,-3,relative-cost-logit
-agriculture energy use,gas,-3,relative-cost-logit
-agriculture energy use,liquid,-3,relative-cost-logit
-agriculture energy use,biomass,-3,relative-cost-logit
-agriculture energy use,hydrogen,-3,relative-cost-logit
-agriculture energy use,electricity,-3,relative-cost-logit
+chemical feedstocks,coal,-3,relative-cost-logit
+chemical feedstocks,gas,-3,relative-cost-logit
+chemical feedstocks,liquid,-3,relative-cost-logit
+agricultural energy use,coal,-3,relative-cost-logit
+agricultural energy use,gas,-3,relative-cost-logit
+agricultural energy use,liquid,-3,relative-cost-logit
+agricultural energy use,biomass,-3,relative-cost-logit
+agricultural energy use,hydrogen,-3,relative-cost-logit
+agricultural energy use,electricity,-3,relative-cost-logit
 mining energy use,coal,-3,relative-cost-logit
 mining energy use,gas,-3,relative-cost-logit
 mining energy use,liquid,-3,relative-cost-logit
@@ -40,7 +40,7 @@ construction energy use,electricity,-3,relative-cost-logit
 construction feedstocks,coal,-3,relative-cost-logit
 construction feedstocks,gas,-3,relative-cost-logit
 construction feedstocks,liquid,-3,relative-cost-logit
-agriculture energy use,district heat,-3,relative-cost-logit
+agricultural energy use,district heat,-3,relative-cost-logit
 chemical energy use,district heat,-3,relative-cost-logit
 construction energy use,district heat,-3,relative-cost-logit
 mining energy use,district heat,-3,relative-cost-logit

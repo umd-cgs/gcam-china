@@ -61,7 +61,7 @@
 	       	 	 }; 
 	       	 	 declare function local:generate-sector-output-coefs($inputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
                  if(empty($inputNameQueue)) then $coefs
-                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","IRONSTL" ),
+                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","iron and steel" ),
 $inputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$inputNameQueue[1]]))
 then 
 local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs, $is_usa)
