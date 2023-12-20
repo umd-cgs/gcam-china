@@ -446,7 +446,7 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
 
     # L2323.BaseService_detailed_industry: base-year service output of detailed_industry
     sector_list = c("iron and steel","construction","mining energy use",
-                    "agriculture energy use","chemicals")
+                    "agricultural energy use","chemical")
 
     L2323.StubTechProd_detailed_industry %>%
       filter(supplysector %in% sector_list) %>%
