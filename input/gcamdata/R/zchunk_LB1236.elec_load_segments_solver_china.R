@@ -703,8 +703,8 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.9) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.1) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
