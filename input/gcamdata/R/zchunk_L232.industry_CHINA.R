@@ -176,6 +176,11 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
                   select(region,year,Exports) %>%
                   mutate(region = gcamchina.REGION), by = c("region", "year")) %>%
       mutate(calOutputValue=calOutputValue-Exports)%>%
+      # remove negative values
+      # negative values mean that China is exporting iron and steel to the global market
+      # this part will be addressed in input/extra/trade_iron_steel_China_offset.xml
+      # TODO: convert trade_iron_steel_China_offset.xml into a chunk
+      mutate(calOutputValue=if_else(calOutputValue < 0, 0, calOutputValue))%>%
       select(-Exports)-> L232.Production_reg_imp
 
     # Update base-year service for China region to match the above calculated net iron and steel imports
