@@ -93,7 +93,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    filter(fuel == "heat") %>%
 	    select(province,fuel,year,value) %>%
 	    left_join(L144.in_EJ_province_bld_F_U %>%
-	                filter(service == "Heating") %>%
+	                filter(fuel == "heat") %>%
 	                select(province, fuel, year, value) %>%
 	                group_by(province, fuel, year) %>%
 	                summarise(value = sum(value)) %>%
