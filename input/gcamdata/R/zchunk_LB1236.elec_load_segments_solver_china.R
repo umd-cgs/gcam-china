@@ -699,12 +699,13 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
             # # Part 3 : Central China Grid
             if (L1236.region %in% c("Central China Grid")){
               L1236.grid_elec_supply %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.9) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.1) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%

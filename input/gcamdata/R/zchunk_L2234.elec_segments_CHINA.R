@@ -586,6 +586,9 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
     L2234.StubTechProd_elecS_CHINA %>%
       # join will produce NAs; left_join_error_no_match throws error, so left_join used
       left_join(L2234.fuelfractions_segment_CHINA, by = c("region", "supplysector", "subsector", "year")) %>%
+      # YO adjust for gas test
+      # Dec 25 2023
+      mutate(tech.share = if_else(stub.technology %in% c("gas_base_CC", "gas_int_CC") & fraction > 0, 1, tech.share)) %>%
       mutate(calOutputValue = subscalOutputValue * fraction * tech.share) %>%
       select(-fraction, -tech.share, -subscalOutputValue) %>%
       replace_na(list(calOutputValue = 0)) %>%
