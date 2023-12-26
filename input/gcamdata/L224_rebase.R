@@ -125,9 +125,20 @@ L124.out_EJ_R_heatfromelec_F_Yh %>%
   select(-multiplier) ->
   L124.out_EJ_province_heatfromelec_F_Yh
 
+no_gas_tech_2010 <- L2234.StubTechProd_elecS_CHINA %>%
+  filter(year == 2010 & subsector == "gas") %>%
+  filter(grepl("steam/CT", stub.technology)) %>%
+  group_by(region, year) %>%
+  summarise(no_gas = sum(calOutputValue)) %>%
+  ungroup() %>%
+  filter(no_gas == 0)
+
 #Just move gas CHP to coal, because some region do not have gas generation
 L124.out_EJ_province_heatfromelec_F_Yh %>%
   mutate(fuel_new = if_else((region %in% c("NX","FJ","HN","JX") & (fuel == "gas")),"coal",fuel)) %>%
+  mutate(fuel = fuel_new) %>%
+  select(-fuel_new) %>%
+  mutate(fuel_new = if_else((region %in% no_gas_tech_2010$region & year == 2010 & (fuel == "gas")),"coal",fuel)) %>%
   mutate(fuel = fuel_new) %>%
   group_by(region, fuel, sector, year) %>%
   summarise(value = sum(value)) %>%
