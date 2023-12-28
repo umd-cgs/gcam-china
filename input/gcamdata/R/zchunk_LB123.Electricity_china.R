@@ -85,6 +85,9 @@ module_gcamchina_LB123.Electricity <- function(command, ...) {
     L101.inNBS_Mtce_province_S_F %>%
       filter(sector == "electricity", fuel %in% c("refined liquids", "gas")) %>%
       replace_na(list(value = 0))  %>%
+      # YO 2023
+      # remove small negative values (such as JX gas in 2010)
+      mutate(value = if_else( value > 0, 0, value)) %>%
       select(-sector) %>%
       bind_rows(L123.GWh_province_F_elec_out)  %>%
       # In Tibet, refined liquids inherits oil and gas inherits natural gas
@@ -216,7 +219,8 @@ module_gcamchina_LB123.Electricity <- function(command, ...) {
                      "L132.out_EJ_province_indchp_F") ->
       L123.out_EJ_province_ownuse_elec
 
-    return_data(L123.in_EJ_province_elec_F, L123.out_EJ_province_elec_F, L123.in_EJ_province_ownuse_elec, L123.out_EJ_province_ownuse_elec)
+    return_data(L123.in_EJ_province_elec_F, L123.out_EJ_province_elec_F,
+                L123.in_EJ_province_ownuse_elec, L123.out_EJ_province_ownuse_elec)
   } else {
     stop("Unknown command")
   }

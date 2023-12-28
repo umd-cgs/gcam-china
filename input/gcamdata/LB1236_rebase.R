@@ -101,8 +101,7 @@ check_elec_segments <- function(gen_fraction, L1236.region, L1236.segment, L1236
     replace_fraction(L1236.fuel, L1236.segment, gen_fraction) -> L1236.grid_elec_supply
 
   # If fuel == gas or oil, adjust fraction of fuel consumed in peak load segment to make sure that sum of fractions is 1
-  # if (L1236.fuel == "gas" | L1236.fuel == "refined liquids") {
-    if ( L1236.fuel == "refined liquids") {
+  if (L1236.fuel == "gas" | L1236.fuel == "refined liquids") {
 
     L1236.grid_elec_supply %>%
       calc_non_segment_frac(L1236.fuel, gcamchina.ELEC_SEGMENT_PEAK) -> L1236.non_peak
@@ -396,10 +395,6 @@ for (r in seq_along(L1236.gridregion_list)){
         L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
         if(L1236.solved_fraction>0.5){
-          print(L1236.region)
-          print(segment_year)
-          print(i)
-          print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
           L1236.solved_fraction$root=0.06
         }else{
 
@@ -421,10 +416,6 @@ for (r in seq_along(L1236.gridregion_list)){
         L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
         if(L1236.solved_fraction>0.5){
-          print(L1236.region)
-          print(segment_year)
-          print(i)
-          print("Warning peak demand could not solve. So, setting it to a pre-determined value")
           L1236.solved_fraction$root=0.01
         }else{
 
@@ -487,10 +478,6 @@ for (r in seq_along(L1236.gridregion_list)){
         L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
         if(L1236.solved_fraction_int>0.5){
-          print(L1236.region)
-          print(segment_year)
-          print(i)
-          print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
           L1236.solved_fraction_int$root=0.3
         }else{
 
@@ -512,10 +499,6 @@ for (r in seq_along(L1236.gridregion_list)){
         L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
         if(L1236.solved_fraction>0.5){
-          print(L1236.region)
-          print(segment_year)
-          print(i)
-          print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
           L1236.solved_fraction$root=0.06
         }else{
 
@@ -537,10 +520,6 @@ for (r in seq_along(L1236.gridregion_list)){
         L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
         if(L1236.solved_fraction>0.5){
-          print(L1236.region)
-          print(segment_year)
-          print(i)
-          print("Warning peak demand could not solve. So, setting it to a pre-determined value")
           L1236.solved_fraction$root=0.01
         }else{
 
@@ -694,12 +673,13 @@ for (r in seq_along(L1236.gridregion_list)){
         # # Part 3 : Central China Grid
         if (L1236.region %in% c("Central China Grid")){
           L1236.grid_elec_supply %>%
-            replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
-            replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
+            replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+            replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%
             replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
             replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-            replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
-            replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
+            replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+            replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%
+            replace_fraction("hydro", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
             replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
             replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
             replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
@@ -786,6 +766,7 @@ for (r in seq_along(L1236.gridregion_list)){
 
     }
 
+
   }}
 
 # Re-join data for non calibrated years
@@ -793,9 +774,6 @@ for (r in seq_along(L1236.gridregion_list)){
 L1236.grid_elec_supply %>%
   bind_rows(L1236.grid_elec_supply_non_cal) %>%
   mutate(generation = tot_generation * fraction) -> L1236.grid_elec_supply
-
-write.csv(L1236.grid_elec_supply, "L1236.grid_elec_supply.csv", row.names = F)
-
 # ===================================================
 
 # Produce outputs
