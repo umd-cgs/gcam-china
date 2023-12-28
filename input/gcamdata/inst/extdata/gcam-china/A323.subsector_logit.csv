@@ -4,9 +4,9 @@
 # Column types: ccic
 # ----------
 supplysector,subsector,logit.exponent,logit.type
-iron and steel,BLASTFUR,-3,relative-cost-logit
-iron and steel,EAF with DRI,-3,relative-cost-logit
-iron and steel,EAF with scrap,-3,relative-cost-logit
+iron and steel,BLASTFUR,-6,relative-cost-logit
+iron and steel,EAF with DRI,-6,relative-cost-logit
+iron and steel,EAF with scrap,-6,relative-cost-logit
 coke,coke,-3,relative-cost-logit
 chemical,chemical,-3,relative-cost-logit
 chemical energy use,coal,-3,relative-cost-logit

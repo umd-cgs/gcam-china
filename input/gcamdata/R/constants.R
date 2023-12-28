@@ -1132,7 +1132,7 @@ gcamchina.USE_UNIFORM_CSTORAGE_MARKET <- FALSE
 
 gcamchina.REGIONAL_FUEL_MARKETS <- c("delivered coal", "wholesale gas", "delivered gas",
                                      "refined liquids industrial", "refined liquids enduse")
-									 
+
 #Fuels whose markets will be represented with state-specific prices
 gcamchina.PROVINCE_FUEL_MARKETS <- c(gcamchina.ELECT_TD_SECTORS, "H2 industrial", "H2 retail delivery",
                                      "H2 retail dispensing", "H2 wholesale delivery", "H2 wholesale dispensing",
@@ -1170,6 +1170,9 @@ gcamchina.ELEC_SEGMENT_INT <- "intermediate generation"
 gcamchina.ELEC_SEGMENT_SUBPEAK <- "subpeak generation"
 gcamchina.ELEC_SEGMENT_PEAK <- "peak generation"
 
+
+# Indicate whether to use low industry demand  (FALSE = national markets consistent with GCAM global)
+gcamchina.USE_LOW_IND_DEMAND  <- TRUE
 
 
 

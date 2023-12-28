@@ -4,12 +4,12 @@
 # Column types: cccnnnn
 # ----------
 supplysector,subsector,technology,1971,2019,2020,2100
-iron and steel,BLASTFUR,BLASTFUR,1,1,1,0.1
-iron and steel,BLASTFUR,BLASTFUR CCS,0,0,1,0.1
-iron and steel,BLASTFUR,Biomass-based,0,0,0,0.1
+iron and steel,BLASTFUR,BLASTFUR,1,1,1,1
+iron and steel,BLASTFUR,BLASTFUR CCS,0,0,1,1
+iron and steel,BLASTFUR,Biomass-based,0,0,0,1
 iron and steel,EAF with DRI,EAF with DRI,0,0,1,1
 iron and steel,EAF with DRI,EAF with DRI CCS,0,0,1,1
-iron and steel,EAF with DRI,Hydrogen-based DRI,0,0,0,0
+iron and steel,EAF with DRI,Hydrogen-based DRI,0,0,1,1
 iron and steel,EAF with scrap,EAF with scrap,1,1,1,1
 coke,coke,coke,1,1,1,1
 coke,coke,coke CCS,0,0,1,1

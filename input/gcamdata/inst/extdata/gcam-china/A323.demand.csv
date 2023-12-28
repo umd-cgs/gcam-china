@@ -5,8 +5,8 @@
 # Column types: cin
 # ----------
 energy.final.demand,perCapitaBased,price.elasticity
-iron and steel,1,0
-chemical,1,0
-agricultural energy use,1,0
-mining energy use,1,0
-construction,1,0
+iron and steel,1,-0.1
+chemical,1,-0.4
+agricultural energy use,1,-0.4
+mining energy use,1,-0.4
+construction,1,-0.4

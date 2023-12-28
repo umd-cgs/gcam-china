@@ -10,9 +10,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -34,9 +35,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_chem_input_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -58,9 +60,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_chem_production_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -82,9 +85,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_emissions_by_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -106,9 +110,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_emissions_sector_nobio_v2.xml</queryFile>
             <!-- Where to write results -->
@@ -130,9 +135,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_prices.xml</queryFile>
             <!-- Where to write results -->
@@ -154,9 +160,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_CO2_squestration_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -178,9 +185,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cost_industry_techs.xml</queryFile>
             <!-- Where to write results -->
@@ -202,9 +210,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_elec_energy_input_by_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -226,9 +235,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_elec_gen_by_gen_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -250,9 +260,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_elec_prices_sector.xml</queryFile>
             <!-- Where to write results -->
@@ -274,9 +285,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_final_energy_con_by_sector_fuel.xml</queryFile>
             <!-- Where to write results -->
@@ -298,9 +310,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_final_energy_prices.xml</queryFile>
             <!-- Where to write results -->
@@ -322,9 +335,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_global_mean_temp.xml</queryFile>
             <!-- Where to write results -->
@@ -346,9 +360,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_hydrogen_inputs_by_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -370,9 +385,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_hydrogen_production_by_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -394,9 +410,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_industry_energy_tech_fuel.xml</queryFile>
             <!-- Where to write results -->
@@ -418,9 +435,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_industry_feedstocks_type.xml</queryFile>
             <!-- Where to write results -->
@@ -442,9 +460,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_industry_output_sector.xml</queryFile>
             <!-- Where to write results -->
@@ -466,9 +485,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_ironsteel_input_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -490,9 +510,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_ironsteel_production_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -514,9 +535,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_transportation_final_energy_by_tech_fuel.xml</queryFile>
             <!-- Where to write results -->
@@ -538,9 +560,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+             <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_reg_per_capita_GDP.xml</queryFile>
             <!-- Where to write results -->
@@ -562,9 +585,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -586,9 +610,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_reg_population.xml</queryFile>
             <!-- Where to write results -->
@@ -610,9 +635,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -634,9 +660,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_total_climate_forcing.xml</queryFile>
             <!-- Where to write results -->
             <outFile>E:\Github\detailed_ind_China\batch_query_total_climate_forcing.csv</outFile>
@@ -657,9 +684,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_LUC_emissions_by_region.xml</queryFile>
             <!-- Where to write results -->
@@ -681,9 +709,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_primary_energy_con_by_region.xml</queryFile>
             <!-- Where to write results -->
@@ -705,9 +734,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_ref_liq_production_by_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -729,9 +759,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_primary_energy_consumption_with_CCS_by_region.xml</queryFile>
             <!-- Where to write results -->
@@ -754,9 +785,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_primary_energy_con_by_region.xml</queryFile>
             <!-- Where to write results -->
@@ -779,9 +811,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -804,9 +837,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
             <!-- Where to write results -->
@@ -829,9 +863,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_building_energy_tech_fuel.xml</queryFile>
             <!-- Where to write results -->
@@ -854,9 +889,10 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="GCAM_China_Reference"/>
-            <scenario name="GCAM_China_tax_100"/>
-			<scenario name="GCAM_China_tax_25"/>
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_cement_production_tech.xml</queryFile>
             <!-- Where to write results -->

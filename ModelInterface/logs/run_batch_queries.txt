@@ -3,78 +3,78 @@ Running headless? true
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701690844752
-Before Function: 1701690844752
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
+Before Function: 1703561757076
+Before Function: 1703561757076
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
+In Function: 1703561757076
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-In Function: 1701690844753
-In Function: 1701690844753
-After build Tree: 1701690851330
-After Add table: 1701690851333
+In Function: 1703561757076
+After build Tree: 1703561760024
+After Add table: 1703561760027
 Completed 100.0% of batch queries.
-After build Tree: 1701690852034
-After Add table: 1701690852034
+After build Tree: 1703561761736
+After Add table: 1703561761736
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701690852050
-Before Function: 1701690852050
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]//*[@type='input']/demand-physical/node()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]//*[@type='input']/demand-physical/node()
-In Function: 1701690852051
-In Function: 1701690852051
-After build Tree: 1701690860083
-After Add table: 1701690860084
+Before Function: 1703561761850
+Before Function: 1703561761850
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]//*[@type='input']/demand-physical/node()
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]//*[@type='input']/demand-physical/node()
+In Function: 1703561761851
+In Function: 1703561761851
+After build Tree: 1703561767411
+After Add table: 1703561767412
 Completed 100.0% of batch queries.
-After build Tree: 1701690861127
-After Add table: 1701690861127
+After build Tree: 1703561769394
+After Add table: 1703561769394
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701690861142
-Before Function: 1701690861142
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]/
+Before Function: 1703561769499
+Before Function: 1703561769499
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]/
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='chemical energy use' or @name='chemical feedstocks')]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-In Function: 1701690861143
-In Function: 1701690861143
-After build Tree: 1701690862841
-After Add table: 1701690862842
+In Function: 1703561769499
+In Function: 1703561769500
+After build Tree: 1703561771980
+After Add table: 1703561771983
 Completed 100.0% of batch queries.
-After build Tree: 1701690863599
-After Add table: 1701690863599
+After build Tree: 1703561772923
+After Add table: 1703561772923
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701690863616
-Before Function: 1701690863616
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+Before Function: 1703561773025
+Before Function: 1703561773025
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
             CO2/emissions/node()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
             CO2/emissions/node()
-In Function: 1701690863616
-In Function: 1701690863616
-After build Tree: 1701690983521
-After Add table: 1701690983546
+In Function: 1703561773026
+In Function: 1703561773026
+After build Tree: 1703561875318
+After Add table: 1703561875348
 Completed 100.0% of batch queries.
-After build Tree: 1701690995300
-After Add table: 1701690995301
+After build Tree: 1703561892212
+After Add table: 1703561892214
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701690995562
-Before Function: 1701690995562
+Before Function: 1703561892618
+Before Function: 1703561892618
 About to perform query:  
                declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
 	       	 		 let $scn := $parent/ancestor::scenario,
@@ -97,7 +97,7 @@ About to perform query:
 	       	 	 }; 
 	       	 	 declare function local:generate-sector-output-coefs($inputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
                  if(empty($inputNameQueue)) then $coefs
-                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","IRONSTL" ),
+                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","iron and steel" ),
 $inputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$inputNameQueue[1]]))
 then 
 local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs, $is_usa)
@@ -181,7 +181,7 @@ local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs
                     return local:append-heirarchy($currTree, local:apply-coefs($sectorName, $currEmissSectors[@name=$sectorName]//CO2/emissions, $coefs))//text()
 			 	 } 
 	 	 };
-		 local:run-emiss-by-enduse(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('Global'), ())
+		 local:run-emiss-by-enduse(('Reference_high_demand 2023-25-12T22:48:38+08:00', 'Tax_100_high_demand 2023-25-12T22:48:39+08:00', 'Reference_low_demand 2023-26-12T08:20:20+08:00', 'Tax_100_low_demand 2023-24-12T16:19:55+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
                
                
 About to perform query:  
@@ -206,7 +206,7 @@ About to perform query:
 	       	 	 }; 
 	       	 	 declare function local:generate-sector-output-coefs($inputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
                  if(empty($inputNameQueue)) then $coefs
-                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","IRONSTL" ),
+                 else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('unconventional oil production', "electricity", "cement", "N fertilizer","iron and steel" ),
 $inputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$inputNameQueue[1]]))
 then 
 local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs, $is_usa)
@@ -290,72 +290,72 @@ local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs
                     return local:append-heirarchy($currTree, local:apply-coefs($sectorName, $currEmissSectors[@name=$sectorName]//CO2/emissions, $coefs))//text()
 			 	 } 
 	 	 };
-		 local:run-emiss-by-enduse(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
+		 local:run-emiss-by-enduse(('Reference_high_demand 2023-25-12T22:48:38+08:00', 'Tax_100_high_demand 2023-25-12T22:48:39+08:00', 'Reference_low_demand 2023-26-12T08:20:20+08:00', 'Tax_100_low_demand 2023-24-12T16:19:55+08:00'), ('Global'), ())
                
                
-In Function: 1701690995564
-In Function: 1701690995568
-After build Tree: 1701692203124
-After Add table: 1701692203125
+In Function: 1703561892620
+In Function: 1703561892620
+After build Tree: 1703563671436
+After Add table: 1703563671437
 Completed 100.0% of batch queries.
-After build Tree: 1701694679707
-After Add table: 1701694679707
+After build Tree: 1703566616982
+After Add table: 1703566616982
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694679768
-Before Function: 1701694679768
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/Marketplace/market[true() and contains(@name,'CO2')]/price/node()
-In Function: 1701694679768
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/Marketplace/market[true() and contains(@name,'CO2') and ContainedRegion[(child::text() = 'China') or (child::text() = 'AH') or (child::text() = 'BJ') or (child::text() = 'CQ') or (child::text() = 'FJ') or (child::text() = 'GD') or (child::text() = 'GS') or (child::text() = 'GX') or (child::text() = 'GZ') or (child::text() = 'HA') or (child::text() = 'HB') or (child::text() = 'HE') or (child::text() = 'HI') or (child::text() = 'HL') or (child::text() = 'HN') or (child::text() = 'JL') or (child::text() = 'JS') or (child::text() = 'JX') or (child::text() = 'LN') or (child::text() = 'NM') or (child::text() = 'NX') or (child::text() = 'QH') or (child::text() = 'SC') or (child::text() = 'SD') or (child::text() = 'SH') or (child::text() = 'SN') or (child::text() = 'SX') or (child::text() = 'TJ') or (child::text() = 'XJ') or (child::text() = 'XZ') or (child::text() = 'YN') or (child::text() = 'ZJ') ] ]/price/node()
-In Function: 1701694679768
-After build Tree: 1701694682567
-After Add table: 1701694682567
-After build Tree: 1701694682630
-After Add table: 1701694682630
+Before Function: 1703566617264
+Before Function: 1703566617264
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/Marketplace/market[true() and contains(@name,'CO2')]/price/node()
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/Marketplace/market[true() and contains(@name,'CO2') and ContainedRegion[(child::text() = 'China') or (child::text() = 'AH') or (child::text() = 'BJ') or (child::text() = 'CQ') or (child::text() = 'FJ') or (child::text() = 'GD') or (child::text() = 'GS') or (child::text() = 'GX') or (child::text() = 'GZ') or (child::text() = 'HA') or (child::text() = 'HB') or (child::text() = 'HE') or (child::text() = 'HI') or (child::text() = 'HL') or (child::text() = 'HN') or (child::text() = 'JL') or (child::text() = 'JS') or (child::text() = 'JX') or (child::text() = 'LN') or (child::text() = 'NM') or (child::text() = 'NX') or (child::text() = 'QH') or (child::text() = 'SC') or (child::text() = 'SD') or (child::text() = 'SH') or (child::text() = 'SN') or (child::text() = 'SX') or (child::text() = 'TJ') or (child::text() = 'XJ') or (child::text() = 'XZ') or (child::text() = 'YN') or (child::text() = 'ZJ') ] ]/price/node()
+In Function: 1703566617264
+In Function: 1703566617264
+After build Tree: 1703566622878
+After Add table: 1703566622878
 Completed 100.0% of batch queries.
+After build Tree: 1703566622902
+After Add table: 1703566622902
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694682651
-Before Function: 1701694682652
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+Before Function: 1703566622998
+Before Function: 1703566622998
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
             CO2/emissions-sequestered/node()
-In Function: 1701694682652
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
             CO2/emissions-sequestered/node()
-In Function: 1701694682652
-After build Tree: 1701694707714
-After Add table: 1701694707719
+In Function: 1703566622998
+In Function: 1703566622998
+After build Tree: 1703566684357
+After Add table: 1703566684362
 Completed 100.0% of batch queries.
-After build Tree: 1701694717883
-After Add table: 1701694717883
+After build Tree: 1703566727933
+After Add table: 1703566727933
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694717902
-Before Function: 1701694717902
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='chemical' or (exists(child::keyword[@final-energy='industry'])))]/
+Before Function: 1703566728041
+Before Function: 1703566728042
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical' or (exists(child::keyword[@final-energy='industry'])))]/
                			*[@type='subsector' ]/*[@type='technology']/cost/text()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='chemical' or (exists(child::keyword[@final-energy='industry'])))]/
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='chemical' or (exists(child::keyword[@final-energy='industry'])))]/
                			*[@type='subsector' ]/*[@type='technology']/cost/text()
-In Function: 1701694717903
-In Function: 1701694717903
-After build Tree: 1701694725264
-After Add table: 1701694725277
+In Function: 1703566728042
+In Function: 1703566728042
+After build Tree: 1703566739392
+After Add table: 1703566739409
 Completed 100.0% of batch queries.
-After build Tree: 1701694728020
-After Add table: 1701694728021
+After build Tree: 1703566743444
+After Add table: 1703566743445
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694728181
-Before Function: 1701694728181
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+Before Function: 1703566743801
+Before Function: 1703566743801
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
                @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' ) and not(contains(@name, 'water_td'))]//
                   *[@type='subsector' and not (@name='elect_td_bld')]//
                   *[@type='technology' and not(@name='biomass (conv)' or @name='biomass (conv CCS)' or @name='biomass (IGCC)' or @name='biomass (IGCC CCS)'
@@ -367,8 +367,8 @@ About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and
                    *[@type='input' and not( contains( @name, 'water')) and @name != 'oil-credits']/
                    demand-physical/node()
                 
-In Function: 1701694728181
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+In Function: 1703566743801
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
                @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' ) and not(contains(@name, 'water_td'))]//
                   *[@type='subsector' and not (@name='elect_td_bld')]//
                   *[@type='technology' and not(@name='biomass (conv)' or @name='biomass (conv CCS)' or @name='biomass (IGCC)' or @name='biomass (IGCC CCS)'
@@ -380,369 +380,369 @@ About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and
                    *[@type='input' and not( contains( @name, 'water')) and @name != 'oil-credits']/
                    demand-physical/node()
                 
-In Function: 1701694728181
-After build Tree: 1701694752882
-After Add table: 1701694752887
+In Function: 1703566743801
+After build Tree: 1703566784199
+After Add table: 1703566784205
 Completed 100.0% of batch queries.
-After build Tree: 1701694758841
-After Add table: 1701694758842
+After build Tree: 1703566787277
+After Add table: 1703566787278
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694758919
-Before Function: 1701694758920
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or 
+Before Function: 1703566787440
+Before Function: 1703566787440
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or 
                         @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or 
                         @name='elect_td_bld' or @name='industrial energy use')]//
                         *[@type='subsector']//*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
                         *[@type='output' (:collapse:) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
                         @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
                         physical-output/node()
-In Function: 1701694758920
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or 
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or 
                         @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or 
                         @name='elect_td_bld' or @name='industrial energy use')]//
                         *[@type='subsector']//*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
                         *[@type='output' (:collapse:) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
                         @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
                         physical-output/node()
-In Function: 1701694758920
-After build Tree: 1701694784557
-After Add table: 1701694784562
+In Function: 1703566787440
+In Function: 1703566787440
+After build Tree: 1703566821108
+After Add table: 1703566821114
 Completed 100.0% of batch queries.
-After build Tree: 1701694788501
-After Add table: 1701694788502
+After build Tree: 1703566825921
+After Add table: 1703566825922
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694788971
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+Before Function: 1703566826625
+Before Function: 1703566826625
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
                @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' or @name='elect_td_ind'
                or @name='elect_td_trn')]/cost/text()
-In Function: 1701694788971
-Before Function: 1701694788971
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
                @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' or @name='elect_td_ind'
                or @name='elect_td_trn')]/cost/text()
-In Function: 1701694788971
-After build Tree: 1701694789612
-After Add table: 1701694789612
+In Function: 1703566826625
+In Function: 1703566826625
+After build Tree: 1703566828185
+After Add table: 1703566828185
 Completed 100.0% of batch queries.
-After build Tree: 1701694789734
-After Add table: 1701694789734
+After build Tree: 1703566828484
+After Add table: 1703566828484
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694789753
-Before Function: 1701694789753
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+Before Function: 1703566828576
+Before Function: 1703566828576
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
             (exists(child::keyword/@final-energy)))]//*[@type='input' and
             not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
-                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn') or @name='oil-credits')]/
+                @name='industrial feedstocks' or @name='renewable'  or @name='oil-credits')]/
             demand-physical[@unit='EJ']/node()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
             (exists(child::keyword/@final-energy)))]//*[@type='input' and
             not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
-                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn') or @name='oil-credits')]/
+                @name='industrial feedstocks' or @name='renewable'  or @name='oil-credits')]/
             demand-physical[@unit='EJ']/node()
-In Function: 1701694789754
-In Function: 1701694789754
-After build Tree: 1701694832327
-After Add table: 1701694832334
+In Function: 1703566828576
+In Function: 1703566828576
+After build Tree: 1703566881159
+After Add table: 1703566881168
 Completed 100.0% of batch queries.
-After build Tree: 1701694843303
-After Add table: 1701694843303
+After build Tree: 1703566905032
+After Add table: 1703566905032
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694843365
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='wholesale gas' or @name='delivered gas' or
+Before Function: 1703566905196
+Before Function: 1703566905196
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='wholesale gas' or @name='delivered gas' or
             @name='delivered coal' or @name='delivered biomass' or @name='traditional biomass' or
             @name='elect_td_ind' or @name='elect_td_bld' or @name='elect_td_trn' or
             @name='H2 enduse'or @name='refined liquids industrial' or @name='refined liquids enduse')]/
             cost/text()
-Before Function: 1701694843366
-In Function: 1701694843366
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='wholesale gas' or @name='delivered gas' or
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='wholesale gas' or @name='delivered gas' or
             @name='delivered coal' or @name='delivered biomass' or @name='traditional biomass' or
             @name='elect_td_ind' or @name='elect_td_bld' or @name='elect_td_trn' or
             @name='H2 enduse'or @name='refined liquids industrial' or @name='refined liquids enduse')]/
             cost/text()
-In Function: 1701694843366
-After build Tree: 1701694844044
-After Add table: 1701694844045
+In Function: 1703566905196
+In Function: 1703566905196
+After build Tree: 1703566908786
+After Add table: 1703566908786
 Completed 100.0% of batch queries.
-After build Tree: 1701694844248
-After Add table: 1701694844248
+After build Tree: 1703566909072
+After Add table: 1703566909072
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694844290
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/climate-model/global-mean-temperature/text()
-In Function: 1701694844290
-After build Tree: 1701694844341
-After Add table: 1701694844341
+Before Function: 1703566909157
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/climate-model/global-mean-temperature/text()
+In Function: 1703566909157
+After build Tree: 1703566909316
+After Add table: 1703566909317
 Completed 100.0% of batch queries.
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694844367
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+Before Function: 1703566909431
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
                *[@type='subsector']/*[@type='technology']/*[@type='input']/
                demand-physical/node()
-Before Function: 1701694844367
-In Function: 1701694844367
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+Before Function: 1703566909431
+In Function: 1703566909431
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
                *[@type='subsector']/*[@type='technology']/*[@type='input']/
                demand-physical/node()
-In Function: 1701694844367
-After build Tree: 1701694848406
-After Add table: 1701694848408
+In Function: 1703566909431
+After build Tree: 1703566919633
+After Add table: 1703566919635
 Completed 100.0% of batch queries.
-After build Tree: 1701694850152
-After Add table: 1701694850152
+After build Tree: 1703566921725
+After Add table: 1703566921725
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694850185
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+Before Function: 1703566921911
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
                *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
                physical-output/node()
-Before Function: 1701694850185
-In Function: 1701694850185
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+Before Function: 1703566921911
+In Function: 1703566921911
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
                *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
                physical-output/node()
-In Function: 1701694850185
-After build Tree: 1701694852780
-After Add table: 1701694852782
+In Function: 1703566921911
+After build Tree: 1703566925514
+After Add table: 1703566925516
 Completed 100.0% of batch queries.
-After build Tree: 1701694853748
-After Add table: 1701694853748
+After build Tree: 1703566926723
+After Add table: 1703566926723
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694853779
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]/
+Before Function: 1703566926822
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]/
                *[@type='subsector']/*[@type='technology']/
                *[@type='input' and (@name='delivered biomass' or @name='delivered coal' or
                @name='H2 enduse' or @name='elect_td_ind' or @name='wholesale gas' or
                @name='refined liquids industrial')]/demand-physical/node()
-In Function: 1701694853779
-Before Function: 1701694853779
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]/
+In Function: 1703566926822
+Before Function: 1703566926822
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]/
                *[@type='subsector']/*[@type='technology']/
                *[@type='input' and (@name='delivered biomass' or @name='delivered coal' or
                @name='H2 enduse' or @name='elect_td_ind' or @name='wholesale gas' or
                @name='refined liquids industrial')]/demand-physical/node()
-In Function: 1701694853780
-After build Tree: 1701694867317
-After Add table: 1701694867331
+In Function: 1703566926823
+After build Tree: 1703566945500
+After Add table: 1703566945514
 Completed 100.0% of batch queries.
-After build Tree: 1701694873796
-After Add table: 1701694873797
+After build Tree: 1703566954340
+After Add table: 1703566954341
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694873854
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and contains(@name,'feedstocks')]//
+Before Function: 1703566954487
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and contains(@name,'feedstocks')]//
                *[@type='input' and @name != 'oil-credits']/demand-physical/node()
-In Function: 1701694873854
-Before Function: 1701694873854
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and contains(@name,'feedstocks')]//
+Before Function: 1703566954487
+In Function: 1703566954487
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and contains(@name,'feedstocks')]//
                *[@type='input' and @name != 'oil-credits']/demand-physical/node()
-In Function: 1701694873854
-After build Tree: 1701694874360
-After Add table: 1701694874360
+In Function: 1703566954488
+After build Tree: 1703566955845
+After Add table: 1703566955846
 Completed 100.0% of batch queries.
-After build Tree: 1701694874594
-After Add table: 1701694874594
+After build Tree: 1703566956093
+After Add table: 1703566956093
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694874613
-Before Function: 1701694874613
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
+Before Function: 1703566956195
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
                output-primary/physical-output/node()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
+Before Function: 1703566956195
+In Function: 1703566956195
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
                output-primary/physical-output/node()
-In Function: 1701694874613
-In Function: 1701694874613
-After build Tree: 1701694888753
-After Add table: 1701694888756
+In Function: 1703566956195
+After build Tree: 1703566975745
+After Add table: 1703566975748
 Completed 100.0% of batch queries.
-After build Tree: 1701694893296
-After Add table: 1701694893296
+After build Tree: 1703566981551
+After Add table: 1703566981551
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694893319
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='IRONSTL')]//*[@type='input']/demand-physical/node()
-In Function: 1701694893319
-Before Function: 1701694893319
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='IRONSTL')]//*[@type='input']/demand-physical/node()
-In Function: 1701694893319
-After build Tree: 1701694897509
-After Add table: 1701694897509
-After build Tree: 1701694897560
-After Add table: 1701694897560
+Before Function: 1703566981663
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='iron and steel')]//*[@type='input']/demand-physical/node()
+Before Function: 1703566981663
+In Function: 1703566981663
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='iron and steel')]//*[@type='input']/demand-physical/node()
+In Function: 1703566981663
+After build Tree: 1703566988783
+After Add table: 1703566988784
 Completed 100.0% of batch queries.
+After build Tree: 1703566991787
+After Add table: 1703566991787
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694897579
-Before Function: 1701694897579
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='IRONSTL')]/
+Before Function: 1703566991915
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='iron and steel')]/
                *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
                *[@type='output']/physical-output/node()
-In Function: 1701694897579
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='IRONSTL')]/
+In Function: 1703566991915
+Before Function: 1703566991915
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='iron and steel')]/
                *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
                *[@type='output']/physical-output/node()
-In Function: 1701694897579
-After build Tree: 1701694899334
-After Add table: 1701694899336
-After build Tree: 1701694899376
-After Add table: 1701694899376
+In Function: 1703566991915
+After build Tree: 1703566994050
+After Add table: 1703566994052
 Completed 100.0% of batch queries.
+After build Tree: 1703566995083
+After Add table: 1703566995083
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694899421
-Before Function: 1701694899421
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='transportation' or (exists(child::keyword[@final-energy='transportation'])))]/
+Before Function: 1703566995208
+Before Function: 1703566995208
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='transportation' or (exists(child::keyword[@final-energy='transportation'])))]/
                *[@type='subsector']/*[@type='technology']/*[@type='input' and not(@name='renewable')]/
                demand-physical[@unit='EJ']/node()
-In Function: 1701694899421
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='transportation' or (exists(child::keyword[@final-energy='transportation'])))]/
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='transportation' or (exists(child::keyword[@final-energy='transportation'])))]/
                *[@type='subsector']/*[@type='technology']/*[@type='input' and not(@name='renewable')]/
                demand-physical[@unit='EJ']/node()
-In Function: 1701694899421
-After build Tree: 1701694908459
-After Add table: 1701694908467
+In Function: 1703566995208
+In Function: 1703566995208
+After build Tree: 1703567007765
+After Add table: 1703567007776
 Completed 100.0% of batch queries.
-After build Tree: 1701694911934
-After Add table: 1701694911934
+After build Tree: 1703567011956
+After Add table: 1703567011956
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694911969
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/GDP/gdp-per-capita-mer/text()
-In Function: 1701694911969
-Before Function: 1701694911969
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/GDP/gdp-per-capita-mer/text()
-In Function: 1701694911969
-After build Tree: 1701694912808
-After Add table: 1701694912808
+Before Function: 1703567012106
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/GDP/gdp-per-capita-mer/text()
+In Function: 1703567012106
+Before Function: 1703567012106
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/GDP/gdp-per-capita-mer/text()
+In Function: 1703567012106
+After build Tree: 1703567018151
+After Add table: 1703567018152
 Completed 100.0% of batch queries.
-After build Tree: 1701694913156
-After Add table: 1701694913156
+After build Tree: 1703567020387
+After Add table: 1703567020387
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694913179
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
+Before Function: 1703567020482
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-In Function: 1701694913179
-Before Function: 1701694913179
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
+In Function: 1703567020482
+Before Function: 1703567020482
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-In Function: 1701694913179
-After build Tree: 1701694913925
-After Add table: 1701694913926
+In Function: 1703567020482
+After build Tree: 1703567021415
+After Add table: 1703567021415
 Completed 100.0% of batch queries.
-After build Tree: 1701694914168
-After Add table: 1701694914168
+After build Tree: 1703567021722
+After Add table: 1703567021722
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694914186
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/demographics/populationMiniCAM/total-population/node()
-In Function: 1701694914186
-Before Function: 1701694914186
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/demographics/populationMiniCAM/total-population/node()
-In Function: 1701694914186
-After build Tree: 1701694914317
-After Add table: 1701694914317
+Before Function: 1703567021817
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/demographics/populationMiniCAM/total-population/node()
+In Function: 1703567021818
+Before Function: 1703567021818
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/demographics/populationMiniCAM/total-population/node()
+In Function: 1703567021818
+After build Tree: 1703567022209
+After Add table: 1703567022209
 Completed 100.0% of batch queries.
-After build Tree: 1701694914376
-After Add table: 1701694914376
+After build Tree: 1703567022359
+After Add table: 1703567022359
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694914384
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
+Before Function: 1703567022438
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='cement' )]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-Before Function: 1701694914384
-In Function: 1701694914384
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
+In Function: 1703567022438
+Before Function: 1703567022438
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='cement' )]/
             			   *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
             			   *[@type='output']/physical-output/node()
-In Function: 1701694914384
-After build Tree: 1701694915124
-After Add table: 1701694915125
+In Function: 1703567022438
+After build Tree: 1703567023341
+After Add table: 1703567023341
 Completed 100.0% of batch queries.
-After build Tree: 1701694915373
-After Add table: 1701694915373
+After build Tree: 1703567023674
+After Add table: 1703567023674
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694915394
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/climate-model/forcing-total/text()
-In Function: 1701694915394
-Before Function: 1701694915394
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/climate-model/forcing-total/text()
-In Function: 1701694915394
-After build Tree: 1701694915418
-After Add table: 1701694915418
-After build Tree: 1701694915418
-After Add table: 1701694915418
+Before Function: 1703567023777
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/climate-model/forcing-total/text()
+In Function: 1703567023777
+Before Function: 1703567023777
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/climate-model/forcing-total/text()
+In Function: 1703567023777
+After build Tree: 1703567023847
+After Add table: 1703567023847
 Completed 100.0% of batch queries.
+After build Tree: 1703567023847
+After Add table: 1703567023847
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
 Didn't find builder for LUC emissions by region query going to use defaults
-Before Function: 1701694915441
-Before Function: 1701694915441
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]//LandNode[@name='root' or @type='LandNode' (:collapse:)]//
+Before Function: 1703567023942
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]//LandNode[@name='root' or @type='LandNode' (:collapse:)]//
                 land-use-change-emission[@year>1970]/text()
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region//LandNode[@name='root' or @type='LandNode' (:collapse:)]//
+In Function: 1703567023943
+Before Function: 1703567023943
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region//LandNode[@name='root' or @type='LandNode' (:collapse:)]//
                 land-use-change-emission[@year>1970]/text()
-In Function: 1701694915441
-In Function: 1701694915441
-After build Tree: 1701694945576
-After Add table: 1701694945576
+In Function: 1703567023943
+After build Tree: 1703567077216
+After Add table: 1703567077216
 Completed 100.0% of batch queries.
-After build Tree: 1701694993043
-After Add table: 1701694993043
+After build Tree: 1703567157412
+After Add table: 1703567157412
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701694993060
-Before Function: 1701694993060
+Before Function: 1703567157505
+Before Function: 1703567157505
 About to perform query:  
 			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
 			 	 		 let $scn := $parent/ancestor::scenario,
@@ -797,10 +797,9 @@ About to perform query:
 							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
 			 	 	 	
 	 	 }; 
-            	 local:run-primary-energy(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
+            	 local:run-primary-energy(('Reference_high_demand 2023-25-12T22:48:38+08:00', 'Tax_100_high_demand 2023-25-12T22:48:39+08:00', 'Reference_low_demand 2023-26-12T08:20:20+08:00', 'Tax_100_low_demand 2023-24-12T16:19:55+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
                  
             
-In Function: 1701694993060
 About to perform query:  
 			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
 			 	 		 let $scn := $parent/ancestor::scenario,
@@ -855,42 +854,43 @@ About to perform query:
 							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
 			 	 	 	
 	 	 }; 
-            	 local:run-primary-energy(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('Global'), ())
+            	 local:run-primary-energy(('Reference_high_demand 2023-25-12T22:48:38+08:00', 'Tax_100_high_demand 2023-25-12T22:48:39+08:00', 'Reference_low_demand 2023-26-12T08:20:20+08:00', 'Tax_100_low_demand 2023-24-12T16:19:55+08:00'), ('Global'), ())
                  
             
-In Function: 1701694993060
-After build Tree: 1701695037051
-After Add table: 1701695037051
+In Function: 1703567157506
+In Function: 1703567157506
+After build Tree: 1703567227818
+After Add table: 1703567227818
 Completed 100.0% of batch queries.
-After build Tree: 1701695087745
-After Add table: 1701695087745
+After build Tree: 1703567305925
+After Add table: 1703567305925
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701695087774
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='refining' or @name='refined liquids enduse' or
+Before Function: 1703567306032
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GD') or (@name='GS') or (@name='GX') or (@name='GZ') or (@name='HA') or (@name='HB') or (@name='HE') or (@name='HI') or (@name='HL') or (@name='HN') or (@name='JL') or (@name='JS') or (@name='JX') or (@name='LN') or (@name='NM') or (@name='NX') or (@name='QH') or (@name='SC') or (@name='SD') or (@name='SH') or (@name='SN') or (@name='SX') or (@name='TJ') or (@name='XJ') or (@name='XZ') or (@name='YN') or (@name='ZJ') ]/*[@type='sector' and (@name='refining' or @name='refined liquids enduse' or
                @name='refined liquids industrial')]/
                *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
                physical-output/node()
-Before Function: 1701695087774
-In Function: 1701695087774
-About to perform query: collection()/scenario[ (@name='GCAM_China_Reference' and @date='2023-28-11T14:15:50+08:00') or (@name='GCAM_China_tax_100' and @date='2023-28-11T16:29:54+08:00') or (@name='GCAM_China_tax_25' and @date='2023-28-11T17:06:43+08:00') ]/world/region/*[@type='sector' and (@name='refining' or @name='refined liquids enduse' or
+In Function: 1703567306032
+Before Function: 1703567306032
+About to perform query: collection()/scenario[ (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') or (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') ]/world/region/*[@type='sector' and (@name='refining' or @name='refined liquids enduse' or
                @name='refined liquids industrial')]/
                *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
                physical-output/node()
-In Function: 1701695087774
-After build Tree: 1701695088278
-After Add table: 1701695088278
+In Function: 1703567306032
+After build Tree: 1703567307946
+After Add table: 1703567307947
 Completed 100.0% of batch queries.
-After build Tree: 1701695089888
-After Add table: 1701695089888
+After build Tree: 1703567310774
+After Add table: 1703567310774
 INFO; Successfully ran batch query
 The database is not open.
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Before Function: 1701695089928
-Before Function: 1701695089928
+Before Function: 1703567310895
+Before Function: 1703567310895
 About to perform query:  
                declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
 	       	 		 let $scn := $parent/ancestor::scenario,
@@ -1063,10 +1063,10 @@ local:generate-sector-input-coefs(remove($outputNameQueue, 1), $currTree, $coefs
 				    return local:append-heirarchy($currTree, local:apply-coefs($inputName, $currInputs[@name=$inputName]/demand-physical, $ccs_coefs, false()))//text()
 			 	 } 
 	 	 };
-		 local:run-input-by-primary(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
+		 local:run-input-by-primary(('Reference_high_demand 2023-25-12T22:48:38+08:00', 'Tax_100_high_demand 2023-25-12T22:48:39+08:00', 'Reference_low_demand 2023-26-12T08:20:20+08:00', 'Tax_100_low_demand 2023-24-12T16:19:55+08:00'), ('China', 'AH', 'BJ', 'CQ', 'FJ', 'GD', 'GS', 'GX', 'GZ', 'HA', 'HB', 'HE', 'HI', 'HL', 'HN', 'JL', 'JS', 'JX', 'LN', 'NM', 'NX', 'QH', 'SC', 'SD', 'SH', 'SN', 'SX', 'TJ', 'XJ', 'XZ', 'YN', 'ZJ'), ())
          
          
-In Function: 1701695089930
+In Function: 1703567310897
 About to perform query:  
                declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
 	       	 		 let $scn := $parent/ancestor::scenario,
@@ -1239,10 +1239,10 @@ local:generate-sector-input-coefs(remove($outputNameQueue, 1), $currTree, $coefs
 				    return local:append-heirarchy($currTree, local:apply-coefs($inputName, $currInputs[@name=$inputName]/demand-physical, $ccs_coefs, false()))//text()
 			 	 } 
 	 	 };
-		 local:run-input-by-primary(('GCAM_China_Reference 2023-28-11T14:15:50+08:00', 'GCAM_China_tax_100 2023-28-11T16:29:54+08:00', 'GCAM_China_tax_25 2023-28-11T17:06:43+08:00'), ('Global'), ())
+		 local:run-input-by-primary(('Reference_high_demand 2023-25-12T22:48:38+08:00', 'Tax_100_high_demand 2023-25-12T22:48:39+08:00', 'Reference_low_demand 2023-26-12T08:20:20+08:00', 'Tax_100_low_demand 2023-24-12T16:19:55+08:00'), ('Global'), ())
          
          
-In Function: 1701695089930
+In Function: 1703567310898
 Completed 100.0% of batch queries.
 WARNING; Batch queries finished with 1 error.
 The database is not open.
