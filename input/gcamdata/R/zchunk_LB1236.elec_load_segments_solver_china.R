@@ -379,7 +379,7 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
 
             # region specific adjustment
             # 1) several has too many coal and hydro, need to remove all other peak fuels to give them more room in peak
-            if (L1236.region %in% c("East China Grid", "Northeast China Grid", "China Southern Power Grid", "Central China Grid")){
+            if (L1236.region %in% c("East China Grid", "Northeast China Grid","Central China Grid")){
               L1236.grid_elec_supply %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.25) %>%
@@ -387,6 +387,15 @@ module_gcamchina_LB1236.elec_load_segments_solver_china <- function(command, ...
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 1)-> L1236.grid_elec_supply}
+
+            if (L1236.region %in% c("China Southern Power Grid")){
+              L1236.grid_elec_supply %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.25) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.15) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 1) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0)-> L1236.grid_elec_supply}
 
             # 2) Northwest has a lot of solar in subpeak, move to intermediate to give more room for coal
             if (L1236.region %in% c("Northwest China Grid")){
