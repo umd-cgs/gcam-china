@@ -241,11 +241,6 @@ L124.heatoutratio_province_elec_F_tech_Yh %>%
   mutate(output.ratio = round(value, energy.DIGITS_CALOUTPUT)) %>%
   select(-value) -> L224.StubTechSecOut_elec_china
 
-x <- L2234.StubTechProd_elecS_CHINA %>%
-  left_join(L224.StubTechSecOut_elec_china, by = c("region", "supplysector", "subsector", "stub.technology", "year")) %>%
-  filter(year == 2010 & subsector == "gas" & calOutputValue > 0)
-
-
 # Calculate cost adjustment, equal to the output of heat multiplied by the heat price
 # (to minimize the distortion of including the secondary output)
 L224.StubTechSecOut_elec_china %>%
