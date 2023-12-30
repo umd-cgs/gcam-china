@@ -662,8 +662,8 @@ for (r in seq_along(L1236.gridregion_list)){
         if (L1236.region %in% c("East China Grid")){
           L1236.grid_elec_supply %>%
             replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.7) %>%
-            replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
-            replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+            replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
+            replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
             replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
             replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.7) %>%
             replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
@@ -674,8 +674,8 @@ for (r in seq_along(L1236.gridregion_list)){
         if (L1236.region %in% c("Central China Grid")){
           L1236.grid_elec_supply %>%
             replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
-            replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%
-            replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
+            replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
+            replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
             replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
             replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
             replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%

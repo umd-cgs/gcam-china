@@ -46,7 +46,7 @@ L132.in_EJ_province_indnochp_F %>%
   filter(fuel == "heat") %>%
   select(province,fuel,year,value) %>%
   left_join(L144.in_EJ_province_bld_F_U %>%
-              filter(fuel == "heat") %>%
+              filter(service == "Heating") %>%
               select(province, fuel, year, value) %>%
               group_by(province, fuel, year) %>%
               summarise(value = sum(value)) %>%
@@ -133,20 +133,12 @@ no_gas_tech_2010 <- L2234.StubTechProd_elecS_CHINA %>%
   ungroup() %>%
   filter(no_gas == 0)
 
-no_gas_tech_2015 <- L2234.StubTechProd_elecS_CHINA %>%
-  filter(year == 2015 & subsector == "gas") %>%
-  filter(grepl("steam/CT", stub.technology)) %>%
-  group_by(region, year) %>%
-  summarise(no_gas = sum(calOutputValue)) %>%
-  ungroup() %>%
-  filter(no_gas == 0)
-
 #Just move gas CHP to coal, because some region do not have gas generation
 L124.out_EJ_province_heatfromelec_F_Yh %>%
-  mutate(fuel_new = if_else((region %in% no_gas_tech_2010$region & year == 2010 & (fuel == "gas")),"coal",fuel)) %>%
-  mutate(fuel = fuel_new) %>%
-  select(-fuel_new) %>%
-  mutate(fuel_new = if_else((region %in% no_gas_tech_2015$region & year == 2015 & (fuel == "gas")),"coal",fuel)) %>%
+  # mutate(fuel_new = if_else((region %in% c("NX","FJ","HN","JX") & (fuel == "gas")),"coal",fuel)) %>%
+  # mutate(fuel = fuel_new) %>%
+  # select(-fuel_new) %>%
+  mutate(fuel_new = if_else((region %in% c(no_gas_tech_2010$region) & year == 2010 & (fuel == "gas")),"coal",fuel)) %>%
   mutate(fuel = fuel_new) %>%
   group_by(region, fuel, sector, year) %>%
   summarise(value = sum(value)) %>%
@@ -160,6 +152,7 @@ L2234.StubTechProd_elecS_CHINA %>%
   left_join(A23.elecS_tech_mapping %>%
               select(Electric.sector.technology, technology) %>%
               distinct(), by = c("stub.technology" = "Electric.sector.technology")) %>%
+  # drop renewables (wind, solar, CSP)
   na.omit() %>%
   filter(technology %in% calibrated_techs$technology[calibrated_techs$secondary.output == "heat"]) %>%
   mutate(province = region, sector = "electricity generation", fuel = subsector) %>%
@@ -241,11 +234,6 @@ L124.heatoutratio_province_elec_F_tech_Yh %>%
   mutate(output.ratio = round(value, energy.DIGITS_CALOUTPUT)) %>%
   select(-value) -> L224.StubTechSecOut_elec_china
 
-x <- L2234.StubTechProd_elecS_CHINA %>%
-  left_join(L224.StubTechSecOut_elec_china, by = c("region", "supplysector", "subsector", "stub.technology", "year")) %>%
-  filter(year == 2010 & subsector == "gas" & calOutputValue > 0)
-
-
 # Calculate cost adjustment, equal to the output of heat multiplied by the heat price
 # (to minimize the distortion of including the secondary output)
 L224.StubTechSecOut_elec_china %>%
@@ -263,7 +251,7 @@ L1231.eff_R_elec_F_tech_Yh %>%
   rename(efficiency = value) %>%
   filter(GCAM_region_ID == 11) %>%
   write_to_all_provinces(c('region','sector','fuel','technology','year','efficiency'), gcamchina.PROVINCES_NOHKMC) %>%
-  filter(fuel == "gas") %>%
+  filter(fuel == "gas" | fuel == "coal") %>%
   filter(efficiency < energy.DEFAULT_ELECTRIC_EFFICIENCY) %>%
   mutate(cost_modifier = energy.GAS_PRICE * (1 / energy.DEFAULT_ELECTRIC_EFFICIENCY - 1 / efficiency)) ->
   L224.eff_cost_adj_Rh_elec_gas_sc_Y
