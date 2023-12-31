@@ -83,7 +83,10 @@ module_gcamchina_LA1323.detailed_industry <- function(command, ...) {
                   group_by(province, year, minicam.energy.input) %>%
                   summarise(value = sum(value)) %>% ungroup(), by = c("province", "year", fuel = 'minicam.energy.input')) %>%
       replace_na(list(value = 0)) %>%
-      mutate(value = replace_na(raw - value,0), raw = NULL) ->
+      mutate(value = replace_na(raw - value,0), raw = NULL) %>%
+      # YO 2023
+      # remove negative values for HE coal in 2015, check original IO_detailed_industry.csv table and maybe need to update for consistency
+      mutate(value = if_else(value < 0, 0, value))->
       L1323.in_EJ_province_indnochp_F
 
     #Calculate the remaining industrial feedstock
