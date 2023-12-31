@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_L100.Socioeconomics_preliminary
 #'
 #' This chunk generates historical and future GDP and Population data by province

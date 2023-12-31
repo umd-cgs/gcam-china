@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_LB123.Electricity
 #'
 #' Electricity sector inputs and outputs, and electricity ownuse.
@@ -37,7 +39,6 @@ module_gcamchina_LB123.Electricity <- function(command, ...) {
 
     all_data <- list(...)[[1]]
 
-
     # -----------------------------------------------------------------------------
     # 1.Load required inputs
     province_names_mappings     <- get_data(all_data, "gcam-china/province_names_mappings")
@@ -51,6 +52,8 @@ module_gcamchina_LB123.Electricity <- function(command, ...) {
 
     # -----------------------------------------------------------------------------
     # 2.perform computations
+
+    # XZ (Tibet) specific adjustment
     XZ_ELEC_REALLOC_YEAR <- 2010
 
     CPSY_GWh_province_F_elec_out %>%
@@ -66,7 +69,7 @@ module_gcamchina_LB123.Electricity <- function(command, ...) {
              nuclear = nuclear + nuc.adj,
              solar = solar + solar.adj) %>%
       select(-other, -row, -coal.adj, -wind.adj, -nuc.adj, -solar.adj) %>%
-      # TODO: what about biomass?  Just use coal shares for now
+      # Assumption: use coal shares for biomass
       mutate(biomass = coal) %>%
       gather(fuel, value, -province, -year) %>%
       # remove a few negative values, very small (order of 10^-15) in geothermal) allocated from "other"
@@ -167,7 +170,6 @@ module_gcamchina_LB123.Electricity <- function(command, ...) {
       mutate(value = value.x - value.y) %>%
       select(province, sector, fuel, year, value) ->
       L123.out_EJ_province_ownuse_elec
-
 
     # ===================================================
     # 3.Produce outputs

@@ -85,7 +85,6 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
 
     A323.sector <- get_data(all_data, "gcam-china/A323.sector", strip_attributes = T)
     A323.subsector_interp <- get_data(all_data, "gcam-china/A323.subsector_interp", strip_attributes = T)
-    #A323.subsector_interpTo <- get_data(all_data, "gcam-china/A323.subsector_interpTo", strip_attributes = T)
     A323.subsector_logit <- get_data(all_data, "gcam-china/A323.subsector_logit", strip_attributes = T)
     A323.subsector_shrwt <- get_data(all_data, "gcam-china/A323.subsector_shrwt", strip_attributes = T)
     A323.globaltech_coef <- get_data(all_data, "gcam-china/A323.globaltech_coef", strip_attributes = T)
@@ -97,13 +96,9 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
     L1323.IO_GJkg_province_detailed_industry_F_Yh <- get_data(all_data, "L1323.IO_GJkg_province_detailed_industry_F_Yh", strip_attributes = T)
     L1323.in_EJ_province_detailed_industry_F_Y <- get_data(all_data, "L1323.in_EJ_province_detailed_industry_F_Y", strip_attributes = T)
     A323.nonenergy_Cseq <- get_data(all_data, "gcam-china/A323.nonenergy_Cseq", strip_attributes = T)
-
     A323.inc_elas_output <- get_data(all_data, "gcam-china/A323.inc_elas_output", strip_attributes = T)
-
     A323.efficiency_improve <- get_data(all_data, "gcam-china/A323.efficiency_improve", strip_attributes = T)
-
     A323.globaltech_retirement <- get_data(all_data, "gcam-china/A323.globaltech_retirement", strip_attributes = T)
-
     # China region tables
     A323.sector_China <- get_data(all_data, "gcam-china/A323.sector_China", strip_attributes = T)
     A323.subsector_interp_China <- get_data(all_data, "gcam-china/A323.subsector_interp_China", strip_attributes = T)
@@ -112,8 +107,8 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
     A323.tech_shrwt_China <- get_data(all_data, "gcam-china/A323.tech_shrwt_China", strip_attributes = T)
 
 
-   # detailed_industry_CCS_cost_2000USDtCO2 <- 80
-    #??CCS?龰
+    # Chunk assumptions
+    # TODO: add a reference
     detailed_industry_CCS_cost_2000USDtCO2 <- 40
     CO2_storage_cost_1990USDtC <- 42
     CO2_coef_detailed_industry <- 0.33
@@ -133,7 +128,6 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
     A323.sector %>%
       write_to_all_provinces(c(LEVEL2_DATA_NAMES[["Supplysector"]], LOGIT_TYPE_COLNAME),province = province_names_mappings$province)  ->
       L2323.Supplysector_detailed_industry
-
 
     # L2323.FinalEnergyKeyword_detailed_industry: Supply sector keywords for detailed_industry sector
     A323.sector %>%
@@ -159,12 +153,6 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
     A323.subsector_interp %>%
       write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorInterp"]],province = province_names_mappings$province) ->
       L2323.SubsectorInterp_detailed_industry
-
-    #L2323.SubsectorInterpTo_detailed_industry <- set_years(A323.subsector_interpTo[rep(1:nrow(A323.subsector_logit),
-    #                                                                                          times = length(detailed_industry_provinces)),] %>%
-    #                                                      write_to_all_provinces(names_SubsectorInterpTo) %>%
-    #                                                            select_(.dots = names_SubsectorInterpTo))
-
 
     # 1c. Technology information
     # L2323.StubTech_detailed_industry: Identification of stub technologies of detailed_industry
@@ -218,7 +206,6 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
              subsector.name = subsector) %>%
       select(LEVEL2_DATA_NAMES[["GlobalTechCoef"]]) ->
       L2323.GlobalTechCoef_detailed_industry
-
 
     # Carbon capture rates from technologies with CCS
     # L2323.GlobalTechCapture_detailed_industry: CO2 capture fractions from global detailed_industry production technologies with CCS
@@ -314,6 +301,7 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
 
 
     # We don't calculate detailed_industry CCS cost at now
+    # TODO: future work
     if(1==0){
     # Note: adjusting non-energy costs of technologies with CCS to include CO2 capture costs
     #       The additional CCS-related non-energy costs are not included in the global technology assessment.

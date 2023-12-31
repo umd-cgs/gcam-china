@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_LB1232.Elec_subregions_china
 #'
 #' Aggregates China province electricity generation to electricity subregions.
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author YangLiu September 2018
+#' @author YangLiu September 2018 / YangOu December 2023
 module_gcamchina_LB1232.Elec_subregions_china <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",

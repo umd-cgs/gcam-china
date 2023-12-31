@@ -179,7 +179,7 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       # remove negative values
       # negative values mean that China is exporting iron and steel to the global market
       # this part will be addressed in input/extra/trade_iron_steel_China_offset.xml
-      # TODO: convert trade_iron_steel_China_offset.xml into a chunk
+      # TODO: convert trade_iron_steel_China_offset.xml into a chunk (YO)
       mutate(calOutputValue=if_else(calOutputValue < 0, 0, calOutputValue))%>%
       select(-Exports)-> L232.Production_reg_imp
 

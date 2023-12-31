@@ -24,5 +24,5 @@ Aggregates China province electricity generation to electricity subregions.
 Aggregates CHINA province electricity generation to electricity subregions.
 }
 \author{
-YangLiu September 2018
+YangLiu September 2018 / YangOu December 2023
 }

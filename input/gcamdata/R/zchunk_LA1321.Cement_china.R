@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA1321.Cement
 #'
 #' To calculate national cement production, energy inputs and Input-output coefficients to provinces
@@ -14,7 +16,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author YangLiu Aug 2018
+#' @author YangLiu Aug 2018 / YangOu Dec 2023
 module_gcam.china_LA1321.Cement <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L101.inNBS_Mtce_province_S_F",

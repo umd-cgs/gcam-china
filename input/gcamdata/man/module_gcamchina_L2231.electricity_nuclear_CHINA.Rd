@@ -24,5 +24,5 @@ Fixoutput of Electricity generation from nuclear by China province
 Fixoutput of Electricity generation from nuclear by China province from 2015 to 2030, adding StubTechnologies
 }
 \author{
-LuRen July 2019
+LuRen July 2019 / YangOu Dec 2023
 }

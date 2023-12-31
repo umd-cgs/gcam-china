@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_LA119.Solar
 #'
 #' Compute capacity factors for solar capacity factors by province.
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author Liu July 2018
+#' @author Liu July 2018 / Ou Dec 2023
 module_gcamchina_LA119.Solar <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/solar_csp_pv_capacityfactor",

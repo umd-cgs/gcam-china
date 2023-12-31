@@ -25,5 +25,5 @@ This chunk sets up the USA energy transformation technology databases as well as
 Calibrated outputs and I:O coefficients are updated from global values produced by \code{\link{module_energy_L222.en_transformation}}.
 }
 \author{
-BY Jun 2019
+BY Jun 2019 / YO Dec 2023
 }
