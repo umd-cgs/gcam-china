@@ -4,7 +4,8 @@
 \alias{chunk_inputs}
 \title{chunk_inputs}
 \usage{
-chunk_inputs(chunks = find_chunks()$name, call_flag = driver.DECLARE_INPUTS)
+chunk_inputs(chunks = find_chunks()$name,
+  call_flag = driver.DECLARE_INPUTS)
 }
 \arguments{
 \item{chunks}{A character vector of chunks names}
