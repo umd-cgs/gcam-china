@@ -104,8 +104,6 @@
          <Value name = "gas_trade">../input/gcamdata/xml/gas_trade.xml</Value>   
 		
 		<Value name = "socio_china">../input/gcamdata/xml/socioeconomics_CHINA.xml</Value>
-		<!-- <Value name = "intr_china">../input/gcamdata/xml/interest_rate_CHINA.xml</Value> -->
-		<!-- <Value name = "rsrc_hold_china">../input/extra/china_rsrc_placeholders.xml</Value> -->
 		<Value name = "rsrc_china">../input/gcamdata/xml/resources_CHINA.xml</Value>
 		<Value name = "Cstorage_china">../input/gcamdata/xml/Cstorage_CHINA.xml</Value>
 		<Value name = "prices_china">../input/gcamdata/xml/en_prices_CHINA.xml</Value>
@@ -119,6 +117,7 @@
 		<Value name = "trn_china">../input/gcamdata/xml/transportation_CHINA.xml</Value>
 		<Value name = "ind_china">../input/gcamdata/xml/industry_CHINA.xml</Value>
 		<Value name = "ind_china">../input/gcamdata/xml/detailed_industry_CHINA.xml</Value>	
+		<Value name = "trade_iron_steel_China_offset">../input/extra/trade_iron_steel_China_offset.xml</Value>
 		<Value name = "cmnt_china">../input/gcamdata/xml/cement_CHINA.xml</Value>
 		<Value name = "fert_china">../input/gcamdata/xml/Fert_CHINA.xml</Value>
 		<!-- <Value name = "shrwt">../input/gcamdata/xml/CCS_shrwt_CHINA.xml</Value> -->
@@ -127,16 +126,9 @@
 		<Value name = "neg_emiss_china">../input/gcamdata/xml/negative_emissions_budget_CHINA_gSSP2.xml</Value>
 		<!-- delete HK MC  -->
 		<Value name = "delete_china">../input/extra/delete_invalid_provinces.xml</Value>
-		<Value name = "trade_iron_steel_China_offset">../input/extra/trade_iron_steel_China_offset.xml</Value>
-	    <!-- delete China EFW  -->
-		  <!-- <Value name = "delete_china_EFW">../input/extra/EFW_delete_CHINA.xml</Value>   -->
-					
+		
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
-		
-<!-- 		<Value name = "tax">../input/policy/carbon_tax_100_5.xml</Value>
-		<Value name = "tax">../input/policy/province_policy_global.xml</Value> -->
-		
-
+				
 	</ScenarioComponents>
 	<Strings>
 		<Value name="scenarioName">GCAM_China_REF</Value>
@@ -164,7 +156,7 @@
 		<Value name="carbon-output-start-year">1705</Value>
 		<Value name="climateOutputInterval">5</Value>
 		<Value name="parallel-grain-size">50</Value>
-		<Value name="stop-period">5</Value>
+		<Value name="stop-period">-1</Value>
 		<Value name="stop-year">-1</Value>
 		<Value name="restart-period">-1</Value>
 		<Value name="restart-year">-1</Value>
