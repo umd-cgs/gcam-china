@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA101.Energy_Balance
 #'
 #' This chunk generates the historical energy data by province
@@ -15,7 +17,7 @@
 #' @importFrom tibble tibble
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread fill
-#' @author Yang July 2018
+#' @author Yang Liu July 2018 / Yang Ou Dec 2023
 
 module_gcam.china_LA101.Energy_Balance <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
@@ -66,7 +68,6 @@ module_gcam.china_LA101.Energy_Balance <- function(command, ...) {
       summarise(value = sum(value)) %>%
       ungroup() ->
       L101.inNBS_Mtce_province_S_F
-
 
     # Interpolate missing values where possible (rule=1)
     L101.NBS_use_all_Mtce %>%

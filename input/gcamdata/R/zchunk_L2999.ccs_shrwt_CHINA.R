@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_L2999.ccs_shrwt_CHINA
 #'
 #' Assign shareweight assumptions of CCS to subtechnologies by China province
@@ -10,7 +12,7 @@
 #' original data system was \code{L2999.ccs_shrwt_CHINA.R} (gcam-china level2).
 #' @details Assign shareweight assumptions of CCS to subtechnologies by China province. Remove N fertilizer sector from Tibet(XZ) province.
 #' @importFrom dplyr filter
-#' @author YishengSun July 2019
+#' @author YishengSun July 2019 / Yang Ou Dec 2023
 module_gcamchina_L2999.ccs_shrwt_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",

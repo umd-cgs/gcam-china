@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_batch_electricity_nuclear_CHINA_xml
 #'
 #' Construct XML data structure for \code{electricity_nuclear_CHINA.xml}.

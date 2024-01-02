@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA100.Socioeconomics
 #'
 #' This chunk generates the historical and future GDP, population and per-capita GDP by province.
@@ -15,7 +17,7 @@
 #' @importFrom tibble tibble
 #' @import dplyr
 #' @importFrom tidyr gather spread
-#' @author RC Jul 2018
+#' @author RC Jul 2018 / YO Dec 2023
 module_gcam.china_LA100.Socioeconomics <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",

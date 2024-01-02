@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA154.Transport
 #'
 #' Downscale transportation energy consumption and nonmotor data to the provincial level, generating three ouput tables.
@@ -13,7 +15,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author YangLiu Aug 2018
+#' @author YangLiu Aug 2018 / YangOu Dec 2023
 module_gcam.china_LA154.Transport <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/trnUCD_NBS_mapping",

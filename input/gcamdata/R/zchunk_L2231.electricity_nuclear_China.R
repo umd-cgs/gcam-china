@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_L2231.electricity_nuclear_CHINA
 #'
 #' Fixoutput of Electricity generation from nuclear by China province
@@ -11,7 +13,7 @@
 #' @details Fixoutput of Electricity generation from nuclear by China province from 2015 to 2030, adding StubTechnologies
 #' @importFrom dplyr mutate select rename left_join
 #' @importFrom tidyr gather
-#' @author LuRen July 2019
+#' @author LuRen July 2019 / YangOu Dec 2023
 module_gcamchina_L2231.electricity_nuclear_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",

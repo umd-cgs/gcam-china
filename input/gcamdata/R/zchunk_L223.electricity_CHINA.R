@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_L223.electricity_CHINA
 #'
 #' Generates GCAM-China model inputs for electricity sector by grid regions and provinces.
@@ -26,7 +28,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr arrange bind_rows filter if_else group_by left_join matches mutate select semi_join summarise transmute
 #' @importFrom tidyr gather spread
-#' @author YangLiu Jan 2020
+#' @author YangLiu Jan 2020 / YangOu Dec 2023
 
 module_gcamchina_L223.electricity_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {

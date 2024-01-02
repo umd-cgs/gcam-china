@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_batch_en_prices_CHINA_xml
 #'
 #' Construct XML data structure for \code{en_prices_CHINA.xml}.

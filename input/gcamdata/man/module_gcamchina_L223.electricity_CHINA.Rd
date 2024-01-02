@@ -38,5 +38,5 @@ This chunk generates input files to create an annualized electricity generation 
 and creates the demand for the province-level electricity sectors in the grid regions.
 }
 \author{
-YangLiu Jan 2020
+YangLiu Jan 2020 / YangOu Dec 2023
 }

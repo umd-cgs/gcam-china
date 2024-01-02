@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_L226.en_distribution_CHINA
 #'
 #' Create a variety of energy and electricity outputs for CHINA at the province and/or grid.region level.
@@ -28,7 +30,7 @@
 #' @details Create a variety of energy and electricity outputs for CHINA at the province and/or grid.region level.
 #' @importFrom dplyr bind_rows distinct filter if_else group_by left_join mutate select summarize
 #' @importFrom tidyr gather spread
-#' @author LuRen Dec 2019, edited by BY Feb 2020
+#' @author LuRen Dec 2019, edited by BY Feb 2020 / YO Dec 2023
 
 module_gcam.china_L226.en_distribution_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {

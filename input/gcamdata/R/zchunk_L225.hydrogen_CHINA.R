@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_L225.hydrogen_china
 #'
 #' Selects the subsectors to be removed from the hydrogen sectors in GCAM-China

@@ -41,5 +41,5 @@ Create a variety of energy and electricity outputs for CHINA at the province and
 Create a variety of energy and electricity outputs for CHINA at the province and/or grid.region level.
 }
 \author{
-LuRen Dec 2019, edited by BY Feb 2020
+LuRen Dec 2019, edited by BY Feb 2020 / YO Dec 2023
 }

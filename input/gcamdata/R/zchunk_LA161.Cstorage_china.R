@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA161.Cstorage
 #'
 #' Calculates onshore CO2 storage by grid region.
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author Liu August 2018
+#' @author Yang Liu August 2018 / Yang Ou December 2023
 
 module_gcam.china_LA161.Cstorage <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {

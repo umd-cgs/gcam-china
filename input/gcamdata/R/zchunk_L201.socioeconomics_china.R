@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_L201.socioeconomics
 #'
 #' Interest rate, population, labor productivity, and GDP for GCAM-China.
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author YangLiu Aug 2018
+#' @author YangLiu Aug 2018 / YangOu Dec 2023
 module_gcam.china_L201.socioeconomics <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",

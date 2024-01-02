@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_batch_CCS_shrwt_CHINA_xml
 #'
 #' Construct XML data structure for \code{CCS_shrwt_CHINA.xml}.
@@ -26,7 +28,7 @@ module_gcam.china_batch_CCS_shrwt_CHINA_xml <- function(command, ...) {
 
     # Produce outputs
     create_xml("CCS_shrwt_CHINA.xml") %>%
-      add_xml_data(L9999.StubTechInterpOverwrite_CHINA, "StubTechInterpOverwrite") %>%
+      add_xml_data(L9999.StubTechInterpOverwrite_CHINA, "StubTechInterpOverwrite", NULL) %>%
       add_xml_data(L9999.StubTechShrwt_CHINA, "StubTechShrwt") %>%
       add_precursors("L9999.StubTechShrwt_CHINA",
                      "L9999.StubTechInterpOverwrite_CHINA") ->

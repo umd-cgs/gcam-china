@@ -24,5 +24,5 @@ Calculate input-output intensity coefficients and input energy for province fert
 Calculate input-output intensity coefficients and input energy for province fertilizer production from province shares of national values.
 }
 \author{
-YangLiu Aug 2018
+YangLiu Aug 2018 / YangOu Dec 2023
 }

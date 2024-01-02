@@ -418,6 +418,8 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       select(-grid_exports, -grid_imports) ->
       grid_trade_ratio
 
+    # TODO: the current trade flow data have some issues, need to find a better source
+
     # L2235.elec_flows_GRID %>%
     #   left_join_error_no_match(grid_trade_ratio, by=c("year"="Year","grid_region"="import_grid")) %>%
     #   mutate(

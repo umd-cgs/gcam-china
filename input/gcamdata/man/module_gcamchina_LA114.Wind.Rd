@@ -24,5 +24,5 @@ Compute capacity factors for wind by China province.
 Computed from A23 tables for capital, variable and fixed wind costs by province.
 }
 \author{
-Liu July 2018
+Liu July 2018 / Ou Dec 2023
 }

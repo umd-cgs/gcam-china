@@ -24,5 +24,5 @@ Provides industrial energy consumption and industrial feedstock consumption by r
 Provides for each china's province industrial energy consumption and industrial feedstock consumption by region/fuel/historical year.
 }
 \author{
-Yang Jul 2018
+Yang Liu Jul 2018 / Yang Ou Dec 2023
 }
