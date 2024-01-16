@@ -10,14 +10,16 @@
                  to differentiate explicitly define the date with date="..." in the
                  scenario tag.
               -->
-            <scenario name="Core_Ref"/>
-
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
-            <queryFile>batch_queries/Model_verification_queries.xml</queryFile>
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_primary_energy_con_by_region.xml</queryFile>
             <!-- Where to write results -->
-            <outFile>gcam_data/Core/reference.csv</outFile>
+            <outFile>E:\Github\detailed_ind_China\batch_query_primary_energy_con_by_region.csv</outFile>
             <!-- Which database to query -->
-            <xmldbLocation>../database_basexdb</xmldbLocation>
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
             <!-- Additinoal query options which will be ignored when saving to CSV -->
             <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
             <batchQueryIncludeCharts>false</batchQueryIncludeCharts>

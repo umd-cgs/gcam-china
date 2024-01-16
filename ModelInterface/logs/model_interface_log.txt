@@ -21,22 +21,637 @@ Didn't find builder for profit rate query going to use defaults
 Didn't find builder for profit rate in a specified land use region query going to use defaults
 Didn't find builder for land leaf shares query going to use defaults
 Didn't find builder for land leaf shares in a specified land use region query going to use defaults
-About to perform query: collection()/scenario[@date='2023-26-12T08:20:20+08:00' and @name='Reference_high_demand']/@name
 About to perform query: collection()/scenario
-About to perform query: collection()/scenario[@date='2023-25-12T22:48:39+08:00' and @name='Tax_100_low_demand']/@name
-About to perform query: collection()/scenario
-About to perform query: collection()/scenario[@date='2023-24-12T16:19:55+08:00' and @name='Tax_100_high_demand']/@name
-About to perform query: collection()/scenario
-About to perform query: collection()/scenario[@date='2023-25-12T22:48:38+08:00' and @name='Reference_low_demand']/@name
-About to perform query: collection()/scenario
-About to perform query: collection()/singleQueryListCache/cache[@id=-1648555074]/text()
-Time : 1
-Before Function: 1703561729438
-About to perform query: collection()/scenario[ (@name='Tax_100_low_demand' and @date='2023-24-12T16:19:55+08:00') or (@name='Reference_high_demand' and @date='2023-25-12T22:48:38+08:00') or (@name='Tax_100_high_demand' and @date='2023-25-12T22:48:39+08:00') or (@name='Reference_low_demand' and @date='2023-26-12T08:20:20+08:00') ]/world/region[ (@name='JS') ]/*[@type='sector' and (@name='iron and steel')]/
-               *[@type='subsector' (:collapse:) and not(@name='Imports')]//
-               *[@type='output' (:collapse:)]/physical-output/node()
-In Function: 1703561729438
-After build Tree: 1703561729571
-After Add table: 1703561729571
+Didn't find builder for LUC emissions by region query going to use defaults
+Didn't find builder for aggregated land allocation query going to use defaults
+Before Function: 1704934966627
+Before Function: 1704934966627
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/GDP/gdp-mer/text()
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/GDP/gdp-per-capita-ppp/text()
+In Function: 1704934966628
+In Function: 1704934966628
+After build Tree: 1704934979621
+After Add table: 1704934979622
+Before Function: 1704934979622
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/demographics/populationMiniCAM/total-population/node()
+In Function: 1704934979622
+After build Tree: 1704934979652
+After Add table: 1704934979652
+Before Function: 1704934979652
+About to perform query:  
+               declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
+                               let $scn := $parent/ancestor::scenario,
+                                      $rgn := $parent (: /ancestor::region :)
+                                 return
+                                      document { element scenario {
+                                                                  $scn/@*,
+                                                                  element region {
+                                                                        $rgn/@*,
+                                                                        $append
+                                                                  }
+                                                            }
+                                    }
+                               (: I can get by with just the scenario and region
+                               let $new_node := element {local-name($parent)} {$parent/@*, $append}   
+                               return
+                               if(local-name($parent) != 'scenario')
+                               then local:append-heirarchy($parent/parent::*, $new_node)
+                               else document { $new_node } :)
+                         }; 
+                         declare function local:generate-sector-input-coefs($outputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
+                 if(empty($outputNameQueue)) then $coefs
+                 else if( exists($coefs[@name = $outputNameQueue[1]]) or exists(index-of(('biomass',
+'traded unconventional oil', 'regional corn for ethanol', 'regional biomassOil', 'regional sugar for ethanol', 'regional sugarbeet for ethanol'),
+$outputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$outputNameQueue[1]]))
+then 
+(:if(not($is_usa) and string-length($currTree/@name) = 2) then
+local:trace-inputs($outputName, $currTree/parent::*/*[@type='region' and @name='USA'], $outputs, true())
+else:)
+local:generate-sector-input-coefs(remove($outputNameQueue, 1), $currTree, $coefs, $is_usa)
+                                    else
+                    let $outputName := $outputNameQueue[1],
+                        $newOutputNameQueue := remove($outputNameQueue, 1),
+                        $useOutputs := $currTree//output-primary[@type='output' and @name=$outputName],
+                        $useInputs := for $out in $useOutputs[not(following-sibling::keyword[exists(@primary-renewable)])]
+                                      return $out/following-sibling::*[@type='input' and not(@name='oil-credits')],
+                        $renewOutputs := for $out in $useOutputs[following-sibling::keyword[exists(@primary-renewable)]]
+                                         return element output {
+                                             attribute name { $out/following-sibling::keyword/@primary-renewable },
+                                             $out/child::*
+                                         },
+                        $totalOutputSum := for $vintage in distinct-values($useOutputs/physical-output/@vintage)
+                                          return element output {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($useOutputs/physical-output[@vintage=$vintage])
+                                                     }
+                                                 },
+                       $new_coefs := $coefs | element sector {
+                                            attribute name { $outputName },
+                                            for $input in distinct-values($useInputs/@name)
+                                            return element input {
+                                                       attribute name { $input },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($useInputs[@name=$input]/demand-physical[@vintage=$outputSum/@vintage])
+                                                       where $inputSum > 0
+                                                       return element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              }
+                                                    },
+                                            for $input in distinct-values($renewOutputs/@name)
+                                            return element input {
+                                                       attribute name { concat($input, ' renewable') },
+                                                       attribute is-renewable { true() },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($renewOutputs[@name=$input]/physical-output[@vintage=$outputSum/@vintage])
+                                                       where $inputSum > 0
+                                                       return element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              }
+                                                    }
+                                        }
+                        return 
+                              local:generate-sector-input-coefs(distinct-values(($newOutputNameQueue, $useInputs/@name)), $currTree, $new_coefs, $is_usa)
+            };
+        declare function local:generate-ccs-coefs($currTree as node(), $coefs as node()*) as node()* {
+            for $sector in $coefs/@name
+            let $currSector := $currTree/*[@type='sector' and @name=$sector],
+                $useInputs := $currSector//*[@type='technology' and not(contains(@name, 'CCS')) and not(child::keyword/@primary-renewable)]/*[@type='input' and not(@name='oil-credits')],
+                $useInputsCCS := $currSector//*[@type='technology' and contains(@name, 'CCS')]/*[@type='input' and not(@name='oil-credits')],
+                $totalOutputSum := for $vintage in distinct-values($useInputs/demand-physical/@vintage | $useInputsCCS/demand-physical/@vintage)
+                                          return element output {
+                                                     attribute vintage { $vintage },
+                                                     text {
+                                                         sum($currSector//output-primary/physical-output[@vintage=$vintage])
+                                                     }
+                                                 }
+            return if(exists($useInputsCCS)) then
+                element sector {
+                                            attribute name { $sector },
+                                            $coefs[@name=$sector]/input[@is-renewable],
+                                            for $input in distinct-values(($useInputs/@name, $useInputsCCS/@name))
+                                            return element input {
+                                                       attribute name { $input },
+                                                       for $outputSum in $totalOutputSum
+                                                       let $inputSum := sum($useInputs[@name=$input]/demand-physical[@vintage=$outputSum/@vintage]),
+                                                           $inputSumCCS := sum($useInputsCCS[@name=$input]/demand-physical[@vintage=$outputSum/@vintage])
+                                                       return (element coef {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSum div $outputSum }
+                                                              },
+                                                              element coef_ccs {
+                                                                  attribute vintage { $outputSum/@vintage },
+                                                                  text { $inputSumCCS div $outputSum }
+                                                              })
+                                                    }
+                                        }
+                    else
+                        $coefs[@name=$sector]
+        };
+        declare function local:apply-coefs($outputName as xs:string, $outputs as node()*, $coefs as node()*, $isCCS as xs:boolean) as node()* {
+            if(exists($coefs[@name=$outputName]) and sum($outputs) > 0.001) then
+                for $input in $coefs[@name=$outputName]/input
+                return local:apply-coefs($input/@name,
+                    for $vintage in distinct-values($outputs/@vintage)
+                    let $outputThisVintage := $outputs[@vintage=$vintage],
+                        $firstOutput := $outputThisVintage[1],
+                        $outputSum := sum($outputThisVintage),
+                        $coefThisVintage := $input/coef[@vintage=$vintage]
+                    where $coefThisVintage > 0
+                            return element { local-name($firstOutput) } {
+                                    $firstOutput/@*,
+                        text{ $outputSum * $coefThisVintage }
+                        }, $coefs, $isCCS)
+                    | local:apply-coefs($input/@name,
+                    for $vintage in distinct-values($outputs/@vintage)
+                    let $outputThisVintage := $outputs[@vintage=$vintage],
+                        $firstOutput := $outputThisVintage[1],
+                        $outputSum := sum($outputThisVintage),
+                        $coefThisVintage := $input/coef_ccs[@vintage=$vintage]
+                    where exists($coefThisVintage) and $coefThisVintage > 0
+                            return element { local-name($firstOutput) } {
+                                    $firstOutput/@*,
+                        text{ $outputSum * $coefThisVintage }
+                              }, $coefs, true())
+            else if( sum($outputs) > 0.001) then
+                element input {
+                    attribute name { if($isCCS) then concat($outputName, ' CCS') else $outputName },
+                    attribute type { 'input' },
+                    (: $outputs :) (: TODO: not sure why this doesn't work and we need to create these explicitly :)
+                    for $o in $outputs
+                    return element demand-physical { $o/@*, text{ $o/text() } }
+                }
+            else
+                (: These are the residuals from chasing simulenaties, I've left this here
+                   for debuging purposes :)
+                element input {
+                    attribute name { $outputName },
+                    attribute type { 'input' } (:,
+                    $outputs :)
+                }
+        };
+            declare function local:run-input-by-primary($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* {      
+                         unordered {      
+                         let $regionsG := if(not($regions[1] = 'Global'))
+                                      then $regions
+                                      else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+                         return
+                         for $scenario in $scenarios,           
+                         $region in $regionsG   
+                         let $scenario_split := tokenize($scenario, ' '),         
+                         $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
+                 $currInputs := $currTree/*[@type='sector' and (@name='unconventional oil production' or exists(child::keyword/@final-energy))]//*[@type='input' and empty(index-of(('trn_pass_road', 'limestone', 'process heat cement', 'industrial energy use', 'industrial feedstocks', 'renewable', 'trn_freight_road', 'trn_pass_road_LDV', 'trn_pass_road_LDV_2W', 'trn_pass_road_LDV_4W', 'unconventional oil', 'oil-credits'), @name))],
+                 $coefs := local:generate-sector-input-coefs(distinct-values($currInputs/@name), $currTree, (), false()),
+                 $ccs_coefs := local:generate-ccs-coefs($currTree, $coefs)
+                         return 
+                            for $inputName in distinct-values($currInputs/@name)
+                            return local:append-heirarchy($currTree, local:apply-coefs($inputName, $currInputs[@name=$inputName]/demand-physical, $ccs_coefs, false()))//text()
+                         } 
+             };
+             local:run-input-by-primary(('Reference_low_demand 2023-30-12T12:07:52+08:00', 'Tax_100_low_demand 2023-30-12T12:07:52+08:00'), ('USA', 'Africa_Eastern', 'Africa_Northern', 'Africa_Southern', 'Africa_Western', 'Australia_NZ', 'Brazil', 'Canada', 'Central America and Caribbean', 'Central Asia', 'China', 'EU-12', 'EU-15', 'Europe_Eastern', 'Europe_Non_EU', 'European Free Trade Association', 'India', 'Indonesia', 'Japan', 'Mexico', 'Middle East', 'Pakistan', 'Russia', 'South Africa', 'South America_Northern', 'South America_Southern', 'South Asia', 'South Korea', 'Southeast Asia', 'Taiwan', 'Argentina', 'Colombia'), ())
+         
+         
+In Function: 1704934979653
+After build Tree: 1704934979891
+After Add table: 1704934979891
+Before Function: 1704934979891
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='resource']//output/node()
+In Function: 1704934979892
+After build Tree: 1704934988716
+After Add table: 1704934988717
+Before Function: 1704934988718
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='resource']/*[@type='subresource']/
+            *[@type='technology']/output-primary[@type='output' (:collapse:)]/physical-output/node()
+In Function: 1704934988718
+After build Tree: 1704934993592
+After Add table: 1704934993596
+Before Function: 1704934994703
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type = 'sector' and (@name='regional oil' or @name='regional natural gas'
+            or @name='regional coal' or @name='regional biomass' or @name='nuclearFuelGenIII')]/
+            cost/text()
+In Function: 1704934994704
+After build Tree: 1704934996572
+After Add table: 1704934996573
+Before Function: 1704934996573
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' (:collapse:) and
+               (@name='electricity' or @name='elect_td_bld' or @name='industrial energy use')]/
+               *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='output' and (@name='electricity' or @name='elect_td_bld')]/
+               physical-output/node()
+In Function: 1704934996573
+After build Tree: 1704935015523
+After Add table: 1704935015525
+Before Function: 1704935015596
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='electricity' or @name='elect_td_bld' or
+                  contains(@name,'elec_')) and not(contains(@name, 'water_td'))]/
+                  *[@type='subsector' and not (@name='elect_td_bld')]/
+                  *[@type='technology' and not(@name='biomass (conv)' or @name='biomass (conv CCS)' or @name='biomass (IGCC)' or @name='biomass (IGCC CCS)'
+                                   or @name='coal (conv pul)' or @name='coal (conv pul CCS)' or @name='coal (IGCC)' or @name='coal (IGCC CCS)'
+                                   or @name='gas (steam/CT)' or @name='gas (CC)' or @name='gas (CC CCS)'
+                                   or @name='refined liquids (steam/CT)' or @name='refined liquids (CC)' or @name='refined liquids (CC CCS)'
+                                   or @name='geothermal' or @name='Gen_II_LWR' or @name='Gen_III'
+                                   or @name='CSP' or @name='CSP_storage')]/
+                  *[@type='output']/physical-output/node()
+               
+In Function: 1704935015596
+After build Tree: 1704935019647
+After Add table: 1704935019648
+Before Function: 1704935019792
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='electricity' or @name='elect_td_bld' or @name='elect_td_ind'
+               or @name='elect_td_trn')]/cost/text()
+In Function: 1704935019792
+After build Tree: 1704935020665
+After Add table: 1704935020665
+Before Function: 1704935020665
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='electricity')]/*[@type='subsector']/cost/text()
+In Function: 1704935020666
+After build Tree: 1704935021783
+After Add table: 1704935021784
+Before Function: 1704935021784
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and contains(@name,'refining')]/*[@type='subsector']/
+               *[@type='technology']/output-primary[@type='output']/physical-output/node()
+In Function: 1704935021784
+After build Tree: 1704935030540
+After Add table: 1704935030541
+Before Function: 1704935030682
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='refining')]/*[@type='subsector']/*[@type='technology']/cost/text()
+In Function: 1704935030682
+After build Tree: 1704935033787
+After Add table: 1704935033788
+Before Function: 1704935033961
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+               *[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)]/
+               physical-output/node()
+In Function: 1704935033962
+After build Tree: 1704935041296
+After Add table: 1704935041297
+Before Function: 1704935041308
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='H2 central production' or @name='H2 forecourt production')]/
+               *[@type='subsector']/*[@type='technology']/cost/text()
+In Function: 1704935041308
+After build Tree: 1704935043143
+After Add table: 1704935043144
+Before Function: 1704935043158
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='gas processing')]/*[@type='subsector']/
+               *[@type='technology']/*[@type='output' (:collapse:)]/physical-output/node()
+In Function: 1704935043159
+After build Tree: 1704935044453
+After Add table: 1704935044453
+Before Function: 1704935044455
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='gas processing')]/*[@type='subsector']/
+               *[@type='technology']/cost/text()
+In Function: 1704935044456
+After build Tree: 1704935044829
+After Add table: 1704935044829
+Before Function: 1704935044831
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' and
+            not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
+                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn_') or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+In Function: 1704935044831
+After build Tree: 1704935138384
+After Add table: 1704935138387
+Before Function: 1704935138466
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='wholesale gas' or @name='delivered gas' or
+            @name='delivered coal' or @name='delivered biomass' or @name='traditional biomass' or
+            @name='elect_td_ind' or @name='elect_td_bld' or @name='elect_td_trn' or
+            @name='H2 enduse'or @name='refined liquids industrial' or @name='refined liquids enduse')]/
+            cost/text()
+In Function: 1704935138467
+After build Tree: 1704935139596
+After Add table: 1704935139596
+Before Function: 1704935139597
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='delivered gas' or @name='traditional biomass' or
+               @name='delivered coal' or @name='delivered biomass' or @name='elect_td_bld' or
+               @name='refined liquids enduse')]/cost/text()
+In Function: 1704935139597
+After build Tree: 1704935140223
+After Add table: 1704935140223
+Before Function: 1704935140223
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='wholesale gas' or @name='delivered coal' or
+               @name='delivered biomass' or @name='H2 enduse' or @name='elect_td_ind' or
+               @name='refined liquids industrial')]/cost/text()
+In Function: 1704935140224
+After build Tree: 1704935140868
+After Add table: 1704935140869
+Before Function: 1704935140869
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='delivered gas' or @name='delivered coal' or @name='elect_td_trn'
+               or @name='refined liquids enduse' or @name='H2 enduse')]/cost/text()
+In Function: 1704935140869
+After build Tree: 1704935141402
+After Add table: 1704935141402
+Before Function: 1704935141402
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (local-name()='AgSupplySector')]//
+            output-primary/physical-output/node()
+In Function: 1704935141402
+Before Function: 1704935249588
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (local-name()='AgSupplySector')]/cost/text()
+In Function: 1704935249588
+After build Tree: 1704935251444
+After Add table: 1704935251444
+Before Function: 1704935251445
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='biomass')]//*[@type='output' (:collapse:)]/
+            physical-output/node()
+In Function: 1704935251445
+After build Tree: 1704935257814
+After Add table: 1704935257814
+Before Function: 1704935257815
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector']//output-residue-biomass/physical-output/node()
+In Function: 1704935257815
+Before Function: 1704935257816
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='resource' and (@name='biomass')]//output/node()
+In Function: 1704935257816
+After build Tree: 1704935257985
+After Add table: 1704935257985
+Before Function: 1704935257985
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (@name='regional biomass')]//*[@type='input']/
+            demand-physical/node()
+In Function: 1704935257986
+After build Tree: 1704935258277
+After Add table: 1704935258277
+Before Function: 1704935258277
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and
+               (@name='Beef' or @name='SheepGoat' or @name='Pork' or @name='Dairy' or @name='Poultry')]/
+               cost/text()
+In Function: 1704935258277
+After build Tree: 1704935258824
+After Add table: 1704935258825
+Before Function: 1704935258825
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector']//*[@type='input' and
+            (@name='regional corn' or @name='regional fibercrop'
+               or @name='regional misccrop' or @name='regional oilcrop' or @name='regional othergrain'
+               or @name='regional palmfruit' or @name='regional rice' or @name='regional root_tuber'
+               or @name='regional sugarcrop' or @name='regional wheat' or @name='FodderGrass' or @name='FodderHerb'
+               or @name='Forest' or @name='Pasture')]/
+               demand-physical/node()
+In Function: 1704935258825
+After build Tree: 1704935274079
+After Add table: 1704935274081
+Before Function: 1704935274174
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector']//*[@type='input' and
+            (@name='Beef' or @name='Pork' or @name='Poultry' or @name='SheepGoat' or @name='OtherMeat_Fish')]/
+            demand-physical/node()
+In Function: 1704935274174
+After build Tree: 1704935375283
+After Add table: 1704935375284
+Before Function: 1704935375322
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]//LandNode[@name='root' or @type='LandNode' (:collapse:)]//
+                land-use-change-emission[@year>1970]/text()
+In Function: 1704935375322
+After build Tree: 1704935390481
+After Add table: 1704935390481
+Before Function: 1704935390495
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]//LandNode[@name='root' or @type='LandNode' (:collapse:)]//land-allocation/text()
+In Function: 1704935390495
+After build Tree: 1704935744646
+After Add table: 1704935744646
+Before Function: 1704935744647
+About to perform query:  
+            declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
+            let $scn := $parent/ancestor::scenario,
+            $rgn := $parent (: /ancestor::region :)
+            return
+            document { element scenario {
+            $scn/@*,
+            element region {
+            $rgn/@*,
+            $append
+            }
+            }
+            }
+            (: I can get by with just the scenario and region
+            let $new_node := element {local-name($parent)} {$parent/@*, $append}    
+            return
+            if(local-name($parent) != 'scenario')
+            then local:append-heirarchy($parent/parent::*, $new_node)
+            else document { $new_node } :)
+            }; 
+            declare function local:get-carbon-coef($good as xs:string) as xs:decimal {
+            let $carbonCoefs := (
+            <PrimaryFuelCO2Coef name="biomass">0</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="coal">27.3</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="crude oil">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="delivered biomass">23</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="delivered coal">27.3</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="delivered gas">14.2</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="gas pipeline">14.2</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="gas processing">14.2</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="limestone">0.08</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="natural gas">14.2</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="refined liquids enduse">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="refined liquids industrial">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="refining">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="regional biomass">23</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="regional biomassOil">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="regional coal">27.3</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="regional corn for ethanol">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="regional natural gas">14.2</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="regional oil">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="regional sugar for ethanol">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="traded unconventional oil">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="unconventional oil">21.1</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="unconventional oil production">19.6</PrimaryFuelCO2Coef>,
+            <PrimaryFuelCO2Coef name="wholesale gas">14.2</PrimaryFuelCO2Coef>),
+            $currCoef := $carbonCoefs[@name=$good]/text()
+            return if(exists($currCoef)) then $currCoef else 0.0
+            };
+            
+            
+            declare function local:is-carbonatious-fuel($good as xs:string) as xs:boolean {
+            not(local:get-carbon-coef($good) = 0.0)
+            };
+            declare function local:generate-sector-output-coefs($inputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
+            if(empty($inputNameQueue)) then $coefs
+            else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('traded unconventional oil'),
+            $inputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$inputNameQueue[1]]) or not(local:is-carbonatious-fuel($inputNameQueue[1])))
+            then 
+            local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs, $is_usa)
+            else
+            let $inputName := $inputNameQueue[1],
+            $newInputNameQueue := remove($inputNameQueue, 1),
+            $useInputs := $currTree//*[@type='input' and @name=$inputName],
+            $useSectors := distinct-values($useInputs/ancestor::*[@type='sector']/@name),
+            $totalInputSum := for $vintage in distinct-values($useInputs/demand-physical/@vintage)
+            return element input {
+            attribute vintage { $vintage },
+            text {
+            sum($useInputs/demand-physical[@vintage=$vintage])
+            }
+            },
+            $new_coefs := if(empty($useSectors)) then
+            $coefs
+            else
+            $coefs | element sector {
+            attribute name { $inputName },
+            for $output in $useSectors
+            return element output {
+            attribute name { $output },
+            for $inputSum in $totalInputSum
+            let $currSectorInputs := $useInputs[ancestor::*[@type='sector' and @name=$output]],
+            $outputSum := sum($currSectorInputs/demand-physical[@vintage=$inputSum/@vintage]),
+            $carbonIn := sum($currSectorInputs/parent::*//carbon-content[@vintage=$inputSum/@vintage]),
+            $carbonOut := sum($currSectorInputs/parent::*/output-primary/physical-output[@vintage=$inputSum/@vintage]) *
+            local:get-carbon-coef($output)
+            return (element share {
+            attribute vintage { $inputSum/@vintage },
+            text { $outputSum div $inputSum }
+            }, element carbon_ratio {
+            attribute vintage { $inputSum/@vintage },
+            text{ if($carbonIn > 0) then $carbonOut div $carbonIn else 0 }
+            })
+            }
+            }
+            return 
+            local:generate-sector-output-coefs(distinct-values(($newInputNameQueue, $useSectors)), $currTree, $new_coefs, $is_usa)
+            };
+            declare function local:apply-coefs($outputName as xs:string, $emissions as node()*, $coefs as node()*) as node()* {
+            if(exists($coefs[@name=$outputName]) and abs(sum($emissions)) > 0.001) then
+            for $output in $coefs[@name=$outputName]/output
+            let $emiss_go := for $year in distinct-values($emissions/@year)
+            let $emissThisVintage := $emissions[@year=$year],
+            $firstEmiss := $emissThisVintage[1],
+            $emissSum := sum($emissThisVintage),
+            $shareThisVintage := $output/share[@vintage=$year],
+            $carbonRatioThisVintage := $output/carbon_ratio[@vintage=$year],
+            $coefThisVintage := $shareThisVintage * $carbonRatioThisVintage
+            where $coefThisVintage > 0
+            return element { local-name($firstEmiss) } {
+            $firstEmiss/@*,
+            text{ $emissSum * $coefThisVintage }
+            },
+            $emiss_stay := for $year in distinct-values($emissions/@year)
+            let $emissThisVintage := $emissions[@year=$year],
+            $firstEmiss := $emissThisVintage[1],
+            $emissSum := sum($emissThisVintage),
+            $shareThisVintage := $output/share[@vintage=$year],
+            $carbonRatioThisVintage := 1.0 - $output/carbon_ratio[@vintage=$year],
+            $coefThisVintage := $shareThisVintage * $carbonRatioThisVintage 
+            where $coefThisVintage > 0
+            return element { local-name($firstEmiss) } {
+            $firstEmiss/@*,
+            text{ $emissSum * $coefThisVintage }
+            }
+            return local:apply-coefs($output/@name, $emiss_go, $coefs) |
+            element sector {
+            attribute name { $output/@name},
+            attribute type { 'sector' },
+            $emiss_stay
+            }
+            else if( abs(sum($emissions)) > 0.001) then
+            element sector {
+            attribute name { $outputName },
+            attribute type { 'sector' },
+            $emissions
+            }
+            else
+            (: These are the residuals from chasing simulenaties, I've left this here
+            for debuging purposes :)
+            element sector {
+            attribute name { $outputName },
+            attribute type { 'sector' }(:,
+            $emissions:)
+            }
+            };
+            declare function local:run-emiss-by-enduse($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* {       
+            (:unordered { :)  
+            let $regionsG := if(not($regions[1] = 'Global'))
+            then $regions
+            else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+            return
+            for $scenario in $scenarios,      
+            $region in $regionsG    
+            let $scenario_split := tokenize($scenario, ' '),          
+            $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
+            $sector_emiss := $currTree/*[@type='sector' and not(@name='regional biomass' or @name='regional biomassOil' or @name='regional corn for ethanol' or @name='regional sugar for ethanol' or @name='regional sugarbeet for ethanol')]//CO2[@type='GHG' (:collapse:) and @name='CO2']/emissions/text(),
+            $currEmissSectors := $currTree/*[@type='sector' and (@name='regional biomass' or @name='regional biomassOil' or @name='regional corn for ethanol' or @name='regional sugar for ethanol' or @name='regional sugarbeet for ethanol')],
+            $coefs := local:generate-sector-output-coefs(distinct-values($currEmissSectors/@name), $currTree, (), false()),
+            $downstream_emiss := for $sectorName in distinct-values($currEmissSectors/@name)
+            return local:append-heirarchy($currTree, local:apply-coefs($sectorName, $currEmissSectors[@name=$sectorName]//CO2[@name='CO2']/emissions, $coefs))//text() 
+            return ($sector_emiss, $downstream_emiss )
+            (:  } :)
+            };
+            local:run-emiss-by-enduse(('Reference_low_demand 2023-30-12T12:07:52+08:00', 'Tax_100_low_demand 2023-30-12T12:07:52+08:00'), ('USA', 'Africa_Eastern', 'Africa_Northern', 'Africa_Southern', 'Africa_Western', 'Australia_NZ', 'Brazil', 'Canada', 'Central America and Caribbean', 'Central Asia', 'China', 'EU-12', 'EU-15', 'Europe_Eastern', 'Europe_Non_EU', 'European Free Trade Association', 'India', 'Indonesia', 'Japan', 'Mexico', 'Middle East', 'Pakistan', 'Russia', 'South Africa', 'South America_Northern', 'South America_Southern', 'South Asia', 'South Korea', 'Southeast Asia', 'Taiwan', 'Argentina', 'Colombia'), ())
+            
+         
+In Function: 1704935744648
+After build Tree: 1704935758623
+After Add table: 1704935758623
+Before Function: 1704935758623
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' (:collapse:)]//CO2/emissions/node()
+In Function: 1704935758623
+After build Tree: 1704935800334
+After Add table: 1704935800334
+Before Function: 1704935800334
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
+            CO2/emissions-sequestered/node()
+In Function: 1704935800334
+After build Tree: 1704935829354
+After Add table: 1704935829357
+Before Function: 1704935829394
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type = 'sector' (:collapse:) or @type = 'resource' (:collapse:)](: / *[@type = 'subresource' (: collapse :)] :)//
+            *[@type = 'GHG']/emissions/node()
+In Function: 1704935829394
+After build Tree: 1704936688676
+After Add table: 1704936688676
+Before Function: 1704936688681
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/climate-model/CO2-concentration/text()
+In Function: 1704936688681
+After build Tree: 1704936689133
+After Add table: 1704936689133
+Before Function: 1704936689133
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/climate-model/global-mean-temperature/text()
+In Function: 1704936689133
+After build Tree: 1704936689135
+After Add table: 1704936689135
+Before Function: 1704936689135
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/climate-model/forcing-total/text()
+In Function: 1704936689135
+After build Tree: 1704936689159
+After Add table: 1704936689159
+Before Function: 1704936689160
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/Marketplace/market[true() and contains(@name,'CO2') and ContainedRegion[(child::text() = 'USA') or (child::text() = 'Africa_Eastern') or (child::text() = 'Africa_Northern') or (child::text() = 'Africa_Southern') or (child::text() = 'Africa_Western') or (child::text() = 'Australia_NZ') or (child::text() = 'Brazil') or (child::text() = 'Canada') or (child::text() = 'Central America and Caribbean') or (child::text() = 'Central Asia') or (child::text() = 'China') or (child::text() = 'EU-12') or (child::text() = 'EU-15') or (child::text() = 'Europe_Eastern') or (child::text() = 'Europe_Non_EU') or (child::text() = 'European Free Trade Association') or (child::text() = 'India') or (child::text() = 'Indonesia') or (child::text() = 'Japan') or (child::text() = 'Mexico') or (child::text() = 'Middle East') or (child::text() = 'Pakistan') or (child::text() = 'Russia') or (child::text() = 'South Africa') or (child::text() = 'South America_Northern') or (child::text() = 'South America_Southern') or (child::text() = 'South Asia') or (child::text() = 'South Korea') or (child::text() = 'Southeast Asia') or (child::text() = 'Taiwan') or (child::text() = 'Argentina') or (child::text() = 'Colombia') ] ]/price/node()
+In Function: 1704936689160
+After build Tree: 1704936695305
+After Add table: 1704936695305
+Before Function: 1704936695305
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type = 'sector']/cost/text()
+In Function: 1704936695305
+After build Tree: 1704936703173
+After Add table: 1704936703174
+Before Function: 1704936703188
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='sector' and (local-name()!='AgSupplySector')]/*[@type = 'subsector']/cost/text()
+In Function: 1704936703189
+After build Tree: 1704936718590
+After Add table: 1704936718603
+Before Function: 1704936756213
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/Marketplace/market[true() and ContainedRegion[(child::text() = 'USA') or (child::text() = 'Africa_Eastern') or (child::text() = 'Africa_Northern') or (child::text() = 'Africa_Southern') or (child::text() = 'Africa_Western') or (child::text() = 'Australia_NZ') or (child::text() = 'Brazil') or (child::text() = 'Canada') or (child::text() = 'Central America and Caribbean') or (child::text() = 'Central Asia') or (child::text() = 'China') or (child::text() = 'EU-12') or (child::text() = 'EU-15') or (child::text() = 'Europe_Eastern') or (child::text() = 'Europe_Non_EU') or (child::text() = 'European Free Trade Association') or (child::text() = 'India') or (child::text() = 'Indonesia') or (child::text() = 'Japan') or (child::text() = 'Mexico') or (child::text() = 'Middle East') or (child::text() = 'Pakistan') or (child::text() = 'Russia') or (child::text() = 'South Africa') or (child::text() = 'South America_Northern') or (child::text() = 'South America_Southern') or (child::text() = 'South Asia') or (child::text() = 'South Korea') or (child::text() = 'Southeast Asia') or (child::text() = 'Taiwan') or (child::text() = 'Argentina') or (child::text() = 'Colombia') ] ]/supply/node()
+In Function: 1704936756213
+After build Tree: 1704936765317
+After Add table: 1704936765317
+Before Function: 1704936765321
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/Marketplace/market[true() and ContainedRegion[(child::text() = 'USA') or (child::text() = 'Africa_Eastern') or (child::text() = 'Africa_Northern') or (child::text() = 'Africa_Southern') or (child::text() = 'Africa_Western') or (child::text() = 'Australia_NZ') or (child::text() = 'Brazil') or (child::text() = 'Canada') or (child::text() = 'Central America and Caribbean') or (child::text() = 'Central Asia') or (child::text() = 'China') or (child::text() = 'EU-12') or (child::text() = 'EU-15') or (child::text() = 'Europe_Eastern') or (child::text() = 'Europe_Non_EU') or (child::text() = 'European Free Trade Association') or (child::text() = 'India') or (child::text() = 'Indonesia') or (child::text() = 'Japan') or (child::text() = 'Mexico') or (child::text() = 'Middle East') or (child::text() = 'Pakistan') or (child::text() = 'Russia') or (child::text() = 'South Africa') or (child::text() = 'South America_Northern') or (child::text() = 'South America_Southern') or (child::text() = 'South Asia') or (child::text() = 'South Korea') or (child::text() = 'Southeast Asia') or (child::text() = 'Taiwan') or (child::text() = 'Argentina') or (child::text() = 'Colombia') ] ]/demand/node()
+In Function: 1704936765322
+After build Tree: 1704936772938
+After Add table: 1704936772938
+Before Function: 1704936772942
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type = 'sector']/*[@type = 'subsector']/*[@type = 'technology']/
+            *[@type='input']/price-paid[@vintage=parent::*/parent::*/@year]/text()
+In Function: 1704936772942
+After build Tree: 1704936850843
+After Add table: 1704936850869
+Before Function: 1704936860537
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/gcam-consumer//floorspace/node()
+In Function: 1704936860538
+After build Tree: 1704936861454
+After Add table: 1704936861455
+Before Function: 1704936861456
+About to perform query: collection()/scenario[ (@name='Reference_low_demand' and @date='2023-30-12T12:07:52+08:00') or (@name='Tax_100_low_demand' and @date='2023-30-12T12:07:52+08:00') ]/world/region[ (@name='USA') or (@name='Africa_Eastern') or (@name='Africa_Northern') or (@name='Africa_Southern') or (@name='Africa_Western') or (@name='Australia_NZ') or (@name='Brazil') or (@name='Canada') or (@name='Central America and Caribbean') or (@name='Central Asia') or (@name='China') or (@name='EU-12') or (@name='EU-15') or (@name='Europe_Eastern') or (@name='Europe_Non_EU') or (@name='European Free Trade Association') or (@name='India') or (@name='Indonesia') or (@name='Japan') or (@name='Mexico') or (@name='Middle East') or (@name='Pakistan') or (@name='Russia') or (@name='South Africa') or (@name='South America_Northern') or (@name='South America_Southern') or (@name='South Asia') or (@name='South Korea') or (@name='Southeast Asia') or (@name='Taiwan') or (@name='Argentina') or (@name='Colombia') ]/*[@type='final-demand' and contains(@name,'trn_')]/service/text()
+In Function: 1704936861456
+After build Tree: 1704936861715
+After Add table: 1704936861715
+After build Tree: 1704936869884
+After Add table: 1704936869884
 Caught the window closing
-Doing remove because of control

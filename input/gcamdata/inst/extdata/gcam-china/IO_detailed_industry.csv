@@ -1,6 +1,7 @@
 # File: IO_detailed_industry.csv
 # Title: Detailed industry coefficient
 # Units: GJ/kg
+# Description: Input-output data are calculated based on historical energy consumption sourced from the MEIC-HR emission inventory. The energy consumption data could not be used directly due to the inconsistency between IEA data(used in GCAM) and China's energy statistics, so the energy consumption share was used to allocate.
 # Column types: cnccccnnn
 # ----------
 province,year,supplysector,subsector,technology,minicam.energy.input,coefficient,production,energy.input

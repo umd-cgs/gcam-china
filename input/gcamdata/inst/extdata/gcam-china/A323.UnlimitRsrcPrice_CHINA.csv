@@ -1,5 +1,5 @@
 # File: A323.UnlimitRsrcPrice_CHINA.csv
-# Title: Information about resources price in China
+# Title: Information about scrap resources price in China, 3000 CNY/ton based on the current Chinese scrap price, and converting it to US dollars（1$ = 7 ¥） and then discounting it to 1975
 # Units: 1975$/kg
 # Source: Prices estimated
 # Column types: ccin

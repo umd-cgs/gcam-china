@@ -1,6 +1,7 @@
 # File: detailed_industry_output.csv
 # Title: Detailed industry output
 # Units:  Mt/EJ
+# Description: steel and coke production are from the China Statistical Yearbook. Other energy consumption is from the MEIC-HR Emissions Inventory facility-level energy consumption data summed at the provincial level.
 # Column types: cncccn
 # ----------
 province,year,supplysector,subsector,technology,production

@@ -40,6 +40,33 @@
             <scenario name="Reference_low_demand"/>
             <scenario name="Tax_100_low_demand"/>
             <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_transport_service_output_by_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_transport_service_output_by_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+
+
+    <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
+            <!-- The Batch queries to run -->
             <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_chem_input_tech.xml</queryFile>
             <!-- Where to write results -->
             <outFile>E:\Github\detailed_ind_China\batch_query_chem_input_tech.csv</outFile>
@@ -906,4 +933,31 @@
             <batchQueryReplaceResults>true</batchQueryReplaceResults>
         </command>
     </class>
+
+        <class name="ModelInterface.ModelGUI2.DbViewer">
+        <command name="XMLDB Batch File">
+            <!-- List all the scenarios to query, if no scenario are given then
+                 the last scenario in the database will be queries. Note that if
+                 multiple scenarios have the same name the latest one will be used,
+                 to differentiate explicitly define the date with date="..." in the
+                 scenario tag.
+              -->
+            <scenario name="Reference_high_demand"/>
+            <scenario name="Tax_100_high_demand"/>
+            <scenario name="Reference_low_demand"/>
+            <scenario name="Tax_100_low_demand"/>
+            <!-- The Batch queries to run -->
+            <queryFile>E:\Github\gcam-china-v6\output\gcam_diagnostics\batch_queries\queries\batch_query_transport_service_output_by_tech.xml</queryFile>
+            <!-- Where to write results -->
+            <outFile>E:\Github\detailed_ind_China\batch_query_transport_service_output_by_tech.csv</outFile>
+            <!-- Which database to query -->
+            <xmldbLocation>E:\Github\gcam-china-v6\output\database_basexdb</xmldbLocation>
+            <!-- Additinoal query options which will be ignored when saving to CSV -->
+            <batchQueryResultsInDifferentSheets>false</batchQueryResultsInDifferentSheets>
+            <batchQueryIncludeCharts>false</batchQueryIncludeCharts>
+            <batchQuerySplitRunsInDifferentSheets>false</batchQuerySplitRunsInDifferentSheets>
+            <batchQueryReplaceResults>true</batchQueryReplaceResults>
+        </command>
+    </class>
+
 </ModelInterfaceBatch>

@@ -1,6 +1,7 @@
 # File: A323.globaltech_co2capture.csv
 # Title: CO2 capture rates
 # Units: Unitless
+# Description: Data from relevant survey:Dziejarski, Bartosz, Renata Krzyżyńska, and Klas Andersson. "Current status of carbon capture, utilization, and storage technologies in the global economy: A survey of technical assessment."
 # Column types: cccnn
 # ----------
 supplysector,subsector,technology,1971,2100
