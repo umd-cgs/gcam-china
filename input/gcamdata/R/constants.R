@@ -1171,9 +1171,6 @@ gcamchina.ELEC_SEGMENT_SUBPEAK <- "subpeak generation"
 gcamchina.ELEC_SEGMENT_PEAK <- "peak generation"
 
 
-# Indicate whether to use low industry demand  (FALSE = national markets consistent with GCAM global)
-gcamchina.USE_LOW_IND_DEMAND  <- FALSE
-
 
 
 

@@ -37,7 +37,8 @@ module_gcamchina_batch_industry_CHINA_xml <- function(command, ...) {
              "L232.PriceElasticity_ind_CHINA",
              "L232.IncomeElasticity_ind_gcam3_CHINA"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c(XML = "industry_CHINA.xml"))
+    return(c(XML = "industry_CHINA_low_demand.xml",
+             XML = "industry_CHINA_high_demand.xml"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -71,9 +72,9 @@ module_gcamchina_batch_industry_CHINA_xml <- function(command, ...) {
 	  L232.DeleteFinalDemand_CHINAind <- get_data(all_data, "L232.DeleteFinalDemand_CHINAind")
 
     # ===================================================
-	  if (gcamchina.USE_LOW_IND_DEMAND){
+
     # Produce outputs
-  create_xml("industry_CHINA.xml") %>%
+  create_xml("industry_CHINA_low_demand.xml") %>%
 	    add_xml_data(L232.DeleteSupplysector_CHINAind, "DeleteSupplysector") %>%
 	    add_xml_data(L232.DeleteFinalDemand_CHINAind, "DeleteFinalDemand") %>%
 	    add_xml_data(L232.DeleteDomSubsector_CHINAind, "DeleteSubsector") %>%
@@ -122,15 +123,15 @@ module_gcamchina_batch_industry_CHINA_xml <- function(command, ...) {
                      "L232.PerCapitaBased_ind_CHINA",
                      "L232.IncomeElasticity_ind_gcam3_CHINA",
                      "L232.PriceElasticity_ind_CHINA") ->
-      industry_CHINA.xml
-	  }else {
+	    industry_CHINA_low_demand.xml
+
 	    # Produce outputs
 	    #only use the value of 2020 to calibration
 	    L232.IncomeElasticity_ind_gcam3_CHINA %>%
 	      filter(year %in% c(2020)) ->
 	      L232.IncomeElasticity_ind_gcam3_CHINA
 
-	    create_xml("industry_CHINA.xml") %>%
+	    create_xml("industry_CHINA_high_demand.xml") %>%
 	      add_xml_data(L232.DeleteSupplysector_CHINAind, "DeleteSupplysector") %>%
 	      add_xml_data(L232.DeleteFinalDemand_CHINAind, "DeleteFinalDemand") %>%
 	      add_xml_data(L232.DeleteDomSubsector_CHINAind, "DeleteSubsector") %>%
@@ -179,10 +180,10 @@ module_gcamchina_batch_industry_CHINA_xml <- function(command, ...) {
 	                     "L232.PerCapitaBased_ind_CHINA",
 	                     "L232.IncomeElasticity_ind_gcam3_CHINA",
 	                     "L232.PriceElasticity_ind_CHINA") ->
-	      industry_CHINA.xml
+	      industry_CHINA_high_demand.xml
 
-	  }
-    return_data(industry_CHINA.xml)
+
+    return_data(industry_CHINA_low_demand.xml,industry_CHINA_high_demand.xml)
   } else {
     stop("Unknown command")
   }
