@@ -1,6 +1,6 @@
 # File: A323.efficiency_improve.csv
 # Title: energy efficiency improvement
-# Units: unitless
+# Units: energy efficiency improve rate
 # Description: energy efficiency improvement compared to 2015. Provides a more convenient way to reflect future technological energy efficiency improvements.
 # Column types: ccccin
 # ----------

@@ -1,5 +1,5 @@
 # File: A323.globaltech_coef.csv
-# Title: iron and steel production default coefficients
+# Title: Default coefficients are calculated nationally. For those provinces that have provincial values, the provincial values are used instead.
 # Units:  minicam.energy.input (input-output coefficient)
 # Column types: ccccnnn
 # ----------
