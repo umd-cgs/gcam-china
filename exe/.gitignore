@@ -2,6 +2,8 @@
 *.exe
 *.pdb
 *.dll
+*.bat
+
 
 # Ignore build directories
 Debug*
@@ -12,3 +14,4 @@ Release*
 gas*.emk
 outFile*.csv
 debug*.xml
+test_*.xml
