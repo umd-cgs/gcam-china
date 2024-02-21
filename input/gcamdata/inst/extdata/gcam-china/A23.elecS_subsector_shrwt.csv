@@ -29,14 +29,14 @@ China,base load generation,geothermal,end-year,1
 China,intermediate generation,geothermal,end-year,1
 China,subpeak generation,geothermal,end-year,1
 China,peak generation,geothermal,end-year,1
-China,base load generation,nuclear,initial-future-year,0
-China,intermediate generation,nuclear,initial-future-year,0
-China,subpeak generation,nuclear,initial-future-year,0
-China,peak generation,nuclear,initial-future-year,0
-China,base load generation,nuclear,2025,0
-China,intermediate generation,nuclear,2025,0
-China,subpeak generation,nuclear,2025,0
-China,peak generation,nuclear,2025,0
+China,base load generation,nuclear,initial-future-year,1
+China,intermediate generation,nuclear,initial-future-year,1
+China,subpeak generation,nuclear,initial-future-year,1
+China,peak generation,nuclear,initial-future-year,1
+China,base load generation,nuclear,2025,1
+China,intermediate generation,nuclear,2025,1
+China,subpeak generation,nuclear,2025,1
+China,peak generation,nuclear,2025,1
 China,base load generation,nuclear,2030,1
 China,intermediate generation,nuclear,2030,1
 China,subpeak generation,nuclear,2030,1

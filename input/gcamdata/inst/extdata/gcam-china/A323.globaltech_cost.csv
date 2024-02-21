@@ -1,6 +1,6 @@
 # File: A323.globaltech_cost.csv
 # Title: Default costs
-# Units: 1975$/kg(for iron and steel, coke) or 1975$/GJ (for other industry sector)
+# Units: 1975$/kg(for iron and steel, coke) or 1975$/GJ (for other industry sector),,,,,,,
 # Column types: ccccnnnnn
 # ---------
 supplysector,subsector,technology,minicam.non.energy.input,1971,2015,2030,2060,2100
@@ -14,9 +14,9 @@ iron and steel,BLASTFUR,BLASTFUR CCS,non-energy,0.13723572,0.13723572,0.13723572
 chemical,chemical,chemical,non-energy,25,25,25,25,25
 chemical energy use,coal,coal,non-energy,3,3,3,3,3
 chemical feedstocks,coal,coal,non-energy,3,3,3,3,3
-agricultural energy use,coal,coal,non-energy,0.995098039,0.995098039,0.995098039,0.995098039,0.995098039
-mining energy use,coal,coal,non-energy,0.995098039,0.995098039,0.995098039,0.995098039,0.995098039
-construction energy use,coal,coal,non-energy,0.995098039,0.995098039,0.995098039,0.995098039,0.995098039
+agricultural energy use,coal,coal,non-energy,5,5,5,5,5
+mining energy use,coal,coal,non-energy,5,5,5,5,5
+construction energy use,coal,coal,non-energy,5,5,5,5,5
 construction feedstocks,coal,coal,non-energy,0.995098039,0.995098039,0.995098039,0.995098039,0.995098039
 chemical energy use,coal,coal CCS,non-energy,3.5,3.5,3.5,3.5,3.5
 coke,coke,coke,non-energy,0.004595588,0.004595588,0.004595588,0.004595588,0.004595588

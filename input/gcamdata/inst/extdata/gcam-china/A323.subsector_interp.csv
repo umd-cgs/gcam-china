@@ -23,20 +23,20 @@ agricultural energy use,gas,share-weight,final-calibration-year,end-year,,fixed
 agricultural energy use,liquid,share-weight,final-calibration-year,end-year,,fixed
 agricultural energy use,biomass,share-weight,final-calibration-year,end-year,,fixed
 agricultural energy use,hydrogen,share-weight,final-calibration-year,end-year,,linear
-agricultural energy use,electricity,share-weight,final-calibration-year,2050,,linear
+agricultural energy use,electricity,share-weight,final-calibration-year,end-year,,fixed
 mining energy use,coal,share-weight,final-calibration-year,end-year,,fixed
 mining energy use,gas,share-weight,final-calibration-year,end-year,,fixed
 mining energy use,liquid,share-weight,final-calibration-year,end-year,,fixed
 mining energy use,biomass,share-weight,final-calibration-year,end-year,,fixed
 mining energy use,hydrogen,share-weight,final-calibration-year,end-year,,linear
-mining energy use,electricity,share-weight,final-calibration-year,2050,,linear
+mining energy use,electricity,share-weight,final-calibration-year,end-year,,fixed
 construction,construction,share-weight,final-calibration-year,end-year,,fixed
 construction energy use,coal,share-weight,final-calibration-year,end-year,,fixed
 construction energy use,gas,share-weight,final-calibration-year,end-year,,fixed
 construction energy use,liquid,share-weight,final-calibration-year,end-year,,fixed
 construction energy use,biomass,share-weight,final-calibration-year,end-year,,fixed
 construction energy use,hydrogen,share-weight,final-calibration-year,end-year,,linear
-construction energy use,electricity,share-weight,final-calibration-year,2050,,linear
+construction energy use,electricity,share-weight,final-calibration-year,end-year,,fixed
 construction feedstocks,coal,share-weight,final-calibration-year,end-year,,fixed
 construction feedstocks,gas,share-weight,final-calibration-year,end-year,,fixed
 construction feedstocks,liquid,share-weight,final-calibration-year,end-year,,fixed

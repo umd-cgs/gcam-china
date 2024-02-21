@@ -142,10 +142,18 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       L232.DeleteSupplysector_CHINAind  ## OUTPUT
 
     # deleting energy final demand sectors in the full CHINA region")
+    #L232.PerCapitaBased_ind %>%
+    #  bind_rows(L2324.PerCapitaBased_Off_road,
+    #            L2325.PerCapitaBased_chemical,
+    #            L2326.PerCapitaBased_aluminum) %>%
+    #  mutate(region = region) %>% # strip attributes from object
+    #  filter(region == gcamchina.REGION) %>%
+    #  select(LEVEL2_DATA_NAMES[["DeleteFinalDemand"]]) ->
+    #  L232.DeleteFinalDemand_CHINAind  ## OUTPUT
+
+    # only deleting aluminum which not include in detailed industry sectors in CHINA region")
     L232.PerCapitaBased_ind %>%
-      bind_rows(L2324.PerCapitaBased_Off_road,
-                L2325.PerCapitaBased_chemical,
-                L2326.PerCapitaBased_aluminum) %>%
+      bind_rows(L2326.PerCapitaBased_aluminum) %>%
       mutate(region = region) %>% # strip attributes from object
       filter(region == gcamchina.REGION) %>%
       select(LEVEL2_DATA_NAMES[["DeleteFinalDemand"]]) ->
