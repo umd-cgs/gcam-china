@@ -46,13 +46,13 @@ China,intermediate generation,nuclear,end-year,1
 China,subpeak generation,nuclear,end-year,1
 China,peak generation,nuclear,end-year,1
 China,base load generation,wind,end-year,1
-China,intermediate generation,wind,end-year,0
-China,subpeak generation,wind,end-year,0
-China,peak generation,wind,end-year,0
+China,intermediate generation,wind,end-year,1
+China,subpeak generation,wind,end-year,1
+China,peak generation,wind,end-year,1
 China,base load generation,wind,2030,1
-China,intermediate generation,wind,initial-future-year,0
-China,subpeak generation,wind,initial-future-year,0
-China,peak generation,wind,initial-future-year,0
+China,intermediate generation,wind,2030,1
+China,subpeak generation,wind,2030,1
+China,peak generation,wind,2030,1
 China,base load generation,solar,end-year,1
 China,intermediate generation,solar,end-year,1
 China,subpeak generation,solar,end-year,1
