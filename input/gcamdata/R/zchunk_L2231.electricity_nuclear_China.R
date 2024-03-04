@@ -40,7 +40,7 @@ module_gcamchina_L2231.electricity_nuclear_CHINA <- function(command, ...) {
       gather(year, fixedOutput, -province.name) %>%
       # keep only model future years
       filter(year %in% MODEL_FUTURE_YEARS) %>%
-      mutate(supplysector = "electricity", subsector = "nuclear", stub.technology = "Gen_III", subs.share.weight = 0, tech.share.weight = 0) %>%
+      mutate(supplysector = "base load generation", subsector = "nuclear", stub.technology = "nuc_base_Gen II", subs.share.weight = 0, tech.share.weight = 0) %>%
       left_join(province_names_mappings %>% select(province, province.name), by = "province.name") %>%
       mutate(year = as.numeric(substr(year,0,4)), share.weight.year = year) %>%
       select(-province.name) %>%

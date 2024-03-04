@@ -650,7 +650,8 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
                   ungroup(),
                 by = c("region", "supplysector", "subsector")) %>%
       mutate(share.weight = as.double(share.weight),
-             share.weight = if_else(subsector == "nuclear" & subsector.cal.value == 0, 0, share.weight)) %>%
+             share.weight = if_else(subsector == "nuclear" & subsector.cal.value == 0, 0, share.weight)) %>%			 
+	  mutate(share.weight = if_else(subsector == "nuclear" & ((region == "SD")|(region == "JX")|(region == "HA")|(region == "HN")) , 1, share.weight)) %>%
       select(region, supplysector, subsector, year, share.weight) ->  L2234.SubsectorShrwt_elecS_CHINA
 
     L2234.SubsectorShrwtInterpTo_elecS_CHINA %>%
@@ -665,6 +666,7 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
                 by = c("region", "supplysector", "subsector")) %>%
       mutate(to.value = as.double(to.value),
              to.value = if_else(subsector == "nuclear" & subsector.cal.value == 0, 0, to.value)) %>%
+	  mutate(to.value = if_else(subsector == "nuclear" & ((region == "SD")|(region == "JX")|(region == "HA")|(region == "HN")) , 1, to.value)) %>%
       select(region, supplysector, subsector, apply.to, from.year, to.year, to.value, interpolation.function) ->
       L2234.SubsectorShrwtInterpTo_elecS_CHINA
 

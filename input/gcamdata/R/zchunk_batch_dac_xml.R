@@ -62,7 +62,9 @@ module_energy_batch_dac_xml <- function(command, ...) {
     cost_name <- paste0("L262.GlobalTechCost_dac_",tolower(sce))
     shwt_name <- paste0("L262.GlobalTechShrwt_dac_",tolower(sce))
 
-    L262.GlobalTechCoef_dac <- get_data(all_data, coef_name)
+    L262.GlobalTechCoef_dac <- get_data(all_data, coef_name) %>% filter(!(grepl("water", minicam.energy.input)))
+	
+	
     L262.GlobalTechCost_dac <- get_data(all_data, cost_name)
     L262.GlobalTechShrwt_dac <- get_data(all_data, shwt_name)
 

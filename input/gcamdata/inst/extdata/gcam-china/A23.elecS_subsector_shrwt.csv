@@ -5,18 +5,18 @@
 # Column types: cccci
 # ----------
 region,supplysector,subsector,year,share.weight
-China,base load generation,coal,2030,1
-China,intermediate generation,coal,2030,1
-China,subpeak generation,coal,2030,1
-China,peak generation,coal,2030,1
+China,base load generation,coal,2050,1
+China,intermediate generation,coal,2050,1
+China,subpeak generation,coal,2050,1
+China,peak generation,coal,2050,1
 China,base load generation,coal,end-year,1
 China,intermediate generation,coal,end-year,1
 China,subpeak generation,coal,end-year,1
 China,peak generation,coal,end-year,1
-China,base load generation,gas,2030,1
-China,intermediate generation,gas,2030,1
-China,subpeak generation,gas,2030,1
-China,peak generation,gas,2030,1
+China,base load generation,gas,2050,1
+China,intermediate generation,gas,2050,1
+China,subpeak generation,gas,2050,1
+China,peak generation,gas,2050,1
 China,base load generation,gas,end-year,1
 China,intermediate generation,gas,end-year,1
 China,subpeak generation,gas,end-year,1
@@ -49,20 +49,20 @@ China,base load generation,wind,end-year,1
 China,intermediate generation,wind,end-year,1
 China,subpeak generation,wind,end-year,1
 China,peak generation,wind,end-year,1
-China,base load generation,wind,2030,1
-China,intermediate generation,wind,2030,1
-China,subpeak generation,wind,2030,1
-China,peak generation,wind,2030,1
+China,base load generation,wind,2050,1
+China,intermediate generation,wind,2050,1
+China,subpeak generation,wind,2050,1
+China,peak generation,wind,2050,1
 China,base load generation,solar,end-year,1
 China,intermediate generation,solar,end-year,1
 China,subpeak generation,solar,end-year,1
 China,peak generation,solar,end-year,1
-China,base load generation,solar,2030,1
-China,intermediate generation,solar,2030,1
-China,subpeak generation,solar,2030,1
-China,peak generation,solar,2030,1
+China,base load generation,solar,2050,1
+China,intermediate generation,solar,2050,1
+China,subpeak generation,solar,2050,1
+China,peak generation,solar,2050,1
 China,elect_td_bld,rooftop_pv,end-year,1
-China,elect_td_bld,rooftop_pv,2030,1
+China,elect_td_bld,rooftop_pv,2050,1
 China,peak generation,grid_storage,end-year,1
 China,base load generation,refined liquids,initial-future-year,0
 China,intermediate generation,refined liquids,initial-future-year,0

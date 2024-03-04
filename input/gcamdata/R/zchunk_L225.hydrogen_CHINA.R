@@ -70,7 +70,11 @@ module_gcamchina_L225.hydrogen_china <- function(command, ...) {
     L225.SubsectorShrwtFllt_h2_CHINA <- L225.SubsectorShrwtFllt_h2 %>%
       filter(region == gcamchina.REGION) %>%
       write_to_all_provinces(LEVEL2_DATA_NAMES[["SubsectorShrwtFllt"]], gcamchina.PROVINCES_ALL) %>%
-      filter(!(region %in% c('HK', 'MC') & subsector %in% c('solar','wind')))
+      filter(!(region %in% c('HK', 'MC') & subsector %in% c('solar','wind'))) %>%
+      mutate(across(share.weight, as.numeric)) %>%
+	    # change biomass share weight to 0.1
+	    mutate(share.weight = if_else((subsector == "biomass")&(year.fillout == 2020),0.1,share.weight))
+
 
     L225.StubTech_h2_CHINA <- L225.StubTech_h2 %>%
       filter(region == gcamchina.REGION,

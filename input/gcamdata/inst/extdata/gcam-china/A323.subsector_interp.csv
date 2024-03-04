@@ -5,8 +5,10 @@
 # ----------
 supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
 iron and steel,BLASTFUR,share-weight,final-calibration-year,end-year,,fixed
-iron and steel,EAF with DRI,share-weight,final-calibration-year,end-year,,linear
-iron and steel,EAF with scrap,share-weight,final-calibration-year,end-year,,linear
+iron and steel,EAF with DRI,share-weight,final-calibration-year,2030,1,linear
+iron and steel,EAF with scrap,share-weight,final-calibration-year,2030,1,linear
+iron and steel,EAF with DRI,share-weight,2030,end-year,,fixed
+iron and steel,EAF with scrap,share-weight,2030,end-year,,fixed
 coke,coke,share-weight,final-calibration-year,end-year,,fixed
 chemical,chemical,share-weight,final-calibration-year,end-year,,fixed
 chemical energy use,coal,share-weight,final-calibration-year,end-year,,fixed
