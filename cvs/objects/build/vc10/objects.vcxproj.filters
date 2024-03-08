@@ -918,7 +918,7 @@
       <Filter>Source Files\solution\util</Filter>
     </ClCompile>
     <ClCompile Include="..\..\technologies\source\exogenous_shutdown_decider.cpp">
-      <Filter>Source Files\technologies</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
