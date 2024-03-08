@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_L210.Resources_china
 #'
 #' GCAM-CHINA resource market information, prices, TechChange parameters, and supply curves.
@@ -14,7 +16,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author BY June 2019
+#' @author BY June 2019 /YO December 2023
 
 module_gcamchina_L210.Resources_china <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {

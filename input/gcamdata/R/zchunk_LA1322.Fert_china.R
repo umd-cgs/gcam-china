@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA1322.Fert
 #'
 #' Calculate input-output intensity coefficients and input energy for province fertilizer production
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author YangLiu Aug 2018
+#' @author YangLiu Aug 2018 / YangOu Dec 2023
 module_gcam.china_LA1322.Fert <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L101.NBS_use_all_Mtce",

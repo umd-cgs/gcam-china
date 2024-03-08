@@ -17,7 +17,7 @@
 #' outputs from elec and modified costs.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else group_by left_join mutate select
-#' @author Yangliu Sep 2020 / YangOu Aug 2023
+#' @author Yangliu Sep 2020 / YangOu Aug-Dec 2023
 module_gcamchina_L224_China.heat <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "common/GCAM_region_names",
@@ -86,14 +86,12 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	  A24.globaltech_shrwt %>%
 	    gather_years(value_col = "share.weight") -> A24.globaltech_shrwt
 
-
-
 	  #Sum heat consumption in industry and heat sector, scale the heat supply
 	  L132.in_EJ_province_indnochp_F %>%
 	    filter(fuel == "heat") %>%
 	    select(province,fuel,year,value) %>%
 	    left_join(L144.in_EJ_province_bld_F_U %>%
-	                filter(service == "Heating") %>%
+	                filter(fuel == "heat") %>%
 	                select(province, fuel, year, value) %>%
 	                group_by(province, fuel, year) %>%
 	                summarise(value = sum(value)) %>%
@@ -172,9 +170,27 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    select(-multiplier) ->
 	    L124.out_EJ_province_heatfromelec_F_Yh
 
+	  # Yang Ou Dec 2023
+	  # 2010 Fuel Adjustment Note:
+	  # In 2010, many grid regions shifted gas technology from peak/subpeak to base/int (referenced in L1236 chunk).
+	  # However, only gas steam/CT technologies, which are confined to peak/subpeak segments, can generate heat.
+	  # This shift resulted in a lack of appropriate gas technologies (gas steam/CT) in these regions to produce the expected
+	  # heat output from CHPs. To address this, affected provinces are first identified. Then, for these specific provinces, we substitute
+	  # coal Combined Heat and Power (CHP) heat generation in place of the anticipated gas CHP heat production.
+	  # While this adjustment is technically applicable to all historical periods, the impact is most significant in 2010,
+	  # with other years showing negligible effects.
+
+	  no_gas_tech_2010 <- L2234.StubTechProd_elecS_CHINA %>%
+	    filter(year == 2010 & subsector == "gas") %>%
+	    filter(grepl("steam/CT", stub.technology)) %>%
+	    group_by(region, year) %>%
+	    summarise(no_gas = sum(calOutputValue)) %>%
+	    ungroup() %>%
+	    filter(no_gas == 0)
+
 	  #Just move gas CHP to coal, because some region do not have gas generation
 	  L124.out_EJ_province_heatfromelec_F_Yh %>%
-	    mutate(fuel_new = if_else((region %in% c("NX","FJ","HN","JX") & (fuel == "gas")),"coal",fuel)) %>%
+	    mutate(fuel_new = if_else((region %in% no_gas_tech_2010$region & year == 2010 & (fuel == "gas")),"coal",fuel)) %>%
 	    mutate(fuel = fuel_new) %>%
 	    group_by(region, fuel, sector, year) %>%
 	    summarise(value = sum(value)) %>%

@@ -44,6 +44,7 @@ module_gcamchina_LB1239.elec_province_fractions_USA <- function(command, ...) {
     L123.out_EJ_province_elec_F %>%
       # China just has solar PV and no CSP in this dataset, just rename as solar
       mutate(fuel = sub("solar CSP", "solar", fuel)) %>%
+      mutate(fuel = sub("solar PV", "solar", fuel)) %>%
       group_by(province, sector, fuel, year) %>%
       summarise(tot_generation = sum(value)) %>%
       ungroup() %>%

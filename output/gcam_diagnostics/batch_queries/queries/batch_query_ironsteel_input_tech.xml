@@ -36,10 +36,10 @@
 		<region name="YN" />
        	<region name="ZJ" />
        	<region name="Global"/>
-            <supplyDemandQuery title="IRONSTL inputs by tech (energy and feedstocks)">
+            <supplyDemandQuery title="Iron and steel inputs by tech (energy and feedstocks)">
                <axis1 name="input">input</axis1>
                <axis2 name="Year">demand-physical[@vintage]</axis2>
-               <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and (@name='IRONSTL')]//*[@type='input']/demand-physical/node()</xPath>
+               <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and (@name='iron and steel')]//*[@type='input']/demand-physical/node()</xPath>
                <comments/>
             </supplyDemandQuery>
 	</aQuery>

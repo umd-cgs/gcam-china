@@ -67,7 +67,8 @@ module_gcamchina_batch_dac_china_xml <- function(command, ...) {
     for(sce in TECH_PARAMETRIZATION_INPUTS){
 
       coef_name <- paste0("L262.StubTechCoef_dac_china_",tolower(sce))
-      L262.StubTechCoef_dac_china <- get_data(all_data, coef_name)
+      L262.StubTechCoef_dac_china <- get_data(all_data, coef_name)%>% filter(!(grepl("water", minicam.energy.input)))
+	
 
       coef_name <- paste0("L262.StubTechShrwt_dac_china_",tolower(sce))
       L262.StubTechShrwt_dac_china <- get_data(all_data, coef_name)

@@ -1,164 +1,164 @@
 # File: A323.efficiency_improve.csv
 # Title: energy efficiency improvement
-# Units: unitless
-# Description: energy efficiency improvement compared to 2015
+# Units: energy efficiency improve rate
+# Description: energy efficiency improvement compared to 2015. Provides a more convenient way to reflect future technological energy efficiency improvements.
 # Column types: ccccin
 # ----------
 supplysector,subsector,stub.technology,minicam.energy.input,year,improvement
-agriculture energy use,biomass,biomass,delivered biomass,1975,1
-agriculture energy use,biomass,biomass,delivered biomass,1990,1
-agriculture energy use,biomass,biomass,delivered biomass,2005,1
-agriculture energy use,biomass,biomass,delivered biomass,2010,1
-agriculture energy use,biomass,biomass,delivered biomass,2015,1
-agriculture energy use,biomass,biomass,delivered biomass,2020,1
-agriculture energy use,biomass,biomass,delivered biomass,2025,1
-agriculture energy use,biomass,biomass,delivered biomass,2030,1
-agriculture energy use,biomass,biomass,delivered biomass,2035,1
-agriculture energy use,biomass,biomass,delivered biomass,2040,1
-agriculture energy use,biomass,biomass,delivered biomass,2045,1
-agriculture energy use,biomass,biomass,delivered biomass,2050,1
-agriculture energy use,biomass,biomass,delivered biomass,2055,1
-agriculture energy use,biomass,biomass,delivered biomass,2060,1
-agriculture energy use,biomass,biomass,delivered biomass,2065,1
-agriculture energy use,biomass,biomass,delivered biomass,2070,1
-agriculture energy use,biomass,biomass,delivered biomass,2075,1
-agriculture energy use,biomass,biomass,delivered biomass,2080,1
-agriculture energy use,biomass,biomass,delivered biomass,2085,1
-agriculture energy use,biomass,biomass,delivered biomass,2090,1
-agriculture energy use,biomass,biomass,delivered biomass,2095,1
-agriculture energy use,biomass,biomass,delivered biomass,2100,1
-agriculture energy use,coal,coal,delivered coal,1975,1
-agriculture energy use,coal,coal,delivered coal,1990,1
-agriculture energy use,coal,coal,delivered coal,2005,1
-agriculture energy use,coal,coal,delivered coal,2010,1
-agriculture energy use,coal,coal,delivered coal,2015,1
-agriculture energy use,coal,coal,delivered coal,2020,1
-agriculture energy use,coal,coal,delivered coal,2025,1
-agriculture energy use,coal,coal,delivered coal,2030,1
-agriculture energy use,coal,coal,delivered coal,2035,1
-agriculture energy use,coal,coal,delivered coal,2040,1
-agriculture energy use,coal,coal,delivered coal,2045,1
-agriculture energy use,coal,coal,delivered coal,2050,1
-agriculture energy use,coal,coal,delivered coal,2055,1
-agriculture energy use,coal,coal,delivered coal,2060,1
-agriculture energy use,coal,coal,delivered coal,2065,1
-agriculture energy use,coal,coal,delivered coal,2070,1
-agriculture energy use,coal,coal,delivered coal,2075,1
-agriculture energy use,coal,coal,delivered coal,2080,1
-agriculture energy use,coal,coal,delivered coal,2085,1
-agriculture energy use,coal,coal,delivered coal,2090,1
-agriculture energy use,coal,coal,delivered coal,2095,1
-agriculture energy use,coal,coal,delivered coal,2100,1
-agriculture energy use,district heat,district heat,district heat,1975,1
-agriculture energy use,district heat,district heat,district heat,1990,1
-agriculture energy use,district heat,district heat,district heat,2005,1
-agriculture energy use,district heat,district heat,district heat,2010,1
-agriculture energy use,district heat,district heat,district heat,2015,1
-agriculture energy use,district heat,district heat,district heat,2020,1
-agriculture energy use,district heat,district heat,district heat,2025,1
-agriculture energy use,district heat,district heat,district heat,2030,1
-agriculture energy use,district heat,district heat,district heat,2035,1
-agriculture energy use,district heat,district heat,district heat,2040,1
-agriculture energy use,district heat,district heat,district heat,2045,1
-agriculture energy use,district heat,district heat,district heat,2050,1
-agriculture energy use,district heat,district heat,district heat,2055,1
-agriculture energy use,district heat,district heat,district heat,2060,1
-agriculture energy use,district heat,district heat,district heat,2065,1
-agriculture energy use,district heat,district heat,district heat,2070,1
-agriculture energy use,district heat,district heat,district heat,2075,1
-agriculture energy use,district heat,district heat,district heat,2080,1
-agriculture energy use,district heat,district heat,district heat,2085,1
-agriculture energy use,district heat,district heat,district heat,2090,1
-agriculture energy use,district heat,district heat,district heat,2095,1
-agriculture energy use,district heat,district heat,district heat,2100,1
-agriculture energy use,electricity,electricity,elect_td_ind,1975,1
-agriculture energy use,electricity,electricity,elect_td_ind,1990,1
-agriculture energy use,electricity,electricity,elect_td_ind,2005,1
-agriculture energy use,electricity,electricity,elect_td_ind,2010,1
-agriculture energy use,electricity,electricity,elect_td_ind,2015,1
-agriculture energy use,electricity,electricity,elect_td_ind,2020,1
-agriculture energy use,electricity,electricity,elect_td_ind,2025,1
-agriculture energy use,electricity,electricity,elect_td_ind,2030,1
-agriculture energy use,electricity,electricity,elect_td_ind,2035,1
-agriculture energy use,electricity,electricity,elect_td_ind,2040,1
-agriculture energy use,electricity,electricity,elect_td_ind,2045,1
-agriculture energy use,electricity,electricity,elect_td_ind,2050,1
-agriculture energy use,electricity,electricity,elect_td_ind,2055,1
-agriculture energy use,electricity,electricity,elect_td_ind,2060,1
-agriculture energy use,electricity,electricity,elect_td_ind,2065,1
-agriculture energy use,electricity,electricity,elect_td_ind,2070,1
-agriculture energy use,electricity,electricity,elect_td_ind,2075,1
-agriculture energy use,electricity,electricity,elect_td_ind,2080,1
-agriculture energy use,electricity,electricity,elect_td_ind,2085,1
-agriculture energy use,electricity,electricity,elect_td_ind,2090,1
-agriculture energy use,electricity,electricity,elect_td_ind,2095,1
-agriculture energy use,electricity,electricity,elect_td_ind,2100,1
-agriculture energy use,gas,gas,wholesale gas,1975,1
-agriculture energy use,gas,gas,wholesale gas,1990,1
-agriculture energy use,gas,gas,wholesale gas,2005,1
-agriculture energy use,gas,gas,wholesale gas,2010,1
-agriculture energy use,gas,gas,wholesale gas,2015,1
-agriculture energy use,gas,gas,wholesale gas,2020,1
-agriculture energy use,gas,gas,wholesale gas,2025,1
-agriculture energy use,gas,gas,wholesale gas,2030,1
-agriculture energy use,gas,gas,wholesale gas,2035,1
-agriculture energy use,gas,gas,wholesale gas,2040,1
-agriculture energy use,gas,gas,wholesale gas,2045,1
-agriculture energy use,gas,gas,wholesale gas,2050,1
-agriculture energy use,gas,gas,wholesale gas,2055,1
-agriculture energy use,gas,gas,wholesale gas,2060,1
-agriculture energy use,gas,gas,wholesale gas,2065,1
-agriculture energy use,gas,gas,wholesale gas,2070,1
-agriculture energy use,gas,gas,wholesale gas,2075,1
-agriculture energy use,gas,gas,wholesale gas,2080,1
-agriculture energy use,gas,gas,wholesale gas,2085,1
-agriculture energy use,gas,gas,wholesale gas,2090,1
-agriculture energy use,gas,gas,wholesale gas,2095,1
-agriculture energy use,gas,gas,wholesale gas,2100,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,1975,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,1990,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2005,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2010,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2015,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2020,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2025,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2030,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2035,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2040,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2045,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2050,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2055,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2060,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2065,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2070,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2075,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2080,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2085,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2090,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2095,1
-agriculture energy use,hydrogen,hydrogen,H2 industrial,2100,1
-agriculture energy use,liquid,liquid,refined liquids industrial,1975,1
-agriculture energy use,liquid,liquid,refined liquids industrial,1990,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2005,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2010,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2015,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2020,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2025,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2030,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2035,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2040,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2045,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2050,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2055,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2060,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2065,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2070,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2075,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2080,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2085,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2090,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2095,1
-agriculture energy use,liquid,liquid,refined liquids industrial,2100,1
+agricultural energy use,biomass,biomass,delivered biomass,1975,1
+agricultural energy use,biomass,biomass,delivered biomass,1990,1
+agricultural energy use,biomass,biomass,delivered biomass,2005,1
+agricultural energy use,biomass,biomass,delivered biomass,2010,1
+agricultural energy use,biomass,biomass,delivered biomass,2015,1
+agricultural energy use,biomass,biomass,delivered biomass,2020,1
+agricultural energy use,biomass,biomass,delivered biomass,2025,1
+agricultural energy use,biomass,biomass,delivered biomass,2030,1
+agricultural energy use,biomass,biomass,delivered biomass,2035,1
+agricultural energy use,biomass,biomass,delivered biomass,2040,1
+agricultural energy use,biomass,biomass,delivered biomass,2045,1
+agricultural energy use,biomass,biomass,delivered biomass,2050,1
+agricultural energy use,biomass,biomass,delivered biomass,2055,1
+agricultural energy use,biomass,biomass,delivered biomass,2060,1
+agricultural energy use,biomass,biomass,delivered biomass,2065,1
+agricultural energy use,biomass,biomass,delivered biomass,2070,1
+agricultural energy use,biomass,biomass,delivered biomass,2075,1
+agricultural energy use,biomass,biomass,delivered biomass,2080,1
+agricultural energy use,biomass,biomass,delivered biomass,2085,1
+agricultural energy use,biomass,biomass,delivered biomass,2090,1
+agricultural energy use,biomass,biomass,delivered biomass,2095,1
+agricultural energy use,biomass,biomass,delivered biomass,2100,1
+agricultural energy use,coal,coal,delivered coal,1975,1
+agricultural energy use,coal,coal,delivered coal,1990,1
+agricultural energy use,coal,coal,delivered coal,2005,1
+agricultural energy use,coal,coal,delivered coal,2010,1
+agricultural energy use,coal,coal,delivered coal,2015,1
+agricultural energy use,coal,coal,delivered coal,2020,1
+agricultural energy use,coal,coal,delivered coal,2025,1
+agricultural energy use,coal,coal,delivered coal,2030,1
+agricultural energy use,coal,coal,delivered coal,2035,1
+agricultural energy use,coal,coal,delivered coal,2040,1
+agricultural energy use,coal,coal,delivered coal,2045,1
+agricultural energy use,coal,coal,delivered coal,2050,1
+agricultural energy use,coal,coal,delivered coal,2055,1
+agricultural energy use,coal,coal,delivered coal,2060,1
+agricultural energy use,coal,coal,delivered coal,2065,1
+agricultural energy use,coal,coal,delivered coal,2070,1
+agricultural energy use,coal,coal,delivered coal,2075,1
+agricultural energy use,coal,coal,delivered coal,2080,1
+agricultural energy use,coal,coal,delivered coal,2085,1
+agricultural energy use,coal,coal,delivered coal,2090,1
+agricultural energy use,coal,coal,delivered coal,2095,1
+agricultural energy use,coal,coal,delivered coal,2100,1
+agricultural energy use,district heat,district heat,district heat,1975,1
+agricultural energy use,district heat,district heat,district heat,1990,1
+agricultural energy use,district heat,district heat,district heat,2005,1
+agricultural energy use,district heat,district heat,district heat,2010,1
+agricultural energy use,district heat,district heat,district heat,2015,1
+agricultural energy use,district heat,district heat,district heat,2020,1
+agricultural energy use,district heat,district heat,district heat,2025,1
+agricultural energy use,district heat,district heat,district heat,2030,1
+agricultural energy use,district heat,district heat,district heat,2035,1
+agricultural energy use,district heat,district heat,district heat,2040,1
+agricultural energy use,district heat,district heat,district heat,2045,1
+agricultural energy use,district heat,district heat,district heat,2050,1
+agricultural energy use,district heat,district heat,district heat,2055,1
+agricultural energy use,district heat,district heat,district heat,2060,1
+agricultural energy use,district heat,district heat,district heat,2065,1
+agricultural energy use,district heat,district heat,district heat,2070,1
+agricultural energy use,district heat,district heat,district heat,2075,1
+agricultural energy use,district heat,district heat,district heat,2080,1
+agricultural energy use,district heat,district heat,district heat,2085,1
+agricultural energy use,district heat,district heat,district heat,2090,1
+agricultural energy use,district heat,district heat,district heat,2095,1
+agricultural energy use,district heat,district heat,district heat,2100,1
+agricultural energy use,electricity,electricity,elect_td_ind,1975,1
+agricultural energy use,electricity,electricity,elect_td_ind,1990,1
+agricultural energy use,electricity,electricity,elect_td_ind,2005,1
+agricultural energy use,electricity,electricity,elect_td_ind,2010,1
+agricultural energy use,electricity,electricity,elect_td_ind,2015,1
+agricultural energy use,electricity,electricity,elect_td_ind,2020,1
+agricultural energy use,electricity,electricity,elect_td_ind,2025,1
+agricultural energy use,electricity,electricity,elect_td_ind,2030,1
+agricultural energy use,electricity,electricity,elect_td_ind,2035,1
+agricultural energy use,electricity,electricity,elect_td_ind,2040,1
+agricultural energy use,electricity,electricity,elect_td_ind,2045,1
+agricultural energy use,electricity,electricity,elect_td_ind,2050,1
+agricultural energy use,electricity,electricity,elect_td_ind,2055,1
+agricultural energy use,electricity,electricity,elect_td_ind,2060,1
+agricultural energy use,electricity,electricity,elect_td_ind,2065,1
+agricultural energy use,electricity,electricity,elect_td_ind,2070,1
+agricultural energy use,electricity,electricity,elect_td_ind,2075,1
+agricultural energy use,electricity,electricity,elect_td_ind,2080,1
+agricultural energy use,electricity,electricity,elect_td_ind,2085,1
+agricultural energy use,electricity,electricity,elect_td_ind,2090,1
+agricultural energy use,electricity,electricity,elect_td_ind,2095,1
+agricultural energy use,electricity,electricity,elect_td_ind,2100,1
+agricultural energy use,gas,gas,wholesale gas,1975,1
+agricultural energy use,gas,gas,wholesale gas,1990,1
+agricultural energy use,gas,gas,wholesale gas,2005,1
+agricultural energy use,gas,gas,wholesale gas,2010,1
+agricultural energy use,gas,gas,wholesale gas,2015,1
+agricultural energy use,gas,gas,wholesale gas,2020,1
+agricultural energy use,gas,gas,wholesale gas,2025,1
+agricultural energy use,gas,gas,wholesale gas,2030,1
+agricultural energy use,gas,gas,wholesale gas,2035,1
+agricultural energy use,gas,gas,wholesale gas,2040,1
+agricultural energy use,gas,gas,wholesale gas,2045,1
+agricultural energy use,gas,gas,wholesale gas,2050,1
+agricultural energy use,gas,gas,wholesale gas,2055,1
+agricultural energy use,gas,gas,wholesale gas,2060,1
+agricultural energy use,gas,gas,wholesale gas,2065,1
+agricultural energy use,gas,gas,wholesale gas,2070,1
+agricultural energy use,gas,gas,wholesale gas,2075,1
+agricultural energy use,gas,gas,wholesale gas,2080,1
+agricultural energy use,gas,gas,wholesale gas,2085,1
+agricultural energy use,gas,gas,wholesale gas,2090,1
+agricultural energy use,gas,gas,wholesale gas,2095,1
+agricultural energy use,gas,gas,wholesale gas,2100,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,1975,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,1990,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2005,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2010,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2015,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2020,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2025,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2030,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2035,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2040,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2045,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2050,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2055,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2060,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2065,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2070,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2075,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2080,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2085,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2090,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2095,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2100,1
+agricultural energy use,liquid,liquid,refined liquids industrial,1975,1
+agricultural energy use,liquid,liquid,refined liquids industrial,1990,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2005,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2010,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2015,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2020,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2025,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2030,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2035,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2040,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2045,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2050,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2055,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2060,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2065,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2070,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2075,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2080,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2085,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2090,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2095,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2100,1
 chemical energy use,biomass,biomass,delivered biomass,1975,1
 chemical energy use,biomass,biomass,delivered biomass,1990,1
 chemical energy use,biomass,biomass,delivered biomass,2005,1
@@ -379,116 +379,116 @@ chemical energy use,liquid,liquid CCS,refined liquids industrial,2085,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2090,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2095,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2100,1
-chemical feedstock,coal,coal,delivered coal,1975,1
-chemical feedstock,coal,coal,delivered coal,1990,1
-chemical feedstock,coal,coal,delivered coal,2005,1
-chemical feedstock,coal,coal,delivered coal,2010,1
-chemical feedstock,coal,coal,delivered coal,2015,1
-chemical feedstock,coal,coal,delivered coal,2020,1
-chemical feedstock,coal,coal,delivered coal,2025,1
-chemical feedstock,coal,coal,delivered coal,2030,1
-chemical feedstock,coal,coal,delivered coal,2035,1
-chemical feedstock,coal,coal,delivered coal,2040,1
-chemical feedstock,coal,coal,delivered coal,2045,1
-chemical feedstock,coal,coal,delivered coal,2050,1
-chemical feedstock,coal,coal,delivered coal,2055,1
-chemical feedstock,coal,coal,delivered coal,2060,1
-chemical feedstock,coal,coal,delivered coal,2065,1
-chemical feedstock,coal,coal,delivered coal,2070,1
-chemical feedstock,coal,coal,delivered coal,2075,1
-chemical feedstock,coal,coal,delivered coal,2080,1
-chemical feedstock,coal,coal,delivered coal,2085,1
-chemical feedstock,coal,coal,delivered coal,2090,1
-chemical feedstock,coal,coal,delivered coal,2095,1
-chemical feedstock,coal,coal,delivered coal,2100,1
-chemical feedstock,gas,gas,wholesale gas,1975,1
-chemical feedstock,gas,gas,wholesale gas,1990,1
-chemical feedstock,gas,gas,wholesale gas,2005,1
-chemical feedstock,gas,gas,wholesale gas,2010,1
-chemical feedstock,gas,gas,wholesale gas,2015,1
-chemical feedstock,gas,gas,wholesale gas,2020,1
-chemical feedstock,gas,gas,wholesale gas,2025,1
-chemical feedstock,gas,gas,wholesale gas,2030,1
-chemical feedstock,gas,gas,wholesale gas,2035,1
-chemical feedstock,gas,gas,wholesale gas,2040,1
-chemical feedstock,gas,gas,wholesale gas,2045,1
-chemical feedstock,gas,gas,wholesale gas,2050,1
-chemical feedstock,gas,gas,wholesale gas,2055,1
-chemical feedstock,gas,gas,wholesale gas,2060,1
-chemical feedstock,gas,gas,wholesale gas,2065,1
-chemical feedstock,gas,gas,wholesale gas,2070,1
-chemical feedstock,gas,gas,wholesale gas,2075,1
-chemical feedstock,gas,gas,wholesale gas,2080,1
-chemical feedstock,gas,gas,wholesale gas,2085,1
-chemical feedstock,gas,gas,wholesale gas,2090,1
-chemical feedstock,gas,gas,wholesale gas,2095,1
-chemical feedstock,gas,gas,wholesale gas,2100,1
-chemical feedstock,liquid,liquid,refined liquids industrial,1975,1
-chemical feedstock,liquid,liquid,refined liquids industrial,1990,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2005,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2010,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2015,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2020,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2025,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2030,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2035,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2040,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2045,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2050,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2055,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2060,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2065,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2070,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2075,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2080,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2085,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2090,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2095,1
-chemical feedstock,liquid,liquid,refined liquids industrial,2100,1
-chemicals,chemicals,chemicals,chemical energy use,1975,1
-chemicals,chemicals,chemicals,chemical energy use,1990,1
-chemicals,chemicals,chemicals,chemical energy use,2005,1
-chemicals,chemicals,chemicals,chemical energy use,2010,1
-chemicals,chemicals,chemicals,chemical energy use,2015,1
-chemicals,chemicals,chemicals,chemical energy use,2020,1
-chemicals,chemicals,chemicals,chemical energy use,2025,1
-chemicals,chemicals,chemicals,chemical energy use,2030,1
-chemicals,chemicals,chemicals,chemical energy use,2035,1
-chemicals,chemicals,chemicals,chemical energy use,2040,1
-chemicals,chemicals,chemicals,chemical energy use,2045,1
-chemicals,chemicals,chemicals,chemical energy use,2050,1
-chemicals,chemicals,chemicals,chemical energy use,2055,1
-chemicals,chemicals,chemicals,chemical energy use,2060,1
-chemicals,chemicals,chemicals,chemical energy use,2065,1
-chemicals,chemicals,chemicals,chemical energy use,2070,1
-chemicals,chemicals,chemicals,chemical energy use,2075,1
-chemicals,chemicals,chemicals,chemical energy use,2080,1
-chemicals,chemicals,chemicals,chemical energy use,2085,1
-chemicals,chemicals,chemicals,chemical energy use,2090,1
-chemicals,chemicals,chemicals,chemical energy use,2095,1
-chemicals,chemicals,chemicals,chemical energy use,2100,1
-chemicals,chemicals,chemicals,chemical feedstock,1975,1
-chemicals,chemicals,chemicals,chemical feedstock,1990,1
-chemicals,chemicals,chemicals,chemical feedstock,2005,1
-chemicals,chemicals,chemicals,chemical feedstock,2010,1
-chemicals,chemicals,chemicals,chemical feedstock,2015,1
-chemicals,chemicals,chemicals,chemical feedstock,2020,1
-chemicals,chemicals,chemicals,chemical feedstock,2025,1
-chemicals,chemicals,chemicals,chemical feedstock,2030,1
-chemicals,chemicals,chemicals,chemical feedstock,2035,1
-chemicals,chemicals,chemicals,chemical feedstock,2040,1
-chemicals,chemicals,chemicals,chemical feedstock,2045,1
-chemicals,chemicals,chemicals,chemical feedstock,2050,1
-chemicals,chemicals,chemicals,chemical feedstock,2055,1
-chemicals,chemicals,chemicals,chemical feedstock,2060,1
-chemicals,chemicals,chemicals,chemical feedstock,2065,1
-chemicals,chemicals,chemicals,chemical feedstock,2070,1
-chemicals,chemicals,chemicals,chemical feedstock,2075,1
-chemicals,chemicals,chemicals,chemical feedstock,2080,1
-chemicals,chemicals,chemicals,chemical feedstock,2085,1
-chemicals,chemicals,chemicals,chemical feedstock,2090,1
-chemicals,chemicals,chemicals,chemical feedstock,2095,1
-chemicals,chemicals,chemicals,chemical feedstock,2100,1
+chemical feedstocks,coal,coal,delivered coal,1975,1
+chemical feedstocks,coal,coal,delivered coal,1990,1
+chemical feedstocks,coal,coal,delivered coal,2005,1
+chemical feedstocks,coal,coal,delivered coal,2010,1
+chemical feedstocks,coal,coal,delivered coal,2015,1
+chemical feedstocks,coal,coal,delivered coal,2020,1
+chemical feedstocks,coal,coal,delivered coal,2025,1
+chemical feedstocks,coal,coal,delivered coal,2030,1
+chemical feedstocks,coal,coal,delivered coal,2035,1
+chemical feedstocks,coal,coal,delivered coal,2040,1
+chemical feedstocks,coal,coal,delivered coal,2045,1
+chemical feedstocks,coal,coal,delivered coal,2050,1
+chemical feedstocks,coal,coal,delivered coal,2055,1
+chemical feedstocks,coal,coal,delivered coal,2060,1
+chemical feedstocks,coal,coal,delivered coal,2065,1
+chemical feedstocks,coal,coal,delivered coal,2070,1
+chemical feedstocks,coal,coal,delivered coal,2075,1
+chemical feedstocks,coal,coal,delivered coal,2080,1
+chemical feedstocks,coal,coal,delivered coal,2085,1
+chemical feedstocks,coal,coal,delivered coal,2090,1
+chemical feedstocks,coal,coal,delivered coal,2095,1
+chemical feedstocks,coal,coal,delivered coal,2100,1
+chemical feedstocks,gas,gas,wholesale gas,1975,1
+chemical feedstocks,gas,gas,wholesale gas,1990,1
+chemical feedstocks,gas,gas,wholesale gas,2005,1
+chemical feedstocks,gas,gas,wholesale gas,2010,1
+chemical feedstocks,gas,gas,wholesale gas,2015,1
+chemical feedstocks,gas,gas,wholesale gas,2020,1
+chemical feedstocks,gas,gas,wholesale gas,2025,1
+chemical feedstocks,gas,gas,wholesale gas,2030,1
+chemical feedstocks,gas,gas,wholesale gas,2035,1
+chemical feedstocks,gas,gas,wholesale gas,2040,1
+chemical feedstocks,gas,gas,wholesale gas,2045,1
+chemical feedstocks,gas,gas,wholesale gas,2050,1
+chemical feedstocks,gas,gas,wholesale gas,2055,1
+chemical feedstocks,gas,gas,wholesale gas,2060,1
+chemical feedstocks,gas,gas,wholesale gas,2065,1
+chemical feedstocks,gas,gas,wholesale gas,2070,1
+chemical feedstocks,gas,gas,wholesale gas,2075,1
+chemical feedstocks,gas,gas,wholesale gas,2080,1
+chemical feedstocks,gas,gas,wholesale gas,2085,1
+chemical feedstocks,gas,gas,wholesale gas,2090,1
+chemical feedstocks,gas,gas,wholesale gas,2095,1
+chemical feedstocks,gas,gas,wholesale gas,2100,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,1975,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,1990,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2005,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2010,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2015,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2020,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2025,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2030,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2035,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2040,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2045,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2050,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2055,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2060,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2065,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2070,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2075,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2080,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2085,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2090,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2095,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2100,1
+chemical,chemical,chemical,chemical energy use,1975,1
+chemical,chemical,chemical,chemical energy use,1990,1
+chemical,chemical,chemical,chemical energy use,2005,1
+chemical,chemical,chemical,chemical energy use,2010,1
+chemical,chemical,chemical,chemical energy use,2015,1
+chemical,chemical,chemical,chemical energy use,2020,1
+chemical,chemical,chemical,chemical energy use,2025,1
+chemical,chemical,chemical,chemical energy use,2030,1
+chemical,chemical,chemical,chemical energy use,2035,1
+chemical,chemical,chemical,chemical energy use,2040,1
+chemical,chemical,chemical,chemical energy use,2045,1
+chemical,chemical,chemical,chemical energy use,2050,1
+chemical,chemical,chemical,chemical energy use,2055,1
+chemical,chemical,chemical,chemical energy use,2060,1
+chemical,chemical,chemical,chemical energy use,2065,1
+chemical,chemical,chemical,chemical energy use,2070,1
+chemical,chemical,chemical,chemical energy use,2075,1
+chemical,chemical,chemical,chemical energy use,2080,1
+chemical,chemical,chemical,chemical energy use,2085,1
+chemical,chemical,chemical,chemical energy use,2090,1
+chemical,chemical,chemical,chemical energy use,2095,1
+chemical,chemical,chemical,chemical energy use,2100,1
+chemical,chemical,chemical,chemical feedstocks,1975,1
+chemical,chemical,chemical,chemical feedstocks,1990,1
+chemical,chemical,chemical,chemical feedstocks,2005,1
+chemical,chemical,chemical,chemical feedstocks,2010,1
+chemical,chemical,chemical,chemical feedstocks,2015,1
+chemical,chemical,chemical,chemical feedstocks,2020,1
+chemical,chemical,chemical,chemical feedstocks,2025,1
+chemical,chemical,chemical,chemical feedstocks,2030,1
+chemical,chemical,chemical,chemical feedstocks,2035,1
+chemical,chemical,chemical,chemical feedstocks,2040,1
+chemical,chemical,chemical,chemical feedstocks,2045,1
+chemical,chemical,chemical,chemical feedstocks,2050,1
+chemical,chemical,chemical,chemical feedstocks,2055,1
+chemical,chemical,chemical,chemical feedstocks,2060,1
+chemical,chemical,chemical,chemical feedstocks,2065,1
+chemical,chemical,chemical,chemical feedstocks,2070,1
+chemical,chemical,chemical,chemical feedstocks,2075,1
+chemical,chemical,chemical,chemical feedstocks,2080,1
+chemical,chemical,chemical,chemical feedstocks,2085,1
+chemical,chemical,chemical,chemical feedstocks,2090,1
+chemical,chemical,chemical,chemical feedstocks,2095,1
+chemical,chemical,chemical,chemical feedstocks,2100,1
 coke,coke,coke,delivered coal,1975,1
 coke,coke,coke,delivered coal,1990,1
 coke,coke,coke,delivered coal,2005,1
@@ -841,534 +841,468 @@ construction feedstocks,liquid,liquid,refined liquids industrial,2085,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2090,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2095,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2100,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,1975,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,1990,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2005,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2010,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2015,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2020,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2025,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2030,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2035,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2040,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2045,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2050,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2055,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2060,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2065,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2070,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2075,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2080,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2085,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2090,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2095,1
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,2100,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,1975,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,1990,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2005,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2010,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2015,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2020,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2025,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2030,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2035,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2040,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2045,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2050,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2055,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2060,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2065,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2070,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2075,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2080,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2085,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2090,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2095,1
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,2100,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,1975,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,1990,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2005,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2010,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2015,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2020,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2025,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2030,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2035,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2040,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2045,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2050,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2055,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2060,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2065,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2070,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2075,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2080,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2085,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2090,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2095,1
-IRONSTL,BLASTFUR,BLASTFUR,coke,2100,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,1975,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,1990,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2005,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2010,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2015,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2020,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2025,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2030,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2035,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2040,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2045,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2050,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2055,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2060,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2065,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2070,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2075,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2080,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2085,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2090,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2095,1
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,2100,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,1975,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,1990,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2005,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2010,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2015,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2020,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2025,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2030,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2035,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2040,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2045,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2050,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2055,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2060,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2065,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2070,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2075,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2080,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2085,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2090,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2095,1
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,2100,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,1975,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,1990,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2005,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2010,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2015,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2020,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2025,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2030,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2035,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2040,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2045,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2050,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2055,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2060,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2065,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2070,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2075,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2080,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2085,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2090,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2095,1
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,2100,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,1975,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,1990,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2005,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2010,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2015,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2020,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2025,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2030,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2035,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2040,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2045,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2050,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2055,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2060,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2065,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2070,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2075,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2080,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2085,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2090,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2095,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,2100,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,1975,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,1990,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2005,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2010,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2015,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2020,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2025,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2030,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2035,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2040,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2045,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2050,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2055,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2060,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2065,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2070,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2075,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2080,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2085,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2090,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2095,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,2100,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,1975,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,1990,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2005,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2010,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2015,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2020,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2025,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2030,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2035,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2040,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2045,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2050,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2055,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2060,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2065,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2070,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2075,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2080,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2085,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2090,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2095,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,2100,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,1975,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,1990,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2005,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2010,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2015,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2020,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2025,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2030,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2035,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2040,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2045,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2050,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2055,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2060,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2065,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2070,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2075,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2080,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2085,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2090,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2095,1
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2100,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,1975,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,1990,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2005,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2010,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2015,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2020,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2025,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2030,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2035,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2040,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2045,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2050,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2055,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2060,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2065,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2070,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2075,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2080,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2085,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2090,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2095,1
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,2100,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,1975,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,1990,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2005,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2010,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2015,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2020,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2025,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2030,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2035,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2040,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2045,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2050,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2055,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2060,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2065,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2070,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2075,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2080,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2085,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2090,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2095,1
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,2100,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,1975,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,1990,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2005,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2010,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2015,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2020,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2025,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2030,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2035,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2040,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2045,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2050,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2055,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2060,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2065,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2070,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2075,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2080,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2085,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2090,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2095,1
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,2100,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,1975,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,1990,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2005,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2010,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2015,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2020,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2025,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2030,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2035,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2040,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2045,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2050,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2055,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2060,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2065,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2070,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2075,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2080,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2085,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2090,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2095,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,2100,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,1975,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,1990,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2005,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2010,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2015,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2020,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2025,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2030,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2035,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2040,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2045,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2050,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2055,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2060,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2065,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2070,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2075,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2080,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2085,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2090,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2095,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2100,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,1975,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,1990,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2005,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2010,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2015,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2020,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2025,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2030,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2035,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2040,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2045,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2050,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2055,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2060,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2065,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2070,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2075,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2080,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2085,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2090,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2095,1
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,2100,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,1975,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,1990,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2005,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2010,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2015,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2020,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2025,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2030,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2035,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2040,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2045,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2050,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2055,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2060,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2065,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2070,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2075,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2080,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2085,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2090,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2095,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,2100,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,1975,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,1990,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2005,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2010,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2015,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2020,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2025,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2030,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2035,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2040,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2045,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2050,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2055,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2060,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2065,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2070,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2075,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2080,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2085,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2090,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2095,1
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,2100,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,1975,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,1990,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2005,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2010,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2015,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2020,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2025,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2030,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2035,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2040,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2045,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2050,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2055,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2060,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2065,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2070,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2075,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2080,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2085,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2090,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2095,1
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,2100,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,1975,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,1990,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2005,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2010,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2015,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2020,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2025,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2030,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2035,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2040,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2045,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2050,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2055,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2060,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2065,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2070,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2075,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2080,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2085,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2090,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2095,1
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,2100,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,1975,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,1990,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2005,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2010,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2015,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2020,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2025,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2030,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2035,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2040,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2045,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2050,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2055,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2060,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2065,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2070,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2075,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2080,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2085,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2090,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2095,1
-IRONSTL,EAF with scrap,EAF with scrap,scrap,2100,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,1975,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,1990,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2005,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2010,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2015,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2020,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2025,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2030,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2035,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2040,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2045,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2050,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2055,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2060,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2065,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2070,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2075,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2080,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2085,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2090,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2095,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,2100,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,1975,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,1990,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2005,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2010,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2015,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2020,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2025,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2030,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2035,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2040,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2045,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2050,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2055,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2060,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2065,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2070,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2075,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2080,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2085,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2090,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2095,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,2100,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,1975,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,1990,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2005,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2010,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2015,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2020,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2025,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2030,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2035,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2040,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2045,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2050,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2055,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2060,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2065,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2070,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2075,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2080,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2085,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2090,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2095,1
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,2100,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,1975,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,1990,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2005,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2010,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2015,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2020,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2025,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2030,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2035,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2040,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2045,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2050,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2055,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2060,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2065,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2070,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2075,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2080,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2085,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2090,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2095,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2100,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,1975,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,1990,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2005,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2010,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2015,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2020,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2025,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2030,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2035,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2040,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2045,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2050,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2055,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2060,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2065,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2070,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2075,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2080,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2085,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2090,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2095,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2100,1
+iron and steel,BLASTFUR,BLASTFUR,coke,1975,1
+iron and steel,BLASTFUR,BLASTFUR,coke,1990,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2005,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2010,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2015,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2020,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2025,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2030,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2035,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2040,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2045,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2050,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2055,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2060,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2065,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2070,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2075,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2080,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2085,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2090,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2095,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2100,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,1975,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,1990,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2005,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2010,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2015,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2020,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2025,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2030,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2035,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2040,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2045,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2050,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2055,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2060,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2065,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2070,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2075,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2080,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2085,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2090,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2095,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2100,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,1975,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,1990,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2005,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2010,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2015,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2020,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2025,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2030,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2035,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2040,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2045,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2050,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2055,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2060,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2065,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2070,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2075,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2080,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2085,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2090,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2095,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2100,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,1975,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,1990,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2005,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2010,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2015,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2020,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2025,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2030,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2035,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2040,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2045,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2050,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2055,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2060,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2065,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2070,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2075,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2080,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2085,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2090,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2095,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2100,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,1975,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,1990,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2005,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2010,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2015,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2020,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2025,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2030,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2035,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2040,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2045,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2050,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2055,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2060,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2065,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2070,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2075,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2080,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2085,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2090,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2095,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2100,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,1975,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,1990,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2005,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2010,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2015,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2020,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2025,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2030,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2035,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2040,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2045,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2050,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2055,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2060,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2065,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2070,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2075,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2080,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2085,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2090,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2095,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2100,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,1975,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,1990,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2005,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2010,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2015,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2020,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2025,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2030,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2035,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2040,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2045,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2050,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2055,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2060,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2065,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2070,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2075,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2080,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2085,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2090,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2095,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2100,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,1975,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,1990,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2005,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2010,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2015,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2020,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2025,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2030,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2035,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2040,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2045,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2050,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2055,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2060,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2065,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2070,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2075,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2080,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2085,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2090,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2095,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2100,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,1975,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,1990,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2005,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2010,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2015,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2020,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2025,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2030,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2035,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2040,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2045,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2050,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2055,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2060,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2065,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2070,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2075,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2080,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2085,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2090,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2095,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2100,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,1975,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,1990,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2005,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2010,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2015,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2020,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2025,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2030,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2035,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2040,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2045,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2050,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2055,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2060,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2065,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2070,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2075,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2080,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2085,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2090,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2095,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2100,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,1975,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,1990,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2005,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2010,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2015,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2020,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2025,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2030,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2035,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2040,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2045,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2050,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2055,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2060,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2065,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2070,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2075,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2080,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2085,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2090,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2095,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2100,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,1975,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,1990,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2005,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2010,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2015,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2020,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2025,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2030,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2035,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2040,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2045,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2050,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2055,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2060,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2065,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2070,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2075,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2080,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2085,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2090,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2095,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2100,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,1975,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,1990,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2005,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2010,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2015,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2020,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2025,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2030,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2035,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2040,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2045,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2050,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2055,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2060,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2065,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2070,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2075,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2080,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2085,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2090,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2095,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2100,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,1975,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,1990,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2005,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2010,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2015,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2020,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2025,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2030,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2035,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2040,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2045,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2050,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2055,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2060,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2065,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2070,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2075,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2080,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2085,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2090,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2095,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2100,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,1975,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,1990,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2005,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2010,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2015,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2020,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2025,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2030,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2035,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2040,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2045,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2050,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2055,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2060,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2065,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2070,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2075,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2080,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2085,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2090,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2095,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2100,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,1975,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,1990,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2005,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2010,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2015,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2020,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2025,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2030,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2035,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2040,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2045,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2050,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2055,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2060,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2065,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2070,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2075,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2080,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2085,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2090,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2095,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2100,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,1975,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,1990,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2005,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2010,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2015,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2020,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2025,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2030,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2035,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2040,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2045,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2050,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2055,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2060,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2065,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2070,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2075,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2080,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2085,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2090,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2095,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2100,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,1975,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,1990,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2005,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2010,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2015,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2020,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2025,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2030,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2035,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2040,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2045,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2050,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2055,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2060,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2065,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2070,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2075,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2080,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2085,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2090,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2095,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2100,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,1975,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,1990,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2005,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2010,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2015,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2020,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2025,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2030,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2035,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2040,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2045,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2050,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2055,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2060,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2065,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2070,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2075,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2080,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2085,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2090,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2095,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2100,1
 mining energy use,biomass,biomass,delivered biomass,1975,1
 mining energy use,biomass,biomass,delivered biomass,1990,1
 mining energy use,biomass,biomass,delivered biomass,2005,1

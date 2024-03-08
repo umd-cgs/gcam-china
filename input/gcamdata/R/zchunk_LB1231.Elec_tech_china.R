@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_LB1231.Elec_tech_china
 #'
 #' Downscaling electricity by province/fuel to province/fuel/technology
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author YangLiu Sep 2018
+#' @author YangLiu Sep 2018 / YangOu Dec 2023
 module_gcamchina_LB1231.Elec_tech_china<- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L123.out_EJ_R_elec_F_Yh",

@@ -494,6 +494,10 @@ energy.GDP_MID_SATIATION      <- 10.5
 energy.INTERNAL_GAINS_SCALAR_USA_H <- -930
 energy.INTERNAL_GAINS_SCALAR_USA_C <- 350
 
+#using USA values here
+energy.INTERNAL_GAINS_SCALAR_CHINA_H <- -930
+energy.INTERNAL_GAINS_SCALAR_CHINA_C <- 350
+
 # Used to avoid negative/zero energy when disaggregating detailed industries (cement, fertilizer)
 energy.MIN_IN_EJ_IND <- 1e-3
 
@@ -1132,7 +1136,7 @@ gcamchina.USE_UNIFORM_CSTORAGE_MARKET <- FALSE
 
 gcamchina.REGIONAL_FUEL_MARKETS <- c("delivered coal", "wholesale gas", "delivered gas",
                                      "refined liquids industrial", "refined liquids enduse")
-									 
+
 #Fuels whose markets will be represented with state-specific prices
 gcamchina.PROVINCE_FUEL_MARKETS <- c(gcamchina.ELECT_TD_SECTORS, "H2 industrial", "H2 retail delivery",
                                      "H2 retail dispensing", "H2 wholesale delivery", "H2 wholesale dispensing",
@@ -1170,6 +1174,9 @@ gcamchina.ELEC_SEGMENT_INT <- "intermediate generation"
 gcamchina.ELEC_SEGMENT_SUBPEAK <- "subpeak generation"
 gcamchina.ELEC_SEGMENT_PEAK <- "peak generation"
 
+# Degree day norms, USA values are currently used and can be updated in the future
+gcamchina.BASE_HDD_CHINA <- 4524 # https://www.eia.gov/totalenergy/data/annual/showtext.php?t=ptb0107
+gcamchina.BASE_CDD_CHINA <- 1215 # https://www.eia.gov/totalenergy/data/annual/showtext.php?t=ptb010
 
 
 

@@ -1,5 +1,5 @@
-# Table used to adjust nuclear share weights that have been adjusted manually to match Bo Liu,,,,,,,,,,,,,,,,,,
-# This CSV is written by ../assumptions/nuc_share_weight_assumptions.xlsx,,,,,,,,,,,,,,,,,,
+# Table used to adjust nuclear share weights that have been adjusted manually to match Bo Liu
+# This CSV is written by ../assumptions/nuc_share_weight_assumptions.xlsx
 region,2015,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 AH,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 BJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

@@ -142,10 +142,18 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       L232.DeleteSupplysector_CHINAind  ## OUTPUT
 
     # deleting energy final demand sectors in the full CHINA region")
+    #L232.PerCapitaBased_ind %>%
+    #  bind_rows(L2324.PerCapitaBased_Off_road,
+    #            L2325.PerCapitaBased_chemical,
+    #            L2326.PerCapitaBased_aluminum) %>%
+    #  mutate(region = region) %>% # strip attributes from object
+    #  filter(region == gcamchina.REGION) %>%
+    #  select(LEVEL2_DATA_NAMES[["DeleteFinalDemand"]]) ->
+    #  L232.DeleteFinalDemand_CHINAind  ## OUTPUT
+
+    # only deleting aluminum which not include in detailed industry sectors in CHINA region")
     L232.PerCapitaBased_ind %>%
-      bind_rows(L2324.PerCapitaBased_Off_road,
-                L2325.PerCapitaBased_chemical,
-                L2326.PerCapitaBased_aluminum) %>%
+      bind_rows(L2326.PerCapitaBased_aluminum) %>%
       mutate(region = region) %>% # strip attributes from object
       filter(region == gcamchina.REGION) %>%
       select(LEVEL2_DATA_NAMES[["DeleteFinalDemand"]]) ->
@@ -176,6 +184,11 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
                   select(region,year,Exports) %>%
                   mutate(region = gcamchina.REGION), by = c("region", "year")) %>%
       mutate(calOutputValue=calOutputValue-Exports)%>%
+      # remove negative values
+      # negative values mean that China is exporting iron and steel to the global market
+      # this part will be addressed in input/extra/trade_iron_steel_China_offset.xml
+      # TODO: convert trade_iron_steel_China_offset.xml into a chunk (YO)
+      mutate(calOutputValue=if_else(calOutputValue < 0, 0, calOutputValue))%>%
       select(-Exports)-> L232.Production_reg_imp
 
     # Update base-year service for China region to match the above calculated net iron and steel imports

@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_batch_transportation_CHINA_xml
 #'
 #' Construct XML data structure for \code{transportation_CHINA.xml}.

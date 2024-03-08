@@ -26,5 +26,5 @@ GCAM-CHINA resource market information, prices, TechChange parameters, and suppl
 GCAM-China resource market information, prices, TechChange parameters, and supply curves.
 }
 \author{
-BY June 2019
+BY June 2019 /YO December 2023
 }

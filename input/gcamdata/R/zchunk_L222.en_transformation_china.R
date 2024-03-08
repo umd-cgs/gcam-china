@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_L222.en_transformation_china
 #'
 #' Prepare the assumptions and calibrated outputs for energy transformation supplysectors, subsectors, and technologies specific to China sectors and/or provinces.
@@ -13,7 +15,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else group_by left_join mutate one_of pull select summarise
 #' @importFrom tidyr gather spread
-#' @author BY Jun 2019
+#' @author BY Jun 2019 / YO Dec 2023
 
 module_gcam.china_L222.en_transformation_china <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
@@ -86,8 +88,6 @@ module_gcam.china_L222.en_transformation_china <- function(command, ...) {
     gcamchina.SECTOR_bio_liquids <- "biomass liquids"
     gcamchina.SECTOR_coal_to_liquids <- "coal to liquids"
     gcamchina.SECTOR_gas_to_liquids <- "gas to liquids"
-
-
 
     # NOTE: Oil refining sectors are only created in provinces where the production is >0 in the historical period. Other techs are available everywhere
     L122.out_EJ_province_refining_F %>%

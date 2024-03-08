@@ -1,39 +1,36 @@
 # File: A323.globaltech_coef.csv
-# Title: IRONSTL production default coefficients
+# Title: Default coefficients are calculated nationally. For those provinces that have provincial values, the provincial values are used instead.
 # Units:  minicam.energy.input (input-output coefficient)
 # Column types: ccccnnn
 # ----------
 supplysector,subsector,technology,minicam.energy.input,1971,2010,2100
-IRONSTL,BLASTFUR,BLASTFUR,coke,0.6,0.6,0.6
-IRONSTL,BLASTFUR,BLASTFUR,elect_td_ind,0.000191592,0.000191592,0.000191592
-IRONSTL,BLASTFUR,BLASTFUR,refined liquids industrial,0.000071,0.000071,0.000071
-IRONSTL,BLASTFUR,BLASTFUR,delivered coal,0.000071,0.000071,0.000071
-IRONSTL,BLASTFUR,BLASTFUR CCS,coke,0.6,0.6,0.6
-IRONSTL,BLASTFUR,BLASTFUR CCS,elect_td_ind,0.000191592,0.000191592,0.000191592
-IRONSTL,BLASTFUR,BLASTFUR CCS,refined liquids industrial,0.000071,0.000071,0.000071
-IRONSTL,BLASTFUR,BLASTFUR CCS,delivered coal,0.000071,0.000071,0.000071
-IRONSTL,BLASTFUR,Biomass based,delivered biomass,0.0204,0.0204,0.0204
-IRONSTL,BLASTFUR,Biomass based,elect_td_ind,0.000191592,0.000191592,0.000191592
-IRONSTL,EAF with DRI,EAF with DRI,elect_td_ind,0.001315008,0.001315008,0.001315008
-IRONSTL,EAF with DRI,EAF with DRI,refined liquids industrial,0.000071,0.000071,0.000071
-IRONSTL,EAF with DRI,EAF with DRI,wholesale gas,0.000071,0.000071,0.000071
-IRONSTL,EAF with DRI,EAF with DRI CCS,elect_td_ind,0.001315008,0.001315008,0.001315008
-IRONSTL,EAF with DRI,EAF with DRI CCS,refined liquids industrial,0.000071,0.000071,0.000071
-IRONSTL,EAF with DRI,EAF with DRI CCS,wholesale gas,0.000071,0.000071,0.000071
-IRONSTL,EAF with DRI,Hydrogen based  DRI,H2 industrial,0.007293,0.007293,0.007293
-IRONSTL,EAF with DRI,Hydrogen based  DRI,elect_td_ind,0.001315008,0.001315008,0.001315008
-IRONSTL,EAF with scrap,EAF with scrap,elect_td_ind,0.001315008,0.001315008,0.001315008
-IRONSTL,EAF with scrap,EAF with scrap,refined liquids industrial,0.000071,0.000071,0.000071
-IRONSTL,EAF with scrap,EAF with scrap,scrap,1.12,1.12,1.12
-IRONSTL,EAF with scrap,EAF with scrap CCS,elect_td_ind,0.001315008,0.001315008,0.001315008
-IRONSTL,EAF with scrap,EAF with scrap CCS,refined liquids industrial,0.000071,0.000071,0.000071
-IRONSTL,EAF with scrap,EAF with scrap CCS,scrap,1.12,1.12,1.12
+iron and steel,BLASTFUR,BLASTFUR,coke,0.6,0.6,0.6
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,0.000191592,0.000191592,0.000191592
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,0.000071,0.000071,0.000071
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,0.000071,0.000071,0.000071
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,0.6,0.6,0.6
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,0.000191592,0.000191592,0.000191592
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,0.000071,0.000071,0.000071
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,0.000071,0.000071,0.000071
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,0.0204,0.0204,0.0204
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,0.000191592,0.000191592,0.000191592
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,0.001315008,0.001315008,0.001315008
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,0.000071,0.000071,0.000071
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,0.000071,0.000071,0.000071
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,0.001315008,0.001315008,0.001315008
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,0.000071,0.000071,0.000071
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,0.000071,0.000071,0.000071
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,0.007293,0.007293,0.007293
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,0.001315008,0.001315008,0.001315008
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,0.001315008,0.001315008,0.001315008
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,0.000071,0.000071,0.000071
+iron and steel,EAF with scrap,EAF with scrap,scrap,1.12,1.12,1.12
 coke,coke,coke,delivered coal,0.0216912,0.0216912,0.0216912
 coke,coke,coke,elect_td_ind,0.000626737,0.000626737,0.000626737
 coke,coke,coke CCS,delivered coal,0.0216912,0.0216912,0.0216912
 coke,coke,coke CCS,elect_td_ind,0.000626737,0.000626737,0.000626737
-chemicals,chemicals,chemicals,chemical energy use,1,1,1
-chemicals,chemicals,chemicals,chemical feedstock,0,0,0
+chemical,chemical,chemical,chemical energy use,1,1,1
+chemical,chemical,chemical,chemical feedstocks,0,0,0
 chemical energy use,coal,coal,delivered coal,0.5,0.5,0.5
 chemical energy use,coal,coal CCS,delivered coal,0.5,0.5,0.5
 chemical energy use,gas,gas,wholesale gas,0.5,0.5,0.5
@@ -43,15 +40,15 @@ chemical energy use,liquid,liquid CCS,refined liquids industrial,0.3,0.3,0.3
 chemical energy use,biomass,biomass,delivered biomass,1,1,1
 chemical energy use,hydrogen,hydrogen,H2 industrial,1,1,1
 chemical energy use,electricity,electricity,elect_td_ind,0.5,0.5,0.5
-chemical feedstock,coal,coal,delivered coal,1,1,1
-chemical feedstock,gas,gas,wholesale gas,1,1,1
-chemical feedstock,liquid,liquid,refined liquids industrial,1,1,1
-agriculture energy use,coal,coal,delivered coal,0.580061692,0.580061692,0.580061692
-agriculture energy use,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
-agriculture energy use,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
-agriculture energy use,biomass,biomass,delivered biomass,0.580061692,0.580061692,0.580061692
-agriculture energy use,hydrogen,hydrogen,H2 industrial,0.580061692,0.580061692,0.580061692
-agriculture energy use,electricity,electricity,elect_td_ind,0.580061692,0.580061692,0.580061692
+chemical feedstocks,coal,coal,delivered coal,1,1,1
+chemical feedstocks,gas,gas,wholesale gas,1,1,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,1,1,1
+agricultural energy use,coal,coal,delivered coal,0.580061692,0.580061692,0.580061692
+agricultural energy use,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
+agricultural energy use,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
+agricultural energy use,biomass,biomass,delivered biomass,0.580061692,0.580061692,0.580061692
+agricultural energy use,hydrogen,hydrogen,H2 industrial,0.580061692,0.580061692,0.580061692
+agricultural energy use,electricity,electricity,elect_td_ind,0.580061692,0.580061692,0.580061692
 mining energy use,coal,coal,delivered coal,0.00366345,0.00366345,0.00366345
 mining energy use,gas,gas,wholesale gas,0.00366345,0.00366345,0.00366345
 mining energy use,liquid,liquid,refined liquids industrial,0.00366345,0.00366345,0.00366345
@@ -69,7 +66,7 @@ construction energy use,electricity,electricity,elect_td_ind,0.580061692,0.58006
 construction feedstocks,coal,coal,delivered coal,0.580061692,0.580061692,0.580061692
 construction feedstocks,gas,gas,wholesale gas,0.580061692,0.580061692,0.580061692
 construction feedstocks,liquid,liquid,refined liquids industrial,0.580061692,0.580061692,0.580061692
-agriculture energy use,district heat,district heat,district heat,1,1,1
+agricultural energy use,district heat,district heat,district heat,1,1,1
 chemical energy use,district heat,district heat,district heat,1,1,1
 construction energy use,district heat,district heat,district heat,1,1,1
 mining energy use,district heat,district heat,district heat,1,1,1

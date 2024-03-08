@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario>
+    <world>
+        <global-technology-database>
+            <location-info sector-name="traded iron and steel" subsector-name="China traded iron and steel offset">
+                <technology name="China traded iron and steel offset">
+                    <period year="1975">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="1990">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2005">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2010">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2015">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2020">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2025">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2030">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2035">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2040">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2045">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2050">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2055">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2060">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2065">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2070">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2075">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2080">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2085">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2090">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2095">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                    <period year="2100">
+                        
+                        <share-weight>0</share-weight>
+                        <CO2 name="CO2"/>
+                        <minicam-non-energy-input name="non-energy">
+                            <input-cost>0</input-cost>
+                        </minicam-non-energy-input>
+                    </period>
+                </technology>
+            </location-info>
+            
+        </global-technology-database>
+        <region name="USA">
+            <supplysector name="traded iron and steel">
+                <subsector name="China traded iron and steel offset">
+                    <relative-cost-logit>
+                        <logit-exponent fillout="1" year="1975">-6</logit-exponent>
+                    </relative-cost-logit>
+                    <share-weight fillout="1" year="1975">1</share-weight>
+                    <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100">
+                        <to-value>1</to-value>
+                        <interpolation-function name="fixed"/>
+                    </interpolation-rule>
+                    <stub-technology name="China traded iron and steel offset">
+                        <period year="1975">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="1990">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2005">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2010">
+                            <fixedOutput>24.2079273</fixedOutput>
+                        </period>
+                        <period year="2015">
+                            <fixedOutput>98.7380446</fixedOutput>
+                        </period>
+                        <period year="2020">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2025">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2030">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2035">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2040">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2045">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2050">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2055">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2060">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2065">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2070">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2075">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2080">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2085">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2090">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2095">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2100">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </supplysector>
+            
+        </region>
+        
+    </world>
+</scenario>

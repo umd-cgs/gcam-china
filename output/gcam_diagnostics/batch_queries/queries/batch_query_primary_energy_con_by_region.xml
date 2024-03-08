@@ -36,10 +36,11 @@
 		<region name="YN" />
        	<region name="ZJ" />
        	<region name="Global"/>
-         <supplyDemandQuery title="primary energy consumption by region (direct equivalent)">
-            <axis1 name="fuel">input[@name]</axis1>
-            <axis2 name="Year">demand-physical[@vintage]</axis2>
-            <xPath buildList="true" dataName="input" group="false" sumAll="false"> <![CDATA[
+            <supplyDemandQuery title="primary energy consumption by region (direct equivalent)">
+                <axis1 name="fuel">input[@name]</axis1>
+                <axis2 name="Year">demand-physical[@vintage]</axis2>
+                <xPath buildList="true" dataName="input" group="false" sumAll="false"><![CDATA[
+                     
 			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
 			 	 		 let $scn := $parent/ancestor::scenario,
 			 			   	  $rgn := $parent/ancestor::region
@@ -82,7 +83,7 @@
 			 	 	 $scenario_date := $scenario_split[last()],
 			 	 	 $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
 			 	 	 return (: get renewables from electricity :)
-					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='electricity' or @name='elect_td_bld' or starts-with(@name,'elec_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld' or starts-with(@name,'elec_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
 					 		 	| (: get renewables from H2ProdCS :)
 					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 central production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
 					 	 	 	| (: get renewables from H2ProdDist :)
@@ -94,40 +95,37 @@
 			 	 	 	
 	 	 }; 
             	 local:run-primary-energy((:scenarios:), (:regions:), (:collection:))
-                 ]]>
-            </xPath>
-            <comments/>
-            <labelRewriteList append-values="false">
-               <level name="input">
-                  <rewrite from="traditional biomass" to="j traditional biomass"/>
-                  <rewrite from="geothermal-elect" to="i geothermal"/>
-                  <rewrite from="biomass" to="d biomass"/>
-                  <rewrite from="total biomass" to="d biomass"/>
-                  <rewrite from="nuclear-H2" to="e nuclear"/>
-                  <rewrite from="natural gas" to="b natural gas"/>
-                  <rewrite from="wind-elect" to="g wind"/>
-                  <rewrite from="exotic-elect" to="j breakthrough"/>
-                  <rewrite from="elect_td_ind" to=""/>
-                  <rewrite from="k new" to="k new"/>
-                  <rewrite from="solar-elect" to="h solar"/>
-                  <rewrite from="solar-H2" to="h solar"/>
-                  <rewrite from="regional natural gas" to=""/>
-                  <rewrite from="coal" to="c coal"/>
-                  <rewrite from="crude oil" to="a oil"/>
-                  <rewrite from="hydro-elect" to="f hydro"/>
-                  <rewrite from="nuclear-elect" to="e nuclear"/>
-                  <rewrite from="traded unconventional oil" to="a oil"/>
-                  <rewrite from="wind-H2" to="g wind"/>
-                  <rewrite from="seawater" to=""/>
-                  <rewrite from="water_td_pri_C" to=""/>
-                  <rewrite from="water_td_pri_W" to=""/>
-               </level>
-            </labelRewriteList>
-         </supplyDemandQuery>
+                 
+            
+                ]]></xPath>
+                <comments/>
+                <labelRewriteList append-values="false">
+                    <level name="input">
+                        <rewrite from="exotic-elect" to="j breakthrough"/>
+                        <rewrite from="water_td_pri_C" to=""/>
+                        <rewrite from="wind-H2" to="g wind"/>
+                        <rewrite from="biomass" to="d biomass"/>
+                        <rewrite from="traditional biomass" to="j traditional biomass"/>
+                        <rewrite from="crude oil" to="a oil"/>
+                        <rewrite from="nuclear-elect" to="e nuclear"/>
+                        <rewrite from="solar-H2" to="h solar"/>
+                        <rewrite from="regional natural gas" to=""/>
+                        <rewrite from="traded unconventional oil" to="a oil"/>
+                        <rewrite from="geothermal-elect" to="i geothermal"/>
+                        <rewrite from="natural gas" to="b natural gas"/>
+                        <rewrite from="hydro-elect" to="f hydro"/>
+                        <rewrite from="solar-elect" to="h solar"/>
+                        <rewrite from="seawater" to=""/>
+                        <rewrite from="coal" to="c coal"/>
+                        <rewrite from="elect_td_ind" to=""/>
+                        <rewrite from="wind-elect" to="g wind"/>
+                        <rewrite from="water_td_pri_W" to=""/>
+                        <rewrite from="total biomass" to="d biomass"/>
+                        <rewrite from="nuclear-H2" to="e nuclear"/>
+                        <rewrite from="k new" to="k new"/>
+                    </level>
+                </labelRewriteList>
+            </supplyDemandQuery>
 	</aQuery>
-
-
-
-
 
 </queries>

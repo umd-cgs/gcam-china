@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcamchina_L254.transportation_china
 #'
 #' Generates GCAM-CHINA model inputs for transportation sector by provinces.
@@ -24,7 +26,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr arrange bind_rows filter if_else group_by left_join mutate select semi_join summarise
 #' @importFrom tidyr gather spread
-#' @author BY Jul 2019
+#' @author BY Jul 2019 / YO Dec 2023
 
 module_gcamchina_L254.transportation_china <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {

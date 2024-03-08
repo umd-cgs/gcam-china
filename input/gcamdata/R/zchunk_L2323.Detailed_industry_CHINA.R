@@ -12,8 +12,8 @@
 #' \code{L2323.StubTechCoef_detailed_industry}, \code{L2323.StubTechCalInput_detailed_industry}, \code{L2323.StubTechMarket_detailed_industry}, \code{L2323.BaseService_detailed_industry},
 #' \code{L2323.Supplysector_detailed_industry_CHINA}, \code{L2323.FinalEnergyKeyword_detailed_industry_CHINA}, \code{L2323.SubsectorLogit_detailed_industry_CHINA},
 #' \code{L2323.SubsectorShrwtFllt_detailed_industry_CHINA}, \code{L2323.StubTech_detailed_industry_CHINA}, \code{L2323.PerCapitaBased_detailed_industry_CHINA},
-#'  \code{L2323.PriceElasticity_detailed_industry_CHINA}, \code{L2323.IncomeElasticity_detailed_industry_gcam3_CHINA} , \code{L2323.GlobalTechCSeq_ind}.
-#'  The corresponding file in the original data system was \code{L2323.detailed_industry_CHINA.R} (gcam-china level2).
+#' \code{L2323.PriceElasticity_detailed_industry_CHINA}, \code{L2323.IncomeElasticity_detailed_industry_gcam3_CHINA} , \code{L2323.GlobalTechCSeq_ind}.
+#' The corresponding file in the original data system was \code{L2323.detailed_industry_CHINA.R} (gcam-china level2).
 #' @details Make the logit and input tables for the detailed_industry sector in gcam-china
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr arrange distinct filter if_else group_by left_join mutate select
@@ -53,8 +53,10 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
              "L2323.SubsectorInterp_detailed_industry",
              "L2323.StubTech_detailed_industry",
              "L2323.GlobalTechShrwt_detailed_industry",
+             "L2323.StubTechShrwt_detailed_industry",
              "L2323.GlobalTechCoef_detailed_industry",
              "L2323.GlobalTechCost_detailed_industry",
+             "L2323.StubTechCost_detailed_industry",
              "L2323.GlobalTechCapture_detailed_industry",
              "L2323.StubTechProd_detailed_industry",
              "L2323.StubTechMarket_detailed_industry",
@@ -187,6 +189,20 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
       select(c(LEVEL2_DATA_NAMES[["GlobalTechYr"]], "share.weight" )) ->
       L2323.GlobalTechShrwt_detailed_industry
 
+    # L2323.StubTechShrwt_detailed_industry
+    A323.globaltech_shrwt %>%
+      gather(year, value, -supplysector, -subsector, -technology) %>%
+      mutate(year = as.integer(sub("X", "", year))) %>%
+      complete(nesting(supplysector, subsector, technology), year = MODEL_YEARS) %>%
+      arrange(supplysector, subsector, technology, year) %>%
+      group_by(supplysector, subsector, technology) %>%
+      mutate(share.weight = approx_fun(year, value, rule = 1)) %>%
+      ungroup %>%
+      filter(year %in% MODEL_YEARS) %>%
+      rename(stub.technology = technology) %>%
+      write_to_all_provinces(LEVEL2_DATA_NAMES[["StubTechShrwt"]],province = province_names_mappings$province) ->
+      L2323.StubTechShrwt_detailed_industry
+
     # L2323.GlobalTechCoef_detailed_industry: Energy inputs and coefficients of detailed_industry technologies
     A323.globaltech_coef %>%
       gather(year, value, -supplysector, -subsector, -technology, -minicam.energy.input) %>%
@@ -202,6 +218,7 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
              subsector.name = subsector) %>%
       select(LEVEL2_DATA_NAMES[["GlobalTechCoef"]]) ->
       L2323.GlobalTechCoef_detailed_industry
+
 
     # Carbon capture rates from technologies with CCS
     # L2323.GlobalTechCapture_detailed_industry: CO2 capture fractions from global detailed_industry production technologies with CCS
@@ -238,6 +255,20 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["GlobalTechCost"]]) ->
       L2323.GlobalTechCost_detailed_industry # intermediate tibble
 
+    # L2323.StubTechCost_detailed_industry: Non-energy costs of global detailed_industry manufacturing technologies
+    A323.globaltech_cost %>%
+      gather(year, value, -supplysector, -subsector, -technology, -minicam.non.energy.input) %>%
+      mutate(year = as.integer(sub("X", "", year))) %>%
+      complete(nesting(supplysector, subsector, technology, minicam.non.energy.input), year = MODEL_YEARS) %>%
+      arrange(supplysector, subsector, technology, minicam.non.energy.input, year) %>%
+      group_by(supplysector, subsector, technology, minicam.non.energy.input) %>%
+      mutate(input.cost = approx_fun(year, value, rule = 1),
+             input.cost = round(input.cost, energy.DIGITS_COST)) %>%
+      ungroup %>%
+      filter(year %in% MODEL_YEARS) %>%
+      rename(stub.technology = technology) %>%
+      write_to_all_provinces(LEVEL2_DATA_NAMES[["StubTechCost"]],province = province_names_mappings$province) ->
+      L2323.StubTechCost_detailed_industry
 
     A323.nonenergy_Cseq %>%
       repeat_add_columns(tibble(year = c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS))) %>%
@@ -414,8 +445,8 @@ module_gcamchina_L2323.detailed_industry_CHINA <- function(command, ...) {
       L2323.PerCapitaBased_detailed_industry
 
     # L2323.BaseService_detailed_industry: base-year service output of detailed_industry
-    sector_list = c("IRONSTL","construction","mining energy use",
-                    "agriculture energy use","chemicals")
+    sector_list = c("iron and steel","construction","mining energy use",
+                    "agricultural energy use","chemical")
 
     L2323.StubTechProd_detailed_industry %>%
       filter(supplysector %in% sector_list) %>%
@@ -591,6 +622,14 @@ if( exists( "L2323.SubsectorInterpTo_detailed_industry" ) ) {
       add_precursors("gcam-china/A323.globaltech_shrwt") ->
       L2323.GlobalTechShrwt_detailed_industry
 
+    L2323.StubTechShrwt_detailed_industry %>%
+      add_title("Stub Tech keywords for detailed_industry sector in detailed_industry producing provinces") %>%
+      add_units("Unitless") %>%
+      add_comments("StubTech shareweight detailed_industry producing provinces in region CHINA") %>%
+      add_legacy_name("L2323.StubTechShrwt_detailed_industry") %>%
+      add_precursors("gcam-china/A323.globaltech_shrwt") ->
+      L2323.StubTechShrwt_detailed_industry
+
     L2323.GlobalTechCoef_detailed_industry %>%
       add_title("Energy inputs and coefficients of detailed_industry technologies") %>%
       add_units("Gj/kg") %>%
@@ -606,6 +645,14 @@ if( exists( "L2323.SubsectorInterpTo_detailed_industry" ) ) {
       add_legacy_name("L2323.GlobalTechCost_detailed_industry") %>%
       add_precursors("gcam-china/A323.globaltech_cost") ->
       L2323.GlobalTechCost_detailed_industry
+
+    L2323.StubTechCost_detailed_industry %>%
+      add_title("Non-energy costs of detailed_industry manufacturing technologies") %>%
+      add_units("1990$") %>%
+      add_comments("Non-energy costs of detailed_industry manufacturing technologies") %>%
+      add_legacy_name("L2323.StubTechCost_detailed_industry") %>%
+      add_precursors("gcam-china/A323.globaltech_cost") ->
+      L2323.StubTechCost_detailed_industry
 
     L2323.GlobalTechCSeq_ind %>%
       add_title("CO2 capture fractions from global electricity generation technologies") %>%
@@ -768,8 +815,10 @@ if( exists( "L2323.GlobalTechProfitShutdown_detailed_industry" ) ) {
     return_data(L2323.Supplysector_detailed_industry, L2323.FinalEnergyKeyword_detailed_industry,
                 L2323.SubsectorLogit_detailed_industry, L2323.SubsectorShrwtFllt_detailed_industry,
                 L2323.SubsectorInterp_detailed_industry, L2323.StubTech_detailed_industry,
-                L2323.GlobalTechShrwt_detailed_industry, L2323.GlobalTechCoef_detailed_industry,
-                L2323.GlobalTechCost_detailed_industry, L2323.GlobalTechCapture_detailed_industry,
+                L2323.GlobalTechShrwt_detailed_industry, L2323.StubTechShrwt_detailed_industry,
+                L2323.GlobalTechCoef_detailed_industry,
+                L2323.GlobalTechCost_detailed_industry, L2323.StubTechCost_detailed_industry,
+                L2323.GlobalTechCapture_detailed_industry,
                 L2323.StubTechProd_detailed_industry, L2323.StubTechMarket_detailed_industry,
                 L2323.StubTechCoef_detailed_industry, L2323.PerCapitaBased_detailed_industry,
                 L2323.BaseService_detailed_industry, L2323.PriceElasticity_detailed_industry,

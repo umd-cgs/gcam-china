@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA122.Refining
 #'
 #' Downscales crude oil, corn ethanol, and biodiesel refining inputs and outputs to province-level.
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author YangLiu Jul 2018
+#' @author YangLiu Jul 2018 / YangOu Dec 2023
 module_gcam.china_LA122.Refining <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",
@@ -97,7 +99,7 @@ module_gcam.china_LA122.Refining <- function(command, ...) {
       complete(sector, fuel, province = province_names_mappings$province, year = HISTORICAL_YEARS) %>%
       filter(!(province %in% c("HK","MC"))) %>%
       #Evenly distributed in 2005
-      mutate(value = if_else((year == 2005)&(is.na(value)),1,value)) %>%
+      mutate(value = if_else( (year == 2005) & (is.na(value) ), 1, value)) %>%
       group_by(year) %>%
       mutate(value = value / sum(value, na.rm = T)) %>%
       ungroup() %>%

@@ -229,7 +229,6 @@ module_gcamchina_LB1235.elec_load_segments_china <- function(command, ...) {
       mutate(generation = generation * fraction) %>%
       select(grid_region = grid.region, segment, fuel, year, generation, fraction) -> L1235.grid_elec_supply_CHINA
 
-
     # ===================================================
 
     # Produce outputs

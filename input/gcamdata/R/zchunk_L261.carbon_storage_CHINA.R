@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_L261.carbon_storage_CHINA
 #'
 #' China carbon storage
@@ -17,7 +19,6 @@
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
 #' @author BY Feb 2020
-
 
 module_gcam.china_L261.carbon_storage_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {

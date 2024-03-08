@@ -24,5 +24,5 @@ Compute capacity factors for solar capacity factors by province.
 Computes solar capacity factor scalars for PV and CSP technologies by province, divided by the national average.
 }
 \author{
-Liu July 2018
+Liu July 2018 / Ou Dec 2023
 }

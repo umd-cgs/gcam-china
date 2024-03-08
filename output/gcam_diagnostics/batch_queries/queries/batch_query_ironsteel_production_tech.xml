@@ -36,10 +36,10 @@
 		<region name="YN" />
        	<region name="ZJ" />
        	<region name="Global"/>
-            <supplyDemandQuery title="IRONSTL production by tech">
+            <supplyDemandQuery title="iron and steel production by tech">
                <axis1 name="technology">technology</axis1>
                <axis2 name="Year">physical-output[@vintage]</axis2>
-               <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' and (@name='IRONSTL')]/
+               <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' and (@name='iron and steel')]/
                *[@type='subsector' and not(@name='Imports')]/*[@type='technology']/
                *[@type='output']/physical-output/node()</xPath>
                <comments/>

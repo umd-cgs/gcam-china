@@ -1,3 +1,5 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
 #' module_gcam.china_LA132.Industry
 #'
 #' Provides industrial energy consumption and industrial feedstock consumption by region/fuel/historical year.
@@ -12,7 +14,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
 #' @importFrom tidyr gather spread
-#' @author Yang Jul 2018
+#' @author Yang Liu Jul 2018 / Yang Ou Dec 2023
 module_gcam.china_LA132.Industry <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L101.inNBS_Mtce_province_S_F",
@@ -47,31 +49,6 @@ module_gcam.china_LA132.Industry <- function(command, ...) {
     # ===================================================
 
     # PART 1. Compute industrial energy use, removing energy used in refining
-
-    # Aggregate all refining fuel consumption for electricity and gas by province
-    # TODO: skipping province industrial refining energy use for now due to units issues
-    if(1 == 2) {
-      #Electricity and gas inputs to refineries are now deducted from industry.
-      #Subset industrial energy use from the China table
-    L122.in_EJ_province_refining_F %>%
-      filter(fuel %in% c("electricity", "gas")) %>%
-      group_by(province, fuel, year) %>%
-      summarise(refinery_comsumption = sum(value)) %>%
-      ungroup ->
-      L132.in_EJ_province_refining_elecgas
-
-    # Adjust industrial fuel consumption by removing refinery consumption computed above
-    L101.inNBS_Mtce_province_S_F %>%
-      filter(sector == "industry", fuel %in% c("electricity", "gas")) %>%
-      # We need to transfer the Mtce to EJ. We haven't done that yet.
-      left_join_error_no_match(L132.in_EJ_province_refining_elecgas, by = c("province", "fuel", "year")) %>%
-      #Replace any negative values with zeroes
-      mutate(value = value - refinery_comsumption,
-             value = replace(value, value < 0, 0)) %>%
-      select(-refinery_comsumption) ->
-      L132.in_EJ_province_ind_elecgas_adj
-    }
-
     # Put together a new table for industrial energy consumption. This will be used to calculate province-wise percentages of industrial energy use
     # Need to add biomass use by province since the CESY does not include it
     #just using coal shares for now
