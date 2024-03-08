@@ -24,7 +24,7 @@ the generated outputs: \code{L244.DeleteConsumer_CHINAbld}, \code{L244.DeleteSup
 \code{L244.GlobalTechIntGainOutputRatio_CHINAbld}, \code{L244.GlobalTechInterpTo_CHINAbld}, \code{L244.GlobalTechEff_CHINAbld},
 \code{L244.GlobalTechShrwt_CHINAbld}, \code{L244.GlobalTechCost_CHINAbld}, \code{L244.GlobalTechSCurve_CHINAbld},
 \code{L244.FuelPrefElast_CHINAbld}.
-The corresponding file in the original data system was \code{L244.building_USA.R} (gcam-usa level2).
+The corresponding file in the original data system was \code{L244.building_CHINA.R} (gcam-china level2).
 }
 \description{
 Creates GCAM-CHINA building output files for writing to xml.

@@ -18,5 +18,5 @@ the generated outputs: \code{elec_segments_USA.xml}. The corresponding file in t
 original data system was \code{batch_elec_segments_USA.xml} (gcamusa xml-batch).
 }
 \description{
-Construct XML data structure for \code{elec_segments_USA.xml}.
+Construct XML data structure for \code{elec_segments_CHINA.xml}.
 }

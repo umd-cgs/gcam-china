@@ -16,11 +16,11 @@ Depends on \code{command}: either a vector of required inputs, a vector of outpu
 the generated outputs:
 \itemize{
 \item{\code{L226.DeleteSupplysector_CHINAelec}: Removing the electricity T&D sectors of the CHINA region.}
-\item{\code{L226.StubTechCoef_electd_CHINA}: Stub technology coefficients elec T&D when using national elec markets. State elect_td sectors are treated as stub technologies.}
+\item{\code{L226.StubTechCoef_electd_CHINA}: Stub technology coefficients elec T&D when using national elec markets. Province elect_td sectors are treated as stub technologies.}
 \item{\code{L226.TechShrwt_electd_CHINA}: tech share weights for elec T&D when using regional electricity markets. The elect_td sectors can not use the global tech database as their input is different.}
 \item{\code{L226.TechCost_electd_CHINA}: Tech costs for elec T&D when using regional electricity markets.}
 \item{\code{L226.Supplysector_electd_CHINA}: CHINA supply sector input, output, and logit info for elec T&D by province.}
-\item{\code{L226.SubsectorShrwtFllt_electd_CHINA}: CHINA subsector shareweight fillout for elec T&D by state.}
+\item{\code{L226.SubsectorShrwtFllt_electd_CHINA}: CHINA subsector shareweight fillout for elec T&D by province.}
 \item{\code{L226.SubsectorLogit_electd_CHINA}: CHINA subsector logit info for elec T&D by grid.region.}
 \item{\code{L226.SubsectorInterp_electd_CHINA}: CHINA interpolation info for elec T&D by province.}
 \item{\code{L226.TechCoef_electd_CHINA}: Tech coeff for elec T&D when using regional electricity markets.}

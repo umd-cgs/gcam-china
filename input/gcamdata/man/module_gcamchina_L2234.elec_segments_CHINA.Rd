@@ -28,14 +28,14 @@ the generated outputs: \code{L2234.Supplysector_elecS_CHINA}, \code{L2234.ElecRe
 \code{L2234.StubTechMarket_elecS_CHINA}, \code{L2234.StubTechMarket_backup_elecS_CHINA}, \code{L2234.StubTechElecMarket_backup_elecS_CHINA},
 \code{L2234.StubTechProd_elecS_CHINA}, \code{L2234.StubTechFixOut_elecS_CHINA}, \code{L2234.StubTechFixOut_hydro_elecS_CHINA},
 \code{L2234.TechShrwt_elecS_grid_CHINA}, \code{L2234.TechCoef_elecS_grid_CHINA}, \code{L2234.TechProd_elecS_grid_CHINA}.
-The corresponding file in the original data system was \code{L2234.elec_segments_USA.R} (gcam-china level2).
+The corresponding file in the original data system was \code{L2234.elec_segments_CHINA.R} (gcam-china level2).
 }
 \description{
-Generates gcam-china model inputs for multiple load segments electricity sector by state.
+Generates gcam-china model inputs for multiple load segments electricity sector by province.
 }
 \details{
 This chunk generates input files to create an electricity generation sector with multiple load segments
-for each state and creates the demand for the state-level electricity sectors in the grid regions.
+for each province and creates the demand for the province-level electricity sectors in the grid regions.
 }
 \author{
 MTB Aug 2018 / YangOu Jul 2023

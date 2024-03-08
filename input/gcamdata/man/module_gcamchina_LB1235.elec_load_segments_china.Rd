@@ -17,7 +17,7 @@ a vector of output names, or (if \code{command} is "MAKE") all
 the generated outputs: \code{L1235.grid_elec_supply_CHINA}, \code{L1235.elecS_horizontal_vertical_CHINA},
 \code{L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA}, \code{L1235.elecS_demand_fraction_CHINA}.
 
-The corresponding file in the original data system was \code{LB1235.elec_load_segments.R} (gcam-usa level1).
+The corresponding file in the original data system was \code{LB1235.elec_load_segments.R} (gcam-china level1).
 }
 \description{
 Read in demand fraction and time fraction and compute load curve related parameters
