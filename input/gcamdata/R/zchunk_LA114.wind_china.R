@@ -26,7 +26,7 @@ module_gcamchina_LA114.Wind <- function(command, ...) {
     return(c("L114.CapacityFactor_wind_province"))
   } else if(command == driver.MAKE) {
 
-    technology <- year <- state <- sector <- capacity.factor <- fuel <- value <- base_cost <-
+    technology <- year <- province <- sector <- capacity.factor <- fuel <- value <- base_cost <-
       region <- province.name <- base.cost <- NULL  # silence package check.
 
     all_data <- list(...)[[1]]

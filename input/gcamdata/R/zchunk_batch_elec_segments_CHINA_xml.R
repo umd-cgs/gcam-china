@@ -2,7 +2,7 @@
 
 #' module_gcamchina_batch_elec_segments_CHINA_xml
 #'
-#' Construct XML data structure for \code{elec_segments_USA.xml}.
+#' Construct XML data structure for \code{elec_segments_CHINA.xml}.
 #'
 #' @param command API command to execute
 #' @param ... other optional parameters, depending on command

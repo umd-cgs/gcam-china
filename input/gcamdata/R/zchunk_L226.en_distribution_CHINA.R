@@ -10,11 +10,11 @@
 #' the generated outputs:
 #' \itemize{
 #' \item{\code{L226.DeleteSupplysector_CHINAelec}: Removing the electricity T&D sectors of the CHINA region.}
-#' \item{\code{L226.StubTechCoef_electd_CHINA}: Stub technology coefficients elec T&D when using national elec markets. State elect_td sectors are treated as stub technologies.}
+#' \item{\code{L226.StubTechCoef_electd_CHINA}: Stub technology coefficients elec T&D when using national elec markets. Province elect_td sectors are treated as stub technologies.}
 #' \item{\code{L226.TechShrwt_electd_CHINA}: tech share weights for elec T&D when using regional electricity markets. The elect_td sectors can not use the global tech database as their input is different.}
 #' \item{\code{L226.TechCost_electd_CHINA}: Tech costs for elec T&D when using regional electricity markets.}
 #' \item{\code{L226.Supplysector_electd_CHINA}: CHINA supply sector input, output, and logit info for elec T&D by province.}
-#' \item{\code{L226.SubsectorShrwtFllt_electd_CHINA}: CHINA subsector shareweight fillout for elec T&D by state.}
+#' \item{\code{L226.SubsectorShrwtFllt_electd_CHINA}: CHINA subsector shareweight fillout for elec T&D by province.}
 #' \item{\code{L226.SubsectorLogit_electd_CHINA}: CHINA subsector logit info for elec T&D by grid.region.}
 #' \item{\code{L226.SubsectorInterp_electd_CHINA}: CHINA interpolation info for elec T&D by province.}
 #' \item{\code{L226.TechCoef_electd_CHINA}: Tech coeff for elec T&D when using regional electricity markets.}
@@ -90,7 +90,7 @@ module_gcam.china_L226.en_distribution_CHINA <- function(command, ...) {
     # silence check package notes
     region <- supplysector <- from.year <- to.year <- output.unit <- input.unit <- price.unit <- liq_adj <-
       logit.exponent <- logit.type <- . <- subsector <- State <- Coal <- Natural.gas <- Distillate.fuel.oil <-
-      grid.region <- state_name <- coal_adj <- gas_adj <- liq_adju <- sector1 <- adjustment <- technology <-
+      grid.region <- province_name <- coal_adj <- gas_adj <- liq_adju <- sector1 <- adjustment <- technology <-
       year <- minicam.non.energy.input <- tmp <- sector2 <- trash1 <- trash2 <- input.cost <- sector.name <-
       subsector.name <- stub.technology <- market.name <- state <- coal <- gas <- refined.liquids <- EBMaterial <-
       value <- province <- coal_weight <- gas_weight <- liq_weight <- adj_price <- NULL

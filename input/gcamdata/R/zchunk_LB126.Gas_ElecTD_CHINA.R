@@ -9,7 +9,7 @@
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{L126.in_EJ_province_td_elec}. The corresponding file in the
-#' original data system was \code{LB126.Gas_ElecTD.R} (gcam-usa level1).
+#' original data system was \code{LB126.Gas_ElecTD.R} (gcam-china level1).
 #' @details Calculates inputs and outputs of transmission and distribution of electricity by province.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows filter group_by left_join mutate select summarise transmute
@@ -31,7 +31,7 @@ module_gcamchina_LB126.Gas_ElecTD <- function(command, ...) {
   } else if(command == driver.MAKE) {
 
     # Silence package checks
-    GCAM_region_ID <- year <- value <- value.x <- value.y <- sector <- fuel <- state <- EIA_sector <-
+    GCAM_region_ID <- year <- value <- value.x <- value.y <- sector <- fuel <- province <- EIA_sector <-
       EIA_fuel <- sector.x <- NULL
 
     all_data <- list(...)[[1]]

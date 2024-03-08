@@ -180,7 +180,7 @@ module_gcamchina_L254.transportation_china <- function(command, ...) {
                                        region[minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS]))
       }
 
-      # For fuels consumed from state markets, the market.name is the region
+      # For fuels consumed from province markets, the market.name is the region
       if("market.name" %in% names(data_new)) {
         data_new <- data_new %>%
           mutate(market.name = replace(market.name, minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,

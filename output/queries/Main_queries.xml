@@ -5077,7 +5077,7 @@ local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs
             </supplyDemandQuery>
         </queryGroup>
     </queryGroup>
-    <queryGroup name="GCAM USA">
+    <queryGroup name="GCAM China">
         <queryGroup name="primary energy">
             <supplyDemandQuery title="primary energy consumption by region (direct equivalent)">
                 <axis1 name="fuel">input[@name]</axis1>
@@ -5170,16 +5170,7 @@ local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs
                 </labelRewriteList>
             </supplyDemandQuery>
         </queryGroup>
-        <queryGroup name="industry">
-            <supplyDemandQuery title="industry water withdrawals and consumption">
-                <axis1 name="input">input</axis1>
-                <axis2 name="Year">physical-output[@vintage]</axis2>
-                <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
-                *[@type='output' and contains(@name,'water_td')]/physical-output/node()</xPath>
-                <comments/>
-            </supplyDemandQuery>
-        </queryGroup>
-        <queryGroup name="energy transformation">
+         <queryGroup name="energy transformation">
             <queryGroup name="electricity">
                 <supplyDemandQuery title="elec gen by region (no CHP)">
                     <axis1 name="region">region</axis1>
@@ -5913,35 +5904,6 @@ local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs
                 </supplyDemandQuery>
             </queryGroup>
         </queryGroup>
-        <queryGroup name="water demands">
-            <supplyDemandQuery title="water withdrawals by state, sector, basin">
-                <axis1 name="subsector">subsector</axis1>
-                <axis2 name="Year">physical-output[@vintage]</axis2>
-                <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector']/*[@type='subsector']//*[@type='output' (:collapse:)
-                and contains(@name,'water_td') and ends-with(@name,'_W')]/physical-output/node()</xPath>
-                <comments/>
-            </supplyDemandQuery>
-            <supplyDemandQuery title="water withdrawals by state, sector, basin (includes desal)">
-                <axis1 name="technology">technology</axis1>
-                <axis2 name="Year">physical-output[@vintage]</axis2>
-                <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector']/*[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)
-                and contains(@name,'water_td') and ends-with(@name,'_W')]/physical-output/node()</xPath>
-                <comments/>
-            </supplyDemandQuery>
-            <supplyDemandQuery title="water consumption by state, sector, basin">
-                <axis1 name="subsector">subsector</axis1>
-                <axis2 name="Year">physical-output[@vintage]</axis2>
-                <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector']/*[@type='subsector']//*[@type='output' (:collapse:)
-                and contains(@name,'water_td') and ends-with(@name,'_C')]/physical-output/node()</xPath>
-                <comments/>
-            </supplyDemandQuery>
-            <supplyDemandQuery title="water consumption by state, sector, basin (includes desal)">
-                <axis1 name="technology">technology</axis1>
-                <axis2 name="Year">physical-output[@vintage]</axis2>
-                <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector']/*[@type='subsector']/*[@type='technology']/*[@type='output' (:collapse:)
-                and contains(@name,'water_td') and ends-with(@name,'_C')]/physical-output/node()</xPath>
-                <comments/>
-            </supplyDemandQuery>
-        </queryGroup>
+        
     </queryGroup>
 </queries>

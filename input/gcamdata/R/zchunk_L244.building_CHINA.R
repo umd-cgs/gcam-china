@@ -18,7 +18,7 @@
 #' \code{L244.GlobalTechIntGainOutputRatio_CHINAbld}, \code{L244.GlobalTechInterpTo_CHINAbld}, \code{L244.GlobalTechEff_CHINAbld},
 #' \code{L244.GlobalTechShrwt_CHINAbld}, \code{L244.GlobalTechCost_CHINAbld}, \code{L244.GlobalTechSCurve_CHINAbld},
 #' \code{L244.FuelPrefElast_CHINAbld}.
-#' The corresponding file in the original data system was \code{L244.building_USA.R} (gcam-usa level2).
+#' The corresponding file in the original data system was \code{L244.building_CHINA.R} (gcam-china level2).
 #' @details Creates GCAM-CHINA building output files for writing to xml.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else group_by left_join mutate select semi_join summarise
@@ -522,7 +522,7 @@ module_gcamchina_L244.building_CHINA <- function(command, ...) {
     L244.PriceExp_IntGains_CHINAbld %>%
       add_title("Price exponent on floorspace and naming of internal gains trial markets") %>%
       add_units("Unitless") %>%
-      add_comments("A44.gcam_consumer written to all states") %>%
+      add_comments("A44.gcam_consumer written to all provinces") %>%
       add_legacy_name("L244.PriceExp_IntGains") %>%
       add_precursors("gcam-china/A44.gcam_consumer") ->
       L244.PriceExp_IntGains_CHINAbld
@@ -546,7 +546,7 @@ module_gcamchina_L244.building_CHINA <- function(command, ...) {
     L244.DemandFunction_flsp_CHINAbld %>%
       add_title("Floorspace demand function types") %>%
       add_units("NA") %>%
-      add_comments("A44.demandFn_flsp written to all states") %>%
+      add_comments("A44.demandFn_flsp written to all provinces") %>%
       add_legacy_name("L244.DemandFunction_flsp") %>%
       add_precursors("gcam-china/A44.demandFn_flsp") ->
       L244.DemandFunction_flsp_CHINAbld
@@ -632,7 +632,7 @@ module_gcamchina_L244.building_CHINA <- function(command, ...) {
     L244.Supplysector_CHINAbld %>%
       add_title("Supplysector info for buildings") %>%
       add_units("Unitless") %>%
-      add_comments("A44.sector written to all states") %>%
+      add_comments("A44.sector written to all provinces") %>%
       add_legacy_name("L244.Supplysector_bld") %>%
       add_precursors("gcam-china/A44.sector") ->
       L244.Supplysector_CHINAbld
@@ -640,7 +640,7 @@ module_gcamchina_L244.building_CHINA <- function(command, ...) {
     L244.FinalEnergyKeyword_CHINAbld %>%
       add_title("Supply sector keywords for detailed building sector") %>%
       add_units("NA") %>%
-      add_comments("A44.sector written to all states") %>%
+      add_comments("A44.sector written to all provinces") %>%
       add_legacy_name("L244.FinalEnergyKeyword_bld") %>%
       add_precursors("gcam-china/A44.sector") ->
       L244.FinalEnergyKeyword_CHINAbld

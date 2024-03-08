@@ -9,7 +9,7 @@
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{L1234.in_EJ_grid_elec_F_CHINA}, \code{L1234.out_EJ_grid_elec_F_CHINA}.
-#' The corresponding file in the original data system was \code{LB1234.elec_gridregions.R} (gcam-usa level1).
+#' The corresponding file in the original data system was \code{LB1234.elec_gridregions.R} (gcam-china level1).
 #' @details By grid region, calculates electricity fuel consumption and electricity generation.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr filter mutate select
@@ -38,7 +38,7 @@ module_gcamchina_LB1234.elec_gridregions_china <- function(command, ...) {
     # ===================================================
     # Data Processing
 
-    # Take in state-level data on electric power sector fuel consumption, aggregate to grid regions
+    # Take in province-level data on electric power sector fuel consumption, aggregate to grid regions
     L123.in_EJ_province_elec_F %>%
       left_join_error_no_match(province_names_mappings %>%
                                  select(province, grid.region),
@@ -47,7 +47,7 @@ module_gcamchina_LB1234.elec_gridregions_china <- function(command, ...) {
       summarise(fuel.input = sum(value)) %>%
       ungroup() -> L1234.in_EJ_grid_elec_F
 
-    # Take in state-level data on electricity generation by fuel, aggregate to grid regions
+    # Take in province-level data on electricity generation by fuel, aggregate to grid regions
     L123.out_EJ_province_elec_F %>%
       left_join_error_no_match(province_names_mappings %>%
                                  select(province, grid.region),

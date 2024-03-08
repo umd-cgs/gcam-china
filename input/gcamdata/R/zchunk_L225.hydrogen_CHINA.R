@@ -37,7 +37,7 @@ module_gcamchina_L225.hydrogen_china <- function(command, ...) {
     all_data <- list(...)[[1]]
 
     region <- subsector <- supplysector <- sector.name <- subsector.name <- technology <-
-      state <- grid_region <- minicam.energy.input <- market.name <- stub.technology <- year <- NULL  # silence package check notes
+      province <- grid_region <- minicam.energy.input <- market.name <- stub.technology <- year <- NULL  # silence package check notes
 
     # Load required inputs
     province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = TRUE)
@@ -82,10 +82,10 @@ module_gcamchina_L225.hydrogen_china <- function(command, ...) {
       write_to_all_provinces(LEVEL2_DATA_NAMES[["StubTech"]], gcamchina.PROVINCES_ALL) %>%
       filter(!(region %in% c('HK', 'MC') & subsector %in% c('solar','wind')))
 
-    # Assign the market names. Use the USA region as the default, then
+    # Assign the market names. Use the China region as the default, then
     # - re-set grid-region fuel market
-    # - re-set state-level fuel markets
-    # - re-set upstream hydrogen commodity markets (hack - this replacement will need to be updated when inter-state hydrogen markets are represented)
+    # - re-set province-level fuel markets
+    # - re-set upstream hydrogen commodity markets (hack - this replacement will need to be updated when inter-province hydrogen markets are represented)
     L225.StubTechMarket_h2_CHINA <- L225.GlobalTechCoef_h2 %>%
       rename(supplysector = sector.name,
              subsector = subsector.name,

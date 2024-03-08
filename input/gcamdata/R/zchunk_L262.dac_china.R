@@ -131,8 +131,8 @@ module_gcamdata_L262.dac_china <- function(command, ...) {
 
         data %>%
           filter(region == "China") %>%
-          write_to_all_states(names = names(data),region_list = gcamchina.PROVINCES_NOHKMC) %>%
-          #use gcam-usa functionality but with provinces instead of provinces
+          write_to_all_provinces(names = names(data),region_list = gcamchina.PROVINCES_NOHKMC) %>%
+          #use gcam-china functionality but with provinces instead of provinces
           filter(region %in% gcamchina.PROVINCES_NOHKMC) ->
           new_data
 

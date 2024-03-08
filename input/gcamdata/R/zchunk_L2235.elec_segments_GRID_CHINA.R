@@ -19,7 +19,7 @@
 #' \code{L2235.Supplysector_elec_GRID_CHINA}, \code{L2235.SubsectorLogit_elec_GRID_CHINA}, \code{L2235.SubsectorShrwtFllt_elec_GRID_CHINA},
 #' \code{L2235.SubsectorInterp_elec_GRID_CHINA}, \code{L2235.TechShrwt_elec_GRID_CHINA}, \code{L2235.TechCoef_elec_GRID_CHINA},
 #' \code{L2235.TechCoef_elecownuse_GRID_CHINA}, \code{L2235.Production_imports_GRID_CHINA},\code{L2235.Production_elec_gen_GRID_CHINA}.
-#' The corresponding file in the original data system was \code{L2235.elec_segments_FERC.R} (gcam-usa level2).
+#' The corresponding file in the original data system was \code{L2235.elec_segments_FERC.R} (gcam-china level2).
 #' @details This chunk generates input files to create the vertical segment supplysectors in the grid regions
 #' and also the domestic supply and electricity trade sectors for the grid regions.
 #' @importFrom assertthat assert_that
@@ -581,7 +581,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_title("China Electricity Sectors to be Deleted") %>%
       add_units("NA") %>%
       add_comments("Removing the China region electricity sectors (incl. net_ownuse)") %>%
-      add_legacy_name("L2235.DeleteSupplysector_USAelec") %>%
+      add_legacy_name("L2235.DeleteSupplysector_CHINAelec") %>%
       add_precursors("gcam-china/A23.elec_delete") ->
       L2235.DeleteSupplysector_elec_CHINA
 
@@ -625,7 +625,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_title("Electricity Supply Sectors for China Electricity Trade and Grid Region Vertical Load Segments") %>%
       add_units("unitless") %>%
       add_comments("Electricity supply sector in the China region and grid regions; including trade between grid regions") %>%
-      add_legacy_name("L2235.Supplysector_USAelec") %>%
+      add_legacy_name("L2235.Supplysector_CHINAelec") %>%
       add_precursors("gcam-china/province_names_mappings",
                      "gcam-china/A23.elecS_sector_vertical",
                      "gcam-china/A232.structure") ->
@@ -644,7 +644,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_title("Vertical Load Segments Subsector Logits") %>%
       add_units("unitless") %>%
       add_comments("Vertical electricity load segments subsector logits") %>%
-      add_legacy_name("L2235.SubsectorLogit_USAelec") %>%
+      add_legacy_name("L2235.SubsectorLogit_elec_CHINA") %>%
       same_precursors_as("L2235.Supplysector_elec_CHINA") ->
       L2235.SubsectorLogit_elec_CHINA
 
@@ -652,7 +652,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_title("China Electricity Trade Subsector Share Weights") %>%
       add_units("unitless") %>%
       add_comments("China electricity trade subsector (grid region) share weights") %>%
-      add_legacy_name("L2235.SubsectorShrwtFllt_USAelec") %>%
+      add_legacy_name("L2235.SubsectorShrwtFllt_elec_CHINA") %>%
       add_precursors("gcam-china/province_names_mappings",
                      "gcam-china/A232.structure") ->
       L2235.SubsectorShrwtFllt_elec_CHINA
@@ -662,7 +662,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_units("unitless") %>%
       add_comments("China electricity trade subsector (grid region) share weights that are fixed at calibration values") %>%
       add_comments("Grid regions that don't export in the base year don't export at all") %>%
-      add_legacy_name("L2235.SubsectorInterp_USAelec") %>%
+      add_legacy_name("L2235.SubsectorInterp_elec_CHINA") %>%
       same_precursors_as("L2235.SubsectorShrwtFllt_elec_CHINA") ->
       L2235.SubsectorInterp_elec_CHINA
 
@@ -687,7 +687,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_title("China Electricity Trade Technology Share Weights") %>%
       add_units("unitless") %>%
       add_comments("China electricity trade technology share weights") %>%
-      add_legacy_name("L2235.TechShrwt_USAelec") %>%
+      add_legacy_name("L2235.TechShrwt_elec_CHINA") %>%
       same_precursors_as("L2235.SubsectorShrwtFllt_elec_CHINA")  ->
       L2235.TechShrwt_elec_CHINA
 
@@ -695,7 +695,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_title("China Electricity Trade Technology Market Info") %>%
       add_units("unitless") %>%
       add_comments("China electricity trade technology coefficients and market names") %>%
-      add_legacy_name("L2235.TechCoef_USAelec") %>%
+      add_legacy_name("L2235.TechCoef_elec_CHINA") %>%
       same_precursors_as("L2235.SubsectorShrwtFllt_elec_CHINA") ->
       L2235.TechCoef_elec_CHINA
 
@@ -703,7 +703,7 @@ module_gcamchina_L2235.elec_segments_GRID_CHINA <- function(command, ...) {
       add_title("Electricity Exports from Grid Regions to China Electricity Trade Sector") %>%
       add_units("EJ (calOutputValue); unitless") %>%
       add_comments("Calibrated electricity exports from grid regions to China region electricity trade sector") %>%
-      add_legacy_name("L2235.Production_exports_USAelec") %>%
+      add_legacy_name("L2235.Production_exports_elec_CHINA") %>%
       add_precursors("gcam-china/province_names_mappings",
                      "gcam-china/A232.structure",
                      "gcam-china/ABSPI_intra_province_electricity_trade",

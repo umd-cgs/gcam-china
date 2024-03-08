@@ -2,7 +2,7 @@
 
 #' module_gcamchina_L2234.elec_segments_CHINA
 #'
-#' Generates gcam-china model inputs for multiple load segments electricity sector by state.
+#' Generates gcam-china model inputs for multiple load segments electricity sector by province.
 #'
 #' @param command API command to execute
 #' @param ... other optional parameters, depending on command
@@ -22,9 +22,9 @@
 #' \code{L2234.StubTechMarket_elecS_CHINA}, \code{L2234.StubTechMarket_backup_elecS_CHINA}, \code{L2234.StubTechElecMarket_backup_elecS_CHINA},
 #' \code{L2234.StubTechProd_elecS_CHINA}, \code{L2234.StubTechFixOut_elecS_CHINA}, \code{L2234.StubTechFixOut_hydro_elecS_CHINA},
 #' \code{L2234.TechShrwt_elecS_grid_CHINA}, \code{L2234.TechCoef_elecS_grid_CHINA}, \code{L2234.TechProd_elecS_grid_CHINA}.
-#' The corresponding file in the original data system was \code{L2234.elec_segments_USA.R} (gcam-china level2).
+#' The corresponding file in the original data system was \code{L2234.elec_segments_CHINA.R} (gcam-china level2).
 #' @details This chunk generates input files to create an electricity generation sector with multiple load segments
-#' for each state and creates the demand for the state-level electricity sectors in the grid regions.
+#' for each province and creates the demand for the province-level electricity sectors in the grid regions.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr anti_join distinct filter if_else mutate select semi_join summarise_if bind_rows
 #' @importFrom tidyr complete nesting replace_na
@@ -129,7 +129,7 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
 
     all_data <- list(...)[[1]]
 
-    region <- grid_region <- grid.region <- state <- year <- supplysector <- Electric.sector <- sector <- subsector <- subsector_1 <-
+    region <- grid_region <- grid.region <- province <- year <- supplysector <- Electric.sector <- sector <- subsector <- subsector_1 <-
       sector.name <- subsector.name <- technology <- intermittent.technology <- Electric.sector.technology <-
       Electric.sector.intermittent.technology <- logit.exponent <- logit.type <- logit.year.fillout <-
       output.unit <- input.unit <- share.weight <- apply.to <- from.year <- to.year <- to.value <-
@@ -142,7 +142,7 @@ module_gcamchina_L2234.elec_segments_CHINA <- function(command, ...) {
       market.name <-  electric.sector.market <- calOutputValue <- count_tech <- share.weight.year <-
       subs.share.weight <- tech.share.weight <- subscalOutputValue <- fraction <- subsector.cal.value <-
       fixedOutput <- eff_actual <- GCAM_region_ID <- geothermal_resource <- L2234.TechMarket_elecS_grid <-
-      tech.share <- supplysector.y <- supplysector.x <- segment <- share.weight.x <- year.x <- year.y <- State <-
+      tech.share <- supplysector.y <- supplysector.x <- segment <- share.weight.x <- year.x <- year.y <- 
       period <- capital.cost <- fcr <- fixed.om <- variable.om <- coefficient <- passthrough.sector <-
       marginal.revenue.sector <- marginal.revenue.market <- Geothermal_Hydrothermal_GWh <- geo_state_noresource <-
       fuel <- scaler <- n <- NULL # silence package check notes

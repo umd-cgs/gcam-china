@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_gcamchina_LB1239.elec_province_fractions_USA
+#' module_gcamchina_LB1239.elec_province_fractions_CHINA
 #'
 #' Map electricity generation by fuel | grid region | horizontal segment to generation by fuel | province | segment.
 #' The fraction of generation by fuel by horizontal segment is assumed to be equal for all provinces within a grid region.
@@ -11,12 +11,12 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{L1239.province_elec_supply_CHINA}.
 #'
-#' The corresponding file in the original data system was \code{LB1239.elec_state_fractions.R} (gcam-usa level1).
-#' @details Calculates the fraction of electricity generation by fuel, by horizontal load segment, by state.
+#' The corresponding file in the original data system was \code{LB1239.elec_state_fractions.R} (gcam-china level1).
+#' @details Calculates the fraction of electricity generation by fuel, by horizontal load segment, by province.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr distinct filter left_join mutate select semi_join
 #' @author MTB August 2018 / YangOu July 2023
-module_gcamchina_LB1239.elec_province_fractions_USA <- function(command, ...) {
+module_gcamchina_LB1239.elec_province_fractions_CHINA <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",
              "L123.out_EJ_province_elec_F",
@@ -29,7 +29,7 @@ module_gcamchina_LB1239.elec_province_fractions_USA <- function(command, ...) {
 
     # Silence package checks
     grid.region <- grid_region <- segment <- fuel <- year <- tot_generation <- fraction <- generation <-
-      state <- sector <- value <- NULL # silence package check notes
+      province <- sector <- value <- NULL # silence package check notes
 
     # Load required inputs
     province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = TRUE)
@@ -55,7 +55,7 @@ module_gcamchina_LB1239.elec_province_fractions_USA <- function(command, ...) {
                                by = "province") %>%
       # map fuel shares by horizontal load segment and grid to the states
       # joining L1236.grid_elec_supply_CHINA is intended to duplicate rows,
-      # creating four rows for every state | fuel | year (one row per load segment)
+      # creating four rows for every province | fuel | year (one row per load segment)
       # left_join_error_no_match throws error when number of rows changes, so left_join is used
       left_join(L1236.grid_elec_supply_CHINA %>%
                   select(grid_region, segment, fuel, year, fraction),
