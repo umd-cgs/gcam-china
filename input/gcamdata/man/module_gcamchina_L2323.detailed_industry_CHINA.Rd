@@ -18,8 +18,8 @@ the generated outputs: \code{L2323.StubTechProd_detailed_industry},
 \code{L2323.StubTechCoef_detailed_industry}, \code{L2323.StubTechCalInput_detailed_industry}, \code{L2323.StubTechMarket_detailed_industry}, \code{L2323.BaseService_detailed_industry},
 \code{L2323.Supplysector_detailed_industry_CHINA}, \code{L2323.FinalEnergyKeyword_detailed_industry_CHINA}, \code{L2323.SubsectorLogit_detailed_industry_CHINA},
 \code{L2323.SubsectorShrwtFllt_detailed_industry_CHINA}, \code{L2323.StubTech_detailed_industry_CHINA}, \code{L2323.PerCapitaBased_detailed_industry_CHINA},
- \code{L2323.PriceElasticity_detailed_industry_CHINA}, \code{L2323.IncomeElasticity_detailed_industry_gcam3_CHINA} , \code{L2323.GlobalTechCSeq_ind}.
- The corresponding file in the original data system was \code{L2323.detailed_industry_CHINA.R} (gcam-china level2).
+\code{L2323.PriceElasticity_detailed_industry_CHINA}, \code{L2323.IncomeElasticity_detailed_industry_gcam3_CHINA} , \code{L2323.GlobalTechCSeq_ind}.
+The corresponding file in the original data system was \code{L2323.detailed_industry_CHINA.R} (gcam-china level2).
 }
 \description{
 Make the logit and input tables for the detailed_industry sector in gcam-china

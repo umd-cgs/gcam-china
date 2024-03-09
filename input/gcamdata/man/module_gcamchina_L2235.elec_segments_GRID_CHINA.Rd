@@ -24,7 +24,7 @@ the generated outputs: \code{L2235.DeleteSupplysector_elec_CHINA}, \code{L2235.I
 \code{L2235.Supplysector_elec_GRID_CHINA}, \code{L2235.SubsectorLogit_elec_GRID_CHINA}, \code{L2235.SubsectorShrwtFllt_elec_GRID_CHINA},
 \code{L2235.SubsectorInterp_elec_GRID_CHINA}, \code{L2235.TechShrwt_elec_GRID_CHINA}, \code{L2235.TechCoef_elec_GRID_CHINA},
 \code{L2235.TechCoef_elecownuse_GRID_CHINA}, \code{L2235.Production_imports_GRID_CHINA},\code{L2235.Production_elec_gen_GRID_CHINA}.
-The corresponding file in the original data system was \code{L2235.elec_segments_FERC.R} (gcam-usa level2).
+The corresponding file in the original data system was \code{L2235.elec_segments_FERC.R} (gcam-china level2).
 }
 \description{
 Creates the vertical segment supplysectors in the grid regions and also the domestic supply and

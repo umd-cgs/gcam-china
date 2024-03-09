@@ -15,7 +15,7 @@ module_gcamchina_LB1234.elec_gridregions_china(command, ...)
 Depends on \code{command}: either a vector of required inputs,
 a vector of output names, or (if \code{command} is "MAKE") all
 the generated outputs: \code{L1234.in_EJ_grid_elec_F_CHINA}, \code{L1234.out_EJ_grid_elec_F_CHINA}.
-The corresponding file in the original data system was \code{LB1234.elec_gridregions.R} (gcam-usa level1).
+The corresponding file in the original data system was \code{LB1234.elec_gridregions.R} (gcam-china level1).
 }
 \description{
 Calculate electricity fuel consumption and electricity generation by grid region.

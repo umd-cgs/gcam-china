@@ -15,7 +15,7 @@ module_gcamchina_LB126.Gas_ElecTD(command, ...)
 Depends on \code{command}: either a vector of required inputs,
 a vector of output names, or (if \code{command} is "MAKE") all
 the generated outputs: \code{L126.in_EJ_province_td_elec}. The corresponding file in the
-original data system was \code{LB126.Gas_ElecTD.R} (gcam-usa level1).
+original data system was \code{LB126.Gas_ElecTD.R} (gcam-china level1).
 }
 \description{
 Calculates inputs and outputs of transmission and distribution of electricity by province.

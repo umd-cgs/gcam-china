@@ -115,7 +115,7 @@
 		<Value name = "elect_td_china">../input/gcamdata/xml/electd_CHINA.xml</Value>
 		<Value name = "bld_china">../input/gcamdata/xml/building_CHINA.xml</Value>
 		<Value name = "trn_china">../input/gcamdata/xml/transportation_CHINA.xml</Value>
-		<Value name = "ind_china">../input/gcamdata/xml/industry_CHINA.xml</Value>
+		<Value name = "ind_china">../input/gcamdata/xml/industry_CHINA_high_demand.xml</Value>
 		<Value name = "ind_china">../input/gcamdata/xml/detailed_industry_CHINA.xml</Value>	
 		<Value name = "trade_iron_steel_China_offset">../input/extra/trade_iron_steel_China_offset.xml</Value>
 		<Value name = "cmnt_china">../input/gcamdata/xml/cement_CHINA.xml</Value>

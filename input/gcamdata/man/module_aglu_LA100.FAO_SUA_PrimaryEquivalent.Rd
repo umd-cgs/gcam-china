@@ -13,10 +13,6 @@ module_aglu_LA100.FAO_SUA_PrimaryEquivalent(command, ...)
 
 \item{DF_CURR_NEST}{Input supply-utilization accounting data frame with one tier of processing}
 
-\item{DF_ALL}{Input supply-utilization accounting data frame with ALL the data}
-
-\item{DF_CURR_NEST}{Input supply-utilization accounting data frame with one tier of processing}
-
 \item{DF_CURR_NEST_TradeAdj}{Output from Get_ARMINGTON_BALANCE. Input supply-utilization accounting data frame with one tier of processing and}
 
 \item{.SINK_ITEM}{Sink items or processed items in the processing}

@@ -1,6 +1,6 @@
 # File: A323.globaltech_cost.csv
 # Title: Default costs
-# Units: 1975$/kg(for iron and steel, coke) or 1975$/GJ (for other industry sector),,,,,,,
+# Units: 1975$/kg(for iron and steel, coke) or 1975$/GJ (for other industry sector)
 # Column types: ccccnnnnn
 # ---------
 supplysector,subsector,technology,minicam.non.energy.input,1971,2015,2030,2060,2100

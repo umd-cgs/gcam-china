@@ -4,8 +4,7 @@
 \alias{get_data_list}
 \title{get_data_list}
 \usage{
-get_data_list(all_data, data_list, strip_attributes = FALSE,
-  environ = NULL)
+get_data_list(all_data, data_list, strip_attributes = FALSE, environ = NULL)
 }
 \arguments{
 \item{all_data}{Data structure}
