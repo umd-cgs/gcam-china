@@ -376,7 +376,8 @@ module_gcamchina_L232.industry_CHINA <- function(command, ...) {
       filter(is.na(minicam.energy.input) == FALSE) %>%
       #The table of all stub technologies includes the generic industrial technology, which doesn't apply here.
       #Only setting markets here for the ones that consume fuels.
-      mutate(market.name = gcamchina.REGION) %>%
+      #mutate(market.name = gcamchina.REGION) %>%
+      mutate(market.name = region) %>%
       select(LEVEL2_DATA_NAMES[["StubTechMarket"]]) %>%
       mutate(market.name = if_else(minicam.energy.input %in% gcamchina.REGIONAL_FUEL_MARKETS,
                                    region, market.name)) %>%

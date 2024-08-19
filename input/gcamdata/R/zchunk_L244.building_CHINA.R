@@ -298,6 +298,7 @@ module_gcamchina_L244.building_CHINA <- function(command, ...) {
     # L244.StubTechMarket_CHINAbld: Specify market names for fuel inputs to all technologies in each province
     L244.StubTechMarket_CHINAbld <- L244.end_use_eff %>%
       mutate(market.name = gcamchina.REGION) %>%
+      #mutate(market.name = region) %>%
       rename(stub.technology = technology) %>%
       write_to_all_provinces(LEVEL2_DATA_NAMES[["StubTechMarket"]], gcamchina.PROVINCES_ALL) %>%
       # Electricity is consumed from province markets, so change market.name to provinces for electricity
