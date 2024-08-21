@@ -104,6 +104,10 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
     A23.elecS_tech_mapping_cool <- get_data(all_data, "gcam-china/A23.elecS_tech_mapping_cool", strip_attributes = TRUE) # copy from usa
     china_seawater_states_basins <- get_data(all_data, "gcam-china/china_seawater_states_basins", strip_attributes = TRUE) # revised from usa, need to check
     calibrated_techs <- get_data(all_data, "energy/calibrated_techs", strip_attributes = TRUE)
+    A21.sector <- get_data(all_data, "energy/A21.sector", strip_attributes = TRUE)
+    A26.sector <- get_data(all_data, "energy/A26.sector", strip_attributes = TRUE)
+    A28.sector <- get_data(all_data, "gcam-china/A28.sector", strip_attributes = TRUE)
+    calibrated_techs <- get_data(all_data, "energy/calibrated_techs")
     L122.out_EJ_province_refining_F <- get_data(all_data, "L122.out_EJ_province_refining_F", strip_attributes = TRUE)
     L202.CarbonCoef <- get_data(all_data, "L202.CarbonCoef", strip_attributes = TRUE)
     L221.GlobalTechCoef_en <- get_data(all_data, "L221.GlobalTechCoef_en", strip_attributes = TRUE)
@@ -287,8 +291,8 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
       repeat_add_columns(tibble(region = gcamchina.PROVINCES_ALL)) %>%
       select(LEVEL2_DATA_NAMES$RsrcPrice) -> L2261.RsrcPrice_DDGS_CHINA
 
-    # Technologies for state-level regional biomass sectors, which consume "regional biomass" from USA regional biomass sector
-    # NOTE: can't use stub technology for state-level regional biomass sectors because they would inherit the wrong energy-inputs
+    # Technologies for provincial-level regional biomass sectors, which consume "regional biomass" from China regional biomass sector
+    # NOTE: can't use stub technology for provincial-level regional biomass sectors because they would inherit the wrong energy-inputs
     L221.StubTech_en %>%
       filter(region == gcamchina.REGION,
              stub.technology == "regional biomass") %>%
@@ -297,7 +301,7 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
       rename(technology = stub.technology) %>%
       select(LEVEL2_DATA_NAMES$Tech) -> L2261.Tech_rbm_CHINA
 
-    # Technology shareweights of state-level regional biomass sectors
+    # Technology shareweights of provincial-level regional biomass sectors
     L2261.Tech_rbm_CHINA %>%
       repeat_add_columns(tibble(year = MODEL_YEARS)) %>%
       mutate(share.weight = gcamchina.DEFAULT_SHAREWEIGHT) %>%
@@ -313,14 +317,15 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
              market.name = gcamchina.REGION) %>%
       select(LEVEL2_DATA_NAMES$TechCoef) -> L2261.TechCoef_rbm_CHINA
 
-    # Technologies for delivered biomass sectors, which consume from state-level markets
+    # Technologies for delivered biomass sectors, which consume from provincial-level markets
     # NOTE: can't use stub technology for delivered biomass sectors because they would inherit the wrong energy-inputs
-    # Technologies for state-level delivered biomass sector
+    # Technologies for provincial-level delivered biomass sector
     L226.GlobalTechEff_en %>%
       # filter for biomass supply sectors
       semi_join(A28.sector, by = c("sector.name" = "supplysector")) %>%
       rename(supplysector = sector.name, subsector = subsector.name) %>%
-      repeat_add_columns(tibble(region = gcamchina.REGION)) %>%
+      #repeat_add_columns(tibble(region = gcamchina.REGION)) %>%
+      repeat_add_columns(tibble(region = gcamchina.PROVINCES_ALL)) %>%
       select(LEVEL2_DATA_NAMES$Tech) %>%
       distinct() -> L2261.Tech_dbm_CHINA
 
@@ -330,12 +335,13 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
       mutate(share.weight = gcamchina.DEFAULT_SHAREWEIGHT) %>%
       select(LEVEL2_DATA_NAMES$TechYr, share.weight) -> L2261.TechShrwt_dbm_CHINA
 
-    # Technology efficiencies of state-level delivered biomass sectors
+    # Technology efficiencies of provincial-level delivered biomass sectors
     L226.GlobalTechEff_en %>%
       # filter for biomass supply sectors
       semi_join(A28.sector, by = c("sector.name" = "supplysector")) %>%
       rename(supplysector = sector.name, subsector = subsector.name) %>%
-      repeat_add_columns(tibble(region = gcamchina.REGION)) %>%
+      #repeat_add_columns(tibble(region = gcamchina.REGION)) %>%
+      repeat_add_columns(tibble(region = gcamchina.PROVINCES_ALL)) %>%
       mutate(market.name = region) %>%
       select(LEVEL2_DATA_NAMES$TechEff) -> L2261.TechEff_dbm_CHINA
 
