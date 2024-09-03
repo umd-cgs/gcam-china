@@ -1,0 +1,35 @@
+# A mapping of China provinces to GCAM-China electricity grid regions,
+region,grid_region
+AH,East China Grid
+BJ,North China Grid
+CQ,Central China Grid
+FJ,East China Grid
+GD,China Southern Power Grid
+GS,Northwest China Grid
+GX,China Southern Power Grid
+GZ,China Southern Power Grid
+HA,Central China Grid
+HB,Central China Grid
+HE,North China Grid
+HI,China Southern Power Grid
+HK,China Southern Power Grid
+HL,Northeast China Grid
+HN,Central China Grid
+JL,Northeast China Grid
+JS,East China Grid
+JX,Central China Grid
+LN,Northeast China Grid
+MC,China Southern Power Grid
+NM,North China Grid
+NX,Northwest China Grid
+QH,Northwest China Grid
+SC,Central China Grid
+SD,North China Grid
+SH,East China Grid
+SN,Northwest China Grid
+SX,North China Grid
+TJ,North China Grid
+XJ,Northwest China Grid
+XZ,Northwest China Grid
+YN,China Southern Power Grid
+ZJ,East China Grid

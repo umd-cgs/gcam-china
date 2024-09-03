@@ -1,0 +1,40 @@
+# File: province_names_mappings.csv
+# Title: Province alternate names mapping file
+# Units: NA
+# Description: Map province alternate names administrative region climate region and grid region
+# Column types: cccccc
+# ----------
+province,subregion,province.name,GB.Code,climate.region,grid.region
+AH,East China,Anhui,34,HSCW,East China Grid
+BJ,North China,Beijing,11,C,North China Grid
+CQ,Southwest,Chongqing,50,HSCW,Central China Grid
+FJ,East China,Fujian,35,HSWW,East China Grid
+GD,South China,Guangdong,44,HSWW,China Southern Power Grid
+GS,Northwest,Gansu,62,C,Northwest China Grid
+GX,South China,Guangxi,45,HSWW,China Southern Power Grid
+GZ,Southwest,Guizhou,52,HSCW,China Southern Power Grid
+HA,South China,Henan,41,C,Central China Grid
+HB,South China,Hubei,42,HSCW,Central China Grid
+HE,North China,Hebei,13,C,North China Grid
+HI,South China,Hainan,46,HSWW,China Southern Power Grid
+HK,Hong Kong & Macau,Hong Kong,81,HSWW,China Southern Power Grid
+HL,Northeast,Heilongjiang,23,SC,Northeast China Grid
+HN,South China,Hunan,43,HSCW,Central China Grid
+JL,Northeast,Jilin,22,SC,Northeast China Grid
+JS,East China,Jiangsu,32,HSCW,East China Grid
+JX,East China,Jiangxi,36,HSCW,Central China Grid
+LN,Northeast,Liaoning,21,SC,Northeast China Grid
+MC,Hong Kong & Macau,Macau,82,HSWW,China Southern Power Grid
+NM,North China,Inner Mongolia,15,SC,North China Grid
+NX,Northwest,Ningxia,64,SC,Northwest China Grid
+QH,Northwest,Qinghai,63,SC,Northwest China Grid
+SC,Southwest,Sichuan,51,HSCW,Central China Grid
+SD,East China,Shandong,37,C,North China Grid
+SH,East China,Shanghai,31,HSCW,East China Grid
+SN,Northwest,Shaanxi,61,C,Northwest China Grid
+SX,North China,Shanxi,14,C,North China Grid
+TJ,North China,Tianjin,12,C,North China Grid
+XJ,Northwest,Xinjiang,65,SC,Northwest China Grid
+XZ,Southwest,Tibet,54,C,Northwest China Grid
+YN,Southwest,Yunnan,53,HSCW,China Southern Power Grid
+ZJ,East China,Zhejiang,33,HSCW,East China Grid
