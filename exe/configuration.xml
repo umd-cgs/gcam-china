@@ -109,6 +109,10 @@
 		<Value name = "trade_iron_steel_China_offset">../input/extra/trade_iron_steel_China_offset.xml</Value> 
 		<Value name = "cmnt_china">../input/gcamdata/xml/cement_CHINA.xml</Value>
 		<Value name = "fert_china">../input/gcamdata/xml/Fert_CHINA.xml</Value>
+		
+
+		<Value name = "ghg_china">../input/gcamdata/xml/ghg_emissions_CHINA.xml</Value>
+		<Value name = "ghg_china">../input/gcamdata/xml/trn_ghg_emissions_CHINA.xml</Value>
 
 		<Value name = "liq_lim_china">../input/gcamdata/xml/liquids_limits_CHINA.xml</Value>
 		<Value name = "neg_emiss_china">../input/gcamdata/xml/negative_emissions_budget_CHINA_gSSP2.xml</Value>
@@ -124,7 +128,7 @@
 
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">GCAM-China v6-Reference</Value>
+		<Value name="scenarioName">Reference</Value>
 		<Value name="debug-region">China</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
