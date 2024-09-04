@@ -128,7 +128,7 @@
 
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">Reference</Value>
+		<Value name="scenarioName">GCAM-China v6-Reference</Value>
 		<Value name="debug-region">China</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
