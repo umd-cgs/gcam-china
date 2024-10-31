@@ -1,0 +1,46 @@
+# File: A323.capital_cost_adders.csv,,
+# Title: detailed industry capital costs adder as a fraction of CAPEX to OPEX and raw materials,,
+# Units: fraction,,
+# Column types: ccn,,
+# ----------,,
+supplysector,subsector,capital_cost_frac
+iron and steel,BLASTFUR,0.256
+iron and steel,EAF with DRI,0.294736842
+iron and steel,EAF with scrap,0.127536232
+coke,coke,0.1
+chemical,chemical,0.1
+chemical energy use,coal,0.1
+chemical energy use,gas,0.1
+chemical energy use,liquid,0.1
+chemical energy use,biomass,0.1
+chemical energy use,hydrogen,0.1
+chemical energy use,electricity,0.1
+chemical feedstocks,coal,0.1
+chemical feedstocks,gas,0.1
+chemical feedstocks,liquid,0.1
+agricultural energy use,coal,0.1
+agricultural energy use,gas,0.1
+agricultural energy use,liquid,0.1
+agricultural energy use,biomass,0.1
+agricultural energy use,hydrogen,0.1
+agricultural energy use,electricity,0.1
+mining energy use,coal,0.1
+mining energy use,gas,0.1
+mining energy use,liquid,0.1
+mining energy use,biomass,0.1
+mining energy use,hydrogen,0.1
+mining energy use,electricity,0.1
+construction,construction,0.1
+construction energy use,coal,0.1
+construction energy use,gas,0.1
+construction energy use,liquid,0.1
+construction energy use,biomass,0.1
+construction energy use,hydrogen,0.1
+construction energy use,electricity,0.1
+construction feedstocks,coal,0.1
+construction feedstocks,gas,0.1
+construction feedstocks,liquid,0.1
+agricultural energy use,district heat,0.1
+chemical energy use,district heat,0.1
+construction energy use,district heat,0.1
+mining energy use,district heat,0.1

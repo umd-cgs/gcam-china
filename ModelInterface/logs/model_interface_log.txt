@@ -21,12 +21,4 @@ Didn't find builder for profit rate query going to use defaults
 Didn't find builder for profit rate in a specified land use region query going to use defaults
 Didn't find builder for land leaf shares query going to use defaults
 Didn't find builder for land leaf shares in a specified land use region query going to use defaults
-About to perform query: collection()/singleQueryListCache/cache[@id=2007154879]/text()
-Time : 1
-Before Function: 1708487482560
-About to perform query: collection()/scenario[ (@name='GCAM-China v6-Carbon neutrality' and @date='2024-18-2T09:23:19+08:00') ]/world/region[ (@name='China') or (@name='AH') or (@name='BJ') or (@name='CQ') or (@name='FJ') or (@name='GS') or (@name='GD') or (@name='GX') or (@name='GZ') or (@name='HI') or (@name='HE') or (@name='HL') or (@name='HA') or (@name='HB') or (@name='HN') or (@name='NM') or (@name='JS') or (@name='JX') or (@name='JL') or (@name='LN') or (@name='NX') or (@name='QH') or (@name='SN') or (@name='SD') or (@name='SH') or (@name='SX') or (@name='SC') or (@name='TJ') or (@name='XZ') or (@name='XJ') or (@name='YN') or (@name='ZJ') ]/*[@type = 'sector' (:collapse:) or @type = 'resource' (:collapse:)](: / *[@type = 'subresource' (: collapse :)] :)//*[((@name='CO2' or @name = 'CO2_FUG'))]/emissions/node()
-In Function: 1708487482561
-After build Tree: 1708487488443
-After Add table: 1708487488443
 Caught the window closing
-Doing remove because of control

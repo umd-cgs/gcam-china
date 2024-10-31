@@ -1,6 +1,6 @@
 # File: A323.globaltech_coef.csv
-# Title: iron and steel production default coefficients
-# Units: scrap input is unitless (Mt scrap per Mt iron and steel); all others are GJ per kg (EJ of energy per Mt of iron and steel)
+# Title: IRONSTL production default coefficients
+# Units: scrap input is unitless (Mt scrap per Mt IRONSTL); all others are GJ per kg (EJ of energy per Mt of IRONSTL)
 # Column types: ccccnnn
 # ----------
 supplysector,subsector,technology,minicam.energy.input,1971,2010,2100

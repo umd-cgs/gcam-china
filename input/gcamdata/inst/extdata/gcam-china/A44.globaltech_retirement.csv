@@ -10,14 +10,17 @@
 # Column types: cnnnnn
 # ----------
 supplysector,lifetime,half_life_stock,steepness_stock,half_life_new,steepness_new
-resid_urban heating,40,20,0.1219,20,0.1886
-resid_urban cooling,30,15,0.162,18,0.2598
-resid_urban hot water_cooking,30,15,0.162,17,0.2266
-resid_urban appliances,25,13,0.1932,14,0.2752
-resid_resid heating,40,20,0.1219,20,0.1886
-resid_resid cooling,30,15,0.162,18,0.2598
-resid_resid hot water_cooking,30,15,0.162,17,0.2266
-resid_resid appliances,25,13,0.1932,14,0.2752
+resid_rural heating TradBio,40,20,0.1219,20,0.1886
+resid_rural heating coal,40,20,0.1219,20,0.1886
+resid_rural heating modern,40,20,0.1219,20,0.1886
+resid_rural cooling modern,30,15,0.162,18,0.2598
+resid_rural hot water_cooking modern,30,15,0.162,17,0.2266
+resid_rural appliances modern,25,13,0.1932,14,0.2752
+resid_urban heating coal,40,20,0.1219,20,0.1886
+resid_urban heating modern,40,20,0.1219,20,0.1886
+resid_urban cooling modern,30,15,0.162,18,0.2598
+resid_urban hot water_cooking modern,30,15,0.162,17,0.2266
+resid_urban appliances modern,25,13,0.1932,14,0.2752
 comm heating,40,20,0.1219,20,0.1886
 comm cooling,30,15,0.162,18,0.2598
 comm hot water_cooking,30,15,0.162,17,0.2266

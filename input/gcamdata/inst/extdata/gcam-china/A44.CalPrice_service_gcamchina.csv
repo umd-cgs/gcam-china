@@ -1,0 +1,565 @@
+# File: A44.CalPrice_service_gcamchina.csv
+# Title: Prices by service in the base years. Used to calibrate satiation impedance
+# Units: 1975$/unit
+# Source: GCAM-China v6.0 output
+# Column types: ccnnnn
+# ----------
+region,sector,1990,2005,2010,2015
+AH,comm appliances,35.639,28.1889,27.7558,26.6791
+AH,comm cooling,9.27865,9.2017,9.01596,8.58696
+AH,comm heating,3.61878,3.89328,7.57169,8.22151
+AH,comm hot water_cooking,6.18005,7.18894,11.3238,11.8111
+AH,resid_rural appliances modern,35.639,28.1889,27.7558,26.6791
+AH,resid_rural cooling modern,17.4437,15.4177,15.4021,15.1202
+AH,resid_rural heating modern,2.69822,2.53514,3.3968,6.83889
+AH,resid_rural hot water_cooking modern,5.4587,5.61581,6.2947,7.02391
+AH,resid_urban appliances modern,35.639,28.1889,27.7558,26.6791
+AH,resid_urban cooling modern,17.4437,15.4177,15.4021,15.1202
+AH,resid_urban heating modern,3.56185,4.49119,7.25341,7.83904
+AH,resid_urban hot water_cooking modern,5.73827,6.06465,7.66916,10.5207
+AH,resid_rural heating coal,0.5538,0.501864,0.619183,0.67649
+AH,resid_urban heating coal,0.5538,0.501864,0.619183,0.67649
+AH,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+BJ,comm appliances,35.5714,28.0311,27.1497,25.9309
+BJ,comm cooling,9.25869,9.13597,8.7675,8.28479
+BJ,comm heating,3.348,7.0396,8.05721,8.45394
+BJ,comm hot water_cooking,8.7916,9.78428,10.7634,10.8351
+BJ,resid_rural appliances modern,35.5714,28.0311,27.1497,25.9309
+BJ,resid_rural cooling modern,17.4203,15.3579,15.167,14.8236
+BJ,resid_rural heating modern,2.15218,2.18803,2.70309,3.0032
+BJ,resid_rural hot water_cooking modern,5.27168,5.32992,5.64437,5.86797
+BJ,resid_urban appliances modern,35.5714,28.0311,27.1497,25.9309
+BJ,resid_urban cooling modern,17.4203,15.3579,15.167,14.8236
+BJ,resid_urban heating modern,3.31471,5.66233,7.50294,7.45318
+BJ,resid_urban hot water_cooking modern,7.57696,9.04711,10.3535,10.8239
+BJ,resid_rural heating coal,0.496,0.444064,0.561383,0.61869
+BJ,resid_urban heating coal,0.496,0.444064,0.561383,0.61869
+BJ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+CQ,comm appliances,35.9398,28.2413,27.6451,27.105
+CQ,comm cooling,9.36754,9.22355,8.97059,8.75893
+CQ,comm heating,6.5844,8.21661,8.52099,8.77829
+CQ,comm hot water_cooking,10.7073,14.3421,12.352,13.7482
+CQ,resid_rural appliances modern,35.9398,28.2413,27.6451,27.105
+CQ,resid_rural cooling modern,17.5482,15.4376,15.3592,15.2891
+CQ,resid_rural heating modern,2.07324,2.21451,2.95444,7.48831
+CQ,resid_rural hot water_cooking modern,5.39731,5.4928,5.69964,7.66473
+CQ,resid_urban appliances modern,35.9398,28.2413,27.6451,27.105
+CQ,resid_urban cooling modern,17.5482,15.4376,15.3592,15.2891
+CQ,resid_urban heating modern,6.32168,6.87489,7.41607,7.41914
+CQ,resid_urban hot water_cooking modern,7.1,9.6936,10.5521,10.3559
+CQ,resid_rural heating coal,0.6228,0.570864,0.688183,0.74549
+CQ,resid_urban heating coal,0.6228,0.570864,0.688183,0.74549
+CQ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+FJ,comm appliances,35.639,28.1889,27.7558,26.6791
+FJ,comm cooling,9.27865,9.2017,9.01596,8.58696
+FJ,comm heating,3.91699,3.9932,8.75077,8.3624
+FJ,comm hot water_cooking,6.12327,7.89618,10.055,13.7831
+FJ,resid_rural appliances modern,35.639,28.1889,27.7558,26.6791
+FJ,resid_rural cooling modern,17.4437,15.4177,15.4021,15.1202
+FJ,resid_rural heating modern,7.52286,7.59013,10.6553,11.9555
+FJ,resid_rural hot water_cooking modern,5.38691,5.42828,6.15115,9.34493
+FJ,resid_urban appliances modern,35.639,28.1889,27.7558,26.6791
+FJ,resid_urban cooling modern,17.4437,15.4177,15.4021,15.1202
+FJ,resid_urban heating modern,5.51823,7.35374,7.66558,7.60752
+FJ,resid_urban hot water_cooking modern,5.89439,8.06684,10.4052,12.2077
+FJ,resid_rural heating coal,0.6911,0.639164,0.756483,0.81379
+FJ,resid_urban heating coal,0.6911,0.639164,0.756483,0.81379
+FJ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+GS,comm appliances,35.8811,27.96,27.041,26.6396
+GS,comm cooling,9.35019,9.10632,8.72294,8.57097
+GS,comm heating,2.34444,5.22086,5.39174,7.52153
+GS,comm hot water_cooking,6.80977,9.09978,10.4177,10.3434
+GS,resid_rural appliances modern,35.8811,27.96,27.041,26.6396
+GS,resid_rural cooling modern,17.5278,15.3309,15.1248,15.1046
+GS,resid_rural heating modern,2.25807,2.17581,2.33108,2.94057
+GS,resid_rural hot water_cooking modern,5.29636,5.2797,5.29707,5.65823
+GS,resid_urban appliances modern,35.8811,27.96,27.041,26.6396
+GS,resid_urban cooling modern,17.5278,15.3309,15.1248,15.1046
+GS,resid_urban heating modern,2.976,3.95291,4.86178,5.89525
+GS,resid_urban hot water_cooking modern,6.40337,7.82479,8.38102,9.59052
+GS,resid_rural heating coal,0.5511,0.499164,0.616483,0.67379
+GS,resid_urban heating coal,0.5511,0.499164,0.616483,0.67379
+GS,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+GD,comm appliances,35.9941,28.7069,27.4244,27.3386
+GD,comm cooling,9.38357,9.41756,8.88011,8.85328
+GD,comm heating,3.91699,8.78022,8.77389,8.38355
+GD,comm hot water_cooking,8.6747,9.71078,11.642,11.5628
+GD,resid_rural appliances modern,35.9941,28.7069,27.4244,27.3386
+GD,resid_rural cooling modern,17.567,15.6142,15.2736,15.3817
+GD,resid_rural heating modern,7.97034,8.01025,11.5072,12.3541
+GD,resid_rural hot water_cooking modern,5.46622,6.55419,9.23647,10.9713
+GD,resid_urban appliances modern,35.9941,28.7069,27.4244,27.3386
+GD,resid_urban cooling modern,17.567,15.6142,15.2736,15.3817
+GD,resid_urban heating modern,5.51823,7.37624,7.68596,7.62799
+GD,resid_urban hot water_cooking modern,6.43716,9.19302,11.3225,11.7835
+GD,resid_rural heating coal,0.6919,0.639964,0.757283,0.81459
+GD,resid_urban heating coal,0.6919,0.639964,0.757283,0.81459
+GD,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+GX,comm appliances,35.9941,28.7069,27.4244,27.3386
+GX,comm cooling,9.38357,9.41756,8.88011,8.85328
+GX,comm heating,3.91699,3.9932,4.08403,8.20657
+GX,comm hot water_cooking,6.10813,7.55245,8.77077,11.2558
+GX,resid_rural appliances modern,35.9941,28.7069,27.4244,27.3386
+GX,resid_rural cooling modern,17.567,15.6142,15.2736,15.3817
+GX,resid_rural heating modern,7.68926,7.72332,11.2188,12.0657
+GX,resid_rural hot water_cooking modern,6.47648,7.31513,9.15135,10.9126
+GX,resid_urban appliances modern,35.9941,28.7069,27.4244,27.3386
+GX,resid_urban cooling modern,17.567,15.6142,15.2736,15.3817
+GX,resid_urban heating modern,5.51823,7.20698,7.5165,7.45861
+GX,resid_urban hot water_cooking modern,6.15424,8.80577,10.7297,11.6226
+GX,resid_rural heating coal,0.8031,0.751164,0.868483,0.92579
+GX,resid_urban heating coal,0.8031,0.751164,0.868483,0.92579
+GX,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+GZ,comm appliances,35.9941,28.7069,27.4244,27.3386
+GZ,comm cooling,9.38357,9.41756,8.88011,8.85328
+GZ,comm heating,3.00833,3.24017,3.09237,2.92089
+GZ,comm hot water_cooking,5.88276,6.44174,6.05976,6.07403
+GZ,resid_rural appliances modern,35.9941,28.7069,27.4244,27.3386
+GZ,resid_rural cooling modern,17.567,15.6142,15.2736,15.3817
+GZ,resid_rural heating modern,2.03565,1.9216,1.99715,2.6553
+GZ,resid_rural hot water_cooking modern,5.38394,5.38786,5.5127,5.72005
+GZ,resid_urban appliances modern,35.9941,28.7069,27.4244,27.3386
+GZ,resid_urban cooling modern,17.567,15.6142,15.2736,15.3817
+GZ,resid_urban heating modern,3.1626,5.7768,6.2131,7.20147
+GZ,resid_urban hot water_cooking modern,5.7339,6.87014,7.20305,8.01677
+GZ,resid_rural heating coal,0.6732,0.621264,0.738583,0.79589
+GZ,resid_urban heating coal,0.6732,0.621264,0.738583,0.79589
+GZ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+HI,comm appliances,0,28.7069,27.4244,27.3386
+HI,comm cooling,0,9.41756,8.88011,8.85328
+HI,comm heating,0,8.18052,8.19471,7.8241
+HI,comm hot water_cooking,0,8.04737,11.0814,13.4646
+HI,resid_rural appliances modern,35.9941,28.7069,27.4244,27.3386
+HI,resid_rural cooling modern,17.567,15.6142,15.2736,15.3817
+HI,resid_rural heating modern,0,8.07447,11.57,12.4161
+HI,resid_rural hot water_cooking modern,22.9534,13.1537,14.1156,15.5757
+HI,resid_urban appliances modern,35.9941,28.7069,27.4244,27.3386
+HI,resid_urban cooling modern,17.567,15.6142,15.2736,15.3817
+HI,resid_urban heating modern,0,6.83774,7.1478,7.08981
+HI,resid_urban hot water_cooking modern,22.9534,9.10301,11.7463,12.3508
+HI,resid_rural heating coal,0.6919,0.639964,0.757283,0.81459
+HI,resid_urban heating coal,0.6919,0.639964,0.757283,0.81459
+HI,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+HE,comm appliances,35.5714,28.0311,27.1497,25.9309
+HE,comm cooling,9.25869,9.13597,8.7675,8.28479
+HE,comm heating,2.46672,4.15387,4.49203,6.65661
+HE,comm hot water_cooking,7.84298,10.3348,11.3208,10.7322
+HE,resid_rural appliances modern,35.5714,28.0311,27.1497,25.9309
+HE,resid_rural cooling modern,17.4203,15.3579,15.167,14.8236
+HE,resid_rural heating modern,2.14893,2.20415,2.50075,3.0897
+HE,resid_rural hot water_cooking modern,5.27962,5.34659,5.49074,5.87139
+HE,resid_urban appliances modern,35.5714,28.0311,27.1497,25.9309
+HE,resid_urban cooling modern,17.4203,15.3579,15.167,14.8236
+HE,resid_urban heating modern,2.80171,3.52546,4.57049,5.3766
+HE,resid_urban hot water_cooking modern,6.36299,7.51002,9.18102,9.61273
+HE,resid_rural heating coal,0.4742,0.422264,0.539583,0.59689
+HE,resid_urban heating coal,0.4742,0.422264,0.539583,0.59689
+HE,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+HL,comm appliances,34.8932,27.8788,26.8046,26.4614
+HL,comm cooling,9.05836,9.07252,8.62605,8.49902
+HL,comm heating,2.87062,5.82469,7.94428,4.16475
+HL,comm hot water_cooking,11.3958,10.4874,14.217,10.1116
+HL,resid_rural appliances modern,34.8932,27.8788,26.8046,26.4614
+HL,resid_rural cooling modern,17.1848,15.3002,15.0331,15.0339
+HL,resid_rural heating modern,2.17177,3.02917,4.59121,2.52198
+HL,resid_rural hot water_cooking modern,5.5167,7.32587,7.71678,7.03647
+HL,resid_urban appliances modern,34.8932,27.8788,26.8046,26.4614
+HL,resid_urban cooling modern,17.1848,15.3002,15.0331,15.0339
+HL,resid_urban heating modern,3.31909,5.18812,6.79809,5.80948
+HL,resid_urban hot water_cooking modern,5.94627,9.00618,10.5183,9.17495
+HL,resid_rural heating coal,0.5856,0.533664,0.650983,0.70829
+HL,resid_urban heating coal,0.5856,0.533664,0.650983,0.70829
+HL,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+HA,comm appliances,35.9398,28.2413,27.6451,27.105
+HA,comm cooling,9.36754,9.22355,8.97059,8.75893
+HA,comm heating,3.09411,7.58405,7.79193,6.80958
+HA,comm hot water_cooking,9.64084,10.6554,11.8433,12.5823
+HA,resid_rural appliances modern,35.9398,28.2413,27.6451,27.105
+HA,resid_rural cooling modern,17.5482,15.4376,15.3592,15.2891
+HA,resid_rural heating modern,2.21293,2.16325,2.56328,4.10629
+HA,resid_rural hot water_cooking modern,5.28932,5.30273,5.5023,6.73873
+HA,resid_urban appliances modern,35.9398,28.2413,27.6451,27.105
+HA,resid_urban cooling modern,17.5482,15.4376,15.3592,15.2891
+HA,resid_urban heating modern,3.15816,3.60729,5.25787,6.07972
+HA,resid_urban hot water_cooking modern,7.21385,8.06951,9.49732,9.84318
+HA,resid_rural heating coal,0.5167,0.464764,0.582083,0.63939
+HA,resid_urban heating coal,0.5167,0.464764,0.582083,0.63939
+HA,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+HB,comm appliances,35.9398,28.2413,27.6451,27.105
+HB,comm cooling,9.36754,9.22355,8.97059,8.75893
+HB,comm heating,3.18528,4.36678,5.81463,7.29685
+HB,comm hot water_cooking,6.32156,7.76809,7.3496,9.00876
+HB,resid_rural appliances modern,35.9398,28.2413,27.6451,27.105
+HB,resid_rural cooling modern,17.5482,15.4376,15.3592,15.2891
+HB,resid_rural heating modern,2.37347,2.30939,4.80689,6.51957
+HB,resid_rural hot water_cooking modern,5.45832,5.54149,6.05573,6.51377
+HB,resid_urban appliances modern,35.9398,28.2413,27.6451,27.105
+HB,resid_urban cooling modern,17.5482,15.4376,15.3592,15.2891
+HB,resid_urban heating modern,4.33951,6.62001,7.45075,8.56824
+HB,resid_urban hot water_cooking modern,5.99085,7.2269,7.62144,9.2711
+HB,resid_rural heating coal,0.7554,0.703464,0.820783,0.87809
+HB,resid_urban heating coal,0.7554,0.703464,0.820783,0.87809
+HB,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+HN,comm appliances,35.9398,28.2413,27.6451,27.105
+HN,comm cooling,9.36754,9.22355,8.97059,8.75893
+HN,comm heating,2.84819,4.02388,5.9334,5.35483
+HN,comm hot water_cooking,6.15689,6.41182,7.25451,7.39718
+HN,resid_rural appliances modern,35.9398,28.2413,27.6451,27.105
+HN,resid_rural cooling modern,17.5482,15.4376,15.3592,15.2891
+HN,resid_rural heating modern,2.21381,2.13292,3.18461,5.86828
+HN,resid_rural hot water_cooking modern,5.39626,5.46003,5.80092,6.56545
+HN,resid_urban appliances modern,35.9398,28.2413,27.6451,27.105
+HN,resid_urban cooling modern,17.5482,15.4376,15.3592,15.2891
+HN,resid_urban heating modern,3.64694,6.42339,8.10778,9.00344
+HN,resid_urban hot water_cooking modern,5.78313,7.53461,9.04556,10.2386
+HN,resid_rural heating coal,0.6228,0.570864,0.688183,0.74549
+HN,resid_urban heating coal,0.6228,0.570864,0.688183,0.74549
+HN,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+NM,comm appliances,35.5714,28.0311,27.1497,25.9309
+NM,comm cooling,9.25869,9.13597,8.7675,8.28479
+NM,comm heating,2.54471,3.28809,3.2709,2.85381
+NM,comm hot water_cooking,7.59101,8.80107,8.21476,8.76125
+NM,resid_rural appliances modern,35.5714,28.0311,27.1497,25.9309
+NM,resid_rural cooling modern,17.4203,15.3579,15.167,14.8236
+NM,resid_rural heating modern,1.99602,2.00482,2.0914,3.22969
+NM,resid_rural hot water_cooking modern,5.31757,5.41052,5.45675,6.27403
+NM,resid_urban appliances modern,35.5714,28.0311,27.1497,25.9309
+NM,resid_urban cooling modern,17.4203,15.3579,15.167,14.8236
+NM,resid_urban heating modern,2.43972,3.2583,4.93765,5.75403
+NM,resid_urban hot water_cooking modern,5.48089,5.97031,6.70773,11.614
+NM,resid_rural heating coal,0.3496,0.297664,0.414983,0.47229
+NM,resid_urban heating coal,0.3496,0.297664,0.414983,0.47229
+NM,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+JS,comm appliances,35.639,28.1889,27.7558,26.6791
+JS,comm cooling,9.27865,9.2017,9.01596,8.58696
+JS,comm heating,3.1149,5.71102,9.73288,11.056
+JS,comm hot water_cooking,6.40019,10.3597,16.2072,19.0975
+JS,resid_rural appliances modern,35.639,28.1889,27.7558,26.6791
+JS,resid_rural cooling modern,17.4437,15.4177,15.4021,15.1202
+JS,resid_rural heating modern,2.68297,3.26817,9.555,11.9194
+JS,resid_rural hot water_cooking modern,5.46784,6.76779,11.4571,14.7858
+JS,resid_urban appliances modern,35.639,28.1889,27.7558,26.6791
+JS,resid_urban cooling modern,17.4437,15.4177,15.4021,15.1202
+JS,resid_urban heating modern,4.07342,6.91582,8.599,8.82166
+JS,resid_urban hot water_cooking modern,5.80718,8.57811,11.5908,12.202
+JS,resid_rural heating coal,0.5538,0.501864,0.619183,0.67649
+JS,resid_urban heating coal,0.5538,0.501864,0.619183,0.67649
+JS,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+JX,comm appliances,35.9398,28.2413,27.6451,27.105
+JX,comm cooling,9.36754,9.22355,8.97059,8.75893
+JX,comm heating,2.83069,7.16929,6.87554,8.3559
+JX,comm hot water_cooking,6.15309,9.97858,9.14967,11.4998
+JX,resid_rural appliances modern,35.9398,28.2413,27.6451,27.105
+JX,resid_rural cooling modern,17.5482,15.4376,15.3592,15.2891
+JX,resid_rural heating modern,2.39853,2.62169,3.32101,6.51831
+JX,resid_rural hot water_cooking modern,5.42536,5.55845,5.93277,6.92689
+JX,resid_urban appliances modern,35.9398,28.2413,27.6451,27.105
+JX,resid_urban cooling modern,17.5482,15.4376,15.3592,15.2891
+JX,resid_urban heating modern,4.01775,6.78296,8.62889,8.81282
+JX,resid_urban hot water_cooking modern,5.83748,7.70147,9.97999,10.8751
+JX,resid_rural heating coal,0.6228,0.570864,0.688183,0.74549
+JX,resid_urban heating coal,0.6228,0.570864,0.688183,0.74549
+JX,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+JL,comm appliances,34.8932,27.8788,26.8046,26.4614
+JL,comm cooling,9.05836,9.07252,8.62605,8.49902
+JL,comm heating,3.09604,3.52268,3.31049,4.28647
+JL,comm hot water_cooking,7.61186,9.64524,12.0313,14.057
+JL,resid_rural appliances modern,34.8932,27.8788,26.8046,26.4614
+JL,resid_rural cooling modern,17.1848,15.3002,15.0331,15.0339
+JL,resid_rural heating modern,2.12467,3.32113,4.44342,3.11701
+JL,resid_rural hot water_cooking modern,5.56044,6.28466,8.05227,6.37766
+JL,resid_urban appliances modern,34.8932,27.8788,26.8046,26.4614
+JL,resid_urban cooling modern,17.1848,15.3002,15.0331,15.0339
+JL,resid_urban heating modern,3.05547,4.39007,6.2884,6.57237
+JL,resid_urban hot water_cooking modern,5.80083,7.4937,9.40795,9.35203
+JL,resid_rural heating coal,0.5246,0.472664,0.589983,0.64729
+JL,resid_urban heating coal,0.5246,0.472664,0.589983,0.64729
+JL,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+LN,comm appliances,34.8932,27.8788,26.8046,26.4614
+LN,comm cooling,9.05836,9.07252,8.62605,8.49902
+LN,comm heating,3.61528,5.19272,6.576,7.47898
+LN,comm hot water_cooking,10.4055,17.5594,17.757,18.5959
+LN,resid_rural appliances modern,34.8932,27.8788,26.8046,26.4614
+LN,resid_rural cooling modern,17.1848,15.3002,15.0331,15.0339
+LN,resid_rural heating modern,2.20007,2.28901,4.48988,4.30619
+LN,resid_rural hot water_cooking modern,5.45166,5.85732,7.48069,7.50857
+LN,resid_urban appliances modern,34.8932,27.8788,26.8046,26.4614
+LN,resid_urban cooling modern,17.1848,15.3002,15.0331,15.0339
+LN,resid_urban heating modern,3.8774,4.30744,6.02005,6.11264
+LN,resid_urban hot water_cooking modern,6.38675,7.91495,10.1359,10.3762
+LN,resid_rural heating coal,0.5007,0.448764,0.566083,0.62339
+LN,resid_urban heating coal,0.5007,0.448764,0.566083,0.62339
+LN,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+NX,comm appliances,35.8811,27.96,27.041,26.6396
+NX,comm cooling,9.35019,9.10632,8.72294,8.57097
+NX,comm heating,4.31239,2.97218,7.39348,6.76156
+NX,comm hot water_cooking,9.83021,11.1217,13.8783,18.5343
+NX,resid_rural appliances modern,35.8811,27.96,27.041,26.6396
+NX,resid_rural cooling modern,17.5278,15.3309,15.1248,15.1046
+NX,resid_rural heating modern,2.06133,2.04653,2.2899,3.47551
+NX,resid_rural hot water_cooking modern,5.31094,5.37279,5.62397,6.43625
+NX,resid_urban appliances modern,35.8811,27.96,27.041,26.6396
+NX,resid_urban cooling modern,17.5278,15.3309,15.1248,15.1046
+NX,resid_urban heating modern,2.76857,4.25334,6.32111,6.22096
+NX,resid_urban hot water_cooking modern,5.88253,7.70233,9.70367,10.7519
+NX,resid_rural heating coal,0.4503,0.398364,0.515683,0.57299
+NX,resid_urban heating coal,0.4503,0.398364,0.515683,0.57299
+NX,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+QH,comm appliances,35.8811,27.96,27.041,26.6396
+QH,comm cooling,9.35019,9.10632,8.72294,8.57097
+QH,comm heating,3.34668,7.52549,6.22725,7.6025
+QH,comm hot water_cooking,13.0208,10.9284,14.185,14.6581
+QH,resid_rural appliances modern,35.8811,27.96,27.041,26.6396
+QH,resid_rural cooling modern,17.5278,15.3309,15.1248,15.1046
+QH,resid_rural heating modern,2.07833,2.08846,2.37254,3.08878
+QH,resid_rural hot water_cooking modern,5.31656,5.37669,5.54964,5.95474
+QH,resid_urban appliances modern,35.8811,27.96,27.041,26.6396
+QH,resid_urban cooling modern,17.5278,15.3309,15.1248,15.1046
+QH,resid_urban heating modern,2.95265,6.28367,5.61611,6.6495
+QH,resid_urban hot water_cooking modern,5.67842,8.39358,9.55572,9.42031
+QH,resid_rural heating coal,0.4795,0.427564,0.544883,0.60219
+QH,resid_urban heating coal,0.4795,0.427564,0.544883,0.60219
+QH,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+SN,comm appliances,35.8811,27.96,27.041,26.6396
+SN,comm cooling,9.35019,9.10632,8.72294,8.57097
+SN,comm heating,3.12678,3.7648,6.6033,6.7442
+SN,comm hot water_cooking,9.87075,8.45228,9.21967,9.83312
+SN,resid_rural appliances modern,35.8811,27.96,27.041,26.6396
+SN,resid_rural cooling modern,17.5278,15.3309,15.1248,15.1046
+SN,resid_rural heating modern,2.11627,4.87441,2.7467,3.099
+SN,resid_rural hot water_cooking modern,5.28063,6.92277,5.72572,5.99902
+SN,resid_urban appliances modern,35.8811,27.96,27.041,26.6396
+SN,resid_urban cooling modern,17.5278,15.3309,15.1248,15.1046
+SN,resid_urban heating modern,2.66825,3.46731,5.96272,5.5196
+SN,resid_urban hot water_cooking modern,6.39525,7.81842,8.94719,8.99868
+SN,resid_rural heating coal,0.4371,0.385164,0.502483,0.55979
+SN,resid_urban heating coal,0.4371,0.385164,0.502483,0.55979
+SN,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+SD,comm appliances,35.5714,28.0311,27.1497,25.9309
+SD,comm cooling,9.25869,9.13597,8.7675,8.28479
+SD,comm heating,2.67912,4.76035,4.00202,4.88666
+SD,comm hot water_cooking,7.81271,9.23096,9.94105,11.1698
+SD,resid_rural appliances modern,35.5714,28.0311,27.1497,25.9309
+SD,resid_rural cooling modern,17.4203,15.3579,15.167,14.8236
+SD,resid_rural heating modern,2.66068,2.67072,5.51664,5.01338
+SD,resid_rural hot water_cooking modern,5.47317,5.59867,7.62809,7.50901
+SD,resid_urban appliances modern,35.5714,28.0311,27.1497,25.9309
+SD,resid_urban cooling modern,17.4203,15.3579,15.167,14.8236
+SD,resid_urban heating modern,3.39899,4.71531,6.76234,6.80388
+SD,resid_urban hot water_cooking modern,7.29208,8.61656,10.4119,10.6278
+SD,resid_rural heating coal,0.6228,0.570864,0.688183,0.74549
+SD,resid_urban heating coal,0.6228,0.570864,0.688183,0.74549
+SD,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+SH,comm appliances,35.639,28.1889,27.7558,26.6791
+SH,comm cooling,9.27865,9.2017,9.01596,8.58696
+SH,comm heating,5.61713,7.34862,9.50701,9.93785
+SH,comm hot water_cooking,7.68867,11.2085,12.4476,13.2231
+SH,resid_rural appliances modern,35.639,28.1889,27.7558,26.6791
+SH,resid_rural cooling modern,17.4437,15.4177,15.4021,15.1202
+SH,resid_rural heating modern,2.14777,6.22798,9.53422,10.3
+SH,resid_rural hot water_cooking modern,5.43887,6.50273,9.6902,10.679
+SH,resid_urban appliances modern,35.639,28.1889,27.7558,26.6791
+SH,resid_urban cooling modern,17.4437,15.4177,15.4021,15.1202
+SH,resid_urban heating modern,5.36931,7.3641,8.62135,9.2393
+SH,resid_urban hot water_cooking modern,6.08396,9.56147,11.3089,12.0138
+SH,resid_rural heating coal,0.6911,0.639164,0.756483,0.81379
+SH,resid_urban heating coal,0.6911,0.639164,0.756483,0.81379
+SH,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+SX,comm appliances,35.5714,28.0311,27.1497,25.9309
+SX,comm cooling,9.25869,9.13597,8.7675,8.28479
+SX,comm heating,2.64187,2.88573,4.25779,4.51684
+SX,comm hot water_cooking,8.76399,9.28559,9.85165,9.62477
+SX,resid_rural appliances modern,35.5714,28.0311,27.1497,25.9309
+SX,resid_rural cooling modern,17.4203,15.3579,15.167,14.8236
+SX,resid_rural heating modern,2.11464,2.0866,2.41361,2.75689
+SX,resid_rural hot water_cooking modern,5.26785,5.29464,5.43009,5.64631
+SX,resid_urban appliances modern,35.5714,28.0311,27.1497,25.9309
+SX,resid_urban cooling modern,17.4203,15.3579,15.167,14.8236
+SX,resid_urban heating modern,2.92355,3.41146,4.47631,4.93478
+SX,resid_urban hot water_cooking modern,6.86245,7.1962,8.50625,8.77518
+SX,resid_rural heating coal,0.461,0.409064,0.526383,0.58369
+SX,resid_urban heating coal,0.461,0.409064,0.526383,0.58369
+SX,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+SC,comm appliances,35.9398,28.2413,27.6451,27.105
+SC,comm cooling,9.36754,9.22355,8.97059,8.75893
+SC,comm heating,3.22488,6.99468,8.6108,9.16427
+SC,comm hot water_cooking,6.0488,8.78186,10.8695,12.9823
+SC,resid_rural appliances modern,35.9398,28.2413,27.6451,27.105
+SC,resid_rural cooling modern,17.5482,15.4376,15.3592,15.2891
+SC,resid_rural heating modern,2.03038,1.95586,2.67731,7.46732
+SC,resid_rural hot water_cooking modern,5.35177,5.43663,5.62931,6.94167
+SC,resid_urban appliances modern,35.9398,28.2413,27.6451,27.105
+SC,resid_urban cooling modern,17.5482,15.4376,15.3592,15.2891
+SC,resid_urban heating modern,4.18308,6.80148,7.25399,7.7275
+SC,resid_urban hot water_cooking modern,5.66267,8.20885,9.57561,10.9998
+SC,resid_rural heating coal,0.5246,0.472664,0.589983,0.64729
+SC,resid_urban heating coal,0.5246,0.472664,0.589983,0.64729
+SC,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+TJ,comm appliances,35.5714,28.0311,27.1497,25.9309
+TJ,comm cooling,9.25869,9.13597,8.7675,8.28479
+TJ,comm heating,2.84312,5.73919,7.4784,8.28671
+TJ,comm hot water_cooking,8.14198,8.9752,10.3304,9.79359
+TJ,resid_rural appliances modern,35.5714,28.0311,27.1497,25.9309
+TJ,resid_rural cooling modern,17.4203,15.3579,15.167,14.8236
+TJ,resid_rural heating modern,2.24394,3.33165,3.65004,4.10793
+TJ,resid_rural hot water_cooking modern,5.39136,6.45407,6.44191,6.68589
+TJ,resid_urban appliances modern,35.5714,28.0311,27.1497,25.9309
+TJ,resid_urban cooling modern,17.4203,15.3579,15.167,14.8236
+TJ,resid_urban heating modern,3.05135,4.45544,6.45616,6.41314
+TJ,resid_urban hot water_cooking modern,7.07985,8.78218,10.2726,10.8304
+TJ,resid_rural heating coal,0.496,0.444064,0.561383,0.61869
+TJ,resid_urban heating coal,0.496,0.444064,0.561383,0.61869
+TJ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+XZ,comm appliances,35.8811,27.96,27.041,26.6396
+XZ,comm cooling,9.35019,9.10632,8.72294,8.57097
+XZ,comm heating,5.76382,6.17536,7.95325,8.30576
+XZ,comm hot water_cooking,8.89007,10.0146,12.6189,13.1678
+XZ,resid_rural appliances modern,35.8811,27.96,27.041,26.6396
+XZ,resid_rural cooling modern,17.5278,15.3309,15.1248,15.1046
+XZ,resid_rural heating modern,3.26046,3.28081,3.69087,3.97075
+XZ,resid_rural hot water_cooking modern,6.09794,6.51309,6.81948,7.08048
+XZ,resid_urban appliances modern,35.8811,27.96,27.041,26.6396
+XZ,resid_urban cooling modern,17.5278,15.3309,15.1248,15.1046
+XZ,resid_urban heating modern,7.87031,8.47379,10.6858,11.2494
+XZ,resid_urban hot water_cooking modern,9.11249,10.564,13.158,13.6749
+XZ,resid_rural heating coal,0.4294,0.377464,0.494783,0.55209
+XZ,resid_urban heating coal,0.4294,0.377464,0.494783,0.55209
+XZ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+XJ,comm appliances,35.8811,27.96,27.041,26.6396
+XJ,comm cooling,9.35019,9.10632,8.72294,8.57097
+XJ,comm heating,3.25164,5.27885,6.3018,6.84922
+XJ,comm hot water_cooking,8.10423,12.4358,14.0843,14.8506
+XJ,resid_rural appliances modern,35.8811,27.96,27.041,26.6396
+XJ,resid_rural cooling modern,17.5278,15.3309,15.1248,15.1046
+XJ,resid_rural heating modern,1.92902,1.85866,2.06877,2.66435
+XJ,resid_rural hot water_cooking modern,5.27183,5.29542,5.53165,6.00166
+XJ,resid_urban appliances modern,35.8811,27.96,27.041,26.6396
+XJ,resid_urban cooling modern,17.5278,15.3309,15.1248,15.1046
+XJ,resid_urban heating modern,2.93811,4.25041,5.76228,5.7674
+XJ,resid_urban hot water_cooking modern,5.86416,7.60943,9.06897,9.76273
+XJ,resid_rural heating coal,0.3098,0.257864,0.375183,0.43249
+XJ,resid_urban heating coal,0.3098,0.257864,0.375183,0.43249
+XJ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+YN,comm appliances,35.9941,28.7069,27.4244,27.3386
+YN,comm cooling,9.38357,9.41756,8.88011,8.85328
+YN,comm heating,3.79032,3.99622,6.48972,4.00674
+YN,comm hot water_cooking,6.22175,6.78532,8.56354,6.36149
+YN,resid_rural appliances modern,35.9941,28.7069,27.4244,27.3386
+YN,resid_rural cooling modern,17.567,15.6142,15.2736,15.3817
+YN,resid_rural heating modern,2.14485,2.21957,3.61688,4.90085
+YN,resid_rural hot water_cooking modern,5.38594,5.44267,5.785,5.87798
+YN,resid_urban appliances modern,35.9941,28.7069,27.4244,27.3386
+YN,resid_urban cooling modern,17.567,15.6142,15.2736,15.3817
+YN,resid_urban heating modern,3.01875,6.29549,8.55209,10.8243
+YN,resid_urban hot water_cooking modern,5.72267,7.51482,8.82095,9.56464
+YN,resid_rural heating coal,0.6228,0.570864,0.688183,0.74549
+YN,resid_urban heating coal,0.6228,0.570864,0.688183,0.74549
+YN,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+ZJ,comm appliances,35.639,28.1889,27.7558,26.6791
+ZJ,comm cooling,9.27865,9.2017,9.01596,8.58696
+ZJ,comm heating,3.7538,4.98964,7.28726,7.94412
+ZJ,comm hot water_cooking,6.63635,10.9645,13.48,13.1851
+ZJ,resid_rural appliances modern,35.639,28.1889,27.7558,26.6791
+ZJ,resid_rural cooling modern,17.4437,15.4177,15.4021,15.1202
+ZJ,resid_rural heating modern,3.69361,5.98263,10.0445,11.3747
+ZJ,resid_rural hot water_cooking modern,6.0454,7.12121,10.0509,11.5255
+ZJ,resid_urban appliances modern,35.639,28.1889,27.7558,26.6791
+ZJ,resid_urban cooling modern,17.4437,15.4177,15.4021,15.1202
+ZJ,resid_urban heating modern,5.24511,7.60974,9.16555,8.98451
+ZJ,resid_urban hot water_cooking modern,6.41585,9.16764,11.8857,12.1909
+ZJ,resid_rural heating coal,1.1373,1.08536,1.20268,1.25999
+ZJ,resid_urban heating coal,1.1373,1.08536,1.20268,1.25999
+ZJ,resid_rural heating TradBio,0.1,0.1,0.1,0.1
+AH,comm lighting,869.12,860.325,868.859,843.054
+AH,resid_rural lighting modern,875.979,867.184,875.684,849.845
+AH,resid_urban lighting modern,875.979,867.184,875.684,849.845
+BJ,comm lighting,866.838,852.813,838.957,804.857
+BJ,resid_rural lighting modern,873.697,859.672,845.782,811.648
+BJ,resid_urban lighting modern,873.697,859.672,845.782,811.648
+CQ,comm lighting,879.278,862.823,863.399,864.793
+CQ,resid_rural lighting modern,886.137,869.682,870.224,871.584
+CQ,resid_urban lighting modern,886.137,869.682,870.224,871.584
+FJ,comm lighting,869.12,860.325,868.859,843.054
+FJ,resid_rural lighting modern,875.979,867.184,875.684,849.845
+FJ,resid_urban lighting modern,875.979,867.184,875.684,849.845
+GS,comm lighting,877.295,849.425,833.594,841.034
+GS,resid_rural lighting modern,884.154,856.284,840.419,847.825
+GS,resid_urban lighting modern,884.154,856.284,840.419,847.825
+GD,comm lighting,881.11,884.995,852.509,876.72
+GD,resid_rural lighting modern,887.969,891.854,859.334,883.511
+GD,resid_urban lighting modern,887.969,891.854,859.334,883.511
+GX,comm lighting,881.11,884.995,852.509,876.72
+GX,resid_rural lighting modern,887.969,891.854,859.334,883.511
+GX,resid_urban lighting modern,887.969,891.854,859.334,883.511
+GZ,comm lighting,881.11,884.995,852.509,876.72
+GZ,resid_rural lighting modern,887.969,891.854,859.334,883.511
+GZ,resid_urban lighting modern,887.969,891.854,859.334,883.511
+HI,comm lighting,0,884.995,852.509,876.72
+HI,resid_rural lighting modern,887.969,891.854,859.334,883.511
+HI,resid_urban lighting modern,887.969,891.854,859.334,883.511
+HE,comm lighting,866.838,852.813,838.957,804.857
+HE,resid_rural lighting modern,873.697,859.672,845.782,811.648
+HE,resid_urban lighting modern,873.697,859.672,845.782,811.648
+HL,comm lighting,843.943,845.562,821.933,831.938
+HL,resid_rural lighting modern,850.802,852.421,828.758,838.729
+HL,resid_urban lighting modern,850.802,852.421,828.758,838.729
+HA,comm lighting,879.278,862.823,863.399,864.793
+HA,resid_rural lighting modern,886.137,869.682,870.224,871.584
+HA,resid_urban lighting modern,886.137,869.682,870.224,871.584
+HB,comm lighting,879.278,862.823,863.399,864.793
+HB,resid_rural lighting modern,886.137,869.682,870.224,871.584
+HB,resid_urban lighting modern,886.137,869.682,870.224,871.584
+HN,comm lighting,879.278,862.823,863.399,864.793
+HN,resid_rural lighting modern,886.137,869.682,870.224,871.584
+HN,resid_urban lighting modern,886.137,869.682,870.224,871.584
+NM,comm lighting,866.838,852.813,838.957,804.857
+NM,resid_rural lighting modern,873.697,859.672,845.782,811.648
+NM,resid_urban lighting modern,873.697,859.672,845.782,811.648
+JS,comm lighting,869.12,860.325,868.859,843.054
+JS,resid_rural lighting modern,875.979,867.184,875.684,849.845
+JS,resid_urban lighting modern,875.979,867.184,875.684,849.845
+JX,comm lighting,879.278,862.823,863.399,864.793
+JX,resid_rural lighting modern,886.137,869.682,870.224,871.584
+JX,resid_urban lighting modern,886.137,869.682,870.224,871.584
+JL,comm lighting,843.943,845.562,821.933,831.938
+JL,resid_rural lighting modern,850.802,852.421,828.758,838.729
+JL,resid_urban lighting modern,850.802,852.421,828.758,838.729
+LN,comm lighting,843.943,845.562,821.933,831.938
+LN,resid_rural lighting modern,850.802,852.421,828.758,838.729
+LN,resid_urban lighting modern,850.802,852.421,828.758,838.729
+NX,comm lighting,877.295,849.425,833.594,841.034
+NX,resid_rural lighting modern,884.154,856.284,840.419,847.825
+NX,resid_urban lighting modern,884.154,856.284,840.419,847.825
+QH,comm lighting,877.295,849.425,833.594,841.034
+QH,resid_rural lighting modern,884.154,856.284,840.419,847.825
+QH,resid_urban lighting modern,884.154,856.284,840.419,847.825
+SN,comm lighting,877.295,849.425,833.594,841.034
+SN,resid_rural lighting modern,884.154,856.284,840.419,847.825
+SN,resid_urban lighting modern,884.154,856.284,840.419,847.825
+SD,comm lighting,866.838,852.813,838.957,804.857
+SD,resid_rural lighting modern,873.697,859.672,845.782,811.648
+SD,resid_urban lighting modern,873.697,859.672,845.782,811.648
+SH,comm lighting,869.12,860.325,868.859,843.054
+SH,resid_rural lighting modern,875.979,867.184,875.684,849.845
+SH,resid_urban lighting modern,875.979,867.184,875.684,849.845
+SX,comm lighting,866.838,852.813,838.957,804.857
+SX,resid_rural lighting modern,873.697,859.672,845.782,811.648
+SX,resid_urban lighting modern,873.697,859.672,845.782,811.648
+SC,comm lighting,879.278,862.823,863.399,864.793
+SC,resid_rural lighting modern,886.137,869.682,870.224,871.584
+SC,resid_urban lighting modern,886.137,869.682,870.224,871.584
+TJ,comm lighting,866.838,852.813,838.957,804.857
+TJ,resid_rural lighting modern,873.697,859.672,845.782,811.648
+TJ,resid_urban lighting modern,873.697,859.672,845.782,811.648
+XZ,comm lighting,877.295,849.425,833.594,841.034
+XZ,resid_rural lighting modern,884.154,856.284,840.419,847.825
+XZ,resid_urban lighting modern,884.154,856.284,840.419,847.825
+XJ,comm lighting,877.295,849.425,833.594,841.034
+XJ,resid_rural lighting modern,884.154,856.284,840.419,847.825
+XJ,resid_urban lighting modern,884.154,856.284,840.419,847.825
+YN,comm lighting,881.11,884.995,852.509,876.72
+YN,resid_rural lighting modern,887.969,891.854,859.334,883.511
+YN,resid_urban lighting modern,887.969,891.854,859.334,883.511
+ZJ,comm lighting,869.12,860.325,868.859,843.054
+ZJ,resid_rural lighting modern,875.979,867.184,875.684,849.845
+ZJ,resid_urban lighting modern,875.979,867.184,875.684,849.845

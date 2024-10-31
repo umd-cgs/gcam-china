@@ -5,22 +5,30 @@
 # Column types: cccn
 # ----------
 supplysector,subsector,technology,input.ratio
-resid_rural hot water_cooking,gas,gas water heater,0.112
-resid_rural hot water_cooking,electricity,electric resistance water heater,0.112
-resid_rural hot water_cooking,refined liquids,fuel water heater,0.112
-resid_rural hot water_cooking,coal,coal water heater,0.112
-resid_rural hot water_cooking,trad biomass,wood water heater,0.112
-resid_rural lighting,electricity,elec light,0.803
-resid_rural appliances,electricity,electric appliances,0.632
-resid_urban hot water_cooking,gas,gas water heater,0.112
-resid_urban hot water_cooking,electricity,electric resistance water heater,0.112
-resid_urban hot water_cooking,refined liquids,fuel water heater,0.112
-resid_urban hot water_cooking,coal,coal water heater,0.112
-resid_urban lighting,electricity,elec light,0.803
-resid_urban appliances,electricity,electric appliances,0.632
+resid_rural hot water_cooking modern,gas,gas water heater,0.112
+resid_rural hot water_cooking modern,gas,gas water heater hi-eff,0.112
+resid_rural hot water_cooking modern,electricity,electric resistance water heater,0.112
+resid_rural hot water_cooking modern,electricity,electric resistance water heater hi-eff,0.112
+resid_rural hot water_cooking modern,refined liquids,fuel water heater,0.112
+resid_rural hot water_cooking modern,refined liquids,fuel water heater hi-eff,0.112
+resid_rural hot water_cooking modern,coal,coal water heater,0.112
+resid_rural hot water_cooking modern,traditional biomass,wood water heater,0.112
+resid_rural lighting modern,electricity,elec light,0.803
+resid_rural appliances modern,electricity,electric appliances,0.632
+resid_urban hot water_cooking modern,gas,gas water heater,0.112
+resid_urban hot water_cooking modern,gas,gas water heater hi-eff,0.112
+resid_urban hot water_cooking modern,electricity,electric resistance water heater,0.112
+resid_urban hot water_cooking modern,electricity,electric resistance water heater hi-eff,0.112
+resid_urban hot water_cooking modern,refined liquids,fuel water heater,0.112
+resid_urban hot water_cooking modern,refined liquids,fuel water heater hi-eff,0.112
+resid_urban hot water_cooking modern,coal,coal water heater,0.112
+resid_urban lighting modern,electricity,elec light,0.803
+resid_urban appliances modern,electricity,electric appliances,0.632
 comm hot water_cooking,gas,gas water heater,0.112
+comm hot water_cooking,gas,gas water heater hi-eff,0.112
 comm hot water_cooking,electricity,electric resistance water heater,0.112
 comm hot water_cooking,refined liquids,fuel water heater,0.112
 comm hot water_cooking,coal,coal water heater,0.112
 comm lighting,electricity,elec light,0.803
+comm lighting,electricity,fluorescent,0.5
 comm appliances,electricity,electric appliances,0.632

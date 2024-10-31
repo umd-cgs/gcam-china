@@ -13,7 +13,6 @@ ATTR_COMMENTS <- "comments"
 ATTR_PRECURSORS <- "precursors"
 ATTR_LEGACY_NAME <- "legacy_name"
 ATTR_REFERENCE <- "reference"
-ATTR_FLAGS <- "flags"
 
 #' add_title
 #'
@@ -228,7 +227,6 @@ get_data <- function(all_data, name, strip_attributes = FALSE) {
     attr(all_data[[name]], ATTR_PRECURSORS) <- NULL
     attr(all_data[[name]], ATTR_LEGACY_NAME) <- NULL
     attr(all_data[[name]], ATTR_REFERENCE) <- NULL
-    attr(all_data[[name]], ATTR_FLAGS) <- NULL
     all_data[[name]]
   } else {
     all_data[[name]]
