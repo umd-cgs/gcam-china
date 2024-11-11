@@ -4238,7 +4238,7 @@ local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs
             <comments/>
         </costCurveQuery>
     </queryGroup>
-    <queryGroup name="water demands (not valid for GCAM-USA)">
+    <queryGroup name="water demands (not valid for GCAM-China)">
         <supplyDemandQuery title="water withdrawals by region">
             <axis1 name="region">region</axis1>
             <axis2 name="Year">demand-physical[@vintage]</axis2>
