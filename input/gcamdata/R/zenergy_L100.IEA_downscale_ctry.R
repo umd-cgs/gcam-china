@@ -45,11 +45,11 @@ module_energy_L100.IEA_downscale_ctry <- function(command, ...) {
     IEA_ctry <- get_data(all_data, "energy/mappings/IEA_ctry")
     # 11/10/2024 Rongqi Zhu
     # Adjust the heat values in China's building sector to better align with the actual data.
-    IEA_EnergyBalances_2019 <- IEA_EnergyBalances_2019 %>%
-      mutate(across(`1960`:`2017`, ~ case_when(
-        COUNTRY == "Peoples Republic of China" & FLOW %in% c("RESIDENT", "COMMPUB", "ONONSPEC") & PRODUCT == "Heat" ~ . * 4,
-        TRUE ~ as.numeric(.)
-      )))
+    # IEA_EnergyBalances_2019 <- IEA_EnergyBalances_2019 %>%
+    #   mutate(across(`1960`:`2017`, ~ case_when(
+    #     COUNTRY == "Peoples Republic of China" & FLOW %in% c("RESIDENT", "COMMPUB", "ONONSPEC") & PRODUCT == "Heat" ~ . * 4,
+    #     TRUE ~ as.numeric(.)
+    #   )))
 
     # If the (proprietary) raw IEA datasets are available, go through the full computations below
     # If not, use the pre-saved summary file (i.e., the output of this chunk!) assuming it's available

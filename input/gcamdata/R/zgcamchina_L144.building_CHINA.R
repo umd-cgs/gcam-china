@@ -131,11 +131,11 @@ module_gcamchina_L144.Building <- function(command, ...) {
       mutate(value = value.x * value.y) %>%
       select(province, sector, fuel, year, value)
 
-    # May 2024, Rocky
+    # May 2024, Rongqi
     # Change the format of L144.in_EJ_province_bld_F_U to match calibrated_techs_bld_china
-    # Apportion province-level energy by fuel to services.
+    #Apportion fuel by services.
     L144.cR_S_F_U_share_res <- cR_BldS_F_U_share_res %>%
-      gather(c("heating TradBio", "heating coal", "heating modern", "cooling modern",
+      gather(c("heating modern", "cooling modern",
                "lighting modern", "hot water_cooking modern", "appliances modern"), key = "service", value = "share")
 
     L144.cR_S_F_U_share_com <- cR_BldS_F_U_share_com %>%
@@ -172,7 +172,7 @@ module_gcamchina_L144.Building <- function(command, ...) {
     L144.in_EJ_province_bld_F_U_pre <- L144.in_EJ_province_bld_F_U_res %>%
       bind_rows(L144.in_EJ_province_bld_F_U_com)
 
-    # 05/05/2024 Rocky
+    # 05/05/2024 Rongqi
     # stay aligned with supplysector
     # the excluded values about service are all 0, means that the total service demands don't change
     L144.in_EJ_province_bld_F_U <- calibrated_techs_bld_china %>%
@@ -251,7 +251,8 @@ module_gcamchina_L144.Building <- function(command, ...) {
 
     urban_pop_thous_prov_Yh <- total_pop_thous_prov_Yh %>%
       left_join_error_no_match(urban_pop_share_province.long, by = c("province", "year")) %>%
-      mutate(pop = pop * value)
+      mutate(pop = pop * value) %>%
+      select(-value)
 
     # Compute rural population in historical years
     rural_pop_thous_prov_Yh <- total_pop_thous_prov_Yh %>%
@@ -266,10 +267,10 @@ module_gcamchina_L144.Building <- function(command, ...) {
       rename(year = Year) %>%
       left_join_error_no_match(urban_pop_thous_prov_Yh, by = c("province", "year")) %>%
       mutate(Urban = Urban * pop * 1000) %>%
-      select(-pop, -value) %>%
+      select(-pop) %>%
       left_join_error_no_match(rural_pop_thous_prov_Yh, by = c("province", "year")) %>%
       mutate(Rural = Rural * pop * 1000)  %>%
-      select(-pop, -value)
+      select(-pop)
 
     flsp_bm2_province_Yh <- flsp_m2pc_province_Yh_urban_rural %>%
       # TODO: convert from m^2 to billion-m^2

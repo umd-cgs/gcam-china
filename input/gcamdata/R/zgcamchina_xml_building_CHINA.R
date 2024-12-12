@@ -56,8 +56,6 @@ module_gcamchina_building_xml <- function(command, ...) {
              "L244.ThermalBaseDens_gcamchina",
              "L244.DeleteThermalService_gcamchina",
              "L244.DeleteGenericService_gcamchina",
-             "L244.ThermalCoalCoef_gcamchina",
-             "L244.ThermalTradBioCoef_gcamchina",
              "L244.FuelPrefElast_bld_gcamchina"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "building_CHINA.xml"))
@@ -110,8 +108,6 @@ module_gcamchina_building_xml <- function(command, ...) {
     L244.ThermalBaseDens_gcamchina <- get_data(all_data, "L244.ThermalBaseDens_gcamchina")
     L244.DeleteThermalService_gcamchina <- get_data(all_data, "L244.DeleteThermalService_gcamchina")
     L244.DeleteGenericService_gcamchina <- get_data(all_data, "L244.DeleteGenericService_gcamchina")
-    L244.ThermalCoalCoef_gcamchina <- get_data(all_data, "L244.ThermalCoalCoef_gcamchina")
-    L244.ThermalTradBioCoef_gcamchina <- get_data(all_data, "L244.ThermalTradBioCoef_gcamchina")
     L244.FuelPrefElast_bld_gcamchina <- get_data(all_data,"L244.FuelPrefElast_bld_gcamchina")
 
     # ===================================================
@@ -140,8 +136,6 @@ module_gcamchina_building_xml <- function(command, ...) {
       add_xml_data(L244.GenericServiceAdder, "GenericServiceAdder") %>%
       add_xml_data(L244.ThermalServiceCoef, "ThermalServiceCoef") %>%
       add_xml_data(L244.GenericServiceCoef, "GenericServiceCoef") %>%
-      add_xml_data(L244.ThermalCoalCoef_gcamchina, "ThermalCoalCoef") %>%
-      add_xml_data(L244.ThermalTradBioCoef_gcamchina, "ThermalTradBioCoef") %>%
       add_xml_data(L244.Intgains_scalar, "Intgains_scalar") %>%
       add_xml_data(L244.ShellConductance_bld, "ShellConductance") %>%
       add_logit_tables_xml(L244.Supplysector_bld, "Supplysector") %>%
@@ -206,8 +200,6 @@ module_gcamchina_building_xml <- function(command, ...) {
                      "L244.ThermalBaseDens_gcamchina",
                      "L244.DeleteThermalService_gcamchina",
                      "L244.DeleteGenericService_gcamchina",
-                     "L244.ThermalCoalCoef_gcamchina",
-                     "L244.ThermalTradBioCoef_gcamchina",
                      "L244.FuelPrefElast_bld_gcamchina") ->
       building_CHINA.xml
 

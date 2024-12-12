@@ -118,8 +118,6 @@ module_gcamchina_L244.building <- function(command, ...) {
              "L244.ThermalBaseDens_gcamchina",
              "L244.DeleteThermalService_gcamchina",
              "L244.DeleteGenericService_gcamchina",
-             "L244.ThermalCoalCoef_gcamchina",
-             "L244.ThermalTradBioCoef_gcamchina",
              "L244.GenericShares_gcamchina",
              "L244.ThermalShares_gcamchina",
              "L244.FuelPrefElast_bld_gcamchina"
@@ -193,7 +191,7 @@ module_gcamchina_L244.building <- function(command, ...) {
     def9075<-2.212
 
     # ===================================================
-    # rocky 02/02/2024 update to have different share at province level given new income distribution projections
+    # Rongqi 02/02/2024 update to have different share at province level given new income distribution projections
     # For gcam-consumers: the core version  uses multiple consumers, so this needs to be considered:
     L244.DeleteConsumer_CHINAbld <- tibble(region = gcamchina.REGION, gcam.consumer = A44.gcam_consumer_en$gcam.consumer) %>%
       filter(grepl('resid', gcam.consumer)) %>%
@@ -206,7 +204,7 @@ module_gcamchina_L244.building <- function(command, ...) {
     # not distinguish rural and urban
     L244.DeleteSupplysector_CHINAbld <- tibble(region = gcamchina.REGION, supplysector = unique(L244.Supplysector_bld$supplysector))
 
-    # rocky 01/02/2024 make similar adjustment as in zchunk_L244.building_det to implement multiple consumer in resid in GCAM-CHINA
+    # Rongqi 01/02/2024 make similar adjustment as in zchunk_L244.building_det to implement multiple consumer in resid in GCAM-CHINA
     L144.income_shares <- income_shares %>%
       filter(model %in% c(socioeconomics.BASE_INCSHARE_BASE,socioeconomics.BASE_INCSHARE_MODEL)) %>%
       select(-gini,-gdp_pcap_decile,-model) %>%
@@ -214,7 +212,7 @@ module_gcamchina_L244.building <- function(command, ...) {
              scen = sce,
              share = shares)
 
-    #rocky 01/02/2024 new income dist projections at province and consumer level (not real data)
+    # Rongqi 01/02/2024 new income dist projections at province and consumer level (not real data)
     L244.income_shares_province_consumer <- province_decile_gdp_per_capita_projections %>%
       select(province=province_code,year,scen=sce,share=shares,group=category,gcam.consumer=gcam.consumer)
 
@@ -226,7 +224,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       bind_rows(A44.gcam_consumer %>% filter(gcam.consumer == "comm"))
 
     # L244.SubregionalShares_gcamchina: subregional population and income shares (not currently used)
-    # rocky 01/02/2024 modified to use subregional pop and income shares
+    # Rongqi 01/02/2024 modified to use subregional pop and income shares
     L244.gcamchina_consumer_grp_resid <- write_to_all_provinces(A44.gcam_consumer, c("region", "gcam.consumer"), gcamchina.PROVINCES_NOHKMC) %>%
       # filter residential sector to implement multiple consumers
       filter(grepl("resid",gcam.consumer)) %>%
@@ -257,7 +255,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       rename(subregional.income.share = share) %>%
       select(-scen,-GCAM_region_ID)
 
-    # Rocky 23/07/2024
+    # Rongqi 23/07/2024
     # Add the difference between urban and rural by subreginal population and income
     urban_pop_share_province.long <- urban_pop_share_province %>%
       gather(key = "year", value = "value", as.character(c(1971:2017, seq(2020, 2100, 5)))) %>%
@@ -284,7 +282,7 @@ module_gcamchina_L244.building <- function(command, ...) {
         grepl("resid_urban", gcam.consumer) ~ subregional.income.share * urban_income_share,
         grepl("resid_rural", gcam.consumer) ~ subregional.income.share * (1-urban_income_share))) %>%
       select(-urban_income_share) %>%
-      ## 05/21/2024 Rocky
+      ## 05/21/2024 Rongqi
       # bind commercial subregional population and income shares (currently not used, set to 1)
       bind_rows(write_to_all_provinces(A44.gcam_consumer, c("region", "gcam.consumer"), gcamchina.PROVINCES_NOHKMC) %>%
                   filter(gcam.consumer == "comm") %>%
@@ -331,7 +329,7 @@ module_gcamchina_L244.building <- function(command, ...) {
         grepl("resid_urban", gcam.consumer) ~ subregional.income.share * urban_income_share,
         grepl("resid_rural", gcam.consumer) ~ subregional.income.share * (1-urban_income_share))) %>%
       select(-urban_income_share) %>%
-      ## 05/21/2024 Rocky
+      ## 05/21/2024 Rongqi
       # bind commercial subregional population and income shares (currently not used, set to 1)
       bind_rows(write_to_all_provinces(A44.gcam_consumer, c("region", "gcam.consumer"), gcamchina.PROVINCES_NOHKMC) %>%
                   filter(gcam.consumer == "comm") %>%
@@ -389,7 +387,7 @@ module_gcamchina_L244.building <- function(command, ...) {
     #  bind_rows(L244.SubregionalShares_gcamusa_SSP3)
 
     # ===================================================
-    # # rocky 04/02/2024 uese subregional population and income shares, create datasets with subregional population and per capita income for all GCAM regions:
+    # # Rongqi 04/02/2024 uese subregional population and income shares, create datasets with subregional population and per capita income for all GCAM regions:
     # Subregional population per region, year and consumer group
     urban_pop_thous_prov_Yh <- L101.Pop_thous_province %>%
       filter(year %in% HISTORICAL_YEARS) %>%
@@ -426,7 +424,7 @@ module_gcamchina_L244.building <- function(command, ...) {
                                  filter(year %in% HISTORICAL_YEARS),
                                by=c("province","year")) %>%
       rename(pop_thous = pop) %>%
-      # 26/07/2024 Rocky
+      # 26/07/2024 Rongqi
       # Due to include urban-rural income gap in the L244.SubregionalShares_gcamchina_allhist, use national=level pop to calculate gdp
       left_join_error_no_match(L101.Pop_thous_province %>%
                                  filter(year %in% HISTORICAL_YEARS),
@@ -441,7 +439,7 @@ module_gcamchina_L244.building <- function(command, ...) {
                                              filter(year %in% HISTORICAL_YEARS),
                                            by=c("province","year")) %>%
                   rename(pop_thous = pop) %>%
-                  # 26/07/2024 Rocky
+                  # 26/07/2024 Rongqi
                   # Due to include urban-rural income gap in the L244.SubregionalShares_gcamchina_allhist, use national=level pop to calculate gdp
                   left_join_error_no_match(L101.Pop_thous_province %>%
                                              filter(year %in% HISTORICAL_YEARS),
@@ -457,7 +455,7 @@ module_gcamchina_L244.building <- function(command, ...) {
              gdp_pc=(gdp_gr/1E3) / (pop_thous*1E3)) %>%
       select(-pcGDP_thous90USD) %>%
       rename(pcGDP_thous90USD = gdp_pc) %>%
-      # rocky 02/02/2024 pcgdp in provinces does not have scenario (SSPs), not like the L102.pcgdp_thous90USD_Scen_R_Y
+      # Rongqi 02/02/2024 pcgdp in provinces does not have scenario (SSPs), not like the L102.pcgdp_thous90USD_Scen_R_Y
       select(province,gcam.consumer,year,pcGDP_thous90USD) %>%
       # add commercial
       bind_rows(L101.pcGDP_thous90usd_province %>%
@@ -484,7 +482,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       bind_rows(write_to_all_provinces(A44.demandFn_serv, LEVEL2_DATA_NAMES[["DemandFunction_serv"]], gcamchina.PROVINCES_NOHKMC)
                 %>% filter(gcam.consumer == "comm"))
 
-    # rocky 03/02/2024 end ----
+    # Rongqi 03/02/2024 end ----
 
 
     # L244.PriceExp_IntGains_gcamchina: price exponent on floorspace and naming of internal gains trial markets
@@ -507,7 +505,7 @@ module_gcamchina_L244.building <- function(command, ...) {
     #   left_join_error_no_match(A44.gcam_consumer, by = "gcam.consumer") %>%
     #   select(LEVEL2_DATA_NAMES[["Floorspace"]])
 
-    # rocky add 03/02/2024 ----
+    # Rongqi add 03/02/2024 ----
     A44.gcam_consumer_resid <- A44.gcam_consumer %>%
       filter(grepl("resid", gcam.consumer))
 
@@ -697,7 +695,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       # delete "habitable.land" in LEVEL2_DATA_NAMES[["GompFnParam"]]
       select(LEVEL2_DATA_NAMES[["GompFnParam"]])
 
-    # rocky 18/02/2024 end -------------
+    # Rongqi 18/02/2024 end -------------
 
 
     # 2.Commercial floorspace ----
@@ -714,7 +712,8 @@ module_gcamchina_L244.building <- function(command, ...) {
 
     # Final output only has base years
     L244.Floorspace_gcamchina <- filter(L244.Floorspace_full, year %in% MODEL_BASE_YEARS) %>%
-      mutate(base.building.size = round(base.building.size,energy.DIGITS_FLOORSPACE))
+      mutate(base.building.size = round(base.building.size,energy.DIGITS_FLOORSPACE)) %>%
+      mutate(base.building.size = if_else(region=="XZ", base.building.size*4, base.building.size))
 
     # # L244.DemandFunction_serv_gcamchina and L244.DemandFunction_flsp_gcamchina: demand function types
     # L244.DemandFunction_serv_gcamchina <- write_to_all_states(A44.demandFn_serv, LEVEL2_DATA_NAMES[["DemandFunction_serv"]])
@@ -915,7 +914,7 @@ module_gcamchina_L244.building <- function(command, ...) {
 
 
 
-    # rocky add
+    # Rongqi add
     cons.groups <- unique(A44.gcam_consumer_resid$gcam.consumer)
 
     add.cg <- function(df){
@@ -1002,7 +1001,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       write_to_all_provinces(LEVEL2_DATA_NAMES[["Tech"]], gcamchina.PROVINCES_NOHKMC) %>%
       rename(stub.technology = technology)
 
-    # L244.GlobalTechEff_bld_gcamchina: Assumed efficiencies (all years) of buildings technologies
+    # L244.GlobalTechEff_bld: Assumed efficiencies (all years) of buildings technologies
     L244.end_use_eff <- A44.globaltech_eff %>%
       complete(nesting(supplysector, subsector, technology, minicam.energy.input), year = c(year, MODEL_YEARS)) %>%
       group_by(supplysector, subsector, technology, minicam.energy.input) %>%
@@ -1043,7 +1042,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       mutate(calibrated.value = round(value, energy.DIGITS_CALOUTPUT)) %>%
       rename(supplysector = service) %>%
       # Add subsector and energy.input
-      # Rocky 22/02/2024 modify calibrated_techs_bld_china.csv
+      # Rongqi 22/02/2024 modify calibrated_techs_bld_china.csv
       left_join_error_no_match(calibrated_techs_bld_china %>%
                                  select(sector, supplysector, fuel, subsector, minicam.energy.input) %>%
                                  distinct(), by = c("sector", "supplysector", "fuel")) %>%
@@ -1254,7 +1253,6 @@ module_gcamchina_L244.building <- function(command, ...) {
                                  group_by(region,nodeInput,building.node.input,year) %>%
                                  summarise(base.building.size=sum(base.building.size)) %>%
                                  ungroup() %>%
-                                 filter(year == max(MODEL_BASE_YEARS)) %>%
                                  mutate(gcam.consumer = nodeInput),
                                by = c(LEVEL2_DATA_NAMES[["BldNodes"]], "year")) %>%
       # Add multiplier
@@ -1339,94 +1337,68 @@ module_gcamchina_L244.building <- function(command, ...) {
       mutate(thermal.building.service.input = supplysector,
              supplysector =if_else(grepl("resid",gcam.consumer),paste0(supplysector,"_",group),supplysector),
              thermal.building.service.input = if_else(grepl("resid",gcam.consumer) ,paste0(thermal.building.service.input,"_",group),thermal.building.service.input)) %>%
-      select(LEVEL2_DATA_NAMES[["DeleteThermalService"]])
+      select(LEVEL2_DATA_NAMES[["DeleteThermalService"]]) %>%
+      filter(!is.na(region))
 
 
-    # # Generic services
-    # L244.DeleteGenericService_gcamusa_pre<-L244.GenericBaseService_gcamusa %>%
-    #   group_by(region, gcam.consumer, nodeInput, building.node.input, building.service.input) %>%
-    #   summarise(base.service = max(base.service)) %>%
-    #   ungroup()
-    #
-    # L244.DeleteGenericService_gcamusa<-calibrated_techs_bld_usa %>%
-    #   select(service) %>%
-    #   distinct() %>%
-    #   filter(service %in% generic_services) %>%
-    #   repeat_add_columns(tibble(region = unique(states_subregions$state))) %>%
-    #   select(region,service) %>%
-    #   left_join(L244.DeleteGenericService_gcamusa_pre %>% select(region,service=building.service.input,base.service), by = c("region", "service")) %>%
-    #   #replace_na(list(base.service = 0)) %>%
-    #   filter(complete.cases(.)) %>%
-    #   filter(base.service == 0) %>%
-    #   select(-base.service) %>%
-    #   rename(supplysector = service) %>%
-    #   repeat_add_columns(tibble(group=unique(L144.income_shares$group))) %>%
-    #   mutate(gcam.consumer = if_else(grepl("resid",supplysector),"resid","comm"),
-    #          nodeInput = gcam.consumer,
-    #          building.node.input = paste0(nodeInput,"_building")) %>%
-    #   unite(gcam.consumer, c(gcam.consumer,group),sep="_") %>%
-    #   separate(gcam.consumer, c("adj","group"),sep="_",remove = F) %>%
-    #   # adjust commercial
-    #   mutate(gcam.consumer = if_else(grepl("comm",gcam.consumer),"comm",gcam.consumer)) %>%
-    #   mutate(building.service.input = supplysector,
-    #          supplysector =if_else(grepl("resid",gcam.consumer),paste0(supplysector,"_",group),supplysector),
-    #          building.service.input = if_else(grepl("resid",gcam.consumer) ,paste0(building.service.input,"_",group),building.service.input)) %>%
-    #   select(LEVEL2_DATA_NAMES[["DeleteGenericService"]])
-
+    # ------------------------------------
+    # Dec 2024, Rongqi
+    # Due to the lackness of modern service and traditional service (coal and TradBio), drop this part
+    # change traditional service to modern service's subsector
     # The demand for traditional fuels (coal and TradBio) is an inverse function (service demand as inverse of service affordability)
     # The parameters to define the functional form are estimated in the following lines:
 
-    # First, estimate the parameters for the function to estimate coal demand:
-    serv_coal <- L244.base_service_EJ_serv_fuel %>%
-      rename(en_EJ = base.service) %>%
-      filter(grepl("resid",supplysector),
-             subsector == "coal") %>%
-      gcamdata::left_join_error_no_match(L101.pcGDP_thous90usd_province,
-                                         by = c("region"="province", "year")) %>%
-      rename(pcgdp_thous = pcGDP) %>%
-      select(region,fuel=subsector,service=supplysector,year,pcgdp_thous,en_EJ) %>%
-      arrange(en_EJ) %>%
-      left_join(L144.prices_bld_gcamchina %>% rename(service = sector,price=value), by = c("region", "year","service")) %>%
-      replace_na(list(price = 1)) %>%
-      mutate(afford=(pcgdp_thous*1000/def9075) / price)
-
-    # yz this formula formula.coal<- "en_EJ~A/(afford+k)"
-    # does not work (showing "Error in nls() : singular gradient")
-    # because the model is not identifiable, that is, there is more than one solution to the model
-    # Therefore, we reduce the model parameters (ignore k or set k=0) for USA coal general fit across sercives
-
-    # formula.coal<- "en_EJ~A/(afford+k)"
-    # start.value.coal<-c(A = 1,k=0.5)
-
-    formula.coal <- "en_EJ~A/(afford)"
-    start.value.coal <- c(A = 1)
-
-    fit_coal <- nls(formula.coal, serv_coal, start.value.coal)
-    A_coal <- coef(fit_coal)[1]
-    k_coal <- 0
-
-    # Same for traditional biomass:
-    serv_TradBio <- L244.base_service_EJ_serv_fuel %>%
-      rename(en_EJ = base.service) %>%
-      filter(grepl("resid",supplysector),
-             subsector == "traditional biomass") %>%
-      gcamdata::left_join_error_no_match(L101.pcGDP_thous90usd_province,
-                                         by = c("region"="province", "year")) %>%
-      rename(pcgdp_thous = pcGDP) %>%
-      select(region,fuel=subsector,service=supplysector,year,pcgdp_thous,en_EJ) %>%
-      arrange(en_EJ) %>%
-      left_join(L144.prices_bld_gcamchina %>% rename(service = sector,price=value), by = c("region", "year","service")) %>%
-      replace_na(list(price = 1)) %>%
-      mutate(afford=(pcgdp_thous*1000/def9075) / price)
-
-    formula.tradBio<- "en_EJ~x/(afford+y)"
-    start.value.tradBio<-c(x = 10,y = 10)
-
-    fit_tradBio<-nls(formula.tradBio, serv_TradBio, start.value.tradBio)
-    x_TradBio<-coef(fit_tradBio)[1]
-    y_TradBio<-coef(fit_tradBio)[2]
-
-    # ROCKY end of adding---
+    # # First, estimate the parameters for the function to estimate coal demand:
+    # serv_coal <- L244.base_service_EJ_serv_fuel %>%
+    #   rename(en_EJ = base.service) %>%
+    #   filter(grepl("resid",supplysector),
+    #          subsector == "coal") %>%
+    #   gcamdata::left_join_error_no_match(L101.pcGDP_thous90usd_province,
+    #                                      by = c("region"="province", "year")) %>%
+    #   rename(pcgdp_thous = pcGDP) %>%
+    #   select(region,fuel=subsector,service=supplysector,year,pcgdp_thous,en_EJ) %>%
+    #   arrange(en_EJ) %>%
+    #   left_join(L144.prices_bld_gcamchina %>% rename(service = sector,price=value), by = c("region", "year","service")) %>%
+    #   replace_na(list(price = 1)) %>%
+    #   mutate(afford=(pcgdp_thous*1000/def9075) / price)
+    #
+    # # yz this formula formula.coal<- "en_EJ~A/(afford+k)"
+    # # does not work (showing "Error in nls() : singular gradient")
+    # # because the model is not identifiable, that is, there is more than one solution to the model
+    # # Therefore, we reduce the model parameters (ignore k or set k=0) for USA coal general fit across sercives
+    #
+    # # formula.coal<- "en_EJ~A/(afford+k)"
+    # # start.value.coal<-c(A = 1,k=0.5)
+    #
+    # formula.coal <- "en_EJ~A/(afford)"
+    # start.value.coal <- c(A = 1)
+    #
+    # fit_coal <- nls(formula.coal, serv_coal, start.value.coal)
+    # A_coal <- coef(fit_coal)[1]
+    # k_coal <- 0
+    #
+    # # Same for traditional biomass:
+    # serv_TradBio <- L244.base_service_EJ_serv_fuel %>%
+    #   rename(en_EJ = base.service) %>%
+    #   filter(grepl("resid",supplysector),
+    #          subsector == "traditional biomass") %>%
+    #   gcamdata::left_join_error_no_match(L101.pcGDP_thous90usd_province,
+    #                                      by = c("region"="province", "year")) %>%
+    #   rename(pcgdp_thous = pcGDP) %>%
+    #   select(region,fuel=subsector,service=supplysector,year,pcgdp_thous,en_EJ) %>%
+    #   arrange(en_EJ) %>%
+    #   left_join(L144.prices_bld_gcamchina %>% rename(service = sector,price=value), by = c("region", "year","service")) %>%
+    #   replace_na(list(price = 1)) %>%
+    #   mutate(afford=(pcgdp_thous*1000/def9075) / price)
+    #
+    # formula.tradBio<- "en_EJ~x/(afford+y)"
+    # start.value.tradBio<-c(x = 10,y = 10)
+    #
+    # fit_tradBio<-nls(formula.tradBio, serv_TradBio, start.value.tradBio)
+    # x_TradBio<-coef(fit_tradBio)[1]
+    # y_TradBio<-coef(fit_tradBio)[2]
+    #
+    # end of adding---
 
 
     #------------------------------------------------------
@@ -1611,17 +1583,6 @@ module_gcamchina_L244.building <- function(command, ...) {
              coef = if_else(grepl("TradBio",thermal.building.service.input),1,coef)) %>%
       mutate(coef = round(coef,energy.DIGITS_COEFFICIENT))
 
-    # rocky global chunk does not have this
-    # L244.ThermalServiceAdder_gcamusa<-L244.ThermalServiceImpedance_allvars_gcamusa %>%
-    #   select(LEVEL2_DATA_NAMES[["ThermalServiceAdder"]]) %>%
-    #   mutate(bias.adder = round(bias.adder,energy.DIGITS_BIAS_ADDER))
-
-    # rocky add big chunks of lines for multi-consumer implementation ----
-    #------------------------------------------------------
-    # The region-level service is allocated to different consumers using "shares"
-    # First, shares are estimated using the corresponding demand functions (either for modern or traditional fuels)
-    # Shares are used to allocate observed regional energy/service data across subregional consumers
-    # L244.GenericBaseService and L244.ThermalBaseService are adjusted to have service data at consumer level within each region
 
     # L244.GenericBaseService adjusted
     L244.GenericBaseService_gcamchina_pre <- L244.GenericBaseService_gcamchina %>%
@@ -1737,9 +1698,9 @@ module_gcamchina_L244.building <- function(command, ...) {
       left_join_error_no_match(bind_rows(L244.Floorspace_resid,L244.Floorspace_comm),
                                by = c("region", "gcam.consumer", "nodeInput", "building.node.input", "year")) %>%
       mutate(serv=(satiation.level * (1-exp((-log(2)/`satiation-impedance`)*afford))) * base.building.size) %>%
-      # Adjust coal and TradBio
-      mutate(serv = if_else(grepl("coal",thermal.building.service.input),coef(fit_coal)[1]/(afford),serv),
-             serv = if_else(grepl("TradBio",thermal.building.service.input),coef(fit_tradBio)[1]/(afford + coef(fit_tradBio)[2]),serv)) %>%
+      # # Adjust coal and TradBio
+      # mutate(serv = if_else(grepl("coal",thermal.building.service.input),coef(fit_coal)[1]/(afford),serv),
+      #        serv = if_else(grepl("TradBio",thermal.building.service.input),coef(fit_tradBio)[1]/(afford + coef(fit_tradBio)[2]),serv)) %>%
       mutate(serv = if_else(afford == 0, 0, serv))
 
     # Calculate subtotals (for shares)
@@ -1779,188 +1740,133 @@ module_gcamchina_L244.building <- function(command, ...) {
 
 
     #------------------------------------------------------
+    # Dec 2024, Rongqi
+    # Due to the lackness of modern service and traditional service (coal and TradBio), drop this part
     # NOTE: Using the adjusted consumer-level data, parameters for traditional fuel function can be re-fitted to improve the fit.
     # They can also be estimated by service to capture additional differences/dynamics
 
-    # 1- Re-fit parameters: Coal
-
-    # YZ- Generic services in GCAM-core are represented as "others" and it has coal as fuel
-    # but in GCAM-USA, there's no coal in Generic services (i.e., non-thermal services)
-
-    # serv_coal_refit_oth<-L244.GenericBaseService %>%
-    #   filter(grepl("coal",building.service.input)) %>%
-    #   left_join_error_no_match(GCAM_region_names, by = "region") %>%
-    #   left_join_error_no_match(L102.pcgdp_thous90USD_Scen_R_Y_gr %>% filter(scenario == socioeconomics.BASE_GDP_SCENARIO)
-    #                            , by = c("GCAM_region_ID", "year","gcam.consumer","region")) %>%
-    #   left_join(L144.prices_bld %>% rename(building.service.input = market) %>% select(-region), by = c("GCAM_region_ID", "year","building.service.input")) %>%
+    # # 1- Re-fit parameters: Coal
+    #
+    # # YZ- Generic services in GCAM-core are represented as "others" and it has coal as fuel
+    # # but in GCAM-China, there's no coal in Generic services (i.e., non-thermal services)
+    #
+    # # Generic services
+    #
+    # # Thermal services
+    # serv_coal_refit_thermal <- L244.ThermalBaseService_gcamchina %>%
+    #   filter(grepl("coal",thermal.building.service.input)) %>%
+    #   left_join_error_no_match(L101.pcgdp_thous90USD_province_Yh_gr,
+    #                            by = c("year","gcam.consumer","region"="province")) %>%
+    #   left_join(L144.prices_bld_gcamchina %>% rename(thermal.building.service.input = sector,price=value),
+    #             by = c("region","year","thermal.building.service.input")) %>%
     #   replace_na(list(price = 1)) %>%
     #   mutate(afford = (pcGDP_thous90USD*1000/def9075) / price) %>%
     #   filter(complete.cases(.)) %>%
     #   filter(base.service != 0)
-
-
-    # Thermal services
-    serv_coal_refit_thermal <- L244.ThermalBaseService_gcamchina %>%
-      filter(grepl("coal",thermal.building.service.input)) %>%
-      left_join_error_no_match(L101.pcgdp_thous90USD_province_Yh_gr,
-                               by = c("year","gcam.consumer","region"="province")) %>%
-      left_join(L144.prices_bld_gcamchina %>% rename(thermal.building.service.input = sector,price=value),
-                by = c("region","year","thermal.building.service.input")) %>%
-      replace_na(list(price = 1)) %>%
-      mutate(afford = (pcGDP_thous90USD*1000/def9075) / price) %>%
-      filter(complete.cases(.)) %>%
-      filter(base.service != 0)
-
-    formula.coal_refit_thermal <- "base.service~A/(afford+k)"
-    start.value.coal_refit_thermal <- c(A = 1, k = 0.5)
-
-    fit_coal_refit_thermal <- nls(formula.coal_refit_thermal, serv_coal_refit_thermal, start.value.coal_refit_thermal)
-    A_coal_refit_thermal <- coef(fit_coal_refit_thermal)[1]
-    k_coal_refit_thermal <- coef(fit_coal_refit_thermal)[2]
-
-    L244.coal.coef <- tibble(gcam.consumer = "resid_rural", nodeInput = "resid_rural", building.node.input = "resid_rural_building") %>%
-      repeat_add_columns(tibble(service = "resid_rural heating coal")) %>%
-      bind_rows(tibble(gcam.consumer = "resid_urban", nodeInput = "resid_urban", building.node.input = "resid_urban_building") %>%
-                  repeat_add_columns(tibble(service = "resid_urban heating coal"))) %>%
-      mutate(A_coal = A_coal_refit_thermal,
-             k_coal = k_coal_refit_thermal) %>%
-      repeat_add_columns(tibble(region = unique(serv_coal$region)))
-
-    # Some regions have coal services at early historical years, but have phased it out in recent historical years (2005-2015)
-    # In these regions we assume there should not be any coal demand in future model periods
-    # We correct this dynamic by zeroing the coefficient in the demand function:
-    check_coal <- L244.base_service %>%
-      filter(year == MODEL_FINAL_BASE_YEAR, grepl("coal",building.service.input)) %>%
-      filter(base.service == 0) %>%
-      mutate(is.no.coal = 1) %>%
-      select(-base.service)
-
-    # check_coal_oth<-check_coal %>% filter(grepl("others",building.service.input))
-    check_coal_thermal <- check_coal %>% filter(grepl("heating",building.service.input))
-
-    # reg_no_recentCoal_oth<-unique(check_coal_oth$region)
-    reg_no_recentCoal_thermal <- unique(check_coal_thermal$region)
-
-
-    L244.coal.coef <- L244.coal.coef %>%
-      mutate(#A_coal = if_else(grepl("others",service) & region %in% reg_no_recentCoal_oth,0,A_coal), #YZ- coal only used in heating in USA
-        A_coal = if_else(grepl("heating",service) & region %in% reg_no_recentCoal_thermal,0,A_coal))
-
-
-    # L244.GenericCoalCoef<-L244.coal.coef %>%
-    #   filter(service %in% generic_services) %>%
-    #   rename(building.service.input = service) %>%
+    #
+    # formula.coal_refit_thermal <- "base.service~A/(afford+k)"
+    # start.value.coal_refit_thermal <- c(A = 1, k = 0.5)
+    #
+    # fit_coal_refit_thermal <- nls(formula.coal_refit_thermal, serv_coal_refit_thermal, start.value.coal_refit_thermal)
+    # A_coal_refit_thermal <- coef(fit_coal_refit_thermal)[1]
+    # k_coal_refit_thermal <- coef(fit_coal_refit_thermal)[2]
+    #
+    # L244.coal.coef <- tibble(gcam.consumer = "resid_rural", nodeInput = "resid_rural", building.node.input = "resid_rural_building") %>%
+    #   repeat_add_columns(tibble(service = "resid_rural heating coal")) %>%
+    #   bind_rows(tibble(gcam.consumer = "resid_urban", nodeInput = "resid_urban", building.node.input = "resid_urban_building") %>%
+    #               repeat_add_columns(tibble(service = "resid_urban heating coal"))) %>%
+    #   mutate(A_coal = A_coal_refit_thermal,
+    #          k_coal = k_coal_refit_thermal) %>%
+    #   repeat_add_columns(tibble(region = unique(serv_coal$region)))
+    #
+    # # Some regions have coal services at early historical years, but have phased it out in recent historical years (2005-2015)
+    # # In these regions we assume there should not be any coal demand in future model periods
+    # # We correct this dynamic by zeroing the coefficient in the demand function:
+    # check_coal <- L244.base_service %>%
+    #   filter(year == MODEL_FINAL_BASE_YEAR, grepl("coal",building.service.input)) %>%
+    #   filter(base.service == 0) %>%
+    #   mutate(is.no.coal = 1) %>%
+    #   select(-base.service)
+    #
+    # # check_coal_oth<-check_coal %>% filter(grepl("others",building.service.input))
+    # check_coal_thermal <- check_coal %>% filter(grepl("heating",building.service.input))
+    #
+    # # reg_no_recentCoal_oth<-unique(check_coal_oth$region)
+    # reg_no_recentCoal_thermal <- unique(check_coal_thermal$region)
+    #
+    #
+    # L244.coal.coef <- L244.coal.coef %>%
+    #   mutate(#A_coal = if_else(grepl("others",service) & region %in% reg_no_recentCoal_oth,0,A_coal), #YZ- coal only used in heating in USA
+    #     A_coal = if_else(grepl("heating",service) & region %in% reg_no_recentCoal_thermal,0,A_coal))
+    #
+    #
+    # L244.ThermalCoalCoef_gcamchina <- L244.coal.coef %>%
+    #   filter(service %in% thermal_services) %>%
+    #   rename(thermal.building.service.input = service) %>%
     #   repeat_add_columns(tibble(group=unique(L144.income_shares$group))) %>%
     #   mutate(gcam.consumer = paste0(gcam.consumer,"_",group)) %>%
     #   mutate(year = MODEL_FINAL_BASE_YEAR) %>%
-    #   left_join_error_no_match(L244.GenericBaseService, by = c("gcam.consumer", "nodeInput", "building.node.input", "building.service.input", "region","year")) %>%
-    #   mutate(building.service.input = paste0(building.service.input,"_",group)) %>%
+    #   left_join_error_no_match(L244.ThermalBaseService_gcamchina,
+    #                            by = c("gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input", "region","year")) %>%
+    #   mutate(thermal.building.service.input = paste0(thermal.building.service.input,"_",group)) %>%
     #   rename(base.coal = base.service) %>%
     #   mutate(A_coal = round(A_coal, energy.DIGITS_COEFFICIENT),
     #          k_coal = round(k_coal, energy.DIGITS_COEFFICIENT),
     #          base.coal = round(base.coal, energy.DIGITS_SERVICE)) %>%
-    #   select(LEVEL2_DATA_NAMES[["GenericCoalCoef"]])
-
-
-    L244.ThermalCoalCoef_gcamchina <- L244.coal.coef %>%
-      filter(service %in% thermal_services) %>%
-      rename(thermal.building.service.input = service) %>%
-      repeat_add_columns(tibble(group=unique(L144.income_shares$group))) %>%
-      mutate(gcam.consumer = paste0(gcam.consumer,"_",group)) %>%
-      mutate(year = MODEL_FINAL_BASE_YEAR) %>%
-      left_join_error_no_match(L244.ThermalBaseService_gcamchina,
-                               by = c("gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input", "region","year")) %>%
-      mutate(thermal.building.service.input = paste0(thermal.building.service.input,"_",group)) %>%
-      rename(base.coal = base.service) %>%
-      mutate(A_coal = round(A_coal, energy.DIGITS_COEFFICIENT),
-             k_coal = round(k_coal, energy.DIGITS_COEFFICIENT),
-             base.coal = round(base.coal, energy.DIGITS_SERVICE)) %>%
-      select(LEVEL2_DATA_NAMES[["ThermalCoalCoef"]])
-
-    # 2- Re-fit parameters: Traditional Biomass
-
-    # Generic services
-    # YZ - similar to coal, generic services in USA does not have TradBio involved
-    # TradBio is reported only for heating services
-
-    # serv_TradBio_refit_oth<-L244.GenericBaseService %>%
-    #   filter(grepl("TradBio",building.service.input)) %>%
-    #   left_join_error_no_match(GCAM_region_names, by = "region") %>%
-    #   left_join_error_no_match(L102.pcgdp_thous90USD_Scen_R_Y_gr %>% filter(scenario == socioeconomics.BASE_GDP_SCENARIO)
-    #                            , by = c("GCAM_region_ID", "year","gcam.consumer","region")) %>%
-    #   left_join(L144.prices_bld %>% rename(building.service.input = market) %>% select(-region), by = c("GCAM_region_ID", "year","building.service.input")) %>%
+    #   select(LEVEL2_DATA_NAMES[["ThermalCoalCoef"]])
+    #
+    # # 2- Re-fit parameters: Traditional Biomass
+    #
+    # # Generic services
+    # # YZ - similar to coal, generic services in China does not have TradBio involved
+    # # TradBio is reported only for heating services
+    #
+    # # Thermal services
+    # serv_TradBio_refit_thermal <- L244.ThermalBaseService_gcamchina %>%
+    #   filter(grepl("TradBio",thermal.building.service.input)) %>%
+    #   left_join_error_no_match(L101.pcgdp_thous90USD_province_Yh_gr,
+    #                            by = c("year","gcam.consumer","region"="province")) %>%
+    #   left_join(L144.prices_bld_gcamchina %>% rename(thermal.building.service.input = sector, price=value),
+    #             by = c("region", "year","thermal.building.service.input")) %>%
     #   replace_na(list(price = 1)) %>%
     #   mutate(afford = (pcGDP_thous90USD*1000/def9075) / price) %>%
     #   filter(complete.cases(.)) %>%
     #   filter(base.service != 0)
     #
-    # formula.TradBio_refit_oth<- "base.service~x/(afford+y)"
-    # start.value.TradBio_refit_oth<-c(x = 10,y = 10)
+    # formula.TradBio_refit_thermal <- "base.service~x/(afford+y)"
+    # start.value.TradBio_refit_thermal <- c(x = 10,y = 10)
     #
-    # fit_TradBio_refit_oth<-nls(formula.TradBio_refit_oth, serv_TradBio_refit_oth, start.value.TradBio_refit_oth)
-    # x_TradBio_refit_oth<-coef(fit_TradBio_refit_oth)[1]
-    # y_TradBio_refit_oth<-coef(fit_TradBio_refit_oth)[2]
-
-    # Thermal services
-    serv_TradBio_refit_thermal <- L244.ThermalBaseService_gcamchina %>%
-      filter(grepl("TradBio",thermal.building.service.input)) %>%
-      left_join_error_no_match(L101.pcgdp_thous90USD_province_Yh_gr,
-                               by = c("year","gcam.consumer","region"="province")) %>%
-      left_join(L144.prices_bld_gcamchina %>% rename(thermal.building.service.input = sector, price=value),
-                by = c("region", "year","thermal.building.service.input")) %>%
-      replace_na(list(price = 1)) %>%
-      mutate(afford = (pcGDP_thous90USD*1000/def9075) / price) %>%
-      filter(complete.cases(.)) %>%
-      filter(base.service != 0)
-
-    formula.TradBio_refit_thermal <- "base.service~x/(afford+y)"
-    start.value.TradBio_refit_thermal <- c(x = 10,y = 10)
-
-    fit_TradBio_refit_thermal <- nls(formula.TradBio_refit_thermal, serv_TradBio_refit_thermal, start.value.TradBio_refit_thermal)
-    x_TradBio_refit_thermal <- coef(fit_TradBio_refit_thermal)[1]
-    y_TradBio_refit_thermal <- coef(fit_TradBio_refit_thermal)[2]
-
-
-    L244.tradBio.coef <- tibble(gcam.consumer = "resid_rural", nodeInput = "resid_rural", building.node.input = "resid_rural_building") %>%
-      repeat_add_columns(tibble(service = "resid_rural heating TradBio")) %>%
-      bind_rows(tibble(gcam.consumer = "resid_urban", nodeInput = "resid_urban", building.node.input = "resid_urban_building") %>%
-                  repeat_add_columns(tibble(service = "resid_urban heating TradBio"))) %>%
-      mutate(x_TradBio = x_TradBio_refit_thermal,
-             y_TradBio = y_TradBio_refit_thermal) %>%
-      repeat_add_columns(tibble(region = unique(serv_TradBio$region)))
-
-
-    # L244.GenericTradBioCoef<-L244.tradBio.coef %>%
-    #   filter(service %in% generic_services) %>%
-    #   rename(building.service.input = service) %>%
+    # fit_TradBio_refit_thermal <- nls(formula.TradBio_refit_thermal, serv_TradBio_refit_thermal, start.value.TradBio_refit_thermal)
+    # x_TradBio_refit_thermal <- coef(fit_TradBio_refit_thermal)[1]
+    # y_TradBio_refit_thermal <- coef(fit_TradBio_refit_thermal)[2]
+    #
+    #
+    # L244.tradBio.coef <- tibble(gcam.consumer = "resid_rural", nodeInput = "resid_rural", building.node.input = "resid_rural_building") %>%
+    #   repeat_add_columns(tibble(service = "resid_rural heating TradBio")) %>%
+    #   bind_rows(tibble(gcam.consumer = "resid_urban", nodeInput = "resid_urban", building.node.input = "resid_urban_building") %>%
+    #               repeat_add_columns(tibble(service = "resid_urban heating TradBio"))) %>%
+    #   mutate(x_TradBio = x_TradBio_refit_thermal,
+    #          y_TradBio = y_TradBio_refit_thermal) %>%
+    #   repeat_add_columns(tibble(region = unique(serv_TradBio$region)))
+    #
+    #
+    # L244.ThermalTradBioCoef_gcamchina <- L244.tradBio.coef %>%
+    #   filter(service %in% thermal_services) %>%
+    #   rename(thermal.building.service.input = service) %>%
     #   repeat_add_columns(tibble(group=unique(L144.income_shares$group))) %>%
     #   mutate(gcam.consumer = paste0(gcam.consumer,"_",group)) %>%
     #   mutate(year =MODEL_FINAL_BASE_YEAR) %>%
-    #   left_join_error_no_match(L244.GenericBaseService, by = c("gcam.consumer", "nodeInput", "building.node.input", "building.service.input", "region","year")) %>%
-    #   mutate(building.service.input = paste0(building.service.input,"_",group)) %>%
+    #   left_join_error_no_match(L244.ThermalBaseService_gcamchina,
+    #                            by = c("gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input", "region","year")) %>%
+    #   mutate(thermal.building.service.input = paste0(thermal.building.service.input,"_",group)) %>%
     #   rename(base.TradBio = base.service) %>%
     #   mutate(x_TradBio = if_else(base.TradBio==0,0,x_TradBio)) %>%
     #   mutate(x_TradBio = round(x_TradBio, energy.DIGITS_COEFFICIENT),
     #          y_TradBio = round(y_TradBio, energy.DIGITS_COEFFICIENT),
     #          base.TradBio = round(base.TradBio, energy.DIGITS_SERVICE)) %>%
-    #   select(LEVEL2_DATA_NAMES[["GenericTradBioCoef"]])
+    #   select(LEVEL2_DATA_NAMES[["ThermalTradBioCoef"]])
 
 
-    L244.ThermalTradBioCoef_gcamchina <- L244.tradBio.coef %>%
-      filter(service %in% thermal_services) %>%
-      rename(thermal.building.service.input = service) %>%
-      repeat_add_columns(tibble(group=unique(L144.income_shares$group))) %>%
-      mutate(gcam.consumer = paste0(gcam.consumer,"_",group)) %>%
-      mutate(year =MODEL_FINAL_BASE_YEAR) %>%
-      left_join_error_no_match(L244.ThermalBaseService_gcamchina,
-                               by = c("gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input", "region","year")) %>%
-      mutate(thermal.building.service.input = paste0(thermal.building.service.input,"_",group)) %>%
-      rename(base.TradBio = base.service) %>%
-      mutate(x_TradBio = if_else(base.TradBio==0,0,x_TradBio)) %>%
-      mutate(x_TradBio = round(x_TradBio, energy.DIGITS_COEFFICIENT),
-             y_TradBio = round(y_TradBio, energy.DIGITS_COEFFICIENT),
-             base.TradBio = round(base.TradBio, energy.DIGITS_SERVICE)) %>%
-      select(LEVEL2_DATA_NAMES[["ThermalTradBioCoef"]])
 
     #------------------------------------------------------
     # Bias adder: The difference between the observed and estimated data in final calibration year to capture the "unobservable" effects not captured by the variables in the model equations
@@ -2044,7 +1950,7 @@ module_gcamchina_L244.building <- function(command, ...) {
 
     # Modern
     L244.GenericServiceAdder_modern_pre <- L244.GenericShares_gcamchina_pre %>%
-      # filter(building.service.input %in% modern_fuels_oth) %>% # YZ- all fuel in generic service in USA is modern
+      # filter(building.service.input %in% modern_fuels_oth) %>% # YZ- all fuel in generic service in China is modern
       filter(grepl('resid', building.service.input)) %>%
       mutate(est = serv) %>%
       select(region,year,gcam.consumer,building.service.input,est)
@@ -2099,6 +2005,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       mutate(bias.adder = round(bias.adder,energy.DIGITS_BIAS_ADDER))
 
 
+
     # # 1.5- Generic services per SSP
     # L244.GenericServiceAdder_SSPs<-L244.GenericServiceAdder %>%
     #   repeat_add_columns(tibble(SSP=unique(L244.GenericServiceImpedance_allvars_SSPs$SSP))) %>%
@@ -2123,10 +2030,13 @@ module_gcamchina_L244.building <- function(command, ...) {
 
     # 2- Thermal services
 
-    trad_fuels_thermal <- c("resid_rural heating coal","resid_rural heating TradBio", "resid_urban heating coal", "resid_urban heating coal")
+    # trad_fuels_thermal <- c("resid_rural heating coal","resid_rural heating TradBio", "resid_urban heating coal", "resid_urban heating coal")
     modern_fuels_thermal <- c("resid_rural cooling modern","resid_rural heating modern", "resid_urban cooling modern","resid_urban heating modern")
 
     # Coal and TradBio
+    # Dec 2024, Rongqi
+    # Due to the lackness of modern service and traditional service (coal and TradBio), drop this part
+
     L244.ThermalServiceAdder_aggObs <- L244.base_service_EJ_serv %>%
       filter(supplysector %in% thermal_services) %>%
       rename(thermal.building.service.input = supplysector,
@@ -2136,65 +2046,66 @@ module_gcamchina_L244.building <- function(command, ...) {
     L244.ThermalServiceAdder_aggObs_gr<-L244.ThermalBaseService_gcamchina %>%
       rename(obs = base.service) %>%
       filter(year== MODEL_FINAL_BASE_YEAR)
+    #
+    #
+    # L244.ThermalServiceAdder_coal_tradbio_pre <- L244.ThermalShares_gcamchina_pre %>%
+    #   filter(grepl("resid",thermal.building.service.input)) %>%
+    #   filter(thermal.building.service.input %in% trad_fuels_thermal) %>%
+    #   select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,year,afford) %>%
+    #   separate(gcam.consumer,c("gcam.consumer","group"),sep="_(?=[^_]*$)",remove = F) %>%
+    #   mutate(gcam.consumer = paste0(gcam.consumer,"_",group),
+    #          thermal.building.service.input = paste0(thermal.building.service.input,"_",group)) %>%
+    #   left_join(L244.ThermalCoalCoef_gcamchina,by = c("region", "gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input")) %>%
+    #   left_join(L244.ThermalTradBioCoef_gcamchina,by = c("region", "gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input")) %>%
+    #   select(-group,-base.TradBio,-base.coal) %>%
+    #   rename(A_coal_new = A_coal,
+    #          k_coal_new = k_coal,
+    #          x_TradBio_new = x_TradBio,
+    #          y_TradBio_new = y_TradBio) %>%
+    #   mutate(serv = if_else(grepl("coal",thermal.building.service.input),A_coal_new/(afford+k_coal_new),x_TradBio_new/(afford+y_TradBio_new))) %>%
+    #   replace_na(list(serv = 0)) %>%
+    #   select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,year,serv) %>%
+    #   mutate(est = serv) %>%
+    #   separate(thermal.building.service.input,c("thermal.building.service.input","group"),sep = "_(?=[^_]*$)") %>%
+    #   select(region,year,gcam.consumer,thermal.building.service.input,est)
+    #
+    # L244.ThermalServiceAdder_coal_tradbio_pre_agg <- L244.ThermalServiceAdder_coal_tradbio_pre %>%
+    #   filter(grepl('resid_rural', thermal.building.service.input)) %>%
+    #   mutate(nodeInput = "resid_rural",
+    #          building.node.input = "resid_rural_building") %>%
+    #   bind_rows(L244.ThermalServiceAdder_coal_tradbio_pre %>%
+    #               filter(grepl('resid_urban', thermal.building.service.input)) %>%
+    #               mutate(nodeInput = "resid_urban",
+    #                      building.node.input = "resid_urban_building")) %>%
+    #   group_by(region,year,thermal.building.service.input) %>%
+    #   mutate(est_agg = sum(est)) %>%
+    #   ungroup() %>%
+    #   filter(year == MODEL_FINAL_BASE_YEAR) %>%
+    #   left_join_error_no_match(L244.ThermalServiceAdder_aggObs, by = c("region", "year", "thermal.building.service.input")) %>%
+    #   filter(complete.cases(.)) %>%
+    #   mutate(bias.adder.equal = (obs - est_agg)/n_groups) %>%
+    #   mutate(bias.adder = round(bias.adder.equal,9)) %>%
+    #   ungroup() %>%
+    #   # adjust zero adder if observed is 0
+    #   mutate(bias.adder = if_else(obs==0,0,bias.adder)) %>%
+    #   select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,bias.adder)
+    #
+    # L244.ThermalServiceAdder_coal_tradbio <- L244.ThermalServiceAdder_coal_tradbio_pre %>%
+    #   filter(year== MODEL_FINAL_BASE_YEAR) %>%
+    #   left_join_error_no_match(L244.ThermalServiceAdder_aggObs_gr, by = c("region", "year", "gcam.consumer", "thermal.building.service.input")) %>%
+    #   mutate(bias.adder.share = obs - est,
+    #          bias.adder.share = if_else(obs==0,0,bias.adder.share)) %>%
+    #   left_join_error_no_match(L244.ThermalServiceAdder_coal_tradbio_pre_agg, by = c("region", "gcam.consumer", "thermal.building.service.input", "nodeInput", "building.node.input")) %>%
+    #   mutate(bias.adder = if_else(obs==0,0,bias.adder)) %>%
+    #   select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,bias.adder.share,bias.adder.eq=bias.adder) %>%
+    #   repeat_add_columns(tibble(year=ADJ_MODEL_YEARS)) %>%
+    #   mutate(bias.adder = if_else(year!= MODEL_FINAL_BASE_YEAR,bias.adder.eq,bias.adder.share)) %>%
+    #   complete(nesting(region,gcam.consumer, nodeInput,building.node.input,thermal.building.service.input), year = c(year, MODEL_YEARS)) %>%
+    #   group_by(region,gcam.consumer, nodeInput,building.node.input,thermal.building.service.input) %>%
+    #   mutate(bias.adder = approx_fun(year, bias.adder, rule = 1)) %>%
+    #   ungroup() %>%
+    #   select(LEVEL2_DATA_NAMES[["ThermalServiceAdder"]])
 
-
-    L244.ThermalServiceAdder_coal_tradbio_pre <- L244.ThermalShares_gcamchina_pre %>%
-      filter(grepl("resid",thermal.building.service.input)) %>%
-      filter(thermal.building.service.input %in% trad_fuels_thermal) %>%
-      select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,year,afford) %>%
-      separate(gcam.consumer,c("gcam.consumer","group"),sep="_(?=[^_]*$)",remove = F) %>%
-      mutate(gcam.consumer = paste0(gcam.consumer,"_",group),
-             thermal.building.service.input = paste0(thermal.building.service.input,"_",group)) %>%
-      left_join(L244.ThermalCoalCoef_gcamchina,by = c("region", "gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input")) %>%
-      left_join(L244.ThermalTradBioCoef_gcamchina,by = c("region", "gcam.consumer", "nodeInput", "building.node.input", "thermal.building.service.input")) %>%
-      select(-group,-base.TradBio,-base.coal) %>%
-      rename(A_coal_new = A_coal,
-             k_coal_new = k_coal,
-             x_TradBio_new = x_TradBio,
-             y_TradBio_new = y_TradBio) %>%
-      mutate(serv = if_else(grepl("coal",thermal.building.service.input),A_coal_new/(afford+k_coal_new),x_TradBio_new/(afford+y_TradBio_new))) %>%
-      replace_na(list(serv = 0)) %>%
-      select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,year,serv) %>%
-      mutate(est = serv) %>%
-      separate(thermal.building.service.input,c("thermal.building.service.input","group"),sep = "_(?=[^_]*$)") %>%
-      select(region,year,gcam.consumer,thermal.building.service.input,est)
-
-    L244.ThermalServiceAdder_coal_tradbio_pre_agg <- L244.ThermalServiceAdder_coal_tradbio_pre %>%
-      filter(grepl('resid_rural', thermal.building.service.input)) %>%
-      mutate(nodeInput = "resid_rural",
-             building.node.input = "resid_rural_building") %>%
-      bind_rows(L244.ThermalServiceAdder_coal_tradbio_pre %>%
-                  filter(grepl('resid_urban', thermal.building.service.input)) %>%
-                  mutate(nodeInput = "resid_urban",
-                         building.node.input = "resid_urban_building")) %>%
-      group_by(region,year,thermal.building.service.input) %>%
-      mutate(est_agg = sum(est)) %>%
-      ungroup() %>%
-      filter(year == MODEL_FINAL_BASE_YEAR) %>%
-      left_join_error_no_match(L244.ThermalServiceAdder_aggObs, by = c("region", "year", "thermal.building.service.input")) %>%
-      filter(complete.cases(.)) %>%
-      mutate(bias.adder.equal = (obs - est_agg)/n_groups) %>%
-      mutate(bias.adder = round(bias.adder.equal,9)) %>%
-      ungroup() %>%
-      # adjust zero adder if observed is 0
-      mutate(bias.adder = if_else(obs==0,0,bias.adder)) %>%
-      select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,bias.adder)
-
-    L244.ThermalServiceAdder_coal_tradbio <- L244.ThermalServiceAdder_coal_tradbio_pre %>%
-      filter(year== MODEL_FINAL_BASE_YEAR) %>%
-      left_join_error_no_match(L244.ThermalServiceAdder_aggObs_gr, by = c("region", "year", "gcam.consumer", "thermal.building.service.input")) %>%
-      mutate(bias.adder.share = obs - est,
-             bias.adder.share = if_else(obs==0,0,bias.adder.share)) %>%
-      left_join_error_no_match(L244.ThermalServiceAdder_coal_tradbio_pre_agg, by = c("region", "gcam.consumer", "thermal.building.service.input", "nodeInput", "building.node.input")) %>%
-      mutate(bias.adder = if_else(obs==0,0,bias.adder)) %>%
-      select(region,gcam.consumer,nodeInput,building.node.input,thermal.building.service.input,bias.adder.share,bias.adder.eq=bias.adder) %>%
-      repeat_add_columns(tibble(year=ADJ_MODEL_YEARS)) %>%
-      mutate(bias.adder = if_else(year!= MODEL_FINAL_BASE_YEAR,bias.adder.eq,bias.adder.share)) %>%
-      complete(nesting(region,gcam.consumer, nodeInput,building.node.input,thermal.building.service.input), year = c(year, MODEL_YEARS)) %>%
-      group_by(region,gcam.consumer, nodeInput,building.node.input,thermal.building.service.input) %>%
-      mutate(bias.adder = approx_fun(year, bias.adder, rule = 1)) %>%
-      ungroup() %>%
-      select(LEVEL2_DATA_NAMES[["ThermalServiceAdder"]])
 
     # Modern
     L244.ThermalServiceAdder_modern_pre <- L244.ThermalShares_gcamchina_pre %>%
@@ -2241,7 +2152,7 @@ module_gcamchina_L244.building <- function(command, ...) {
       ungroup() %>%
       select(LEVEL2_DATA_NAMES[["ThermalServiceAdder"]])
 
-    L244.ThermalServiceAdder_gcamchina <- bind_rows(L244.ThermalServiceAdder_coal_tradbio,L244.ThermalServiceAdder_modern) %>%
+    L244.ThermalServiceAdder_gcamchina <- L244.ThermalServiceAdder_modern %>%
       # add commercial
       bind_rows(L244.ThermalShares_gcamchina_pre %>%
                   filter(year== MODEL_FINAL_BASE_YEAR) %>%
@@ -3034,22 +2945,6 @@ module_gcamchina_L244.building <- function(command, ...) {
       same_precursors_as(L244.ThermalBaseService_gcamchina) ->
       L244.DeleteThermalService_gcamchina
 
-    L244.ThermalCoalCoef_gcamchina %>%
-      add_title("Coefficients for the estimation of coal: thermal services") %>%
-      add_units("Unitless") %>%
-      add_comments("Calculated using pc_thous") %>%
-      add_legacy_name("L244.ThermalCoalCoef_gcamchina") %>%
-      add_precursors("L144.in_EJ_province_bld_F_U") ->
-      L244.ThermalCoalCoef_gcamchina
-
-    L244.ThermalTradBioCoef_gcamchina %>%
-      add_title("Coefficients for the estimation of TradBio: thermal services") %>%
-      add_units("Unitless") %>%
-      add_comments("Calculated using pc_thous") %>%
-      add_legacy_name("L244.ThermalTradBioCoef_gcamchina") %>%
-      add_precursors("L144.in_EJ_province_bld_F_U") ->
-      L244.ThermalTradBioCoef_gcamchina
-
     L244.ThermalShares_gcamchina %>%
       add_title("Shares for allocate thermal services across income groups") %>%
       add_units("%") %>%
@@ -3122,8 +3017,6 @@ module_gcamchina_L244.building <- function(command, ...) {
                 L244.ThermalBaseDens_gcamchina,
                 L244.DeleteThermalService_gcamchina,
                 L244.DeleteGenericService_gcamchina,
-                L244.ThermalCoalCoef_gcamchina,
-                L244.ThermalTradBioCoef_gcamchina,
                 L244.GenericShares_gcamchina,
                 L244.ThermalShares_gcamchina,
                 L244.FuelPrefElast_bld_gcamchina

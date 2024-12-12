@@ -4,8 +4,8 @@
 # Column types: ccnc
 # ----------
 supplysector,subsector,logit.exponent,logit.type
-resid_rural heating TradBio,traditional biomass,-6,
-resid_rural heating coal,coal,-6,
+resid_rural heating modern,traditional biomass,-6,
+resid_rural heating modern,coal,-6,
 resid_rural heating modern,biomass,-6,
 resid_rural heating modern,gas,-6,
 resid_rural heating modern,electricity,-6,
@@ -18,7 +18,7 @@ resid_rural hot water_cooking modern,coal,-6,
 resid_rural hot water_cooking modern,traditional biomass,-6,
 resid_rural lighting modern,electricity,-2,
 resid_rural appliances modern,electricity,-6,
-resid_urban heating coal,coal,-6,
+resid_urban heating modern,coal,-6,
 resid_urban heating modern,biomass,-6,
 resid_urban heating modern,gas,-6,
 resid_urban heating modern,electricity,-6,

@@ -4,8 +4,8 @@
 # Column types: cccccnc
 # ----------
 supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
-resid_rural heating TradBio,traditional biomass,share-weight,final-calibration-year,end-year,,fixed
-resid_rural heating coal,coal,share-weight,final-calibration-year,end-year,,fixed
+resid_rural heating modern,traditional biomass,share-weight,final-calibration-year,end-year,,fixed
+resid_rural heating modern,coal,share-weight,final-calibration-year,end-year,,fixed
 resid_rural heating modern,biomass,share-weight,final-calibration-year,end-year,,fixed
 resid_rural heating modern,gas,share-weight,final-calibration-year,end-year,,fixed
 resid_rural heating modern,electricity,share-weight,final-calibration-year,end-year,,fixed
@@ -18,7 +18,7 @@ resid_rural hot water_cooking modern,coal,share-weight,final-calibration-year,en
 resid_rural hot water_cooking modern,traditional biomass,share-weight,final-calibration-year,end-year,,fixed
 resid_rural lighting modern,electricity,share-weight,final-calibration-year,end-year,,fixed
 resid_rural appliances modern,electricity,share-weight,final-calibration-year,end-year,,fixed
-resid_urban heating coal,coal,share-weight,final-calibration-year,end-year,,fixed
+resid_urban heating modern,coal,share-weight,final-calibration-year,end-year,,fixed
 resid_urban heating modern,biomass,share-weight,final-calibration-year,end-year,,fixed
 resid_urban heating modern,gas,share-weight,final-calibration-year,end-year,,fixed
 resid_urban heating modern,electricity,share-weight,final-calibration-year,end-year,,fixed

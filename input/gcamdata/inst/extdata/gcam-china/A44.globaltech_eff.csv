@@ -4,8 +4,8 @@
 # Column types: ccccnnnnnnnnnn
 # ----------
 supplysector,subsector,technology,minicam.energy.input,1971,1990,2005,2020,2035,2050,2065,2080,2095,2100
-resid_rural heating TradBio,traditional biomass,trad wood furnace,traditional biomass,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15
-resid_rural heating coal,coal,coal furnace,delivered coal,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
+resid_rural heating modern,traditional biomass,trad wood furnace,traditional biomass,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15
+resid_rural heating modern,coal,coal furnace,delivered coal,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
 resid_rural heating modern,biomass,wood furnace,delivered biomass,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
 resid_rural heating modern,gas,gas furnace,delivered gas,0.665,0.665,0.78,0.78,0.792,0.804,0.816,0.828,0.841,0.841
 resid_rural heating modern,gas,gas furnace hi-eff,delivered gas,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84
@@ -24,7 +24,7 @@ resid_rural hot water_cooking modern,coal,coal water heater,delivered coal,1,1,1
 resid_rural hot water_cooking modern,traditional biomass,wood water heater,traditional biomass,1,1,1,1,1,1,1,1,1,1
 resid_rural lighting modern,electricity,elec light,elect_td_bld,0.23,0.23,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3
 resid_rural appliances modern,electricity,electric appliances,elect_td_bld,0.709,0.709,1,1.108,1.129,1.146,1.163,1.181,1.199,2.199
-resid_urban heating coal,coal,coal furnace,delivered coal,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
+resid_urban heating modern,coal,coal furnace,delivered coal,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
 resid_urban heating modern,biomass,wood furnace,delivered biomass,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
 resid_urban heating modern,gas,gas furnace,delivered gas,0.665,0.665,0.78,0.78,0.792,0.804,0.816,0.828,0.841,0.841
 resid_urban heating modern,gas,gas furnace hi-eff,delivered gas,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84

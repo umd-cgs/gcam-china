@@ -4,14 +4,14 @@
 # Column types: ccccncc
 # ----------
 supplysector,output.unit,input.unit,price.unit,logit.exponent,logit.type,final.energy
-resid_rural heating TradBio,EJ,EJ,1975$/GJ,-3,,building
-resid_rural heating coal,EJ,EJ,1975$/GJ,-3,,building
+resid_rural heating modern,EJ,EJ,1975$/GJ,-3,,building
+resid_rural heating modern,EJ,EJ,1975$/GJ,-3,,building
 resid_rural heating modern,EJ,EJ,1975$/GJ,-3,,building
 resid_rural cooling modern,EJ,EJ,1975$/GJ,-3,,building
 resid_rural hot water_cooking modern,EJ,EJ,1975$/GJ,-2,,building
 resid_rural lighting modern,EJ,EJ,1975$/GJ,-3,,building
 resid_rural appliances modern,EJ,EJ,1975$/GJ,-3,,building
-resid_urban heating coal,EJ,EJ,1975$/GJ,-3,,building
+resid_urban heating modern,EJ,EJ,1975$/GJ,-3,,building
 resid_urban heating modern,EJ,EJ,1975$/GJ,-3,,building
 resid_urban cooling modern,EJ,EJ,1975$/GJ,-3,,building
 resid_urban hot water_cooking modern,EJ,EJ,1975$/GJ,-2,,building

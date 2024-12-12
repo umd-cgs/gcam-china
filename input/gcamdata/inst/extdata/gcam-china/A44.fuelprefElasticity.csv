@@ -4,8 +4,8 @@
 # Column types: ccn
 # ----------
 supplysector,subsector,fuelprefElasticity
-resid_rural heating TradBio,traditional biomass,-1
-resid_rural heating coal,coal,-0.7
+resid_rural heating modern,traditional biomass,-1
+resid_rural heating modern,coal,-0.7
 resid_rural heating modern,biomass,-1
 resid_rural heating modern,gas,0.1
 resid_rural heating modern,electricity,0.2
@@ -18,7 +18,7 @@ resid_rural hot water_cooking modern,coal,-0.7
 resid_rural hot water_cooking modern,traditional biomass,-1
 resid_rural lighting modern,electricity,0.2
 resid_rural appliances modern,electricity,0.2
-resid_urban heating coal,coal,-0.7
+resid_urban heating modern,coal,-0.7
 resid_urban heating modern,biomass,-1
 resid_urban heating modern,gas,0.1
 resid_urban heating modern,electricity,0.2

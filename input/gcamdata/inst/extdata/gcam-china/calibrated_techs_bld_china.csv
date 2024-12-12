@@ -5,8 +5,8 @@
 # Column types: ccccccc
 # ----------
 supplysector,subsector,technology,minicam.energy.input,sector,fuel,service
-resid_rural heating TradBio,traditional biomass,trad wood furnace,traditional biomass,resid_rural,traditional biomass,heating
-resid_rural heating coal,coal,coal furnace,delivered coal,resid_rural,coal,heating
+resid_rural heating modern,traditional biomass,trad wood furnace,traditional biomass,resid_rural,traditional biomass,heating
+resid_rural heating modern,coal,coal furnace,delivered coal,resid_rural,coal,heating
 resid_rural heating modern,biomass,wood furnace,delivered biomass,resid_rural,biomass,heating
 resid_rural heating modern,gas,gas furnace,delivered gas,resid_rural,gas,heating
 resid_rural heating modern,gas,gas furnace hi-eff,delivered gas,resid_rural,gas,heating
@@ -25,7 +25,7 @@ resid_rural hot water_cooking modern,coal,coal water heater,delivered coal,resid
 resid_rural hot water_cooking modern,traditional biomass,wood water heater,traditional biomass,resid_rural,traditional biomass,hot water_cooking
 resid_rural lighting modern,electricity,elec light,elect_td_bld,resid_rural,electricity,lighting
 resid_rural appliances modern,electricity,electric appliances,elect_td_bld,resid_rural,electricity,appliances
-resid_urban heating coal,coal,coal furnace,delivered coal,resid_urban,coal,heating
+resid_urban heating modern,coal,coal furnace,delivered coal,resid_urban,coal,heating
 resid_urban heating modern,biomass,wood furnace,delivered biomass,resid_urban,biomass,heating
 resid_urban heating modern,gas,gas furnace,delivered gas,resid_urban,gas,heating
 resid_urban heating modern,gas,gas furnace hi-eff,delivered gas,resid_urban,gas,heating

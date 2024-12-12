@@ -4,8 +4,8 @@
 # Column types: cccnn
 # ----------
 supplysector,subsector,year.fillout,year,share.weight
-resid_rural heating TradBio,traditional biomass,start-year,,1
-resid_rural heating coal,coal,start-year,,1
+resid_rural heating modern,traditional biomass,start-year,,1
+resid_rural heating modern,coal,start-year,,1
 resid_rural heating modern,biomass,start-year,,1
 resid_rural heating modern,gas,start-year,,1
 resid_rural heating modern,electricity,start-year,,1
@@ -18,7 +18,7 @@ resid_rural hot water_cooking modern,coal,start-year,,1
 resid_rural hot water_cooking modern,traditional biomass,start-year,,1
 resid_rural lighting modern,electricity,start-year,,1
 resid_rural appliances modern,electricity,start-year,,1
-resid_urban heating coal,coal,start-year,,1
+resid_urban heating modern,coal,start-year,,1
 resid_urban heating modern,biomass,start-year,,1
 resid_urban heating modern,gas,start-year,,1
 resid_urban heating modern,electricity,start-year,,1

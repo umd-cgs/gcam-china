@@ -232,17 +232,6 @@ module_emissions_L201.en_nonco2 <- function(command, ...) {
       select(-year)->L201.max_reduction
 
 
-    # YZ reduce unnecessary complexity of code (below are original code commented out)
-    # L201.max_reduction %>%
-    #   # select only certain columns in preparation for join below
-    #   select(region, supplysector, subsector, stub.technology, Non.CO2) %>%
-    #   mutate(year = emissions.CTRL_BASE_YEAR, ctrl.name = "GDP_control") %>%
-    #   left_join_error_no_match(L201.max_reduction,
-    #                            by = c("region", "supplysector", "subsector", "stub.technology", "Non.CO2")) %>%
-    #   na.omit %>%
-    #   select(region, supplysector, subsector, stub.technology, year, Non.CO2, ctrl.name, max_reduction) ->
-    #   L201.nonghg_max_reduction
-
     L201.max_reduction %>%
       # select only certain columns in preparation for join below
       select(region, supplysector, subsector, stub.technology, Non.CO2) %>%
@@ -261,17 +250,8 @@ module_emissions_L201.en_nonco2 <- function(command, ...) {
       repeat_add_columns(tibble(region = GCAM_region_names$region)) ->
       L201.steepness
 
-    #YZ add multiple consumer
-    L201.steepness %>%
-      filter(grepl('resid',supplysector)) %>%
-      repeat_add_columns(tibble(group = unique(groups$category))) %>%
-      unite(supplysector, c("supplysector","group"), sep = "_") %>%
-      bind_rows( L201.steepness %>%
-                   filter(!grepl('resid',supplysector)) )->L201.steepness
-
     L201.nonghg_max_reduction %>%
-      # YZ comment out unnecessary line
-      # mutate(year = emissions.CTRL_BASE_YEAR, ctrl.name = "GDP_control") %>%
+      mutate(year = emissions.CTRL_BASE_YEAR, ctrl.name = "GDP_control") %>%
       left_join(L201.steepness,
                 by = c("region", "supplysector", "subsector", "stub.technology", "Non.CO2" = "variable")) %>%
       na.omit %>%
@@ -309,7 +289,7 @@ module_emissions_L201.en_nonco2 <- function(command, ...) {
       rename(resource = subsector, technology = stub.technology, emiss.coef = value) %>%
       # add units back in
       mutate(emiss.units = "Tg") %>%
-      select(LEVEL2_DATA_NAMES[["ResEmissCoef"]], emiss.units) %>%
+      select(LEVEL2_DATA_NAMES[["ResEmissCoef"]]) %>%
       mutate(emiss.coef = signif(emiss.coef, emissions.DIGITS_EMISSIONS)) ->
       L201.nonghg_res
 
@@ -323,7 +303,7 @@ module_emissions_L201.en_nonco2 <- function(command, ...) {
       # add units back in and convert CO2_FUG to correct units
       mutate(emiss.units = case_when(Non.CO2 == "CO2_FUG" ~ "MTC", T ~ "Tg"),
              emiss.coef = case_when(Non.CO2 == "CO2_FUG" ~ emiss.coef*1/emissions.CONV_C_CO2, T ~ emiss.coef)) %>%
-      select(LEVEL2_DATA_NAMES[["ResEmissCoef"]], emiss.units) %>%
+      select(LEVEL2_DATA_NAMES[["ResEmissCoef"]]) %>%
       mutate(emiss.coef = signif(emiss.coef, emissions.DIGITS_EMISSIONS)) ->
       L201.ghg_res
 
