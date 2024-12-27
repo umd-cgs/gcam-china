@@ -449,7 +449,7 @@ module_gcamchina_L2323.detailed_industry <- function(command, ...) {
       #NOTE: electricity is consumed from province markets
       mutate(market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
                                    region, market.name)) %>%
-      mutate(market.name = if_else(minicam.energy.input %in% c("delivered biomass","coke"),
+      mutate(market.name = if_else(minicam.energy.input %in% c("coke"),
                                    "China", market.name)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechMarket"]]) ->
       L2323.StubTechMarket_detailed_industry

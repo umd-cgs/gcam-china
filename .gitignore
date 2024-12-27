@@ -1,6 +1,16 @@
 # Combine C++, Visual Studio, and Xcode gitignores from:
 # https://github.com/github/gitignore/tree/master/Global
 
+output/
+input/policy_wr
+ModelInterface/
+unil/
+cvs/
+exe/
+.history/
+Additioanl Licenses/
+
+
 # Compiled Object files
 *.slo
 *.lo

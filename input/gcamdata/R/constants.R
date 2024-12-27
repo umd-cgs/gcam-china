@@ -1253,7 +1253,7 @@ gcamchina.USE_UNIFORM_CSTORAGE_MARKET <- FALSE
 #                                      "refined liquids industrial", "refined liquids enduse","district heat")
 
 gcamchina.REGIONAL_FUEL_MARKETS <- c("delivered coal", "wholesale gas", "delivered gas",
-                                     "refined liquids industrial", "refined liquids enduse")
+                                     "refined liquids industrial", "refined liquids enduse", 'delivered biomass')
 
 #Fuels whose markets will be represented with state-specific prices
 gcamchina.PROVINCE_FUEL_MARKETS <- c(gcamchina.ELECT_TD_SECTORS, "H2 industrial", "H2 retail delivery",

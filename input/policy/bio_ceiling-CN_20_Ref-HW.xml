@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario name="bio-ceiling">
+	<world>
+		<region name="China">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>China</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">1</constraint>
+				<constraint year="2025">2</constraint>
+				<constraint year="2030">10</constraint>
+				<constraint year="2035">12</constraint>
+				<constraint year="2040">14</constraint>
+				<constraint year="2045">16</constraint>
+				<constraint year="2050">18</constraint>
+				<constraint year="2055">20</constraint>
+				<constraint year="2060">30</constraint>
+				<constraint year="2065">16</constraint>
+				<constraint year="2070">16</constraint>
+				<constraint year="2075">16</constraint>
+				<constraint year="2080">16</constraint>
+				<constraint year="2085">16</constraint>
+				<constraint year="2090">16</constraint>
+				<constraint year="2095">16</constraint>
+				<constraint year="2100">16</constraint>
+			</policy-portfolio-standard>
+			</region>
+<region name="Africa_Eastern">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+
+			</policy-portfolio-standard>
+		</region>
+		<region name="Africa_Northern">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Africa_Southern">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Africa_Western">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="South Africa">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Australia_NZ">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Canada">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Europe_Eastern">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="EU-12">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Central Asia">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Russia">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="India">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Japan">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="South Korea">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Middle East">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Brazil">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Central America and Caribbean">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Mexico">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="South America_Northern">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="South America_Southern">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Argentina">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Colombia">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Indonesia">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Pakistan">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="South Asia">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Southeast Asia">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Taiwan">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="USA">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="EU-15">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="Europe_Non_EU">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+		<region name="European Free Trade Association">
+			<policy-portfolio-standard name="bio-ceiling">
+				<market>row</market>
+				<policyType>tax</policyType>	
+				<constraint year="2020">30.5</constraint>
+				<constraint year="2025">31.7</constraint>
+				<constraint year="2030">32.9</constraint>
+				<constraint year="2035">34.1</constraint>
+				<constraint year="2040">35.3</constraint>
+				<constraint year="2045">36.6</constraint>
+				<constraint year="2050">37.8</constraint>
+				<constraint year="2055">39</constraint>
+				<constraint year="2060">40.2</constraint>
+				<constraint year="2065">41.5</constraint>
+				<constraint year="2070">42.7</constraint>
+				<constraint year="2075">43.9</constraint>
+				<constraint year="2080">45.1</constraint>
+				<constraint year="2085">46.3</constraint>
+				<constraint year="2090">47.6</constraint>
+				<constraint year="2095">48.8</constraint>
+				<constraint year="2100">50</constraint>
+			</policy-portfolio-standard>
+		</region>
+
+	</world>
+</scenario>
