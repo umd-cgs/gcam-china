@@ -50,6 +50,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
              FILE = "gcam-china/A23.elecS_subsector_shrwt_interpto_province_adj",
              FILE = "gcam-china/elecS_time_fraction",
              FILE = "gcam-china/A10.renewable_resource_delete",
+             FILE = "gcam-china/solar_tech_resource_china",
       		   "L113.elecS_globaltech_capital_battery_ATB",
              "L119.CapFacScaler_CSP_province",
       		   "L1231.out_EJ_province_elec_F_tech",
@@ -149,6 +150,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
 
     # Load required inputs
     province_names_mappings <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = TRUE)
+    solar_tech_resource_china <- get_data(all_data, "gcam-china/solar_tech_resource_china", strip_attributes = TRUE)
     A23.elecS_sector <- get_data(all_data, "gcam-china/A23.elecS_sector", strip_attributes = TRUE)
     A23.elecS_metainfo <- get_data(all_data, "gcam-china/A23.elecS_metainfo", strip_attributes = TRUE)
     A23.elecS_subsector_logit <- get_data(all_data, "gcam-china/A23.elecS_subsector_logit", strip_attributes = TRUE)
@@ -439,6 +441,26 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       rename(supplysector = Electric.sector, intermittent.technology = Electric.sector.intermittent.technology) ->
       L2234.GlobalIntTechOMvar_elecS
 
+    # -------------
+    # modify the L223.GlobalTechEff_elec and L223.GlobalIntTechEff_elec by solar_tech_resource_china mappings
+    L223.GlobalTechEff_elec %>%
+      filter(subsector.name == 'solar') %>%
+      select(-minicam.energy.input) %>%
+      left_join(solar_tech_resource_china, by = c("technology")) -> L223.GlobalTechEff_elec_solar
+
+    L223.GlobalTechEff_elec %>%
+      filter(subsector.name != 'solar') %>%
+      rbind(L223.GlobalTechEff_elec_solar) -> L223.GlobalTechEff_elec
+
+    L223.GlobalIntTechEff_elec%>%
+      filter(subsector.name == 'solar') %>%
+      select(-minicam.energy.input) %>%
+      left_join(solar_tech_resource_china, by = c("intermittent.technology" = "technology")) -> L223.GlobalIntTechEff_elec_solar
+
+    L223.GlobalIntTechEff_elec %>%
+      filter(subsector.name != 'solar') %>%
+      rbind(L223.GlobalIntTechEff_elec_solar) -> L223.GlobalIntTechEff_elec
+
     # Efficiencies
     A23.elecS_tech_mapping %>%
       # join is intended to duplicate rows; left_join_error_no_match throws error, so left_join used
@@ -509,6 +531,16 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     A23.elecS_inttech_mapping %>%
       rename(Electric.sector.technology = Electric.sector.intermittent.technology, technology = intermittent.technology) %>%
       bind_rows(A23.elecS_tech_mapping) -> L2234.StubTechMarket_elecS_CHINA_temp
+
+    # modify the L223.StubTechMarket_elec_CHINA by solar_tech_resource_china mappings
+    L223.StubTechMarket_elec_CHINA %>%
+      filter(subsector == 'solar') %>%
+      select(-minicam.energy.input) %>%
+      left_join(solar_tech_resource_china, by = c("stub.technology" = "technology")) -> L223.StubTechMarket_elec_CHINA_solar
+
+    L223.StubTechMarket_elec_CHINA %>%
+      filter(subsector != 'solar') %>%
+      rbind(L223.StubTechMarket_elec_CHINA_solar) -> L223.StubTechMarket_elec_CHINA
 
     L223.StubTechMarket_elec_CHINA %>%
       # join is intended to duplicate rows; left_join_error_no_match throws error, so left_join used
@@ -1350,6 +1382,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       add_legacy_name("L2234.GlobalTechEff_elecS") %>%
       add_precursors("gcam-china/A23.elecS_tech_mapping",
                      "gcam-china/A23.elecS_tech_availability",
+                     "gcam-china/solar_tech_resource_china",
                      "L223.GlobalTechEff_elec") ->
       L2234.GlobalTechEff_elecS_CHINA
 
@@ -1360,6 +1393,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       add_legacy_name("L2234.GlobalIntTechEff_elecS") %>%
       add_precursors("gcam-china/A23.elecS_inttech_mapping",
                      "gcam-china/A23.elecS_tech_availability",
+                     "gcam-china/solar_tech_resource_china",
                      "L223.GlobalIntTechEff_elec") ->
       L2234.GlobalIntTechEff_elecS_CHINA
 
@@ -1433,6 +1467,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       add_precursors("gcam-china/A23.elecS_tech_mapping",
                      "gcam-china/A23.elecS_inttech_mapping",
                      "gcam-china/A23.elecS_tech_availability",
+                     "gcam-china/solar_tech_resource_china",
                      "L223.StubTechMarket_elec_CHINA") ->
       L2234.StubTechMarket_elecS_CHINA
 

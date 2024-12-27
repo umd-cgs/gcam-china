@@ -18,6 +18,7 @@ module_gcamchina_resources_xml <- function(command, ...) {
              "L210.UnlimitRsrcPrice_CHINA",
              "L210.SmthRenewRsrcTechChange_CHINA",
              "L210.SmthRenewRsrcCurves_wind_CHINA",
+             "L210.SmthRenewRsrcCurves_solar_CHINA",
              "L210.SmthRenewRsrcTechChange_offshore_wind_CHINA",
              "L210.SmthRenewRsrcCurves_offshore_wind_CHINA",
              "L210.GrdRenewRsrcCurves_geo_CHINA",
@@ -39,6 +40,7 @@ module_gcamchina_resources_xml <- function(command, ...) {
     L210.SmthRenewRsrcTechChange_offshore_wind_CHINA <- get_data(all_data, "L210.SmthRenewRsrcTechChange_offshore_wind_CHINA")
     L210.SmthRenewRsrcCurves_offshore_wind_CHINA <- get_data(all_data, "L210.SmthRenewRsrcCurves_offshore_wind_CHINA")
     L210.SmthRenewRsrcCurves_wind_CHINA <- get_data(all_data, "L210.SmthRenewRsrcCurves_wind_CHINA")
+    L210.SmthRenewRsrcCurves_solar_CHINA <- get_data(all_data, "L210.SmthRenewRsrcCurves_solar_CHINA")
     L210.GrdRenewRsrcCurves_geo_CHINA <- get_data(all_data, "L210.GrdRenewRsrcCurves_geo_CHINA")
     L210.GrdRenewRsrcMax_geo_CHINA <- get_data(all_data, "L210.GrdRenewRsrcMax_geo_CHINA")
     L210.SmthRenewRsrcCurvesGdpElast_roofPV_CHINA <- get_data(all_data, "L210.SmthRenewRsrcCurvesGdpElast_roofPV_CHINA")
@@ -59,6 +61,7 @@ module_gcamchina_resources_xml <- function(command, ...) {
       add_xml_data(L210.GrdRenewRsrcCurves_geo_CHINA, "GrdRenewRsrcCurves") %>%
       add_xml_data(L210.GrdRenewRsrcMax_geo_CHINA, "GrdRenewRsrcMax") %>%
       add_xml_data(L210.SmthRenewRsrcCurvesGdpElast_roofPV_CHINA, "SmthRenewRsrcCurvesGdpElast") %>%
+      add_xml_data(L210.SmthRenewRsrcCurves_solar_CHINA, "SmthRenewRsrcCurves") %>%
       add_node_equiv_xml("resource") %>%
       add_node_equiv_xml("subresource") %>%
       add_xml_data(L210.ResTechShrwt_CHINA, "ResTechShrwt") %>%
@@ -68,6 +71,7 @@ module_gcamchina_resources_xml <- function(command, ...) {
                      "L210.UnlimitRsrcPrice_CHINA",
                      "L210.SmthRenewRsrcTechChange_CHINA",
                      "L210.SmthRenewRsrcCurves_wind_CHINA",
+                     "L210.SmthRenewRsrcCurves_solar_CHINA",
                      "L210.SmthRenewRsrcTechChange_offshore_wind_CHINA",
                      "L210.SmthRenewRsrcCurves_offshore_wind_CHINA",
                      "L210.GrdRenewRsrcCurves_geo_CHINA",
