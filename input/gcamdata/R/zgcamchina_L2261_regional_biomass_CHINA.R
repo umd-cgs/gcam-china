@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_gcamchina_L2261.regional_biomass_CHINA
+#' module_gcamchina_L2261.regional_biomass
 #'
 #' Create biomass supply sectors at the provincial level.
 #'
@@ -24,7 +24,7 @@
 #' @importFrom dplyr distinct filter inner_join if_else mutate select semi_join
 #' @importFrom tibble tibble
 #' @author MTB Aug 2018
-module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
+module_gcamchina_L2261.regional_biomass <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "energy/A21.sector",
              FILE = "energy/A26.sector",
@@ -50,7 +50,7 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
              "L2234.StubTechMarket_elecS_CHINA",
              "L232.StubTechMarket_ind_CHINA",
              "L2321.StubTechMarket_cement_CHINA",
-             "L244.StubTechMarket_CHINAbld",
+             "L244.StubTechMarket_bld_gcamchina",
              "L221.StubTechFractCalPrice_en",
              "L221.StubTechCalInput_bioOil",
              "L221.StubTechInterp_bioOil"))
@@ -127,7 +127,7 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
     L2234.StubTechMarket_elecS_CHINA <- get_data(all_data, "L2234.StubTechMarket_elecS_CHINA", strip_attributes = TRUE)
     L232.StubTechMarket_ind_CHINA <- get_data(all_data, "L232.StubTechMarket_ind_CHINA", strip_attributes = TRUE)
     L2321.StubTechMarket_cement_CHINA <- get_data(all_data, "L2321.StubTechMarket_cement_CHINA", strip_attributes = TRUE)
-    L244.StubTechMarket_bld <- get_data(all_data, "L244.StubTechMarket_CHINAbld", strip_attributes = TRUE) # L244.StubTechMarket_bld
+    L244.StubTechMarket_bld <- get_data(all_data, "L244.StubTechMarket_bld_gcamchina", strip_attributes = TRUE) # L244.StubTechMarket_bld
     L221.StubTechFractCalPrice_en <- get_data(all_data, "L221.StubTechFractCalPrice_en", strip_attributes = TRUE)
     L221.StubTechCalInput_bioOil <- get_data(all_data, "L221.StubTechCalInput_bioOil", strip_attributes = TRUE)
     L221.StubTechInterp_bioOil <- get_data(all_data, "L221.StubTechInterp_bioOil", strip_attributes = TRUE)
@@ -682,7 +682,7 @@ module_gcamchina_L2261.regional_biomass_CHINA <- function(command, ...) {
       add_comments("Updating market information for biomass inputs to province-level building sectors") %>%
       add_comments("Now consuming from province-level biomass supply sectors") %>%
       add_precursors("gcam-china/A28.sector",
-                     "L244.StubTechMarket_CHINAbld") ->
+                     "L244.StubTechMarket_bld_gcamchina") ->
       L2261.StubTechMarket_bld_CHINA
 
     return_data(L2261.DeleteSupplysector_bio_CHINA,

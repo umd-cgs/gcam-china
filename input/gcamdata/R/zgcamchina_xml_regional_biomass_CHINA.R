@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_gcamchina_batch_regional_biomass_CHINA_xml
+#' module_gcamchina_regional_biomass_xml
 #'
 #' Construct XML data structure for \code{regional_biomass_CHINA.xml}.
 #'
@@ -10,7 +10,7 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{regional_biomass_CHINA.xml}.
 #' The corresponding file in the original data system was \code{batch_regional_biomass_CHINA.xml} (gcamchina XML batch).
-module_gcamchina_batch_regional_biomass_CHINA_xml <- function(command, ...) {
+module_gcamchina_regional_biomass_xml <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L2261.DeleteSupplysector_bio_CHINA",
              "L2261.Supplysector_bio_CHINA",
