@@ -1,4 +1,6 @@
-#' module_gcamchina_batch_ghg_emissions_CHINA_xml
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
+#' module_gcamchina_ghg_emissions_xml
 #'
 #' Construct XML data structure for \code{ghg_emissions_CHINA.xml}.
 #'
@@ -8,7 +10,7 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{ghg_emissions_CHINA.xml}. The corresponding file in the
 #' original data system was \code{batch_ghg_emissions_CHINA.xml} (gcamchina XML).
-module_gcamchina_batch_ghg_emissions_CHINA_xml <- function(command, ...) {
+module_gcamchina_ghg_emissions_xml <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L273.en_ghg_tech_coeff_CHINA",
              "L273.en_ghg_emissions_CHINA",

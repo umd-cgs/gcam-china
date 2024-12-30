@@ -1,4 +1,6 @@
-#' module_gcam_L271.ghg_trn_CHINA
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
+#' module_gcamchina_L271.ghg_trn
 #'
 #' Non-CO2 GHG emissions parameters for transportation technologies in the China
 #'
@@ -14,7 +16,7 @@
 #' @importFrom tidyr gather
 #' @author BY September 2019 / YO 2022 / jiawdo July 2024
 
-  module_gcam_L271.ghg_trn_CHINA <- function(command, ...) {
+  module_gcamchina_L271.ghg_trn <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L201.en_ghg_emissions",
              "L254.StubTranTechCalInput_CHINA"))

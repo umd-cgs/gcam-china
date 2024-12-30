@@ -417,18 +417,35 @@ module_aglu_L202.an_input <- function(command, ...) {
       select(-value, -GCAM_region_ID) ->
       L202.StubTechCoef_an
 
+
     A_an_input_technology %>%
       write_to_all_regions(c(LEVEL2_DATA_NAMES[["Tech"]], "minicam.energy.input", "market.name"), GCAM_region_names) %>%
       rename(stub.technology = technology) %>%
       filter(stub.technology %in% aglu.FOREST_COMMODITIES) %>%
       repeat_add_columns(tibble(year = c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS))) %>%
-      left_join(L110.IO_Coefs_pulp%>% left_join_error_no_match(GCAM_region_names, by = c("GCAM_region_ID")), by = c("region","year")) %>%
-      mutate(coefficient = IO,
-             coefficient=if_else(stub.technology == "woodpulp",aglu.FOREST_PULP_CONVERSION,coefficient)) %>%
-      group_by(GCAM_region_ID,stub.technology) %>%
-      mutate(coefficient= if_else(is.na(coefficient),approx_fun(year, coefficient, rule = 1),coefficient)) %>%
+      left_join(L110.IO_Coefs_pulp %>%
+                  left_join_error_no_match(GCAM_region_names, by = c("GCAM_region_ID")),
+                by = c("region","year")) %>%
+      mutate(
+        coefficient = as.numeric(IO),
+        coefficient = if_else(
+          stub.technology == "woodpulp",
+          as.numeric(aglu.FOREST_PULP_CONVERSION),
+          as.numeric(coefficient)
+        )
+      ) %>%
+      filter(!is.na(GCAM_region_ID)) %>%
+      group_by(GCAM_region_ID, stub.technology) %>%
+      mutate(coefficient = if_else(
+        is.na(coefficient),
+        approx_fun(year, coefficient, rule = 1),
+        coefficient
+      )) %>%
       ungroup() %>%
-      select(colnames(L202.StubTechCoef_an))->L202.StubTechCoef_an_Forest
+      select(colnames(L202.StubTechCoef_an)) ->
+      L202.StubTechCoef_an_Forest
+
+
 
     # NOTE- Woodpulp IO coefficients have large range between regions in calibration years.
     # We can adjust this in future years by cutting off values beyond interquartile range. But for now we just maintain the calibration values.

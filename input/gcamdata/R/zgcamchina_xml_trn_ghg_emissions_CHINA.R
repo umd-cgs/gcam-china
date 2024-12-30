@@ -1,4 +1,6 @@
-#' module_gcamchina_batch_trn_ghg_emissions_CHINA_xml
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
+#' module_gcamchina_trn_ghg_emissions_xml
 #'
 #' Construct XML data structure for \code{othertrn_emissions_China.xml}.
 #'
@@ -8,7 +10,7 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{trn_ghg_emissions_China.xml}. The corresponding file in the
 #' original data system was \code{batch_transport_emissions_China_xml.R} (gcamchina XML).
-  module_gcamchina_batch_trn_ghg_emissions_CHINA_xml <- function(command, ...) {
+  module_gcamchina_trn_ghg_emissions_xml <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L271.ghg_trn_tech_coeff_CHINA"))
   } else if(command == driver.DECLARE_OUTPUTS) {

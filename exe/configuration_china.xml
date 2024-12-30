@@ -140,6 +140,10 @@
 		<Value name = "liq_lim_china">../input/gcamdata/xml/liquids_limits_CHINA.xml</Value>
 		<!-- Value name = "neg_emiss_china">../input/gcamdata/xml/negative_emissions_budget_CHINA_gSSP2.xml</Value-->
 
+		<!--GHG EMISSIONS China--> 
+		<Value name = "ghg_china">../input/gcamdata/xml/ghg_emissions_CHINA.xml</Value> 
+		<Value name = "ghg_china">../input/gcamdata/xml/trn_ghg_emissions_CHINA.xml</Value>
+
 		<!-- delete HK MC  -->
 		<Value name = "delete_china">../input/extra/delete_invalid_provinces.xml</Value>
 			

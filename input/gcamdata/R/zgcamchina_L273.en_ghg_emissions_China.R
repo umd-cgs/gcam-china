@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_gcam_L273.en_ghg_emissions_CHINA
+#' module_gcamchina_L273.en_ghg_emissions
 #'
 #' Define non-CO2 GHG emissions for GCAM-China provinces, including 1. CH4 and N2O in refinery,
 #' buildings, N fertilizer, industrial energy use; 
@@ -19,7 +19,7 @@
 #' @importFrom tidyr gather spread
 #' @author KRD 2018; MTB 2018; YO 2021 ; jiawdo July 2024
 
-  module_gcam_L273.en_ghg_emissions_CHINA <- function(command, ...) {
+  module_gcamchina_L273.en_ghg_emissions <- function(command, ...) {
   UCD_tech_map_name <- if_else(energy.TRAN_UCD_MODE == 'rev.mode',
                                "energy/mappings/UCD_techs_revised", "energy/mappings/UCD_techs")
   if(command == driver.DECLARE_INPUTS) {
@@ -35,8 +35,8 @@
              "L252.MAC_higwp_phaseInTime",
              "L222.StubTech_en_CHINA",
              "L232.StubTechCalInput_indenergy_CHINA",
-             "L244.StubTechCalInput_CHINAbld",
-             "L244.GlobalTechEff_CHINAbld",
+             "L244.StubTechCalInput_bld_gcamchina",
+             "L244.GlobalTechEff_bld_gcamchina",
              # the following files to be able to map in the input.name to
              # use for the input-driver
              FILE = "energy/A22.globaltech_input_driver",
@@ -82,8 +82,8 @@
     L252.MAC_higwp_phaseInTime <- get_data(all_data, "L252.MAC_higwp_phaseInTime", strip_attributes = TRUE)
     L222.StubTech_en_CHINA <- get_data(all_data, "L222.StubTech_en_CHINA", strip_attributes = TRUE)
     L232.StubTechCalInput_indenergy_CHINA <- get_data(all_data, "L232.StubTechCalInput_indenergy_CHINA", strip_attributes = TRUE)
-    L244.StubTechCalInput_CHINAbld <- get_data(all_data, "L244.StubTechCalInput_CHINAbld", strip_attributes = TRUE)
-    L244.GlobalTechEff_CHINAbld <- get_data(all_data, "L244.GlobalTechEff_CHINAbld", strip_attributes = TRUE)
+    L244.StubTechCalInput_bld_gcamchina <- get_data(all_data, "L244.StubTechCalInput_bld_gcamchina", strip_attributes = TRUE)
+    L244.GlobalTechEff_bld_gcamchina <- get_data(all_data, "L244.GlobalTechEff_bld_gcamchina", strip_attributes = TRUE)
 
     # Align Chinese subsector emissions in GCAM-global with those in GCAM-China
     # traditional biomass should correspond to trad biomass
@@ -210,7 +210,7 @@
       en_ghg_emissions_province
     # Buildings: First subset the heating and cooling demands
     #Align it with the distribution of residential heating in GCAM-China.
-    L244.StubTechCalInput_CHINAbld%>%
+    L244.StubTechCalInput_bld_gcamchina%>%
       filter(year %in% en_ghg_emissions_CHINA$year & subsector %in% en_ghg_emissions_CHINA$subsector) %>%
       # Add a sector column to match with the emissions data
       mutate(sector = if_else(supplysector %in% c("resid_urban heating", "resid_rural heating"), "resid heating",
@@ -328,13 +328,13 @@
       L273.out_ghg_emissions_elec_ownuse
 
     # To compute building service output, multiply the building energy use by efficiency
-    L244.StubTechCalInput_CHINAbld%>%
+    L244.StubTechCalInput_bld_gcamchina%>%
       # use inner_join to keep the cooling sectors defined in L241.hfc_pfc_bld
       inner_join(L241.hfc_pfc_bld %>%
                    select("supplysector","subsector","year") %>%
                    distinct(),
                  by = c("supplysector","subsector","year")) %>%
-      left_join_error_no_match(L244.GlobalTechEff_CHINAbld, by = c("supplysector" = "sector.name",
+      left_join_error_no_match(L244.GlobalTechEff_bld_gcamchina, by = c("supplysector" = "sector.name",
                                                               "subsector" = "subsector.name",
                                                               "stub.technology" = "technology",
                                                               "year")) %>%
@@ -451,8 +451,8 @@
                      "energy/A25.globaltech_input_driver",
                      "L222.StubTech_en_CHINA",
                      "L232.StubTechCalInput_indenergy_CHINA",
-                     "L244.StubTechCalInput_CHINAbld",
-                     "L244.GlobalTechEff_CHINAbld") ->
+                     "L244.StubTechCalInput_bld_gcamchina",
+                     "L244.GlobalTechEff_bld_gcamchina") ->
       L273.en_ghg_tech_coeff_CHINA
 
     L273.en_ghg_emissions_CHINA %>%
@@ -473,8 +473,8 @@
                      "L252.MAC_higwp",
                      "L222.StubTech_en_CHINA",
                      "L232.StubTechCalInput_indenergy_CHINA",
-                     "L244.StubTechCalInput_CHINAbld",
-                     "L244.GlobalTechEff_CHINAbld") ->
+                     "L244.StubTechCalInput_bld_gcamchina",
+                     "L244.GlobalTechEff_bld_gcamchina") ->
       L273.en_ghg_emissions_CHINA
 
     L273.out_ghg_emissions_CHINA %>%
@@ -492,8 +492,8 @@
                      "L252.MAC_higwp",
                      "L222.StubTech_en_CHINA",
                      "L232.StubTechCalInput_indenergy_CHINA",
-                     "L244.StubTechCalInput_CHINAbld",
-                     "L244.GlobalTechEff_CHINAbld") ->
+                     "L244.StubTechCalInput_bld_gcamchina",
+                     "L244.GlobalTechEff_bld_gcamchina") ->
       L273.out_ghg_emissions_CHINA
 
     L273.MAC_higwp_CHINA %>%
@@ -511,8 +511,8 @@
                      "L252.MAC_higwp",
                      "L222.StubTech_en_CHINA",
                      "L232.StubTechCalInput_indenergy_CHINA",
-                     "L244.StubTechCalInput_CHINAbld",
-                     "L244.GlobalTechEff_CHINAbld") ->
+                     "L244.StubTechCalInput_bld_gcamchina",
+                     "L244.GlobalTechEff_bld_gcamchina") ->
       L273.MAC_higwp_CHINA
 
     L273.MAC_higwp_TC_CHINA %>%
