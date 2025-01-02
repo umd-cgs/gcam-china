@@ -55,6 +55,8 @@ module_gcamchina_L225.hydrogen <- function(command, ...) {
     L225.StubTech_h2 <- get_data(all_data, "L225.StubTech_h2", strip_attributes = TRUE)
     L225.GlobalTechCoef_h2 <- get_data(all_data, "L225.GlobalTechCoef_h2", strip_attributes = TRUE)
 
+    L201.Pop_GCAMCHINA <- get_data(all_data, "L201.Pop_GCAMCHINA", strip_attributes = TRUE)
+
     # ===================================================
     # Delete the hydrogen sectors from the China region
     L225.DeleteSupplysector_h2_CHINA <- L225.Supplysector_h2 %>%
