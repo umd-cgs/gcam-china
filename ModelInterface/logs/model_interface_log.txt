@@ -3,22 +3,4 @@ PROPERTY CHANGEdocument-replaced
 DOCUMENT REPLACED
 PROPERTY CHANGEdocument-replaced
 DOCUMENT REPLACED
-Going to change controls
-About to perform query: collection()/scenario
-About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
-Didn't find builder for detailed land allocation query going to use defaults
-Didn't find builder for detailed historical land allocation query going to use defaults
-Didn't find builder for land allocation by crop query going to use defaults
-Didn't find builder for aggregated land allocation query going to use defaults
-Didn't find builder for aggregated historical land allocation query going to use defaults
-Didn't find builder for land allocation in a specified land use region query going to use defaults
-Didn't find builder for land allocation by crop and water source query going to use defaults
-Didn't find builder for LUC emissions by region query going to use defaults
-Didn't find builder for LUC emissions by LUT query going to use defaults
-Didn't find builder for LUC emissions by LUT in a specified land use region query going to use defaults
-Didn't find builder for vegetative carbon stock by region query going to use defaults
-Didn't find builder for profit rate query going to use defaults
-Didn't find builder for profit rate in a specified land use region query going to use defaults
-Didn't find builder for land leaf shares query going to use defaults
-Didn't find builder for land leaf shares in a specified land use region query going to use defaults
 Caught the window closing
