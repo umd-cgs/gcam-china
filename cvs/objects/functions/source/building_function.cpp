@@ -70,7 +70,6 @@ double BuildingFunction::calcCoefficient( InputSet& input, double consumption, c
             / buildingNodeInput->getSubregionalPopulation();
         // first calibrate the satiation impedance
         SatiationDemandFunction* demandFunction = buildingNodeInput->getSatiationDemandFunction();
-        demandFunction->calibrateSatiationImpedance( perCapitaBaseFloorspace, buildingNodeInput->getSubregionalIncome(), period );
     }
     return 1;
 }
@@ -91,7 +90,7 @@ double BuildingFunction::calcDemand( InputSet& input, double income, const std::
         double priceTerm = pow( cappedPriceRatio, buildingNodeInput->getPriceElasticity( period ) );
         // Use the satiation demand function to calculate per capita demand.
         double perCapitaDemand =
-            buildingNodeInput->getSatiationDemandFunction()->calcDemand( buildingNodeInput->getSubregionalIncome() * priceTerm );
+            buildingNodeInput->getSatiationDemandFunction()->calcDemand( buildingNodeInput->getSubregionalIncome(regionName, period) * priceTerm );
         // May need to make an adjustment in case of negative prices.
         if( priceRatio < cappedPriceRatio && buildingNodeInput->getPriceElasticity( period ) != 0 ) {
             perCapitaDemand = SectorUtils::adjustDemandForNegativePrice( perCapitaDemand, priceRatio );

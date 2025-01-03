@@ -85,9 +85,6 @@
 		<Value name = "municipal_water">../input/gcamdata/xml/water_demand_municipal.xml</Value>
 		<Value name = "primary_ene_water">../input/gcamdata/xml/water_demand_primary.xml</Value>
 		
-		<Value name = "macro">../input/gcamdata/xml/socioeconomics_macro.xml</Value>
-		
-
 		<!-- Global nonCO2 GHG files -->
 		<Value name = "ind_urb_proc">../input/gcamdata/xml/ind_urb_processing_sectors.xml</Value>
 		<Value name = "nonco2_energy">../input/gcamdata/xml/all_energy_emissions.xml</Value>
