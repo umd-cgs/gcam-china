@@ -6,6 +6,7 @@ input/policy_wr
 ModelInterface/
 unil/
 cvs/objects/build/linux/
+cvs/objects/util/base/source/xml_parse_helper.o
 exe/
 .history/
 Additioanl Licenses/
