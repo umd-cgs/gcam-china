@@ -6,6 +6,7 @@ input/policy_wr
 ModelInterface/
 unil/
 cvs/objects/build/linux/
+cvs/objects/build/linux/libgcam.a
 cvs/objects/util/base/source/xml_parse_helper.o
 exe/
 .history/
@@ -89,5 +90,7 @@ xcuserdata
 input/gcamdata/inst/extdata/emissions/CEDS/desktop.ini
 *.txt
 *.txt
+cvs/objects/build/linux/libgcam.a
+cvs/objects/util/base/source/xml_parse_helper.o
 cvs/objects/build/linux/libgcam.a
 cvs/objects/util/base/source/xml_parse_helper.o
