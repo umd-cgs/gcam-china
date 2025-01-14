@@ -1,0 +1,4 @@
+# Ignore temporary build files
+*
+# Do not ignore this file
+!.gitignore

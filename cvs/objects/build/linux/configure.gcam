@@ -1,0 +1,190 @@
+### Compile settings for MiniCAM on Linux ###
+### William.Gustafson@pnl.gov; 9-Sep-2008 ###
+
+### load file of system-specific library paths, etc.
+include $(BUILDPATH)/config.system
+
+### gcc compiler settings (testing with v4.1.2) ###
+ifeq ($(strip $(CXX)),)
+CXX             = g++
+endif
+ifeq ($(strip $(CC)),)
+CC		= gcc
+endif
+CXXOPTIM        = -O3 -pthread
+CXXDEBUG        = -ggdb -DNDEBUG
+CXXBASEOPTS     = $(CXXDEBUG)
+
+ARCH_FLAGS      = 
+ENVLIBS         = 
+
+# only hector is using C++ 17 features and even then only to replace
+# the need to link the Boost system and filesystem libraries
+# however we can easily fall back to C++ 14 if needed (but then will need
+# to link those Boost libraries)
+ifeq ($(strip $(NO_CXX17)),)
+  CXXSTD = c++17
+else
+  CXXSTD = c++14
+endif
+
+## sets if we have Java which is required to GCAM output into a BaseX database
+## should a user not be able to use Java they could concievably turn this off
+## and set DEBUG_XML_DB in xml_db_outputter.ccp to just have the data written
+## out as an XML file (having both disabled will send the output to nowhere)
+HAVE_JAVA = 1
+
+## set this to a nonzero value to enable parallel execution (TBB required)
+ifndef USE_GCAM_PARALLEL
+  USE_GCAM_PARALLEL = 1
+endif
+
+## Check to see if MKL is in use.  We infer this from the existence of
+## the variable MKL_CFLAGS, which gives the location for the MKL
+## include files.  However, an explicit setting of USE_MKL overrides
+## (but woe betide the user who sets USE_MKL=1 and doesn't specify
+## MKL_CFLAGS, MKL_LDFLAGS, MKL_LIB, and MKL_RPATH, for their build
+## shall be cursed.)
+ifndef USE_MKL
+  ifdef MKL_CFLAGS
+    USE_MKL=1
+    CXXBASEOPTS += -DEIGEN_USE_MKL_ALL=1
+  else
+    USE_MKL=0
+  endif
+endif
+
+#### flag indicating whether or not to use hector
+#### If we are using hector, there are some other variables to set.
+USE_HECTOR = 1
+
+ifeq ($(USE_HECTOR),1)
+
+  # hector Makefile is looking for slightly different names for BOOST
+  # include and lib
+  BOOSTINC=$(BOOST_INCLUDE)
+  BOOSTLIB=$(BOOST_LIB)
+  export BOOSTINC BOOSTLIB
+
+  HECTOR_INCLUDE = -I../../climate/source/hector/headers
+  # hector allows us to fall back to the C++ 14 standard if we do not have it
+  # however, we then need to link the Boost system and filesystem libraries
+  ifeq ($(strip $(NO_CXX17)),)
+      HECTOR_LIB = -lhector
+  else
+      ifeq ($(strip $(BOOST_LIB)),)
+        $(error Unable to detect Boost lib path, please set env variable BOOST_LIB)
+      endif
+      HECTOR_LIB = -L$(BOOST_LIB) -Wl,-rpath,$(BOOST_LIB) -lhector -lboost_system -lboost_filesystem
+  endif
+
+endif  # if(USE_HECTOR==1)
+
+# we may want to not use TBB in which case we have guard against empty -I or -L directives
+ifneq ($(strip $(TBB_INCLUDE)),)
+TBB_INC     = -I$(TBB_INCLUDE)
+endif
+#
+ifneq ($(strip $(TBB_LIB)),)
+TBB_LIBRARY     = -L$(TBB_LIB)
+TBB_RPATH	= -Wl,-rpath,$(TBB_LIB)
+endif
+#
+# Set the environment var TBB_LINK_DEBUG to get debugging versions of libraries
+ifneq ($(strip $(TBB_LINK_DEBUG)),1)
+  LIBTBB          = tbb
+  LIBTBBMALLOC    = tbbmalloc
+  LIBTBBMALLOC_PROXY = tbbmalloc_proxy
+else
+  LIBTBB          = tbb_debug
+  LIBTBBMALLOC    = tbbmalloc_debug
+  LIBTBBMALLOC_PROXY = tbbmalloc_proxy_debug
+endif
+#
+ifneq ($(USE_GCAM_PARALLEL),0) 
+ifeq ($(strip $(TBB_INC)),)
+  $(error Unable to detect TBB include path, please set env variable TBB_INCLUDE)
+endif
+ifeq ($(strip $(TBB_LIBRARY)),)
+  $(error Unable to detect TBB lib path, please set env variable TBB_LIB)
+endif
+TBB_LIB_IMPORT		= -l$(LIBTBB) -l$(LIBTBBMALLOC) -l$(LIBTBBMALLOC_PROXY)
+endif
+
+# Set up Java paths for compiling via environment variables if we are using it
+ifneq ($(HAVE_JAVA),0) 
+ifeq ($(strip $(JAVA_INCLUDE)),)
+  $(error Unable to detect Java include path, please set env variable JAVA_INCLUDE)
+endif
+ifeq ($(strip $(JAVA_LIB)),)
+  $(error Unable to detect Java lib path, please set env variable JAVA_LIB)
+endif
+ifeq ($(strip $(JARS_LIB)),)
+  $(error Unable to detect Jar lib path, please set env variable JARS_LIB)
+endif
+## custom values set by environment variables
+ifndef OSNAME_LOWERCASE
+  OSNAME_LOWERCASE := $(shell uname -s | tr '[:upper:]' '[:lower:]')
+endif
+JAVAINC = -I$(JAVA_INCLUDE) -I$(JAVA_INCLUDE)/$(OSNAME_LOWERCASE)
+JAVALIB = -L$(JAVA_LIB)
+JAVA_RPATH = -Wl,-rpath,$(JAVA_LIB)
+JAVALINK = -ljvm
+JARSLIB = -DJARS_LIB="\"$(JARS_LIB)\""
+else
+JAVAINC = 
+JAVALIB = 
+JAVA_RPATH =
+JAVALINK =
+JARSLIB = 
+# override default in GCAM that has Java enabled (__HAVE_JAVA__ = 1)
+CXXBASEOPTS += -D__HAVE_JAVA__=0
+endif
+
+### locations of library include files
+# BOOST_INCLUDE should be set in the user environment on Evergreen by running 'tap boost'.
+BOOSTINC	      = $(BOOST_INCLUDE)
+ifeq ($(strip $(BOOST_INCLUDE)),)
+  $(error Unable to detect Boost include path, please set env variable BOOST_INCLUDE)
+endif
+
+
+ifeq ($(strip $(EIGEN_INCLUDE)),)
+  $(error Unable to detect Eigen include path, please set env variable EIGEN_INCLUDE)
+endif
+
+#
+### locations of libraries
+LIBDIR = $(TBB_LIBRARY) -L/usr/local/lib -L$(BUILDPATH) $(JAVALIB)
+
+### The rest should be mostly compiler independent
+## Note $(PROF) will be set as needed if we are building the gcam-prof target
+CPPFLAGS	= $(INCLUDE) $(ARCH_FLAGS) $(JARSLIB) -DGCAM_PARALLEL_ENABLED=$(USE_GCAM_PARALLEL) -DUSE_HECTOR=$(USE_HECTOR) $(MKL_CFLAGS) -D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION
+CXXFLAGS        = $(CXXOPTIM) $(CXXBASEOPTS) $(PROF) $(CXXEXTRA) -MMD -std=$(CXXSTD) -Wno-deprecated 
+FCFLAGS         = $(FCOPTIM) $(FCBASEOPTS) $(PROF)
+LD              = $(CXX) $(PROF)
+LDFLAGS         = $(CXXFLAGS) $(JAVA_RPATH) $(TBB_RPATH) $(MKL_LDFLAGS)
+AR              = ar ru
+#MAKE            = make -i -r
+RANLIB          = ranlib
+LIB             = ${ENVLIBS} $(LIBDIR) $(JAVALINK) $(HECTOR_LIB) $(TBB_LIB_IMPORT) -lm
+INCLUDE         = -I$(BOOSTINC) $(JAVAINC) $(TBB_INC) $(HECTOR_INCLUDE) -I$(EIGEN_INCLUDE) \
+		 -I${PATHOFFSET} \
+		 -I${HOME}/include
+
+### rule for building the dependency information
+# %.d: %.cpp
+# 	@set -e; rm -f $@; \
+# 	$(CC) -MM $(CPPFLAGS) $< > $@.$$$$; \
+# 	sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
+# 	rm -f $@.$$$$
+
+
+### These will be expanded with whatever the value of OBJS happens to be when they 
+### are referenced.  Each leaf-directory Makefile sets OBJS as appropriate, so this
+### will do the right thing.
+SRCS	 = $(OBJS:.o=.cpp)
+DEPS	 = $(OBJS:.o=.d)
+
+%.o: %.f90
+	$(FC) -c $(FCFLAGS) $(INCLUDE) $<
