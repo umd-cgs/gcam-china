@@ -4,7 +4,6 @@
 output/
 input/policy_wr
 ModelInterface/
-cvs/objects/util/base/source/xml_parse_helper.o
 exe/
 .history/
 Additioanl Licenses/
@@ -86,5 +85,3 @@ xcuserdata
 .Rproj.user
 input/gcamdata/inst/extdata/emissions/CEDS/desktop.ini
 *.txt
-cvs/objects/build/linux/libgcam.a
-cvs/objects/util/base/source/xml_parse_helper.o
