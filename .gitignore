@@ -1,12 +1,8 @@
 # Combine C++, Visual Studio, and Xcode gitignores from:
 # https://github.com/github/gitignore/tree/master/Global
 
-output/
 input/policy_wr
 ModelInterface/
-unil/
-cvs/
-exe/
 .history/
 Additioanl Licenses/
 
@@ -86,5 +82,3 @@ xcuserdata
 *.xcuserstate
 .Rproj.user
 input/gcamdata/inst/extdata/emissions/CEDS/desktop.ini
-*.txt
-*.txt
