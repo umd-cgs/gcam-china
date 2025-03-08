@@ -3,8 +3,6 @@
 	<ComponentSet name="base">
 		<FileSet name="GCAM_"> 
             <Value name = "climate">../input/gcamdata/xml/hector.xml</Value>
-			<Value name = "socioeconomics">../input/gcamdata/xml/socioeconomics_gSSP2.xml</Value>
-			
 			<Value name = "resources">../input/gcamdata/xml/resources.xml</Value>
 			<Value name = "energy_supply">../input/gcamdata/xml/en_supply.xml</Value>
 			<Value name = "energy_transformation">../input/gcamdata/xml/en_transformation.xml</Value>
@@ -23,6 +21,9 @@
 			<Value name = "chemical_income_elas">../input/gcamdata/xml/chemical_incelas_gssp2.xml</Value>   
  			<Value name = "aluminum">../input/gcamdata/xml/aluminum.xml</Value>
 			<Value name = "aluminum_income_elas">../input/gcamdata/xml/aluminum_incelas_gssp2.xml</Value> 
+ 			<Value name = "paper">../input/gcamdata/xml/paper.xml</Value>
+			<Value name = "paper_income_elas">../input/gcamdata/xml/paper_incelas_gssp2.xml</Value> 
+			<Value name = "food_processing">../input/gcamdata/xml/food_processing.xml</Value>
 			<Value name = "cement">../input/gcamdata/xml/cement.xml</Value>
 			<Value name = "cement_income_elas">../input/gcamdata/xml/cement_incelas_gssp2.xml</Value>
 			<Value name = "fertilizer_energy">../input/gcamdata/xml/en_Fert.xml</Value>
@@ -45,8 +46,10 @@
 			<Value name = "land4">../input/gcamdata/xml/land_input_4_IRR_MGMT.xml</Value>
 			<Value name = "land5">../input/gcamdata/xml/land_input_5_IRR_MGMT.xml</Value>
 			<Value name = "demand">../input/gcamdata/xml/ag_an_demand_input.xml</Value>
+			<Value name = "demand_paper">../input/gcamdata/xml/paper_delete_ag_demand.xml</Value>
 			<Value name = "bio_trade">../input/gcamdata/xml/bio_trade.xml</Value>
 			<Value name = "ag_trade">../input/gcamdata/xml/ag_trade.xml</Value>
+		      <Value name = "ag_storage">../input/gcamdata/xml/ag_storage.xml</Value>
 			
 			<Value name = "unlim_supply_water">../input/gcamdata/xml/unlimited_water_supply.xml</Value>
 			<Value name = "water_supply">../input/gcamdata/xml/water_supply_constrained.xml</Value>
@@ -76,8 +79,12 @@
 		    <Value name = "nonco2_proc">../input/gcamdata/xml/ind_urb_processing_sectors_MAC.xml</Value>  		
 			
             <Value name = "bio_feedstock_limit">../input/gcamdata/xml/liquids_limits.xml</Value>
+            <Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
+            <!-- NEG EMISS BUDGET -->
+            <Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget.xml</Value>
             <Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value>
 			<Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
+            <Value name = "macro">../input/gcamdata/xml/socioeconomics_macro.xml</Value>
             <Value name = "gas_trade">../input/gcamdata/xml/gas_trade.xml</Value>
 			<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 			
@@ -94,6 +101,7 @@
 			<Value name = "Off_road_income_elas">../input/gcamdata/xml/Off_road_incelas_ssp4.xml</Value>  
 			<Value name = "chemical_income_elas">../input/gcamdata/xml/chemical_incelas_ssp4.xml</Value>   
 			<Value name = "aluminum_income_elas">../input/gcamdata/xml/aluminum_incelas_ssp4.xml</Value> 
+			<Value name = "paper_income_elas">../input/gcamdata/xml/paper_incelas_ssp4.xml</Value>  
 			<Value name="cement">../input/gcamdata/xml/cement_incelas_ssp4.xml</Value>
 			
 			<!-- TRANSPORTATION -->
@@ -135,9 +143,7 @@
 			<!-- WASTEWATER TREATMENT FRACTIONS -->
 			<Value name="wwtrt">../input/gcamdata/xml/EFW_WWtrt_coefs_SSP4.xml</Value>
 
-            <!-- NEG EMISS BUDGET -->
-            <Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget_SSP4.xml</Value>
-            <Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
+            <Value name = "prune_ag">../input/gcamdata/xml/prune_empty_ag.xml</Value>
 		</FileSet>
 		
 		<FileSet name="SSP5">
@@ -150,6 +156,7 @@
 			<Value name = "Off_road_income_elas">../input/gcamdata/xml/Off_road_incelas_ssp5.xml</Value>  
 			<Value name = "chemical_income_elas">../input/gcamdata/xml/chemical_incelas_ssp5.xml</Value>   
 			<Value name = "aluminum_income_elas">../input/gcamdata/xml/aluminum_incelas_ssp5.xml</Value> 
+			<Value name = "paper_income_elas">../input/gcamdata/xml/paper_incelas_ssp5.xml</Value> 
 			<Value name="cement">../input/gcamdata/xml/cement_incelas_ssp5.xml</Value>
 			
 			<!-- TRANSPORTATION -->
@@ -175,9 +182,7 @@
 			<!-- WASTEWATER TREATMENT FRACTIONS -->
 			<Value name="wwtrt">../input/gcamdata/xml/EFW_WWtrt_coefs_SSP5.xml</Value>
 
-            <!-- NEG EMISS BUDGET -->
-            <Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget_SSP5.xml</Value>
-            <Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
+            <Value name = "prune_ag">../input/gcamdata/xml/prune_empty_ag.xml</Value>
 		</FileSet>
 		
 		<FileSet name="SSP1">
@@ -190,6 +195,7 @@
 			<Value name = "Off_road_income_elas">../input/gcamdata/xml/Off_road_incelas_ssp1.xml</Value>  
 			<Value name = "chemical_income_elas">../input/gcamdata/xml/chemical_incelas_ssp1.xml</Value>   
 			<Value name = "aluminum_income_elas">../input/gcamdata/xml/aluminum_incelas_ssp1.xml</Value> 
+			<Value name = "paper_income_elas">../input/gcamdata/xml/paper_incelas_ssp1.xml</Value> 
 			<Value name="cement">../input/gcamdata/xml/cement_incelas_ssp1.xml</Value>
 			
 			<!-- TRANSPORTATION -->
@@ -233,9 +239,7 @@
 			<!-- WASTEWATER TREATMENT FRACTIONS -->
 			<Value name="wwtrt">../input/gcamdata/xml/EFW_WWtrt_coefs_SSP1.xml</Value>
 
-            <!-- NEG EMISS BUDGET -->
-            <Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget_SSP1.xml</Value>
-            <Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
+            <Value name = "prune_ag">../input/gcamdata/xml/prune_empty_ag.xml</Value>
 		</FileSet>
 		
 		<FileSet name="SSP2">
@@ -248,6 +252,7 @@
 			<Value name = "Off_road_income_elas">../input/gcamdata/xml/Off_road_incelas_ssp2.xml</Value>  
 			<Value name = "chemical_income_elas">../input/gcamdata/xml/chemical_incelas_ssp2.xml</Value>   
 			<Value name = "aluminum_income_elas">../input/gcamdata/xml/aluminum_incelas_ssp2.xml</Value> 
+			<Value name = "paper_income_elas">../input/gcamdata/xml/paper_incelas_ssp2.xml</Value> 
 			<Value name="cement">../input/gcamdata/xml/cement_incelas_ssp2.xml</Value>
 			
 			<!-- TRANSPORTATION -->
@@ -271,9 +276,7 @@
 			<!-- WASTEWATER TREATMENT FRACTIONS -->
 			<Value name="wwtrt">../input/gcamdata/xml/EFW_WWtrt_coefs_SSP2.xml</Value>
 
-            <!-- NEG EMISS BUDGET -->
-            <Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget_SSP2.xml</Value>
-            <Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
+            <Value name = "prune_ag">../input/gcamdata/xml/prune_empty_ag.xml</Value>
 		</FileSet>
 		
 		<FileSet name="SSP3">
@@ -286,6 +289,7 @@
 			<Value name = "Off_road_income_elas">../input/gcamdata/xml/Off_road_incelas_ssp3.xml</Value>  
 			<Value name = "chemical_income_elas">../input/gcamdata/xml/chemical_incelas_ssp3.xml</Value>   
 			<Value name = "aluminum_income_elas">../input/gcamdata/xml/aluminum_incelas_ssp3.xml</Value> 
+			<Value name = "paper_income_elas">../input/gcamdata/xml/paper_incelas_ssp3.xml</Value> 
 			<Value name="cement">../input/gcamdata/xml/cement_incelas_ssp3.xml</Value>
 			
 			<!-- TRANSPORTATION -->
@@ -331,9 +335,7 @@
 			<!-- WASTEWATER TREATMENT FRACTIONS -->
 			<Value name="wwtrt">../input/gcamdata/xml/EFW_WWtrt_coefs_SSP3.xml</Value>
 
-            <!-- NEG EMISS BUDGET -->
-            <Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget_SSP3.xml</Value>
-            <Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
+            <Value name = "prune_ag">../input/gcamdata/xml/prune_empty_ag.xml</Value>
 		</FileSet>		
 	</ComponentSet>
 	

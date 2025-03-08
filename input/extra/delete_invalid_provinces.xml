@@ -8,6 +8,11 @@
                 <subsector name="MC electricity" delete="1"/>
             </supplysector>
         </region>
+        <region name="China">
+            <supplysector name="backup_electricity">
+                <subsector name="hydrogen" delete="1"/>
+            </supplysector>
+        </region>
         <!--region name="China">
             <supplysector name="refining">
                 <subsector name="biomass liquids">
@@ -23,5 +28,6 @@
                 </absolute-cost-logit>
             </supplysector>
         </region>
+
     </world>
 </scenario>

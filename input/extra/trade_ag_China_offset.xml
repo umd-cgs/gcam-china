@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario>
+    <world>
+        
+        <region name="China">
+            <supplysector name="regional industrial_roundwood">
+                <subsector name="imported industrial_roundwood">
+                    <relative-cost-logit>
+                        <logit-exponent fillout="1" year="1975">-6</logit-exponent>
+                    </relative-cost-logit>
+                    <share-weight fillout="1" year="1975">1</share-weight>
+                    <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100">
+                        <to-value>1</to-value>
+                        <interpolation-function name="fixed"/>
+                    </interpolation-rule>
+
+                    <stub-technology name="imported industrial_roundwood">
+                        <period year="1975">
+                            <fixedOutput>0.00128356119338493</fixedOutput>
+                        </period>
+                        <period year="1990">
+                            <fixedOutput>0.00440407212896518</fixedOutput>
+                        </period>
+                        <period year="2005">
+                            <fixedOutput>0.0292625428440247</fixedOutput>
+                        </period>
+                        <period year="2010">
+                            <fixedOutput>0.0341864366827422</fixedOutput>
+                        </period>
+                        <period year="2015">
+                            <fixedOutput>0.0489130372932845</fixedOutput>
+                        </period>
+                        <period year="2020">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2025">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2030">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2035">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2040">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2045">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2050">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2055">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2060">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2065">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2070">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2075">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2080">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2085">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2090">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2095">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                        <period year="2100">
+                            <fixedOutput>0</fixedOutput>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </supplysector>
+            
+        </region>
+        
+    </world>
+</scenario>

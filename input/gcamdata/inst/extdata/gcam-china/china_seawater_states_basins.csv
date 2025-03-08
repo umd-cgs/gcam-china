@@ -1,0 +1,40 @@
+# File: china_seawater_states_basins.csv
+# Title: China provinces and basins which have direct access to seawater
+# Units: N/A
+# Comments: This table lists the various states or basins which have direct seawater access to help filter desalination and seawater cooling technologies
+# Column types: cc
+# ----------
+region,seawater_region
+China,AH
+China,BJ
+China,CQ
+China,FJ
+China,GD
+China,GS
+China,GX
+China,GZ
+China,HA
+China,HB
+China,HE
+China,HI
+China,HK
+China,HL
+China,HN
+China,JL
+China,JS
+China,JX
+China,LN
+China,MC
+China,NM
+China,NX
+China,QH
+China,SC
+China,SD
+China,SH
+China,SN
+China,SX
+China,TJ
+China,XJ
+China,XZ
+China,YN
+China,ZJ

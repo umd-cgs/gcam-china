@@ -2196,6 +2196,12 @@ element input {
             cost/text()</xPath>
                     <comments/>
                 </supplyDemandQuery>
+				<supplyDemandQuery title="Energy consumption by technology">
+                    <axis1 name="input">input</axis1>
+                    <axis2 name="Year">demand-physical[@vintage]</axis2>
+                    <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector']/*[@type='subsector']/*[@type='technology']/*[@type='input']/demand-physical/node()</xPath>
+                    <comments/>
+                </supplyDemandQuery>
             </queryGroup>
             <queryGroup name="buildings">
                 <supplyDemandQuery title="building floorspace">

@@ -56,14 +56,13 @@
 #include "util/base/include/value.h"
 #include "util/base/include/time_vector.h"
 #include "util/base/include/data_definition_util.h"
+#include "marketplace/include/cached_market.h"
 
 // Forward declarations
-class GDP;
 class IInfo;
 class IOutput;
 class ICaptureComponent;
 class IInput;
-class CachedMarket;
 
 // Need to forward declare the subclasses as well.
 class CO2Emissions;
@@ -169,7 +168,6 @@ public:
     virtual void calcEmission( const std::string& aRegionName, 
                                const std::vector<IInput*>& aInputs,
                                const std::vector<IOutput*>& aOutputs,
-                               const GDP* aGDP,
                                ICaptureComponent* aSequestrationDevice,
                                const int aPeriod ) = 0;
     
@@ -210,7 +208,7 @@ protected:
     
     //! Pre-located market which has been cached from the marketplace to get the price
     //! of this ghg and add demands to the market.
-    std::auto_ptr<CachedMarket> mCachedMarket;
+    CachedMarket mCachedMarket;
    
     /*!
      * \brief XML debug output stream for derived classes
