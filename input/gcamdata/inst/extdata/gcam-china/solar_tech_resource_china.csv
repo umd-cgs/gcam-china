@@ -1,0 +1,11 @@
+# File: solar_tech_resource_china.csv
+# Title: Mappings China technologies and resource by fuel and electric sector
+# Units: NA
+# Comments: Mapping file between single electricity technologies and resource
+# Column types: cc
+# ----------
+technology,minicam.energy.input
+PV,solar pv resource
+PV_storage,solar pv resource
+CSP,global solar resource
+CSP_storage,global solar resource

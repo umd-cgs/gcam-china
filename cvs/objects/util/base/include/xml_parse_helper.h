@@ -50,6 +50,7 @@
 #include <map>
 #include <cstring>
 #include <boost/lexical_cast.hpp>
+#include <boost/type_traits/is_base_of.hpp>
 
 #ifdef USE_STANDALONE_RAPIDXML
 #include <rapidxml.hpp>
@@ -134,7 +135,7 @@ struct XMLParseHelper {
             T returnValue = boost::lexical_cast<T>( aValueStr );
             return returnValue;
         }
-        catch( boost::bad_lexical_cast& ) {
+        catch( const boost::bad_lexical_cast& ) {
             // ideally we would send this to a logger however this method may
             // be called before the loggers have been initialized
             std::cout << "Cast of node with value " << aValueStr << " to return type "

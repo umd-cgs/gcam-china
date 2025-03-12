@@ -1,0 +1,64 @@
+# File: cR_BldS_F_U_share_res.csv
+# Title: Climate region / building type / fuel / service shares
+# Units: NA
+# Description: rawdata/Buildings/Bld_fuel_service_China_climatezone.xlsx
+# Source: TODO
+# Column types: cccnnnnn
+# ----------
+climate.region,sector,fuel,heating modern,cooling modern,lighting modern,hot water_cooking modern,appliances modern
+C,resid_urban,biomass,1,0,0,0,0
+C,resid_urban,traditional biomass,0,0,0,0,0
+C,resid_urban,coal,0.9,0,0,0.1,0
+C,resid_urban,electricity,0.006092735,0.110320531,0.401881933,0.011604254,0.470100547
+C,resid_urban,gas,0.273778974,0,0,0.726221026,0
+C,resid_urban,refined liquids,0.30077457,0,0,0.69922543,0
+C,resid_urban,heat,1,0,0,0,0
+C,resid_rural,biomass,0.5,0,0,0.5,0
+C,resid_rural,traditional biomass,0.7,0,0,0.3,0
+C,resid_rural,coal,0.9,0,0,0.1,0
+C,resid_rural,electricity,0.006092735,0.110320531,0.401881933,0.011604254,0.470100547
+C,resid_rural,gas,0.273778974,0,0,0.726221026,0
+C,resid_rural,refined liquids,0.5,0,0,0.5,0
+C,resid_rural,heat,0,0,0,0,0
+HSCW,resid_urban,biomass,1,0,0,0,0
+HSCW,resid_urban,traditional biomass,0,0,0,0,0
+HSCW,resid_urban,coal,0.125,0,0,0.875,0
+HSCW,resid_urban,electricity,0.003644794,0.346640091,0.369692726,0.06558555,0.21443684
+HSCW,resid_urban,gas,0.671164894,0,0,0.328835106,0
+HSCW,resid_urban,refined liquids,0.280081303,0,0,0.719918697,0
+HSCW,resid_urban,heat,1,0,0,0,0
+HSCW,resid_rural,biomass,0.5,0,0,0.5,0
+HSCW,resid_rural,traditional biomass,0.52,0,0,0.48,0
+HSCW,resid_rural,coal,0.125,0,0,0.875,0
+HSCW,resid_rural,electricity,0.003644794,0.346640091,0.369692726,0.06558555,0.21443684
+HSCW,resid_rural,gas,0.671164894,0,0,0.328835106,0
+HSCW,resid_rural,refined liquids,0.5,0,0,0.5,0
+HSCW,resid_rural,heat,0,0,0,0,0
+HSWW,resid_urban,biomass,1,0,0,0,0
+HSWW,resid_urban,traditional biomass,0,0,0,0,0
+HSWW,resid_urban,coal,0,0,0,1,0
+HSWW,resid_urban,electricity,0,0.334799533,0.305128798,0.029846773,0.330224896
+HSWW,resid_urban,gas,0.35138494,0,0,0.64861506,0
+HSWW,resid_urban,refined liquids,0,0,0,1,0
+HSWW,resid_urban,heat,1,0,0,0,0
+HSWW,resid_rural,biomass,0.5,0,0,0.5,0
+HSWW,resid_rural,traditional biomass,0.001,0,0,0.999,0
+HSWW,resid_rural,coal,0,0,0,1,0
+HSWW,resid_rural,electricity,0,0.334799533,0.305128798,0.029846773,0.330224896
+HSWW,resid_rural,gas,0.35138494,0,0,0.64861506,0
+HSWW,resid_rural,refined liquids,0.5,0,0,0.5,0
+HSWW,resid_rural,heat,0,0,0,0,0
+SC,resid_urban,biomass,1,0,0,0,0
+SC,resid_urban,traditional biomass,0,0,0,0,0
+SC,resid_urban,coal,0.666666667,0,0,0.333333333,0
+SC,resid_urban,electricity,0.002104887,0.006100457,0.425724756,0.078033332,0.488036568
+SC,resid_urban,gas,0.704458607,0,0,0.295541393,0
+SC,resid_urban,refined liquids,0.493884056,0,0,0.506115944,0
+SC,resid_urban,heat,1,0,0,0,0
+SC,resid_rural,biomass,0.5,0,0,0.5,0
+SC,resid_rural,traditional biomass,0.73,0,0,0.27,0
+SC,resid_rural,coal,0.666666667,0,0,0.333333333,0
+SC,resid_rural,electricity,0.002104887,0.006100457,0.425724756,0.078033332,0.488036568
+SC,resid_rural,gas,0.704458607,0,0,0.295541393,0
+SC,resid_rural,refined liquids,0.5,0,0,0.5,0
+SC,resid_rural,heat,0,0,0,0,0

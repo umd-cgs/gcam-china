@@ -1,0 +1,36 @@
+# File: cR_BldS_F_U_share_com.csv
+# Title: Climate region / building type / fuel / service shares
+# Units: NA
+# Description: rawdata/Buildings/Bld_fuel_service_China_climatezone.xlsx
+# Source: TODO
+# Column types: cccnnnnn
+# ----------
+climate.region,sector,fuel,heating,cooling,lighting,hot water_cooking,appliances
+C,comm,biomass,1,0,0,0,0
+C,comm,traditional biomass,0,0,0,0,0
+C,comm,coal,0.984117872,0,0,0.015882128,0
+C,comm,electricity,0.085483258,0.204984396,0.283717692,0.023647767,0.402166887
+C,comm,gas,0.721877411,0,0,0.278122589,0
+C,comm,refined liquids,0.747573874,0,0,0.252426126,0
+C,comm,heat,1,0,0,0,0
+HSCW,comm,biomass,1,0,0,0,0
+HSCW,comm,traditional biomass,0,0,0,0,0
+HSCW,comm,coal,0.495854218,0,0,0.504145782,0
+HSCW,comm,electricity,0.040161021,0.505831923,0.204970719,0.104964885,0.144071452
+HSCW,comm,gas,0.933564907,0,0,0.066435093,0
+HSCW,comm,refined liquids,0.728152308,0,0,0.271847692,0
+HSCW,comm,heat,1,0,0,0,0
+HSWW,comm,biomass,1,0,0,0,0
+HSWW,comm,traditional biomass,0,0,0,0,0
+HSWW,comm,coal,0,0,0,1,0
+HSWW,comm,electricity,0,0.526821903,0.182425545,0.051509198,0.239243354
+HSWW,comm,gas,0.78857706,0,0,0.21142294,0
+HSWW,comm,refined liquids,0,0,0,1,0
+HSWW,comm,heat,0,0,0,0,0
+SC,comm,biomass,1,0,0,0,0
+SC,comm,traditional biomass,0,0,0,0,0
+SC,comm,coal,0.932294026,0,0,0.067705974,0
+SC,comm,electricity,0.032172066,0.012348332,0.327414787,0.17323454,0.454830275
+SC,comm,gas,0.9425648,0,0,0.0574352,0
+SC,comm,refined liquids,0.870440779,0,0,0.129559221,0
+SC,comm,heat,1,0,0,0,0

@@ -77,15 +77,18 @@ using namespace std;
 *        calculated.
 * \param aPeriod Model period.
 */
-auto_ptr<IProductionState> ProductionStateFactory::create( const int aInvestYear,
+unique_ptr<IProductionState> ProductionStateFactory::create( const int aInvestYear,
                                                            const int aLifetimeYears,
                                                            const double aFixedOutput,
                                                            const double aInitialOutput,
                                                            const int aPeriod )
 {
     // Initialize the production state.
-    auto_ptr<IProductionState> newState;
-    int currYear = scenario->getModeltime()->getper_to_yr( aPeriod );
+    unique_ptr<IProductionState> newState;
+    const Modeltime* modeltime = scenario->getModeltime();
+    int currYear = modeltime->getper_to_yr( aPeriod );
+    int investPer = modeltime->getyr_to_per(aInvestYear);
+    int investTimeStep = modeltime->gettimestep(investPer);
 
     if( aInvestYear == currYear ){
         // If the new vintage has fixed output use a fixed output production
@@ -102,7 +105,7 @@ auto_ptr<IProductionState> ProductionStateFactory::create( const int aInvestYear
     }
     // Check if it is a still operating vintage.
     else if( ( currYear > aInvestYear ) &&
-        ( aInvestYear + aLifetimeYears > currYear ) ){
+        ( (aInvestYear + aLifetimeYears - investTimeStep) >= currYear ) ){
         assert( aPeriod > 0 );
         newState.reset( new VintageProductionState );
         // Set the base level of output to the output in the initial investment
