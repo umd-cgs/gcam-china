@@ -401,7 +401,7 @@ module_gcamchina_L2323.detailed_industry <- function(command, ...) {
       #NOTE: electricity is consumed from province markets
       mutate(market.name = if_else(minicam.energy.input %in% gcamchina.PROVINCE_FUEL_MARKETS,
                                    region, market.name)) %>%
-      mutate(market.name = if_else(minicam.energy.input %in% c("delivered biomass","coke"),
+      mutate(market.name = if_else(minicam.energy.input %in% c("coke"),
                                    "China", market.name)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechCoef"]]) ->
       L2323.StubTechCoef_detailed_industry
@@ -667,7 +667,7 @@ if( exists( "L2323.SubsectorInterpTo_detailed_industry" ) ) {
       add_units(("Coefficients")) %>%
       add_comments("Track capital investments for purposes of macro economic calculations") %>%
       same_precursors_as(L2323.GlobalTechTrackCapital_China ) ->
-      L2323.GlobalTechTrackCapital_China 
+      L2323.GlobalTechTrackCapital_China
 
 
     L2323.StubTechCost_detailed_industry %>%

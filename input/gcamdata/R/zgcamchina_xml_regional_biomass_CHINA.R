@@ -92,7 +92,7 @@ module_gcamchina_regional_biomass_xml <- function(command, ...) {
       add_logit_tables_xml(L2261.SubsectorLogit_bio_CHINA, "SubsectorLogit") %>%
       add_xml_data(L2261.StubTech_bio_CHINA, "StubTech") %>%
       add_xml_data(L2261.StubTechMarket_bio_CHINA, "StubTechMarket") %>%
-      add_xml_data(L2261.StubTechCoef_bioOil_CHINA,"StubTechCoef") %>%
+      # add_xml_data(L2261.StubTechCoef_bioOil_CHINA,"StubTechCoef") %>% # this file has nan value. See file Aglu/IIASA_biofuel_production
       add_xml_data(L2261.StubTechShrwt_rbO_CHINA, "StubTechShrwt") %>%
       add_xml_data(L2261.StubTechFractSecOut_bio_CHINA, "StubTechFractSecOut") %>%
       add_xml_data(L2261.StubTechFractProd_bio_CHINA, "StubTechFractProd") %>%

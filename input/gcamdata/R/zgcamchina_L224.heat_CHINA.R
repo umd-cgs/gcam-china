@@ -335,8 +335,10 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
 	    filter(is.na(minicam.energy.input) == FALSE) %>%
 	    mutate(market.name = region) %>%
 	    select(LEVEL2_DATA_NAMES[["StubTechMarket"]]) %>%
+
+	    # revise market, Rui Wang 14/04/2025
 	    mutate(market.name = if_else(minicam.energy.input == 'delivered biomass',
-	                                 'China', market.name)) ->
+	                                region, market.name)) ->
 	    L224.StubTechMarket_heat_CHINA  ## OUTPUT
 	  # ===================================================
 
