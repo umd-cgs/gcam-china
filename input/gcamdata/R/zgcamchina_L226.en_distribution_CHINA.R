@@ -125,6 +125,10 @@ module_gcamchina_L226.en_distribution <- function(command, ...) {
     A26.sector  %>%
       select(supplysector, output.unit, input.unit, price.unit, logit.exponent, logit.type) %>%
       filter(supplysector %in% gcamchina.REGIONAL_FUEL_MARKETS) %>%
+
+      # Rui Wang, 15/04/2025, remove delivered biomass
+      filter(supplysector != 'delivered biomass') %>%
+
       bind_rows(A21.tmp) %>%
       repeat_add_columns(tibble(region = unique(province_names_mappings$province))) %>%
       mutate(logit.year.fillout = min(MODEL_BASE_YEARS)) ->
@@ -167,6 +171,17 @@ module_gcamchina_L226.en_distribution <- function(command, ...) {
              coefficient = gcamchina.DEFAULT_COEFFICIENT,
              market.name = gcamchina.DEFAULT_MARKET) ->
       L226.TechCoef_en_CHINA
+
+    # L226.TechShrwt_en_CHINA %>%
+    #   select(LEVEL2_DATA_NAMES[["TechYr"]]) %>%
+    #   mutate(minicam.energy.input = supplysector,
+    #          coefficient = gcamchina.DEFAULT_COEFFICIENT,
+    #          market.name = if_else(
+    #            supplysector == "delivered biomass", # delivered biomass should be regional market
+    #            region,
+    #            gcamchina.DEFAULT_MARKET)) ->
+    #   #market.name = gcamchina.DEFAULT_MARKET) ->
+    #   L226.TechCoef_en_CHINA
 
 
     # L226.CostAdj_75USDGJ_FERC_F: grid region specific cost adders
