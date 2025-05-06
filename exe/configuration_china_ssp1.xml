@@ -157,7 +157,8 @@
 		<Value name = "fert_china">../input/gcamdata/xml/Fert_CHINA.xml</Value>
 
 		<Value name = "liq_lim_china">../input/gcamdata/xml/liquids_limits_CHINA.xml</Value>
-		<!-- Value name = "neg_emiss_china">../input/gcamdata/xml/negative_emissions_budget_CHINA_gSSP2.xml</Value-->
+		<Value name = "neg_emiss_china">../input/gcamdata/xml/negative_emissions_budget_CHINA.xml</Value>
+		<Value name = "regional_biomass">../input/gcamdata/xml/regional_biomass_CHINA.xml</Value>
 
 		<!--GHG EMISSIONS China--> 
 		<Value name = "ghg_china">../input/gcamdata/xml/ghg_emissions_CHINA.xml</Value> 
