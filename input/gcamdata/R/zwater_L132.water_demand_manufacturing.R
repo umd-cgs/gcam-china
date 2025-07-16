@@ -24,6 +24,7 @@ module_water_L132.water_demand_manufacturing <- function(command, ...) {
              FILE = "water/mfg_water_ratios",
              FILE = "water/mfg_water_mapping",
              FILE = "water/Vassolo_mfg_water",
+             FILE = "gcam-china/water_km3_china_ind_Yh",
              "L101.en_bal_EJ_ctry_Si_Fi_Yh_full"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L132.water_km3_ctry_ind_Yh",
@@ -45,8 +46,7 @@ module_water_L132.water_demand_manufacturing <- function(command, ...) {
     mfg_water_ratios <- get_data(all_data, "water/mfg_water_ratios")
     mfg_water_mapping <- get_data(all_data, "water/mfg_water_mapping")
     Vassolo_mfg_water <- get_data(all_data, "water/Vassolo_mfg_water")
-
-
+    water_km3_china_ind_Yh <- get_data(all_data, "gcam-china/water_km3_china_ind_Yh")
     L101.en_bal_EJ_ctry_Si_Fi_Yh_full <- get_data(all_data, "L101.en_bal_EJ_ctry_Si_Fi_Yh_full")
 
     # ===================================================
@@ -129,6 +129,14 @@ module_water_L132.water_demand_manufacturing <- function(command, ...) {
       mutate(scaler = if_else(is.na(scaler), 1, scaler),
              water_km3 = water_km3 * scaler) %>%
       select(-scaler)
+
+    # replace china's water withdrawals and consumption for industry
+    L132.water_km3_ctry_ind_Yh <- L132.water_km3_ctry_ind_Yh %>%
+      left_join(water_km3_china_ind_Yh,
+                by = c("iso", "year","water_type")) %>%
+      mutate(water_km3 = if_else(is.na(water_km3.y), water_km3.x, water_km3.y)) %>%
+      select(-water_km3.x, -water_km3.y)
+
 
     # Aggregating manufacturing water flow volumes to GCAM regions
     L132.water_km3_R_ind_Yh <-
