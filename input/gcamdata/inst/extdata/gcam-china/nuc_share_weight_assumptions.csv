@@ -1,10 +1,10 @@
 # File: nuc_share_weight_assumptions.csv
-# Title: Table used to adjust nuclear share weights that have been adjusted manually to match Bo Liu
+# Title: Table used to adjust nuclear share weights that have been adjusted manually to match Bo Liu    24/08/2025 xsl copy 2020 to 2021
 # Units: Unitless share-weights
 # Comment: This CSV is written by ../assumptions/nuc_share_weight_assumptions.xlsx
-# Column types: cnnnnnnnnnnnnnnnnnn
+# Column types: cnnnnnnnnnnnnnnnnnnn
 # ----------
-region,2015,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
+region,2015,2021,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 AH,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 BJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 CQ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

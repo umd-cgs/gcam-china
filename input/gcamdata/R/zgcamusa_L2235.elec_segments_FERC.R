@@ -38,7 +38,7 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
              FILE = "gcam-usa/A23.elecS_metainfo_vertical",
              FILE = "gcam-usa/pca_state",
              FILE = "gcam-usa/pca_electricity_trade",
-             "L1235.elecS_demand_fraction_USA",
+             "L1236.elecS_demand_fraction_adj_USA",
              "L1235.elecS_horizontal_vertical_GCAM_coeff_USA",
              "L123.in_EJ_state_ownuse_elec",
              "L123.out_EJ_state_ownuse_elec",
@@ -105,7 +105,7 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
     A23.elecS_metainfo_vertical <- get_data(all_data, "gcam-usa/A23.elecS_metainfo_vertical",strip_attributes = TRUE)
     pca_state <- get_data(all_data, "gcam-usa/pca_state",strip_attributes = TRUE)
     pca_electricity_trade <- get_data(all_data, "gcam-usa/pca_electricity_trade",strip_attributes = TRUE)
-    L1235.elecS_demand_fraction_USA <- get_data(all_data, "L1235.elecS_demand_fraction_USA",strip_attributes = TRUE)
+    L1236.elecS_demand_fraction_adj_USA <- get_data(all_data, "L1236.elecS_demand_fraction_adj_USA",strip_attributes = TRUE)
     L1235.elecS_horizontal_vertical_GCAM_coeff_USA <- get_data(all_data, "L1235.elecS_horizontal_vertical_GCAM_coeff_USA",strip_attributes = TRUE) %>%
       rename(region = grid_region)
     L123.in_EJ_state_ownuse_elec <- get_data(all_data, "L123.in_EJ_state_ownuse_elec",strip_attributes = TRUE)
@@ -155,7 +155,7 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
     L2235.SubsectorLogit_elecS_grid_vertical %>%
       select(region, supplysector, subsector) %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = MODEL_FINAL_BASE_YEAR,
              to.year = max(MODEL_FUTURE_YEARS),
              interpolation.function = "fixed") -> L2235.SubsectorShrwtInterp_elecS_grid_vertical
 
@@ -167,15 +167,14 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
       select(region, supplysector, subsector, technology, year, share.weight) -> L2235.TechShrwt_elecS_grid_vertical
 
     # Technology inputs
-    L1235.elecS_demand_fraction_USA %>%
+    L1236.elecS_demand_fraction_adj_USA %>%
       mutate(supplysector = "electricity",
              subsector = supplysector,
              technology = supplysector,
              market.name = grid_region) %>%
       rename(region = grid_region,
              minicam.energy.input = vertical_segment) %>%
-      select(-demand_fraction) %>%
-      repeat_add_columns(tibble(year = MODEL_YEARS)) -> L2235.TechMarket_elecS_grid_vertical_electricity
+      select(-demand_fraction) -> L2235.TechMarket_elecS_grid_vertical_electricity
 
     L1235.elecS_horizontal_vertical_GCAM_coeff_USA %>%
       mutate(market.name = region) %>%
@@ -189,7 +188,8 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
     # Coefficients for horizontal to vertical segments.
     L2235.TechMarket_elecS_grid_vertical_electricity %>%
       # MB note:  document why no LJENM
-      left_join(L1235.elecS_demand_fraction_USA, by = c("region" = "grid_region",
+      left_join(L1236.elecS_demand_fraction_adj_USA, by = c("region" = "grid_region",
+                                                        "year",
                                                     "minicam.energy.input" = "vertical_segment")) %>%
       rename(coefficient = demand_fraction) -> L2235.TechCoef_elecS_grid_vertical_electricity
 
@@ -230,7 +230,7 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
     # regions that don't export in the base year don't export at all
     L2235.SubsectorShrwtFllt_elec_USA %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = MODEL_FINAL_BASE_YEAR,
              to.year = max(MODEL_YEARS),
              interpolation.function = "fixed") %>%
       select(-year.fillout, -share.weight) -> L2235.SubsectorInterp_elec_USA
@@ -518,7 +518,7 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
     L2235.structure_FERC %>%
       select(region, supplysector, subsector) %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = MODEL_FINAL_BASE_YEAR,
              to.year = max(MODEL_YEARS),
              interpolation.function = "fixed") -> L2235.SubsectorInterp_elec_FERC
 
@@ -579,7 +579,7 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
                   select(grid_region, year, ownuse_coef),
                 by = c("region" = "grid_region", "year")) %>%
       group_by(region) %>%
-      mutate(coefficient = if_else(is.na(ownuse_coef), ownuse_coef[year==max(MODEL_BASE_YEARS)], ownuse_coef)) %>%
+      mutate(coefficient = if_else(is.na(ownuse_coef), ownuse_coef[year==MODEL_FINAL_BASE_YEAR], ownuse_coef)) %>%
       ungroup() %>%
       select(region, supplysector, subsector, technology, year, minicam.energy.input,
              coefficient, market.name) -> L2235.TechCoef_elecownuse_FERC
@@ -775,7 +775,7 @@ module_gcamusa_L2235.elec_segments_FERC <- function(command, ...) {
       add_comments("Vertical electricity load segments technology coefficients and market names") %>%
       add_legacy_name("L2235.TechCoef_elecS_grid_vertical") %>%
       add_precursors("L1235.elecS_horizontal_vertical_GCAM_coeff_USA",
-                     "L1235.elecS_demand_fraction_USA") ->
+                     "L1236.elecS_demand_fraction_adj_USA") ->
       L2235.TechCoef_elecS_grid_vertical_USA
 
     L2235.Supplysector_elec_FERC %>%

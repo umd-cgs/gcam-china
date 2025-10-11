@@ -257,15 +257,16 @@ module_gcamchina_L244.building <- function(command, ...) {
 
     # Rongqi 23/07/2024
     # Add the difference between urban and rural by subreginal population and income
+    # 24/08/2025 xsl change 2020 to 2021 1st try/08/09/2025 change back
     urban_pop_share_province.long <- urban_pop_share_province %>%
-      gather(key = "year", value = "value", as.character(c(1971:2017, seq(2020, 2100, 5)))) %>%
+      gather(key = "year", value = "value", as.character(c(1971:2021, seq(2025, 2100, 5)))) %>%
       mutate(year = as.numeric(year)) %>%
       left_join_error_no_match(province_names_mappings, by = c("province.name")) %>%
       select(province, year, value) %>%
       rename(urban_pop_share = value)
 
     urban_income_share_province.long <- urban_income_share_province %>%
-      gather(key = "year", value = "value", as.character(c(1971:2022, seq(2025, 2100, 5)))) %>%
+      gather(key = "year", value = "value", as.character(c(1971:2021, seq(2025, 2100, 5)))) %>%
       mutate(year = as.numeric(year)) %>%
       left_join_error_no_match(province_names_mappings, by = c("province.name")) %>%
       select(province, year, value) %>%
@@ -590,6 +591,34 @@ module_gcamchina_L244.building <- function(command, ...) {
       filter(year > 1974 & year < 2011) %>%
       bind_rows(L144.flsp_bm2_province_res_rur_2011_2015)
 
+
+
+    ## 1. urban 2016-2021
+    L144.flsp_2016_2021_urb <- L144.flsp_bm2_province_bld %>%
+      filter(sector == "resid_urban", year == 2015) %>%
+      select(-year) %>%
+      repeat_add_columns(tibble::tibble(year = 2016:2021))
+
+    ## 2. rural 2016-2021
+    L144.flsp_2016_2021_rur <- L144.flsp_bm2_province_bld %>%
+      filter(sector == "resid_rural", year == 2015) %>%
+      select(-year) %>%
+      repeat_add_columns(tibble::tibble(year = 2016:2021))
+
+    ## 3.
+    L144.flsp_bm2_province_res_urb <- L144.flsp_bm2_province_res_urb %>%
+      bind_rows(L144.flsp_2016_2021_urb)
+
+    L144.flsp_bm2_province_res_rur <- L144.flsp_bm2_province_res_rur %>%
+      bind_rows(L144.flsp_2016_2021_rur)
+
+    ## 4.
+    L144.flsp_bm2_province_res_urb <- arrange(L144.flsp_bm2_province_res_urb, province, year)
+    L144.flsp_bm2_province_res_rur <- arrange(L144.flsp_bm2_province_res_rur, province, year)
+
+
+
+
     # Allocate the adder equally across multiple consumers
 
     L244.Floorspace_resid_adder_province <- L244.Floorspace_resid_est %>%
@@ -732,13 +761,27 @@ module_gcamchina_L244.building <- function(command, ...) {
              # value.y = population
              pcflsp_mm2cap = base.building.size / pop,
              # Satiation level = must be greater than the observed value in the final calibration year, so if observed value is
-             # greater than calculated, multiply observed by 1.001
-             satiation.level = round(pmax(value * CONV_THOUS_BIL, pcflsp_mm2cap * 1.001), energy.DIGITS_SATIATION_ADDER)) %>%
+             # greater than calculated, multiply observed by 1.001 # xsl 24/08/2025 satiation.level = round(pmax(value * CONV_THOUS_BIL, pcflsp_mm2cap * 1.001)
+             satiation.level = pmax(value * CONV_THOUS_BIL, pcflsp_mm2cap * 1.001)) %>%
+
+
+
       left_join_error_no_match(A44.gcam_consumer, by = c("gcam.consumer", "nodeInput", "building.node.input")) %>%
       select(LEVEL2_DATA_NAMES[["BldNodes"]], "satiation.level")
-
+    #mutate(satiation.level = pmax(value * CONV_THOUS_BIL, pcflsp_mm2cap * 1.001), energy.DIGITS_SATIATION_ADDER)) %>%
     # L244.SatiationImpedance_gcamchina: Calibrate satiation impedance per province.
     # sat_impedance = (-ln(2)/ln((satiation level - pcFlsp2015)/(satiation level - satiation adder))) * pcGDP2015
+
+    #24/08 check where NA
+    #L144.Satiation_impedance_gcamchina_pre %>%
+    #  mutate(diff = satiation.level - flsp_pc,
+    #         ratio = (satiation.level - flsp_pc) / satiation.level) %>%
+    #  select(region, year, satiation.level, flsp_pc, diff, ratio) %>%
+    #  filter(is.na(ratio) | ratio <= 0)
+
+
+
+
 
     L144.Satiation_impedance_gcamchina_pre <- L244.Satiation_flsp_gcamchina %>%
       mutate(year = max(MODEL_BASE_YEARS)) %>%
@@ -1246,6 +1289,9 @@ module_gcamchina_L244.building <- function(command, ...) {
 
     # L244.GenericServiceSatiation_gcamusa: Satiation levels assumed for non-thermal building services
     # Just multiply the base-service by an exogenous multiplier
+    # xsl check
+
+
     L244.GenericServiceSatiation_gcamchina <- L244.GenericBaseService_gcamchina %>%
       filter(year == max(MODEL_BASE_YEARS)) %>%
       # Add floorspace
@@ -1585,6 +1631,7 @@ module_gcamchina_L244.building <- function(command, ...) {
 
 
     # L244.GenericBaseService adjusted
+    #25/08 XSL CHANGE TO LEFT_JOIN
     L244.GenericBaseService_gcamchina_pre <- L244.GenericBaseService_gcamchina %>%
       left_join_error_no_match(L101.pcGDP_thous90usd_province,
                                by = c("year","region"="province")) %>%
@@ -1631,10 +1678,16 @@ module_gcamchina_L244.building <- function(command, ...) {
       ungroup() %>%
       rename(serv_aggReg = serv)
 
+
+
+
+
+
+    # 25/08 XSL CHANGE TO LEFT_JOIN
     # Merge the subtotals to the estimated values to calculate %shares for each consumer group, in each region and period
     L244.GenericShares_gcamchina <- L244.GenericShares_gcamchina_pre %>%
-      left_join_error_no_match(L244.GenericShares_gcamchina_pre_subt
-                               , by=c("region","building.service.input","year")) %>%
+      left_join(L244.GenericShares_gcamchina_pre_subt
+                , by=c("region","building.service.input","year")) %>%
       mutate(gen_share = serv / serv_aggReg) %>%
       select(region,gcam.consumer,nodeInput,building.node.input,building.service.input,year,gen_share) %>%
       replace_na(list(gen_share = 0)) %>%
@@ -1642,7 +1695,6 @@ module_gcamchina_L244.building <- function(command, ...) {
       group_by(region,nodeInput,building.node.input,building.service.input,year) %>%
       mutate(agg_gen_share = sum(gen_share)) %>%
       ungroup()
-
 
     L244.GenericBaseService_gcamchina <- L244.GenericBaseService_gcamchina_pre %>%
       select(region,gcam.consumer,nodeInput,building.node.input,building.service.input,year, base.service) %>%
@@ -1975,15 +2027,15 @@ module_gcamchina_L244.building <- function(command, ...) {
       # adjust zero adder if observed is 0
       mutate(bias.adder = if_else(obs==0,0,bias.adder)) %>%
       select(region,gcam.consumer,nodeInput,building.node.input,building.service.input,bias.adder)
-
+    #XSL CHANGE
     L244.GenericServiceAdder_modern <- L244.GenericServiceAdder_modern_pre %>%
       filter(year == MODEL_FINAL_BASE_YEAR) %>%
       left_join_error_no_match(L244.GenericServiceAdder_aggObs_gr, by = c("region", "year", "gcam.consumer", "building.service.input")) %>%
       left_join_error_no_match(L244.Floorspace_gcamchina, by = c("region", "year", "gcam.consumer", "nodeInput", "building.node.input")) %>%
       mutate(bias.adder.share = (obs - est)/base.building.size,
              bias.adder.share = if_else(obs==0,0,bias.adder.share)) %>%
-      left_join_error_no_match(L244.GenericServiceAdder_modern_pre_agg,
-                               by = c("region", "gcam.consumer", "building.service.input", "nodeInput", "building.node.input")) %>%
+      left_join(L244.GenericServiceAdder_modern_pre_agg,
+                by = c("region", "gcam.consumer", "building.service.input", "nodeInput", "building.node.input")) %>%
       mutate(bias.adder = if_else(obs==0,0,bias.adder)) %>%
       select(region,gcam.consumer,nodeInput,building.node.input,building.service.input,bias.adder.share,bias.adder.eq=bias.adder) %>%
       repeat_add_columns(tibble(year=ADJ_MODEL_YEARS)) %>%

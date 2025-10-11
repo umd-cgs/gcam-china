@@ -8,7 +8,7 @@
     <target-value>2.6</target-value>
     <!-- target-tolerance | default: 0.01 | The solution tolerance -->
     <target-tolerance>0.05</target-tolerance> 
-    <!-- path-discount-rate | default: 0.05 | The hotelling rate -->
+    <!-- path-discount-rate | default: 0.03 | The hotelling rate -->
 	<path-discount-rate>0.03</path-discount-rate>
     <!-- max-iterations | default: 100 | The maximum  number of attempts to
          solve any given period.
@@ -31,14 +31,14 @@
      -->
     <target-type>forcing</target-type>
     <!-- first-tax-year | default: 2020 | The first year to start a tax in -->
-    <first-tax-year>2025</first-tax-year>
+    <first-tax-year>2030</first-tax-year>
     <!-- initial-tax-guess | default: 5 | The first tax value to try, if a user
                                           can provide a good initial guess it may
                                           cut down on the total number of iterations
                                           significantly.
      -->
     <!-- Note, the value chosen here is the solved price from the last GCAM release. -->
-    <initial-tax-guess>270.0</initial-tax-guess>
+    <initial-tax-guess>600.0</initial-tax-guess>
     <!-- forward-look | default: 0 | Allow forward looking behavior by skipping
          this many periods.
      -->
@@ -60,5 +60,5 @@
                                    the max-tax.  If the actual solution price
                                    lies above max-tax the algorithm will fail.
      -->
-    <max-tax>7999</max-tax>
+    <max-tax>9999</max-tax>
 </policy-target-runner>

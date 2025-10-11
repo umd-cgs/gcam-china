@@ -1,3 +1,0 @@
-# The XML config files will have their new lines automatically normalized for
-# the platform they are on.
-*.xml text=auto

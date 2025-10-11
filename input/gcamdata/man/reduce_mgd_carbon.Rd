@@ -4,10 +4,10 @@
 \alias{reduce_mgd_carbon}
 \title{reduce_mgd_carbon}
 \usage{
-reduce_mgd_carbon(data, LTfor = "Forest", LTpast = "Pasture")
+reduce_mgd_carbon(data, LTfor = c(aglu.FOREST_NODE_NAMES), LTpast = "Pasture")
 }
 \arguments{
-\item{data}{Unput data tibble to adjust carbon densities for}
+\item{data}{Input data tibble to adjust carbon densities for}
 
 \item{LTfor}{Land_Type name to use for Forest land types}
 

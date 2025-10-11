@@ -2,7 +2,7 @@
 # Title: Aluminum production by country
 # Units: Thousand tons
 # Description: National aluminum production
-# Source: USGS Mineral Yearbooks - Aluminum
+# Source: USGS Mineral Yearbooks - Aluminum COPY2018 TO 2019-2021
 # Column types: ccinc
 # ----------
 country,iso,year,value,unit
@@ -1226,3 +1226,126 @@ United Arab Emirates,are,2018,2640,Thousand metric tons
 United Kingdom,gbr,2018,48,Thousand metric tons
 United States,usa,2018,891,Thousand metric tons
 Venezuela,ven,2018,80,Thousand metric tons
+Argentina,arg,2019,419,Thousand metric tons
+Australia,aus,2019,1576,Thousand metric tons
+Azerbaijan,aze,2019,25,Thousand metric tons
+Bahrain,bhr,2019,1011,Thousand metric tons
+Bosnia and Herzegovina,bih,2019,90,Thousand metric tons
+Brazil,bra,2019,659,Thousand metric tons
+Cameroon,cmr,2019,75,Thousand metric tons
+Canada,can,2019,2924,Thousand metric tons
+China,chn,2019,35802,Thousand metric tons
+Egypt,egy,2019,300,Thousand metric tons
+France,fra,2019,380,Thousand metric tons
+Germany,deu,2019,540,Thousand metric tons
+Ghana,gha,2019,40,Thousand metric tons
+Greece,grc,2019,180,Thousand metric tons
+Iceland,isl,2019,885,Thousand metric tons
+India,ind,2019,3675,Thousand metric tons
+Indonesia,idn,2019,225,Thousand metric tons
+Iran,irn,2019,350,Thousand metric tons
+Kazakhstan,kaz,2019,265,Thousand metric tons
+Malaysia,mys,2019,750,Thousand metric tons
+Montenegro,mne,2019,50,Thousand metric tons
+Mozambique,moz,2019,571,Thousand metric tons
+Netherlands,nld,2019,100,Thousand metric tons
+New Zealand,nzl,2019,341,Thousand metric tons
+Norway,nor,2019,1300,Thousand metric tons
+Oman,omn,2019,380,Thousand metric tons
+Qatar,qat,2019,620,Thousand metric tons
+Romania,rom,2019,280,Thousand metric tons
+Russia,rus,2019,3627,Thousand metric tons
+Saudi Arabia,sau,2019,770,Thousand metric tons
+Slovakia,svk,2019,220,Thousand metric tons
+Slovenia,svn,2019,130,Thousand metric tons
+South Africa,zaf,2019,714,Thousand metric tons
+Spain,esp,2019,350,Thousand metric tons
+Sweden,swe,2019,125,Thousand metric tons
+Tajikistan,tjk,2019,100,Thousand metric tons
+Turkey,tur,2019,80,Thousand metric tons
+United Arab Emirates,are,2019,2640,Thousand metric tons
+United Kingdom,gbr,2019,48,Thousand metric tons
+United States,usa,2019,891,Thousand metric tons
+Venezuela,ven,2019,80,Thousand metric tons
+Argentina,arg,2020,419,Thousand metric tons
+Australia,aus,2020,1576,Thousand metric tons
+Azerbaijan,aze,2020,25,Thousand metric tons
+Bahrain,bhr,2020,1011,Thousand metric tons
+Bosnia and Herzegovina,bih,2020,90,Thousand metric tons
+Brazil,bra,2020,659,Thousand metric tons
+Cameroon,cmr,2020,75,Thousand metric tons
+Canada,can,2020,2924,Thousand metric tons
+China,chn,2020,35802,Thousand metric tons
+Egypt,egy,2020,300,Thousand metric tons
+France,fra,2020,380,Thousand metric tons
+Germany,deu,2020,540,Thousand metric tons
+Ghana,gha,2020,40,Thousand metric tons
+Greece,grc,2020,180,Thousand metric tons
+Iceland,isl,2020,885,Thousand metric tons
+India,ind,2020,3675,Thousand metric tons
+Indonesia,idn,2020,225,Thousand metric tons
+Iran,irn,2020,350,Thousand metric tons
+Kazakhstan,kaz,2020,265,Thousand metric tons
+Malaysia,mys,2020,750,Thousand metric tons
+Montenegro,mne,2020,50,Thousand metric tons
+Mozambique,moz,2020,571,Thousand metric tons
+Netherlands,nld,2020,100,Thousand metric tons
+New Zealand,nzl,2020,341,Thousand metric tons
+Norway,nor,2020,1300,Thousand metric tons
+Oman,omn,2020,380,Thousand metric tons
+Qatar,qat,2020,620,Thousand metric tons
+Romania,rom,2020,280,Thousand metric tons
+Russia,rus,2020,3627,Thousand metric tons
+Saudi Arabia,sau,2020,770,Thousand metric tons
+Slovakia,svk,2020,220,Thousand metric tons
+Slovenia,svn,2020,130,Thousand metric tons
+South Africa,zaf,2020,714,Thousand metric tons
+Spain,esp,2020,350,Thousand metric tons
+Sweden,swe,2020,125,Thousand metric tons
+Tajikistan,tjk,2020,100,Thousand metric tons
+Turkey,tur,2020,80,Thousand metric tons
+United Arab Emirates,are,2020,2640,Thousand metric tons
+United Kingdom,gbr,2020,48,Thousand metric tons
+United States,usa,2020,891,Thousand metric tons
+Venezuela,ven,2020,80,Thousand metric tons
+Argentina,arg,2021,419,Thousand metric tons
+Australia,aus,2021,1576,Thousand metric tons
+Azerbaijan,aze,2021,25,Thousand metric tons
+Bahrain,bhr,2021,1011,Thousand metric tons
+Bosnia and Herzegovina,bih,2021,90,Thousand metric tons
+Brazil,bra,2021,659,Thousand metric tons
+Cameroon,cmr,2021,75,Thousand metric tons
+Canada,can,2021,2924,Thousand metric tons
+China,chn,2021,35802,Thousand metric tons
+Egypt,egy,2021,300,Thousand metric tons
+France,fra,2021,380,Thousand metric tons
+Germany,deu,2021,540,Thousand metric tons
+Ghana,gha,2021,40,Thousand metric tons
+Greece,grc,2021,180,Thousand metric tons
+Iceland,isl,2021,885,Thousand metric tons
+India,ind,2021,3675,Thousand metric tons
+Indonesia,idn,2021,225,Thousand metric tons
+Iran,irn,2021,350,Thousand metric tons
+Kazakhstan,kaz,2021,265,Thousand metric tons
+Malaysia,mys,2021,750,Thousand metric tons
+Montenegro,mne,2021,50,Thousand metric tons
+Mozambique,moz,2021,571,Thousand metric tons
+Netherlands,nld,2021,100,Thousand metric tons
+New Zealand,nzl,2021,341,Thousand metric tons
+Norway,nor,2021,1300,Thousand metric tons
+Oman,omn,2021,380,Thousand metric tons
+Qatar,qat,2021,620,Thousand metric tons
+Romania,rom,2021,280,Thousand metric tons
+Russia,rus,2021,3627,Thousand metric tons
+Saudi Arabia,sau,2021,770,Thousand metric tons
+Slovakia,svk,2021,220,Thousand metric tons
+Slovenia,svn,2021,130,Thousand metric tons
+South Africa,zaf,2021,714,Thousand metric tons
+Spain,esp,2021,350,Thousand metric tons
+Sweden,swe,2021,125,Thousand metric tons
+Tajikistan,tjk,2021,100,Thousand metric tons
+Turkey,tur,2021,80,Thousand metric tons
+United Arab Emirates,are,2021,2640,Thousand metric tons
+United Kingdom,gbr,2021,48,Thousand metric tons
+United States,usa,2021,891,Thousand metric tons
+Venezuela,ven,2021,80,Thousand metric tons

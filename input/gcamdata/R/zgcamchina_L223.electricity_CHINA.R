@@ -28,7 +28,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr arrange bind_rows filter if_else group_by left_join matches mutate select semi_join summarise transmute
 #' @importFrom tidyr gather spread
-#' @author YangLiu Jan 2020 / YangOu Dec 2023
+#' @author YangLiu Jan 2020 / YangOu Dec 2023 / xsl 11th Sep 2025
 
 module_gcamchina_L223.electricity <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
@@ -37,6 +37,7 @@ module_gcamchina_L223.electricity <- function(command, ...) {
              FILE = "gcam-china/nuc_share_weight_assumptions",
              FILE = "energy/calibrated_techs",
              FILE = "energy/A23.globaltech_eff",
+             FILE = "gcam-china/A10.renewable_resource_delete",
              "L114.CapacityFactor_wind_province",
              "L119.CapFacScaler_PV_province",
              "L119.CapFacScaler_CSP_province",
@@ -44,6 +45,7 @@ module_gcamchina_L223.electricity <- function(command, ...) {
              "L223.ElecReserve",
              "L223.SubsectorLogit_elec",
              "L223.SubsectorShrwtFllt_elec",
+             "L223.GlobalIntTechBackup_elec",
              "L223.SubsectorShrwt_nuc",
              "L223.SubsectorShrwt_renew",
              "L223.SubsectorInterp_elec",
@@ -51,7 +53,6 @@ module_gcamchina_L223.electricity <- function(command, ...) {
              "L223.StubTech_elec",
              "L223.StubTechEff_elec",
              "L223.StubTechCapFactor_elec",
-             "L223.GlobalIntTechBackup_elec",
              "L1231.in_EJ_province_elec_F_tech",
              "L1231.out_EJ_province_elec_F_tech",
              "L1232.out_EJ_sR_elec_CHINA"))
@@ -73,7 +74,7 @@ module_gcamchina_L223.electricity <- function(command, ...) {
              "L223.Production_elec_GRIDR",
              "L223.InterestRate_GRIDR",
              "L223.Pop_GRIDR",
-			 "L223.GDP_GRIDR",
+			       "L223.GDP_GRIDR",
              "L223.Supplysector_elec_CHINA",
              "L223.ElecReserve_CHINA",
              "L223.SubsectorLogit_elec_CHINA",
@@ -111,6 +112,7 @@ module_gcamchina_L223.electricity <- function(command, ...) {
     nuc_share_weight_assumptions <- get_data(all_data, "gcam-china/nuc_share_weight_assumptions", strip_attributes = T)
     #NREL_us_re_technical_potential <- get_data(all_data, "gcam-china/NREL_us_re_technical_potential")
     A23.globaltech_eff <- get_data(all_data, "energy/A23.globaltech_eff", strip_attributes = T)
+    A10.renewable_resource_delete <- get_data(all_data, "gcam-china/A10.renewable_resource_delete", strip_attributes = T)
     L114.CapacityFactor_wind_province <- get_data(all_data, "L114.CapacityFactor_wind_province", strip_attributes = T)
     L119.CapFacScaler_PV_province <- get_data(all_data, "L119.CapFacScaler_PV_province", strip_attributes = T)
     L119.CapFacScaler_CSP_province <- get_data(all_data, "L119.CapFacScaler_CSP_province", strip_attributes = T)
@@ -510,12 +512,16 @@ module_gcamchina_L223.electricity <- function(command, ...) {
     }
 
     # L223.StubTechMarket_backup_CHINA: market names of backup inputs to province electricity sectors
-    L223.GlobalIntTechBackup_elec %>%
-      mutate(supplysector = sector.name, subsector = subsector.name) %>%
-      write_to_all_provinces(names = c(names(.),'region'),gcamchina.PROVINCES_NOHKMC) %>%
-      mutate(market.name = gcamchina.REGION, stub.technology = technology) %>%
-      select(LEVEL2_DATA_NAMES[["StubTechMarket"]]) ->
-      L223.StubTechMarket_backup_CHINA
+
+     L223.GlobalIntTechBackup_elec %>%
+       mutate(supplysector = sector.name, subsector = subsector.name) %>%
+       write_to_all_provinces(names = c(names(.),'region'),gcamchina.PROVINCES_NOHKMC) %>%
+       mutate(market.name = gcamchina.REGION, stub.technology = backup.intermittent.technology) %>%
+       select(LEVEL2_DATA_NAMES[["StubTechMarket"]]) ->
+       L223.StubTechMarket_backup_CHINA
+
+
+
 
     # L223.StubTechElecMarket_backup_CHINA: market name of electricity sector for backup calculations
     # The backup electric market is only set here if regional electricity markets are not used (i.e. one national grid)
@@ -525,6 +531,7 @@ module_gcamchina_L223.electricity <- function(command, ...) {
         mutate(electric.sector.market = gcamchina.REGION) ->
         L223.StubTechElecMarket_backup_CHINA
     }
+
 
     # L223.StubTechCapFactor_elec_wind_CHINA: capacity factors for wind electricity in the provinces
     # Just use the subsector for matching - technologies include storage technologies as well
@@ -934,8 +941,7 @@ module_gcamchina_L223.electricity <- function(command, ...) {
       add_units("Unitless") %>%
       add_comments("Set market as China") %>%
       add_legacy_name("L223.StubTechMarket_backup_CHINA") %>%
-      add_precursors("L223.GlobalIntTechBackup_elec",
-                     "gcam-china/province_names_mappings") ->
+      add_precursors("L223.GlobalIntTechBackup_elec","gcam-china/province_names_mappings") ->
       L223.StubTechMarket_backup_CHINA
 
     if(exists("L223.StubTechElecMarket_backup_CHINA")) {

@@ -69,7 +69,7 @@ add_column_types_header_line <- function(overwrite = FALSE) {
     # A few files are custom and don't have headers; skip
     if(length(header)) {
 
-      # Remopve any existing separator line
+      # Remove any existing separator line
       if(header[length(header)] == "# ----------") {
         header <- header[-length(header)]
       }
@@ -114,7 +114,7 @@ rename_gcamdata_chunks <- function() {
   # Part 1: Rename files
   # Get list of available modules
   devtools::load_all()
-  module_options <- c("zaglu", "zemissions", "zsocio", "zenergy", "zgcamusa","zgcamchina",
+  module_options <- c("zaglu", "zemissions", "zsocio", "zenergy", "zgcamusa",
                       "zwater", "zclimate", "zmodeltime")
 
   # Get list of files to rename
@@ -224,50 +224,14 @@ rename_gcamdata_chunks <- function() {
     message("Updated function name in ", nrow(gcamusa_chunks), " gcamusa chunk(s)")
   }
 
-
-  # Add support for GCAM-China. Updated: 19 Aug,2024, YangLiu
-  # Get rid of "_CHINA" and only include module_gcamchina in function names
-  # Have to be careful to only change overall function name and not any outputs
-  updated_files %>%
-    filter(mod_type == "zgcamchina") -> gcamchina_chunks
-
-  for(name in gcamchina_chunks$new_file){
-    #Read file and get the line numbers that need updating
-    tx  <- readLines(name)
-    tx_rpl <- tx
-    lines_to_update <- which(grepl("module_.*CHINA", tx))
-    #Remove _CHINA in function name and replace any module name with "gcamchina"
-    for(i in lines_to_update){
-      tx_rpl[i] <- gsub("_CHINA", "", tx_rpl[i])
-      tx_rpl[i] <- gsub(sub("\\_.*", "", sub(".*module_", "", tx_rpl[i])), "gcamchina", tx_rpl[i])
-    }
-
-    lines_to_update <- which(grepl("module_.*china", tx))
-    #Remove _CHINA in function name and replace any module name with "gcamchina"
-    for(i in lines_to_update){
-      tx_rpl[i] <- gsub("_china", "", tx_rpl[i])
-      tx_rpl[i] <- gsub(sub("\\_.*", "", sub(".*module_", "", tx_rpl[i])), "gcamchina", tx_rpl[i])
-    }
-
-    # Save file with new text
-    writeLines(tx_rpl, con=name)
-  }
-
-  # If we updated any chunks let user know
-  if(nrow(gcamchina_chunks > 0)){
-    message("Updated function name in ", nrow(gcamchina_chunks), " gcamchina chunk(s)")
-  }
-
-
   # Replace "batch" with "XML" in function name
   updated_files %>%
     filter(grepl("_xml_", new_file)) -> xml_chunks
 
-
   for(name in xml_chunks$new_file){
     tx  <- readLines(name)
     tx_rpl <- tx
-    #Remove _CHINA in module function name
+    #Remove _USA in module function name
     lines_to_update <-which(grepl("module_.*batch", tx_rpl))
     for(i in lines_to_update){
       tx_rpl[i] <- gsub("_batch", "", tx_rpl[i])
@@ -309,5 +273,59 @@ rename_gcamdata_chunks <- function() {
     message("Removed LA or LB in ", nrow(LALB_files), " function name(s)")
   }
 } # end rename_gcamdata_chunks
+
+#' generate_metadata_csv
+#'
+#' A tibble of chunk information and chunk information map and file info. Uses chunk
+#' documentation to generate a tibble of chunk names, module, their dependencies,
+#' and their documentation.
+#'
+#' Uses \code{\link{find_chunks}} and \code{\link{chunks_info}} from \code{utils.R}.
+#' \code{GENENRATE_CHUNKS_INFO} option is set to \code{TRUE} and
+#' \code{ALL_CHUNKS} option is set to \code{FALSE} by default. This means that
+#' the tibble will only contain non-batch/non-xml chunks because batch and xml
+#' chunks have straightforward documentation and are not needed in the tibble.
+#' @param chunk.info.fn The file name to write the chunk info CSV to, if not null.
+#' @param chunk.info.map.fn The file name to write the chunk info map CSV to, if not null.
+#' @param files.info.fn The file name to write the file info CSV to, if not null.
+#' @param ALL_CHUNKS If false omits batch XML chunks from the chunk info CSVs.
+#' @export
+#' @author Hassan Niazi, Jan 2024
+generate_metadata_csv <- function(chunk.info.fn = NULL, chunk.info.map.fn = NULL, files.info.fn = NULL, ALL_CHUNKS = FALSE) {
+  # Generate a list of chunks and their dependencies
+  if (ALL_CHUNKS == T) {
+    chunk_names <- find_chunks() # all chunks
+  } else {
+    chunk_names <- find_chunks('^(module_[a-zA-Z\\.]*_L.*$|module_[a-zA-Z\\.]*_data*$)')
+    # only non-batch/non-xml chunks
+  }
+
+  # chunks info
+  CHUNKS_INFO <- bind_rows(lapply(chunk_names$name, chunks_info)) %>%
+    left_join(chunk_names, by = "name") %>%
+    select(module, name, description, details, chunk)
+
+  if(!is.null(chunk.info.fn)) {
+    write.csv(CHUNKS_INFO, file = chunk.info.fn)
+  }
+
+  if(!is.null(chunk.info.map.fn)) {
+    # chunks info with all corresponding outputs and their details
+    data(GCAM_DATA_MAP)
+    CHUNKS_INFO_MAP <- CHUNKS_INFO %>% left_join(GCAM_DATA_MAP, by = "name")
+    write.csv(CHUNKS_INFO_MAP, file = chunk.info.map.fn)
+  }
+
+  if(!is.null(files.info.fn)) {
+    data(GCAM_DATA_MAP)
+    FILES_INFO <- GCAM_DATA_MAP %>% filter(name == 'INPUT') %>%
+      # extract and remove module name from the file path (i.e., before the first "/")
+      mutate(module = str_extract(output, '^[a-zA-Z\\.-]*'),
+             file = str_extract(output, '[^/]*$'),
+             filepath = sub("^[^/]*/", "", output)) %>%
+      select(module, file, units, description = title, details = comments, filepath)
+    write.csv(FILES_INFO, file = files.info.fn)
+  }
+}
 
 # nocov end

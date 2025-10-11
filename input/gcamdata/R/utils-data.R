@@ -13,6 +13,7 @@ ATTR_COMMENTS <- "comments"
 ATTR_PRECURSORS <- "precursors"
 ATTR_LEGACY_NAME <- "legacy_name"
 ATTR_REFERENCE <- "reference"
+ATTR_FLAGS <-"flags"
 
 #' add_title
 #'
@@ -104,7 +105,7 @@ get_units <- function(x) { attr(x, ATTR_UNITS) }
 #' @param ... Names of precursor objects (character)
 #' @return \code{x} with units appended to any existing comments.
 add_precursors <- function(x, ...) {
-  pc <- as.character(list(...))
+  pc <- c(...)
   attr(x, ATTR_PRECURSORS) <- c(attr(x, ATTR_PRECURSORS), pc)
   x
 }
@@ -227,6 +228,7 @@ get_data <- function(all_data, name, strip_attributes = FALSE) {
     attr(all_data[[name]], ATTR_PRECURSORS) <- NULL
     attr(all_data[[name]], ATTR_LEGACY_NAME) <- NULL
     attr(all_data[[name]], ATTR_REFERENCE) <- NULL
+    attr(all_data[[name]], ATTR_FLAGS) <- NULL
     all_data[[name]]
   } else {
     all_data[[name]]

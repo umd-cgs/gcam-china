@@ -8,11 +8,12 @@
 #' @param ... other optional parameters, depending on command
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
-#' the generated outputs: \code{elec_segments_USA.xml}. The corresponding file in the
-#' original data system was \code{batch_elec_segments_USA.xml} (gcamusa xml-batch).
+#' the generated outputs: \code{elec_segments_CHINA.xml}. The corresponding file in the
+#' original data system was \code{batch_elec_segments_CHINA.xml} (gcamCHINA xml-batch).07/09/2025/xsl change based on v7
 module_gcamchina_elec_segments_xml <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
-    return(c("L2234.Supplysector_elecS_CHINA",
+
+    MODULE_INPUTS <- c("L2234.Supplysector_elecS_CHINA",
              "L2234.ElecReserve_elecS_CHINA",
              "L2234.SubsectorLogit_elecS_CHINA",
              "L2234.SubsectorShrwtInterp_elecS_CHINA",
@@ -44,9 +45,7 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
              "L2234.GlobalTechProfitShutdown_elecS_CHINA",
              "L2234.GlobalTechSCurve_elecS_CHINA",
              "L2234.GlobalTechCapture_elecS_CHINA",
-             "L2234.GlobalIntTechBackup_elecS_CHINA",
              "L2234.StubTechMarket_elecS_CHINA",
-             "L2234.StubTechMarket_backup_elecS_CHINA",
              "L2234.StubTechElecMarket_backup_elecS_CHINA",
              "L2234.StubTechProd_elecS_CHINA",
              "L2234.StubTechFixOut_elecS_CHINA",
@@ -78,9 +77,19 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
              "L2235.TechCoef_elec_GRID_CHINA",
              "L2235.TechCoef_elecownuse_GRID_CHINA",
              "L2235.Production_imports_GRID_CHINA",
-             "L2235.Production_elec_gen_GRID_CHINA"))
+             "L2235.Production_elec_gen_GRID_CHINA",
+             "L2234.GlobalIntTechValueFactor_elecS_CHINA")
+
+    if(energy.ELEC_USE_BACKUP) {
+      MODULE_INPUTS <- c(MODULE_INPUTS, "L2234.GlobalIntTechBackup_elecS_CHINA",
+                         "L2234.StubTechMarket_backup_elecS_CHINA")
+    } else {
+      MODULE_INPUTS <- c(MODULE_INPUTS, "L2234.GlobalIntTechValueFactor_elecS_CHINA")
+    }
+
+    return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c(XML = "elec_segments_CHINA.xml"))
+    return(c(XML = "elec_segments_CHINA.xml",XML = "elec_segments_CHINA_nointerp.xml"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -121,9 +130,16 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
     L2234.GlobalTechProfitShutdown_elecS_CHINA <- get_data(all_data, "L2234.GlobalTechProfitShutdown_elecS_CHINA")
     L2234.GlobalTechSCurve_elecS_CHINA <- get_data(all_data, "L2234.GlobalTechSCurve_elecS_CHINA")
     L2234.GlobalTechCapture_elecS_CHINA <- get_data(all_data, "L2234.GlobalTechCapture_elecS_CHINA")
-    L2234.GlobalIntTechBackup_elecS_CHINA <- get_data(all_data, "L2234.GlobalIntTechBackup_elecS_CHINA")
+
+    # 07/09/2025 xsl add if else
+    if(energy.ELEC_USE_BACKUP) {
+      L2234.GlobalIntTechBackup_elecS_CHINA <- get_data(all_data, "L2234.GlobalIntTechBackup_elecS_CHINA")
+      L2234.StubTechMarket_backup_elecS_CHINA <- get_data(all_data, "L2234.StubTechMarket_backup_elecS_CHINA")
+    } else {L2234.GlobalIntTechValueFactor_elecS_CHINA <- get_data(all_data, "L2234.GlobalIntTechValueFactor_elecS_CHINA")
+    }
+
     L2234.StubTechMarket_elecS_CHINA <- get_data(all_data, "L2234.StubTechMarket_elecS_CHINA")
-    L2234.StubTechMarket_backup_elecS_CHINA <- get_data(all_data, "L2234.StubTechMarket_backup_elecS_CHINA")
+
     L2234.StubTechElecMarket_backup_elecS_CHINA <- get_data(all_data, "L2234.StubTechElecMarket_backup_elecS_CHINA")
     L2234.StubTechProd_elecS_CHINA <- get_data(all_data, "L2234.StubTechProd_elecS_CHINA")
     L2234.StubTechFixOut_elecS_CHINA <- get_data(all_data, "L2234.StubTechFixOut_elecS_CHINA")
@@ -159,6 +175,11 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
     L2235.Production_elec_gen_GRID_CHINA <- get_data(all_data, "L2235.Production_elec_gen_GRID_CHINA")
 
 
+
+
+
+
+
     # ===================================================
     # Rename tibble columns to match the L2 data names.
     L2234.PassThroughSector_elecS_CHINA <- rename(L2234.PassThroughSector_elecS_CHINA, pass.through.sector = passthrough.sector)
@@ -174,6 +195,7 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
                subsector.name = subsector)
       return(data_new)
     }
+
 
     L2234.GlobalTechCapital_elecS_CHINA <- fix_global_tech_names(L2234.GlobalTechCapital_elecS_CHINA)
     L2234.GlobalIntTechCapital_elecS_CHINA <- fix_global_tech_names(L2234.GlobalIntTechCapital_elecS_CHINA)
@@ -191,12 +213,18 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
     L2234.GlobalTechCapture_elecS_CHINA <- fix_global_tech_names(L2234.GlobalTechCapture_elecS_CHINA)
     # NOTE:  below is an issue with LEVEL2_DATA_NAMES... GlobalIntTechBackup name should be intermittent.technology,
     # as the table is for intermittent technologies and the old DS MI header name is intermittent.technology
-    L2234.GlobalIntTechBackup_elecS_CHINA <- L2234.GlobalIntTechBackup_elecS_CHINA %>%
-      fix_global_tech_names() %>%
-      rename(technology = intermittent.technology)
+
+    # 07/09/2025 XSL change
+
+    if(energy.ELEC_USE_BACKUP) {
+      L2234.GlobalIntTechBackup_elecS_CHINA <- fix_global_tech_names(L2234.GlobalIntTechBackup_elecS_CHINA)
+    } else {
+      L2234.GlobalIntTechValueFactor_elecS_CHINA <- fix_global_tech_names(L2234.GlobalIntTechValueFactor_elecS_CHINA)
+    }
 
     L2234.StubTechProd_elecS_CHINA <- rename(L2234.StubTechProd_elecS_CHINA, tech.share.weight = share.weight)
     L2234.TechProd_elecS_grid_CHINA <- rename(L2234.TechProd_elecS_grid_CHINA, tech.share.weight = share.weight)
+
 
 
     # Produce outputs
@@ -207,7 +235,26 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
       add_xml_data(L2234.PassThroughTech_elecS_grid_CHINA, "PassThroughTech") %>%
       add_logit_tables_xml(L2234.Supplysector_elecS_CHINA, "Supplysector") %>%
       add_xml_data(L2234.ElecReserve_elecS_CHINA, "ElecReserve") %>%
-      add_logit_tables_xml(L2234.SubsectorLogit_elecS_CHINA, "SubsectorLogit") %>%
+      add_logit_tables_xml(L2234.SubsectorLogit_elecS_CHINA, "SubsectorLogit") ->
+      elec_segments_CHINA.xml
+
+    # 16th Sep 2025 xsl add
+    if(energy.ELEC_USE_BACKUP) {
+      elec_segments_CHINA.xml %>%
+        add_xml_data(L2234.GlobalIntTechBackup_elecS_CHINA, "GlobalIntTechBackup") %>%
+        add_xml_data(L2234.StubTechMarket_backup_elecS_CHINA, "StubTechMarket") %>%
+        add_precursors("L2234.GlobalIntTechBackup_elecS_CHINA",
+                       "L2234.StubTechMarket_backup_elecS_CHINA") ->
+        elec_segments_CHINA.xml
+    } else {
+      elec_segments_CHINA.xml %>%
+        add_xml_data(L2234.GlobalIntTechValueFactor_elecS_CHINA, "GlobalIntTechValueFactor") %>%
+        add_precursors("L2234.GlobalIntTechValueFactor_elecS_CHINA") ->
+        elec_segments_CHINA.xml
+    }
+
+
+    elec_segments_CHINA.xml %>%
       add_xml_data(L2234.GlobalTechShrwt_elecS_CHINA, "GlobalTechShrwt") %>%
       add_xml_data(L2234.GlobalIntTechShrwt_elecS_CHINA, "GlobalIntTechShrwt") %>%
       add_xml_data(L2234.PrimaryRenewKeyword_elecS_CHINA, "PrimaryRenewKeyword") %>%
@@ -227,14 +274,13 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
       add_xml_data(L2234.GlobalTechProfitShutdown_elecS_CHINA, "GlobalTechProfitShutdown") %>%
       add_xml_data(L2234.GlobalTechSCurve_elecS_CHINA, "GlobalTechSCurve") %>%
       add_xml_data(L2234.GlobalTechCapture_elecS_CHINA, "GlobalTechCapture") %>%
-      add_xml_data(L2234.GlobalIntTechBackup_elecS_CHINA, "GlobalIntTechBackup") %>%
       add_xml_data(L2234.StubTechMarket_elecS_CHINA, "StubTechMarket") %>%
-      add_xml_data(L2234.StubTechMarket_backup_elecS_CHINA, "StubTechMarket") %>%
       add_xml_data(L2234.StubTechElecMarket_backup_elecS_CHINA, "StubTechElecMarket") %>%
       add_xml_data(L2234.StubTechProd_elecS_CHINA, "StubTechProd") %>%
       add_xml_data(L2234.SubsectorShrwt_elecS_CHINA, "SubsectorShrwt") %>%
       add_xml_data(L2234.SubsectorShrwtInterp_elecS_CHINA, "SubsectorInterp") %>%
       add_xml_data(L2234.SubsectorShrwtInterpTo_elecS_CHINA, "SubsectorInterpTo") %>%
+      #add_xml_data(L2234.SubsectorShrwtFllt_elecS_CHINA, "SubsectorFllt") %>%
       add_xml_data(L2234.StubTechCapFactor_elecS_wind_CHINA, "StubTechCapFactor") %>%
       add_xml_data(L2234.StubTechCapFactor_elecS_solar_CHINA, "StubTechCapFactor") %>%
       add_xml_data(L2234.StubTechFixOut_elecS_CHINA, "StubTechFixOut") %>%
@@ -302,9 +348,7 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
                      "L2234.GlobalTechProfitShutdown_elecS_CHINA",
                      "L2234.GlobalTechSCurve_elecS_CHINA",
                      "L2234.GlobalTechCapture_elecS_CHINA",
-                     "L2234.GlobalIntTechBackup_elecS_CHINA",
                      "L2234.StubTechMarket_elecS_CHINA",
-                     "L2234.StubTechMarket_backup_elecS_CHINA",
                      "L2234.StubTechElecMarket_backup_elecS_CHINA",
                      "L2234.StubTechProd_elecS_CHINA",
                      "L2234.StubTechFixOut_elecS_CHINA",
@@ -338,9 +382,164 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
                      "L2235.Production_imports_GRID_CHINA",
                      "L2235.Production_elec_gen_GRID_CHINA") ->
       elec_segments_CHINA.xml
+    # 2025/1008 xsl
+    create_xml("elec_segments_CHINA_nointerp.xml") %>%
+      add_node_equiv_xml("sector") %>%
+      add_node_equiv_xml("technology") %>%
+      add_xml_data(L2234.PassThroughSector_elecS_CHINA, "PassThroughSector") %>%
+      add_xml_data(L2234.PassThroughTech_elecS_grid_CHINA, "PassThroughTech") %>%
+      add_logit_tables_xml(L2234.Supplysector_elecS_CHINA, "Supplysector") %>%
+      add_xml_data(L2234.ElecReserve_elecS_CHINA, "ElecReserve") %>%
+      add_logit_tables_xml(L2234.SubsectorLogit_elecS_CHINA, "SubsectorLogit") ->
+      elec_segments_CHINA_nointerp.xml
 
-    return_data(elec_segments_CHINA.xml)
+    if(energy.ELEC_USE_BACKUP) {
+      elec_segments_CHINA_nointerp.xml %>%
+        add_xml_data(L2234.GlobalIntTechBackup_elecS_CHINA, "GlobalIntTechBackup") %>%
+        add_xml_data(L2234.StubTechMarket_backup_elecS_CHINA, "StubTechMarket") %>%
+        add_precursors("L2234.GlobalIntTechBackup_elecS_CHINA",
+                       "L2234.StubTechMarket_backup_elecS_CHINA") ->
+        elec_segments_CHINA_nointerp.xml
+    } else {
+      elec_segments_CHINA_nointerp.xml %>%
+        add_xml_data(L2234.GlobalIntTechValueFactor_elecS_CHINA, "GlobalIntTechValueFactor") %>%
+        add_precursors("L2234.GlobalIntTechValueFactor_elecS_CHINA") ->
+        elec_segments_CHINA_nointerp.xml
+    }
+
+
+    elec_segments_CHINA_nointerp.xml %>%
+      add_xml_data(L2234.GlobalTechShrwt_elecS_CHINA, "GlobalTechShrwt") %>%
+      add_xml_data(L2234.GlobalIntTechShrwt_elecS_CHINA, "GlobalIntTechShrwt") %>%
+      add_xml_data(L2234.PrimaryRenewKeyword_elecS_CHINA, "PrimaryRenewKeyword") %>%
+      add_xml_data(L2234.PrimaryRenewKeywordInt_elecS_CHINA, "PrimaryRenewKeywordInt") %>%
+      add_xml_data(L2234.AvgFossilEffKeyword_elecS_CHINA, "AvgFossilEffKeyword") %>%
+      add_xml_data(L2234.GlobalTechCapital_elecS_CHINA, "GlobalTechCapital") %>%
+      add_xml_data(L2234.GlobalIntTechCapital_elecS_CHINA, "GlobalIntTechCapital") %>%
+      add_xml_data(L2234.GlobalTechOMfixed_elecS_CHINA, "GlobalTechOMfixed") %>%
+      add_xml_data(L2234.GlobalIntTechOMfixed_elecS_CHINA, "GlobalIntTechOMfixed") %>%
+      add_xml_data(L2234.GlobalTechOMvar_elecS_CHINA, "GlobalTechOMvar") %>%
+      add_xml_data(L2234.GlobalIntTechOMvar_elecS_CHINA, "GlobalIntTechOMvar") %>%
+      add_xml_data(L2234.GlobalTechCapFac_elecS_CHINA, "GlobalTechCapFac") %>%
+      add_xml_data(L2234.GlobalTechEff_elecS_CHINA, "GlobalTechEff") %>%
+      add_xml_data(L2234.GlobalIntTechEff_elecS_CHINA, "GlobalIntTechEff") %>%
+      add_xml_data(L2234.GlobalTechLifetime_elecS_CHINA, "GlobalTechLifetime") %>%
+      add_xml_data(L2234.GlobalIntTechLifetime_elecS_CHINA, "GlobalIntTechLifetime") %>%
+      add_xml_data(L2234.GlobalTechProfitShutdown_elecS_CHINA, "GlobalTechProfitShutdown") %>%
+      add_xml_data(L2234.GlobalTechSCurve_elecS_CHINA, "GlobalTechSCurve") %>%
+      add_xml_data(L2234.GlobalTechCapture_elecS_CHINA, "GlobalTechCapture") %>%
+      add_xml_data(L2234.StubTechMarket_elecS_CHINA, "StubTechMarket") %>%
+      add_xml_data(L2234.StubTechElecMarket_backup_elecS_CHINA, "StubTechElecMarket") %>%
+      add_xml_data(L2234.StubTechProd_elecS_CHINA, "StubTechProd") %>%
+      add_xml_data(L2234.SubsectorShrwt_elecS_CHINA, "SubsectorShrwt") %>%
+      # add_xml_data(L2234.SubsectorShrwtInterp_elecS_CHINA, "SubsectorInterp") %>%
+      # add_xml_data(L2234.SubsectorShrwtInterpTo_elecS_CHINA, "SubsectorInterpTo") %>%
+      add_xml_data(L2234.StubTechCapFactor_elecS_wind_CHINA, "StubTechCapFactor") %>%
+      add_xml_data(L2234.StubTechCapFactor_elecS_solar_CHINA, "StubTechCapFactor") %>%
+      add_xml_data(L2234.StubTechFixOut_elecS_CHINA, "StubTechFixOut") %>%
+      add_xml_data(L2234.StubTechEff_elecS_CHINA, "StubTechEff") %>%
+      add_xml_data(L2234.StubTechFixOut_hydro_elecS_CHINA, "StubTechFixOut") %>%
+      add_xml_data(L2234.TechShrwt_elecS_grid_CHINA, "TechShrwt") %>%
+      add_xml_data(L2234.TechCoef_elecS_grid_CHINA, "TechCoef") %>%
+      add_xml_data(L2234.TechProd_elecS_grid_CHINA, "Production") %>%
+      add_xml_data(L2234.SubsectorShrwtFllt_elecS_grid_CHINA, "SubsectorShrwtFllt") %>%
+      # add_xml_data(L2234.SubsectorShrwtInterp_elecS_grid_CHINA, "SubsectorInterp") %>%
+      add_xml_data(L2235.DeleteSupplysector_elec_CHINA, "DeleteSupplysector") %>%
+      add_xml_data(L2235.InterestRate_GRID_CHINA, "InterestRate") %>%
+      add_xml_data(L2235.Pop_GRID_CHINA, "Pop") %>%
+      add_xml_data(L2235.GDP_GRID_CHINA, "GDP") %>%
+      add_logit_tables_xml(L2235.Supplysector_elec_CHINA, "Supplysector") %>%
+      add_xml_data(L2235.ElecReserve_elecS_grid_vertical_CHINA, "ElecReserve") %>%
+      add_logit_tables_xml(L2235.SubsectorLogit_elec_CHINA, "SubsectorLogit") %>%
+      add_xml_data(L2235.SubsectorShrwtFllt_elec_CHINA, "SubsectorShrwtFllt") %>%
+      # add_xml_data(L2235.SubsectorInterp_elec_CHINA, "SubsectorInterp") %>%
+      add_xml_data(L2235.SubsectorShrwtFllt_elecS_grid_vertical_CHINA, "SubsectorShrwtFllt") %>%
+      # add_xml_data(L2235.SubsectorShrwtInterp_elecS_grid_vertical_CHINA, "SubsectorInterp") %>%
+      add_xml_data(L2235.TechShrwt_elec_CHINA, "TechShrwt") %>%
+      add_xml_data(L2235.TechCoef_elec_CHINA, "TechCoef") %>%
+      add_xml_data(L2235.Production_exports_elec_CHINA, "Production") %>%
+      add_xml_data(L2235.TechShrwt_elecS_grid_vertical_CHINA, "TechShrwt") %>%
+      add_xml_data(L2235.TechCoef_elecS_grid_vertical_CHINA, "TechCoef") %>%
+      add_logit_tables_xml(L2235.Supplysector_elec_GRID_CHINA, "Supplysector") %>%
+      add_logit_tables_xml(L2235.SubsectorLogit_elec_GRID_CHINA, "SubsectorLogit") %>%
+      add_xml_data(L2235.SubsectorShrwtFllt_elec_GRID_CHINA, "SubsectorShrwtFllt") %>%
+      # add_xml_data(L2235.SubsectorInterp_elec_GRID_CHINA, "SubsectorInterp") %>%
+      add_xml_data(L2235.TechShrwt_elec_GRID_CHINA, "TechShrwt") %>%
+      add_xml_data(L2235.TechCoef_elec_GRID_CHINA, "TechCoef") %>%
+      add_xml_data(L2235.TechCoef_elecownuse_GRID_CHINA, "TechCoef") %>%
+      add_xml_data(L2235.Production_imports_GRID_CHINA, "Production") %>%
+      add_xml_data(L2235.Production_elec_gen_GRID_CHINA, "Production") %>%
+      add_precursors("L2234.Supplysector_elecS_CHINA",
+                     "L2234.ElecReserve_elecS_CHINA",
+                     "L2234.SubsectorLogit_elecS_CHINA",
+                     "L2234.SubsectorShrwtInterp_elecS_CHINA",
+                     "L2234.SubsectorShrwtInterpTo_elecS_CHINA",
+                     "L2234.SubsectorShrwt_elecS_CHINA",
+                     "L2234.StubTechEff_elecS_CHINA",
+                     "L2234.StubTechCapFactor_elecS_solar_CHINA",
+                     "L2234.StubTechCapFactor_elecS_wind_CHINA",
+                     "L2234.SubsectorShrwtFllt_elecS_grid_CHINA",
+                     "L2234.SubsectorShrwtInterp_elecS_grid_CHINA",
+                     "L2234.PassThroughSector_elecS_CHINA",
+                     "L2234.PassThroughTech_elecS_grid_CHINA",
+                     "L2234.GlobalTechShrwt_elecS_CHINA",
+                     "L2234.GlobalIntTechShrwt_elecS_CHINA",
+                     "L2234.PrimaryRenewKeyword_elecS_CHINA",
+                     "L2234.PrimaryRenewKeywordInt_elecS_CHINA",
+                     "L2234.AvgFossilEffKeyword_elecS_CHINA",
+                     "L2234.GlobalTechCapital_elecS_CHINA",
+                     "L2234.GlobalIntTechCapital_elecS_CHINA",
+                     "L2234.GlobalTechOMfixed_elecS_CHINA",
+                     "L2234.GlobalIntTechOMfixed_elecS_CHINA",
+                     "L2234.GlobalTechOMvar_elecS_CHINA",
+                     "L2234.GlobalIntTechOMvar_elecS_CHINA",
+                     "L2234.GlobalTechCapFac_elecS_CHINA",
+                     "L2234.GlobalTechEff_elecS_CHINA",
+                     "L2234.GlobalIntTechEff_elecS_CHINA",
+                     "L2234.GlobalTechLifetime_elecS_CHINA",
+                     "L2234.GlobalIntTechLifetime_elecS_CHINA",
+                     "L2234.GlobalTechProfitShutdown_elecS_CHINA",
+                     "L2234.GlobalTechSCurve_elecS_CHINA",
+                     "L2234.GlobalTechCapture_elecS_CHINA",
+                     "L2234.StubTechMarket_elecS_CHINA",
+                     "L2234.StubTechElecMarket_backup_elecS_CHINA",
+                     "L2234.StubTechProd_elecS_CHINA",
+                     "L2234.StubTechFixOut_elecS_CHINA",
+                     "L2234.StubTechFixOut_hydro_elecS_CHINA",
+                     "L2234.TechShrwt_elecS_grid_CHINA",
+                     "L2234.TechCoef_elecS_grid_CHINA",
+                     "L2234.TechProd_elecS_grid_CHINA",
+                     "L2235.DeleteSupplysector_elec_CHINA",
+                     "L2235.InterestRate_GRID_CHINA",
+                     "L2235.Pop_GRID_CHINA",
+                     "L2235.GDP_GRID_CHINA",
+                     "L2235.Supplysector_elec_CHINA",
+                     "L2235.ElecReserve_elecS_grid_vertical_CHINA",
+                     "L2235.SubsectorLogit_elec_CHINA",
+                     "L2235.SubsectorShrwtFllt_elec_CHINA",
+                     "L2235.SubsectorInterp_elec_CHINA",
+                     "L2235.SubsectorShrwtFllt_elecS_grid_vertical_CHINA",
+                     "L2235.SubsectorShrwtInterp_elecS_grid_vertical_CHINA",
+                     "L2235.TechShrwt_elec_CHINA",
+                     "L2235.TechCoef_elec_CHINA",
+                     "L2235.Production_exports_elec_CHINA",
+                     "L2235.TechShrwt_elecS_grid_vertical_CHINA",
+                     "L2235.TechCoef_elecS_grid_vertical_CHINA",
+                     "L2235.Supplysector_elec_GRID_CHINA",
+                     "L2235.SubsectorLogit_elec_GRID_CHINA",
+                     "L2235.SubsectorShrwtFllt_elec_GRID_CHINA",
+                     "L2235.SubsectorInterp_elec_GRID_CHINA",
+                     "L2235.TechShrwt_elec_GRID_CHINA",
+                     "L2235.TechCoef_elec_GRID_CHINA",
+                     "L2235.TechCoef_elecownuse_GRID_CHINA",
+                     "L2235.Production_imports_GRID_CHINA",
+                     "L2235.Production_elec_gen_GRID_CHINA") ->
+      elec_segments_CHINA_nointerp.xml
+     return_data(elec_segments_CHINA.xml,elec_segments_CHINA_nointerp.xml)
   } else {
     stop("Unknown command")
   }
 }
+
+
+

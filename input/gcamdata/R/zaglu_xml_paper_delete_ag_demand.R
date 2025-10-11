@@ -2,7 +2,7 @@
 
 #' module_aglu_paper_delete_ag_demand_xml
 #'
-#' Construct XML data structure for \code{paper_delete_ag_demand.xml} and \code{paper_delete_ag_demand_USA.xml} and \code{paper_delete_ag_demand_China.xml}.
+#' Construct XML data structure for \code{paper_delete_ag_demand.xml} and \code{paper_delete_ag_demand_USA.xml}.
 #'
 #' @param command API command to execute
 #' @param ... other optional parameters, depending on command
@@ -31,6 +31,7 @@ module_aglu_paper_delete_ag_demand_xml <- function(command, ...) {
     L2327.DeleteFinalDemand_PaperAgDemand_USA <- get_data(all_data, "L2327.DeleteFinalDemand_PaperAgDemand_USA", strip_attributes = TRUE)
     L2327.DeleteSupplysector_PaperAgDemand_China <- L2327.DeleteSupplysector_PaperAgDemand %>% filter(region != 'China')
     L2327.DeleteFinalDemand_PaperAgDemand_China <- L2327.DeleteFinalDemand_PaperAgDemand %>% filter(region != 'China')
+
     # ===================================================
 
     # Produce outputs
@@ -48,6 +49,7 @@ module_aglu_paper_delete_ag_demand_xml <- function(command, ...) {
                      "L2327.DeleteFinalDemand_PaperAgDemand_USA") ->
       paper_delete_ag_demand_USA.xml
 
+    #05/09/2025 xsl add paper_delete_ag_demand_China part
     create_xml("paper_delete_ag_demand_China.xml") %>%
       add_xml_data(L2327.DeleteSupplysector_PaperAgDemand_China, "DeleteSupplysector") %>%
       add_xml_data(L2327.DeleteFinalDemand_PaperAgDemand_China, "DeleteFinalDemand") %>%

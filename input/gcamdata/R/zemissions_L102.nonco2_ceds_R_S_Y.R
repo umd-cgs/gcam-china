@@ -150,7 +150,6 @@ module_emissions_L102.nonco2_ceds_R_S_Y <- function(command, ...) {
           left_join(CEDS_sector_map, by = c("sector" = "CEDS_sector")) %>%
           left_join(CEDS_fuel_map, by = c("fuel" = "CEDS_fuel")) %>%
           filter(CEDS_agg_sector=="trn_intl_ship",CEDS_agg_fuel =="refined liquids") %>%
-          gather_years %>%
           filter(year %in% emissions.CEDS_YEARS) %>%
           filter(year <= max(HISTORICAL_YEARS), emissions > 0)->CEDS_int_shipping
 
@@ -233,6 +232,22 @@ module_emissions_L102.nonco2_ceds_R_S_Y <- function(command, ...) {
         L102.ceds_GFED_nonco2_tg_R_S_F <- extract_prebuilt_data("L102.ceds_GFED_nonco2_tg_R_S_F")
         L102.ceds_GFED_nonco2_tg_C_S_F <- extract_prebuilt_data("L102.ceds_GFED_nonco2_tg_C_S_F")
         L102.ceds_int_shipping_nonco2_tg_S_F <- extract_prebuilt_data("L102.ceds_int_shipping_nonco2_tg_S_F")
+      }
+
+      # Make sure data is current to base year
+      if (max(L102.ceds_GFED_nonco2_tg_R_S_F$year) < max(HISTORICAL_YEARS)) {
+        warning(paste0("ERROR: CEDS historical emissions data needs to be updated to extend to ",max(HISTORICAL_YEARS)," in module_emissions_L102.nonco2_ceds_R_S_Y"))
+
+        # copy data forward to be able to continue processing
+        L102.ceds_GFED_nonco2_tg_R_S_F %>%
+          copy_data_forward_long("emissions", HISTORICAL_YEARS, GCAM_region_ID, Non.CO2, CEDS_agg_sector, CEDS_agg_fuel) ->
+          L102.ceds_GFED_nonco2_tg_R_S_F
+        L102.ceds_GFED_nonco2_tg_C_S_F %>%
+          copy_data_forward_long("emissions", HISTORICAL_YEARS, iso, sector, fuel, units, Non.CO2, CEDS_agg_sector, CEDS_agg_fuel) ->
+          L102.ceds_GFED_nonco2_tg_C_S_F
+        L102.ceds_int_shipping_nonco2_tg_S_F %>%
+          copy_data_forward_long("emissions", HISTORICAL_YEARS, sector, fuel, units, Non.CO2, CEDS_agg_sector, CEDS_agg_fuel) ->
+          L102.ceds_int_shipping_nonco2_tg_S_F
       }
 
       return_data(L102.ceds_GFED_nonco2_tg_R_S_F, L102.ceds_GFED_nonco2_tg_C_S_F, L102.ceds_int_shipping_nonco2_tg_S_F)

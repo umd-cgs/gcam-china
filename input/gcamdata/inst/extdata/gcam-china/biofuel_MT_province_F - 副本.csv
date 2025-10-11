@@ -1,0 +1,18 @@
+# File: biofuel_MT_province_F.csv
+# Title: Ethanol and biodiesel production
+# Units: MT
+# Source: http://www.egnret.ewg.apec.org/Archive/me_china.html
+# Column types: cciiiiii
+# ----------
+province,fuel,2006,2007,2008,2009,2010,2015
+HL,ethanol,127,127,127,127,127,127
+JL,ethanol,887,887,887,887,887,887
+HA,ethanol,380,380,380,380,380,380
+AH,ethanol,405,405,405,405,405,405
+GX,ethanol,0,0,110,110,110,110
+HE,ethanol,0,0,300,300,300,300
+LN,ethanol,0,0,300,300,300,300
+HB,ethanol,0,0,300,300,300,300
+FJ,biodiesel,10,10,10,10,10,10
+SC,biodiesel,10,10,10,10,10,10
+HI,biodiesel,10,10,10,10,10,10

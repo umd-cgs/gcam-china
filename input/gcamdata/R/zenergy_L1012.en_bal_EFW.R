@@ -231,12 +231,9 @@ module_energy_L1012.en_bal_EFW <- function(command, ...) {
       mutate(value = if_else(is.na(energy_EJ_revised), value, energy_EJ_revised)) %>%
       select(-energy_EJ_revised)
 
-    # Nov 2023, YO
-    # turn off EFW, ignoring EFW-related adjustment
-    # EFW files will be commented out in config
+    # Nov 2023,YO
+
     L1012.en_bal_EJ_R_Si_Fi_Yh <- L1011.en_bal_EJ_R_Si_Fi_Yh
-
-
     # ===================================================
 
     # Produce outputs

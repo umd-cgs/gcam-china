@@ -1,10 +1,10 @@
 # File: A44.bld_shell_conductance.csv
 # Title: Building shell conductance efficiency trajectories
 # Units: Unitless
-# Description: Assumed shell efficiency trajectories
+# Description: Assumed shell efficiency trajectories 24/08/2025 xslchange 2020 to 2021
 # Column types: cnnnnnnnnnnn
 # ----------
-gcam.consumer,1971,1975,1990,2005,2020,2035,2050,2065,2080,2095,2100
+gcam.consumer,1971,1975,1990,2005,2021,2035,2050,2065,2080,2095,2100
 resid_urban,1,1,1,0.99,0.95,0.93,0.89,0.89,0.89,0.89,0.89
 resid_rural,1,1,1,0.99,0.95,0.93,0.89,0.89,0.89,0.89,0.89
 comm,1,1,1,1,0.95,0.93,0.89,0.89,0.89,0.89,0.89

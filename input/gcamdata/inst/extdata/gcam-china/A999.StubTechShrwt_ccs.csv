@@ -2,7 +2,7 @@
 # Title: Apply new ccs shareweights to all provinces
 # Units: Unitless
 # Description: Assign shareweight assumptions of CCS to subtechnologies by China province. Remove N fertilizer sector from XZ province
-# Source: from the former csv file
+# Source: from the former csv file 24/08/2025 xsl copy 2020 to 2021
 # Column types: ccccnn
 # ----------
 region,supplysector,subsector.name,stub.technology,year,share.weight
@@ -16,8 +16,6 @@ China,N fertilizer,coal,coal CCS,2010,0
 China,N fertilizer,gas,gas CCS,2010,0
 China,N fertilizer,coal,coal CCS,2015,0
 China,N fertilizer,gas,gas CCS,2015,0
-China,N fertilizer,coal,coal CCS,2020,0.2
-China,N fertilizer,gas,gas CCS,2020,0.2
 China,N fertilizer,coal,coal CCS,2025,0.4
 China,N fertilizer,gas,gas CCS,2025,0.4
 China,N fertilizer,coal,coal CCS,2030,0.6
@@ -55,7 +53,6 @@ China,cement,cement,cement CCS,1990,0
 China,cement,cement,cement CCS,2005,0
 China,cement,cement,cement CCS,2010,0
 China,cement,cement,cement CCS,2015,0
-China,cement,cement,cement CCS,2020,0.2
 China,cement,cement,cement CCS,2025,0.4
 China,cement,cement,cement CCS,2030,0.6
 China,cement,cement,cement CCS,2035,0.8
@@ -102,12 +99,6 @@ China,electricity,gas,gas (CC CCS),2015,0
 China,electricity,refined liquids,refined liquids (CC CCS),2015,0
 China,electricity,biomass,biomass (conv CCS),2015,0
 China,electricity,biomass,biomass (IGCC CCS),2015,0
-China,electricity,coal,coal (conv pul CCS),2020,0.2
-China,electricity,coal,coal (IGCC CCS),2020,0.2
-China,electricity,gas,gas (CC CCS),2020,0.2
-China,electricity,refined liquids,refined liquids (CC CCS),2020,0.2
-China,electricity,biomass,biomass (conv CCS),2020,0.2
-China,electricity,biomass,biomass (IGCC CCS),2020,0.2
 China,electricity,coal,coal (conv pul CCS),2025,0.4
 China,electricity,coal,coal (IGCC CCS),2025,0.4
 China,electricity,gas,gas (CC CCS),2025,0.4
@@ -234,12 +225,6 @@ China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2015,0
 China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2015,0
 China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2015,0
 China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2015,0
-China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2020,0.2
-China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2020,0.2
-China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2020,0.2
-China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2020,0.2
-China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2020,0.2
-China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2020,0.2
 China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2025,0.4
 China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2025,0.4
 China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2025,0.4
@@ -336,3 +321,18 @@ China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2100,1.5
 China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2100,1.5
 China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2100,1.5
 China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2100,1.5
+China,N fertilizer,coal,coal CCS,2021,0.2
+China,N fertilizer,gas,gas CCS,2021,0.2
+China,cement,cement,cement CCS,2021,0.2
+China,electricity,coal,coal (conv pul CCS),2021,0.2
+China,electricity,coal,coal (IGCC CCS),2021,0.2
+China,electricity,gas,gas (CC CCS),2021,0.2
+China,electricity,refined liquids,refined liquids (CC CCS),2021,0.2
+China,electricity,biomass,biomass (conv CCS),2021,0.2
+China,electricity,biomass,biomass (IGCC CCS),2021,0.2
+China,coal to liquids,coal to liquids,coal to liquids CCS level 1,2021,0.2
+China,coal to liquids,coal to liquids,coal to liquids CCS level 2,2021,0.2
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,2021,0.2
+China,biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,2021,0.2
+China,biomass liquids,biomass liquids,FT biofuels CCS level 1,2021,0.2
+China,biomass liquids,biomass liquids,FT biofuels CCS level 2,2021,0.2

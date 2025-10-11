@@ -1,9 +1,9 @@
 # File: A323.globaltech_shrwt.csv
-# Title: Default global technology shareweights
+# Title: Default global technology shareweights xsl copy 2020 to 2021
 # Units: Unitless
-# Column types: cccnnnn
+# Column types: cccnnnnn
 # ----------
-supplysector,subsector,technology,1971,2019,2020,2100
+supplysector,subsector,technology,1971,2019,2021,2100
 iron and steel,BLASTFUR,BLASTFUR,1,1,1,1
 iron and steel,BLASTFUR,BLASTFUR CCS,0,0,1,1
 iron and steel,BLASTFUR,Biomass-based,0,0,0,1

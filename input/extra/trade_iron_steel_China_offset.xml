@@ -43,7 +43,7 @@
                             <input-cost>0</input-cost>
                         </minicam-non-energy-input>
                     </period>
-                    <period year="2020">
+                    <period year="2021">
                         
                         <share-weight>0</share-weight>
                         <CO2 name="CO2"/>
@@ -190,7 +190,7 @@
                         <logit-exponent fillout="1" year="1975">-6</logit-exponent>
                     </relative-cost-logit>
                     <share-weight fillout="1" year="1975">1</share-weight>
-                    <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100">
+                    <interpolation-rule apply-to="share-weight" from-year="2021" to-year="2100">
                         <to-value>1</to-value>
                         <interpolation-function name="fixed"/>
                     </interpolation-rule>
@@ -210,8 +210,8 @@
                         <period year="2015">
                             <fixedOutput>98.7380446</fixedOutput>
                         </period>
-                        <period year="2020">
-                            <fixedOutput>0</fixedOutput>
+                        <period year="2021">
+                            <fixedOutput>98.7380446</fixedOutput>
                         </period>
                         <period year="2025">
                             <fixedOutput>0</fixedOutput>

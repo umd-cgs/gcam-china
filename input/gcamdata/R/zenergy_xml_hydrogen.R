@@ -99,6 +99,7 @@ module_energy_hydrogen_xml <- function(command, ...) {
       hydrogen.xml
 
 
+    # 05/09/2025 add hydrogen_without_water part
     # Produce outputs
     # without water
     L225.GlobalTechCoef_h2 %>%
