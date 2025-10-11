@@ -14,6 +14,7 @@
 #' \code{L2234.SubsectorShrwtFllt_elecS_grid_CHINA}, \code{L2234.SubsectorShrwtInterp_elecS_grid_CHINA}, \code{L2234.PassThroughSector_elecS_CHINA},
 #' \code{L2234.PassThroughTech_elecS_grid_CHINA}, \code{L2234.GlobalTechShrwt_elecS_CHINA}, \code{L2234.GlobalIntTechShrwt_elecS_CHINA},
 #' \code{L2234.PrimaryRenewKeyword_elecS_CHINA},\code{L2234.PrimaryRenewKeywordInt_elecS_CHINA}, \code{L2234.AvgFossilEffKeyword_elecS_CHINA},
+#' \code{L2234.GlobalIntTechValueFactor_elecS_CHINA},\code{L2234.GlobalIntTechBackup_elecS_CHINA},07/09/2025 xsl add
 #' \code{L2234.GlobalTechCapital_elecS_CHINA}, \code{L2234.GlobalIntTechCapital_elecS_CHINA}, \code{L2234.GlobalTechOMfixed_elecS_CHINA},
 #' \code{L2234.GlobalIntTechOMfixed_elecS_CHINA}, \code{L2234.GlobalTechOMvar_elecS_CHINA}, \code{L2234.GlobalIntTechOMvar_elecS_CHINA},
 #' \code{L2234.GlobalTechCapFac_elecS_CHINA}, \code{L2234.GlobalTechEff_elecS_CHINA}, \code{L2234.GlobalIntTechEff_elecS_CHINA},
@@ -79,11 +80,13 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
              "L223.GlobalTechProfitShutdown_elec",
              "L223.GlobalTechCapture_elec",
              "L223.GlobalIntTechBackup_elec",
+      		   "L223.GlobalIntTechValueFactor_elec",
              "L223.PrimaryRenewKeyword_elec",
              "L223.PrimaryRenewKeywordInt_elec",
              "L223.AvgFossilEffKeyword_elec"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c("L2234.Supplysector_elecS_CHINA",
+    return(c(
+             "L2234.Supplysector_elecS_CHINA",
              "L2234.ElecReserve_elecS_CHINA",
              "L2234.SubsectorLogit_elecS_CHINA",
              "L2234.SubsectorShrwtInterp_elecS_CHINA",
@@ -115,6 +118,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
              "L2234.GlobalTechProfitShutdown_elecS_CHINA",
              "L2234.GlobalTechSCurve_elecS_CHINA",
              "L2234.GlobalTechCapture_elecS_CHINA",
+             "L2234.GlobalIntTechValueFactor_elecS_CHINA",
              "L2234.GlobalIntTechBackup_elecS_CHINA",
              "L2234.StubTechMarket_elecS_CHINA",
              "L2234.StubTechMarket_backup_elecS_CHINA",
@@ -143,7 +147,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       market.name <-  electric.sector.market <- calOutputValue <- count_tech <- share.weight.year <-
       subs.share.weight <- tech.share.weight <- subscalOutputValue <- fraction <- subsector.cal.value <-
       fixedOutput <- eff_actual <- GCAM_region_ID <- geothermal_resource <- L2234.TechMarket_elecS_grid <-
-      tech.share <- supplysector.y <- supplysector.x <- segment <- share.weight.x <- year.x <- year.y <- 
+      tech.share <- supplysector.y <- supplysector.x <- segment <- share.weight.x <- year.x <- year.y <-
       period <- capital.cost <- fcr <- fixed.om <- variable.om <- coefficient <- passthrough.sector <-
       marginal.revenue.sector <- marginal.revenue.market <- Geothermal_Hydrothermal_GWh <- geo_state_noresource <-
       fuel <- scaler <- n <- NULL # silence package check notes
@@ -196,6 +200,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     L223.GlobalTechProfitShutdown_elec <- get_data(all_data, "L223.GlobalTechProfitShutdown_elec", strip_attributes = TRUE)
     L223.GlobalTechCapture_elec <- get_data(all_data, "L223.GlobalTechCapture_elec", strip_attributes = TRUE)
     L223.GlobalIntTechBackup_elec <- get_data(all_data, "L223.GlobalIntTechBackup_elec", strip_attributes = TRUE)
+    L223.GlobalIntTechValueFactor_elec <- get_data(all_data, "L223.GlobalIntTechValueFactor_elec", strip_attributes = TRUE)
     L223.PrimaryRenewKeyword_elec <- get_data(all_data, "L223.PrimaryRenewKeyword_elec", strip_attributes = TRUE)
     L223.PrimaryRenewKeywordInt_elec <- get_data(all_data, "L223.PrimaryRenewKeywordInt_elec", strip_attributes = TRUE)
     L223.AvgFossilEffKeyword_elec <- get_data(all_data, "L223.AvgFossilEffKeyword_elec", strip_attributes = TRUE)
@@ -519,13 +524,32 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       rename(supplysector = Electric.sector, technology = Electric.sector.technology) -> L2234.GlobalTechCapture_elecS
 
     # Additional characteristics for intermittent technologies
+
+
+    #07/09/2025 xsl add
     A23.elecS_inttech_mapping %>%
       # join is intended to duplicate rows; left_join_error_no_match throws error, so left_join used
-      left_join(L223.GlobalIntTechBackup_elec, by= c("subsector"= "subsector.name", "intermittent.technology" = "technology")) %>%
+      left_join(L223.GlobalIntTechValueFactor_elec, by= c("subsector" = "subsector.name", "intermittent.technology")) %>%
+      filter(!is.na(value.factor.intercept)) %>%
+      select(-supplysector, -subsector_1, -intermittent.technology, -sector.name) %>%
+      rename(supplysector = Electric.sector, intermittent.technology = Electric.sector.intermittent.technology) ->
+      L2234.GlobalIntTechValueFactor_elecS
+
+    #07/09/2025 xsl add
+    # Old approach to intermittent renewable integration (no longer the default)
+
+    # 11th sep 2025 xsl modifiy
+    A23.elecS_inttech_mapping %>%
+      #join is intended to duplicate rows; left_join_error_no_match throws error, so left_join used
+      left_join(L223.GlobalIntTechBackup_elec, by= c("subsector"= "subsector.name", "intermittent.technology" = "backup.intermittent.technology")) %>%
       filter(!is.na(capacity.limit)) %>%
       select(-supplysector, -subsector_1, -intermittent.technology, -sector.name) %>%
       rename(supplysector = Electric.sector, intermittent.technology = Electric.sector.intermittent.technology) ->
       L2234.GlobalIntTechBackup_elecS
+
+
+
+
 
     # Energy inputs
     A23.elecS_inttech_mapping %>%
@@ -551,6 +575,9 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
              year, minicam.energy.input, market.name) -> L2234.StubTechMarket_elecS_CHINA
 
     # Backup markets
+    # 11th sep 2025 xsl
+
+
     L223.StubTechMarket_backup_CHINA %>%
       # join is intended to duplicate rows; left_join_error_no_match throws error, so left_join used
       left_join(A23.elecS_inttech_mapping,
@@ -564,6 +591,9 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       left_join_error_no_match(province_names_mappings, by = c("region" = "province")) %>%
       select(region, supplysector, subsector, stub.technology, year, electric.sector.market = grid.region) ->
       L2234.StubTechElecMarket_backup_elecS_CHINA
+
+
+
 
     # Calibration Year Outputs. Note that all technologies in GCAM-China are calibrated on the output.
     A23.elecS_inttech_mapping %>%
@@ -665,9 +695,9 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     # (1) removing them from association files so they are never created (using A23.elecS_tech_availability,
     # near top of script) or (2) zeroing out their shareweights in future model periods.
 
-
+    # 07/09/2025 xsl change year =   to year = MODEL_FINAL_BASE_YEAR
     L2234.StubTechProd_elecS_CHINA %>%
-      filter(year == max(MODEL_BASE_YEARS)) -> L2234.StubTechProd_elecS_CHINA_final_cal_year
+      filter(year == MODEL_FINAL_BASE_YEAR) -> L2234.StubTechProd_elecS_CHINA_final_cal_year
 
     # Adjusting nuclear subsector shareweights - provinces with no historical nuclear power generation
     # receive zero  shareweights.
@@ -682,11 +712,12 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
                   ungroup(),
                 by = c("region", "supplysector", "subsector")) %>%
       mutate(share.weight = as.double(share.weight),
-             share.weight = if_else(subsector == "nuclear" & subsector.cal.value == 0, 0, share.weight)) %>%			 
-	  mutate(share.weight = if_else(subsector == "nuclear" & ((region == "SD")|(region == "JX")|(region == "HA")|(region == "HN")) , 1, share.weight)) %>%
-      select(region, supplysector, subsector, year, share.weight) ->  L2234.SubsectorShrwt_elecS_CHINA
+             share.weight = if_else(subsector == "nuclear" & subsector.cal.value == 0, 0, share.weight)) %>%
+      mutate(share.weight = if_else(subsector == "nuclear" & ((region == "SD")|(region == "JX")|(region == "HA")|(region == "HN")) , 1, share.weight)) %>%
+      mutate(fillout = if_else(year == MODEL_FINAL_BASE_YEAR, 1, 0)) %>%
+      select(region, supplysector, subsector, year, share.weight, fillout) ->  L2234.SubsectorShrwt_elecS_CHINA
 
-    L2234.SubsectorShrwtInterpTo_elecS_CHINA %>%
+   L2234.SubsectorShrwtInterpTo_elecS_CHINA %>%
       # left_join_error_no_match throws an error because the grid_storage subsector does not exist historically
       # and is missing from L2234.StubTechProd_elecS_CHINA_final_cal_year, generating NAs for grid_storage subsector.cal.value
       # subsector.cal.value is only used to adjust nuclear shareweights, so NAs for grid_storage don't matter; left_join is used
@@ -698,7 +729,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
                 by = c("region", "supplysector", "subsector")) %>%
       mutate(to.value = as.double(to.value),
              to.value = if_else(subsector == "nuclear" & subsector.cal.value == 0, 0, to.value)) %>%
-	  mutate(to.value = if_else(subsector == "nuclear" & ((region == "SD")|(region == "JX")|(region == "HA")|(region == "HN")) , 1, to.value)) %>%
+      mutate(to.value = if_else(subsector == "nuclear" & ((region == "SD")|(region == "JX")|(region == "HA")|(region == "HN")) , 1, to.value)) %>%
       select(region, supplysector, subsector, apply.to, from.year, to.year, to.value, interpolation.function) ->
       L2234.SubsectorShrwtInterpTo_elecS_CHINA
 
@@ -708,13 +739,15 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       set_years() %>%
       mutate(year = as.integer(year),
              share.weight = as.numeric(share.weight)) -> A23.elecS_subsector_shrwt_province_adj
-
+    # 08 Oct xsl
     L2234.SubsectorShrwt_elecS_CHINA %>%
       mutate(year = as.integer(year)) %>%
       anti_join(A23.elecS_subsector_shrwt_province_adj,
                 by = c("region", "supplysector", "subsector")) %>%
       bind_rows(A23.elecS_subsector_shrwt_province_adj) %>%
-      arrange(region, subsector, year, supplysector) -> L2234.SubsectorShrwt_elecS_CHINA
+      arrange(region, subsector, year, supplysector,fillout) -> L2234.SubsectorShrwt_elecS_CHINA
+
+
 
     # YO: currently it's empty, just a placeholder here
     A23.elecS_subsector_shrwt_interp_province_adj %>%
@@ -743,6 +776,14 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       bind_rows(A23.elecS_subsector_shrwt_interpto_province_adj) %>%
       arrange(region, subsector, from.year, supplysector) -> L2234.SubsectorShrwtInterpTo_elecS_CHINA
 
+
+
+
+
+
+
+
+    ########here
     # Get the L2234.StubTechProd_elecS_CHINA in the right form without subsector.cal.value
     L2234.StubTechProd_elecS_CHINA %>%
       select(region, supplysector, subsector, stub.technology, year, calOutputValue,
@@ -768,7 +809,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     # Fixed Output for hydro in future years.
     # We apply the same fule fractions in future years as in the final calibration year
     L2234.fuelfractions_segment_CHINA %>%
-      filter(year == max(MODEL_BASE_YEARS),
+      filter(year == MODEL_FINAL_BASE_YEAR,
              subsector == "hydro") -> L2234.fuelfractions_segment_CHINA_hydro_final_calibration_year
 
     L223.StubTechFixOut_hydro_CHINA %>%
@@ -784,7 +825,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       select(region, supplysector, subsector, stub.technology, year = year.x, fixedOutput,
              share.weight.year, subs.share.weight, tech.share.weight) -> L2234.StubTechFixOut_hydro_elecS_CHINA
 
-    # Efficiencies for biomass, coal, oil, and gas technologies in calibration years
+    # Efficiency for biomass, coal, oil, and gas technologies in calibration years
     L2234.StubTechMarket_elecS_CHINA %>%
       filter(subsector %in% c("coal", "gas", "refined liquids", "biomass"),
              year %in% MODEL_BASE_YEARS) %>%
@@ -810,8 +851,13 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     # efficiency based on actual historical efficiency calculated in L123.eff_R_elec_F_Yh.csv. All other fuels are OK since
     # there has always been only one technology in the calibration period per fuel so their efficiency
     # (in L223.StubTechEff_elec_CHINA) are based on the actual historical efficiency in the L123.eff_R_elec_F_Yh.csv file.
+    # 1/9/2025 xsl change "eff_actual" to "value"
+    #L123.eff_R_elec_F_Yh %>%
+    #  rename(eff_actual = value) %>%
+    #  filter(GCAM_region_ID == gcamchina.REGION_ID,
+    #         year %in% MODEL_BASE_YEARS) -> L2234.fuel_eff_actual
     L123.eff_R_elec_F_Yh %>%
-      gather_years("eff_actual") %>%
+      gather_years("value") %>%
       filter(GCAM_region_ID == gcamchina.REGION_ID,
              year %in% MODEL_BASE_YEARS) -> L2234.fuel_eff_actual
 
@@ -821,8 +867,8 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       ungroup() %>%
       left_join_error_no_match(L2234.fuel_eff_actual %>%
                                  select(-GCAM_region_ID, -sector), by = c("subsector" = "fuel", "year" )) %>%
-      mutate(efficiency = if_else(count_tech == 1 , eff_actual, efficiency)) %>%
-      select(-count_tech, -eff_actual) -> L2234.StubTechEff_elecS_CHINA
+      mutate(efficiency = if_else(count_tech == 1 , value, efficiency)) %>%
+      select(-count_tech, -value) -> L2234.StubTechEff_elecS_CHINA
 
     # Capacity factors by province for wind and solar
     A23.elecS_inttech_mapping %>%
@@ -902,6 +948,129 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     L2234.StubTechEff_elecS_CHINA <- L2234.geo.tables_rev[["L2234.StubTechEff_elecS_CHINA"]]
     L2234.StubTechProd_elecS_CHINA <- L2234.geo.tables_rev[["L2234.StubTechProd_elecS_CHINA"]]
 
+
+    # xsl
+
+
+
+
+
+    # xsl 10th OCT
+    # ============================================================
+    # ✅ PATCH: Ensure all subsectors have a 2021 base-year row
+    # to avoid missing interpolation origin ("Could not find value to interpolate from")
+    # ============================================================
+
+    message(">>> Ensuring complete 2021 base-year shareweights for all future subsectors")
+
+    # 1. Identify all subsectors that appear in interpolation (they must have base-year rows)
+    future_subsectors <- L2234.SubsectorShrwtInterp_elecS_CHINA %>%
+      distinct(region, supplysector, subsector)
+
+    # 2. Existing base-year rows in L2234.SubsectorShrwt_elecS_CHINA (2021 only)
+    base_existing <- L2234.SubsectorShrwt_elecS_CHINA %>%
+      filter(year == MODEL_FINAL_BASE_YEAR) %>%
+      select(region, supplysector, subsector)
+
+    # 3. Find missing base-year subsectors (must fill them with share.weight = 0 & fillout = 1)
+    base_missing <- anti_join(future_subsectors, base_existing,
+                              by = c("region", "supplysector", "subsector")) %>%
+      mutate(year = MODEL_FINAL_BASE_YEAR,
+             share.weight = 0)
+
+
+    if (!"fillout" %in% names(L2234.SubsectorShrwt_elecS_CHINA)) {
+      L2234.SubsectorShrwt_elecS_CHINA <- L2234.SubsectorShrwt_elecS_CHINA %>%
+        mutate(fillout = if_else(year == MODEL_FINAL_BASE_YEAR, 1, 0))
+    }
+
+    # 4. Assign fillout = 1 for missing base rows
+    if(nrow(base_missing) > 0) {
+      base_missing <- base_missing %>%
+        mutate(fillout = 1)
+
+      # 5. Append to main SubsectorShrwt table
+      L2234.SubsectorShrwt_elecS_CHINA <- bind_rows(L2234.SubsectorShrwt_elecS_CHINA, base_missing) %>%
+        arrange(region, subsector, year, supplysector)
+
+      message(">>> Added ", nrow(base_missing), " base-year(2021) missing shareweight rows with share.weight = 0")
+    } else {
+      message(">>> No missing base-year rows detected (all good)")
+    }
+
+    ############## xsl
+    #
+    if (exists("L2234.StubTechProd_elecS_CHINA")) {
+      base_from_cal <- L2234.StubTechProd_elecS_CHINA %>%
+        group_by(region, supplysector, subsector, year) %>%
+        summarise(calOutputValue = sum(calOutputValue, na.rm=TRUE)) %>%
+        ungroup() %>%
+        filter(year == MODEL_FINAL_BASE_YEAR) %>%
+        mutate(share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
+        select(region, supplysector, subsector, year, share.weight)
+
+      # add 2021
+      base_to_add <- anti_join(base_from_cal, L2234.SubsectorShrwt_elecS_CHINA,
+                               by = c("region","supplysector","subsector","year"))
+
+      if(nrow(base_to_add) > 0) {
+        L2234.SubsectorShrwt_elecS_CHINA <- bind_rows(L2234.SubsectorShrwt_elecS_CHINA, base_to_add) %>%
+          arrange(region, subsector, year, supplysector)
+        message("Added ", nrow(base_to_add), " base-year rows from calOutput.")
+      }
+    }
+
+
+
+    L2234.SubsectorShrwt_elecS_CHINA <- L2234.SubsectorShrwt_elecS_CHINA %>%
+      mutate(
+        share.weight = case_when(
+          subsector == "grid_storage" & (is.na(share.weight) | share.weight == 0) ~ 1,
+          TRUE ~ share.weight
+        ),
+        fillout = if_else(year == MODEL_FINAL_BASE_YEAR, 1, fillout)
+      ) %>%
+      select(region, supplysector, subsector, year, share.weight, fillout)
+
+
+    # ============================================================
+    # ✅ PATCH for grid_storage — ONLY under peak generation
+    # ============================================================
+
+    #
+    L2234.SubsectorShrwt_elecS_CHINA <- L2234.SubsectorShrwt_elecS_CHINA %>%
+      filter(!(subsector == "grid_storage" & supplysector != "peak generation"))
+
+    #
+    grid_storage_missing <- L2234.SubsectorShrwt_elecS_CHINA %>%
+      distinct(region) %>%
+      mutate(
+        supplysector = "peak generation",
+        subsector = "grid_storage",
+        year = MODEL_FINAL_BASE_YEAR,
+        share.weight = 0,
+        fillout = 1
+      )
+
+    grid_storage_to_add <- anti_join(
+      grid_storage_missing,
+      L2234.SubsectorShrwt_elecS_CHINA %>%
+        filter(subsector == "grid_storage", year == MODEL_FINAL_BASE_YEAR),
+      by = c("region", "supplysector", "subsector", "year")
+    )
+
+    if (nrow(grid_storage_to_add) > 0) {
+      L2234.SubsectorShrwt_elecS_CHINA <- bind_rows(L2234.SubsectorShrwt_elecS_CHINA, grid_storage_to_add) %>%
+        arrange(region, supplysector, subsector, year)
+      message(">>> ✅ Added ", nrow(grid_storage_to_add), " grid_storage rows ONLY in peak generation")
+    } else {
+      message(">>> ✅ All good: grid_storage exists ONLY under peak generation")
+    }
+
+
+
+
+
     L2234.StubTechProd_elecS_CHINA %>%
       # Use anti_join to remove renewable deletes from the production table.
       # so far A10.renewable_resource_delete is empty
@@ -914,45 +1083,115 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     L113.elecS_globaltech_capital_battery_ATB %>%
       select(supplysector, subsector, technology, year = period, capacity.factor) -> L2234.GlobalTechCapFac_elecS_additonal
 
-    L2234.GlobalTechCapFac_elecS %>%
-      bind_rows(L2234.GlobalTechCapFac_elecS_additonal) -> L2234.GlobalTechCapFac_elecS
 
+
+
+    # 1/9/2025 xsl
     L113.elecS_globaltech_capital_battery_ATB %>%
       mutate(input.capital = "capital") %>%
       select(supplysector, subsector, technology, year = period, input.capital,
              capital.overnight = capital.cost, fixed.charge.rate = fcr) ->  L2234.GlobalTechCapital_elecS_additonal
 
-    L2234.GlobalTechCapital_elecS %>%
-      bind_rows(L2234.GlobalTechCapital_elecS_additonal) -> L2234.GlobalTechCapital_elecS
+    # 1/9/2025 xsl
+    # L2234.GlobalTechCapital_elecS %>%
+    #  bind_rows(L2234.GlobalTechCapital_elecS_additonal) -> L2234.GlobalTechCapital_elecS
+    L2234.GlobalTechCapital_elecS <-
+      L2234.GlobalTechCapital_elecS_additonal %>%
+      transmute(
+        supplysector,
+        subsector,
+        technology,
+        year = as.integer(year),
+        input.capital,
+        capital.overnight,
+        fixed.charge.rate
+      )
+
 
     L113.elecS_globaltech_capital_battery_ATB %>%
       mutate(input.OM.fixed = "OM-fixed") %>%
       select(supplysector, subsector, technology, year = period,
              input.OM.fixed, OM.fixed = fixed.om) -> L2234.GlobalTechOMfixed_elecS_additonal
 
-    L2234.GlobalTechOMfixed_elecS %>%
-      bind_rows(L2234.GlobalTechOMfixed_elecS_additonal) -> L2234.GlobalTechOMfixed_elecS
+    #L2234.GlobalTechOMfixed_elecS %>%
+    #  bind_rows(L2234.GlobalTechOMfixed_elecS_additonal) -> L2234.GlobalTechOMfixed_elecS
+
+    L2234.GlobalTechOMfixed_elecS <-
+      L2234.GlobalTechOMfixed_elecS_additonal %>%
+      transmute(
+        supplysector,
+        subsector,
+        technology,
+        year = as.integer(year),
+        input.OM.fixed,
+        OM.fixed
+      )
+
+
+
+
+
 
     L113.elecS_globaltech_capital_battery_ATB %>%
       mutate(input.OM.var = "OM-var") %>%
       select(supplysector, subsector, technology, year = period,
              input.OM.var, OM.var = variable.om) -> L2234.GlobalTechOMvar_elecS_additonal
 
-    L2234.GlobalTechOMvar_elecS %>%
-      bind_rows(L2234.GlobalTechOMvar_elecS_additonal) -> L2234.GlobalTechOMvar_elecS
+    #L2234.GlobalTechOMvar_elecS %>%
+    #  bind_rows(L2234.GlobalTechOMvar_elecS_additonal) -> L2234.GlobalTechOMvar_elecS
+
+    L2234.GlobalTechOMvar_elecS <-
+      L2234.GlobalTechOMvar_elecS_additonal %>%
+      transmute(
+        supplysector,
+        subsector,
+        technology,
+        year = as.integer(year),
+        input.OM.var,
+        OM.var
+      )
+
+
 
     L113.elecS_globaltech_capital_battery_ATB %>%
       select(supplysector, subsector, technology, year = period, lifetime) -> L2234.GlobalTechLifetime_elecS_additonal
 
-    L2234.GlobalTechLifetime_elecS %>%
-      bind_rows(L2234.GlobalTechLifetime_elecS_additonal) -> L2234.GlobalTechLifetime_elecS
+    #L2234.GlobalTechLifetime_elecS %>%
+    #  bind_rows(L2234.GlobalTechLifetime_elecS_additonal) -> L2234.GlobalTechLifetime_elecS
+    L2234.GlobalTechLifetime_elecS <-
+      L2234.GlobalTechLifetime_elecS_additonal %>%
+      transmute(
+        supplysector,
+        subsector,
+        technology,
+        year = as.integer(year),
+        lifetime
+      )
+
+
+
 
     L113.elecS_globaltech_capital_battery_ATB %>%
       select(supplysector, subsector, technology, year = period,
              lifetime, steepness, half.life) -> L2234.GlobalTechSCurve_elecS_additonal
 
-    L2234.GlobalTechSCurve_elecS %>%
-      bind_rows(L2234.GlobalTechSCurve_elecS_additonal) -> L2234.GlobalTechSCurve_elecS
+    #L2234.GlobalTechSCurve_elecS %>%
+    #  bind_rows(L2234.GlobalTechSCurve_elecS_additonal) -> L2234.GlobalTechSCurve_elecS
+
+    L2234.GlobalTechSCurve_elecS <-
+      L2234.GlobalTechSCurve_elecS_additonal %>%
+      transmute(
+        supplysector,
+        subsector,
+        technology,
+        year = as.integer(year),
+        lifetime,
+        steepness,
+        half.life
+      )
+
+
+
 
     # Energy Inputs for additional technologies such as battery
     L2234.StubTech_energy_elecS_CHINA <- write_to_all_provinces(A23.elecS_stubtech_energy_inputs,
@@ -1017,7 +1256,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     L2234.SubsectorLogit_elecS_grid %>%
       select(region, supplysector, subsector) %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = MODEL_FINAL_BASE_YEAR,
              to.year = max(MODEL_FUTURE_YEARS),
              interpolation.function = "fixed" ) -> L2234.SubsectorShrwtInterp_elecS_grid
 
@@ -1158,6 +1397,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
                      "gcam-china/A23.elecS_tech_availability",
                      "gcam-china/A23.elecS_subsector_shrwt_interpto",
                      "gcam-china/A23.elecS_subsector_shrwt_interp_province_adj",
+                     "gcam-china/A23.elecS_subsector_shrwt_interpto_province_adj",
                      "L1231.out_EJ_province_elec_F_tech",
                      "gcam-china/A23.elecS_tech_mapping",
                      "gcam-china/A23.elecS_inttech_mapping",
@@ -1459,6 +1699,20 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
                      "L223.GlobalIntTechBackup_elec") ->
       L2234.GlobalIntTechBackup_elecS_CHINA
 
+
+    # 07/09/2025 xsl add  "L2234.GlobalIntTechValueFactor_elecS" part
+    L2234.GlobalIntTechValueFactor_elecS %>%
+      add_title("Electricity Load Segments Intermittent Technology Backup Characteristics") %>%
+      add_units("value.factor.intercept = fraction of PLCOE observed at 0% market share (LCOE is divided by this value);
+                value.factor.slope = % reduction in PLCOE obsrved per % increase in market share") %>%
+      add_comments("Backup characteristics for electricity load segments intermittent technologies") %>%
+      add_precursors("gcam-china/A23.elecS_inttech_mapping",
+                     "gcam-china/A23.elecS_tech_availability",
+                     "L223.GlobalIntTechValueFactor_elec") ->
+      L2234.GlobalIntTechValueFactor_elecS_CHINA
+
+
+
     L2234.StubTechMarket_elecS_CHINA %>%
       add_title("Energy Inputs for Electricity Load Segments Technologies") %>%
       add_units("NA") %>%
@@ -1478,7 +1732,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       add_legacy_name("L2234.StubTechMarket_backup_elecS_CHINA") %>%
       add_precursors("gcam-china/A23.elecS_inttech_mapping",
                      "gcam-china/A23.elecS_tech_availability",
-                     "L223.StubTechMarket_backup_CHINA") ->
+                     "L223.StubTechMarket_elec_CHINA") ->
       L2234.StubTechMarket_backup_elecS_CHINA
 
     L2234.StubTechElecMarket_backup_elecS_CHINA %>%
@@ -1595,6 +1849,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
                 L2234.GlobalTechSCurve_elecS_CHINA,
                 L2234.GlobalTechCapture_elecS_CHINA,
                 L2234.GlobalIntTechBackup_elecS_CHINA,
+                L2234.GlobalIntTechValueFactor_elecS_CHINA,
                 L2234.StubTechMarket_elecS_CHINA,
                 L2234.StubTechMarket_backup_elecS_CHINA,
                 L2234.StubTechElecMarket_backup_elecS_CHINA,
