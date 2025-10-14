@@ -37,7 +37,7 @@
  * \brief XMLParseHelper class source file.
  * \author Pralit Patel
  */
-
+#include "logger/include/gcam_logger.h"
 #include <boost/iostreams/device/mapped_file.hpp>
 #include <boost/fusion/include/filter_if.hpp>
 #include <boost/preprocessor/tuple/enum.hpp>

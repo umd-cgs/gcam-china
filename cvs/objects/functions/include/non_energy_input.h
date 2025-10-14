@@ -74,9 +74,8 @@ class Tabs;
  */
 class NonEnergyInput: public MiniCAMInput
 {
+    friend class BackupIntermittentTechnology;
     friend class IntermittentTechnology;
-    friend class SolarTechnology;
-    friend class WindTechnology;
 public:
     NonEnergyInput();
 
