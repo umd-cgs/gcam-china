@@ -2,13 +2,12 @@
 # Title: Planned hydro electricity generation
 # Units: EJ
 # Description: Planned hydro electricity generation
-"# Source:  WEO 2019 Sustainable Development Scenario;2020,2021 from NEA"
+# Source:  WEO 2019 Sustainable Development Scenario 24/08/2025 xsl copy 2020 to 2021
 # Column types: nn
 # ----------
 year,value
-2020,4.878365731
 2025,4.856115108
 2030,5.489208633
 2035,5.949640288
 2040,6.23381295
-2021,4.823974082
+2021,4.334532374

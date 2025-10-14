@@ -2,13 +2,12 @@
 # Title: Planned hydro electricity generation
 # Units: EJ
 # Description: Planned hydro electricity generation
-"# Source:  WEO 2019 Current Policies Scenario for 2025; WEO2023 Stated Policies Scenario FOR 2030 2035 2040;2020,2021 from NEA"
+# Source:  WEO 2019 Current Policies Scenario 24/08/2025 xsl copy 2020 to 2021
 # Column types: nn
 # ----------
 year,value
-2020,4.878365731
-2021,4.823974082
 2025,4.636690647
-2030,5.253419726
-2035,5.1825054
-2040,4.853635709
+2030,4.996402878
+2035,5.309352518
+2040,5.571942446
+2021,4.334532374
