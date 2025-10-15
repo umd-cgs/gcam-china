@@ -526,7 +526,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     # Additional characteristics for intermittent technologies
 
 
-    #07/09/2025 xsl add
+    #07/09/2025 xsl add L2234.GlobalIntTechValueFactor_elecS based on the global V8 new
     A23.elecS_inttech_mapping %>%
       # join is intended to duplicate rows; left_join_error_no_match throws error, so left_join used
       left_join(L223.GlobalIntTechValueFactor_elec, by= c("subsector" = "subsector.name", "intermittent.technology")) %>%
