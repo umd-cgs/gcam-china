@@ -3,6 +3,7 @@ PROPERTY CHANGEdocument-replaced
 DOCUMENT REPLACED
 PROPERTY CHANGEdocument-replaced
 DOCUMENT REPLACED
+Does not exist anymore
 Going to change controls
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
@@ -23,22 +24,17 @@ Didn't find builder for land leaf shares query going to use defaults
 Didn't find builder for land leaf shares in a specified land use region query going to use defaults
 Didn't find builder for National Account query going to use defaults
 Didn't find builder for Social Accounting Matrix query going to use defaults
-About to perform query: collection()/singleQueryListCache/cache[@id=2007154879]/text()
-Time : 0
-Before Function: 1760346407089
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-13-10T15:50:54+08:00') ]/world/region[ (@name='China') ]/*[@type = 'sector' (:collapse:) or @type = 'resource' (:collapse:)](: / *[@type = 'subresource' (: collapse :)] :)//*[((@name='CO2' or @name = 'CO2_FUG'))]/emissions/node()
-In Function: 1760346407090
-After build Tree: 1760346407398
-After Add table: 1760346407398
-About to perform query: collection()/singleQueryListCache/cache[@id=-310400712]/text()
-Time : 0
-Before Function: 1760346413246
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-13-10T15:50:54+08:00') ]/world/region[ (@name='China') ]/*[@type='sector']//CO2/emissions/node()
-In Function: 1760346413246
-After build Tree: 1760346413355
-After Add table: 1760346413355
+About to perform query: collection()/singleQueryListCache/cache[@id=1412775210]/text()
+Time : 4
+Before Function: 1760679439010
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-16-10T21:30:03+08:00') ]/world/region[ (@name='BJ') ]/*[@type='sector' (:collapse:) and (@name='electricity' or 
+               @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
+               *[@type='subsector' and not (@name='elect_td_bld')]//*[@type='output' (:collapse:)]/
+               physical-output/node()
+In Function: 1760679439010
+After build Tree: 1760679439060
+After Add table: 1760679439060
 Going to change controls
-Doing remove because of control
 Doing remove because of control
 About to perform query: collection()/scenario
 About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
@@ -59,37 +55,4 @@ Didn't find builder for land leaf shares query going to use defaults
 Didn't find builder for land leaf shares in a specified land use region query going to use defaults
 Didn't find builder for National Account query going to use defaults
 Didn't find builder for Social Accounting Matrix query going to use defaults
-About to perform query: collection()/singleQueryListCache/cache[@id=-1267222294]/text()
-Time : 0
-Before Function: 1760409965629
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-9-10T21:10:10+08:00') ]/world/region[ (@name='AH') ]/*[@type='sector' (:collapse:) and not(contains(@name, 'water_td'))]//*[@type='input' (:collapse:) and contains(@name,'water_td')
-         and ends-with(@name,'_W')]/demand-physical/node()
-In Function: 1760409965629
-About to perform query: collection()/singleQueryListCache/cache[@id=-539473916]/text()
-Time : 0
-Before Function: 1760409969979
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-9-10T21:10:10+08:00') ]/world/region[ (@name='AH') ]/*[@type='sector' (:collapse:) and not(contains(@name, 'water_td'))]//*[@type='input' (:collapse:) and contains(@name,'water_td')
-         and ends-with(@name,'_W')]/demand-physical/node()
-In Function: 1760409969979
-Before Function: 1760409972333
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-9-10T21:10:10+08:00') ]/world/region[ (@name='BJ') ]/*[@type='sector' (:collapse:) and not(contains(@name, 'water_td'))]//*[@type='input' (:collapse:) and contains(@name,'water_td')
-         and ends-with(@name,'_W')]/demand-physical/node()
-In Function: 1760409972334
-About to perform query: collection()/singleQueryListCache/cache[@id=1173430473]/text()
-Time : 0
-Before Function: 1760409982917
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-9-10T21:10:10+08:00') ]/world/region[ (@name='BJ') ]/*[@type='sector']/*[@type='subsector']//*[@type='output' (:collapse:)
-                and contains(@name,'water_td') and ends-with(@name,'_W')]/physical-output/node()
-In Function: 1760409982917
-Before Function: 1760409986884
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-9-10T21:10:10+08:00') ]/world/region[ (@name='USA') ]/*[@type='sector']/*[@type='subsector']//*[@type='output' (:collapse:)
-                and contains(@name,'water_td') and ends-with(@name,'_W')]/physical-output/node()
-In Function: 1760409986884
-Before Function: 1760409990934
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-9-10T21:10:10+08:00') ]/world/region[ (@name='China') ]/*[@type='sector']/*[@type='subsector']//*[@type='output' (:collapse:)
-                and contains(@name,'water_td') and ends-with(@name,'_W')]/physical-output/node()
-In Function: 1760409990934
-Before Function: 1760409997324
-About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-9-10T21:10:10+08:00') ]/world/region[ (@name='China') ]/*[@type='sector' (:collapse:) and not(contains(@name, 'water_td'))]//*[@type='input' (:collapse:) and contains(@name,'water_td')
-         and ends-with(@name,'_W')]/demand-physical/node()
-In Function: 1760409997324
+Caught the window closing

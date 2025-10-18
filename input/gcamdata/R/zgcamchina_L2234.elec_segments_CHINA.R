@@ -526,7 +526,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     # Additional characteristics for intermittent technologies
 
 
-    #07/09/2025 xsl add L2234.GlobalIntTechValueFactor_elecS based on the global V8 new
+    #07/09/2025 xsl add
     A23.elecS_inttech_mapping %>%
       # join is intended to duplicate rows; left_join_error_no_match throws error, so left_join used
       left_join(L223.GlobalIntTechValueFactor_elec, by= c("subsector" = "subsector.name", "intermittent.technology")) %>%
@@ -949,15 +949,9 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     L2234.StubTechProd_elecS_CHINA <- L2234.geo.tables_rev[["L2234.StubTechProd_elecS_CHINA"]]
 
 
-    # xsl
+    # xsl 17th Oct
 
-
-
-
-
-    # xsl 10th OCT
-    # ============================================================
-    # ✅ PATCH: Ensure all subsectors have a 2021 base-year row
+    # PATCH: Ensure all subsectors have a 2021 base-year row
     # to avoid missing interpolation origin ("Could not find value to interpolate from")
     # ============================================================
 
@@ -999,7 +993,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     }
 
     ############## xsl
-    #
+
     if (exists("L2234.StubTechProd_elecS_CHINA")) {
       base_from_cal <- L2234.StubTechProd_elecS_CHINA %>%
         group_by(region, supplysector, subsector, year) %>%
@@ -1033,11 +1027,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       select(region, supplysector, subsector, year, share.weight, fillout)
 
 
-    # ============================================================
-    # ✅ PATCH for grid_storage — ONLY under peak generation
-    # ============================================================
 
-    #
     L2234.SubsectorShrwt_elecS_CHINA <- L2234.SubsectorShrwt_elecS_CHINA %>%
       filter(!(subsector == "grid_storage" & supplysector != "peak generation"))
 
@@ -1066,10 +1056,6 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     } else {
       message(">>> ✅ All good: grid_storage exists ONLY under peak generation")
     }
-
-
-
-
 
     L2234.StubTechProd_elecS_CHINA %>%
       # Use anti_join to remove renewable deletes from the production table.

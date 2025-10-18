@@ -1,7 +1,7 @@
 # File: aluminum_prod_region_IAI.csv
 # Title: Aluminum and alumina production by IAI region
 # Units: Thousand tons
-# Description: Regional aluminum production COPY 2020TO 2021
+# Description: Regional aluminum production
 # Source: International Aluminium Institute
 # Column types: cicnc
 # ----------
@@ -758,10 +758,3 @@ Alumina,1999,North America,4946.97,Thousand metric tons
 Alumina,1999,Oceania,14121.03,Thousand metric tons
 Alumina,1999,South America,10653,Thousand metric tons
 Alumina,1999,West Europe,4582.98,Thousand metric tons
-Alumina,2021,Africa & Asia (ex China),12097,Thousand metric tons
-Alumina,2021,China (Estimated),66836,Thousand metric tons
-Alumina,2021,East & Central Europe,4537,Thousand metric tons
-Alumina,2021,North America,2090,Thousand metric tons
-Alumina,2021,Oceania,20737,Thousand metric tons
-Alumina,2021,South America,11218,Thousand metric tons
-Alumina,2021,West Europe,4128,Thousand metric tons

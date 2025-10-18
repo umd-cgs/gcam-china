@@ -33,7 +33,7 @@
                             <fixedOutput>0.0489130372932845</fixedOutput>
                         </period>
                         <period year="2025">
-                            <fixedOutput>0.0489130372932845</fixedOutput>
+                            <fixedOutput>0</fixedOutput>
                         </period>
                         <period year="2030">
                             <fixedOutput>0</fixedOutput>

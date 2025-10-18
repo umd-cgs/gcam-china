@@ -2,7 +2,7 @@
 # Title: GDP deflator
 # Units: 2015 USD as base year
 # Description: GDP deflator
-# Source: https://data.worldbank.org/indicator/NY.GDP.DEFL.ZS?locations=CN  24/08/2025 xsl copy 2019 to 2020 2021
+# Source: https://data.worldbank.org/indicator/NY.GDP.DEFL.ZS?locations=CN
 # Column types: nn
 # ----------
 Year,GDP deflator
@@ -51,5 +51,5 @@ Year,GDP deflator
 2017,105.7006155
 2018,109.397987
 2019,111.128412
-2020,111.128412
+2020,111.5
 2021,111.128412
