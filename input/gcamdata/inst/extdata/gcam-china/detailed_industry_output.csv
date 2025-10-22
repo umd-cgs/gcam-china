@@ -153,7 +153,7 @@ AH,2010,agricultural energy use,biomass,biomass,0
 AH,2010,agricultural energy use,coal,coal,0.022434504
 AH,2010,agricultural energy use,district heat,district heat,0
 AH,2010,agricultural energy use,electricity,electricity,0.019953424
-AH,2010,agricultural energy use,gas,gas,8.43E-05
+AH,2010,agricultural energy use,gas,gas,0.0000843
 AH,2010,agricultural energy use,hydrogen,hydrogen,0
 AH,2010,agricultural energy use,liquid,liquid,0.009216276
 AH,2010,chemical energy use,biomass,biomass,0
@@ -217,7 +217,7 @@ AH,2015,chemical energy use,liquid,liquid CCS,0
 AH,2015,chemical feedstocks,coal,coal,0.041457595
 AH,2015,chemical feedstocks,gas,gas,0
 AH,2015,chemical feedstocks,liquid,liquid,0
-AH,2015,chemical,chemical,chemical,0.098377566
+AH,2015,chemical,chemical,chemical,0.068864296
 AH,2015,coke,coke,coke,9.5849
 AH,2015,coke,coke,coke CCS,0
 AH,2015,construction,construction,construction,0.028007416
@@ -399,7 +399,7 @@ BJ,2010,agricultural energy use,biomass,biomass,0
 BJ,2010,agricultural energy use,coal,coal,0.000592429
 BJ,2010,agricultural energy use,district heat,district heat,0
 BJ,2010,agricultural energy use,electricity,electricity,0.000526911
-BJ,2010,agricultural energy use,gas,gas,2.34E-06
+BJ,2010,agricultural energy use,gas,gas,0.00000234
 BJ,2010,agricultural energy use,hydrogen,hydrogen,0
 BJ,2010,agricultural energy use,liquid,liquid,0.000641333
 BJ,2010,chemical energy use,biomass,biomass,0
@@ -412,7 +412,7 @@ BJ,2010,chemical energy use,gas,gas CCS,0
 BJ,2010,chemical energy use,hydrogen,hydrogen,0
 BJ,2010,chemical energy use,liquid,liquid,0.004269502
 BJ,2010,chemical energy use,liquid,liquid CCS,0
-BJ,2010,chemical feedstocks,coal,coal,5.07E-05
+BJ,2010,chemical feedstocks,coal,coal,0.0000507
 BJ,2010,chemical feedstocks,gas,gas,0
 BJ,2010,chemical feedstocks,liquid,liquid,0
 BJ,2010,chemical,chemical,chemical,0.030910059
@@ -423,7 +423,7 @@ BJ,2010,construction energy use,biomass,biomass,0
 BJ,2010,construction energy use,coal,coal,0.003473504
 BJ,2010,construction energy use,district heat,district heat,0
 BJ,2010,construction energy use,electricity,electricity,0.004769788
-BJ,2010,construction energy use,gas,gas,9.93E-05
+BJ,2010,construction energy use,gas,gas,0.0000993
 BJ,2010,construction energy use,hydrogen,hydrogen,0
 BJ,2010,construction energy use,liquid,liquid,0.009820103
 BJ,2010,construction feedstocks,coal,coal,0
@@ -447,7 +447,7 @@ BJ,2015,agricultural energy use,biomass,biomass,0
 BJ,2015,agricultural energy use,coal,coal,0.000469929
 BJ,2015,agricultural energy use,district heat,district heat,0
 BJ,2015,agricultural energy use,electricity,electricity,0.00029824
-BJ,2015,agricultural energy use,gas,gas,2.16E-06
+BJ,2015,agricultural energy use,gas,gas,0.00000216
 BJ,2015,agricultural energy use,hydrogen,hydrogen,0
 BJ,2015,agricultural energy use,liquid,liquid,0.000197503
 BJ,2015,chemical energy use,biomass,biomass,0
@@ -460,10 +460,10 @@ BJ,2015,chemical energy use,gas,gas CCS,0
 BJ,2015,chemical energy use,hydrogen,hydrogen,0
 BJ,2015,chemical energy use,liquid,liquid,0.002852342
 BJ,2015,chemical energy use,liquid,liquid CCS,0
-BJ,2015,chemical feedstocks,coal,coal,1.51E-06
+BJ,2015,chemical feedstocks,coal,coal,0.00000151
 BJ,2015,chemical feedstocks,gas,gas,0
 BJ,2015,chemical feedstocks,liquid,liquid,0
-BJ,2015,chemical,chemical,chemical,0.032444004
+BJ,2015,chemical,chemical,chemical,0.022710803
 BJ,2015,coke,coke,coke,0
 BJ,2015,coke,coke,coke CCS,0
 BJ,2015,construction,construction,construction,0.013381019
@@ -471,7 +471,7 @@ BJ,2015,construction energy use,biomass,biomass,0
 BJ,2015,construction energy use,coal,coal,0.001672835
 BJ,2015,construction energy use,district heat,district heat,0
 BJ,2015,construction energy use,electricity,electricity,0.002029865
-BJ,2015,construction energy use,gas,gas,4.98E-05
+BJ,2015,construction energy use,gas,gas,0.0000498
 BJ,2015,construction energy use,hydrogen,hydrogen,0
 BJ,2015,construction energy use,liquid,liquid,0.009628519
 BJ,2015,construction feedstocks,coal,coal,0
@@ -645,7 +645,7 @@ CQ,2010,agricultural energy use,biomass,biomass,0
 CQ,2010,agricultural energy use,coal,coal,0.002605254
 CQ,2010,agricultural energy use,district heat,district heat,0
 CQ,2010,agricultural energy use,electricity,electricity,0.002317133
-CQ,2010,agricultural energy use,gas,gas,1.03E-05
+CQ,2010,agricultural energy use,gas,gas,0.0000103
 CQ,2010,agricultural energy use,hydrogen,hydrogen,0
 CQ,2010,agricultural energy use,liquid,liquid,0.000959997
 CQ,2010,chemical energy use,biomass,biomass,0
@@ -669,7 +669,7 @@ CQ,2010,construction energy use,biomass,biomass,0
 CQ,2010,construction energy use,coal,coal,0.002729147
 CQ,2010,construction energy use,district heat,district heat,0
 CQ,2010,construction energy use,electricity,electricity,0.003747643
-CQ,2010,construction energy use,gas,gas,7.80E-05
+CQ,2010,construction energy use,gas,gas,0.000078
 CQ,2010,construction energy use,hydrogen,hydrogen,0
 CQ,2010,construction energy use,liquid,liquid,0.00262632
 CQ,2010,construction feedstocks,coal,coal,0
@@ -693,7 +693,7 @@ CQ,2015,agricultural energy use,biomass,biomass,0
 CQ,2015,agricultural energy use,coal,coal,0.002643842
 CQ,2015,agricultural energy use,district heat,district heat,0
 CQ,2015,agricultural energy use,electricity,electricity,0.001677914
-CQ,2015,agricultural energy use,gas,gas,1.21E-05
+CQ,2015,agricultural energy use,gas,gas,0.0000121
 CQ,2015,agricultural energy use,hydrogen,hydrogen,0
 CQ,2015,agricultural energy use,liquid,liquid,0.001111161
 CQ,2015,chemical energy use,biomass,biomass,0
@@ -709,7 +709,7 @@ CQ,2015,chemical energy use,liquid,liquid CCS,0
 CQ,2015,chemical feedstocks,coal,coal,0
 CQ,2015,chemical feedstocks,gas,gas,0
 CQ,2015,chemical feedstocks,liquid,liquid,0
-CQ,2015,chemical,chemical,chemical,0.091670159
+CQ,2015,chemical,chemical,chemical,0.064169111
 CQ,2015,coke,coke,coke,2.181
 CQ,2015,coke,coke,coke CCS,0
 CQ,2015,construction,construction,construction,0.008336172
@@ -717,7 +717,7 @@ CQ,2015,construction energy use,biomass,biomass,0
 CQ,2015,construction energy use,coal,coal,0.001855873
 CQ,2015,construction energy use,district heat,district heat,0
 CQ,2015,construction energy use,electricity,electricity,0.002251969
-CQ,2015,construction energy use,gas,gas,5.52E-05
+CQ,2015,construction energy use,gas,gas,0.0000552
 CQ,2015,construction energy use,hydrogen,hydrogen,0
 CQ,2015,construction energy use,liquid,liquid,0.00417313
 CQ,2015,construction feedstocks,coal,coal,0
@@ -891,7 +891,7 @@ FJ,2010,agricultural energy use,biomass,biomass,0
 FJ,2010,agricultural energy use,coal,coal,0.00312242
 FJ,2010,agricultural energy use,district heat,district heat,0
 FJ,2010,agricultural energy use,electricity,electricity,0.002777105
-FJ,2010,agricultural energy use,gas,gas,8.75E-06
+FJ,2010,agricultural energy use,gas,gas,0.00000875
 FJ,2010,agricultural energy use,hydrogen,hydrogen,0
 FJ,2010,agricultural energy use,liquid,liquid,0.003380171
 FJ,2010,chemical energy use,biomass,biomass,0
@@ -915,7 +915,7 @@ FJ,2010,construction energy use,biomass,biomass,0
 FJ,2010,construction energy use,coal,coal,0.004672593
 FJ,2010,construction energy use,district heat,district heat,0
 FJ,2010,construction energy use,electricity,electricity,0.006416368
-FJ,2010,construction energy use,gas,gas,9.51E-05
+FJ,2010,construction energy use,gas,gas,0.0000951
 FJ,2010,construction energy use,hydrogen,hydrogen,0
 FJ,2010,construction energy use,liquid,liquid,0.013210101
 FJ,2010,construction feedstocks,coal,coal,0
@@ -939,7 +939,7 @@ FJ,2015,agricultural energy use,biomass,biomass,0
 FJ,2015,agricultural energy use,coal,coal,0.003306017
 FJ,2015,agricultural energy use,district heat,district heat,0
 FJ,2015,agricultural energy use,electricity,electricity,0.002098163
-FJ,2015,agricultural energy use,gas,gas,1.52E-05
+FJ,2015,agricultural energy use,gas,gas,0.0000152
 FJ,2015,agricultural energy use,hydrogen,hydrogen,0
 FJ,2015,agricultural energy use,liquid,liquid,0.003556634
 FJ,2015,chemical energy use,biomass,biomass,0
@@ -955,7 +955,7 @@ FJ,2015,chemical energy use,liquid,liquid CCS,0
 FJ,2015,chemical feedstocks,coal,coal,0.023117202
 FJ,2015,chemical feedstocks,gas,gas,0
 FJ,2015,chemical feedstocks,liquid,liquid,0
-FJ,2015,chemical,chemical,chemical,0.066645187
+FJ,2015,chemical,chemical,chemical,0.046651631
 FJ,2015,coke,coke,coke,1.5226
 FJ,2015,coke,coke,coke CCS,0
 FJ,2015,construction,construction,construction,0.036152558
@@ -1137,7 +1137,7 @@ GD,2010,agricultural energy use,biomass,biomass,0
 GD,2010,agricultural energy use,coal,coal,0.006596219
 GD,2010,agricultural energy use,district heat,district heat,0
 GD,2010,agricultural energy use,electricity,electricity,0.005866729
-GD,2010,agricultural energy use,gas,gas,2.60E-05
+GD,2010,agricultural energy use,gas,gas,0.000026
 GD,2010,agricultural energy use,hydrogen,hydrogen,0
 GD,2010,agricultural energy use,liquid,liquid,0.007140725
 GD,2010,chemical energy use,biomass,biomass,0
@@ -1185,7 +1185,7 @@ GD,2015,agricultural energy use,biomass,biomass,0
 GD,2015,agricultural energy use,coal,coal,0.006588498
 GD,2015,agricultural energy use,district heat,district heat,0
 GD,2015,agricultural energy use,electricity,electricity,0.00418139
-GD,2015,agricultural energy use,gas,gas,3.03E-05
+GD,2015,agricultural energy use,gas,gas,0.0000303
 GD,2015,agricultural energy use,hydrogen,hydrogen,0
 GD,2015,agricultural energy use,liquid,liquid,0.007087948
 GD,2015,chemical energy use,biomass,biomass,0
@@ -1201,7 +1201,7 @@ GD,2015,chemical energy use,liquid,liquid CCS,0
 GD,2015,chemical feedstocks,coal,coal,0.016729195
 GD,2015,chemical feedstocks,gas,gas,0
 GD,2015,chemical feedstocks,liquid,liquid,0
-GD,2015,chemical,chemical,chemical,0.10284307
+GD,2015,chemical,chemical,chemical,0.071990149
 GD,2015,coke,coke,coke,2.4405
 GD,2015,coke,coke,coke CCS,0
 GD,2015,construction,construction,construction,0.058417853
@@ -1383,7 +1383,7 @@ GS,2010,agricultural energy use,biomass,biomass,0
 GS,2010,agricultural energy use,coal,coal,0.00516319
 GS,2010,agricultural energy use,district heat,district heat,0
 GS,2010,agricultural energy use,electricity,electricity,0.004592181
-GS,2010,agricultural energy use,gas,gas,2.03E-05
+GS,2010,agricultural energy use,gas,gas,0.0000203
 GS,2010,agricultural energy use,hydrogen,hydrogen,0
 GS,2010,agricultural energy use,liquid,liquid,0.003010625
 GS,2010,chemical energy use,biomass,biomass,0
@@ -1402,12 +1402,12 @@ GS,2010,chemical feedstocks,liquid,liquid,0
 GS,2010,chemical,chemical,chemical,0.047404294
 GS,2010,coke,coke,coke,2.42
 GS,2010,coke,coke,coke CCS,0
-GS,2010,construction,construction,construction,0.007803953
+GS,2010,construction,construction,construction,0.007803954
 GS,2010,construction energy use,biomass,biomass,0
 GS,2010,construction energy use,coal,coal,0.001988492
 GS,2010,construction energy use,district heat,district heat,0
 GS,2010,construction energy use,electricity,electricity,0.002730583
-GS,2010,construction energy use,gas,gas,5.68E-05
+GS,2010,construction energy use,gas,gas,0.0000568
 GS,2010,construction energy use,hydrogen,hydrogen,0
 GS,2010,construction energy use,liquid,liquid,0.003028053
 GS,2010,construction feedstocks,coal,coal,0
@@ -1431,7 +1431,7 @@ GS,2015,agricultural energy use,biomass,biomass,0
 GS,2015,agricultural energy use,coal,coal,0.006099586
 GS,2015,agricultural energy use,district heat,district heat,0
 GS,2015,agricultural energy use,electricity,electricity,0.003871101
-GS,2015,agricultural energy use,gas,gas,2.00E-05
+GS,2015,agricultural energy use,gas,gas,0.00002
 GS,2015,agricultural energy use,hydrogen,hydrogen,0
 GS,2015,agricultural energy use,liquid,liquid,0.002833776
 GS,2015,chemical energy use,biomass,biomass,0
@@ -1447,7 +1447,7 @@ GS,2015,chemical energy use,liquid,liquid CCS,0
 GS,2015,chemical feedstocks,coal,coal,0.02562879
 GS,2015,chemical feedstocks,gas,gas,0
 GS,2015,chemical feedstocks,liquid,liquid,0
-GS,2015,chemical,chemical,chemical,0.108736579
+GS,2015,chemical,chemical,chemical,0.076115605
 GS,2015,coke,coke,coke,5.2505
 GS,2015,coke,coke,coke CCS,0
 GS,2015,construction,construction,construction,0.009313672
@@ -1455,7 +1455,7 @@ GS,2015,construction energy use,biomass,biomass,0
 GS,2015,construction energy use,coal,coal,0.001627536
 GS,2015,construction energy use,district heat,district heat,0
 GS,2015,construction energy use,electricity,electricity,0.001974898
-GS,2015,construction energy use,gas,gas,3.45E-05
+GS,2015,construction energy use,gas,gas,0.0000345
 GS,2015,construction energy use,hydrogen,hydrogen,0
 GS,2015,construction energy use,liquid,liquid,0.005676738
 GS,2015,construction feedstocks,coal,coal,0
@@ -1629,7 +1629,7 @@ GX,2010,agricultural energy use,biomass,biomass,0
 GX,2010,agricultural energy use,coal,coal,0.012199762
 GX,2010,agricultural energy use,district heat,district heat,0
 GX,2010,agricultural energy use,electricity,electricity,0.010850564
-GX,2010,agricultural energy use,gas,gas,3.64E-05
+GX,2010,agricultural energy use,gas,gas,0.0000364
 GX,2010,agricultural energy use,hydrogen,hydrogen,0
 GX,2010,agricultural energy use,liquid,liquid,0.003619182
 GX,2010,chemical energy use,biomass,biomass,0
@@ -1653,7 +1653,7 @@ GX,2010,construction energy use,biomass,biomass,0
 GX,2010,construction energy use,coal,coal,0.002350945
 GX,2010,construction energy use,district heat,district heat,0
 GX,2010,construction energy use,electricity,electricity,0.003228299
-GX,2010,construction energy use,gas,gas,5.09E-05
+GX,2010,construction energy use,gas,gas,0.0000509
 GX,2010,construction energy use,hydrogen,hydrogen,0
 GX,2010,construction energy use,liquid,liquid,0.001821388
 GX,2010,construction feedstocks,coal,coal,0
@@ -1677,7 +1677,7 @@ GX,2015,agricultural energy use,biomass,biomass,0
 GX,2015,agricultural energy use,coal,coal,0.013763448
 GX,2015,agricultural energy use,district heat,district heat,0
 GX,2015,agricultural energy use,electricity,electricity,0.00873497
-GX,2015,agricultural energy use,gas,gas,5.72E-05
+GX,2015,agricultural energy use,gas,gas,0.0000572
 GX,2015,agricultural energy use,hydrogen,hydrogen,0
 GX,2015,agricultural energy use,liquid,liquid,0.013056162
 GX,2015,chemical energy use,biomass,biomass,0
@@ -1693,7 +1693,7 @@ GX,2015,chemical energy use,liquid,liquid CCS,0
 GX,2015,chemical feedstocks,coal,coal,0.021100841
 GX,2015,chemical feedstocks,gas,gas,0
 GX,2015,chemical feedstocks,liquid,liquid,0
-GX,2015,chemical,chemical,chemical,0.04936476
+GX,2015,chemical,chemical,chemical,0.034555332
 GX,2015,coke,coke,coke,5.8644
 GX,2015,coke,coke,coke CCS,0
 GX,2015,construction,construction,construction,0.009093163
@@ -1701,7 +1701,7 @@ GX,2015,construction energy use,biomass,biomass,0
 GX,2015,construction energy use,coal,coal,0.001242971
 GX,2015,construction energy use,district heat,district heat,0
 GX,2015,construction energy use,electricity,electricity,0.001508256
-GX,2015,construction energy use,gas,gas,3.35E-05
+GX,2015,construction energy use,gas,gas,0.0000335
 GX,2015,construction energy use,hydrogen,hydrogen,0
 GX,2015,construction energy use,liquid,liquid,0.006308436
 GX,2015,construction feedstocks,coal,coal,0
@@ -1875,7 +1875,7 @@ GZ,2010,agricultural energy use,biomass,biomass,0
 GZ,2010,agricultural energy use,coal,coal,0.004307014
 GZ,2010,agricultural energy use,district heat,district heat,0
 GZ,2010,agricultural energy use,electricity,electricity,0.003830691
-GZ,2010,agricultural energy use,gas,gas,1.30E-05
+GZ,2010,agricultural energy use,gas,gas,0.000013
 GZ,2010,agricultural energy use,hydrogen,hydrogen,0
 GZ,2010,agricultural energy use,liquid,liquid,0.001792361
 GZ,2010,chemical energy use,biomass,biomass,0
@@ -1899,7 +1899,7 @@ GZ,2010,construction energy use,biomass,biomass,0
 GZ,2010,construction energy use,coal,coal,0.001155799
 GZ,2010,construction energy use,district heat,district heat,0
 GZ,2010,construction energy use,electricity,electricity,0.001587135
-GZ,2010,construction energy use,gas,gas,2.53E-05
+GZ,2010,construction energy use,gas,gas,0.0000253
 GZ,2010,construction energy use,hydrogen,hydrogen,0
 GZ,2010,construction energy use,liquid,liquid,0.001256124
 GZ,2010,construction feedstocks,coal,coal,0
@@ -1923,7 +1923,7 @@ GZ,2015,agricultural energy use,biomass,biomass,0
 GZ,2015,agricultural energy use,coal,coal,0.005304083
 GZ,2015,agricultural energy use,district heat,district heat,0
 GZ,2015,agricultural energy use,electricity,electricity,0.003366236
-GZ,2015,agricultural energy use,gas,gas,1.22E-05
+GZ,2015,agricultural energy use,gas,gas,0.0000122
 GZ,2015,agricultural energy use,hydrogen,hydrogen,0
 GZ,2015,agricultural energy use,liquid,liquid,0.00480994
 GZ,2015,chemical energy use,biomass,biomass,0
@@ -1939,7 +1939,7 @@ GZ,2015,chemical energy use,liquid,liquid CCS,0
 GZ,2015,chemical feedstocks,coal,coal,0.0529244
 GZ,2015,chemical feedstocks,gas,gas,0
 GZ,2015,chemical feedstocks,liquid,liquid,0
-GZ,2015,chemical,chemical,chemical,0.064596191
+GZ,2015,chemical,chemical,chemical,0.045217334
 GZ,2015,coke,coke,coke,7.2946
 GZ,2015,coke,coke,coke CCS,0
 GZ,2015,construction,construction,construction,0.006853205
@@ -1947,7 +1947,7 @@ GZ,2015,construction energy use,biomass,biomass,0
 GZ,2015,construction energy use,coal,coal,0.000967955
 GZ,2015,construction energy use,district heat,district heat,0
 GZ,2015,construction energy use,electricity,electricity,0.001174543
-GZ,2015,construction energy use,gas,gas,1.44E-05
+GZ,2015,construction energy use,gas,gas,0.0000144
 GZ,2015,construction energy use,hydrogen,hydrogen,0
 GZ,2015,construction energy use,liquid,liquid,0.004696308
 GZ,2015,construction feedstocks,coal,coal,0
@@ -2185,7 +2185,7 @@ HA,2015,chemical energy use,liquid,liquid CCS,0
 HA,2015,chemical feedstocks,coal,coal,0.13944744
 HA,2015,chemical feedstocks,gas,gas,0
 HA,2015,chemical feedstocks,liquid,liquid,0
-HA,2015,chemical,chemical,chemical,0.222648454
+HA,2015,chemical,chemical,chemical,0.155853918
 HA,2015,coke,coke,coke,29.4241
 HA,2015,coke,coke,coke CCS,0
 HA,2015,construction,construction,construction,0.061349421
@@ -2367,7 +2367,7 @@ HB,2010,agricultural energy use,biomass,biomass,0
 HB,2010,agricultural energy use,coal,coal,0.011359785
 HB,2010,agricultural energy use,district heat,district heat,0
 HB,2010,agricultural energy use,electricity,electricity,0.010103481
-HB,2010,agricultural energy use,gas,gas,3.85E-05
+HB,2010,agricultural energy use,gas,gas,0.0000385
 HB,2010,agricultural energy use,hydrogen,hydrogen,0
 HB,2010,agricultural energy use,liquid,liquid,0.008466311
 HB,2010,chemical energy use,biomass,biomass,0
@@ -2415,7 +2415,7 @@ HB,2015,agricultural energy use,biomass,biomass,0
 HB,2015,agricultural energy use,coal,coal,0.01266354
 HB,2015,agricultural energy use,district heat,district heat,0
 HB,2015,agricultural energy use,electricity,electricity,0.008036914
-HB,2015,agricultural energy use,gas,gas,5.81E-05
+HB,2015,agricultural energy use,gas,gas,0.0000581
 HB,2015,agricultural energy use,hydrogen,hydrogen,0
 HB,2015,agricultural energy use,liquid,liquid,0.013623516
 HB,2015,chemical energy use,biomass,biomass,0
@@ -2431,7 +2431,7 @@ HB,2015,chemical energy use,liquid,liquid CCS,0
 HB,2015,chemical feedstocks,coal,coal,0.09139348
 HB,2015,chemical feedstocks,gas,gas,0
 HB,2015,chemical feedstocks,liquid,liquid,0
-HB,2015,chemical,chemical,chemical,0.106786869
+HB,2015,chemical,chemical,chemical,0.074750808
 HB,2015,coke,coke,coke,9.2002
 HB,2015,coke,coke,coke CCS,0
 HB,2015,construction,construction,construction,0.047101897
@@ -2632,7 +2632,7 @@ HE,2010,chemical feedstocks,liquid,liquid,0
 HE,2010,chemical,chemical,chemical,0.268425583
 HE,2010,coke,coke,coke,49.96
 HE,2010,coke,coke,coke CCS,0
-HE,2010,construction,construction,construction,0.029714361
+HE,2010,construction,construction,construction,0.029714362
 HE,2010,construction energy use,biomass,biomass,0
 HE,2010,construction energy use,coal,coal,0.008366228
 HE,2010,construction energy use,district heat,district heat,0
@@ -2653,7 +2653,7 @@ HE,2010,iron and steel,EAF with scrap,EAF with scrap,1.34
 HE,2010,mining energy use,biomass,biomass,0
 HE,2010,mining energy use,coal,coal,0.057553525
 HE,2010,mining energy use,district heat,district heat,0
-HE,2010,mining energy use,electricity,electricity,0.028463443
+HE,2010,mining energy use,electricity,electricity,0.028463442
 HE,2010,mining energy use,gas,gas,0.013162093
 HE,2010,mining energy use,hydrogen,hydrogen,0
 HE,2010,mining energy use,liquid,liquid,0.006382642
@@ -2677,7 +2677,7 @@ HE,2015,chemical energy use,liquid,liquid CCS,0
 HE,2015,chemical feedstocks,coal,coal,0.041667968
 HE,2015,chemical feedstocks,gas,gas,0
 HE,2015,chemical feedstocks,liquid,liquid,0
-HE,2015,chemical,chemical,chemical,0.345033374
+HE,2015,chemical,chemical,chemical,0.241523362
 HE,2015,coke,coke,coke,54.8062
 HE,2015,coke,coke,coke CCS,0
 HE,2015,construction,construction,construction,0.023248498
@@ -2859,7 +2859,7 @@ HI,2010,agricultural energy use,biomass,biomass,0
 HI,2010,agricultural energy use,coal,coal,0.001342887
 HI,2010,agricultural energy use,district heat,district heat,0
 HI,2010,agricultural energy use,electricity,electricity,0.001513954
-HI,2010,agricultural energy use,gas,gas,6.71E-06
+HI,2010,agricultural energy use,gas,gas,0.00000671
 HI,2010,agricultural energy use,hydrogen,hydrogen,0
 HI,2010,agricultural energy use,liquid,liquid,0.001841562
 HI,2010,chemical energy use,biomass,biomass,0
@@ -2883,7 +2883,7 @@ HI,2010,construction energy use,biomass,biomass,0
 HI,2010,construction energy use,coal,coal,0.000150952
 HI,2010,construction energy use,district heat,district heat,0
 HI,2010,construction energy use,electricity,electricity,0.000257646
-HI,2010,construction energy use,gas,gas,5.37E-06
+HI,2010,construction energy use,gas,gas,0.00000537
 HI,2010,construction energy use,hydrogen,hydrogen,0
 HI,2010,construction energy use,liquid,liquid,0.000530446
 HI,2010,construction feedstocks,coal,coal,0
@@ -2907,7 +2907,7 @@ HI,2015,agricultural energy use,biomass,biomass,0
 HI,2015,agricultural energy use,coal,coal,0.000994041
 HI,2015,agricultural energy use,district heat,district heat,0
 HI,2015,agricultural energy use,electricity,electricity,0.001199085
-HI,2015,agricultural energy use,gas,gas,8.67E-06
+HI,2015,agricultural energy use,gas,gas,0.00000867
 HI,2015,agricultural energy use,hydrogen,hydrogen,0
 HI,2015,agricultural energy use,liquid,liquid,0.002032591
 HI,2015,chemical energy use,biomass,biomass,0
@@ -2923,15 +2923,15 @@ HI,2015,chemical energy use,liquid,liquid CCS,0
 HI,2015,chemical feedstocks,coal,coal,0
 HI,2015,chemical feedstocks,gas,gas,0
 HI,2015,chemical feedstocks,liquid,liquid,0
-HI,2015,chemical,chemical,chemical,0.032327123
+HI,2015,chemical,chemical,chemical,0.022628986
 HI,2015,coke,coke,coke,0
 HI,2015,coke,coke,coke CCS,0
 HI,2015,construction,construction,construction,0.000961563
 HI,2015,construction energy use,biomass,biomass,0
-HI,2015,construction energy use,coal,coal,6.72E-05
+HI,2015,construction energy use,coal,coal,0.0000672
 HI,2015,construction energy use,district heat,district heat,0
 HI,2015,construction energy use,electricity,electricity,0.000155057
-HI,2015,construction energy use,gas,gas,3.80E-06
+HI,2015,construction energy use,gas,gas,0.0000038
 HI,2015,construction energy use,hydrogen,hydrogen,0
 HI,2015,construction energy use,liquid,liquid,0.000735505
 HI,2015,construction feedstocks,coal,coal,0
@@ -3105,7 +3105,7 @@ HL,2010,agricultural energy use,biomass,biomass,0
 HL,2010,agricultural energy use,coal,coal,0.018719103
 HL,2010,agricultural energy use,district heat,district heat,0
 HL,2010,agricultural energy use,electricity,electricity,0.016638454
-HL,2010,agricultural energy use,gas,gas,7.38E-05
+HL,2010,agricultural energy use,gas,gas,0.0000738
 HL,2010,agricultural energy use,hydrogen,hydrogen,0
 HL,2010,agricultural energy use,liquid,liquid,0.017471272
 HL,2010,chemical energy use,biomass,biomass,0
@@ -3129,7 +3129,7 @@ HL,2010,construction energy use,biomass,biomass,0
 HL,2010,construction energy use,coal,coal,0.0026532
 HL,2010,construction energy use,district heat,district heat,0
 HL,2010,construction energy use,electricity,electricity,0.00364262
-HL,2010,construction energy use,gas,gas,7.58E-05
+HL,2010,construction energy use,gas,gas,0.0000758
 HL,2010,construction energy use,hydrogen,hydrogen,0
 HL,2010,construction energy use,liquid,liquid,0.00646581
 HL,2010,construction feedstocks,coal,coal,0
@@ -3169,7 +3169,7 @@ HL,2015,chemical energy use,liquid,liquid CCS,0
 HL,2015,chemical feedstocks,coal,coal,0.002890474
 HL,2015,chemical feedstocks,gas,gas,0
 HL,2015,chemical feedstocks,liquid,liquid,0
-HL,2015,chemical,chemical,chemical,0.106731414
+HL,2015,chemical,chemical,chemical,0.07471199
 HL,2015,coke,coke,coke,6.8746
 HL,2015,coke,coke,coke CCS,0
 HL,2015,construction,construction,construction,0.011831378
@@ -3177,7 +3177,7 @@ HL,2015,construction energy use,biomass,biomass,0
 HL,2015,construction energy use,coal,coal,0.00147911
 HL,2015,construction energy use,district heat,district heat,0
 HL,2015,construction energy use,electricity,electricity,0.001794794
-HL,2015,construction energy use,gas,gas,4.40E-05
+HL,2015,construction energy use,gas,gas,0.000044
 HL,2015,construction energy use,hydrogen,hydrogen,0
 HL,2015,construction energy use,liquid,liquid,0.008513474
 HL,2015,construction feedstocks,coal,coal,0
@@ -3350,8 +3350,8 @@ HN,2005,mining energy use,liquid,liquid,0
 HN,2010,agricultural energy use,biomass,biomass,0
 HN,2010,agricultural energy use,coal,coal,0.017278544
 HN,2010,agricultural energy use,district heat,district heat,0
-HN,2010,agricultural energy use,electricity,electricity,0.015367673
-HN,2010,agricultural energy use,gas,gas,4.16E-05
+HN,2010,agricultural energy use,electricity,electricity,0.015367672
+HN,2010,agricultural energy use,gas,gas,0.0000416
 HN,2010,agricultural energy use,hydrogen,hydrogen,0
 HN,2010,agricultural energy use,liquid,liquid,0.007500867
 HN,2010,chemical energy use,biomass,biomass,0
@@ -3399,7 +3399,7 @@ HN,2015,agricultural energy use,biomass,biomass,0
 HN,2015,agricultural energy use,coal,coal,0.018626691
 HN,2015,agricultural energy use,district heat,district heat,0
 HN,2015,agricultural energy use,electricity,electricity,0.011821428
-HN,2015,agricultural energy use,gas,gas,8.23E-05
+HN,2015,agricultural energy use,gas,gas,0.0000823
 HN,2015,agricultural energy use,hydrogen,hydrogen,0
 HN,2015,agricultural energy use,liquid,liquid,0.015681788
 HN,2015,chemical energy use,biomass,biomass,0
@@ -3415,7 +3415,7 @@ HN,2015,chemical energy use,liquid,liquid CCS,0
 HN,2015,chemical feedstocks,coal,coal,0.026882503
 HN,2015,chemical feedstocks,gas,gas,0
 HN,2015,chemical feedstocks,liquid,liquid,0
-HN,2015,chemical,chemical,chemical,0.055140243
+HN,2015,chemical,chemical,chemical,0.03859817
 HN,2015,coke,coke,coke,6.573
 HN,2015,coke,coke,coke CCS,0
 HN,2015,construction,construction,construction,0.033306245
@@ -3597,7 +3597,7 @@ JL,2010,agricultural energy use,biomass,biomass,0
 JL,2010,agricultural energy use,coal,coal,0.009721118
 JL,2010,agricultural energy use,district heat,district heat,0
 JL,2010,agricultural energy use,electricity,electricity,0.008651475
-JL,2010,agricultural energy use,gas,gas,3.83E-05
+JL,2010,agricultural energy use,gas,gas,0.0000383
 JL,2010,agricultural energy use,hydrogen,hydrogen,0
 JL,2010,agricultural energy use,liquid,liquid,0.010530197
 JL,2010,chemical energy use,biomass,biomass,0
@@ -3621,7 +3621,7 @@ JL,2010,construction energy use,biomass,biomass,0
 JL,2010,construction energy use,coal,coal,0.001323364
 JL,2010,construction energy use,district heat,district heat,0
 JL,2010,construction energy use,electricity,electricity,0.001817233
-JL,2010,construction energy use,gas,gas,3.78E-05
+JL,2010,construction energy use,gas,gas,0.0000378
 JL,2010,construction energy use,hydrogen,hydrogen,0
 JL,2010,construction energy use,liquid,liquid,0.003741343
 JL,2010,construction feedstocks,coal,coal,0
@@ -3645,7 +3645,7 @@ JL,2015,agricultural energy use,biomass,biomass,0
 JL,2015,agricultural energy use,coal,coal,0.011539512
 JL,2015,agricultural energy use,district heat,district heat,0
 JL,2015,agricultural energy use,electricity,electricity,0.00732355
-JL,2015,agricultural energy use,gas,gas,5.30E-05
+JL,2015,agricultural energy use,gas,gas,0.000053
 JL,2015,agricultural energy use,hydrogen,hydrogen,0
 JL,2015,agricultural energy use,liquid,liquid,0.012414281
 JL,2015,chemical energy use,biomass,biomass,0
@@ -3661,7 +3661,7 @@ JL,2015,chemical energy use,liquid,liquid CCS,0
 JL,2015,chemical feedstocks,coal,coal,0.014141075
 JL,2015,chemical feedstocks,gas,gas,0
 JL,2015,chemical feedstocks,liquid,liquid,0
-JL,2015,chemical,chemical,chemical,0.065075345
+JL,2015,chemical,chemical,chemical,0.045552742
 JL,2015,coke,coke,coke,3.7215
 JL,2015,coke,coke,coke CCS,0
 JL,2015,construction,construction,construction,0.008361454
@@ -3669,7 +3669,7 @@ JL,2015,construction energy use,biomass,biomass,0
 JL,2015,construction energy use,coal,coal,0.001045314
 JL,2015,construction energy use,district heat,district heat,0
 JL,2015,construction energy use,electricity,electricity,0.001268412
-JL,2015,construction energy use,gas,gas,3.11E-05
+JL,2015,construction energy use,gas,gas,0.0000311
 JL,2015,construction energy use,hydrogen,hydrogen,0
 JL,2015,construction energy use,liquid,liquid,0.006016627
 JL,2015,construction feedstocks,coal,coal,0
@@ -3843,7 +3843,7 @@ JS,2010,agricultural energy use,biomass,biomass,0
 JS,2010,agricultural energy use,coal,coal,0.014256019
 JS,2010,agricultural energy use,district heat,district heat,0
 JS,2010,agricultural energy use,electricity,electricity,0.012679415
-JS,2010,agricultural energy use,gas,gas,5.62E-05
+JS,2010,agricultural energy use,gas,gas,0.0000562
 JS,2010,agricultural energy use,hydrogen,hydrogen,0
 JS,2010,agricultural energy use,liquid,liquid,0.010370816
 JS,2010,chemical energy use,biomass,biomass,0
@@ -3891,7 +3891,7 @@ JS,2015,agricultural energy use,biomass,biomass,0
 JS,2015,agricultural energy use,coal,coal,0.01429702
 JS,2015,agricultural energy use,district heat,district heat,0
 JS,2015,agricultural energy use,electricity,electricity,0.009073601
-JS,2015,agricultural energy use,gas,gas,6.56E-05
+JS,2015,agricultural energy use,gas,gas,0.0000656
 JS,2015,agricultural energy use,hydrogen,hydrogen,0
 JS,2015,agricultural energy use,liquid,liquid,0.009741719
 JS,2015,chemical energy use,biomass,biomass,0
@@ -3907,7 +3907,7 @@ JS,2015,chemical energy use,liquid,liquid CCS,0
 JS,2015,chemical feedstocks,coal,coal,0.051919734
 JS,2015,chemical feedstocks,gas,gas,0
 JS,2015,chemical feedstocks,liquid,liquid,0
-JS,2015,chemical,chemical,chemical,0.249738263
+JS,2015,chemical,chemical,chemical,0.174816784
 JS,2015,coke,coke,coke,24.3337
 JS,2015,coke,coke,coke CCS,0
 JS,2015,construction,construction,construction,0.075876241
@@ -4089,7 +4089,7 @@ JX,2010,agricultural energy use,biomass,biomass,0
 JX,2010,agricultural energy use,coal,coal,0.014207639
 JX,2010,agricultural energy use,district heat,district heat,0
 JX,2010,agricultural energy use,electricity,electricity,0.012636385
-JX,2010,agricultural energy use,gas,gas,2.93E-05
+JX,2010,agricultural energy use,gas,gas,0.0000293
 JX,2010,agricultural energy use,hydrogen,hydrogen,0
 JX,2010,agricultural energy use,liquid,liquid,0.009960735
 JX,2010,chemical energy use,biomass,biomass,0
@@ -4113,7 +4113,7 @@ JX,2010,construction energy use,biomass,biomass,0
 JX,2010,construction energy use,coal,coal,0.002113549
 JX,2010,construction energy use,district heat,district heat,0
 JX,2010,construction energy use,electricity,electricity,0.002902307
-JX,2010,construction energy use,gas,gas,3.16E-05
+JX,2010,construction energy use,gas,gas,0.0000316
 JX,2010,construction energy use,hydrogen,hydrogen,0
 JX,2010,construction energy use,liquid,liquid,0.003868863
 JX,2010,construction feedstocks,coal,coal,0
@@ -4137,7 +4137,7 @@ JX,2015,agricultural energy use,biomass,biomass,0
 JX,2015,agricultural energy use,coal,coal,0.016020837
 JX,2015,agricultural energy use,district heat,district heat,0
 JX,2015,agricultural energy use,electricity,electricity,0.010167623
-JX,2015,agricultural energy use,gas,gas,7.36E-05
+JX,2015,agricultural energy use,gas,gas,0.0000736
 JX,2015,agricultural energy use,hydrogen,hydrogen,0
 JX,2015,agricultural energy use,liquid,liquid,0.013974819
 JX,2015,chemical energy use,biomass,biomass,0
@@ -4153,7 +4153,7 @@ JX,2015,chemical energy use,liquid,liquid CCS,0
 JX,2015,chemical feedstocks,coal,coal,0.023697768
 JX,2015,chemical feedstocks,gas,gas,0
 JX,2015,chemical feedstocks,liquid,liquid,0
-JX,2015,chemical,chemical,chemical,0.067013741
+JX,2015,chemical,chemical,chemical,0.046909619
 JX,2015,coke,coke,coke,8.1544
 JX,2015,coke,coke,coke CCS,0
 JX,2015,construction,construction,construction,0.016186643
@@ -4161,7 +4161,7 @@ JX,2015,construction energy use,biomass,biomass,0
 JX,2015,construction energy use,coal,coal,0.00234245
 JX,2015,construction energy use,district heat,district heat,0
 JX,2015,construction energy use,electricity,electricity,0.002842394
-JX,2015,construction energy use,gas,gas,6.97E-05
+JX,2015,construction energy use,gas,gas,0.0000697
 JX,2015,construction energy use,hydrogen,hydrogen,0
 JX,2015,construction energy use,liquid,liquid,0.010932099
 JX,2015,construction feedstocks,coal,coal,0
@@ -4335,7 +4335,7 @@ LN,2010,agricultural energy use,biomass,biomass,0
 LN,2010,agricultural energy use,coal,coal,0.005603445
 LN,2010,agricultural energy use,district heat,district heat,0
 LN,2010,agricultural energy use,electricity,electricity,0.004983748
-LN,2010,agricultural energy use,gas,gas,2.21E-05
+LN,2010,agricultural energy use,gas,gas,0.0000221
 LN,2010,agricultural energy use,hydrogen,hydrogen,0
 LN,2010,agricultural energy use,liquid,liquid,0.006066
 LN,2010,chemical energy use,biomass,biomass,0
@@ -4383,7 +4383,7 @@ LN,2015,agricultural energy use,biomass,biomass,0
 LN,2015,agricultural energy use,coal,coal,0.006548702
 LN,2015,agricultural energy use,district heat,district heat,0
 LN,2015,agricultural energy use,electricity,electricity,0.004156133
-LN,2015,agricultural energy use,gas,gas,3.01E-05
+LN,2015,agricultural energy use,gas,gas,0.0000301
 LN,2015,agricultural energy use,hydrogen,hydrogen,0
 LN,2015,agricultural energy use,liquid,liquid,0.007045134
 LN,2015,chemical energy use,biomass,biomass,0
@@ -4399,7 +4399,7 @@ LN,2015,chemical energy use,liquid,liquid CCS,0
 LN,2015,chemical feedstocks,coal,coal,0.014168457
 LN,2015,chemical feedstocks,gas,gas,0
 LN,2015,chemical feedstocks,liquid,liquid,0
-LN,2015,chemical,chemical,chemical,0.257550365
+LN,2015,chemical,chemical,chemical,0.180285256
 LN,2015,coke,coke,coke,20.9724
 LN,2015,coke,coke,coke CCS,0
 LN,2015,construction,construction,construction,0.055243787
@@ -4581,7 +4581,7 @@ NM,2010,agricultural energy use,biomass,biomass,0
 NM,2010,agricultural energy use,coal,coal,0.01212041
 NM,2010,agricultural energy use,district heat,district heat,0
 NM,2010,agricultural energy use,electricity,electricity,0.010779988
-NM,2010,agricultural energy use,gas,gas,4.78E-05
+NM,2010,agricultural energy use,gas,gas,0.0000478
 NM,2010,agricultural energy use,hydrogen,hydrogen,0
 NM,2010,agricultural energy use,liquid,liquid,0.005101322
 NM,2010,chemical energy use,biomass,biomass,0
@@ -4605,7 +4605,7 @@ NM,2010,construction energy use,biomass,biomass,0
 NM,2010,construction energy use,coal,coal,0.001679662
 NM,2010,construction energy use,district heat,district heat,0
 NM,2010,construction energy use,electricity,electricity,0.002306498
-NM,2010,construction energy use,gas,gas,4.80E-05
+NM,2010,construction energy use,gas,gas,0.000048
 NM,2010,construction energy use,hydrogen,hydrogen,0
 NM,2010,construction energy use,liquid,liquid,0.001846239
 NM,2010,construction feedstocks,coal,coal,0
@@ -4629,7 +4629,7 @@ NM,2015,agricultural energy use,biomass,biomass,0
 NM,2015,agricultural energy use,coal,coal,0.01243699
 NM,2015,agricultural energy use,district heat,district heat,0
 NM,2015,agricultural energy use,electricity,electricity,0.007893134
-NM,2015,agricultural energy use,gas,gas,2.35E-05
+NM,2015,agricultural energy use,gas,gas,0.0000235
 NM,2015,agricultural energy use,hydrogen,hydrogen,0
 NM,2015,agricultural energy use,liquid,liquid,0.003408324
 NM,2015,chemical energy use,biomass,biomass,0
@@ -4645,7 +4645,7 @@ NM,2015,chemical energy use,liquid,liquid CCS,0
 NM,2015,chemical feedstocks,coal,coal,0.299911935
 NM,2015,chemical feedstocks,gas,gas,0
 NM,2015,chemical feedstocks,liquid,liquid,0
-NM,2015,chemical,chemical,chemical,0.345476835
+NM,2015,chemical,chemical,chemical,0.241833785
 NM,2015,coke,coke,coke,30.4099
 NM,2015,coke,coke,coke CCS,0
 NM,2015,construction,construction,construction,0.003106095
@@ -4653,7 +4653,7 @@ NM,2015,construction energy use,biomass,biomass,0
 NM,2015,construction energy use,coal,coal,0.00084133
 NM,2015,construction energy use,district heat,district heat,0
 NM,2015,construction energy use,electricity,electricity,0.001020894
-NM,2015,construction energy use,gas,gas,1.03E-05
+NM,2015,construction energy use,gas,gas,0.0000103
 NM,2015,construction energy use,hydrogen,hydrogen,0
 NM,2015,construction energy use,liquid,liquid,0.001233571
 NM,2015,construction feedstocks,coal,coal,0
@@ -4827,7 +4827,7 @@ NX,2010,agricultural energy use,biomass,biomass,0
 NX,2010,agricultural energy use,coal,coal,0.001846818
 NX,2010,agricultural energy use,district heat,district heat,0
 NX,2010,agricultural energy use,electricity,electricity,0.001627451
-NX,2010,agricultural energy use,gas,gas,6.55E-06
+NX,2010,agricultural energy use,gas,gas,0.00000655
 NX,2010,agricultural energy use,hydrogen,hydrogen,0
 NX,2010,agricultural energy use,liquid,liquid,0.000380643
 NX,2010,chemical energy use,biomass,biomass,0
@@ -4846,12 +4846,12 @@ NX,2010,chemical feedstocks,liquid,liquid,0
 NX,2010,chemical,chemical,chemical,0.081307139
 NX,2010,coke,coke,coke,4.21
 NX,2010,coke,coke,coke CCS,0
-NX,2010,construction,construction,construction,0.001899896
+NX,2010,construction,construction,construction,0.001899895
 NX,2010,construction energy use,biomass,biomass,0
 NX,2010,construction energy use,coal,coal,0.000649644
 NX,2010,construction energy use,district heat,district heat,0
 NX,2010,construction energy use,electricity,electricity,0.000883872
-NX,2010,construction energy use,gas,gas,1.67E-05
+NX,2010,construction energy use,gas,gas,0.0000167
 NX,2010,construction energy use,hydrogen,hydrogen,0
 NX,2010,construction energy use,liquid,liquid,0.000349679
 NX,2010,construction feedstocks,coal,coal,0
@@ -4875,7 +4875,7 @@ NX,2015,agricultural energy use,biomass,biomass,0
 NX,2015,agricultural energy use,coal,coal,0.001699371
 NX,2015,agricultural energy use,district heat,district heat,0
 NX,2015,agricultural energy use,electricity,electricity,0.001279804
-NX,2015,agricultural energy use,gas,gas,2.21E-06
+NX,2015,agricultural energy use,gas,gas,0.00000221
 NX,2015,agricultural energy use,hydrogen,hydrogen,0
 NX,2015,agricultural energy use,liquid,liquid,0.000205283
 NX,2015,chemical energy use,biomass,biomass,0
@@ -4891,7 +4891,7 @@ NX,2015,chemical energy use,liquid,liquid CCS,0
 NX,2015,chemical feedstocks,coal,coal,0.071150609
 NX,2015,chemical feedstocks,gas,gas,0
 NX,2015,chemical feedstocks,liquid,liquid,0
-NX,2015,chemical,chemical,chemical,0.093457631
+NX,2015,chemical,chemical,chemical,0.065420342
 NX,2015,coke,coke,coke,7.5825
 NX,2015,coke,coke,coke CCS,0
 NX,2015,construction,construction,construction,0.000707667
@@ -4899,7 +4899,7 @@ NX,2015,construction energy use,biomass,biomass,0
 NX,2015,construction energy use,coal,coal,0.000228674
 NX,2015,construction energy use,district heat,district heat,0
 NX,2015,construction energy use,electricity,electricity,0.00032927
-NX,2015,construction energy use,gas,gas,1.93E-06
+NX,2015,construction energy use,gas,gas,0.00000193
 NX,2015,construction energy use,hydrogen,hydrogen,0
 NX,2015,construction energy use,liquid,liquid,0.000147793
 NX,2015,construction feedstocks,coal,coal,0
@@ -4918,7 +4918,7 @@ NX,2015,mining energy use,district heat,district heat,0
 NX,2015,mining energy use,electricity,electricity,0.001546405
 NX,2015,mining energy use,gas,gas,0.000130326
 NX,2015,mining energy use,hydrogen,hydrogen,0
-NX,2015,mining energy use,liquid,liquid,5.15E-05
+NX,2015,mining energy use,liquid,liquid,0.0000515
 NX,2021,coke,coke,coke CCS,0
 NX,2021,iron and steel,BLASTFUR,Biomass-based,0
 NX,2021,iron and steel,BLASTFUR,BLASTFUR CCS,0
@@ -5073,7 +5073,7 @@ QH,2010,agricultural energy use,biomass,biomass,0
 QH,2010,agricultural energy use,coal,coal,0.001406698
 QH,2010,agricultural energy use,district heat,district heat,0
 QH,2010,agricultural energy use,electricity,electricity,0.00158653
-QH,2010,agricultural energy use,gas,gas,3.82E-06
+QH,2010,agricultural energy use,gas,gas,0.00000382
 QH,2010,agricultural energy use,hydrogen,hydrogen,0
 QH,2010,agricultural energy use,liquid,liquid,0.000289393
 QH,2010,chemical energy use,biomass,biomass,0
@@ -5097,7 +5097,7 @@ QH,2010,construction energy use,biomass,biomass,0
 QH,2010,construction energy use,coal,coal,0.000436293
 QH,2010,construction energy use,district heat,district heat,0
 QH,2010,construction energy use,electricity,electricity,0.000744959
-QH,2010,construction energy use,gas,gas,8.45E-06
+QH,2010,construction energy use,gas,gas,0.00000845
 QH,2010,construction energy use,hydrogen,hydrogen,0
 QH,2010,construction energy use,liquid,liquid,0.000229849
 QH,2010,construction feedstocks,coal,coal,0
@@ -5121,13 +5121,13 @@ QH,2015,agricultural energy use,biomass,biomass,0
 QH,2015,agricultural energy use,coal,coal,0.001779834
 QH,2015,agricultural energy use,district heat,district heat,0
 QH,2015,agricultural energy use,electricity,electricity,0.001129571
-QH,2015,agricultural energy use,gas,gas,8.15E-06
+QH,2015,agricultural energy use,gas,gas,0.00000815
 QH,2015,agricultural energy use,hydrogen,hydrogen,0
 QH,2015,agricultural energy use,liquid,liquid,0.000899065
 QH,2015,chemical energy use,biomass,biomass,0
 QH,2015,chemical energy use,coal,coal,0.011207135
 QH,2015,chemical energy use,coal,coal CCS,0
-QH,2015,chemical energy use,district heat,district heat,8.12E-05
+QH,2015,chemical energy use,district heat,district heat,0.0000812
 QH,2015,chemical energy use,electricity,electricity,0
 QH,2015,chemical energy use,gas,gas,0.000895091
 QH,2015,chemical energy use,gas,gas CCS,0
@@ -5137,7 +5137,7 @@ QH,2015,chemical energy use,liquid,liquid CCS,0
 QH,2015,chemical feedstocks,coal,coal,0.00859893
 QH,2015,chemical feedstocks,gas,gas,0
 QH,2015,chemical feedstocks,liquid,liquid,0
-QH,2015,chemical,chemical,chemical,0.01915863
+QH,2015,chemical,chemical,chemical,0.013411041
 QH,2015,coke,coke,coke,0
 QH,2015,coke,coke,coke CCS,0
 QH,2015,construction,construction,construction,0.002130145
@@ -5145,7 +5145,7 @@ QH,2015,construction energy use,biomass,biomass,0
 QH,2015,construction energy use,coal,coal,0.000430701
 QH,2015,construction energy use,district heat,district heat,0
 QH,2015,construction energy use,electricity,electricity,0.000522625
-QH,2015,construction energy use,gas,gas,1.28E-05
+QH,2015,construction energy use,gas,gas,0.0000128
 QH,2015,construction energy use,hydrogen,hydrogen,0
 QH,2015,construction energy use,liquid,liquid,0.001164019
 QH,2015,construction feedstocks,coal,coal,0
@@ -5319,7 +5319,7 @@ SC,2010,agricultural energy use,biomass,biomass,0
 SC,2010,agricultural energy use,coal,coal,0.010206003
 SC,2010,agricultural energy use,district heat,district heat,0
 SC,2010,agricultural energy use,electricity,electricity,0.009077299
-SC,2010,agricultural energy use,gas,gas,4.02E-05
+SC,2010,agricultural energy use,gas,gas,0.0000402
 SC,2010,agricultural energy use,hydrogen,hydrogen,0
 SC,2010,agricultural energy use,liquid,liquid,0.008565335
 SC,2010,chemical energy use,biomass,biomass,0
@@ -5367,7 +5367,7 @@ SC,2015,agricultural energy use,biomass,biomass,0
 SC,2015,agricultural energy use,coal,coal,0.011373299
 SC,2015,agricultural energy use,district heat,district heat,0
 SC,2015,agricultural energy use,electricity,electricity,0.007218063
-SC,2015,agricultural energy use,gas,gas,5.22E-05
+SC,2015,agricultural energy use,gas,gas,0.0000522
 SC,2015,agricultural energy use,hydrogen,hydrogen,0
 SC,2015,agricultural energy use,liquid,liquid,0.012235468
 SC,2015,chemical energy use,biomass,biomass,0
@@ -5383,7 +5383,7 @@ SC,2015,chemical energy use,liquid,liquid CCS,0
 SC,2015,chemical feedstocks,coal,coal,0.011125387
 SC,2015,chemical feedstocks,gas,gas,0
 SC,2015,chemical feedstocks,liquid,liquid,0
-SC,2015,chemical,chemical,chemical,0.168468318
+SC,2015,chemical,chemical,chemical,0.117927823
 SC,2015,coke,coke,coke,13.0437
 SC,2015,coke,coke,coke CCS,0
 SC,2015,construction,construction,construction,0.036294253
@@ -5613,7 +5613,7 @@ SD,2015,agricultural energy use,biomass,biomass,0
 SD,2015,agricultural energy use,coal,coal,0.039433285
 SD,2015,agricultural energy use,district heat,district heat,0
 SD,2015,agricultural energy use,electricity,electricity,0.025026329
-SD,2015,agricultural energy use,gas,gas,8.25E-05
+SD,2015,agricultural energy use,gas,gas,0.0000825
 SD,2015,agricultural energy use,hydrogen,hydrogen,0
 SD,2015,agricultural energy use,liquid,liquid,0.02619814
 SD,2015,chemical energy use,biomass,biomass,0
@@ -5629,7 +5629,7 @@ SD,2015,chemical energy use,liquid,liquid CCS,0
 SD,2015,chemical feedstocks,coal,coal,0.129331383
 SD,2015,chemical feedstocks,gas,gas,0
 SD,2015,chemical feedstocks,liquid,liquid,0
-SD,2015,chemical,chemical,chemical,0.525520114
+SD,2015,chemical,chemical,chemical,0.36786408
 SD,2015,coke,coke,coke,43.646
 SD,2015,coke,coke,coke CCS,0
 SD,2015,construction,construction,construction,0.044865685
@@ -5811,7 +5811,7 @@ SH,2010,agricultural energy use,biomass,biomass,0
 SH,2010,agricultural energy use,coal,coal,0.00019717
 SH,2010,agricultural energy use,district heat,district heat,0
 SH,2010,agricultural energy use,electricity,electricity,0.000175365
-SH,2010,agricultural energy use,gas,gas,7.79E-07
+SH,2010,agricultural energy use,gas,gas,0.000000779
 SH,2010,agricultural energy use,hydrogen,hydrogen,0
 SH,2010,agricultural energy use,liquid,liquid,0.000213446
 SH,2010,chemical energy use,biomass,biomass,0
@@ -5835,7 +5835,7 @@ SH,2010,construction energy use,biomass,biomass,0
 SH,2010,construction energy use,coal,coal,0.002929354
 SH,2010,construction energy use,district heat,district heat,0
 SH,2010,construction energy use,electricity,electricity,0.004022564
-SH,2010,construction energy use,gas,gas,8.38E-05
+SH,2010,construction energy use,gas,gas,0.0000838
 SH,2010,construction energy use,hydrogen,hydrogen,0
 SH,2010,construction energy use,liquid,liquid,0.008281709
 SH,2010,construction feedstocks,coal,coal,0
@@ -5859,7 +5859,7 @@ SH,2015,agricultural energy use,biomass,biomass,0
 SH,2015,agricultural energy use,coal,coal,0.000200116
 SH,2015,agricultural energy use,district heat,district heat,0
 SH,2015,agricultural energy use,electricity,electricity,0.000127004
-SH,2015,agricultural energy use,gas,gas,9.19E-07
+SH,2015,agricultural energy use,gas,gas,0.000000919
 SH,2015,agricultural energy use,hydrogen,hydrogen,0
 SH,2015,agricultural energy use,liquid,liquid,0.000215286
 SH,2015,chemical energy use,biomass,biomass,0
@@ -5875,7 +5875,7 @@ SH,2015,chemical energy use,liquid,liquid CCS,0
 SH,2015,chemical feedstocks,coal,coal,0.022081457
 SH,2015,chemical feedstocks,gas,gas,0
 SH,2015,chemical feedstocks,liquid,liquid,0
-SH,2015,chemical,chemical,chemical,0.148121603
+SH,2015,chemical,chemical,chemical,0.103685122
 SH,2015,coke,coke,coke,5.3448
 SH,2015,coke,coke,coke CCS,0
 SH,2015,construction,construction,construction,0.008127233
@@ -5883,7 +5883,7 @@ SH,2015,construction energy use,biomass,biomass,0
 SH,2015,construction energy use,coal,coal,0.001016024
 SH,2015,construction energy use,district heat,district heat,0
 SH,2015,construction energy use,electricity,electricity,0.001232871
-SH,2015,construction energy use,gas,gas,3.03E-05
+SH,2015,construction energy use,gas,gas,0.0000303
 SH,2015,construction energy use,hydrogen,hydrogen,0
 SH,2015,construction energy use,liquid,liquid,0.005848038
 SH,2015,construction feedstocks,coal,coal,0
@@ -6057,7 +6057,7 @@ SN,2010,agricultural energy use,biomass,biomass,0
 SN,2010,agricultural energy use,coal,coal,0.004840856
 SN,2010,agricultural energy use,district heat,district heat,0
 SN,2010,agricultural energy use,electricity,electricity,0.004305495
-SN,2010,agricultural energy use,gas,gas,1.91E-05
+SN,2010,agricultural energy use,gas,gas,0.0000191
 SN,2010,agricultural energy use,hydrogen,hydrogen,0
 SN,2010,agricultural energy use,liquid,liquid,0.001159596
 SN,2010,chemical energy use,biomass,biomass,0
@@ -6105,7 +6105,7 @@ SN,2015,agricultural energy use,biomass,biomass,0
 SN,2015,agricultural energy use,coal,coal,0.005156562
 SN,2015,agricultural energy use,district heat,district heat,0
 SN,2015,agricultural energy use,electricity,electricity,0.003609349
-SN,2015,agricultural energy use,gas,gas,2.52E-05
+SN,2015,agricultural energy use,gas,gas,0.0000252
 SN,2015,agricultural energy use,hydrogen,hydrogen,0
 SN,2015,agricultural energy use,liquid,liquid,0.001365195
 SN,2015,chemical energy use,biomass,biomass,0
@@ -6121,7 +6121,7 @@ SN,2015,chemical energy use,liquid,liquid CCS,0
 SN,2015,chemical feedstocks,coal,coal,0.125075481
 SN,2015,chemical feedstocks,gas,gas,0
 SN,2015,chemical feedstocks,liquid,liquid,0
-SN,2015,chemical,chemical,chemical,0.18325072
+SN,2015,chemical,chemical,chemical,0.128275504
 SN,2015,coke,coke,coke,36.584
 SN,2015,coke,coke,coke CCS,0
 SN,2015,construction,construction,construction,0.010526843
@@ -6129,7 +6129,7 @@ SN,2015,construction energy use,biomass,biomass,0
 SN,2015,construction energy use,coal,coal,0.002780168
 SN,2015,construction energy use,district heat,district heat,0
 SN,2015,construction energy use,electricity,electricity,0.003720656
-SN,2015,construction energy use,gas,gas,8.80E-05
+SN,2015,construction energy use,gas,gas,0.000088
 SN,2015,construction energy use,hydrogen,hydrogen,0
 SN,2015,construction energy use,liquid,liquid,0.003938019
 SN,2015,construction feedstocks,coal,coal,0
@@ -6303,7 +6303,7 @@ SX,2010,agricultural energy use,biomass,biomass,0
 SX,2010,agricultural energy use,coal,coal,0.007173729
 SX,2010,agricultural energy use,district heat,district heat,0
 SX,2010,agricultural energy use,electricity,electricity,0.005619144
-SX,2010,agricultural energy use,gas,gas,1.41E-05
+SX,2010,agricultural energy use,gas,gas,0.0000141
 SX,2010,agricultural energy use,hydrogen,hydrogen,0
 SX,2010,agricultural energy use,liquid,liquid,0.001172089
 SX,2010,chemical energy use,biomass,biomass,0
@@ -6327,7 +6327,7 @@ SX,2010,construction energy use,biomass,biomass,0
 SX,2010,construction energy use,coal,coal,0.00426
 SX,2010,construction energy use,district heat,district heat,0
 SX,2010,construction energy use,electricity,electricity,0.005151873
-SX,2010,construction energy use,gas,gas,6.05E-05
+SX,2010,construction energy use,gas,gas,0.0000605
 SX,2010,construction energy use,hydrogen,hydrogen,0
 SX,2010,construction energy use,liquid,liquid,0.001817716
 SX,2010,construction feedstocks,coal,coal,0
@@ -6351,7 +6351,7 @@ SX,2015,agricultural energy use,biomass,biomass,0
 SX,2015,agricultural energy use,coal,coal,0.008012435
 SX,2015,agricultural energy use,district heat,district heat,0
 SX,2015,agricultural energy use,electricity,electricity,0.005085091
-SX,2015,agricultural energy use,gas,gas,1.73E-05
+SX,2015,agricultural energy use,gas,gas,0.0000173
 SX,2015,agricultural energy use,hydrogen,hydrogen,0
 SX,2015,agricultural energy use,liquid,liquid,0.001397218
 SX,2015,chemical energy use,biomass,biomass,0
@@ -6367,7 +6367,7 @@ SX,2015,chemical energy use,liquid,liquid CCS,0
 SX,2015,chemical feedstocks,coal,coal,0.072687238
 SX,2015,chemical feedstocks,gas,gas,0
 SX,2015,chemical feedstocks,liquid,liquid,0
-SX,2015,chemical,chemical,chemical,0.219521618
+SX,2015,chemical,chemical,chemical,0.153665133
 SX,2015,coke,coke,coke,80.3988
 SX,2015,coke,coke,coke CCS,0
 SX,2015,construction,construction,construction,0.009741726
@@ -6375,7 +6375,7 @@ SX,2015,construction energy use,biomass,biomass,0
 SX,2015,construction energy use,coal,coal,0.003082445
 SX,2015,construction energy use,district heat,district heat,0
 SX,2015,construction energy use,electricity,electricity,0.003740324
-SX,2015,construction energy use,gas,gas,4.31E-05
+SX,2015,construction energy use,gas,gas,0.0000431
 SX,2015,construction energy use,hydrogen,hydrogen,0
 SX,2015,construction energy use,liquid,liquid,0.002875857
 SX,2015,construction feedstocks,coal,coal,0
@@ -6549,7 +6549,7 @@ TJ,2010,agricultural energy use,biomass,biomass,0
 TJ,2010,agricultural energy use,coal,coal,0.001144526
 TJ,2010,agricultural energy use,district heat,district heat,0
 TJ,2010,agricultural energy use,electricity,electricity,0.000184508
-TJ,2010,agricultural energy use,gas,gas,4.51E-06
+TJ,2010,agricultural energy use,gas,gas,0.00000451
 TJ,2010,agricultural energy use,hydrogen,hydrogen,0
 TJ,2010,agricultural energy use,liquid,liquid,0.001239004
 TJ,2010,chemical energy use,biomass,biomass,0
@@ -6573,7 +6573,7 @@ TJ,2010,construction energy use,biomass,biomass,0
 TJ,2010,construction energy use,coal,coal,0.003386005
 TJ,2010,construction energy use,district heat,district heat,0
 TJ,2010,construction energy use,electricity,electricity,0.000842766
-TJ,2010,construction energy use,gas,gas,9.68E-05
+TJ,2010,construction energy use,gas,gas,0.0000968
 TJ,2010,construction energy use,hydrogen,hydrogen,0
 TJ,2010,construction energy use,liquid,liquid,0.009572729
 TJ,2010,construction feedstocks,coal,coal,0
@@ -6597,7 +6597,7 @@ TJ,2015,agricultural energy use,biomass,biomass,0
 TJ,2015,agricultural energy use,coal,coal,0.00109784
 TJ,2015,agricultural energy use,district heat,district heat,0
 TJ,2015,agricultural energy use,electricity,electricity,0.000696744
-TJ,2015,agricultural energy use,gas,gas,5.04E-06
+TJ,2015,agricultural energy use,gas,gas,0.00000504
 TJ,2015,agricultural energy use,hydrogen,hydrogen,0
 TJ,2015,agricultural energy use,liquid,liquid,0.001181064
 TJ,2015,chemical energy use,biomass,biomass,0
@@ -6613,7 +6613,7 @@ TJ,2015,chemical energy use,liquid,liquid CCS,0
 TJ,2015,chemical feedstocks,coal,coal,0.011771095
 TJ,2015,chemical feedstocks,gas,gas,0
 TJ,2015,chemical feedstocks,liquid,liquid,0
-TJ,2015,chemical,chemical,chemical,0.074277432
+TJ,2015,chemical,chemical,chemical,0.051994202
 TJ,2015,coke,coke,coke,1.9592
 TJ,2015,coke,coke,coke CCS,0
 TJ,2015,construction,construction,construction,0.017046221
@@ -6621,7 +6621,7 @@ TJ,2015,construction energy use,biomass,biomass,0
 TJ,2015,construction energy use,coal,coal,0.002131047
 TJ,2015,construction energy use,district heat,district heat,0
 TJ,2015,construction energy use,electricity,electricity,0.002585873
-TJ,2015,construction energy use,gas,gas,6.34E-05
+TJ,2015,construction energy use,gas,gas,0.0000634
 TJ,2015,construction energy use,hydrogen,hydrogen,0
 TJ,2015,construction energy use,liquid,liquid,0.012265901
 TJ,2015,construction feedstocks,coal,coal,0
@@ -6795,7 +6795,7 @@ XJ,2010,agricultural energy use,biomass,biomass,0
 XJ,2010,agricultural energy use,coal,coal,0.007714426
 XJ,2010,agricultural energy use,district heat,district heat,0
 XJ,2010,agricultural energy use,electricity,electricity,0.006861271
-XJ,2010,agricultural energy use,gas,gas,3.04E-05
+XJ,2010,agricultural energy use,gas,gas,0.0000304
 XJ,2010,agricultural energy use,hydrogen,hydrogen,0
 XJ,2010,agricultural energy use,liquid,liquid,0.004333456
 XJ,2010,chemical energy use,biomass,biomass,0
@@ -6819,7 +6819,7 @@ XJ,2010,construction energy use,biomass,biomass,0
 XJ,2010,construction energy use,coal,coal,0.001926548
 XJ,2010,construction energy use,district heat,district heat,0
 XJ,2010,construction energy use,electricity,electricity,0.00264552
-XJ,2010,construction energy use,gas,gas,5.50E-05
+XJ,2010,construction energy use,gas,gas,0.000055
 XJ,2010,construction energy use,hydrogen,hydrogen,0
 XJ,2010,construction energy use,liquid,liquid,0.002826255
 XJ,2010,construction feedstocks,coal,coal,0
@@ -6843,7 +6843,7 @@ XJ,2015,agricultural energy use,biomass,biomass,0
 XJ,2015,agricultural energy use,coal,coal,0.008567269
 XJ,2015,agricultural energy use,district heat,district heat,0
 XJ,2015,agricultural energy use,electricity,electricity,0.005674903
-XJ,2015,agricultural energy use,gas,gas,4.11E-05
+XJ,2015,agricultural energy use,gas,gas,0.0000411
 XJ,2015,agricultural energy use,hydrogen,hydrogen,0
 XJ,2015,agricultural energy use,liquid,liquid,0.004340572
 XJ,2015,chemical energy use,biomass,biomass,0
@@ -6859,7 +6859,7 @@ XJ,2015,chemical energy use,liquid,liquid CCS,0
 XJ,2015,chemical feedstocks,coal,coal,0
 XJ,2015,chemical feedstocks,gas,gas,0
 XJ,2015,chemical feedstocks,liquid,liquid,0
-XJ,2015,chemical,chemical,chemical,0.391529079
+XJ,2015,chemical,chemical,chemical,0.274070355
 XJ,2015,coke,coke,coke,16.6209
 XJ,2015,coke,coke,coke CCS,0
 XJ,2015,construction,construction,construction,0.005601632
@@ -6867,7 +6867,7 @@ XJ,2015,construction energy use,biomass,biomass,0
 XJ,2015,construction energy use,coal,coal,0.001012714
 XJ,2015,construction energy use,district heat,district heat,0
 XJ,2015,construction energy use,electricity,electricity,0.001282575
-XJ,2015,construction energy use,gas,gas,3.15E-05
+XJ,2015,construction energy use,gas,gas,0.0000315
 XJ,2015,construction energy use,hydrogen,hydrogen,0
 XJ,2015,construction energy use,liquid,liquid,0.003274843
 XJ,2015,construction feedstocks,coal,coal,0
@@ -7089,7 +7089,7 @@ XZ,2015,agricultural energy use,biomass,biomass,0
 XZ,2015,agricultural energy use,coal,coal,0.001558825
 XZ,2015,agricultural energy use,district heat,district heat,0
 XZ,2015,agricultural energy use,electricity,electricity,0.000989309
-XZ,2015,agricultural energy use,gas,gas,0.00E+00
+XZ,2015,agricultural energy use,gas,gas,0
 XZ,2015,agricultural energy use,hydrogen,hydrogen,0
 XZ,2015,agricultural energy use,liquid,liquid,0.001676994
 XZ,2015,chemical energy use,biomass,biomass,0
@@ -7097,27 +7097,27 @@ XZ,2015,chemical energy use,coal,coal,0
 XZ,2015,chemical energy use,coal,coal CCS,0
 XZ,2015,chemical energy use,district heat,district heat,0
 XZ,2015,chemical energy use,electricity,electricity,0
-XZ,2015,chemical energy use,gas,gas,0.00E+00
+XZ,2015,chemical energy use,gas,gas,0
 XZ,2015,chemical energy use,gas,gas CCS,0
 XZ,2015,chemical energy use,hydrogen,hydrogen,0
 XZ,2015,chemical energy use,liquid,liquid,0
 XZ,2015,chemical energy use,liquid,liquid CCS,0
 XZ,2015,chemical feedstocks,coal,coal,0
-XZ,2015,chemical feedstocks,gas,gas,0.00E+00
+XZ,2015,chemical feedstocks,gas,gas,0
 XZ,2015,chemical feedstocks,liquid,liquid,0
 XZ,2015,chemical,chemical,chemical,0
 XZ,2015,coke,coke,coke,0
 XZ,2015,coke,coke,coke CCS,0
 XZ,2015,construction,construction,construction,0.000723965
 XZ,2015,construction energy use,biomass,biomass,0
-XZ,2015,construction energy use,coal,coal,9.08E-05
+XZ,2015,construction energy use,coal,coal,0.0000908
 XZ,2015,construction energy use,district heat,district heat,0
 XZ,2015,construction energy use,electricity,electricity,0.00011025
-XZ,2015,construction energy use,gas,gas,0.00E+00
+XZ,2015,construction energy use,gas,gas,0
 XZ,2015,construction energy use,hydrogen,hydrogen,0
 XZ,2015,construction energy use,liquid,liquid,0.000522915
 XZ,2015,construction feedstocks,coal,coal,0
-XZ,2015,construction feedstocks,gas,gas,0.00E+00
+XZ,2015,construction feedstocks,gas,gas,0
 XZ,2015,construction feedstocks,liquid,liquid,0
 XZ,2015,iron and steel,BLASTFUR,Biomass-based,0
 XZ,2015,iron and steel,BLASTFUR,BLASTFUR,0
@@ -7130,7 +7130,7 @@ XZ,2015,mining energy use,biomass,biomass,0
 XZ,2015,mining energy use,coal,coal,0.000925394
 XZ,2015,mining energy use,district heat,district heat,0
 XZ,2015,mining energy use,electricity,electricity,0.000517739
-XZ,2015,mining energy use,gas,gas,0.00E+00
+XZ,2015,mining energy use,gas,gas,0
 XZ,2015,mining energy use,hydrogen,hydrogen,0
 XZ,2015,mining energy use,liquid,liquid,0.000182271
 XZ,2021,coke,coke,coke CCS,0
@@ -7287,7 +7287,7 @@ YN,2010,agricultural energy use,biomass,biomass,0
 YN,2010,agricultural energy use,coal,coal,0.00800288
 YN,2010,agricultural energy use,district heat,district heat,0
 YN,2010,agricultural energy use,electricity,electricity,0.007113351
-YN,2010,agricultural energy use,gas,gas,8.97E-06
+YN,2010,agricultural energy use,gas,gas,0.00000897
 YN,2010,agricultural energy use,hydrogen,hydrogen,0
 YN,2010,agricultural energy use,liquid,liquid,0.002699802
 YN,2010,chemical energy use,biomass,biomass,0
@@ -7310,8 +7310,8 @@ YN,2010,construction,construction,construction,0.00765032
 YN,2010,construction energy use,biomass,biomass,0
 YN,2010,construction energy use,coal,coal,0.002345028
 YN,2010,construction energy use,district heat,district heat,0
-YN,2010,construction energy use,electricity,electricity,0.003220173
-YN,2010,construction energy use,gas,gas,1.91E-05
+YN,2010,construction energy use,electricity,electricity,0.003220172
+YN,2010,construction energy use,gas,gas,0.0000191
 YN,2010,construction energy use,hydrogen,hydrogen,0
 YN,2010,construction energy use,liquid,liquid,0.00206602
 YN,2010,construction feedstocks,coal,coal,0
@@ -7335,7 +7335,7 @@ YN,2015,agricultural energy use,biomass,biomass,0
 YN,2015,agricultural energy use,coal,coal,0.009657123
 YN,2015,agricultural energy use,district heat,district heat,0
 YN,2015,agricultural energy use,electricity,electricity,0.001961245
-YN,2015,agricultural energy use,gas,gas,4.43E-05
+YN,2015,agricultural energy use,gas,gas,0.0000443
 YN,2015,agricultural energy use,hydrogen,hydrogen,0
 YN,2015,agricultural energy use,liquid,liquid,0.002249579
 YN,2015,chemical energy use,biomass,biomass,0
@@ -7351,7 +7351,7 @@ YN,2015,chemical energy use,liquid,liquid CCS,0
 YN,2015,chemical feedstocks,coal,coal,0.050932339
 YN,2015,chemical feedstocks,gas,gas,0
 YN,2015,chemical feedstocks,liquid,liquid,0
-YN,2015,chemical,chemical,chemical,0.089718053
+YN,2015,chemical,chemical,chemical,0.062802637
 YN,2015,coke,coke,coke,11.4981
 YN,2015,coke,coke,coke CCS,0
 YN,2015,construction,construction,construction,0.013890538
@@ -7359,7 +7359,7 @@ YN,2015,construction energy use,biomass,biomass,0
 YN,2015,construction energy use,coal,coal,0.00231769
 YN,2015,construction energy use,district heat,district heat,0
 YN,2015,construction energy use,electricity,electricity,0.000899951
-YN,2015,construction energy use,gas,gas,6.90E-05
+YN,2015,construction energy use,gas,gas,0.000069
 YN,2015,construction energy use,hydrogen,hydrogen,0
 YN,2015,construction energy use,liquid,liquid,0.010603897
 YN,2015,construction feedstocks,coal,coal,0
@@ -7552,7 +7552,7 @@ ZJ,2010,chemical feedstocks,liquid,liquid,0
 ZJ,2010,chemical,chemical,chemical,0.02686051
 ZJ,2010,coke,coke,coke,1.58
 ZJ,2010,coke,coke,coke CCS,0
-ZJ,2010,construction,construction,construction,0.067330573
+ZJ,2010,construction,construction,construction,0.067330574
 ZJ,2010,construction energy use,biomass,biomass,0
 ZJ,2010,construction energy use,coal,coal,0.012876538
 ZJ,2010,construction energy use,district heat,district heat,0
@@ -7581,7 +7581,7 @@ ZJ,2015,agricultural energy use,biomass,biomass,0
 ZJ,2015,agricultural energy use,coal,coal,0.005797884
 ZJ,2015,agricultural energy use,district heat,district heat,0
 ZJ,2015,agricultural energy use,electricity,electricity,0.003679626
-ZJ,2015,agricultural energy use,gas,gas,2.66E-05
+ZJ,2015,agricultural energy use,gas,gas,0.0000266
 ZJ,2015,agricultural energy use,hydrogen,hydrogen,0
 ZJ,2015,agricultural energy use,liquid,liquid,0.002436749
 ZJ,2015,chemical energy use,biomass,biomass,0
@@ -7597,7 +7597,7 @@ ZJ,2015,chemical energy use,liquid,liquid CCS,0
 ZJ,2015,chemical feedstocks,coal,coal,0.011279757
 ZJ,2015,chemical feedstocks,gas,gas,0
 ZJ,2015,chemical feedstocks,liquid,liquid,0
-ZJ,2015,chemical,chemical,chemical,0.075478283
+ZJ,2015,chemical,chemical,chemical,0.052834798
 ZJ,2015,coke,coke,coke,2.9388
 ZJ,2015,coke,coke,coke CCS,0
 ZJ,2015,construction,construction,construction,0.074308536
@@ -7744,7 +7744,7 @@ AH,2021,chemical energy use,liquid,liquid CCS,0
 AH,2021,chemical feedstocks,coal,coal,0.041457595
 AH,2021,chemical feedstocks,gas,gas,0
 AH,2021,chemical feedstocks,liquid,liquid,0
-AH,2021,chemical,chemical,chemical,0.098377566
+AH,2021,chemical,chemical,chemical,0.068864297
 AH,2021,construction,construction,construction,0.028007416
 AH,2021,construction energy use,biomass,biomass,0
 AH,2021,construction energy use,coal,coal,0.003501362
@@ -7767,7 +7767,7 @@ BJ,2021,agricultural energy use,biomass,biomass,0
 BJ,2021,agricultural energy use,coal,coal,0.000469929
 BJ,2021,agricultural energy use,district heat,district heat,0
 BJ,2021,agricultural energy use,electricity,electricity,0.00029824
-BJ,2021,agricultural energy use,gas,gas,2.16E-06
+BJ,2021,agricultural energy use,gas,gas,0.00000216
 BJ,2021,agricultural energy use,hydrogen,hydrogen,0
 BJ,2021,agricultural energy use,liquid,liquid,0.000197503
 BJ,2021,chemical energy use,biomass,biomass,0
@@ -7780,16 +7780,16 @@ BJ,2021,chemical energy use,gas,gas CCS,0
 BJ,2021,chemical energy use,hydrogen,hydrogen,0
 BJ,2021,chemical energy use,liquid,liquid,0.002852342
 BJ,2021,chemical energy use,liquid,liquid CCS,0
-BJ,2021,chemical feedstocks,coal,coal,1.51E-06
+BJ,2021,chemical feedstocks,coal,coal,0.00000151
 BJ,2021,chemical feedstocks,gas,gas,0
 BJ,2021,chemical feedstocks,liquid,liquid,0
-BJ,2021,chemical,chemical,chemical,0.032444004
+BJ,2021,chemical,chemical,chemical,0.022710803
 BJ,2021,construction,construction,construction,0.013381019
 BJ,2021,construction energy use,biomass,biomass,0
 BJ,2021,construction energy use,coal,coal,0.001672835
 BJ,2021,construction energy use,district heat,district heat,0
 BJ,2021,construction energy use,electricity,electricity,0.002029865
-BJ,2021,construction energy use,gas,gas,4.98E-05
+BJ,2021,construction energy use,gas,gas,0.0000498
 BJ,2021,construction energy use,hydrogen,hydrogen,0
 BJ,2021,construction energy use,liquid,liquid,0.009628519
 BJ,2021,construction feedstocks,coal,coal,0
@@ -7806,7 +7806,7 @@ CQ,2021,agricultural energy use,biomass,biomass,0
 CQ,2021,agricultural energy use,coal,coal,0.002643842
 CQ,2021,agricultural energy use,district heat,district heat,0
 CQ,2021,agricultural energy use,electricity,electricity,0.001677914
-CQ,2021,agricultural energy use,gas,gas,1.21E-05
+CQ,2021,agricultural energy use,gas,gas,0.0000121
 CQ,2021,agricultural energy use,hydrogen,hydrogen,0
 CQ,2021,agricultural energy use,liquid,liquid,0.001111161
 CQ,2021,chemical energy use,biomass,biomass,0
@@ -7822,13 +7822,13 @@ CQ,2021,chemical energy use,liquid,liquid CCS,0
 CQ,2021,chemical feedstocks,coal,coal,0
 CQ,2021,chemical feedstocks,gas,gas,0
 CQ,2021,chemical feedstocks,liquid,liquid,0
-CQ,2021,chemical,chemical,chemical,0.091670159
+CQ,2021,chemical,chemical,chemical,0.064169111
 CQ,2021,construction,construction,construction,0.008336172
 CQ,2021,construction energy use,biomass,biomass,0
 CQ,2021,construction energy use,coal,coal,0.001855873
 CQ,2021,construction energy use,district heat,district heat,0
 CQ,2021,construction energy use,electricity,electricity,0.002251969
-CQ,2021,construction energy use,gas,gas,5.52E-05
+CQ,2021,construction energy use,gas,gas,0.0000552
 CQ,2021,construction energy use,hydrogen,hydrogen,0
 CQ,2021,construction energy use,liquid,liquid,0.00417313
 CQ,2021,construction feedstocks,coal,coal,0
@@ -7845,7 +7845,7 @@ FJ,2021,agricultural energy use,biomass,biomass,0
 FJ,2021,agricultural energy use,coal,coal,0.003306017
 FJ,2021,agricultural energy use,district heat,district heat,0
 FJ,2021,agricultural energy use,electricity,electricity,0.002098163
-FJ,2021,agricultural energy use,gas,gas,1.52E-05
+FJ,2021,agricultural energy use,gas,gas,0.0000152
 FJ,2021,agricultural energy use,hydrogen,hydrogen,0
 FJ,2021,agricultural energy use,liquid,liquid,0.003556634
 FJ,2021,chemical energy use,biomass,biomass,0
@@ -7861,7 +7861,7 @@ FJ,2021,chemical energy use,liquid,liquid CCS,0
 FJ,2021,chemical feedstocks,coal,coal,0.023117202
 FJ,2021,chemical feedstocks,gas,gas,0
 FJ,2021,chemical feedstocks,liquid,liquid,0
-FJ,2021,chemical,chemical,chemical,0.066645187
+FJ,2021,chemical,chemical,chemical,0.046651631
 FJ,2021,construction,construction,construction,0.036152558
 FJ,2021,construction energy use,biomass,biomass,0
 FJ,2021,construction energy use,coal,coal,0.004519632
@@ -7884,7 +7884,7 @@ GD,2021,agricultural energy use,biomass,biomass,0
 GD,2021,agricultural energy use,coal,coal,0.006588498
 GD,2021,agricultural energy use,district heat,district heat,0
 GD,2021,agricultural energy use,electricity,electricity,0.00418139
-GD,2021,agricultural energy use,gas,gas,3.03E-05
+GD,2021,agricultural energy use,gas,gas,0.0000303
 GD,2021,agricultural energy use,hydrogen,hydrogen,0
 GD,2021,agricultural energy use,liquid,liquid,0.007087948
 GD,2021,chemical energy use,biomass,biomass,0
@@ -7900,7 +7900,7 @@ GD,2021,chemical energy use,liquid,liquid CCS,0
 GD,2021,chemical feedstocks,coal,coal,0.016729195
 GD,2021,chemical feedstocks,gas,gas,0
 GD,2021,chemical feedstocks,liquid,liquid,0
-GD,2021,chemical,chemical,chemical,0.10284307
+GD,2021,chemical,chemical,chemical,0.071990149
 GD,2021,construction,construction,construction,0.058417853
 GD,2021,construction energy use,biomass,biomass,0
 GD,2021,construction energy use,coal,coal,0.00730314
@@ -7923,7 +7923,7 @@ GS,2021,agricultural energy use,biomass,biomass,0
 GS,2021,agricultural energy use,coal,coal,0.006099586
 GS,2021,agricultural energy use,district heat,district heat,0
 GS,2021,agricultural energy use,electricity,electricity,0.003871101
-GS,2021,agricultural energy use,gas,gas,2.00E-05
+GS,2021,agricultural energy use,gas,gas,0.00002
 GS,2021,agricultural energy use,hydrogen,hydrogen,0
 GS,2021,agricultural energy use,liquid,liquid,0.002833776
 GS,2021,chemical energy use,biomass,biomass,0
@@ -7939,13 +7939,13 @@ GS,2021,chemical energy use,liquid,liquid CCS,0
 GS,2021,chemical feedstocks,coal,coal,0.02562879
 GS,2021,chemical feedstocks,gas,gas,0
 GS,2021,chemical feedstocks,liquid,liquid,0
-GS,2021,chemical,chemical,chemical,0.108736579
+GS,2021,chemical,chemical,chemical,0.076115605
 GS,2021,construction,construction,construction,0.009313672
 GS,2021,construction energy use,biomass,biomass,0
 GS,2021,construction energy use,coal,coal,0.001627536
 GS,2021,construction energy use,district heat,district heat,0
 GS,2021,construction energy use,electricity,electricity,0.001974898
-GS,2021,construction energy use,gas,gas,3.45E-05
+GS,2021,construction energy use,gas,gas,0.0000345
 GS,2021,construction energy use,hydrogen,hydrogen,0
 GS,2021,construction energy use,liquid,liquid,0.005676738
 GS,2021,construction feedstocks,coal,coal,0
@@ -7962,7 +7962,7 @@ GX,2021,agricultural energy use,biomass,biomass,0
 GX,2021,agricultural energy use,coal,coal,0.013763448
 GX,2021,agricultural energy use,district heat,district heat,0
 GX,2021,agricultural energy use,electricity,electricity,0.00873497
-GX,2021,agricultural energy use,gas,gas,5.72E-05
+GX,2021,agricultural energy use,gas,gas,0.0000572
 GX,2021,agricultural energy use,hydrogen,hydrogen,0
 GX,2021,agricultural energy use,liquid,liquid,0.013056162
 GX,2021,chemical energy use,biomass,biomass,0
@@ -7978,13 +7978,13 @@ GX,2021,chemical energy use,liquid,liquid CCS,0
 GX,2021,chemical feedstocks,coal,coal,0.021100841
 GX,2021,chemical feedstocks,gas,gas,0
 GX,2021,chemical feedstocks,liquid,liquid,0
-GX,2021,chemical,chemical,chemical,0.04936476
+GX,2021,chemical,chemical,chemical,0.034555333
 GX,2021,construction,construction,construction,0.009093163
 GX,2021,construction energy use,biomass,biomass,0
 GX,2021,construction energy use,coal,coal,0.001242971
 GX,2021,construction energy use,district heat,district heat,0
 GX,2021,construction energy use,electricity,electricity,0.001508256
-GX,2021,construction energy use,gas,gas,3.35E-05
+GX,2021,construction energy use,gas,gas,0.0000335
 GX,2021,construction energy use,hydrogen,hydrogen,0
 GX,2021,construction energy use,liquid,liquid,0.006308436
 GX,2021,construction feedstocks,coal,coal,0
@@ -8001,7 +8001,7 @@ GZ,2021,agricultural energy use,biomass,biomass,0
 GZ,2021,agricultural energy use,coal,coal,0.005304083
 GZ,2021,agricultural energy use,district heat,district heat,0
 GZ,2021,agricultural energy use,electricity,electricity,0.003366236
-GZ,2021,agricultural energy use,gas,gas,1.22E-05
+GZ,2021,agricultural energy use,gas,gas,0.0000122
 GZ,2021,agricultural energy use,hydrogen,hydrogen,0
 GZ,2021,agricultural energy use,liquid,liquid,0.00480994
 GZ,2021,chemical energy use,biomass,biomass,0
@@ -8017,13 +8017,13 @@ GZ,2021,chemical energy use,liquid,liquid CCS,0
 GZ,2021,chemical feedstocks,coal,coal,0.0529244
 GZ,2021,chemical feedstocks,gas,gas,0
 GZ,2021,chemical feedstocks,liquid,liquid,0
-GZ,2021,chemical,chemical,chemical,0.064596191
+GZ,2021,chemical,chemical,chemical,0.045217334
 GZ,2021,construction,construction,construction,0.006853205
 GZ,2021,construction energy use,biomass,biomass,0
 GZ,2021,construction energy use,coal,coal,0.000967955
 GZ,2021,construction energy use,district heat,district heat,0
 GZ,2021,construction energy use,electricity,electricity,0.001174543
-GZ,2021,construction energy use,gas,gas,1.44E-05
+GZ,2021,construction energy use,gas,gas,0.0000144
 GZ,2021,construction energy use,hydrogen,hydrogen,0
 GZ,2021,construction energy use,liquid,liquid,0.004696308
 GZ,2021,construction feedstocks,coal,coal,0
@@ -8056,7 +8056,7 @@ HA,2021,chemical energy use,liquid,liquid CCS,0
 HA,2021,chemical feedstocks,coal,coal,0.13944744
 HA,2021,chemical feedstocks,gas,gas,0
 HA,2021,chemical feedstocks,liquid,liquid,0
-HA,2021,chemical,chemical,chemical,0.222648454
+HA,2021,chemical,chemical,chemical,0.155853918
 HA,2021,construction,construction,construction,0.061349421
 HA,2021,construction energy use,biomass,biomass,0
 HA,2021,construction energy use,coal,coal,0.014510126
@@ -8079,7 +8079,7 @@ HB,2021,agricultural energy use,biomass,biomass,0
 HB,2021,agricultural energy use,coal,coal,0.01266354
 HB,2021,agricultural energy use,district heat,district heat,0
 HB,2021,agricultural energy use,electricity,electricity,0.008036914
-HB,2021,agricultural energy use,gas,gas,5.81E-05
+HB,2021,agricultural energy use,gas,gas,0.0000581
 HB,2021,agricultural energy use,hydrogen,hydrogen,0
 HB,2021,agricultural energy use,liquid,liquid,0.013623516
 HB,2021,chemical energy use,biomass,biomass,0
@@ -8095,7 +8095,7 @@ HB,2021,chemical energy use,liquid,liquid CCS,0
 HB,2021,chemical feedstocks,coal,coal,0.09139348
 HB,2021,chemical feedstocks,gas,gas,0
 HB,2021,chemical feedstocks,liquid,liquid,0
-HB,2021,chemical,chemical,chemical,0.106786869
+HB,2021,chemical,chemical,chemical,0.074750809
 HB,2021,construction,construction,construction,0.047101897
 HB,2021,construction energy use,biomass,biomass,0
 HB,2021,construction energy use,coal,coal,0.005888469
@@ -8134,7 +8134,7 @@ HE,2021,chemical energy use,liquid,liquid CCS,0
 HE,2021,chemical feedstocks,coal,coal,0.041667968
 HE,2021,chemical feedstocks,gas,gas,0
 HE,2021,chemical feedstocks,liquid,liquid,0
-HE,2021,chemical,chemical,chemical,0.345033374
+HE,2021,chemical,chemical,chemical,0.241523362
 HE,2021,construction,construction,construction,0.023248498
 HE,2021,construction energy use,biomass,biomass,0
 HE,2021,construction energy use,coal,coal,0.001570481
@@ -8157,7 +8157,7 @@ HI,2021,agricultural energy use,biomass,biomass,0
 HI,2021,agricultural energy use,coal,coal,0.000994041
 HI,2021,agricultural energy use,district heat,district heat,0
 HI,2021,agricultural energy use,electricity,electricity,0.001199085
-HI,2021,agricultural energy use,gas,gas,8.67E-06
+HI,2021,agricultural energy use,gas,gas,0.00000867
 HI,2021,agricultural energy use,hydrogen,hydrogen,0
 HI,2021,agricultural energy use,liquid,liquid,0.002032591
 HI,2021,chemical energy use,biomass,biomass,0
@@ -8173,13 +8173,13 @@ HI,2021,chemical energy use,liquid,liquid CCS,0
 HI,2021,chemical feedstocks,coal,coal,0
 HI,2021,chemical feedstocks,gas,gas,0
 HI,2021,chemical feedstocks,liquid,liquid,0
-HI,2021,chemical,chemical,chemical,0.032327123
+HI,2021,chemical,chemical,chemical,0.022628986
 HI,2021,construction,construction,construction,0.000961563
 HI,2021,construction energy use,biomass,biomass,0
-HI,2021,construction energy use,coal,coal,6.72E-05
+HI,2021,construction energy use,coal,coal,0.0000672
 HI,2021,construction energy use,district heat,district heat,0
 HI,2021,construction energy use,electricity,electricity,0.000155057
-HI,2021,construction energy use,gas,gas,3.80E-06
+HI,2021,construction energy use,gas,gas,0.0000038
 HI,2021,construction energy use,hydrogen,hydrogen,0
 HI,2021,construction energy use,liquid,liquid,0.000735505
 HI,2021,construction feedstocks,coal,coal,0
@@ -8212,13 +8212,13 @@ HL,2021,chemical energy use,liquid,liquid CCS,0
 HL,2021,chemical feedstocks,coal,coal,0.002890474
 HL,2021,chemical feedstocks,gas,gas,0
 HL,2021,chemical feedstocks,liquid,liquid,0
-HL,2021,chemical,chemical,chemical,0.106731414
+HL,2021,chemical,chemical,chemical,0.07471199
 HL,2021,construction,construction,construction,0.011831378
 HL,2021,construction energy use,biomass,biomass,0
 HL,2021,construction energy use,coal,coal,0.00147911
 HL,2021,construction energy use,district heat,district heat,0
 HL,2021,construction energy use,electricity,electricity,0.001794794
-HL,2021,construction energy use,gas,gas,4.40E-05
+HL,2021,construction energy use,gas,gas,0.000044
 HL,2021,construction energy use,hydrogen,hydrogen,0
 HL,2021,construction energy use,liquid,liquid,0.008513474
 HL,2021,construction feedstocks,coal,coal,0
@@ -8235,7 +8235,7 @@ HN,2021,agricultural energy use,biomass,biomass,0
 HN,2021,agricultural energy use,coal,coal,0.018626691
 HN,2021,agricultural energy use,district heat,district heat,0
 HN,2021,agricultural energy use,electricity,electricity,0.011821428
-HN,2021,agricultural energy use,gas,gas,8.23E-05
+HN,2021,agricultural energy use,gas,gas,0.0000823
 HN,2021,agricultural energy use,hydrogen,hydrogen,0
 HN,2021,agricultural energy use,liquid,liquid,0.015681788
 HN,2021,chemical energy use,biomass,biomass,0
@@ -8251,7 +8251,7 @@ HN,2021,chemical energy use,liquid,liquid CCS,0
 HN,2021,chemical feedstocks,coal,coal,0.026882503
 HN,2021,chemical feedstocks,gas,gas,0
 HN,2021,chemical feedstocks,liquid,liquid,0
-HN,2021,chemical,chemical,chemical,0.055140243
+HN,2021,chemical,chemical,chemical,0.03859817
 HN,2021,construction,construction,construction,0.033306245
 HN,2021,construction energy use,biomass,biomass,0
 HN,2021,construction energy use,coal,coal,0.004936871
@@ -8274,7 +8274,7 @@ JL,2021,agricultural energy use,biomass,biomass,0
 JL,2021,agricultural energy use,coal,coal,0.011539512
 JL,2021,agricultural energy use,district heat,district heat,0
 JL,2021,agricultural energy use,electricity,electricity,0.00732355
-JL,2021,agricultural energy use,gas,gas,5.30E-05
+JL,2021,agricultural energy use,gas,gas,0.000053
 JL,2021,agricultural energy use,hydrogen,hydrogen,0
 JL,2021,agricultural energy use,liquid,liquid,0.012414281
 JL,2021,chemical energy use,biomass,biomass,0
@@ -8290,13 +8290,13 @@ JL,2021,chemical energy use,liquid,liquid CCS,0
 JL,2021,chemical feedstocks,coal,coal,0.014141075
 JL,2021,chemical feedstocks,gas,gas,0
 JL,2021,chemical feedstocks,liquid,liquid,0
-JL,2021,chemical,chemical,chemical,0.065075345
+JL,2021,chemical,chemical,chemical,0.045552742
 JL,2021,construction,construction,construction,0.008361454
 JL,2021,construction energy use,biomass,biomass,0
 JL,2021,construction energy use,coal,coal,0.001045314
 JL,2021,construction energy use,district heat,district heat,0
 JL,2021,construction energy use,electricity,electricity,0.001268412
-JL,2021,construction energy use,gas,gas,3.11E-05
+JL,2021,construction energy use,gas,gas,0.0000311
 JL,2021,construction energy use,hydrogen,hydrogen,0
 JL,2021,construction energy use,liquid,liquid,0.006016627
 JL,2021,construction feedstocks,coal,coal,0
@@ -8313,7 +8313,7 @@ JS,2021,agricultural energy use,biomass,biomass,0
 JS,2021,agricultural energy use,coal,coal,0.01429702
 JS,2021,agricultural energy use,district heat,district heat,0
 JS,2021,agricultural energy use,electricity,electricity,0.009073601
-JS,2021,agricultural energy use,gas,gas,6.56E-05
+JS,2021,agricultural energy use,gas,gas,0.0000656
 JS,2021,agricultural energy use,hydrogen,hydrogen,0
 JS,2021,agricultural energy use,liquid,liquid,0.009741719
 JS,2021,chemical energy use,biomass,biomass,0
@@ -8329,7 +8329,7 @@ JS,2021,chemical energy use,liquid,liquid CCS,0
 JS,2021,chemical feedstocks,coal,coal,0.051919734
 JS,2021,chemical feedstocks,gas,gas,0
 JS,2021,chemical feedstocks,liquid,liquid,0
-JS,2021,chemical,chemical,chemical,0.249738263
+JS,2021,chemical,chemical,chemical,0.174816784
 JS,2021,construction,construction,construction,0.075876241
 JS,2021,construction energy use,biomass,biomass,0
 JS,2021,construction energy use,coal,coal,0.017707145
@@ -8352,7 +8352,7 @@ JX,2021,agricultural energy use,biomass,biomass,0
 JX,2021,agricultural energy use,coal,coal,0.016020837
 JX,2021,agricultural energy use,district heat,district heat,0
 JX,2021,agricultural energy use,electricity,electricity,0.010167623
-JX,2021,agricultural energy use,gas,gas,7.36E-05
+JX,2021,agricultural energy use,gas,gas,0.0000736
 JX,2021,agricultural energy use,hydrogen,hydrogen,0
 JX,2021,agricultural energy use,liquid,liquid,0.013974819
 JX,2021,chemical energy use,biomass,biomass,0
@@ -8368,13 +8368,13 @@ JX,2021,chemical energy use,liquid,liquid CCS,0
 JX,2021,chemical feedstocks,coal,coal,0.023697768
 JX,2021,chemical feedstocks,gas,gas,0
 JX,2021,chemical feedstocks,liquid,liquid,0
-JX,2021,chemical,chemical,chemical,0.067013741
+JX,2021,chemical,chemical,chemical,0.046909619
 JX,2021,construction,construction,construction,0.016186643
 JX,2021,construction energy use,biomass,biomass,0
 JX,2021,construction energy use,coal,coal,0.00234245
 JX,2021,construction energy use,district heat,district heat,0
 JX,2021,construction energy use,electricity,electricity,0.002842394
-JX,2021,construction energy use,gas,gas,6.97E-05
+JX,2021,construction energy use,gas,gas,0.0000697
 JX,2021,construction energy use,hydrogen,hydrogen,0
 JX,2021,construction energy use,liquid,liquid,0.010932099
 JX,2021,construction feedstocks,coal,coal,0
@@ -8391,7 +8391,7 @@ LN,2021,agricultural energy use,biomass,biomass,0
 LN,2021,agricultural energy use,coal,coal,0.006548702
 LN,2021,agricultural energy use,district heat,district heat,0
 LN,2021,agricultural energy use,electricity,electricity,0.004156133
-LN,2021,agricultural energy use,gas,gas,3.01E-05
+LN,2021,agricultural energy use,gas,gas,0.0000301
 LN,2021,agricultural energy use,hydrogen,hydrogen,0
 LN,2021,agricultural energy use,liquid,liquid,0.007045134
 LN,2021,chemical energy use,biomass,biomass,0
@@ -8407,7 +8407,7 @@ LN,2021,chemical energy use,liquid,liquid CCS,0
 LN,2021,chemical feedstocks,coal,coal,0.014168457
 LN,2021,chemical feedstocks,gas,gas,0
 LN,2021,chemical feedstocks,liquid,liquid,0
-LN,2021,chemical,chemical,chemical,0.257550365
+LN,2021,chemical,chemical,chemical,0.180285256
 LN,2021,construction,construction,construction,0.055243787
 LN,2021,construction energy use,biomass,biomass,0
 LN,2021,construction energy use,coal,coal,0.006906332
@@ -8430,7 +8430,7 @@ NM,2021,agricultural energy use,biomass,biomass,0
 NM,2021,agricultural energy use,coal,coal,0.01243699
 NM,2021,agricultural energy use,district heat,district heat,0
 NM,2021,agricultural energy use,electricity,electricity,0.007893134
-NM,2021,agricultural energy use,gas,gas,2.35E-05
+NM,2021,agricultural energy use,gas,gas,0.0000235
 NM,2021,agricultural energy use,hydrogen,hydrogen,0
 NM,2021,agricultural energy use,liquid,liquid,0.003408324
 NM,2021,chemical energy use,biomass,biomass,0
@@ -8446,13 +8446,13 @@ NM,2021,chemical energy use,liquid,liquid CCS,0
 NM,2021,chemical feedstocks,coal,coal,0.299911935
 NM,2021,chemical feedstocks,gas,gas,0
 NM,2021,chemical feedstocks,liquid,liquid,0
-NM,2021,chemical,chemical,chemical,0.345476835
+NM,2021,chemical,chemical,chemical,0.241833785
 NM,2021,construction,construction,construction,0.003106095
 NM,2021,construction energy use,biomass,biomass,0
 NM,2021,construction energy use,coal,coal,0.00084133
 NM,2021,construction energy use,district heat,district heat,0
 NM,2021,construction energy use,electricity,electricity,0.001020894
-NM,2021,construction energy use,gas,gas,1.03E-05
+NM,2021,construction energy use,gas,gas,0.0000103
 NM,2021,construction energy use,hydrogen,hydrogen,0
 NM,2021,construction energy use,liquid,liquid,0.001233571
 NM,2021,construction feedstocks,coal,coal,0
@@ -8469,7 +8469,7 @@ NX,2021,agricultural energy use,biomass,biomass,0
 NX,2021,agricultural energy use,coal,coal,0.001699371
 NX,2021,agricultural energy use,district heat,district heat,0
 NX,2021,agricultural energy use,electricity,electricity,0.001279804
-NX,2021,agricultural energy use,gas,gas,2.21E-06
+NX,2021,agricultural energy use,gas,gas,0.00000221
 NX,2021,agricultural energy use,hydrogen,hydrogen,0
 NX,2021,agricultural energy use,liquid,liquid,0.000205283
 NX,2021,chemical energy use,biomass,biomass,0
@@ -8485,13 +8485,13 @@ NX,2021,chemical energy use,liquid,liquid CCS,0
 NX,2021,chemical feedstocks,coal,coal,0.071150609
 NX,2021,chemical feedstocks,gas,gas,0
 NX,2021,chemical feedstocks,liquid,liquid,0
-NX,2021,chemical,chemical,chemical,0.093457631
+NX,2021,chemical,chemical,chemical,0.065420342
 NX,2021,construction,construction,construction,0.000707667
 NX,2021,construction energy use,biomass,biomass,0
 NX,2021,construction energy use,coal,coal,0.000228674
 NX,2021,construction energy use,district heat,district heat,0
 NX,2021,construction energy use,electricity,electricity,0.00032927
-NX,2021,construction energy use,gas,gas,1.93E-06
+NX,2021,construction energy use,gas,gas,0.00000193
 NX,2021,construction energy use,hydrogen,hydrogen,0
 NX,2021,construction energy use,liquid,liquid,0.000147793
 NX,2021,construction feedstocks,coal,coal,0
@@ -8503,18 +8503,18 @@ NX,2021,mining energy use,district heat,district heat,0
 NX,2021,mining energy use,electricity,electricity,0.001546405
 NX,2021,mining energy use,gas,gas,0.000130326
 NX,2021,mining energy use,hydrogen,hydrogen,0
-NX,2021,mining energy use,liquid,liquid,5.15E-05
+NX,2021,mining energy use,liquid,liquid,0.0000515
 QH,2021,agricultural energy use,biomass,biomass,0
 QH,2021,agricultural energy use,coal,coal,0.001779834
 QH,2021,agricultural energy use,district heat,district heat,0
 QH,2021,agricultural energy use,electricity,electricity,0.001129571
-QH,2021,agricultural energy use,gas,gas,8.15E-06
+QH,2021,agricultural energy use,gas,gas,0.00000815
 QH,2021,agricultural energy use,hydrogen,hydrogen,0
 QH,2021,agricultural energy use,liquid,liquid,0.000899065
 QH,2021,chemical energy use,biomass,biomass,0
 QH,2021,chemical energy use,coal,coal,0.011207135
 QH,2021,chemical energy use,coal,coal CCS,0
-QH,2021,chemical energy use,district heat,district heat,8.12E-05
+QH,2021,chemical energy use,district heat,district heat,0.0000812
 QH,2021,chemical energy use,electricity,electricity,0
 QH,2021,chemical energy use,gas,gas,0.000895091
 QH,2021,chemical energy use,gas,gas CCS,0
@@ -8524,13 +8524,13 @@ QH,2021,chemical energy use,liquid,liquid CCS,0
 QH,2021,chemical feedstocks,coal,coal,0.00859893
 QH,2021,chemical feedstocks,gas,gas,0
 QH,2021,chemical feedstocks,liquid,liquid,0
-QH,2021,chemical,chemical,chemical,0.01915863
+QH,2021,chemical,chemical,chemical,0.013411075
 QH,2021,construction,construction,construction,0.002130145
 QH,2021,construction energy use,biomass,biomass,0
 QH,2021,construction energy use,coal,coal,0.000430701
 QH,2021,construction energy use,district heat,district heat,0
 QH,2021,construction energy use,electricity,electricity,0.000522625
-QH,2021,construction energy use,gas,gas,1.28E-05
+QH,2021,construction energy use,gas,gas,0.0000128
 QH,2021,construction energy use,hydrogen,hydrogen,0
 QH,2021,construction energy use,liquid,liquid,0.001164019
 QH,2021,construction feedstocks,coal,coal,0
@@ -8547,7 +8547,7 @@ SC,2021,agricultural energy use,biomass,biomass,0
 SC,2021,agricultural energy use,coal,coal,0.011373299
 SC,2021,agricultural energy use,district heat,district heat,0
 SC,2021,agricultural energy use,electricity,electricity,0.007218063
-SC,2021,agricultural energy use,gas,gas,5.22E-05
+SC,2021,agricultural energy use,gas,gas,0.0000522
 SC,2021,agricultural energy use,hydrogen,hydrogen,0
 SC,2021,agricultural energy use,liquid,liquid,0.012235468
 SC,2021,chemical energy use,biomass,biomass,0
@@ -8563,7 +8563,7 @@ SC,2021,chemical energy use,liquid,liquid CCS,0
 SC,2021,chemical feedstocks,coal,coal,0.011125387
 SC,2021,chemical feedstocks,gas,gas,0
 SC,2021,chemical feedstocks,liquid,liquid,0
-SC,2021,chemical,chemical,chemical,0.168468318
+SC,2021,chemical,chemical,chemical,0.117927823
 SC,2021,construction,construction,construction,0.036294253
 SC,2021,construction energy use,biomass,biomass,0
 SC,2021,construction energy use,coal,coal,0.004537346
@@ -8586,7 +8586,7 @@ SD,2021,agricultural energy use,biomass,biomass,0
 SD,2021,agricultural energy use,coal,coal,0.039433285
 SD,2021,agricultural energy use,district heat,district heat,0
 SD,2021,agricultural energy use,electricity,electricity,0.025026329
-SD,2021,agricultural energy use,gas,gas,8.25E-05
+SD,2021,agricultural energy use,gas,gas,0.0000825
 SD,2021,agricultural energy use,hydrogen,hydrogen,0
 SD,2021,agricultural energy use,liquid,liquid,0.02619814
 SD,2021,chemical energy use,biomass,biomass,0
@@ -8602,7 +8602,7 @@ SD,2021,chemical energy use,liquid,liquid CCS,0
 SD,2021,chemical feedstocks,coal,coal,0.129331383
 SD,2021,chemical feedstocks,gas,gas,0
 SD,2021,chemical feedstocks,liquid,liquid,0
-SD,2021,chemical,chemical,chemical,0.525520114
+SD,2021,chemical,chemical,chemical,0.367864081
 SD,2021,construction,construction,construction,0.044865685
 SD,2021,construction energy use,biomass,biomass,0
 SD,2021,construction energy use,coal,coal,0.007760205
@@ -8625,7 +8625,7 @@ SH,2021,agricultural energy use,biomass,biomass,0
 SH,2021,agricultural energy use,coal,coal,0.000200116
 SH,2021,agricultural energy use,district heat,district heat,0
 SH,2021,agricultural energy use,electricity,electricity,0.000127004
-SH,2021,agricultural energy use,gas,gas,9.19E-07
+SH,2021,agricultural energy use,gas,gas,0.000000919
 SH,2021,agricultural energy use,hydrogen,hydrogen,0
 SH,2021,agricultural energy use,liquid,liquid,0.000215286
 SH,2021,chemical energy use,biomass,biomass,0
@@ -8641,13 +8641,13 @@ SH,2021,chemical energy use,liquid,liquid CCS,0
 SH,2021,chemical feedstocks,coal,coal,0.022081457
 SH,2021,chemical feedstocks,gas,gas,0
 SH,2021,chemical feedstocks,liquid,liquid,0
-SH,2021,chemical,chemical,chemical,0.148121603
+SH,2021,chemical,chemical,chemical,0.103685123
 SH,2021,construction,construction,construction,0.008127233
 SH,2021,construction energy use,biomass,biomass,0
 SH,2021,construction energy use,coal,coal,0.001016024
 SH,2021,construction energy use,district heat,district heat,0
 SH,2021,construction energy use,electricity,electricity,0.001232871
-SH,2021,construction energy use,gas,gas,3.03E-05
+SH,2021,construction energy use,gas,gas,0.0000303
 SH,2021,construction energy use,hydrogen,hydrogen,0
 SH,2021,construction energy use,liquid,liquid,0.005848038
 SH,2021,construction feedstocks,coal,coal,0
@@ -8664,7 +8664,7 @@ SN,2021,agricultural energy use,biomass,biomass,0
 SN,2021,agricultural energy use,coal,coal,0.005156562
 SN,2021,agricultural energy use,district heat,district heat,0
 SN,2021,agricultural energy use,electricity,electricity,0.003609349
-SN,2021,agricultural energy use,gas,gas,2.52E-05
+SN,2021,agricultural energy use,gas,gas,0.0000252
 SN,2021,agricultural energy use,hydrogen,hydrogen,0
 SN,2021,agricultural energy use,liquid,liquid,0.001365195
 SN,2021,chemical energy use,biomass,biomass,0
@@ -8680,13 +8680,13 @@ SN,2021,chemical energy use,liquid,liquid CCS,0
 SN,2021,chemical feedstocks,coal,coal,0.125075481
 SN,2021,chemical feedstocks,gas,gas,0
 SN,2021,chemical feedstocks,liquid,liquid,0
-SN,2021,chemical,chemical,chemical,0.18325072
+SN,2021,chemical,chemical,chemical,0.128275505
 SN,2021,construction,construction,construction,0.010526843
 SN,2021,construction energy use,biomass,biomass,0
 SN,2021,construction energy use,coal,coal,0.002780168
 SN,2021,construction energy use,district heat,district heat,0
 SN,2021,construction energy use,electricity,electricity,0.003720656
-SN,2021,construction energy use,gas,gas,8.80E-05
+SN,2021,construction energy use,gas,gas,0.000088
 SN,2021,construction energy use,hydrogen,hydrogen,0
 SN,2021,construction energy use,liquid,liquid,0.003938019
 SN,2021,construction feedstocks,coal,coal,0
@@ -8703,7 +8703,7 @@ SX,2021,agricultural energy use,biomass,biomass,0
 SX,2021,agricultural energy use,coal,coal,0.008012435
 SX,2021,agricultural energy use,district heat,district heat,0
 SX,2021,agricultural energy use,electricity,electricity,0.005085091
-SX,2021,agricultural energy use,gas,gas,1.73E-05
+SX,2021,agricultural energy use,gas,gas,0.0000173
 SX,2021,agricultural energy use,hydrogen,hydrogen,0
 SX,2021,agricultural energy use,liquid,liquid,0.001397218
 SX,2021,chemical energy use,biomass,biomass,0
@@ -8719,13 +8719,13 @@ SX,2021,chemical energy use,liquid,liquid CCS,0
 SX,2021,chemical feedstocks,coal,coal,0.072687238
 SX,2021,chemical feedstocks,gas,gas,0
 SX,2021,chemical feedstocks,liquid,liquid,0
-SX,2021,chemical,chemical,chemical,0.219521618
+SX,2021,chemical,chemical,chemical,0.153665133
 SX,2021,construction,construction,construction,0.009741726
 SX,2021,construction energy use,biomass,biomass,0
 SX,2021,construction energy use,coal,coal,0.003082445
 SX,2021,construction energy use,district heat,district heat,0
 SX,2021,construction energy use,electricity,electricity,0.003740324
-SX,2021,construction energy use,gas,gas,4.31E-05
+SX,2021,construction energy use,gas,gas,0.0000431
 SX,2021,construction energy use,hydrogen,hydrogen,0
 SX,2021,construction energy use,liquid,liquid,0.002875857
 SX,2021,construction feedstocks,coal,coal,0
@@ -8742,7 +8742,7 @@ TJ,2021,agricultural energy use,biomass,biomass,0
 TJ,2021,agricultural energy use,coal,coal,0.00109784
 TJ,2021,agricultural energy use,district heat,district heat,0
 TJ,2021,agricultural energy use,electricity,electricity,0.000696744
-TJ,2021,agricultural energy use,gas,gas,5.04E-06
+TJ,2021,agricultural energy use,gas,gas,0.00000504
 TJ,2021,agricultural energy use,hydrogen,hydrogen,0
 TJ,2021,agricultural energy use,liquid,liquid,0.001181064
 TJ,2021,chemical energy use,biomass,biomass,0
@@ -8758,13 +8758,13 @@ TJ,2021,chemical energy use,liquid,liquid CCS,0
 TJ,2021,chemical feedstocks,coal,coal,0.011771095
 TJ,2021,chemical feedstocks,gas,gas,0
 TJ,2021,chemical feedstocks,liquid,liquid,0
-TJ,2021,chemical,chemical,chemical,0.074277432
+TJ,2021,chemical,chemical,chemical,0.051994203
 TJ,2021,construction,construction,construction,0.017046221
 TJ,2021,construction energy use,biomass,biomass,0
 TJ,2021,construction energy use,coal,coal,0.002131047
 TJ,2021,construction energy use,district heat,district heat,0
 TJ,2021,construction energy use,electricity,electricity,0.002585873
-TJ,2021,construction energy use,gas,gas,6.34E-05
+TJ,2021,construction energy use,gas,gas,0.0000634
 TJ,2021,construction energy use,hydrogen,hydrogen,0
 TJ,2021,construction energy use,liquid,liquid,0.012265901
 TJ,2021,construction feedstocks,coal,coal,0
@@ -8781,7 +8781,7 @@ XJ,2021,agricultural energy use,biomass,biomass,0
 XJ,2021,agricultural energy use,coal,coal,0.008567269
 XJ,2021,agricultural energy use,district heat,district heat,0
 XJ,2021,agricultural energy use,electricity,electricity,0.005674903
-XJ,2021,agricultural energy use,gas,gas,4.11E-05
+XJ,2021,agricultural energy use,gas,gas,0.0000411
 XJ,2021,agricultural energy use,hydrogen,hydrogen,0
 XJ,2021,agricultural energy use,liquid,liquid,0.004340572
 XJ,2021,chemical energy use,biomass,biomass,0
@@ -8797,13 +8797,13 @@ XJ,2021,chemical energy use,liquid,liquid CCS,0
 XJ,2021,chemical feedstocks,coal,coal,0
 XJ,2021,chemical feedstocks,gas,gas,0
 XJ,2021,chemical feedstocks,liquid,liquid,0
-XJ,2021,chemical,chemical,chemical,0.391529079
+XJ,2021,chemical,chemical,chemical,0.274070356
 XJ,2021,construction,construction,construction,0.005601632
 XJ,2021,construction energy use,biomass,biomass,0
 XJ,2021,construction energy use,coal,coal,0.001012714
 XJ,2021,construction energy use,district heat,district heat,0
 XJ,2021,construction energy use,electricity,electricity,0.001282575
-XJ,2021,construction energy use,gas,gas,3.15E-05
+XJ,2021,construction energy use,gas,gas,0.0000315
 XJ,2021,construction energy use,hydrogen,hydrogen,0
 XJ,2021,construction energy use,liquid,liquid,0.003274843
 XJ,2021,construction feedstocks,coal,coal,0
@@ -8820,7 +8820,7 @@ XZ,2021,agricultural energy use,biomass,biomass,0
 XZ,2021,agricultural energy use,coal,coal,0.001558825
 XZ,2021,agricultural energy use,district heat,district heat,0
 XZ,2021,agricultural energy use,electricity,electricity,0.000989309
-XZ,2021,agricultural energy use,gas,gas,0.00E+00
+XZ,2021,agricultural energy use,gas,gas,0
 XZ,2021,agricultural energy use,hydrogen,hydrogen,0
 XZ,2021,agricultural energy use,liquid,liquid,0.001676994
 XZ,2021,chemical energy use,biomass,biomass,0
@@ -8828,38 +8828,38 @@ XZ,2021,chemical energy use,coal,coal,0
 XZ,2021,chemical energy use,coal,coal CCS,0
 XZ,2021,chemical energy use,district heat,district heat,0
 XZ,2021,chemical energy use,electricity,electricity,0
-XZ,2021,chemical energy use,gas,gas,0.00E+00
+XZ,2021,chemical energy use,gas,gas,0
 XZ,2021,chemical energy use,gas,gas CCS,0
 XZ,2021,chemical energy use,hydrogen,hydrogen,0
 XZ,2021,chemical energy use,liquid,liquid,0
 XZ,2021,chemical energy use,liquid,liquid CCS,0
 XZ,2021,chemical feedstocks,coal,coal,0
-XZ,2021,chemical feedstocks,gas,gas,0.00E+00
+XZ,2021,chemical feedstocks,gas,gas,0
 XZ,2021,chemical feedstocks,liquid,liquid,0
 XZ,2021,chemical,chemical,chemical,0
 XZ,2021,construction,construction,construction,0.000723965
 XZ,2021,construction energy use,biomass,biomass,0
-XZ,2021,construction energy use,coal,coal,9.08E-05
+XZ,2021,construction energy use,coal,coal,0.0000908
 XZ,2021,construction energy use,district heat,district heat,0
 XZ,2021,construction energy use,electricity,electricity,0.00011025
-XZ,2021,construction energy use,gas,gas,0.00E+00
+XZ,2021,construction energy use,gas,gas,0
 XZ,2021,construction energy use,hydrogen,hydrogen,0
 XZ,2021,construction energy use,liquid,liquid,0.000522915
 XZ,2021,construction feedstocks,coal,coal,0
-XZ,2021,construction feedstocks,gas,gas,0.00E+00
+XZ,2021,construction feedstocks,gas,gas,0
 XZ,2021,construction feedstocks,liquid,liquid,0
 XZ,2021,mining energy use,biomass,biomass,0
 XZ,2021,mining energy use,coal,coal,0.000925394
 XZ,2021,mining energy use,district heat,district heat,0
 XZ,2021,mining energy use,electricity,electricity,0.000517739
-XZ,2021,mining energy use,gas,gas,0.00E+00
+XZ,2021,mining energy use,gas,gas,0
 XZ,2021,mining energy use,hydrogen,hydrogen,0
 XZ,2021,mining energy use,liquid,liquid,0.000182271
 YN,2021,agricultural energy use,biomass,biomass,0
 YN,2021,agricultural energy use,coal,coal,0.009657123
 YN,2021,agricultural energy use,district heat,district heat,0
 YN,2021,agricultural energy use,electricity,electricity,0.001961245
-YN,2021,agricultural energy use,gas,gas,4.43E-05
+YN,2021,agricultural energy use,gas,gas,0.0000443
 YN,2021,agricultural energy use,hydrogen,hydrogen,0
 YN,2021,agricultural energy use,liquid,liquid,0.002249579
 YN,2021,chemical energy use,biomass,biomass,0
@@ -8875,13 +8875,13 @@ YN,2021,chemical energy use,liquid,liquid CCS,0
 YN,2021,chemical feedstocks,coal,coal,0.050932339
 YN,2021,chemical feedstocks,gas,gas,0
 YN,2021,chemical feedstocks,liquid,liquid,0
-YN,2021,chemical,chemical,chemical,0.089718053
+YN,2021,chemical,chemical,chemical,0.062802637
 YN,2021,construction,construction,construction,0.013890538
 YN,2021,construction energy use,biomass,biomass,0
 YN,2021,construction energy use,coal,coal,0.00231769
 YN,2021,construction energy use,district heat,district heat,0
 YN,2021,construction energy use,electricity,electricity,0.000899951
-YN,2021,construction energy use,gas,gas,6.90E-05
+YN,2021,construction energy use,gas,gas,0.000069
 YN,2021,construction energy use,hydrogen,hydrogen,0
 YN,2021,construction energy use,liquid,liquid,0.010603897
 YN,2021,construction feedstocks,coal,coal,0
@@ -8898,7 +8898,7 @@ ZJ,2021,agricultural energy use,biomass,biomass,0
 ZJ,2021,agricultural energy use,coal,coal,0.005797884
 ZJ,2021,agricultural energy use,district heat,district heat,0
 ZJ,2021,agricultural energy use,electricity,electricity,0.003679626
-ZJ,2021,agricultural energy use,gas,gas,2.66E-05
+ZJ,2021,agricultural energy use,gas,gas,0.0000266
 ZJ,2021,agricultural energy use,hydrogen,hydrogen,0
 ZJ,2021,agricultural energy use,liquid,liquid,0.002436749
 ZJ,2021,chemical energy use,biomass,biomass,0
@@ -8914,7 +8914,7 @@ ZJ,2021,chemical energy use,liquid,liquid CCS,0
 ZJ,2021,chemical feedstocks,coal,coal,0.011279757
 ZJ,2021,chemical feedstocks,gas,gas,0
 ZJ,2021,chemical feedstocks,liquid,liquid,0
-ZJ,2021,chemical,chemical,chemical,0.075478283
+ZJ,2021,chemical,chemical,chemical,0.052834798
 ZJ,2021,construction,construction,construction,0.074308536
 ZJ,2021,construction energy use,biomass,biomass,0
 ZJ,2021,construction energy use,coal,coal,0.009289722
