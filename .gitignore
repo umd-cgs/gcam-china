@@ -77,3 +77,13 @@ xcuserdata
 .Rproj.user
 input/gcamdata/inst/extdata/emissions/CEDS/desktop.ini
 exe/exe.rar
+/input/gcamdata/outputs_1023
+*.Rd
+*.Rd
+*.Rd
+*.Rd
+*.Rd
+input/gcamdata/man/module_energy_L2321.cement.Rd
+*.txt
+*.Rd
+/input/gcamdata/man
