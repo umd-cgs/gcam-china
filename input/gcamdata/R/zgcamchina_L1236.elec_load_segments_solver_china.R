@@ -619,8 +619,8 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.85) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.15) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
                 replace_fraction("hydro", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) -> L1236.grid_elec_supply}
 
             # Part 2 : China Southern Power Grid adjustment, allocate more to base/int so that coal can move up to subpeak and peak

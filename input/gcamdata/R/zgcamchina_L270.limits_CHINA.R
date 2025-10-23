@@ -12,8 +12,7 @@
 #' @param ... other optional parameters, depending on command
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
-#' the generated outputs: \code{L270.CreditMkt_CHINA},\code{L270.CreditOutput_CHINA}, \code{L270.CreditInput_elecS_CHINA}, \code{L270.NegEmissBudgetMaxPrice_CHINA},
-#' \code{paste0( "L270.NegEmissBudget_CHINA )}.
+#' the generated outputs: \code{L270.CreditMkt_CHINA}, \code{L270.CreditOutput_CHINA}, \code{L270.CreditInput_elecS_CHINA}, \code{L270.NegEmissBudgetMaxPrice_CHINA}, \code{L270.NegEmissBudget_CHINA}.
 #' @details Add provinces to China market for GCAM policy constraints which enforce limits
 #' to liquid feedstocks and the amount of subsidies given for net negative emissions.
 #' @importFrom assertthat assert_that
