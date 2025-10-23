@@ -1082,7 +1082,8 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     # L2234.GlobalTechCapital_elecS %>%
     #  bind_rows(L2234.GlobalTechCapital_elecS_additonal) -> L2234.GlobalTechCapital_elecS
     L2234.GlobalTechCapital_elecS <-
-      L2234.GlobalTechCapital_elecS_additonal %>%
+      L2234.GlobalTechCapital_elecS %>%
+      bind_rows(L2234.GlobalTechCapital_elecS_additonal) %>%
       transmute(
         supplysector,
         subsector,
@@ -1103,7 +1104,8 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     #  bind_rows(L2234.GlobalTechOMfixed_elecS_additonal) -> L2234.GlobalTechOMfixed_elecS
 
     L2234.GlobalTechOMfixed_elecS <-
-      L2234.GlobalTechOMfixed_elecS_additonal %>%
+      L2234.GlobalTechOMfixed_elecS %>%
+      bind_rows(L2234.GlobalTechOMfixed_elecS_additonal) %>%
       transmute(
         supplysector,
         subsector,
@@ -1127,7 +1129,8 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     #  bind_rows(L2234.GlobalTechOMvar_elecS_additonal) -> L2234.GlobalTechOMvar_elecS
 
     L2234.GlobalTechOMvar_elecS <-
-      L2234.GlobalTechOMvar_elecS_additonal %>%
+      L2234.GlobalTechOMvar_elecS %>%
+      bind_rows(L2234.GlobalTechOMvar_elecS_additonal) %>%
       transmute(
         supplysector,
         subsector,
@@ -1145,7 +1148,8 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     #L2234.GlobalTechLifetime_elecS %>%
     #  bind_rows(L2234.GlobalTechLifetime_elecS_additonal) -> L2234.GlobalTechLifetime_elecS
     L2234.GlobalTechLifetime_elecS <-
-      L2234.GlobalTechLifetime_elecS_additonal %>%
+      L2234.GlobalTechLifetime_elecS %>%
+      bind_rows(L2234.GlobalTechLifetime_elecS_additonal) %>%
       transmute(
         supplysector,
         subsector,
@@ -1165,7 +1169,8 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     #  bind_rows(L2234.GlobalTechSCurve_elecS_additonal) -> L2234.GlobalTechSCurve_elecS
 
     L2234.GlobalTechSCurve_elecS <-
-      L2234.GlobalTechSCurve_elecS_additonal %>%
+      L2234.GlobalTechSCurve_elecS %>%
+      bind_rows(L2234.GlobalTechSCurve_elecS_additonal) %>%
       transmute(
         supplysector,
         subsector,
