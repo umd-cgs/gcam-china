@@ -6,8 +6,8 @@
 # Column types: ccnnnnnn 
 # ----------
 fuel,segment,fraction1975,fraction1990,fraction2005,fraction2010,fraction2015,fraction2021
-coal,base load generation,0.80336,0.80336,0.87143,0.87143,0.87143,0.87143
-coal,intermediate generation,0.19664,0.19664,0.12857,0.12857,0.12857,0.12857
+coal,base load generation,0.80336,0.80336,0.87143,0.87143,0.88,0.88
+coal,intermediate generation,0.19664,0.19664,0.12857,0.12857,0.12,0.12
 coal,subpeak generation,0,0,0,0,0,0
 coal,peak generation,0,0,0,0,0,0
 gas,base load generation,0.03,0.03,0.1505,0.1505,0.1505,0.1505

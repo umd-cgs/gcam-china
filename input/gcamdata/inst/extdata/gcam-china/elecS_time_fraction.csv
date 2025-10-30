@@ -9,6 +9,6 @@ grid_region,off.peak.electricity.time,intermediate.electricity.time,subpeak.elec
 East China Grid,0.66,0.25,0.05,0.04
 North China Grid,0.66,0.25,0.05,0.04
 Central China Grid,0.66,0.25,0.05,0.04
-China Southern Power Grid,0.66,0.25,0.05,0.04
+China Southern Power Grid,0.68,0.24,0.055,0.025
 Northwest China Grid,0.66,0.25,0.05,0.04
 Northeast China Grid,0.66,0.25,0.05,0.04

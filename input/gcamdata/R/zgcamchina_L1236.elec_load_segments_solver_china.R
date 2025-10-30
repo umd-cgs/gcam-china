@@ -407,7 +407,7 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
 
           for (i in unique(dominant_fuels$fuel)){
 
-            # region specific adjustment
+            # region specific adjustment for 2021
             # 1) several grids have too much coal and hydro, need to remove all other peak fuels to give them more room in peak
             if (L1236.region %in% c("East China Grid", "Northeast China Grid","Central China Grid")){
               L1236.grid_elec_supply %>%
@@ -420,9 +420,11 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 1)-> L1236.grid_elec_supply}
 
-            #2) China Southern Power Grid: create space for subpeak
+            #2) China Southern Power Grid: create space for subpeak - optimized for 2021
             if (L1236.region %in% c("China Southern Power Grid")){
               L1236.grid_elec_supply %>%
+                replace_fraction("coal", gcamusa.ELEC_SEGMENT_BASE, 0.88) %>%  # 煤电主要在基础负荷段
+                replace_fraction("coal", gcamusa.ELEC_SEGMENT_INT, 0.12) %>%  # 少量煤电在中间负荷段
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.25) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.15) %>%
