@@ -3,4 +3,200 @@ PROPERTY CHANGEdocument-replaced
 DOCUMENT REPLACED
 PROPERTY CHANGEdocument-replaced
 DOCUMENT REPLACED
-Caught the window closing
+Going to change controls
+About to perform query: collection()/scenario
+About to perform query: distinct-values(collection()/scenario/world/*[@type = 'region']/@name)
+Didn't find builder for detailed land allocation query going to use defaults
+Didn't find builder for detailed historical land allocation query going to use defaults
+Didn't find builder for land allocation by crop query going to use defaults
+Didn't find builder for aggregated land allocation query going to use defaults
+Didn't find builder for aggregated historical land allocation query going to use defaults
+Didn't find builder for land allocation in a specified land use region query going to use defaults
+Didn't find builder for land allocation by crop and water source query going to use defaults
+Didn't find builder for LUC emissions by region query going to use defaults
+Didn't find builder for LUC emissions by LUT query going to use defaults
+Didn't find builder for LUC emissions by LUT in a specified land use region query going to use defaults
+Didn't find builder for vegetative carbon stock by region query going to use defaults
+Didn't find builder for profit rate query going to use defaults
+Didn't find builder for profit rate in a specified land use region query going to use defaults
+Didn't find builder for land leaf shares query going to use defaults
+Didn't find builder for land leaf shares in a specified land use region query going to use defaults
+Didn't find builder for National Account query going to use defaults
+Didn't find builder for Social Accounting Matrix query going to use defaults
+About to perform query: collection()/singleQueryListCache/cache[@id=1412775210]/text()
+Time : 2
+Before Function: 1761905616603
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='BJ') ]/*[@type='sector' (:collapse:) and (@name='electricity' or 
+               @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
+               *[@type='subsector' and not (@name='elect_td_bld')]//*[@type='output' (:collapse:)]/
+               physical-output/node()
+In Function: 1761905616604
+After build Tree: 1761905616703
+After Add table: 1761905616703
+About to perform query: collection()/singleQueryListCache/cache[@id=-310400712]/text()
+Time : 1
+Before Function: 1761905635377
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector']//CO2/emissions/node()
+In Function: 1761905635378
+After build Tree: 1761905635732
+After Add table: 1761905635733
+About to perform query: collection()/singleQueryListCache/cache[@id=1967129971]/text()
+Time : 1
+Before Function: 1761905656664
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='AH') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]//
+               *[@type='subsector' and not (@name='elect_td_bld' or @name='biomass' or @name='coal' or @name='gas' or @name='geothermal' or 
+               @name='grid_storage' or @name='hydro' or @name='nuclear' or @name='refined liquids' or @name='solar' or @name='wind')]/share-weight/node()
+In Function: 1761905656664
+After build Tree: 1761905656683
+After Add table: 1761905656683
+About to perform query: collection()/singleQueryListCache/cache[@id=694539216]/text()
+Time : 0
+Before Function: 1761905660887
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='AH') ]/*[@type='sector' and (@name='electricity' or @name='base load generation' or 
+               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
+               *[@type='subsector' and not (@name='elect_td_bld')]/
+               share-weight/text()
+In Function: 1761905660887
+After build Tree: 1761905660906
+After Add table: 1761905660906
+About to perform query: collection()/singleQueryListCache/cache[@id=-1508065300]/text()
+Time : 1
+Before Function: 1761909441425
+About to perform query: 
+                     
+			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
+			 	 		 let $scn := $parent/ancestor::scenario,
+			 			   	  $rgn := $parent/ancestor::region
+			 			   return
+			 			   	  document { element scenario {
+			 			 	  					$scn/@*,
+			 			 						element region {
+			 			 							$rgn/@*,
+			 			 							$append
+			 			 						}
+			 			 	  				}
+			 				}
+			 	 	 };  
+			 	 	 declare function local:get-primary-renewable($outputs as node()*) as node()* {
+			 	 	 unordered { 	
+			 	 	 for $output in $outputs 
+			 	 	 let $new_output :=  
+			 	 	 element input {
+			 	 		 attribute type {'input'},
+			 	 		 attribute name {$output/parent::*/following-sibling::keyword/@primary-renewable},
+			 	 		 element demand-physical {
+			 	 			 attribute vintage {$output/@vintage},
+			 	 			 attribute unit {$output/@unit},
+			 	 			 text { $output }
+			 	 		 }
+			 	 	 },
+			 	 	 $new_root := local:append-heirarchy($output/parent::*/parent::*, $new_output)
+			 	 	 return $new_root//text()
+			 	 	 } 
+			 	 	 };
+			 	 	 declare function local:run-primary-energy($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string*) as node()* { 	
+			 	 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 	 		  then $regions
+			 	 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 	 return
+			 	 	 for $scenario in $scenarios, 	    
+			 	 	 $region in $regionsG 	
+			 	 	 let $scenario_split := tokenize($scenario, ' '), 	    
+                     $scenario_name := string-join($scenario_split[position() < last()], ' '),
+			 	 	 $scenario_date := $scenario_split[last()],
+			 	 	 $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
+			 	 	 return (: get renewables from electricity :)
+					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='electricity' or @name='elect_td_bld' or starts-with(@name,'elec_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 		 	| (: get renewables from H2ProdCS :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 central production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get renewables from H2ProdDist :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 forecourt production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get the primaries :)
+	 	 						$currTree//keyword[fn:exists(@primary-consumption)]/preceding-sibling::*[@type='input']/demand-physical/text()
+                                | (: get traditional biomass :)
+							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
+			 	 	 	
+	 	 }; 
+            	 local:run-primary-energy(('Reference 2025-31-10T17:55:18+08:00'), ('XZ'), ())
+                 
+            
+                
+In Function: 1761909441426
+After build Tree: 1761909441701
+After Add table: 1761909441701
+About to perform query: collection()/singleQueryListCache/cache[@id=1022365342]/text()
+Time : 1
+Before Function: 1761909674359
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' (:collapse:) and
+            not(@name='limestone' or @name='process heat cement' or @name='process heat food processing' or @name='industrial energy use' or @name='process heat paper' or @name='waste biomass for paper' or 
+                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn_') or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+In Function: 1761909674359
+After build Tree: 1761909674959
+After Add table: 1761909674959
+About to perform query: collection()/singleQueryListCache/cache[@id=605049822]/text()
+Time : 1
+Before Function: 1761909701600
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' (:collapse:) and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' (:collapse:) and
+            not(@name='limestone' or @name='process heat cement' or @name='process heat food processing' or @name='industrial energy use' or @name='process heat paper' or @name='waste biomass for paper' or 
+                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn_') or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+In Function: 1761909701600
+After build Tree: 1761909702153
+After Add table: 1761909702153
+About to perform query: collection()/singleQueryListCache/cache[@id=1589851972]/text()
+Time : 1
+Before Function: 1761909731428
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' (:collapse:) and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
+               *[@type='input' (:collapse:) and (@name='delivered biomass' or @name='delivered coal' or @name='district heat' or
+               @name='H2 wholesale delivery' or @name='H2 wholesale dispensing' or @name='H2 industrial' or @name='regional woodpulp for energy' or
+               @name='elect_td_ind' or @name='wholesale gas' or @name='refined liquids industrial' or @name='global solar resource')]/demand-physical/node()
+In Function: 1761909731428
+After build Tree: 1761909731469
+After Add table: 1761909731469
+About to perform query: collection()/singleQueryListCache/cache[@id=-789746245]/text()
+Time : 1
+Before Function: 1761910999773
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
+            (exists(child::keyword/@final-energy)))]//*[@type='input' (:collapse:) and
+            not(@name='limestone' or @name='process heat cement' or @name='industrial energy use' or
+                @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn_') or @name='oil-credits')]/
+            demand-physical[@unit='EJ']/node()
+In Function: 1761910999773
+After build Tree: 1761911000323
+After Add table: 1761911000323
+About to perform query: collection()/singleQueryListCache/cache[@id=-1779851701]/text()
+Time : 1
+About to perform query: collection()/singleQueryListCache/cache[@id=-1336117404]/text()
+Time : 0
+Before Function: 1761911126257
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' and (@name='district heat')]/*[@type='subsector']//
+               *[@type='input']/demand-physical/node()
+In Function: 1761911126257
+Before Function: 1761915326156
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' and (@name='district heat')]/*[@type='subsector']//
+               *[@type='input']/demand-physical/node()
+In Function: 1761915326156
+Before Function: 1761915329449
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' and (@name='district heat')]/*[@type='subsector']//
+               *[@type='output']/physical-output/node()
+In Function: 1761915329449
+Before Function: 1761915331609
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='YN') ]/*[@type='sector' and (@name='district heat')]/*[@type='subsector']//
+               *[@type='output']/physical-output/node()
+In Function: 1761915331609
+After build Tree: 1761915331617
+After Add table: 1761915331617
+Before Function: 1761915334939
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XZ') ]/*[@type='sector' and (@name='district heat')]/*[@type='subsector']//
+               *[@type='output']/physical-output/node()
+In Function: 1761915334939
+Before Function: 1761915362434
+About to perform query: collection()/scenario[ (@name='Reference' and @date='2025-31-10T17:55:18+08:00') ]/world/region[ (@name='XJ') ]/*[@type='sector' and (@name='district heat')]/*[@type='subsector']//
+               *[@type='output']/physical-output/node()
+In Function: 1761915362434
+After build Tree: 1761915362445
+After Add table: 1761915362445
