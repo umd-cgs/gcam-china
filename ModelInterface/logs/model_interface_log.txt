@@ -200,3 +200,15 @@ About to perform query: collection()/scenario[ (@name='Reference' and @date='202
 In Function: 1761915362434
 After build Tree: 1761915362445
 After Add table: 1761915362445
+Caught the window closing
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
+Doing remove because of control
