@@ -22,9 +22,11 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                     "L1234.out_EJ_grid_elec_F_CHINA",
                     "L1235.grid_elec_supply_CHINA",
                     "L1235.elecS_demand_fraction_CHINA",
-                    "L1235.elecS_horizontal_vertical_CHINA"))
+                    "L1235.elecS_horizontal_vertical_CHINA",
+                    "L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c("L1236.grid_elec_supply_CHINA"))
+    return(c("L1236.grid_elec_supply_CHINA",
+             "L1236.elecS_demand_fraction_adj_CHINA"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -44,6 +46,8 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
     L1235.grid_elec_supply_CHINA <- get_data(all_data, "L1235.grid_elec_supply_CHINA", strip_attributes = TRUE)
     L1235.elecS_demand_fraction_CHINA <- get_data(all_data, "L1235.elecS_demand_fraction_CHINA", strip_attributes = TRUE)
     L1235.elecS_horizontal_vertical_CHINA <- get_data(all_data, "L1235.elecS_horizontal_vertical_CHINA", strip_attributes = TRUE)
+    L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA <- get_data(all_data, "L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA", strip_attributes = TRUE)
+
 
     # ===================================================
     # Data Processing
@@ -403,6 +407,7 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
 
 
         # tune each year, no particular order
+        # temperatly delete 2021 part
         if (segment_year %in% c(2021)){
 
           for (i in unique(dominant_fuels$fuel)){
@@ -443,7 +448,7 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.05) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 1)-> L1236.grid_elec_supply
-              }
+            }
 
             # 3) Central China Grid
             if (L1236.region %in% c("Central China Grid")){
@@ -456,7 +461,7 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.10) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 1)-> L1236.grid_elec_supply
-              }
+            }
 
             # 4) China Southern Power Grid
             if (L1236.region %in% c("China Southern Power Grid")){
@@ -467,7 +472,7 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 1) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0)-> L1236.grid_elec_supply
-              }
+            }
 
             # 5) Northwest China Grid
             if (L1236.region %in% c("Northwest China Grid")){
@@ -478,28 +483,42 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
 
             # 6) North China Grid
-            if (L1236.region %in% c("North China Grid")){
+            # ---- North China Grid tuned ----
+            if (L1236.region %in% c("North China Grid")) {
               L1236.grid_elec_supply %>%
-                replace_fraction("wind", gcamusa.ELEC_SEGMENT_BASE, 0.5) %>%
-                replace_fraction("wind", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
-                replace_fraction("wind", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.3) %>%
-                replace_fraction("wind", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.3) %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
-                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_INT, 0.1) %>%
-                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.1) %>%
+                replace_fraction('coal', gcamusa.ELEC_SEGMENT_BASE, 0.61) %>%
+                replace_fraction('coal', gcamusa.ELEC_SEGMENT_INT, 0.35) %>%
+                replace_fraction('coal', gcamusa.ELEC_SEGMENT_SUBPEAK, 0.00) %>%
+                replace_fraction('coal', gcamusa.ELEC_SEGMENT_PEAK, 0.04)%>%
+
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.26)%>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.49)%>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.15)%>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0.10)%>%
+
+                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_BASE, 0.73) %>%
+                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_INT, 0.27) %>%
+                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
+
                 replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 1) %>%
                 replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_BASE, 0) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.4) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0.1) %>%
-                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 1)-> L1236.grid_elec_supply}
+
+                replace_fraction("wind", gcamusa.ELEC_SEGMENT_BASE, 0.66) %>%
+                replace_fraction("wind", gcamusa.ELEC_SEGMENT_INT, 0.14) %>%
+                replace_fraction("wind", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.20) %>%
+                replace_fraction("wind", gcamusa.ELEC_SEGMENT_PEAK, 0.00) %>%
+
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_BASE, 0.00) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_INT, 0.46) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.09) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0.45) %>%
+
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.39) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.19) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.13) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0.29) -> L1236.grid_elec_supply
+            }
 
             #Solve for int
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
@@ -981,9 +1000,99 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
 
     # Re-join data for non calibrated years
     # Ensure that generation = total generation * calibrated load segment fuel fraction
+    # 5th NOV 2025,xsl add based on the gcamusa
+
+    #L1236.grid_elec_supply %>%
+    #  bind_rows(L1236.grid_elec_supply_non_cal) %>%
+    #  mutate(generation = tot_generation * fraction) -> L1236.grid_elec_supply
+
     L1236.grid_elec_supply %>%
-      bind_rows(L1236.grid_elec_supply_non_cal) %>%
-      mutate(generation = tot_generation * fraction) -> L1236.grid_elec_supply
+      select(-tot_generation, -generation) %>%
+      group_by(grid_region, segment, fuel) %>%
+      tidyr::complete(year = MODEL_BASE_YEARS) %>%
+      mutate(fraction = approx_fun(year, fraction, rule = 2)) %>%
+      ungroup() %>%
+      filter(!(year %in% gcamchina.LOAD_SEG_CAL_YEARS)) %>%
+      left_join_error_no_match(L1236.grid_elec_supply_non_cal %>% select(-fraction, -generation),
+                               by = c("grid_region", "segment", "fuel", "year")) %>%
+      mutate(generation = tot_generation * fraction) %>%
+      bind_rows(L1236.grid_elec_supply) -> L1236.grid_elec_supply
+
+    L1235.elecS_demand_fraction_CHINA %>%
+      repeat_add_columns(tibble(year = MODEL_YEARS)) ->
+      L1236.elecS_demand_fraction_adj_CHINA
+    FILLED_MODEL_YEARS <- setdiff(MODEL_BASE_YEARS, gcamchina.LOAD_SEG_CAL_YEARS)
+    if(length(FILLED_MODEL_YEARS) > 0) {
+      warning("Not solving non gcamchina.LOAD_SEG_CAL_YEARS years and extending forward, load shape is being adjusted to match")
+
+      L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA %>%
+        select(grid_region, vert.segment = supplysector, horiz.segment = minicam.energy.input, horiz.coef = coefficient) %>%
+        left_join_error_no_match(L1235.elecS_demand_fraction_CHINA, by=c("grid_region", "vert.segment" = "vertical_segment")) %>%
+        rename(vert.coef = demand_fraction) ->
+        orig_shape
+      L1236.grid_elec_supply %>%
+        filter(year %in% FILLED_MODEL_YEARS) %>%
+        group_by(grid_region, year, segment) %>%
+        summarize(horiz.gen = sum(generation)) %>%
+        mutate(gr.gen = sum(horiz.gen)) %>%
+        ungroup() ->
+        actual_gen
+
+      optim_load_match <- function(new.coef, initial_coef, target_df) {
+        # set the trial vertical coefficients and calculate how different
+        # the calculated generation by horizontal load segment is from our
+        # target which is bottom up from our fuel appropriations
+        initial_coef %>%
+          mutate(vert.coef = new.coef) %>%
+          left_join_error_no_match(target_df, ., by=c("vert.segment")) %>%
+          group_by(horiz.segment) %>%
+          summarize(target = unique(horiz.gen),
+                    calc = sum(gr.gen * horiz.coef * vert.coef),
+                    error = (target - calc)/target) %>%
+          summarize(error = sum(error * error)) %>% pull(error)
+      }
+      set_coef_group <- function(group_df) {
+        # split out just the vertical coefficients which is what we are going to
+        # try to solve new values for
+        group_df %>%
+          select(vert.segment, vert.coef) %>%
+          distinct() ->
+          initial_coef
+        target_df <- select(group_df, -vert.coef)
+        # solve for new vertical coefficients
+        # we give it the initial_coef so that we can match back the vertical segment names
+        # and of course the rest of the data to re-calculate the to-down estimation of generation
+        # by horizontal load segment and of course our target genration values
+        optim_out <- optim(initial_coef$vert.coef, optim_load_match, gr = "BFGS", initial_coef, target_df)
+
+        # return whatever the solver came up as well as the convergence status so we can perform
+        # error checking later
+        initial_coef %>%
+          mutate(vert.coef = optim_out$par,
+                 convergence = optim_out$convergence)
+      }
+
+      orig_shape %>%
+        left_join(actual_gen, by=c("grid_region", "horiz.segment" = "segment")) %>%
+        group_by(grid_region, horiz.segment, year) %>%
+        mutate(implied.gen = sum(gr.gen * horiz.coef * vert.coef)) %>%
+        ungroup() %>%
+        tidyr::nest(data = -c("grid_region", "year")) %>%
+        mutate(data = lapply(data, set_coef_group)) %>%
+        tidyr::unnest(c(data)) %>%
+        rename(vertical_segment = vert.segment, demand_fraction = vert.coef) ->
+        adjusted_vertical_coefs
+
+      assertthat::assert_that(filter(adjusted_vertical_coefs, convergence != 0) %>% nrow() == 0,
+                              msg = "Failed to find a new set of vertical demand coef in some region / years")
+
+      L1236.elecS_demand_fraction_adj_CHINA %>%
+        anti_join(adjusted_vertical_coefs, by = c("grid_region", "vertical_segment", "year")) %>%
+        bind_rows(adjusted_vertical_coefs %>% select(-convergence)) ->
+        L1236.elecS_demand_fraction_adj_CHINA
+    }
+
+
 
     # ===================================================
 
@@ -1002,7 +1111,17 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                      "gcam-china/elecS_horizontal_to_vertical_map") ->
       L1236.grid_elec_supply_CHINA
 
-    return_data(L1236.grid_elec_supply_CHINA)
+    L1236.elecS_demand_fraction_adj_CHINA %>%
+      add_title("A potentially adjusted version of L1235.elecS_demand_fraction_CHINA") %>%
+      add_units("unitless (fraction)") %>%
+      add_comments("In the case of model years not in gcamchina.LOAD_SEG_CAL_YEARS we need to") %>%
+      add_comments("extend the fuel to segment attribution, however that will result in inconsistent") %>%
+      add_comments("energy totals by segment, so we adjust the vertical coefficients to compensate") %>%
+      same_precursors_as(L1236.grid_elec_supply_CHINA) %>%
+      add_precursors("L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA") ->
+      L1236.elecS_demand_fraction_adj_CHINA
+
+    return_data(L1236.grid_elec_supply_CHINA,L1236.elecS_demand_fraction_adj_CHINA)
 
   } else {
     stop("Unknown command")

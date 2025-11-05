@@ -25,7 +25,7 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr anti_join distinct filter if_else mutate select
 #' @importFrom tibble tibble
-#' @author MTB Aug 2018 / YangOu Jul 2023
+#' @author MTB Aug 2018 / YangOu Jul 2023/XSL 5th Nov 2025
 module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/province_names_mappings",
@@ -34,7 +34,8 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
              FILE = "gcam-china/A23.elecS_sector_vertical",
              FILE = "gcam-china/A23.elecS_metainfo_vertical",
              FILE = "gcam-china/ABSPI_intra_province_electricity_trade",
-             "L1235.elecS_demand_fraction_CHINA",
+             "L1236.elecS_demand_fraction_adj_CHINA",
+             #"L1235.elecS_demand_fraction_CHINA",
              "L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA",
              "L123.in_EJ_province_ownuse_elec",
              "L123.out_EJ_province_ownuse_elec",
@@ -96,7 +97,9 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
     A23.elecS_sector_vertical <- get_data(all_data, "gcam-china/A23.elecS_sector_vertical",strip_attributes = TRUE)
     A23.elecS_metainfo_vertical <- get_data(all_data, "gcam-china/A23.elecS_metainfo_vertical",strip_attributes = TRUE)
     ABSPI_intra_province_electricity_trade <- get_data(all_data, "gcam-china/ABSPI_intra_province_electricity_trade",strip_attributes = TRUE)
-    L1235.elecS_demand_fraction_CHINA <- get_data(all_data, "L1235.elecS_demand_fraction_CHINA",strip_attributes = TRUE)
+    #L1235.elecS_demand_fraction_CHINA <- get_data(all_data, "L1235.elecS_demand_fraction_CHINA",strip_attributes = TRUE)
+    L1236.elecS_demand_fraction_adj_CHINA <- get_data(all_data, "L1236.elecS_demand_fraction_adj_CHINA",strip_attributes = TRUE)
+
     L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA <- get_data(all_data, "L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA",strip_attributes = TRUE) %>%
       rename(region = grid_region)
     L123.in_EJ_province_ownuse_elec <- get_data(all_data, "L123.in_EJ_province_ownuse_elec",strip_attributes = TRUE)
@@ -147,7 +150,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
     L2235.SubsectorLogit_elecS_grid_vertical %>%
       select(region, supplysector, subsector) %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = max(MODEL_FINAL_BASE_YEAR),
              to.year = max(MODEL_FUTURE_YEARS),
              interpolation.function = "fixed") -> L2235.SubsectorShrwtInterp_elecS_grid_vertical
 
@@ -159,15 +162,14 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
       select(region, supplysector, subsector, technology, year, share.weight) -> L2235.TechShrwt_elecS_grid_vertical
 
     # Technology inputs
-    L1235.elecS_demand_fraction_CHINA %>%
+    L1236.elecS_demand_fraction_adj_CHINA %>%
       mutate(supplysector = "electricity",
              subsector = supplysector,
              technology = supplysector,
              market.name = grid_region) %>%
       rename(region = grid_region,
              minicam.energy.input = vertical_segment) %>%
-      select(-demand_fraction) %>%
-      repeat_add_columns(tibble(year = MODEL_YEARS)) -> L2235.TechMarket_elecS_grid_vertical_electricity
+      select(-demand_fraction)-> L2235.TechMarket_elecS_grid_vertical_electricity #here
 
     L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA %>%
       mutate(market.name = region) %>%
@@ -179,10 +181,15 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
       bind_rows(L2235.TechMarket_elecS_grid_vertical_electricity) -> L2235.TechMarket_elecS_grid_vertical
 
     # Coefficients for horizontal to vertical segments.
+    #5th NOV XSL
     L2235.TechMarket_elecS_grid_vertical_electricity %>%
       # MB note:  document why no LJENM
-      left_join(L1235.elecS_demand_fraction_CHINA, by = c("region" = "grid_region",
-                                                          "minicam.energy.input" = "vertical_segment")) %>%
+      #left_join(L1235.elecS_demand_fraction_CHINA, by = c("region" = "grid_region",
+      #                                                    "minicam.energy.input" = "vertical_segment")) %>%
+      #rename(coefficient = demand_fraction) -> L2235.TechCoef_elecS_grid_vertical_electricity
+      left_join(L1236.elecS_demand_fraction_adj_CHINA, by = c("region" = "grid_region",
+                                                            "year",
+                                                            "minicam.energy.input" = "vertical_segment")) %>%
       rename(coefficient = demand_fraction) -> L2235.TechCoef_elecS_grid_vertical_electricity
 
     L2235.TechMarket_elecS_grid_vertical %>%
@@ -222,7 +229,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
     # regions that don't export in the base year don't export at all
     L2235.SubsectorShrwtFllt_elec_CHINA %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = max(MODEL_FINAL_BASE_YEAR),
              to.year = max(MODEL_YEARS),
              interpolation.function = "fixed") %>%
       select(-year.fillout, -share.weight) %>%
@@ -502,10 +509,11 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
              share.weight = gcamchina.DEFAULT_SHAREWEIGHT) -> L2235.SubsectorShrwtFllt_elec_GRID
 
     # Subsector (grid region) shareweights in CHINA electricity
+    # 5TH NOV 2025,XSL change model_base_years to MODEL_FINAL_BASE_YEAR
     L2235.structure_GRID %>%
       select(region, supplysector, subsector) %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = max(MODEL_FINAL_BASE_YEAR),
              to.year = max(MODEL_YEARS),
              interpolation.function = "fixed") %>%
       mutate(from.year = as.integer(from.year),
@@ -533,6 +541,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
              coefficient, market.name) -> L2235.TechCoef_elec_GRID
 
     # Own use coefficients in the grid regions
+    # 5th NOV XSL CHANGE TO year==MODEL_FINAL_BASE_YEAR
     L2235.structure_GRID %>%
       repeat_add_columns(tibble(year = MODEL_YEARS)) %>%
       filter(supplysector == "electricity_net_ownuse") %>%
@@ -542,7 +551,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
                   select(grid_region, year, ownuse_coef),
                 by = c("region" = "grid_region", "year")) %>%
       group_by(region) %>%
-      mutate(coefficient = if_else(is.na(ownuse_coef), ownuse_coef[year==max(MODEL_BASE_YEARS)], ownuse_coef)) %>%
+      mutate(coefficient = if_else(is.na(ownuse_coef), ownuse_coef[year==MODEL_FINAL_BASE_YEAR], ownuse_coef)) %>%
       ungroup() %>%
       select(region, supplysector, subsector, technology, year, minicam.energy.input,
              coefficient, market.name) -> L2235.TechCoef_elecownuse_GRID
@@ -731,7 +740,8 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
       add_comments("Vertical electricity load segments technology coefficients and market names") %>%
       add_legacy_name("L2235.TechCoef_elecS_grid_vertical") %>%
       add_precursors("L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA",
-                     "L1235.elecS_demand_fraction_CHINA") ->
+                     #"L1235.elecS_demand_fraction_CHINA",
+                     "L1236.elecS_demand_fraction_adj_CHINA") ->
       L2235.TechCoef_elecS_grid_vertical_CHINA
 
     L2235.Supplysector_elec_GRID %>%
