@@ -102,8 +102,8 @@ module_gcamchina_L1322.Fert <- function(command, ...) {
     # 26/08/2025 xsl remove duplicate in L1322.out_Mt_province_Fert_Yh
     # check
 
-    L1322.out_Mt_province_Fert_Yh <- L1322.out_Mt_province_Fert_Yh %>%
-      distinct(province, year, sector, fuel, .keep_all = TRUE)
+    #L1322.out_Mt_province_Fert_Yh <- L1322.out_Mt_province_Fert_Yh %>%
+    #  distinct(province, year, sector, fuel, .keep_all = TRUE)
 
     L1322.IO_GJkg_province_Fert_F_Yh %>%
       left_join_error_no_match(L1322.out_Mt_province_Fert_Yh %>% rename(output = value), by = c("province", "year", "sector", "fuel")) %>%

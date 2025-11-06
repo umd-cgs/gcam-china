@@ -1686,7 +1686,7 @@ module_gcamchina_L244.building <- function(command, ...) {
     # 25/08 XSL CHANGE TO LEFT_JOIN
     # Merge the subtotals to the estimated values to calculate %shares for each consumer group, in each region and period
     L244.GenericShares_gcamchina <- L244.GenericShares_gcamchina_pre %>%
-      left_join(L244.GenericShares_gcamchina_pre_subt
+      left_join_error_no_match(L244.GenericShares_gcamchina_pre_subt
                 , by=c("region","building.service.input","year")) %>%
       mutate(gen_share = serv / serv_aggReg) %>%
       select(region,gcam.consumer,nodeInput,building.node.input,building.service.input,year,gen_share) %>%
