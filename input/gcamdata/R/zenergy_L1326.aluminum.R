@@ -159,6 +159,7 @@ module_energy_L1326.aluminum <- function(command, ...) {
       rename(value_region = value) %>%
       left_join(ctry_shares, by = c("year", "flow", "var", "IAI_region")) %>%
       mutate(value = value_region * share) %>%
+	  mutate(value = round(value, energy.DIGITS_CALOUTPUT)) %>%
       na.omit %>%
       select(iso, year, flow, fuel, value)
 
@@ -169,6 +170,7 @@ module_energy_L1326.aluminum <- function(command, ...) {
       summarise(value = sum(value)) %>%
       mutate(sector = "Aluminum") %>%
       ungroup %>%
+	  mutate(value = round(value, energy.DIGITS_CALOUTPUT)) %>%
       select(GCAM_region_ID, year, sector, fuel, value)
 
     # check whether there are regions/years with energy use but no production

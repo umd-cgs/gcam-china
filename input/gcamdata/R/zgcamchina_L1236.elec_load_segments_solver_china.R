@@ -436,12 +436,12 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_INT, 0.9) %>%
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_BASE, 0.2) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_INT, 0.6) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_BASE, 0.) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_INT, 0.8) %>%
                 replace_fraction("solar", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.2) %>%
                 replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.4) %>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.55) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.35) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.05) %>%
                 replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
                 replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.95) %>%
@@ -486,38 +486,36 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             # ---- North China Grid tuned ----
             if (L1236.region %in% c("North China Grid")) {
               L1236.grid_elec_supply %>%
-                replace_fraction('coal', gcamusa.ELEC_SEGMENT_BASE, 0.61) %>%
-                replace_fraction('coal', gcamusa.ELEC_SEGMENT_INT, 0.35) %>%
+                replace_fraction('coal', gcamusa.ELEC_SEGMENT_BASE, 0.64) %>%
+                replace_fraction('coal', gcamusa.ELEC_SEGMENT_INT, 0.32) %>%
                 replace_fraction('coal', gcamusa.ELEC_SEGMENT_SUBPEAK, 0.00) %>%
                 replace_fraction('coal', gcamusa.ELEC_SEGMENT_PEAK, 0.04)%>%
 
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.26)%>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.49)%>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.15)%>%
-                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0.10)%>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_BASE, 0.3)%>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_INT, 0.4)%>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.3)%>%
+                replace_fraction("gas", gcamusa.ELEC_SEGMENT_PEAK, 0.0)%>%
 
-                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_BASE, 0.73) %>%
-                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_INT, 0.27) %>%
+                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
+                replace_fraction("biomass", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
 
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 1) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%
 
-                replace_fraction("wind", gcamusa.ELEC_SEGMENT_BASE, 0.66) %>%
-                replace_fraction("wind", gcamusa.ELEC_SEGMENT_INT, 0.14) %>%
-                replace_fraction("wind", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.20) %>%
+                replace_fraction("wind", gcamusa.ELEC_SEGMENT_BASE, 0.45) %>%
+                replace_fraction("wind", gcamusa.ELEC_SEGMENT_INT, 0.15) %>%
+                replace_fraction("wind", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.4) %>%
                 replace_fraction("wind", gcamusa.ELEC_SEGMENT_PEAK, 0.00) %>%
 
                 replace_fraction("solar", gcamusa.ELEC_SEGMENT_BASE, 0.00) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_INT, 0.46) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.09) %>%
-                replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0.45) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_INT, 0.5) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.3) %>%
+                replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0.2) %>%
 
-                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_BASE, 0.39) %>%
-                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_INT, 0.19) %>%
-                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.13) %>%
-                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0.29) -> L1236.grid_elec_supply
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0.5) %>%
+                replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0.5) -> L1236.grid_elec_supply
             }
 
             #Solve for int

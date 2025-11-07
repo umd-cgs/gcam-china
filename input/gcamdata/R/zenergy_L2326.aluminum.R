@@ -404,7 +404,8 @@ module_energy_L2326.aluminum <- function(command, ...) {
                        supplysector, subsector, technology, minicam.energy.input, terminal_coef, year),
                 by = c("supplysector", "subsector", stub.technology = "technology", "minicam.energy.input","year")) %>%
       mutate(coefficient = if_else(year == 2010 & is.na(coefficient), terminal_coef, coefficient),
-             coefficient = if_else(year == 2015 & coefficient ==0, terminal_coef, coefficient)) %>%
+             coefficient = if_else(year == 2015 & coefficient ==0, terminal_coef, coefficient),
+             coefficient = if_else(year == 2021 & coefficient ==0, terminal_coef, coefficient)) %>%
       select(-terminal_coef) %>%
       group_by(region, supplysector, subsector, stub.technology, minicam.energy.input) %>%
       mutate(coefficient = round(approx_fun(year, coefficient,rule = 2), energy.DIGITS_COEFFICIENT)) %>%
