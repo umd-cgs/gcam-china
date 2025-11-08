@@ -34,8 +34,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
              FILE = "gcam-china/A23.elecS_sector_vertical",
              FILE = "gcam-china/A23.elecS_metainfo_vertical",
              FILE = "gcam-china/ABSPI_intra_province_electricity_trade",
-             "L1236.elecS_demand_fraction_adj_CHINA",
-             #"L1235.elecS_demand_fraction_CHINA",
+             "L1235.elecS_demand_fraction_CHINA",
              "L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA",
              "L123.in_EJ_province_ownuse_elec",
              "L123.out_EJ_province_ownuse_elec",
@@ -97,8 +96,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
     A23.elecS_sector_vertical <- get_data(all_data, "gcam-china/A23.elecS_sector_vertical",strip_attributes = TRUE)
     A23.elecS_metainfo_vertical <- get_data(all_data, "gcam-china/A23.elecS_metainfo_vertical",strip_attributes = TRUE)
     ABSPI_intra_province_electricity_trade <- get_data(all_data, "gcam-china/ABSPI_intra_province_electricity_trade",strip_attributes = TRUE)
-    #L1235.elecS_demand_fraction_CHINA <- get_data(all_data, "L1235.elecS_demand_fraction_CHINA",strip_attributes = TRUE)
-    L1236.elecS_demand_fraction_adj_CHINA <- get_data(all_data, "L1236.elecS_demand_fraction_adj_CHINA",strip_attributes = TRUE)
+    L1235.elecS_demand_fraction_CHINA <- get_data(all_data, "L1235.elecS_demand_fraction_CHINA",strip_attributes = TRUE)
 
     L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA <- get_data(all_data, "L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA",strip_attributes = TRUE) %>%
       rename(region = grid_region)
@@ -162,14 +160,15 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
       select(region, supplysector, subsector, technology, year, share.weight) -> L2235.TechShrwt_elecS_grid_vertical
 
     # Technology inputs
-    L1236.elecS_demand_fraction_adj_CHINA %>%
+    L1235.elecS_demand_fraction_CHINA %>%
       mutate(supplysector = "electricity",
              subsector = supplysector,
              technology = supplysector,
              market.name = grid_region) %>%
       rename(region = grid_region,
              minicam.energy.input = vertical_segment) %>%
-      select(-demand_fraction)-> L2235.TechMarket_elecS_grid_vertical_electricity #here
+      select(-demand_fraction) %>%
+      repeat_add_columns(tibble(year = MODEL_YEARS)) -> L2235.TechMarket_elecS_grid_vertical_electricity #here
 
     L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA %>%
       mutate(market.name = region) %>%
@@ -184,12 +183,9 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
     #5th NOV XSL
     L2235.TechMarket_elecS_grid_vertical_electricity %>%
       # MB note:  document why no LJENM
-      #left_join(L1235.elecS_demand_fraction_CHINA, by = c("region" = "grid_region",
-      #                                                    "minicam.energy.input" = "vertical_segment")) %>%
-      #rename(coefficient = demand_fraction) -> L2235.TechCoef_elecS_grid_vertical_electricity
-      left_join(L1236.elecS_demand_fraction_adj_CHINA, by = c("region" = "grid_region",
-                                                            "year",
-                                                            "minicam.energy.input" = "vertical_segment")) %>%
+      left_join(L1235.elecS_demand_fraction_CHINA, by = c("region" = "grid_region",
+                                                          "minicam.energy.input" = "vertical_segment")) %>%
+
       rename(coefficient = demand_fraction) -> L2235.TechCoef_elecS_grid_vertical_electricity
 
     L2235.TechMarket_elecS_grid_vertical %>%
@@ -740,8 +736,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
       add_comments("Vertical electricity load segments technology coefficients and market names") %>%
       add_legacy_name("L2235.TechCoef_elecS_grid_vertical") %>%
       add_precursors("L1235.elecS_horizontal_vertical_GCAM_coeff_CHINA",
-                     #"L1235.elecS_demand_fraction_CHINA",
-                     "L1236.elecS_demand_fraction_adj_CHINA") ->
+                     "L1235.elecS_demand_fraction_CHINA") ->
       L2235.TechCoef_elecS_grid_vertical_CHINA
 
     L2235.Supplysector_elec_GRID %>%

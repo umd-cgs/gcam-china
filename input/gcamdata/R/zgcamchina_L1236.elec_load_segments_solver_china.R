@@ -501,8 +501,8 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("biomass", gcamusa.ELEC_SEGMENT_PEAK, 0) %>%
 
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.6) %>%
-                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.4) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_BASE, 0.8) %>%
+                replace_fraction("hydro", gcamusa.ELEC_SEGMENT_INT, 0.2) %>%
 
                 replace_fraction("wind", gcamusa.ELEC_SEGMENT_BASE, 0.45) %>%
                 replace_fraction("wind", gcamusa.ELEC_SEGMENT_INT, 0.15) %>%

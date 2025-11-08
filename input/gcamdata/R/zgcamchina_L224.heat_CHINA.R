@@ -187,19 +187,12 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
     group_by(region, year) %>%
     summarise(no_gas = sum(calOutputValue), .groups = "drop") %>%
     ungroup() %>%
-    # Include regions with no gas OR very little gas (< 0.05 EJ)
-    # This addresses the 2021 issue where HE/NM/SD/JS/ZJ have insufficient gas CHP
-    # in peak/subpeak segments to meet expected district heat demand
-    # Threshold raised to 0.05 to ensure all problem regions including JS are covered
-    filter(no_gas < 0.1)
-
-  #Just move gas CHP to coal, because some region do not have gas generation
-  # Create a vector of region-year combinations that need fuel replacement
-  no_gas_region_years <- paste(no_gas_tech_years$region, no_gas_tech_years$year, sep = "_")
+    filter(no_gas < 0.1) %>%
+    mutate(region_year = paste(region, year, sep = "_"))
 
   L124.out_EJ_province_heatfromelec_F_Yh %>%
     mutate(region_year = paste(region, year, sep = "_")) %>%
-    mutate(fuel_new = if_else(region_year %in% no_gas_region_years & fuel == "gas", "coal", fuel)) %>%
+    mutate(fuel_new = if_else( (region_year %in% no_gas_tech_years$region_year) & fuel == "gas", "coal", fuel)) %>%
     select(-region_year) %>%
     mutate(fuel = fuel_new) %>%
     group_by(region, fuel, sector, year) %>%
