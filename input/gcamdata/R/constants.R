@@ -973,8 +973,8 @@ emissions.NONGHG_GASES       <- c("SO2", "NOx", "CO", "NMVOC", "NH3")
 emissions.PFCS               <- c("CF4", "C2F6", "SF6")
 emissions.TRN_INTL_SECTORS   <- c("trn_intl_ship", "trn_intl_air")
 
-emissions.USE_GCAM3_CCOEFS     <- 1 # Select whether to use GCAM3 fuel carbon coefficients
-emissions.USE_GLOBAL_CCOEFS    <- 1 # Select whether to use global average carbon coefficients on fuels, or region-specific carbon coefficients
+emissions.USE_GCAM3_CCOEFS     <- 0 # Select whether to use GCAM3 fuel carbon coefficients
+emissions.USE_GLOBAL_CCOEFS    <- 0 # Select whether to use global average carbon coefficients on fuels, or region-specific carbon coefficients
 emissions.UNMGD_LAND_INPUT_NAME <- "land-input"
 
 emissions.FUGITIVE_FOSSIL_CO2_NAME <- "CO2_FUG" # name for fugitive co2 emissions from fossil production
