@@ -26,7 +26,8 @@ module_water_L1233.Elec_water <- function(command, ...) {
              "L1231.out_EJ_R_elec_F_tech_Yh",
              FILE = "water/A23.CoolingSystemShares_RG3",
              FILE = "water/elec_tech_water_map",
-             FILE = "water/Macknick_elec_water_m3MWh"))
+             FILE = "water/Macknick_elec_water_m3MWh",
+             FILE = "gcam-china/china_elec_water_average_coef"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L1233.out_EJ_R_elec_F_tech_Yh_cool",
              "L1233.in_EJ_R_elec_F_tech_Yh_cool",
@@ -57,6 +58,7 @@ module_water_L1233.Elec_water <- function(command, ...) {
     L1231.in_EJ_R_elec_F_tech_Yh <- get_data(all_data, "L1231.in_EJ_R_elec_F_tech_Yh")
     L1231.out_EJ_R_elec_F_tech_Yh <- get_data(all_data, "L1231.out_EJ_R_elec_F_tech_Yh")
     L101.en_bal_EJ_ctry_Si_Fi_Yh_full <- get_data(all_data, "L101.en_bal_EJ_ctry_Si_Fi_Yh_full")
+    china_elec_water_average_coef <- get_data(all_data,"gcam-china/china_elec_water_average_coef")
 
     # ===================================================
 
@@ -225,7 +227,12 @@ module_water_L1233.Elec_water <- function(command, ...) {
     L1233.out_EJ_R_elec_F_tech_Yh_cool %>%
       left_join_error_no_match(Macknick_elec_water_m3MWh,
                                by = c("sector", "fuel", "technology", "cooling_system", "water_type")) %>%
-      mutate(value = value * water_withdrawals / CONV_MWH_GJ) %>%
+      left_join(china_elec_water_average_coef,
+                by=c("water_type","year"))%>%
+      mutate(value = if_else(
+        GCAM_region_ID == 11 & year %in% c(1990, 2005, 2010, 2015),
+        value * china_wdraw,
+        value * water_withdrawals / CONV_MWH_GJ)) %>%
       select(-water_withdrawals, - water_consumption) -> L1233.wdraw_km3_R_elec_F_tech_Yh_cool
     L1233.wdraw_km3_R_elec_F_tech_Yh_cool %>%
       group_by(GCAM_region_ID, sector, water_type, year) %>%
@@ -237,7 +244,12 @@ module_water_L1233.Elec_water <- function(command, ...) {
     L1233.out_EJ_R_elec_F_tech_Yh_cool %>%
       left_join_error_no_match(Macknick_elec_water_m3MWh,
                                by = c("sector", "fuel", "technology", "cooling_system", "water_type")) %>%
-      mutate(value = value * water_consumption / CONV_MWH_GJ) %>%
+      left_join(china_elec_water_average_coef,
+                by=c("water_type","year"))%>%
+      mutate(value = if_else(
+        GCAM_region_ID == 11 & year %in% c(1990, 2005, 2010, 2015),
+        value * china_wcons,
+        value * water_consumption / CONV_MWH_GJ)) %>%
       select(-water_withdrawals, - water_consumption) -> L1233.wcons_km3_R_elec_F_tech_Yh_cool
     L1233.wcons_km3_R_elec_F_tech_Yh_cool %>%
       group_by(GCAM_region_ID, sector, water_type, year) %>%
@@ -282,6 +294,12 @@ module_water_L1233.Elec_water <- function(command, ...) {
                 by = "GCAM_region_ID") %>%
       mutate(value = value * share) %>%
       select(GCAM_region_ID, GCAM_basin_ID, sector, water_type, year, value)
+
+    #South Asia, GangesR, calibration
+    L1233.wdraw_km3_R_B_elec <- L1233.wdraw_km3_R_B_elec %>%
+      mutate(value = if_else(
+        GCAM_region_ID == 27 & GCAM_basin_ID == 110 & sector == "electricity generation" &  water_type == "water withdrawals" & year == 1990,
+        0.06611, value))
 
     L1233.wcons_km3_R_B_elec <- L1233.wcons_km3_R_elec %>%
       filter(water_type == "fresh") %>%

@@ -1,0 +1,40 @@
+# File: L245.SubsectorLogit_CHINA.csv
+# Title: Logit exponent for subsector municipal water
+# Units: NA
+# Description: A selection of columns from the input water assumptions
+# Column types: cccnnc
+# ----------
+region,supplysector,subsector,logit.year.fillout,logit.exponent,logit.type
+AH,municipal water,municipal water,1975,0,NA
+BJ,municipal water,municipal water,1975,0,NA
+CQ,municipal water,municipal water,1975,0,NA
+FJ,municipal water,municipal water,1975,0,NA
+GD,municipal water,municipal water,1975,0,NA
+GS,municipal water,municipal water,1975,0,NA
+GX,municipal water,municipal water,1975,0,NA
+GZ,municipal water,municipal water,1975,0,NA
+HA,municipal water,municipal water,1975,0,NA
+HB,municipal water,municipal water,1975,0,NA
+HE,municipal water,municipal water,1975,0,NA
+HI,municipal water,municipal water,1975,0,NA
+HK,municipal water,municipal water,1975,0,NA
+HL,municipal water,municipal water,1975,0,NA
+HN,municipal water,municipal water,1975,0,NA
+JL,municipal water,municipal water,1975,0,NA
+JS,municipal water,municipal water,1975,0,NA
+JX,municipal water,municipal water,1975,0,NA
+LN,municipal water,municipal water,1975,0,NA
+MC,municipal water,municipal water,1975,0,NA
+NM,municipal water,municipal water,1975,0,NA
+NX,municipal water,municipal water,1975,0,NA
+QH,municipal water,municipal water,1975,0,NA
+SC,municipal water,municipal water,1975,0,NA
+SD,municipal water,municipal water,1975,0,NA
+SH,municipal water,municipal water,1975,0,NA
+SN,municipal water,municipal water,1975,0,NA
+SX,municipal water,municipal water,1975,0,NA
+TJ,municipal water,municipal water,1975,0,NA
+XJ,municipal water,municipal water,1975,0,NA
+XZ,municipal water,municipal water,1975,0,NA
+YN,municipal water,municipal water,1975,0,NA
+ZJ,municipal water,municipal water,1975,0,NA

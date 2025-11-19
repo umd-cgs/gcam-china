@@ -1,0 +1,40 @@
+# File: L245.Supplysector_CHINA.csv
+# Title: logit exponent for supplysector municipal water
+# Units: NA
+# Description: A selection of columns from the input water assumptions
+# Column types: cccccnnc
+# ----------
+region,supplysector,output.unit,input.unit,price.unit,logit.year.fillout,logit.exponent,logit.type
+AH,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+BJ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+CQ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+FJ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+GD,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+GS,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+GX,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+GZ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+HA,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+HB,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+HE,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+HI,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+HK,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+HL,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+HN,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+JL,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+JS,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+JX,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+LN,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+MC,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+NM,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+NX,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+QH,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+SC,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+SD,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+SH,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+SN,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+SX,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+TJ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+XJ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+XZ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+YN,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
+ZJ,municipal water,km^3,km^3,1975$/m^3,1975,0,NA
