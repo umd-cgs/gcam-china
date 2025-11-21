@@ -116,6 +116,8 @@ module_water_L271.desalination <- function(command, ...) {
       mutate(coefficient = round(approx_fun(year, coefficient), energy.DIGITS_COEFFICIENT)) %>%
       ungroup() %>%
       filter(year %in% MODEL_YEARS) %>%
+      # Yang Liu filter all non-energy input（seawater）
+      filter(minicam.energy.input == "seawater") %>%
       rename(sector.name = supplysector, subsector.name = subsector) %>%
       select(LEVEL2_DATA_NAMES[["GlobalTechCoef"]])
 
