@@ -5,7 +5,7 @@
 # Column types: ccnn
 # ----------
 region,energy.final.demand,year,price.elasticity
-AH,municipal water,2020,-0.326188149
+AH,municipal water,2021,-0.326188149
 AH,municipal water,2025,-0.326188149
 AH,municipal water,2030,-0.326188149
 AH,municipal water,2035,-0.326188149
@@ -22,7 +22,7 @@ AH,municipal water,2085,-0.326188149
 AH,municipal water,2090,-0.326188149
 AH,municipal water,2095,-0.326188149
 AH,municipal water,2100,-0.326188149
-BJ,municipal water,2020,-0.326188149
+BJ,municipal water,2021,-0.326188149
 BJ,municipal water,2025,-0.326188149
 BJ,municipal water,2030,-0.326188149
 BJ,municipal water,2035,-0.326188149
@@ -39,7 +39,7 @@ BJ,municipal water,2085,-0.326188149
 BJ,municipal water,2090,-0.326188149
 BJ,municipal water,2095,-0.326188149
 BJ,municipal water,2100,-0.326188149
-CQ,municipal water,2020,-0.326188149
+CQ,municipal water,2021,-0.326188149
 CQ,municipal water,2025,-0.326188149
 CQ,municipal water,2030,-0.326188149
 CQ,municipal water,2035,-0.326188149
@@ -56,7 +56,7 @@ CQ,municipal water,2085,-0.326188149
 CQ,municipal water,2090,-0.326188149
 CQ,municipal water,2095,-0.326188149
 CQ,municipal water,2100,-0.326188149
-FJ,municipal water,2020,-0.326188149
+FJ,municipal water,2021,-0.326188149
 FJ,municipal water,2025,-0.326188149
 FJ,municipal water,2030,-0.326188149
 FJ,municipal water,2035,-0.326188149
@@ -73,7 +73,7 @@ FJ,municipal water,2085,-0.326188149
 FJ,municipal water,2090,-0.326188149
 FJ,municipal water,2095,-0.326188149
 FJ,municipal water,2100,-0.326188149
-GD,municipal water,2020,-0.326188149
+GD,municipal water,2021,-0.326188149
 GD,municipal water,2025,-0.326188149
 GD,municipal water,2030,-0.326188149
 GD,municipal water,2035,-0.326188149
@@ -90,7 +90,7 @@ GD,municipal water,2085,-0.326188149
 GD,municipal water,2090,-0.326188149
 GD,municipal water,2095,-0.326188149
 GD,municipal water,2100,-0.326188149
-GS,municipal water,2020,-0.326188149
+GS,municipal water,2021,-0.326188149
 GS,municipal water,2025,-0.326188149
 GS,municipal water,2030,-0.326188149
 GS,municipal water,2035,-0.326188149
@@ -107,7 +107,7 @@ GS,municipal water,2085,-0.326188149
 GS,municipal water,2090,-0.326188149
 GS,municipal water,2095,-0.326188149
 GS,municipal water,2100,-0.326188149
-GX,municipal water,2020,-0.326188149
+GX,municipal water,2021,-0.326188149
 GX,municipal water,2025,-0.326188149
 GX,municipal water,2030,-0.326188149
 GX,municipal water,2035,-0.326188149
@@ -124,7 +124,7 @@ GX,municipal water,2085,-0.326188149
 GX,municipal water,2090,-0.326188149
 GX,municipal water,2095,-0.326188149
 GX,municipal water,2100,-0.326188149
-GZ,municipal water,2020,-0.326188149
+GZ,municipal water,2021,-0.326188149
 GZ,municipal water,2025,-0.326188149
 GZ,municipal water,2030,-0.326188149
 GZ,municipal water,2035,-0.326188149
@@ -141,7 +141,7 @@ GZ,municipal water,2085,-0.326188149
 GZ,municipal water,2090,-0.326188149
 GZ,municipal water,2095,-0.326188149
 GZ,municipal water,2100,-0.326188149
-HA,municipal water,2020,-0.326188149
+HA,municipal water,2021,-0.326188149
 HA,municipal water,2025,-0.326188149
 HA,municipal water,2030,-0.326188149
 HA,municipal water,2035,-0.326188149
@@ -158,7 +158,7 @@ HA,municipal water,2085,-0.326188149
 HA,municipal water,2090,-0.326188149
 HA,municipal water,2095,-0.326188149
 HA,municipal water,2100,-0.326188149
-HB,municipal water,2020,-0.326188149
+HB,municipal water,2021,-0.326188149
 HB,municipal water,2025,-0.326188149
 HB,municipal water,2030,-0.326188149
 HB,municipal water,2035,-0.326188149
@@ -175,7 +175,7 @@ HB,municipal water,2085,-0.326188149
 HB,municipal water,2090,-0.326188149
 HB,municipal water,2095,-0.326188149
 HB,municipal water,2100,-0.326188149
-HE,municipal water,2020,-0.326188149
+HE,municipal water,2021,-0.326188149
 HE,municipal water,2025,-0.326188149
 HE,municipal water,2030,-0.326188149
 HE,municipal water,2035,-0.326188149
@@ -192,7 +192,7 @@ HE,municipal water,2085,-0.326188149
 HE,municipal water,2090,-0.326188149
 HE,municipal water,2095,-0.326188149
 HE,municipal water,2100,-0.326188149
-HI,municipal water,2020,-0.326188149
+HI,municipal water,2021,-0.326188149
 HI,municipal water,2025,-0.326188149
 HI,municipal water,2030,-0.326188149
 HI,municipal water,2035,-0.326188149
@@ -209,7 +209,7 @@ HI,municipal water,2085,-0.326188149
 HI,municipal water,2090,-0.326188149
 HI,municipal water,2095,-0.326188149
 HI,municipal water,2100,-0.326188149
-HK,municipal water,2020,-0.326188149
+HK,municipal water,2021,-0.326188149
 HK,municipal water,2025,-0.326188149
 HK,municipal water,2030,-0.326188149
 HK,municipal water,2035,-0.326188149
@@ -226,7 +226,7 @@ HK,municipal water,2085,-0.326188149
 HK,municipal water,2090,-0.326188149
 HK,municipal water,2095,-0.326188149
 HK,municipal water,2100,-0.326188149
-HL,municipal water,2020,-0.326188149
+HL,municipal water,2021,-0.326188149
 HL,municipal water,2025,-0.326188149
 HL,municipal water,2030,-0.326188149
 HL,municipal water,2035,-0.326188149
@@ -243,7 +243,7 @@ HL,municipal water,2085,-0.326188149
 HL,municipal water,2090,-0.326188149
 HL,municipal water,2095,-0.326188149
 HL,municipal water,2100,-0.326188149
-HN,municipal water,2020,-0.326188149
+HN,municipal water,2021,-0.326188149
 HN,municipal water,2025,-0.326188149
 HN,municipal water,2030,-0.326188149
 HN,municipal water,2035,-0.326188149
@@ -260,7 +260,7 @@ HN,municipal water,2085,-0.326188149
 HN,municipal water,2090,-0.326188149
 HN,municipal water,2095,-0.326188149
 HN,municipal water,2100,-0.326188149
-JL,municipal water,2020,-0.326188149
+JL,municipal water,2021,-0.326188149
 JL,municipal water,2025,-0.326188149
 JL,municipal water,2030,-0.326188149
 JL,municipal water,2035,-0.326188149
@@ -277,7 +277,7 @@ JL,municipal water,2085,-0.326188149
 JL,municipal water,2090,-0.326188149
 JL,municipal water,2095,-0.326188149
 JL,municipal water,2100,-0.326188149
-JS,municipal water,2020,-0.326188149
+JS,municipal water,2021,-0.326188149
 JS,municipal water,2025,-0.326188149
 JS,municipal water,2030,-0.326188149
 JS,municipal water,2035,-0.326188149
@@ -294,7 +294,7 @@ JS,municipal water,2085,-0.326188149
 JS,municipal water,2090,-0.326188149
 JS,municipal water,2095,-0.326188149
 JS,municipal water,2100,-0.326188149
-JX,municipal water,2020,-0.326188149
+JX,municipal water,2021,-0.326188149
 JX,municipal water,2025,-0.326188149
 JX,municipal water,2030,-0.326188149
 JX,municipal water,2035,-0.326188149
@@ -311,7 +311,7 @@ JX,municipal water,2085,-0.326188149
 JX,municipal water,2090,-0.326188149
 JX,municipal water,2095,-0.326188149
 JX,municipal water,2100,-0.326188149
-LN,municipal water,2020,-0.326188149
+LN,municipal water,2021,-0.326188149
 LN,municipal water,2025,-0.326188149
 LN,municipal water,2030,-0.326188149
 LN,municipal water,2035,-0.326188149
@@ -328,7 +328,7 @@ LN,municipal water,2085,-0.326188149
 LN,municipal water,2090,-0.326188149
 LN,municipal water,2095,-0.326188149
 LN,municipal water,2100,-0.326188149
-MC,municipal water,2020,-0.326188149
+MC,municipal water,2021,-0.326188149
 MC,municipal water,2025,-0.326188149
 MC,municipal water,2030,-0.326188149
 MC,municipal water,2035,-0.326188149
@@ -345,7 +345,7 @@ MC,municipal water,2085,-0.326188149
 MC,municipal water,2090,-0.326188149
 MC,municipal water,2095,-0.326188149
 MC,municipal water,2100,-0.326188149
-NM,municipal water,2020,-0.326188149
+NM,municipal water,2021,-0.326188149
 NM,municipal water,2025,-0.326188149
 NM,municipal water,2030,-0.326188149
 NM,municipal water,2035,-0.326188149
@@ -362,7 +362,7 @@ NM,municipal water,2085,-0.326188149
 NM,municipal water,2090,-0.326188149
 NM,municipal water,2095,-0.326188149
 NM,municipal water,2100,-0.326188149
-NX,municipal water,2020,-0.326188149
+NX,municipal water,2021,-0.326188149
 NX,municipal water,2025,-0.326188149
 NX,municipal water,2030,-0.326188149
 NX,municipal water,2035,-0.326188149
@@ -379,7 +379,7 @@ NX,municipal water,2085,-0.326188149
 NX,municipal water,2090,-0.326188149
 NX,municipal water,2095,-0.326188149
 NX,municipal water,2100,-0.326188149
-QH,municipal water,2020,-0.326188149
+QH,municipal water,2021,-0.326188149
 QH,municipal water,2025,-0.326188149
 QH,municipal water,2030,-0.326188149
 QH,municipal water,2035,-0.326188149
@@ -396,7 +396,7 @@ QH,municipal water,2085,-0.326188149
 QH,municipal water,2090,-0.326188149
 QH,municipal water,2095,-0.326188149
 QH,municipal water,2100,-0.326188149
-SC,municipal water,2020,-0.326188149
+SC,municipal water,2021,-0.326188149
 SC,municipal water,2025,-0.326188149
 SC,municipal water,2030,-0.326188149
 SC,municipal water,2035,-0.326188149
@@ -413,7 +413,7 @@ SC,municipal water,2085,-0.326188149
 SC,municipal water,2090,-0.326188149
 SC,municipal water,2095,-0.326188149
 SC,municipal water,2100,-0.326188149
-SD,municipal water,2020,-0.326188149
+SD,municipal water,2021,-0.326188149
 SD,municipal water,2025,-0.326188149
 SD,municipal water,2030,-0.326188149
 SD,municipal water,2035,-0.326188149
@@ -430,7 +430,7 @@ SD,municipal water,2085,-0.326188149
 SD,municipal water,2090,-0.326188149
 SD,municipal water,2095,-0.326188149
 SD,municipal water,2100,-0.326188149
-SH,municipal water,2020,-0.326188149
+SH,municipal water,2021,-0.326188149
 SH,municipal water,2025,-0.326188149
 SH,municipal water,2030,-0.326188149
 SH,municipal water,2035,-0.326188149
@@ -447,7 +447,7 @@ SH,municipal water,2085,-0.326188149
 SH,municipal water,2090,-0.326188149
 SH,municipal water,2095,-0.326188149
 SH,municipal water,2100,-0.326188149
-SN,municipal water,2020,-0.326188149
+SN,municipal water,2021,-0.326188149
 SN,municipal water,2025,-0.326188149
 SN,municipal water,2030,-0.326188149
 SN,municipal water,2035,-0.326188149
@@ -464,7 +464,7 @@ SN,municipal water,2085,-0.326188149
 SN,municipal water,2090,-0.326188149
 SN,municipal water,2095,-0.326188149
 SN,municipal water,2100,-0.326188149
-SX,municipal water,2020,-0.326188149
+SX,municipal water,2021,-0.326188149
 SX,municipal water,2025,-0.326188149
 SX,municipal water,2030,-0.326188149
 SX,municipal water,2035,-0.326188149
@@ -481,7 +481,7 @@ SX,municipal water,2085,-0.326188149
 SX,municipal water,2090,-0.326188149
 SX,municipal water,2095,-0.326188149
 SX,municipal water,2100,-0.326188149
-TJ,municipal water,2020,-0.326188149
+TJ,municipal water,2021,-0.326188149
 TJ,municipal water,2025,-0.326188149
 TJ,municipal water,2030,-0.326188149
 TJ,municipal water,2035,-0.326188149
@@ -498,7 +498,7 @@ TJ,municipal water,2085,-0.326188149
 TJ,municipal water,2090,-0.326188149
 TJ,municipal water,2095,-0.326188149
 TJ,municipal water,2100,-0.326188149
-XJ,municipal water,2020,-0.326188149
+XJ,municipal water,2021,-0.326188149
 XJ,municipal water,2025,-0.326188149
 XJ,municipal water,2030,-0.326188149
 XJ,municipal water,2035,-0.326188149
@@ -515,7 +515,7 @@ XJ,municipal water,2085,-0.326188149
 XJ,municipal water,2090,-0.326188149
 XJ,municipal water,2095,-0.326188149
 XJ,municipal water,2100,-0.326188149
-XZ,municipal water,2020,-0.326188149
+XZ,municipal water,2021,-0.326188149
 XZ,municipal water,2025,-0.326188149
 XZ,municipal water,2030,-0.326188149
 XZ,municipal water,2035,-0.326188149
@@ -532,7 +532,7 @@ XZ,municipal water,2085,-0.326188149
 XZ,municipal water,2090,-0.326188149
 XZ,municipal water,2095,-0.326188149
 XZ,municipal water,2100,-0.326188149
-YN,municipal water,2020,-0.326188149
+YN,municipal water,2021,-0.326188149
 YN,municipal water,2025,-0.326188149
 YN,municipal water,2030,-0.326188149
 YN,municipal water,2035,-0.326188149
@@ -549,7 +549,7 @@ YN,municipal water,2085,-0.326188149
 YN,municipal water,2090,-0.326188149
 YN,municipal water,2095,-0.326188149
 YN,municipal water,2100,-0.326188149
-ZJ,municipal water,2020,-0.326188149
+ZJ,municipal water,2021,-0.326188149
 ZJ,municipal water,2025,-0.326188149
 ZJ,municipal water,2030,-0.326188149
 ZJ,municipal water,2035,-0.326188149

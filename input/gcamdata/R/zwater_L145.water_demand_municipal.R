@@ -153,7 +153,7 @@ module_water_L145.water_demand_municipal <- function(command, ...) {
 
     L145.municipal_water_china_C_Yh_km3 <- L245.TechCoef_CHINA %>%
       select(region, year, minicam.energy.input, coefficient) %>%
-      filter(year %in% c(1975, 1990, 2005, 2010, 2015), minicam.energy.input == "water_td_muni_C") %>%
+      filter(year %in% c(1975, 1990, 2005, 2010, 2015, 2021), minicam.energy.input == "water_td_muni_C") %>%
       left_join(select(L245.BaseService_CHINA, region, year, base.service), by = c("region", "year")) %>%
       mutate(base.service = coefficient * base.service) %>%
       select(region, year, base.service) %>%

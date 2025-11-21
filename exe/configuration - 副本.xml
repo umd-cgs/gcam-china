@@ -5,7 +5,7 @@
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb1121w</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb1120w</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="1" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -22,10 +22,11 @@
 		<Value name = "resources">../input/gcamdata/xml/resources.xml</Value>
 		<Value name = "energy_supply">../input/gcamdata/xml/en_supply.xml</Value>
 		<Value name = "energy_transformation">../input/gcamdata/xml/en_transformation.xml</Value>
-		<Value name = "elec_water_base">../input/gcamdata/xml/electricity_water.xml</Value-->
+		<!--Value name = "electricity">../input/gcamdata/xml/electricity_without_desalwater.xml</Value-->
+		<Value name = "elec_water_base">../input/gcamdata/xml/electricity_water.xml</Value>
 		<Value name = "heat">../input/gcamdata/xml/heat.xml</Value>
-		<Value name = "hydrogen">../input/gcamdata/xml/hydrogen_without_water.xml</Value-->
-		<!--Value name = "hydrogen">../input/gcamdata/xml/hydrogen.xml</Value-->
+		<!--Value name = "hydrogen">../input/gcamdata/xml/hydrogen_without_water.xml</Value-->
+		<Value name = "hydrogen">../input/gcamdata/xml/hydrogen.xml</Value>
 		<Value name = "energy_distribution">../input/gcamdata/xml/en_distribution.xml</Value>
 
 
@@ -68,8 +69,7 @@
 		<Value name = "protected_land2">../input/gcamdata/xml/protected_land_input_2.xml</Value>
 		<Value name = "protected_land3">../input/gcamdata/xml/protected_land_input_3.xml</Value>
 		<Value name = "demand">../input/gcamdata/xml/ag_an_demand_input.xml</Value>
-		<Value name = "demand_paper">../input/gcamdata/xml/paper_delete_ag_demand.xml</Value-->
-		<!--Value name = "demand_paper">../input/gcamdata/xml/paper_delete_ag_demand_China.xml</Value-->
+		<Value name = "demand_paper">../input/gcamdata/xml/paper_delete_ag_demand_China.xml</Value>
 		<Value name = "bio_trade">../input/gcamdata/xml/bio_trade.xml</Value>
 		<Value name = "ag_trade">../input/gcamdata/xml/ag_trade.xml</Value>
 		
@@ -79,12 +79,12 @@
 		<Value name = "water_supply">../input/gcamdata/xml/water_supply_constrained.xml</Value>
 		<Value name = "water_desal">../input/gcamdata/xml/desalination.xml</Value>	
 		<Value name = "water_td">../input/gcamdata/xml/water_td.xml</Value>
-		<Value name = "efw_coefs">../input/gcamdata/xml/EFW_input_coefs.xml</Value>
-		<Value name = "efw_irr">../input/gcamdata/xml/EFW_irrigation.xml</Value>
-		<Value name = "efw_mfg">../input/gcamdata/xml/EFW_manufacturing.xml</Value>
-		<Value name = "efw_muni">../input/gcamdata/xml/EFW_municipal.xml</Value-->
-		<Value name = "ag_water">../input/gcamdata/xml/ag_water_input_IRR_MGMT.xml</Value-->
-        <!--Value name = "ag_water_china">../input/gcamdata/xml/ag_water_input_IRR_MGMT_China_C.xml</Value-->
+		<!--Value name = "efw_coefs">../input/gcamdata/xml/EFW_input_coefs.xml</Value>
+		<!--Value name = "efw_irr">../input/gcamdata/xml/EFW_irrigation.xml</Value>
+		<!--Value name = "efw_mfg">../input/gcamdata/xml/EFW_manufacturing.xml</Value>
+		<!--Value name = "efw_muni">../input/gcamdata/xml/EFW_municipal.xml</Value-->
+		<!--Value name = "ag_water">../input/gcamdata/xml/ag_water_input_IRR_MGMT.xml</Value-->
+        <Value name = "ag_water_china">../input/gcamdata/xml/ag_water_input_IRR_MGMT_China_C.xml</Value-->
 		<Value name = "elec_water_coef">../input/gcamdata/xml/electricity_water_coefs.xml</Value>
 		<Value name = "ind_water">../input/gcamdata/xml/water_demand_industry.xml</Value>
 		<Value name = "an_water">../input/gcamdata/xml/water_demand_livestock.xml</Value>
@@ -110,8 +110,8 @@
 		<!--Value name = "macro">../input/gcamdata/xml/socioeconomics_macro.xml</Value-->
 		
 		<Value name = "bio_feedstock_limit">../input/gcamdata/xml/liquids_limits.xml</Value>
-		<!--Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget.xml</Value-->
-		<Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value>
+		<Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget.xml</Value>
+		<Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value-->
 		<Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
 		
         <Value name = "gas_trade">../input/gcamdata/xml/gas_trade.xml</Value>   
@@ -119,7 +119,7 @@
         <Value name = "prune_ag">../input/gcamdata/xml/prune_empty_ag.xml</Value>
 
 
-		<!--Value name = "socio_china">../input/gcamdata/xml/socioeconomics_CHINA.xml</Value>
+		<Value name = "socio_china">../input/gcamdata/xml/socioeconomics_CHINA.xml</Value>
 
 		<Value name = "rsrc_china">../input/gcamdata/xml/resources_CHINA.xml</Value>
 		<Value name = "Cstorage_china">../input/gcamdata/xml/Cstorage_CHINA.xml</Value>
@@ -148,17 +148,17 @@
 		<Value name = "regional_biomass">../input/gcamdata/xml/regional_biomass_CHINA.xml</Value>
 
 		<!--WATER DATA-->
-		<!--Value name = "water_td_china">../input/gcamdata/xml/water_td_CHINA.xml</Value>
+		<Value name = "water_td_china">../input/gcamdata/xml/water_td_CHINA.xml</Value>
 		<Value name = "municipal_water_china">../input/gcamdata/xml/water_demand_municipal_CHINA.xml</Value>
 		<Value name = "ind_water_china">../input/gcamdata/xml/water_demand_industry_CHINA.xml</Value>
 		<Value name = "ele_water_china">../input/gcamdata/xml/water_demand_electricity_CHINA.xml</Value>
 		<!--GHG EMISSIONS China--> 
-		<!--Value name = "ghg_china">../input/gcamdata/xml/ghg_emissions_CHINA.xml</Value> 
+		<Value name = "ghg_china">../input/gcamdata/xml/ghg_emissions_CHINA.xml</Value> 
 		<Value name = "ghg_china">../input/gcamdata/xml/trn_ghg_emissions_CHINA.xml</Value>
 
 
 		<!--delete HK MC  -->
-		<!--Value name = "delete_china">../input/extra/delete_invalid_provinces.xml</Value>
+		<Value name = "delete_china">../input/extra/delete_invalid_provinces.xml</Value>
 			
 		
 		

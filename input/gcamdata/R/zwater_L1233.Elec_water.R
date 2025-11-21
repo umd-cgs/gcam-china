@@ -230,7 +230,7 @@ module_water_L1233.Elec_water <- function(command, ...) {
       left_join(china_elec_water_average_coef,
                 by=c("water_type","year"))%>%
       mutate(value = if_else(
-        GCAM_region_ID == 11 & year %in% c(1990, 2005, 2010, 2015),
+        GCAM_region_ID == 11 & year %in% c(1990, 2005, 2010, 2015,2021),
         value * china_wdraw,
         value * water_withdrawals / CONV_MWH_GJ)) %>%
       select(-water_withdrawals, - water_consumption) -> L1233.wdraw_km3_R_elec_F_tech_Yh_cool
@@ -247,7 +247,7 @@ module_water_L1233.Elec_water <- function(command, ...) {
       left_join(china_elec_water_average_coef,
                 by=c("water_type","year"))%>%
       mutate(value = if_else(
-        GCAM_region_ID == 11 & year %in% c(1990, 2005, 2010, 2015),
+        GCAM_region_ID == 11 & year %in% c(1990, 2005, 2010, 2015,2021),
         value * china_wcons,
         value * water_consumption / CONV_MWH_GJ)) %>%
       select(-water_withdrawals, - water_consumption) -> L1233.wcons_km3_R_elec_F_tech_Yh_cool
