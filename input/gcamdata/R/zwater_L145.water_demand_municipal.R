@@ -23,8 +23,8 @@ module_water_L145.water_demand_municipal <- function(command, ...) {
              FILE = "water/IBNET_municipal_water_cost_USDm3",
              FILE = "water/municipal_water_use_efficiency",
              FILE = "water/mfg_water_mapping",
-             FILE = "gcam-china/L245.BaseService_CHINA",
-             FILE = "gcam-china/L245.TechCoef_CHINA",
+             #FILE = "gcam-china/L245.BaseService_CHINA",
+             #FILE = "gcam-china/L245.TechCoef_CHINA",
              "L100.Pop_thous_ctry_Yh"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L145.municipal_water_ctry_W_Yh_km3",
@@ -47,8 +47,8 @@ module_water_L145.water_demand_municipal <- function(command, ...) {
     IBNET_municipal_water_cost_USDm3 <- get_data(all_data, "water/IBNET_municipal_water_cost_USDm3")
     municipal_water_use_efficiency <- get_data(all_data, "water/municipal_water_use_efficiency")
     mfg_water_mapping <- get_data(all_data, "water/mfg_water_mapping")
-    L245.BaseService_CHINA <- get_data(all_data, "gcam-china/L245.BaseService_CHINA")
-    L245.TechCoef_CHINA <- get_data(all_data, "gcam-china/L245.TechCoef_CHINA")
+    #L245.BaseService_CHINA <- get_data(all_data, "gcam-china/L245.BaseService_CHINA")
+    #L245.TechCoef_CHINA <- get_data(all_data, "gcam-china/L245.TechCoef_CHINA")
     L100.Pop_thous_ctry_Yh <- get_data(all_data, "L100.Pop_thous_ctry_Yh")
 
     # The first sequence just cleans and completes the data. Because the years in Aquastat may be more recent than the
@@ -143,37 +143,37 @@ module_water_L145.water_demand_municipal <- function(command, ...) {
       mutate(consumption = efficiency * withdrawals)
 
     # Calculate china's water withdrawals, consumption, coefficient
-    L145.municipal_water_china_W_Yh_km3 <- L245.BaseService_CHINA %>%
-      select(region, year, base.service) %>%
-      group_by(year) %>%
-      summarise(base.service = sum(base.service, na.rm = TRUE)) %>%
-      mutate(iso = "chn") %>%
-      select(iso, year, withdrawals = base.service)
+    # L145.municipal_water_china_W_Yh_km3 <- L245.BaseService_CHINA %>%
+    #   select(region, year, base.service) %>%
+    #   group_by(year) %>%
+    #   summarise(base.service = sum(base.service, na.rm = TRUE)) %>%
+    #   mutate(iso = "chn") %>%
+    #   select(iso, year, withdrawals = base.service)
 
 
-    L145.municipal_water_china_C_Yh_km3 <- L245.TechCoef_CHINA %>%
-      select(region, year, minicam.energy.input, coefficient) %>%
-      filter(year %in% c(1975, 1990, 2005, 2010, 2015, 2021), minicam.energy.input == "water_td_muni_C") %>%
-      left_join(select(L245.BaseService_CHINA, region, year, base.service), by = c("region", "year")) %>%
-      mutate(base.service = coefficient * base.service) %>%
-      select(region, year, base.service) %>%
-      group_by(year) %>%
-      summarise(base.service = sum(base.service, na.rm = TRUE)) %>%
-      mutate(iso = "chn") %>%
-      select(iso, year, consumption = base.service)
+    # L145.municipal_water_china_C_Yh_km3 <- L245.TechCoef_CHINA %>%
+    #   select(region, year, minicam.energy.input, coefficient) %>%
+    #   filter(year %in% c(1975, 1990, 2005, 2010, 2015, 2021), minicam.energy.input == "water_td_muni_C") %>%
+    #   left_join(select(L245.BaseService_CHINA, region, year, base.service), by = c("region", "year")) %>%
+    #   mutate(base.service = coefficient * base.service) %>%
+    #   select(region, year, base.service) %>%
+    #   group_by(year) %>%
+    #   summarise(base.service = sum(base.service, na.rm = TRUE)) %>%
+    #   mutate(iso = "chn") %>%
+    #   select(iso, year, consumption = base.service)
 
-    L145.municipal_water_china_Yh_km3 <- L145.municipal_water_china_W_Yh_km3 %>%
-      full_join(L145.municipal_water_china_C_Yh_km3, by = c("iso", "year")) %>%
-      select(iso, year, withdrawals, consumption) %>%
-      mutate(efficiency = consumption / withdrawals  )
+    # L145.municipal_water_china_Yh_km3 <- L145.municipal_water_china_W_Yh_km3 %>%
+    #   full_join(L145.municipal_water_china_C_Yh_km3, by = c("iso", "year")) %>%
+    #   select(iso, year, withdrawals, consumption) %>%
+    #   mutate(efficiency = consumption / withdrawals  )
 
-    L145.municipal_water_ctry_ALL_Yh_km3 <- L145.municipal_water_ctry_ALL_Yh_km3 %>%
-      left_join(select(L145.municipal_water_china_Yh_km3, iso, year, withdrawals, consumption, efficiency),
-                by = c("iso", "year")) %>%
-      mutate(withdrawals = if_else(is.na(withdrawals.y), withdrawals.x, withdrawals.y),
-             consumption = if_else(is.na(consumption.y), consumption.x, consumption.y),
-             efficiency = if_else(is.na(efficiency.y), efficiency.x, efficiency.y)) %>%
-      select(-withdrawals.x, -withdrawals.y, -consumption.x, -consumption.y, -efficiency.x, -efficiency.y)
+    # L145.municipal_water_ctry_ALL_Yh_km3 <- L145.municipal_water_ctry_ALL_Yh_km3 %>%
+    #   left_join(select(L145.municipal_water_china_Yh_km3, iso, year, withdrawals, consumption, efficiency),
+    #             by = c("iso", "year")) %>%
+    #   mutate(withdrawals = if_else(is.na(withdrawals.y), withdrawals.x, withdrawals.y),
+    #          consumption = if_else(is.na(consumption.y), consumption.x, consumption.y),
+    #          efficiency = if_else(is.na(efficiency.y), efficiency.x, efficiency.y)) %>%
+    #   select(-withdrawals.x, -withdrawals.y, -consumption.x, -consumption.y, -efficiency.x, -efficiency.y)
 
      L145.municipal_water_R_ALL_Yh_km3 <-
       left_join(L145.municipal_water_ctry_ALL_Yh_km3,

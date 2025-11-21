@@ -177,8 +177,8 @@ module_water_L203.water_td <- function(command, ...) {
     L203.ag_IrrEff_R <- left_join(L165.ag_IrrEff_R, GCAM_region_names, by = "GCAM_region_ID") %>%
       select(region, conveyance.eff)
 
-    L203.ag_IrrEff_R <- L203.ag_IrrEff_R %>%
-      mutate(conveyance.eff = if_else(region == "China", 1, conveyance.eff))
+    #L203.ag_IrrEff_R <- L203.ag_IrrEff_R %>%
+    #  mutate(conveyance.eff = if_else(region == "China", 1, conveyance.eff))
 
     L203.TechCoef_watertd <- L203.water_td_info %>%
       repeat_add_columns(tibble(year = MODEL_YEARS)) %>%
@@ -300,10 +300,10 @@ module_water_L203.water_td <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["Production"]])
 
     #South Asia, GangesR, calibration (20250620)
-    L203.Production_watertd <- L203.Production_watertd %>%
-      mutate(calOutputValue = if_else(
-        region == "South Asia" & supplysector == "water_td_elec_W" & subsector == "GangesR" & technology == "water withdrawals" & year == 1990,
-        0.06611, calOutputValue))
+    #L203.Production_watertd <- L203.Production_watertd %>%
+    #  mutate(calOutputValue = if_else(
+    #    region == "South Asia" & supplysector == "water_td_elec_W" & subsector == "GangesR" & technology == "water withdrawals" & year == 1990,
+    #    0.06611, calOutputValue))
 
     # Final step - build desalination pass-through sectors, for tracking the use of desalinated water by basin
     L203.R_desal_basin <- L171.share_R_desal_basin %>%

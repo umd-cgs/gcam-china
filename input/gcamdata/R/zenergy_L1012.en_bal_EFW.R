@@ -233,7 +233,7 @@ module_energy_L1012.en_bal_EFW <- function(command, ...) {
 
     # Nov 2023,YO
 
-    #L1012.en_bal_EJ_R_Si_Fi_Yh <- L1011.en_bal_EJ_R_Si_Fi_Yh
+    L1012.en_bal_EJ_R_Si_Fi_Yh <- L1011.en_bal_EJ_R_Si_Fi_Yh
     # ===================================================
 
     # Produce outputs
