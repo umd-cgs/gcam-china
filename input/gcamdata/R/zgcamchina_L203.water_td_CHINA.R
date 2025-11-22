@@ -133,12 +133,17 @@ module_gcamchina_L203.water_td_CHINA <- function(command, ...) {
       L203.mapping_irr_region
 
     # We must now set all subsectors in China from gcam-core and water_mapping.xml to 0 so that we do not double count
-    # demands
+    # demands. However, we need to keep the basin-level subsectors for irrigation to satisfy China region agriculture demands.
+    # Create basin-level subsectors for irrigation with proper share weights and market names pointing to provinces
     L203.mapping_irr_region %>%
       bind_rows(L203.mapping_irr_region %>%
+                  # For irrigation, we need basin-level subsectors in China region to satisfy agriculture demands
+                  # These will get supply from provinces via market.name set in TechCoef
+                  filter(grepl("irr", supplysector)) %>%
                   mutate(subsector = basin_name,
                          technology = basin_name,
-                         share.weight = 0,
+                         share.weight = gcamchina.DEFAULT_SHAREWEIGHT,
+                         # market.name will be set correctly in TechCoef to point to provinces
                          market.name = gcamchina.REGION)) ->
       L203.mapping_irr_region
 
@@ -157,10 +162,12 @@ module_gcamchina_L203.water_td_CHINA <- function(command, ...) {
       L203.mapping_irr_province
 
     # Combine province and China region irrigation mappings
+    # Keep basin-level subsectors in China region for irrigation (they are needed to satisfy agriculture demands)
     bind_rows(
       L203.mapping_irr_region %>%
-        ## filter out basin name subsectors
-        filter(subsector %in% gcamchina.PROVINCES_NOHKMC),
+        ## Keep province subsectors and irrigation basin-level subsectors
+        filter(subsector %in% gcamchina.PROVINCES_NOHKMC | 
+               (region == gcamchina.REGION & grepl("irr", supplysector) & !(subsector %in% gcamchina.PROVINCES_NOHKMC))),
       L203.mapping_irr_province
     ) ->
       L203.mapping_irr
@@ -301,16 +308,14 @@ module_gcamchina_L203.water_td_CHINA <- function(command, ...) {
       L203.DeleteResTechInput_CHINA
 
     ## We delete the basin level subsectors in the China region
-    ## to eliminate double counting of irrigation, livestock,
-    ## and primary energy. This overrides the mappings from
-    ## water_mapping.XML and maps directly to the provinces.
-    L203.mapping_irr_region %>%
+    ## to eliminate double counting of livestock and primary energy.
+    ## However, we MUST keep irrigation basin-level subsectors because
+    ## China region agriculture technologies need them.
+    ## This overrides the mappings from water_mapping.XML and maps directly to the provinces.
+    L203.mapping_primary_region %>%
       filter(!subsector %in% gcamchina.PROVINCES_NOHKMC) %>%
       select(region,supplysector,subsector) %>%
       bind_rows(
-        L203.mapping_primary_region %>%
-          filter(!subsector %in% gcamchina.PROVINCES_NOHKMC) %>%
-          select(region,supplysector,subsector),
         L203.mapping_livestock%>%
           filter(!subsector %in% gcamchina.PROVINCES_NOHKMC) %>%
           select(region,supplysector,subsector)
@@ -348,13 +353,22 @@ module_gcamchina_L203.water_td_CHINA <- function(command, ...) {
 
     # Define market name and minicam energy input dependent upon whether the sector is
     # produced at the province level or is we map from China region to province
+    # For China region irrigation basin-level subsectors, market.name should point to China region
+    # to aggregate supply from all provinces that have this basin
     L203.mapping_all %>%
       complete(nesting(region, supplysector, subsector, technology, water.sector, basin_name, water_type, coefficient),
                year = c(year, MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
       mutate(minicam.energy.input = if_else((region == gcamchina.REGION & grepl("water_td", technology)),
                                             supplysector,
                                             paste0(basin_name, "_", water_type)),
-             market.name = if_else((region == gcamchina.REGION & grepl("water_td", technology)), subsector, gcamchina.REGION)) %>%
+             # For China region irrigation with basin-level subsectors, use China region as market
+             # For China region irrigation with province subsectors, use province as market
+             # For province regions, use China region as market
+             market.name = if_else((region == gcamchina.REGION & grepl("water_td", technology) & !(subsector %in% gcamchina.PROVINCES_NOHKMC)),
+                                  gcamchina.REGION,
+                                  if_else((region == gcamchina.REGION & grepl("water_td", technology)),
+                                         subsector,
+                                         gcamchina.REGION))) %>%
       dplyr::filter(!is.na(year)) %>%
       select(LEVEL2_DATA_NAMES[["TechCoef"]]) ->
       L203.TechCoef_CHINA
