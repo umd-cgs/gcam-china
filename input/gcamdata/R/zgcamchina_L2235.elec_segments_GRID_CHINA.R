@@ -421,7 +421,7 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
       select(-grid_exports, -grid_imports) ->
       grid_trade_ratio
 
-    # TODO: the current trade flow data have some issues, need to find a better source
+    # TODO: the current trade flow data have some issues, need to find a better source 9th Dec 2025 Hongzhi Zhang
 
     # L2235.elec_flows_GRID %>%
     #   left_join_error_no_match(grid_trade_ratio, by=c("year"="Year","grid_region"="import_grid")) %>%
@@ -430,16 +430,60 @@ module_gcamchina_L2235.elec_segments_GRID <- function(command, ...) {
     #                            if_else( imports == 0, (exports/e2i_ratio)-exports, imports)),
     #     exports_new = if_else( exports >0, exports/e2i_ratio,
     #                            if_else( exports == 0, (imports/i2e_ratio)-imports, exports)),
-    #     ## The data does not line up in the New York Grid yielding INF so we revert back to previous trade
+         ## The data does not line up in the New York Grid yielding INF so we revert back to previous trade
     #     imports_new = if_else(imports_new >50,imports,imports_new),
     #     exports_new = if_else(exports_new >50,exports,exports_new)) %>%
     #   select(-imports,-exports, -i2e_ratio, -e2i_ratio) %>%
     #   rename(exports=exports_new,
     #          imports=imports_new) %>%
-    #   ## Reassign net.supply to be used as net ownuse to reflect change
-    #   ## in imports by grid region
+       ## Reassign net.supply to be used as net ownuse to reflect change
+       ## in imports by grid region
     #   mutate(net.supply = consumption - imports) ->
     #   L2235.elec_flows_GRID
+
+
+    # Define a cutoff year for applying new trade logic
+    cutoff_year <- 2005
+
+    L2235.elec_flows_GRID <- L2235.elec_flows_GRID %>%
+      mutate(
+        imports_new = imports,
+        exports_new = exports
+      ) %>%
+      left_join(grid_trade_ratio, by=c("year"="Year","grid_region"="import_grid")) %>%
+      mutate(
+        imports_new = if_else(
+          year >= cutoff_year & imports > 0, imports / i2e_ratio,
+          if_else(
+            year >= cutoff_year & imports == 0, (exports / e2i_ratio) - exports,
+            imports_new
+          )
+        ),
+        exports_new = if_else(
+          year >= cutoff_year & exports > 0, exports / e2i_ratio,
+          if_else(
+            year >= cutoff_year & exports == 0, (imports / i2e_ratio) - imports,
+            exports_new
+          )
+        ),
+        imports_new = if_else(imports_new > 50, imports, imports_new),
+        exports_new = if_else(exports_new > 50, exports, exports_new)
+      ) %>%
+      select(-imports,-exports,-i2e_ratio,-e2i_ratio) %>%
+      rename(
+        imports = imports_new,
+        exports = exports_new
+      ) %>%
+      mutate(
+        net.supply = if_else(year >= cutoff_year, consumption - imports, net.supply)
+      )
+
+
+
+
+
+
+
 
     # Calibrated exports of electricity from grid regions to shared CHINA region
     L2235.elec_flows_GRID %>%
