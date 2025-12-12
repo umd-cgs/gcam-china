@@ -10,7 +10,7 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_exoShutdownScalar.xml}.
 module_policy_exoShutdownScalar_xml <- function(command, ...) {
-  all_xml_names <- get_xml_names("gcam-china/A_ExoShutdownScalar.csv", "policy_exoShutdownScalar.xml")
+  all_xml_names <- get_xml_names("gcam-china/A_ExoShutdownScalar.csv")
 
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "gcam-china/A_ExoShutdownScalar"))
@@ -61,3 +61,4 @@ module_policy_exoShutdownScalar_xml <- function(command, ...) {
     stop("Unknown command")
   }
 }
+
