@@ -18,6 +18,19 @@
 #' @return A "data structure" to hold the various parts needed to run the model
 #' interface CSV to XML conversion.
 #' @export
+
+return_multiple_xmls <- function(list_of_xmls, all_xml_names) {
+  # for(xml_name in all_xml_names){
+  #   list_of_xmls[[xml_name]] <- get(xml_name)
+  # }
+  names(list_of_xmls) <- all_xml_names
+  outlist <- sapply(list_of_xmls, return_data)
+  names(outlist) <- all_xml_names
+
+  outlist
+}
+
+
 create_xml <- function(xml_file, mi_header = NULL) {
   if(is.null(mi_header)) {
     mi_header <- system.file("extdata/mi_headers", "ModelInterface_headers.txt",
