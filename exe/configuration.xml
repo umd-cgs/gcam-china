@@ -154,7 +154,7 @@
 		
        <!--Value name = "dac">../input/gcamdata/xml/dac_ssp3.xml</Value>
 		<Value name = "DAC">../input/gcamdata/xml/dac_china_ssp3.xml</Value-->
-
+       <Value name = "nuclear_exo">../input/gcamdata/xml/policy_nuclear_chn.xml</Value>
 	</ScenarioComponents>
 	<Strings>
 		<Value name="scenarioName">Reference</Value>
