@@ -685,6 +685,8 @@ GHGConstrLinkAdj, world/+{name}region, region/+{name}linked-ghg-policy, linked-g
 
 GHGConstrLinkMkt, world/+{name}region, region/+{name}linked-ghg-policy, linked-ghg-policy/+market, linked-ghg-policy/+linked-policy, scenario, scenario, scenario/world, world/region
 
+ExoShutdown, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}exogenous-shutdown-decider, exogenous-shutdown-decider/+{year}output-scalar, exogenous-shutdown-decider/+output-scalar, scenario, scenario/world
+
 #####, LAND ALLOCATOR
 
 
