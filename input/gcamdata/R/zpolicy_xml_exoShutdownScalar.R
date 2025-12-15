@@ -31,7 +31,7 @@ module_policy_exoShutdownScalar_xml <- function(command, ...) {
 
       assign(xml_name,
              create_xml(xml_name) %>%
-               add_xml_data(L307.exoShutdownScalar_tmp, "ExoShutdown",column_order_lookup = NULL) %>%
+               add_xml_data(L307.exoShutdownScalar_tmp, "ExoShutdown") %>%
                add_precursors("L307.exoShutdownScalar")
       )
     }
@@ -46,3 +46,4 @@ module_policy_exoShutdownScalar_xml <- function(command, ...) {
     stop("Unknown command")
   }
 }
+
