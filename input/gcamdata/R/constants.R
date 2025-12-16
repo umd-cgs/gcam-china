@@ -575,7 +575,7 @@ energy.INTERNAL_GAINS_SCALAR_USA_H <- -930
 energy.INTERNAL_GAINS_SCALAR_USA_C <- 350
 
 #using USA values here
-energy.INTERNAL_GAINS_SCALAR_CHINA_H <- -200
+energy.INTERNAL_GAINS_SCALAR_CHINA_H <- -930
 energy.INTERNAL_GAINS_SCALAR_CHINA_C <- 350
 
 # Used to avoid negative/zero energy when disaggregating detailed industries (cement, fertilizer)
