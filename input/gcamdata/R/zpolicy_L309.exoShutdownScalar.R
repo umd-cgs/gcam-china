@@ -37,7 +37,8 @@ module_policy_307.exoShutdownScalar <- function(command, ...) {
     L307.exoShutdownScalar %>%
       add_title("Exogenous shutdown decider scalars", overwrite = T) %>%
       add_units("Proportion of vintage") %>%
-      add_precursors("gcam-china/A_ExoShutdownScalar") ->
+      add_precursors("gcam-china/A_ExoShutdownScalar") %>%
+      add_comments("Exogenous shutdown decider scalars")->
       L307.exoShutdownScalar
 
     return_data(L307.exoShutdownScalar)
