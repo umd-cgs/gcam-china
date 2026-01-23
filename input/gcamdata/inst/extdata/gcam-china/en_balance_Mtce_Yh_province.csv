@@ -2,7 +2,7 @@
 # Title: energy balance by province
 # Units: Mtce
 # Comments: China prvincial energy balance
-# Source: China statistical yearbook via LBL China Energy Databook v9(before 2014, 2015 data is same with 2014)
+# Source: China statistical yearbook via LBL China Energy Databook v9(before 2014, 2015 data is same with 2014),2021 data from China Energy Statistical Yearbook
 # Column types: ciccn
 # ----------
 province.name,year,EBMaterial,EBProcess,value

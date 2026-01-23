@@ -1,8 +1,8 @@
-# File: future_hydro_gen_EJ.csv
+# File: future_hydro_gen_EJ_adv.csv
 # Title: Planned hydro electricity generation
 # Units: EJ
 # Description: Planned hydro electricity generation
-"# Source:  WEO 2019 Sustainable Development Scenario;2020,2021 from NEA"
+"# Source: 2020,2021 values are derived from NEA;Other data are derived from WEO 2019 Sustainable Development Scenario."
 # Column types: nn
 # ----------
 year,value
