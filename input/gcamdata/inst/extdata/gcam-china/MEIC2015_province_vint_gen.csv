@@ -1,0 +1,38 @@
+# File: MEIC2015_province_vint_gen.csv
+# Title: Existing coal electricity generation data from 2015 for Chinese provinces for use in vintaging
+# Units: unknown
+# Comments: Units may be 100GWh but require confirmation    data is from Tsinghua University's MEIC model
+# Column types: cnnnnnnnn
+province.name,install<=1990,1990<install<=1995,1995<install<=2000,2000<install<=2005,2005<install<=2010,2010<install<=2015,2015<install<=2021,total
+Anhui,55,42,85,138,842,734,734,2630
+Beijing,28,14,119,3,0,0,0,164
+Fujian,19,9,107,144,432,271,271,1253
+Gansu,25,24,38,77,325,200,200,889
+Guangdong,99,144,271,328,827,639,639,2947
+Guangxi,3,18,44,47,231,109,109,561
+Guizhou,6,0,27,214,382,303,303,1235
+Hainan,0,0,17,6,101,72,72,268
+Hebei,120,159,236,240,944,285,285,2269
+Henan,30,44,97,343,979,603,603,2699
+Heilongjiang,112,46,98,83,267,124,124,854
+Hubei,21,25,158,62,370,235,235,1106
+Hunan,11,38,32,100,380,93,93,747
+Jilin,25,44,34,44,310,84,84,625
+Jiangsu,132,117,255,865,1346,961,961,4637
+Jiangxi,2,11,88,50,381,180,180,892
+Liaoning,83,69,232,87,591,180,180,1422
+Inner Mongolia,77,65,112,545,1732,742,742,4015
+Ningxia,2,35,35,93,510,239,239,1153
+Qinghai,0,7,22,10,60,26,26,151
+Shandong,162,185,334,712,1511,1295,1295,5494
+Shanxi,79,65,126,421,855,502,502,2550
+Shaanxi,35,50,90,215,649,246,246,1531
+Shanghai,103,103,62,112,305,0,0,685
+Sichuan,21,9,16,36,181,98,98,459
+Tianjin,55,81,67,82,237,55,55,632
+Xinjiang,18,23,35,49,317,1696,1696,3834
+Yunnan,1,0,31,39,113,42,42,268
+Zhejiang,49,102,148,301,917,436,436,2389
+Chongqing,3,23,26,21,124,163,163,523
+Tibet,0,0,0,0,0,0,0,0
+Hong Kong,0,0,0,0,0,0,0,0
