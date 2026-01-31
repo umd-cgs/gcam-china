@@ -238,11 +238,11 @@ module_emissions_L241.fgas <- function(command, ...) {
 
     # A temporary fix for JGCRI-506
     L241.hfc_all %>%
-      filter(year <= 2015) ->
+      filter(year <= 2021) ->
       L241.hfc_all
 
     L241.pfc_all %>%
-      filter(year <= 2015) ->
+      filter(year <= 2021) ->
       L241.pfc_all
 
     L241.hfc_all %>%

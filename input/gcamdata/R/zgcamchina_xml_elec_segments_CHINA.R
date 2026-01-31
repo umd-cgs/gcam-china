@@ -53,6 +53,7 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
              "L2234.TechShrwt_elecS_grid_CHINA",
              "L2234.TechCoef_elecS_grid_CHINA",
              "L2234.TechProd_elecS_grid_CHINA",
+             #"L2234.StubTechTrackCapital_elecS_CHINA",
              "L2235.DeleteSupplysector_elec_CHINA",
              "L2235.InterestRate_GRID_CHINA",
              "L2235.Pop_GRID_CHINA",
@@ -107,6 +108,8 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
     L2234.StubTechEff_elecS_CHINA <- get_data(all_data, "L2234.StubTechEff_elecS_CHINA")
     L2234.StubTechCapFactor_elecS_solar_CHINA <- get_data(all_data, "L2234.StubTechCapFactor_elecS_solar_CHINA")
     L2234.StubTechCapFactor_elecS_wind_CHINA <- get_data(all_data, "L2234.StubTechCapFactor_elecS_wind_CHINA")
+    #L2234.StubTechTrackCapital_elecS_CHINA <- get_data(all_data, "L2234.StubTechTrackCapital_elecS_CHINA")
+
     L2234.SubsectorShrwtFllt_elecS_grid_CHINA <- get_data(all_data, "L2234.SubsectorShrwtFllt_elecS_grid_CHINA")
     L2234.SubsectorShrwtInterp_elecS_grid_CHINA <- get_data(all_data, "L2234.SubsectorShrwtInterp_elecS_grid_CHINA")
     L2234.PassThroughSector_elecS_CHINA <- get_data(all_data, "L2234.PassThroughSector_elecS_CHINA")
@@ -283,6 +286,7 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
       #add_xml_data(L2234.SubsectorShrwtFllt_elecS_CHINA, "SubsectorFllt") %>%
       add_xml_data(L2234.StubTechCapFactor_elecS_wind_CHINA, "StubTechCapFactor") %>%
       add_xml_data(L2234.StubTechCapFactor_elecS_solar_CHINA, "StubTechCapFactor") %>%
+      #add_xml_data(L2234.StubTechTrackCapital_elecS_CHINA, "StubTechTrackCapital") %>%
       add_xml_data(L2234.StubTechFixOut_elecS_CHINA, "StubTechFixOut") %>%
       add_xml_data(L2234.StubTechEff_elecS_CHINA, "StubTechEff") %>%
       add_xml_data(L2234.StubTechFixOut_hydro_elecS_CHINA, "StubTechFixOut") %>%
@@ -325,6 +329,7 @@ module_gcamchina_elec_segments_xml <- function(command, ...) {
                      "L2234.StubTechEff_elecS_CHINA",
                      "L2234.StubTechCapFactor_elecS_solar_CHINA",
                      "L2234.StubTechCapFactor_elecS_wind_CHINA",
+                     #"L2234.StubTechTrackCapital_elecS_CHINA",
                      "L2234.SubsectorShrwtFllt_elecS_grid_CHINA",
                      "L2234.SubsectorShrwtInterp_elecS_grid_CHINA",
                      "L2234.PassThroughSector_elecS_CHINA",

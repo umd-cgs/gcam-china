@@ -83,6 +83,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       		   "L223.GlobalIntTechValueFactor_elec",
              "L223.PrimaryRenewKeyword_elec",
              "L223.PrimaryRenewKeywordInt_elec",
+      		   "L223.StubTechCapFactor_elec_CHINA",
              "L223.AvgFossilEffKeyword_elec"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(
@@ -95,6 +96,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
              "L2234.StubTechEff_elecS_CHINA",
              "L2234.StubTechCapFactor_elecS_solar_CHINA",
              "L2234.StubTechCapFactor_elecS_wind_CHINA",
+             #"L2234.StubTechTrackCapital_elecS_CHINA",
              "L2234.SubsectorShrwtFllt_elecS_grid_CHINA",
              "L2234.SubsectorShrwtInterp_elecS_grid_CHINA",
              "L2234.PassThroughSector_elecS_CHINA",
@@ -204,7 +206,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
     L223.PrimaryRenewKeyword_elec <- get_data(all_data, "L223.PrimaryRenewKeyword_elec", strip_attributes = TRUE)
     L223.PrimaryRenewKeywordInt_elec <- get_data(all_data, "L223.PrimaryRenewKeywordInt_elec", strip_attributes = TRUE)
     L223.AvgFossilEffKeyword_elec <- get_data(all_data, "L223.AvgFossilEffKeyword_elec", strip_attributes = TRUE)
-
+    L223.StubTechCapFactor_elec_CHINA <- get_data(all_data, "L223.StubTechCapFactor_elec_CHINA", strip_attributes = TRUE)
     # ===================================================
     # Data Processing
 
@@ -382,6 +384,12 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       select(-supplysector, -subsector_1, -technology, -sector.name ) %>%
       rename(supplysector = Electric.sector, technology = Electric.sector.technology) -> L2234.GlobalTechCapital_elecS
 
+
+
+
+
+
+
     # Read in lower capacity factors for non-baseload technologies. The fractions are based on the
     # elecS_time_fraction data on the fraction of demand supplied by vertical segment
     L2234.int_CF_adj <- round(sum(mean(elecS_time_fraction$intermediate.electricity.time) +
@@ -414,6 +422,8 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       select(-supplysector, -subsector_1, -intermittent.technology, -sector.name) %>%
       rename(supplysector = Electric.sector, intermittent.technology = Electric.sector.intermittent.technology) ->
       L2234.GlobalIntTechCapital_elecS
+
+
 
     # O&M Costs of detailed electric sector technologies
     A23.elecS_tech_mapping %>%
@@ -1064,7 +1074,32 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
       anti_join(A10.renewable_resource_delete,
                 by = c("region", "subsector" = "resource_elec_subsector")) -> L2234.StubTechProd_elecS_CHINA
 
-    # Create tables for non-energy and energy inputs for any new technologies such as battery
+
+
+
+    #23rd Nov,2025, xsl
+    # some adjustments for rooftop_pv because it does not have vintaging we need to switch
+    # from a input.capital to a standard non-energy input and add assumptions about
+    # depreciation to be able to properly calculate capital demands
+
+    #L223.StubTechCapFactor_elec_CHINA %>%
+    #  filter(stub.technology == "rooftop_pv") %>%
+    #  left_join_error_no_match(L2234.GlobalIntTechCapital_elecS, by=c("supplysector" = "supplysector",
+    #                                                                  "subsector" = "subsector",
+    #                                                                  "stub.technology" = "intermittent.technology",
+    #                                                                  "year")) %>%
+    #  mutate(input.cost = capital.overnight * fixed.charge.rate / (capacity.factor * CONV_YEAR_HOURS * CONV_KWH_GJ),
+    #         capital.coef = 1 / fixed.charge.rate,
+    #         tracking.market = "capital",
+    #         depreciation.rate = 1 / 15) %>%
+    #  select(-capacity.factor, -capital.overnight, -fixed.charge.rate)%>%
+    #  rename(minicam.non.energy.input = input.capital)->
+    #  L2234.StubTechTrackCapital_elecS_CHINA
+
+    ##########
+
+
+        # Create tables for non-energy and energy inputs for any new technologies such as battery
     # and append them with corresponding tables
     L113.elecS_globaltech_capital_battery_ATB %>%
       select(supplysector, subsector, technology, year = period, capacity.factor) -> L2234.GlobalTechCapFac_elecS_additonal
@@ -1114,11 +1149,6 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
         input.OM.fixed,
         OM.fixed
       )
-
-
-
-
-
 
     L113.elecS_globaltech_capital_battery_ATB %>%
       mutate(input.OM.var = "OM-var") %>%
@@ -1449,6 +1479,16 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
                      "gcam-china/A23.elecS_tech_availability",
                      "L223.StubTechCapFactor_elec_wind_CHINA") ->
       L2234.StubTechCapFactor_elecS_wind_CHINA
+
+    #L2234.StubTechTrackCapital_elecS_CHINA %>%
+    #  add_title("Stub tech to treat capital tracking for rooftop_pv seperately") %>%
+    #  add_units("1975$/GJ") %>%
+    #  add_comments("Since rooftop_pv does not have vintaging we need to track its capital") %>%
+    #  add_comments("with explicit assumptions about depreciation.") %>%
+    #  add_precursors("L223.StubTechCapFactor_elec", "L223.GlobalIntTechCapital_elec") ->
+    #  L2234.StubTechTrackCapital_elecS_CHINA
+
+
 
     L2234.SubsectorShrwtFllt_elecS_grid %>%
       add_title("Electricity Load Segments Grid Region Subsector Shareweights") %>%
@@ -1816,6 +1856,7 @@ module_gcamchina_L2234.elec_segments <- function(command, ...) {
                 L2234.StubTechEff_elecS_CHINA,
                 L2234.StubTechCapFactor_elecS_solar_CHINA,
                 L2234.StubTechCapFactor_elecS_wind_CHINA,
+                #L2234.StubTechTrackCapital_elecS_CHINA,
                 L2234.SubsectorShrwtFllt_elecS_grid_CHINA,
                 L2234.SubsectorShrwtInterp_elecS_grid_CHINA,
                 L2234.PassThroughSector_elecS_CHINA,
