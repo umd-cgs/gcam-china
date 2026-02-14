@@ -40,7 +40,6 @@
 
 #include <cstring>
 #include <fstream>
-#include "logger/include/gcam_logger.h"
 #include "util/base/include/manage_state_variables.hpp"
 #include "util/base/include/value.h"
 #include "containers/include/scenario.h"
