@@ -302,6 +302,13 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
       check
     }
 
+    root_finder <- function(func, interval,...) {
+        result <- tryCatch(uniroot(func, interval,...), error = function(e) NULL)
+        if (!is.null(result))
+          return(result$root)
+        else
+          return(100)
+      }
 
     # Calculate total electricity generation by year / grid region
     L1236.out_EJ_grid_elec_F %>%
@@ -519,8 +526,17 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             }
 
             #Solve for int
-            L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
-
+            L1236.solved_fraction_int <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+            
+            if(L1236.solved_fraction_int>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning intermediate demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_int$root=0
+            }else{
+              L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+            }
 
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_INT, L1236.solved_fraction_int$root) -> L1236.grid_elec_supply
@@ -532,26 +548,20 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
               replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
             #Solve for sub-peak
-            root_finder <- function(func, interval,...) {
-              result <- tryCatch(uniroot(func, interval,...), error = function(e) NULL)
-              if (!is.null(result))
-                return(result$root)
-              else
-                return(100)
-            }
+            L1236.solved_fraction_subpeak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
-
-            if(L1236.solved_fraction>0.5){
-
-              L1236.solved_fraction$root=0.06
-
+            if(L1236.solved_fraction_subpeak>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_subpeak$root=0
             }else{
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+              L1236.solved_fraction_subpeak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction_subpeak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
@@ -559,19 +569,28 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+            #Solve for peak
+            L1236.solved_fraction_peak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
-            if(L1236.solved_fraction>0.5){
-
-              L1236.solved_fraction$root=0.01
-
+            if(L1236.solved_fraction_peak>0.5){
+              if (i == "coal"){
+                #print(L1236.region)
+                #print(segment_year)
+                #print(i)
+                #print("Warning peak demand could not solve. So, setting it to a pre-determined value")
+                L1236.solved_fraction_peak$root=0.01
+              } else if (i == "hydro") {
+                #print(L1236.region)
+                #print(segment_year)
+                #print(i)
+                #print("Warning peak demand could not solve. So, setting it to a pre-determined value")
+                L1236.solved_fraction_peak$root=0
+              }
             }else{
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
-
+              L1236.solved_fraction_peak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
             }
-
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction_peak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
@@ -619,8 +638,18 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("solar", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("solar", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
 
-            #Solve for int
-            L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+            #Solve for intermediate
+            L1236.solved_fraction_int <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+            
+            if(L1236.solved_fraction_int>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning intermediate demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_int$root=0
+            }else{
+              L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
+            }
 
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_INT, L1236.solved_fraction_int$root) -> L1236.grid_elec_supply
@@ -630,28 +659,22 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
 
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
-
+            
             #Solve for sub-peak
-            root_finder <- function(func, interval,...) {
-              result <- tryCatch(uniroot(func, interval,...), error = function(e) NULL)
-              if (!is.null(result))
-                return(result$root)
-              else
-                return(100)
-            }
+            L1236.solved_fraction_subpeak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
-
-            if(L1236.solved_fraction>0.5){
-
-              L1236.solved_fraction$root=0.06
-
+            if(L1236.solved_fraction_subpeak>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_subpeak$root=0
             }else{
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+              L1236.solved_fraction_subpeak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction_subpeak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
@@ -659,19 +682,22 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+            #Solve for peak
+            L1236.solved_fraction_peak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
-            if(L1236.solved_fraction>0.5){
-
-              L1236.solved_fraction$root=0.01
-
+            if(L1236.solved_fraction_peak>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning peak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_peak$root=0
             }else{
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+              L1236.solved_fraction_peak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction_peak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
@@ -721,8 +747,12 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             #Solve for int
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
-            if(L1236.solved_fraction_int$root>0.5){
-              L1236.solved_fraction_int$root=0.3
+            if(L1236.solved_fraction_int$root>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning intermediate demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_int$root=0
             }else{
               L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
@@ -738,17 +768,20 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
               replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
             #Solve for sub-peak
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+            L1236.solved_fraction_subpeak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
-            if(L1236.solved_fraction>0.5){
-              L1236.solved_fraction$root=0.06
+            if(L1236.solved_fraction_subpeak>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_subpeak$root=0
             }else{
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
-
+              L1236.solved_fraction_subpeak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction_subpeak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
@@ -756,17 +789,22 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+            #Solve for peak
+            L1236.solved_fraction_peak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
-            if(L1236.solved_fraction>0.5){
-              L1236.solved_fraction$root=0.01
+            if(L1236.solved_fraction_peak>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning peak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_peak$root=0.01
             }else{
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+              L1236.solved_fraction_peak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction_peak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
@@ -797,20 +835,17 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
 
-            #Solve for int
+            #Solve for intermediate
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
-            if(L1236.solved_fraction_int$root>0.5){
-              # these print statements are helpful to identify which fuel/year/region is not fully solved for fuel allocation
-              print(L1236.region)
-              print(segment_year)
-              print(i)
-              print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
-              L1236.solved_fraction_int$root=0.3
+            if(L1236.solved_fraction_int$root>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning intermediate demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_int$root=0
             }else{
-
               L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
-
             }
 
             L1236.grid_elec_supply %>%
@@ -823,23 +858,21 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
               replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
             #Solve for sub-peak
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+            L1236.solved_fraction_subpeak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
-            if(L1236.solved_fraction>0.5){
+            if(L1236.solved_fraction_subpeak>1){
               # these print statements are helpful to identify which fuel/year/region is not fully solved for fuel allocation
-              print(L1236.region)
-              print(segment_year)
-              print(i)
-              print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
-              L1236.solved_fraction$root=0.06
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_subpeak$root=0
             }else{
-
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
-
+              L1236.solved_fraction_subpeak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction_subpeak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
@@ -847,23 +880,22 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+            #Solve for peak
+            L1236.solved_fraction_peak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
-            if(L1236.solved_fraction>0.5){
+            if(L1236.solved_fraction_peak>1){
               # these print statements are helpful to identify which fuel/year/region is not fully solved for fuel allocation
-              print(L1236.region)
-              print(segment_year)
-              print(i)
-              print("Warning peak demand could not solve. So, setting it to a pre-determined value")
-              L1236.solved_fraction$root=0.01
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning peak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_peak$root=0.01
             }else{
-
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
-
+              L1236.solved_fraction_peak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction_peak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
@@ -917,19 +949,17 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_SUBPEAK, 0) %>%
                 replace_fraction("refined liquids", gcamusa.ELEC_SEGMENT_PEAK, 0) -> L1236.grid_elec_supply}
 
-            #Solve for int
+            #Solve for intermediate
             L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
 
-            if(L1236.solved_fraction_int$root>0.5){
-              print(L1236.region)
-              print(segment_year)
-              print(i)
-              print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
-              L1236.solved_fraction_int$root=0.3
+            if(L1236.solved_fraction_int$root>1){
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning intermediate demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_int$root=0
             }else{
-
               L1236.solved_fraction_int <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamchina.ELEC_SEGMENT_INT, i)
-
             }
 
             L1236.grid_elec_supply %>%
@@ -942,23 +972,21 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
               replace_fraction(i, gcamusa.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
             #Solve for sub-peak
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
+            L1236.solved_fraction_subpeak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
 
-            if(L1236.solved_fraction>0.5){
+            if(L1236.solved_fraction_subpeak>1){
               # these print statements are helpful to identify which fuel/year/region is not fully solved for fuel allocation
-              print(L1236.region)
-              print(segment_year)
-              print(i)
-              print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
-              L1236.solved_fraction$root=0.06
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning subpeak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_subpeak$root=0
             }else{
-
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
-
+              L1236.solved_fraction_subpeak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_SUBPEAK, i)
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_SUBPEAK, L1236.solved_fraction_subpeak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamchina.ELEC_SEGMENT_BASE) -> L1236.non_base
@@ -966,23 +994,22 @@ module_gcamchina_L1236.elec_load_segments_solver <- function(command, ...) {
             L1236.grid_elec_supply %>%
               replace_fraction(i, gcamchina.ELEC_SEGMENT_BASE, 1 - L1236.non_base) -> L1236.grid_elec_supply
 
-            L1236.solved_fraction <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
+            #Solve for peak
+            L1236.solved_fraction_peak <- root_finder(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
 
-            if(L1236.solved_fraction>0.5){
+            if(L1236.solved_fraction_peak>1){
               # these print statements are helpful to identify which fuel/year/region is not fully solved for fuel allocation
-              print(L1236.region)
-              print(segment_year)
-              print(i)
-              print("Warning peak demand could not solve. So, setting it to a pre-determined value")
-              L1236.solved_fraction$root=0.01
+              #print(L1236.region)
+              #print(segment_year)
+              #print(i)
+              #print("Warning peak demand could not solve. So, setting it to a pre-determined value")
+              L1236.solved_fraction_peak$root=0.01
             }else{
-
-              L1236.solved_fraction <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
-
+              L1236.solved_fraction_peak <- uniroot(check_elec_segments, c(0, 1), L1236.region, gcamusa.ELEC_SEGMENT_PEAK, i)
             }
 
             L1236.grid_elec_supply %>%
-              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction$root) -> L1236.grid_elec_supply
+              replace_fraction(i, gcamusa.ELEC_SEGMENT_PEAK, L1236.solved_fraction_peak$root) -> L1236.grid_elec_supply
 
             L1236.grid_elec_supply %>%
               calc_non_segment_frac(i, gcamusa.ELEC_SEGMENT_BASE) -> L1236.non_int
