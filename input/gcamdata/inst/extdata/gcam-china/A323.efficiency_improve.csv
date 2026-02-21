@@ -1,7 +1,7 @@
 # File: A323.efficiency_improve.csv
 # Title: energy efficiency improvement
 # Units: energy efficiency improve rate
-# Description: energy efficiency improvement compared to 2015. Provides a more convenient way to reflect future technological energy efficiency improvements.
+# Description: energy efficiency improvement compared to 2015. Provides a more convenient way to reflect future technological energy efficiency improvements.24/08/2025 xsl add 2021
 # Column types: ccccin
 # ----------
 supplysector,subsector,stub.technology,minicam.energy.input,year,improvement
@@ -10,7 +10,6 @@ agricultural energy use,biomass,biomass,delivered biomass,1990,1
 agricultural energy use,biomass,biomass,delivered biomass,2005,1
 agricultural energy use,biomass,biomass,delivered biomass,2010,1
 agricultural energy use,biomass,biomass,delivered biomass,2015,1
-agricultural energy use,biomass,biomass,delivered biomass,2020,1
 agricultural energy use,biomass,biomass,delivered biomass,2025,1
 agricultural energy use,biomass,biomass,delivered biomass,2030,1
 agricultural energy use,biomass,biomass,delivered biomass,2035,1
@@ -32,7 +31,6 @@ agricultural energy use,coal,coal,delivered coal,1990,1
 agricultural energy use,coal,coal,delivered coal,2005,1
 agricultural energy use,coal,coal,delivered coal,2010,1
 agricultural energy use,coal,coal,delivered coal,2015,1
-agricultural energy use,coal,coal,delivered coal,2020,1
 agricultural energy use,coal,coal,delivered coal,2025,1
 agricultural energy use,coal,coal,delivered coal,2030,1
 agricultural energy use,coal,coal,delivered coal,2035,1
@@ -54,7 +52,6 @@ agricultural energy use,district heat,district heat,district heat,1990,1
 agricultural energy use,district heat,district heat,district heat,2005,1
 agricultural energy use,district heat,district heat,district heat,2010,1
 agricultural energy use,district heat,district heat,district heat,2015,1
-agricultural energy use,district heat,district heat,district heat,2020,1
 agricultural energy use,district heat,district heat,district heat,2025,1
 agricultural energy use,district heat,district heat,district heat,2030,1
 agricultural energy use,district heat,district heat,district heat,2035,1
@@ -76,7 +73,6 @@ agricultural energy use,electricity,electricity,elect_td_ind,1990,1
 agricultural energy use,electricity,electricity,elect_td_ind,2005,1
 agricultural energy use,electricity,electricity,elect_td_ind,2010,1
 agricultural energy use,electricity,electricity,elect_td_ind,2015,1
-agricultural energy use,electricity,electricity,elect_td_ind,2020,1
 agricultural energy use,electricity,electricity,elect_td_ind,2025,1
 agricultural energy use,electricity,electricity,elect_td_ind,2030,1
 agricultural energy use,electricity,electricity,elect_td_ind,2035,1
@@ -98,7 +94,6 @@ agricultural energy use,gas,gas,wholesale gas,1990,1
 agricultural energy use,gas,gas,wholesale gas,2005,1
 agricultural energy use,gas,gas,wholesale gas,2010,1
 agricultural energy use,gas,gas,wholesale gas,2015,1
-agricultural energy use,gas,gas,wholesale gas,2020,1
 agricultural energy use,gas,gas,wholesale gas,2025,1
 agricultural energy use,gas,gas,wholesale gas,2030,1
 agricultural energy use,gas,gas,wholesale gas,2035,1
@@ -120,7 +115,6 @@ agricultural energy use,hydrogen,hydrogen,H2 industrial,1990,1
 agricultural energy use,hydrogen,hydrogen,H2 industrial,2005,1
 agricultural energy use,hydrogen,hydrogen,H2 industrial,2010,1
 agricultural energy use,hydrogen,hydrogen,H2 industrial,2015,1
-agricultural energy use,hydrogen,hydrogen,H2 industrial,2020,1
 agricultural energy use,hydrogen,hydrogen,H2 industrial,2025,1
 agricultural energy use,hydrogen,hydrogen,H2 industrial,2030,1
 agricultural energy use,hydrogen,hydrogen,H2 industrial,2035,1
@@ -142,7 +136,6 @@ agricultural energy use,liquid,liquid,refined liquids industrial,1990,1
 agricultural energy use,liquid,liquid,refined liquids industrial,2005,1
 agricultural energy use,liquid,liquid,refined liquids industrial,2010,1
 agricultural energy use,liquid,liquid,refined liquids industrial,2015,1
-agricultural energy use,liquid,liquid,refined liquids industrial,2020,1
 agricultural energy use,liquid,liquid,refined liquids industrial,2025,1
 agricultural energy use,liquid,liquid,refined liquids industrial,2030,1
 agricultural energy use,liquid,liquid,refined liquids industrial,2035,1
@@ -164,7 +157,6 @@ chemical energy use,biomass,biomass,delivered biomass,1990,1
 chemical energy use,biomass,biomass,delivered biomass,2005,1
 chemical energy use,biomass,biomass,delivered biomass,2010,1
 chemical energy use,biomass,biomass,delivered biomass,2015,1
-chemical energy use,biomass,biomass,delivered biomass,2020,1
 chemical energy use,biomass,biomass,delivered biomass,2025,1
 chemical energy use,biomass,biomass,delivered biomass,2030,1
 chemical energy use,biomass,biomass,delivered biomass,2035,1
@@ -186,7 +178,6 @@ chemical energy use,coal,coal,delivered coal,1990,1
 chemical energy use,coal,coal,delivered coal,2005,1
 chemical energy use,coal,coal,delivered coal,2010,1
 chemical energy use,coal,coal,delivered coal,2015,1
-chemical energy use,coal,coal,delivered coal,2020,1
 chemical energy use,coal,coal,delivered coal,2025,1
 chemical energy use,coal,coal,delivered coal,2030,1
 chemical energy use,coal,coal,delivered coal,2035,1
@@ -208,7 +199,6 @@ chemical energy use,coal,coal CCS,delivered coal,1990,1
 chemical energy use,coal,coal CCS,delivered coal,2005,1
 chemical energy use,coal,coal CCS,delivered coal,2010,1
 chemical energy use,coal,coal CCS,delivered coal,2015,1
-chemical energy use,coal,coal CCS,delivered coal,2020,1
 chemical energy use,coal,coal CCS,delivered coal,2025,1
 chemical energy use,coal,coal CCS,delivered coal,2030,1
 chemical energy use,coal,coal CCS,delivered coal,2035,1
@@ -230,7 +220,6 @@ chemical energy use,district heat,district heat,district heat,1990,1
 chemical energy use,district heat,district heat,district heat,2005,1
 chemical energy use,district heat,district heat,district heat,2010,1
 chemical energy use,district heat,district heat,district heat,2015,1
-chemical energy use,district heat,district heat,district heat,2020,1
 chemical energy use,district heat,district heat,district heat,2025,1
 chemical energy use,district heat,district heat,district heat,2030,1
 chemical energy use,district heat,district heat,district heat,2035,1
@@ -252,7 +241,6 @@ chemical energy use,electricity,electricity,elect_td_ind,1990,1
 chemical energy use,electricity,electricity,elect_td_ind,2005,1
 chemical energy use,electricity,electricity,elect_td_ind,2010,1
 chemical energy use,electricity,electricity,elect_td_ind,2015,1
-chemical energy use,electricity,electricity,elect_td_ind,2020,1
 chemical energy use,electricity,electricity,elect_td_ind,2025,1
 chemical energy use,electricity,electricity,elect_td_ind,2030,1
 chemical energy use,electricity,electricity,elect_td_ind,2035,1
@@ -274,7 +262,6 @@ chemical energy use,gas,gas,wholesale gas,1990,1
 chemical energy use,gas,gas,wholesale gas,2005,1
 chemical energy use,gas,gas,wholesale gas,2010,1
 chemical energy use,gas,gas,wholesale gas,2015,1
-chemical energy use,gas,gas,wholesale gas,2020,1
 chemical energy use,gas,gas,wholesale gas,2025,1
 chemical energy use,gas,gas,wholesale gas,2030,1
 chemical energy use,gas,gas,wholesale gas,2035,1
@@ -296,7 +283,6 @@ chemical energy use,gas,gas CCS,wholesale gas,1990,1
 chemical energy use,gas,gas CCS,wholesale gas,2005,1
 chemical energy use,gas,gas CCS,wholesale gas,2010,1
 chemical energy use,gas,gas CCS,wholesale gas,2015,1
-chemical energy use,gas,gas CCS,wholesale gas,2020,1
 chemical energy use,gas,gas CCS,wholesale gas,2025,1
 chemical energy use,gas,gas CCS,wholesale gas,2030,1
 chemical energy use,gas,gas CCS,wholesale gas,2035,1
@@ -318,7 +304,6 @@ chemical energy use,hydrogen,hydrogen,H2 industrial,1990,1
 chemical energy use,hydrogen,hydrogen,H2 industrial,2005,1
 chemical energy use,hydrogen,hydrogen,H2 industrial,2010,1
 chemical energy use,hydrogen,hydrogen,H2 industrial,2015,1
-chemical energy use,hydrogen,hydrogen,H2 industrial,2020,1
 chemical energy use,hydrogen,hydrogen,H2 industrial,2025,1
 chemical energy use,hydrogen,hydrogen,H2 industrial,2030,1
 chemical energy use,hydrogen,hydrogen,H2 industrial,2035,1
@@ -340,7 +325,6 @@ chemical energy use,liquid,liquid,refined liquids industrial,1990,1
 chemical energy use,liquid,liquid,refined liquids industrial,2005,1
 chemical energy use,liquid,liquid,refined liquids industrial,2010,1
 chemical energy use,liquid,liquid,refined liquids industrial,2015,1
-chemical energy use,liquid,liquid,refined liquids industrial,2020,1
 chemical energy use,liquid,liquid,refined liquids industrial,2025,1
 chemical energy use,liquid,liquid,refined liquids industrial,2030,1
 chemical energy use,liquid,liquid,refined liquids industrial,2035,1
@@ -362,7 +346,6 @@ chemical energy use,liquid,liquid CCS,refined liquids industrial,1990,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2005,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2010,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2015,1
-chemical energy use,liquid,liquid CCS,refined liquids industrial,2020,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2025,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2030,1
 chemical energy use,liquid,liquid CCS,refined liquids industrial,2035,1
@@ -384,7 +367,6 @@ chemical feedstocks,coal,coal,delivered coal,1990,1
 chemical feedstocks,coal,coal,delivered coal,2005,1
 chemical feedstocks,coal,coal,delivered coal,2010,1
 chemical feedstocks,coal,coal,delivered coal,2015,1
-chemical feedstocks,coal,coal,delivered coal,2020,1
 chemical feedstocks,coal,coal,delivered coal,2025,1
 chemical feedstocks,coal,coal,delivered coal,2030,1
 chemical feedstocks,coal,coal,delivered coal,2035,1
@@ -406,7 +388,6 @@ chemical feedstocks,gas,gas,wholesale gas,1990,1
 chemical feedstocks,gas,gas,wholesale gas,2005,1
 chemical feedstocks,gas,gas,wholesale gas,2010,1
 chemical feedstocks,gas,gas,wholesale gas,2015,1
-chemical feedstocks,gas,gas,wholesale gas,2020,1
 chemical feedstocks,gas,gas,wholesale gas,2025,1
 chemical feedstocks,gas,gas,wholesale gas,2030,1
 chemical feedstocks,gas,gas,wholesale gas,2035,1
@@ -428,7 +409,6 @@ chemical feedstocks,liquid,liquid,refined liquids industrial,1990,1
 chemical feedstocks,liquid,liquid,refined liquids industrial,2005,1
 chemical feedstocks,liquid,liquid,refined liquids industrial,2010,1
 chemical feedstocks,liquid,liquid,refined liquids industrial,2015,1
-chemical feedstocks,liquid,liquid,refined liquids industrial,2020,1
 chemical feedstocks,liquid,liquid,refined liquids industrial,2025,1
 chemical feedstocks,liquid,liquid,refined liquids industrial,2030,1
 chemical feedstocks,liquid,liquid,refined liquids industrial,2035,1
@@ -450,7 +430,6 @@ chemical,chemical,chemical,chemical energy use,1990,1
 chemical,chemical,chemical,chemical energy use,2005,1
 chemical,chemical,chemical,chemical energy use,2010,1
 chemical,chemical,chemical,chemical energy use,2015,1
-chemical,chemical,chemical,chemical energy use,2020,1
 chemical,chemical,chemical,chemical energy use,2025,1
 chemical,chemical,chemical,chemical energy use,2030,1
 chemical,chemical,chemical,chemical energy use,2035,1
@@ -472,7 +451,6 @@ chemical,chemical,chemical,chemical feedstocks,1990,1
 chemical,chemical,chemical,chemical feedstocks,2005,1
 chemical,chemical,chemical,chemical feedstocks,2010,1
 chemical,chemical,chemical,chemical feedstocks,2015,1
-chemical,chemical,chemical,chemical feedstocks,2020,1
 chemical,chemical,chemical,chemical feedstocks,2025,1
 chemical,chemical,chemical,chemical feedstocks,2030,1
 chemical,chemical,chemical,chemical feedstocks,2035,1
@@ -494,7 +472,6 @@ coke,coke,coke,delivered coal,1990,1
 coke,coke,coke,delivered coal,2005,1
 coke,coke,coke,delivered coal,2010,1
 coke,coke,coke,delivered coal,2015,1
-coke,coke,coke,delivered coal,2020,1
 coke,coke,coke,delivered coal,2025,1
 coke,coke,coke,delivered coal,2030,1
 coke,coke,coke,delivered coal,2035,1
@@ -516,7 +493,6 @@ coke,coke,coke,elect_td_ind,1990,1
 coke,coke,coke,elect_td_ind,2005,1
 coke,coke,coke,elect_td_ind,2010,1
 coke,coke,coke,elect_td_ind,2015,1
-coke,coke,coke,elect_td_ind,2020,1
 coke,coke,coke,elect_td_ind,2025,1
 coke,coke,coke,elect_td_ind,2030,1
 coke,coke,coke,elect_td_ind,2035,1
@@ -538,7 +514,6 @@ coke,coke,coke CCS,delivered coal,1990,1
 coke,coke,coke CCS,delivered coal,2005,1
 coke,coke,coke CCS,delivered coal,2010,1
 coke,coke,coke CCS,delivered coal,2015,1
-coke,coke,coke CCS,delivered coal,2020,1
 coke,coke,coke CCS,delivered coal,2025,1
 coke,coke,coke CCS,delivered coal,2030,1
 coke,coke,coke CCS,delivered coal,2035,1
@@ -560,7 +535,6 @@ coke,coke,coke CCS,elect_td_ind,1990,1
 coke,coke,coke CCS,elect_td_ind,2005,1
 coke,coke,coke CCS,elect_td_ind,2010,1
 coke,coke,coke CCS,elect_td_ind,2015,1
-coke,coke,coke CCS,elect_td_ind,2020,1
 coke,coke,coke CCS,elect_td_ind,2025,1
 coke,coke,coke CCS,elect_td_ind,2030,1
 coke,coke,coke CCS,elect_td_ind,2035,1
@@ -582,7 +556,6 @@ construction,construction,construction,construction energy use,1990,1
 construction,construction,construction,construction energy use,2005,1
 construction,construction,construction,construction energy use,2010,1
 construction,construction,construction,construction energy use,2015,1
-construction,construction,construction,construction energy use,2020,1
 construction,construction,construction,construction energy use,2025,1
 construction,construction,construction,construction energy use,2030,1
 construction,construction,construction,construction energy use,2035,1
@@ -604,7 +577,6 @@ construction,construction,construction,construction feedstocks,1990,1
 construction,construction,construction,construction feedstocks,2005,1
 construction,construction,construction,construction feedstocks,2010,1
 construction,construction,construction,construction feedstocks,2015,1
-construction,construction,construction,construction feedstocks,2020,1
 construction,construction,construction,construction feedstocks,2025,1
 construction,construction,construction,construction feedstocks,2030,1
 construction,construction,construction,construction feedstocks,2035,1
@@ -626,7 +598,6 @@ construction energy use,biomass,biomass,delivered biomass,1990,1
 construction energy use,biomass,biomass,delivered biomass,2005,1
 construction energy use,biomass,biomass,delivered biomass,2010,1
 construction energy use,biomass,biomass,delivered biomass,2015,1
-construction energy use,biomass,biomass,delivered biomass,2020,1
 construction energy use,biomass,biomass,delivered biomass,2025,1
 construction energy use,biomass,biomass,delivered biomass,2030,1
 construction energy use,biomass,biomass,delivered biomass,2035,1
@@ -648,7 +619,6 @@ construction energy use,coal,coal,delivered coal,1990,1
 construction energy use,coal,coal,delivered coal,2005,1
 construction energy use,coal,coal,delivered coal,2010,1
 construction energy use,coal,coal,delivered coal,2015,1
-construction energy use,coal,coal,delivered coal,2020,1
 construction energy use,coal,coal,delivered coal,2025,1
 construction energy use,coal,coal,delivered coal,2030,1
 construction energy use,coal,coal,delivered coal,2035,1
@@ -670,7 +640,6 @@ construction energy use,district heat,district heat,district heat,1990,1
 construction energy use,district heat,district heat,district heat,2005,1
 construction energy use,district heat,district heat,district heat,2010,1
 construction energy use,district heat,district heat,district heat,2015,1
-construction energy use,district heat,district heat,district heat,2020,1
 construction energy use,district heat,district heat,district heat,2025,1
 construction energy use,district heat,district heat,district heat,2030,1
 construction energy use,district heat,district heat,district heat,2035,1
@@ -692,7 +661,6 @@ construction energy use,electricity,electricity,elect_td_ind,1990,1
 construction energy use,electricity,electricity,elect_td_ind,2005,1
 construction energy use,electricity,electricity,elect_td_ind,2010,1
 construction energy use,electricity,electricity,elect_td_ind,2015,1
-construction energy use,electricity,electricity,elect_td_ind,2020,1
 construction energy use,electricity,electricity,elect_td_ind,2025,1
 construction energy use,electricity,electricity,elect_td_ind,2030,1
 construction energy use,electricity,electricity,elect_td_ind,2035,1
@@ -714,7 +682,6 @@ construction energy use,gas,gas,wholesale gas,1990,1
 construction energy use,gas,gas,wholesale gas,2005,1
 construction energy use,gas,gas,wholesale gas,2010,1
 construction energy use,gas,gas,wholesale gas,2015,1
-construction energy use,gas,gas,wholesale gas,2020,1
 construction energy use,gas,gas,wholesale gas,2025,1
 construction energy use,gas,gas,wholesale gas,2030,1
 construction energy use,gas,gas,wholesale gas,2035,1
@@ -736,7 +703,6 @@ construction energy use,hydrogen,hydrogen,H2 industrial,1990,1
 construction energy use,hydrogen,hydrogen,H2 industrial,2005,1
 construction energy use,hydrogen,hydrogen,H2 industrial,2010,1
 construction energy use,hydrogen,hydrogen,H2 industrial,2015,1
-construction energy use,hydrogen,hydrogen,H2 industrial,2020,1
 construction energy use,hydrogen,hydrogen,H2 industrial,2025,1
 construction energy use,hydrogen,hydrogen,H2 industrial,2030,1
 construction energy use,hydrogen,hydrogen,H2 industrial,2035,1
@@ -758,7 +724,6 @@ construction energy use,liquid,liquid,refined liquids industrial,1990,1
 construction energy use,liquid,liquid,refined liquids industrial,2005,1
 construction energy use,liquid,liquid,refined liquids industrial,2010,1
 construction energy use,liquid,liquid,refined liquids industrial,2015,1
-construction energy use,liquid,liquid,refined liquids industrial,2020,1
 construction energy use,liquid,liquid,refined liquids industrial,2025,1
 construction energy use,liquid,liquid,refined liquids industrial,2030,1
 construction energy use,liquid,liquid,refined liquids industrial,2035,1
@@ -780,7 +745,6 @@ construction feedstocks,coal,coal,delivered coal,1990,1
 construction feedstocks,coal,coal,delivered coal,2005,1
 construction feedstocks,coal,coal,delivered coal,2010,1
 construction feedstocks,coal,coal,delivered coal,2015,1
-construction feedstocks,coal,coal,delivered coal,2020,1
 construction feedstocks,coal,coal,delivered coal,2025,1
 construction feedstocks,coal,coal,delivered coal,2030,1
 construction feedstocks,coal,coal,delivered coal,2035,1
@@ -802,7 +766,6 @@ construction feedstocks,gas,gas,wholesale gas,1990,1
 construction feedstocks,gas,gas,wholesale gas,2005,1
 construction feedstocks,gas,gas,wholesale gas,2010,1
 construction feedstocks,gas,gas,wholesale gas,2015,1
-construction feedstocks,gas,gas,wholesale gas,2020,1
 construction feedstocks,gas,gas,wholesale gas,2025,1
 construction feedstocks,gas,gas,wholesale gas,2030,1
 construction feedstocks,gas,gas,wholesale gas,2035,1
@@ -824,7 +787,6 @@ construction feedstocks,liquid,liquid,refined liquids industrial,1990,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2005,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2010,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2015,1
-construction feedstocks,liquid,liquid,refined liquids industrial,2020,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2025,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2030,1
 construction feedstocks,liquid,liquid,refined liquids industrial,2035,1
@@ -846,7 +808,6 @@ iron and steel,BLASTFUR,Biomass-based,delivered biomass,1990,1
 iron and steel,BLASTFUR,Biomass-based,delivered biomass,2005,1
 iron and steel,BLASTFUR,Biomass-based,delivered biomass,2010,1
 iron and steel,BLASTFUR,Biomass-based,delivered biomass,2015,1
-iron and steel,BLASTFUR,Biomass-based,delivered biomass,2020,1
 iron and steel,BLASTFUR,Biomass-based,delivered biomass,2025,1
 iron and steel,BLASTFUR,Biomass-based,delivered biomass,2030,1
 iron and steel,BLASTFUR,Biomass-based,delivered biomass,2035,1
@@ -868,7 +829,6 @@ iron and steel,BLASTFUR,Biomass-based,elect_td_ind,1990,1
 iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2005,1
 iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2010,1
 iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2015,1
-iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2020,1
 iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2025,1
 iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2030,1
 iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2035,1
@@ -890,7 +850,6 @@ iron and steel,BLASTFUR,BLASTFUR,coke,1990,1
 iron and steel,BLASTFUR,BLASTFUR,coke,2005,1
 iron and steel,BLASTFUR,BLASTFUR,coke,2010,1
 iron and steel,BLASTFUR,BLASTFUR,coke,2015,1
-iron and steel,BLASTFUR,BLASTFUR,coke,2020,1
 iron and steel,BLASTFUR,BLASTFUR,coke,2025,1
 iron and steel,BLASTFUR,BLASTFUR,coke,2030,1
 iron and steel,BLASTFUR,BLASTFUR,coke,2035,1
@@ -912,7 +871,6 @@ iron and steel,BLASTFUR,BLASTFUR,delivered coal,1990,1
 iron and steel,BLASTFUR,BLASTFUR,delivered coal,2005,1
 iron and steel,BLASTFUR,BLASTFUR,delivered coal,2010,1
 iron and steel,BLASTFUR,BLASTFUR,delivered coal,2015,1
-iron and steel,BLASTFUR,BLASTFUR,delivered coal,2020,1
 iron and steel,BLASTFUR,BLASTFUR,delivered coal,2025,1
 iron and steel,BLASTFUR,BLASTFUR,delivered coal,2030,1
 iron and steel,BLASTFUR,BLASTFUR,delivered coal,2035,1
@@ -934,7 +892,6 @@ iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,1990,1
 iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2005,1
 iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2010,1
 iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2015,1
-iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2020,1
 iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2025,1
 iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2030,1
 iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2035,1
@@ -956,7 +913,6 @@ iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,1990,1
 iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2005,1
 iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2010,1
 iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2015,1
-iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2020,1
 iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2025,1
 iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2030,1
 iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2035,1
@@ -978,7 +934,6 @@ iron and steel,BLASTFUR,BLASTFUR CCS,coke,1990,1
 iron and steel,BLASTFUR,BLASTFUR CCS,coke,2005,1
 iron and steel,BLASTFUR,BLASTFUR CCS,coke,2010,1
 iron and steel,BLASTFUR,BLASTFUR CCS,coke,2015,1
-iron and steel,BLASTFUR,BLASTFUR CCS,coke,2020,1
 iron and steel,BLASTFUR,BLASTFUR CCS,coke,2025,1
 iron and steel,BLASTFUR,BLASTFUR CCS,coke,2030,1
 iron and steel,BLASTFUR,BLASTFUR CCS,coke,2035,1
@@ -1000,7 +955,6 @@ iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,1990,1
 iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2005,1
 iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2010,1
 iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2015,1
-iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2020,1
 iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2025,1
 iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2030,1
 iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2035,1
@@ -1022,7 +976,6 @@ iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,1990,1
 iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2005,1
 iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2010,1
 iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2015,1
-iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2020,1
 iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2025,1
 iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2030,1
 iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2035,1
@@ -1044,7 +997,6 @@ iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,1990,1
 iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2005,1
 iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2010,1
 iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2015,1
-iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2020,1
 iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2025,1
 iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2030,1
 iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2035,1
@@ -1066,7 +1018,6 @@ iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,1990,1
 iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2005,1
 iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2010,1
 iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2015,1
-iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2020,1
 iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2025,1
 iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2030,1
 iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2035,1
@@ -1088,7 +1039,6 @@ iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,1990,1
 iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2005,1
 iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2010,1
 iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2015,1
-iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2020,1
 iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2025,1
 iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2030,1
 iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2035,1
@@ -1110,7 +1060,6 @@ iron and steel,EAF with DRI,EAF with DRI,wholesale gas,1990,1
 iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2005,1
 iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2010,1
 iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2015,1
-iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2020,1
 iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2025,1
 iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2030,1
 iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2035,1
@@ -1132,7 +1081,6 @@ iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,1990,1
 iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2005,1
 iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2010,1
 iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2015,1
-iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2020,1
 iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2025,1
 iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2030,1
 iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2035,1
@@ -1154,7 +1102,6 @@ iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,1990,1
 iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2005,1
 iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2010,1
 iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2015,1
-iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2020,1
 iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2025,1
 iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2030,1
 iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2035,1
@@ -1176,7 +1123,6 @@ iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,1990,1
 iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2005,1
 iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2010,1
 iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2015,1
-iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2020,1
 iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2025,1
 iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2030,1
 iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2035,1
@@ -1198,7 +1144,6 @@ iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,1990,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2005,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2010,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2015,1
-iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2020,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2025,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2030,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2035,1
@@ -1220,7 +1165,6 @@ iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,1990,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2005,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2010,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2015,1
-iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2020,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2025,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2030,1
 iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2035,1
@@ -1242,7 +1186,6 @@ iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,1990,1
 iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2005,1
 iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2010,1
 iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2015,1
-iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2020,1
 iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2025,1
 iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2030,1
 iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2035,1
@@ -1264,7 +1207,6 @@ iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,1990,1
 iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2005,1
 iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2010,1
 iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2015,1
-iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2020,1
 iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2025,1
 iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2030,1
 iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2035,1
@@ -1286,7 +1228,6 @@ iron and steel,EAF with scrap,EAF with scrap,scrap,1990,1
 iron and steel,EAF with scrap,EAF with scrap,scrap,2005,1
 iron and steel,EAF with scrap,EAF with scrap,scrap,2010,1
 iron and steel,EAF with scrap,EAF with scrap,scrap,2015,1
-iron and steel,EAF with scrap,EAF with scrap,scrap,2020,1
 iron and steel,EAF with scrap,EAF with scrap,scrap,2025,1
 iron and steel,EAF with scrap,EAF with scrap,scrap,2030,1
 iron and steel,EAF with scrap,EAF with scrap,scrap,2035,1
@@ -1308,7 +1249,6 @@ mining energy use,biomass,biomass,delivered biomass,1990,1
 mining energy use,biomass,biomass,delivered biomass,2005,1
 mining energy use,biomass,biomass,delivered biomass,2010,1
 mining energy use,biomass,biomass,delivered biomass,2015,1
-mining energy use,biomass,biomass,delivered biomass,2020,1
 mining energy use,biomass,biomass,delivered biomass,2025,1
 mining energy use,biomass,biomass,delivered biomass,2030,1
 mining energy use,biomass,biomass,delivered biomass,2035,1
@@ -1330,7 +1270,6 @@ mining energy use,coal,coal,delivered coal,1990,1
 mining energy use,coal,coal,delivered coal,2005,1
 mining energy use,coal,coal,delivered coal,2010,1
 mining energy use,coal,coal,delivered coal,2015,1
-mining energy use,coal,coal,delivered coal,2020,1
 mining energy use,coal,coal,delivered coal,2025,1
 mining energy use,coal,coal,delivered coal,2030,1
 mining energy use,coal,coal,delivered coal,2035,1
@@ -1352,7 +1291,6 @@ mining energy use,district heat,district heat,district heat,1990,1
 mining energy use,district heat,district heat,district heat,2005,1
 mining energy use,district heat,district heat,district heat,2010,1
 mining energy use,district heat,district heat,district heat,2015,1
-mining energy use,district heat,district heat,district heat,2020,1
 mining energy use,district heat,district heat,district heat,2025,1
 mining energy use,district heat,district heat,district heat,2030,1
 mining energy use,district heat,district heat,district heat,2035,1
@@ -1374,7 +1312,6 @@ mining energy use,electricity,electricity,elect_td_ind,1990,1
 mining energy use,electricity,electricity,elect_td_ind,2005,1
 mining energy use,electricity,electricity,elect_td_ind,2010,1
 mining energy use,electricity,electricity,elect_td_ind,2015,1
-mining energy use,electricity,electricity,elect_td_ind,2020,1
 mining energy use,electricity,electricity,elect_td_ind,2025,1
 mining energy use,electricity,electricity,elect_td_ind,2030,1
 mining energy use,electricity,electricity,elect_td_ind,2035,1
@@ -1396,7 +1333,6 @@ mining energy use,gas,gas,wholesale gas,1990,1
 mining energy use,gas,gas,wholesale gas,2005,1
 mining energy use,gas,gas,wholesale gas,2010,1
 mining energy use,gas,gas,wholesale gas,2015,1
-mining energy use,gas,gas,wholesale gas,2020,1
 mining energy use,gas,gas,wholesale gas,2025,1
 mining energy use,gas,gas,wholesale gas,2030,1
 mining energy use,gas,gas,wholesale gas,2035,1
@@ -1418,7 +1354,6 @@ mining energy use,hydrogen,hydrogen,H2 industrial,1990,1
 mining energy use,hydrogen,hydrogen,H2 industrial,2005,1
 mining energy use,hydrogen,hydrogen,H2 industrial,2010,1
 mining energy use,hydrogen,hydrogen,H2 industrial,2015,1
-mining energy use,hydrogen,hydrogen,H2 industrial,2020,1
 mining energy use,hydrogen,hydrogen,H2 industrial,2025,1
 mining energy use,hydrogen,hydrogen,H2 industrial,2030,1
 mining energy use,hydrogen,hydrogen,H2 industrial,2035,1
@@ -1440,7 +1375,6 @@ mining energy use,liquid,liquid,refined liquids industrial,1990,1
 mining energy use,liquid,liquid,refined liquids industrial,2005,1
 mining energy use,liquid,liquid,refined liquids industrial,2010,1
 mining energy use,liquid,liquid,refined liquids industrial,2015,1
-mining energy use,liquid,liquid,refined liquids industrial,2020,1
 mining energy use,liquid,liquid,refined liquids industrial,2025,1
 mining energy use,liquid,liquid,refined liquids industrial,2030,1
 mining energy use,liquid,liquid,refined liquids industrial,2035,1
@@ -1457,3 +1391,69 @@ mining energy use,liquid,liquid,refined liquids industrial,2085,1
 mining energy use,liquid,liquid,refined liquids industrial,2090,1
 mining energy use,liquid,liquid,refined liquids industrial,2095,1
 mining energy use,liquid,liquid,refined liquids industrial,2100,1
+agricultural energy use,biomass,biomass,delivered biomass,2021,1
+agricultural energy use,coal,coal,delivered coal,2021,1
+agricultural energy use,district heat,district heat,district heat,2021,1
+agricultural energy use,electricity,electricity,elect_td_ind,2021,1
+agricultural energy use,gas,gas,wholesale gas,2021,1
+agricultural energy use,hydrogen,hydrogen,H2 industrial,2021,1
+agricultural energy use,liquid,liquid,refined liquids industrial,2021,1
+chemical energy use,biomass,biomass,delivered biomass,2021,1
+chemical energy use,coal,coal,delivered coal,2021,1
+chemical energy use,coal,coal CCS,delivered coal,2021,1
+chemical energy use,district heat,district heat,district heat,2021,1
+chemical energy use,electricity,electricity,elect_td_ind,2021,1
+chemical energy use,gas,gas,wholesale gas,2021,1
+chemical energy use,gas,gas CCS,wholesale gas,2021,1
+chemical energy use,hydrogen,hydrogen,H2 industrial,2021,1
+chemical energy use,liquid,liquid,refined liquids industrial,2021,1
+chemical energy use,liquid,liquid CCS,refined liquids industrial,2021,1
+chemical feedstocks,coal,coal,delivered coal,2021,1
+chemical feedstocks,gas,gas,wholesale gas,2021,1
+chemical feedstocks,liquid,liquid,refined liquids industrial,2021,1
+chemical,chemical,chemical,chemical energy use,2021,1
+chemical,chemical,chemical,chemical feedstocks,2021,1
+coke,coke,coke,delivered coal,2021,1
+coke,coke,coke,elect_td_ind,2021,1
+coke,coke,coke CCS,delivered coal,2021,1
+coke,coke,coke CCS,elect_td_ind,2021,1
+construction,construction,construction,construction energy use,2021,1
+construction,construction,construction,construction feedstocks,2021,1
+construction energy use,biomass,biomass,delivered biomass,2021,1
+construction energy use,coal,coal,delivered coal,2021,1
+construction energy use,district heat,district heat,district heat,2021,1
+construction energy use,electricity,electricity,elect_td_ind,2021,1
+construction energy use,gas,gas,wholesale gas,2021,1
+construction energy use,hydrogen,hydrogen,H2 industrial,2021,1
+construction energy use,liquid,liquid,refined liquids industrial,2021,1
+construction feedstocks,coal,coal,delivered coal,2021,1
+construction feedstocks,gas,gas,wholesale gas,2021,1
+construction feedstocks,liquid,liquid,refined liquids industrial,2021,1
+iron and steel,BLASTFUR,Biomass-based,delivered biomass,2021,1
+iron and steel,BLASTFUR,Biomass-based,elect_td_ind,2021,1
+iron and steel,BLASTFUR,BLASTFUR,coke,2021,1
+iron and steel,BLASTFUR,BLASTFUR,delivered coal,2021,1
+iron and steel,BLASTFUR,BLASTFUR,elect_td_ind,2021,1
+iron and steel,BLASTFUR,BLASTFUR,refined liquids industrial,2021,1
+iron and steel,BLASTFUR,BLASTFUR CCS,coke,2021,1
+iron and steel,BLASTFUR,BLASTFUR CCS,delivered coal,2021,1
+iron and steel,BLASTFUR,BLASTFUR CCS,elect_td_ind,2021,1
+iron and steel,BLASTFUR,BLASTFUR CCS,refined liquids industrial,2021,1
+iron and steel,EAF with DRI,EAF with DRI,elect_td_ind,2021,1
+iron and steel,EAF with DRI,EAF with DRI,refined liquids industrial,2021,1
+iron and steel,EAF with DRI,EAF with DRI,wholesale gas,2021,1
+iron and steel,EAF with DRI,EAF with DRI CCS,elect_td_ind,2021,1
+iron and steel,EAF with DRI,EAF with DRI CCS,refined liquids industrial,2021,1
+iron and steel,EAF with DRI,EAF with DRI CCS,wholesale gas,2021,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,elect_td_ind,2021,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,H2 industrial,2021,1
+iron and steel,EAF with scrap,EAF with scrap,elect_td_ind,2021,1
+iron and steel,EAF with scrap,EAF with scrap,refined liquids industrial,2021,1
+iron and steel,EAF with scrap,EAF with scrap,scrap,2021,1
+mining energy use,biomass,biomass,delivered biomass,2021,1
+mining energy use,coal,coal,delivered coal,2021,1
+mining energy use,district heat,district heat,district heat,2021,1
+mining energy use,electricity,electricity,elect_td_ind,2021,1
+mining energy use,gas,gas,wholesale gas,2021,1
+mining energy use,hydrogen,hydrogen,H2 industrial,2021,1
+mining energy use,liquid,liquid,refined liquids industrial,2021,1

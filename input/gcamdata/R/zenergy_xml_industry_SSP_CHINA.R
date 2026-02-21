@@ -11,10 +11,10 @@
 #' the generated outputs: \code{other_industry_incelas_gcam3_china.xml}, \code{other_industry_incelas_ssp1_china.xml}, \code{other_industry_incelas_ssp2_china.xml}, \code{other_industry_incelas_ssp3_china.xml},
 #' \code{other_industry_incelas_ssp4_china.xml}, \code{other_industry_incelas_ssp5_china.xml}, \code{other_industry_incelas_gssp1_china.xml}, \code{other_industry_incelas_gssp2_china.xml},
 #' \code{other_industry_incelas_gssp3_china.xml}, \code{other_industry_incelas_gssp4_china.xml}, and \code{other_industry_incelas_gssp5_china.xml}.
+#' 08/09/2025 xsl delete gSSP temperately
 module_energy_other_industry_incelas_SSP_CHINA_xml <- function(command, ...) {
 
   INCOME_ELASTICITY_INPUTS <- c("GCAM3",
-                                paste0("gSSP", 1:5),
                                 paste0("SSP", 1:5))
 
   if(command == driver.DECLARE_INPUTS) {
@@ -22,11 +22,6 @@ module_energy_other_industry_incelas_SSP_CHINA_xml <- function(command, ...) {
       paste("L232.IncomeElasticity_ind", tolower(INCOME_ELASTICITY_INPUTS), sep = "_")))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "other_industry_incelas_gcam3_china.xml",
-             XML = "other_industry_incelas_gssp1_china.xml",
-             XML = "other_industry_incelas_gssp2_china.xml",
-             XML = "other_industry_incelas_gssp3_china.xml",
-             XML = "other_industry_incelas_gssp4_china.xml",
-             XML = "other_industry_incelas_gssp5_china.xml",
              XML = "other_industry_incelas_ssp1_china.xml",
              XML = "other_industry_incelas_ssp2_china.xml",
              XML = "other_industry_incelas_ssp3_china.xml",
@@ -36,8 +31,7 @@ module_energy_other_industry_incelas_SSP_CHINA_xml <- function(command, ...) {
 
     # Silence package checks
     other_industry_incelas_gcam3_china.xml <- other_industry_incelas_ssp1_china.xml <- other_industry_incelas_ssp2_china.xml <- other_industry_incelas_ssp3_china.xml <-
-      other_industry_incelas_ssp4_china.xml <- other_industry_incelas_ssp5_china.xml<- other_industry_incelas_gssp1_china.xml<- other_industry_incelas_gssp2_china.xml<-
-      other_industry_incelas_gssp3_china.xml<- other_industry_incelas_gssp4_china.xml <- other_industry_incelas_gssp5_china.xml <- NULL
+      other_industry_incelas_ssp4_china.xml <- other_industry_incelas_ssp5_china.xml<- NULL
 
     all_data <- list(...)[[1]]
 
@@ -48,15 +42,15 @@ module_energy_other_industry_incelas_SSP_CHINA_xml <- function(command, ...) {
       data_obj <- paste0("L232.IncomeElasticity_ind_", tolower(iei))
       xmlfn <- paste0("other_industry_incelas_", tolower(iei), '_china.xml')
 
-	  inclome_data = get_data(all_data, data_obj)
+	  income_data = get_data(all_data, data_obj)
 
-	  inclome_data %>%
+	  income_data %>%
 	  filter(region ==  "China") %>%
 	  write_to_all_provinces(names = c(LEVEL2_DATA_NAMES[["IncomeElasticity"]]),province = province_names_mappings$province)	  ->
-	  inclome_data
+	  income_data
 
       create_xml(xmlfn) %>%
-        add_xml_data(inclome_data, "IncomeElasticity") %>%
+        add_xml_data(income_data, "IncomeElasticity") %>%
         add_precursors(paste0("L232.IncomeElasticity_ind_", tolower(iei)),
                        "gcam-china/province_names_mappings") ->
         xml_obj
@@ -67,9 +61,7 @@ module_energy_other_industry_incelas_SSP_CHINA_xml <- function(command, ...) {
     }
 
 
-    return_data(other_industry_incelas_gcam3_china.xml,
-                other_industry_incelas_ssp1_china.xml, other_industry_incelas_ssp2_china.xml, other_industry_incelas_ssp3_china.xml, other_industry_incelas_ssp4_china.xml, other_industry_incelas_ssp5_china.xml,
-                other_industry_incelas_gssp1_china.xml, other_industry_incelas_gssp2_china.xml, other_industry_incelas_gssp3_china.xml, other_industry_incelas_gssp4_china.xml, other_industry_incelas_gssp5_china.xml)
+    return_data(other_industry_incelas_gcam3_china.xml,other_industry_incelas_ssp1_china.xml, other_industry_incelas_ssp2_china.xml, other_industry_incelas_ssp3_china.xml, other_industry_incelas_ssp4_china.xml, other_industry_incelas_ssp5_china.xml)
   } else {
     stop("Unknown command")
   }

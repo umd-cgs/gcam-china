@@ -1,10 +1,10 @@
 # File: Nuclear_incremental_fixed.csv
 # Title: Electricity generation from nuclear by province
 # Units: EJ
-# Source: 
-# Column types: cnnnn
+# Source: 24/08/2025 xsl copy 2020 to 2021
+# Column types: cnnnnn
 # ----------
-province.name,2015,2020,2025,2030
+province.name,2015,2021,2025,2030
 Anhui,0,0,0,0
 Beijing,0,0,0,0
 Chongqing,0,0,0,0

@@ -9,6 +9,6 @@ grid_region,off.peak.electricity.demand,intermediate.electricity.demand,subpeak.
 East China Grid,0.415,0.4,0.1,0.085
 North China Grid,0.415,0.4,0.1,0.085
 Central China Grid,0.415,0.4,0.1,0.085
-China Southern Power Grid,0.415,0.4,0.1,0.085
+China Southern Power Grid,0.42,0.39,0.105,0.085
 Northwest China Grid,0.415,0.4,0.1,0.085
 Northeast China Grid,0.415,0.4,0.1,0.085

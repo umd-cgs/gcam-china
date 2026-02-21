@@ -4,9 +4,9 @@
 # Source: 2020 MARPOL SO2 controls (aka IMO 2020)
 # Description: New average fleet emission factors due to agreed limits on heavy oil sulfur contents
 # Column types: cccccnnnnnnnnc
-# ---------
+# ---------xsl change 2020 to 2021
 region,supplysector,subsector,stub.technology,Non.CO2,pcGDP_start_NSPS,NSPS_start_year,NSPS_em_coeff,pcGDP_start_retrofit,retrofit_start_year,retrofit_time,retrofit_vintage,retrofit_em_coeff,Notes and sources
-All,trn_shipping_intl,International Ship,Liquids,SO2,NA,2020,0.16,NA,NA,NA,NA,-1,2020 MARPOL SO2 aggreement + recent bunker fuel fuel consumption split between heavy and diesel oil
+All,trn_shipping_intl,International Ship,Liquids,SO2,NA,2021,0.16,NA,NA,NA,NA,-1,2020 MARPOL SO2 aggreement + recent bunker fuel fuel consumption split between heavy and diesel oil
 All,trn_shipping_intl,International Ship,Liquids,SO2,NA,2025,0.155,NA,NA,NA,NA,-1,Modest decrease over time due to assumed shift to diesel/expansion of control areas
 All,trn_shipping_intl,International Ship,Liquids,SO2,NA,2030,0.15,NA,NA,NA,NA,-1,Modest decrease over time due to assumed shift to diesel/expansion of control areas
 All,trn_shipping_intl,International Ship,Liquids,SO2,NA,2035,0.145,NA,NA,NA,NA,-1,Modest decrease over time due to assumed shift to diesel/expansion of control areas

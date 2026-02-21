@@ -11,7 +11,7 @@
 #' the generated outputs: \code{L202.UnlimitRsrc_mapped}, \code{L202.UnlimitRsrc_nonmapped},
 #' \code{L202.UnlimitRsrcPrice_mapped}, \code{L202.UnlimitRsrcPrice_nonmapped}. The corresponding file in the
 #' original data system was \code{L202.water_resources_unlimited.R} (water level2).
-#' @details Create unlimited resource markets (i.e., 32 GCAM regions) for water types (i.e., water consumption, withdrawals, biophysical water consumption and seawater),
+#' @details Create unlimited resource markets (i.e., GCAM regions) for water types (i.e., water consumption, withdrawals, biophysical water consumption and seawater),
 #' and read in fixed prices for water types.
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr distinct filter mutate select
@@ -67,7 +67,7 @@ module_water_L202.water_resources_unlimited <- function(command, ...) {
       ungroup() ->
       L202.region_basin
 
-    # Create unlimied research markets for mapped water types
+    # Create unlimited resource markets for mapped water types
     L202.region_basin %>%
       mutate(unlimited.resource = paste(basin_name, water_type, sep = "_"),
              output.unit = water.WATER_UNITS_QUANTITY,
@@ -84,6 +84,7 @@ module_water_L202.water_resources_unlimited <- function(command, ...) {
       rename(resource = unlimited.resource) %>%
       select(LEVEL2_DATA_NAMES[["Rsrc"]]) ->
       L202.Rsrc_mapped
+
     L202.UnlimitRsrc_mapped %>%
       filter(is_unlimited) %>%
       select(LEVEL2_DATA_NAMES[["UnlimitRsrc"]]) ->

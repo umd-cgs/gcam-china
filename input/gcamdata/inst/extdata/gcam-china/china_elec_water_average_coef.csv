@@ -1,0 +1,16 @@
+# File: china_elec_water_average_coef.csv
+# Title: china average water coefficient for electricity
+# Units: km3/EJ
+# Column types: cnnn
+# ----------
+water_type,year,china_wdraw,china_wcons
+fresh,1990,4.111037115,1.346971161
+fresh,2005,4.135223097,1.12475173
+fresh,2010,3.869000815,1.178572978
+fresh,2015,3.055105939,1.27309085
+seawater,1990,0,0
+seawater,2005,0,0
+seawater,2010,2.86963E-05,0
+seawater,2015,0.001130407,0
+fresh,2021,3.055105939,1.27309085
+seawater,2021,0.001130407,0

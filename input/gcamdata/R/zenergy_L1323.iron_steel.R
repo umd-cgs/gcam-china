@@ -17,12 +17,12 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr arrange bind_rows filter group_by left_join mutate select semi_join summarise summarise_all
 #' @importFrom tidyr gather spread
-#' @author Yang Liu Sep 2019, Siddarth Durga April 2023
+#' @author Yang Liu Sep 2019, Siddarth Durga April 2023,xsl sep 2025
 module_energy_L1323.iron_steel <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "energy/steel_prod_process",
              FILE = "energy/steel_intensity",
-             FILE = "energy/WSA_direct_reduced_iron_2008_2019.csv",
+             FILE = "energy/WSA_direct_reduced_iron_2008_2021.csv",
              FILE = "common/iso_GCAM_regID",
              FILE = "common/GCAM_region_names",
              FILE = "energy/mappings/enduse_fuel_aggregation",
@@ -50,7 +50,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
     # Load required inputs
     #All_steel <- get_data(all_data, "energy/steel_prod", strip_attributes = TRUE)
     All_steel <- get_data(all_data, "energy/steel_prod_process", strip_attributes = TRUE)
-    DRI_stats <- get_data(all_data, "energy/WSA_direct_reduced_iron_2008_2019.csv", strip_attributes = TRUE)
+    DRI_stats <- get_data(all_data, "energy/WSA_direct_reduced_iron_2008_2021.csv", strip_attributes = TRUE)
     A323.subsector_interp <- get_data(all_data, "energy/A323.subsector_interp", strip_attributes = TRUE)
     steel_intensity <- get_data(all_data, "energy/steel_intensity", strip_attributes = TRUE)
     L1322.in_EJ_R_indenergy_F_Yh <- get_data(all_data, "L1322.in_EJ_R_indenergy_F_Yh", strip_attributes = TRUE)
@@ -59,6 +59,32 @@ module_energy_L1323.iron_steel <- function(command, ...) {
     iso_GCAM_regID <- get_data(all_data, "common/iso_GCAM_regID")
     GCAM_region_names <- get_data(all_data, "common/GCAM_region_names")
     enduse_fuel_aggregation <- get_data(all_data, "energy/mappings/enduse_fuel_aggregation")
+
+    # some checking to ensure we have enough historical data to cover the calibration years and issue a warning
+    # and copy forward if no
+    All_steel_years <- unique(All_steel$year)
+    All_steel_max_year <- max(All_steel_years)
+    if (All_steel_max_year < MODEL_FINAL_BASE_YEAR) {
+      warning("energy/steel_prod_process: Copying to fill missing All Steel data. Update data to latest base year.")
+      All_steel_missing_years <- HISTORICAL_YEARS[HISTORICAL_YEARS > All_steel_max_year]
+      All_steel %>%
+        complete(nesting(country_name, unit_prod), year = c(All_steel_years, All_steel_missing_years)) %>%
+        group_by(country_name, unit_prod) %>%
+        # ideally we could just use copy_data_forward_long but we need to extend multiple variables
+        mutate(BLASTFUR = approx_fun(year, BLASTFUR, rule=2),
+               EAF = approx_fun(year, EAF, rule=2)) %>%
+        ungroup() ->
+        All_steel
+    }
+
+    DRI_years <- suppressWarnings(as.integer(names(DRI_stats)))
+    DRI_years <- DRI_years[!is.na(DRI_years)]
+    DRI_max_year <- max(DRI_years)
+    if (DRI_max_year < MODEL_FINAL_BASE_YEAR) {
+      warning("energy/WSA_direct_reduced_iron_2008_2021.csv: Copying to fill missing DRI data. Update data to latest base year.")
+      DRI_missing_years <- HISTORICAL_YEARS[HISTORICAL_YEARS > DRI_max_year]
+      DRI_stats <- copy_data_forward_wide(DRI_stats, DRI_max_year, DRI_missing_years)
+    }
 
     #Estimate DRI (direct reduced iron) consumption from country-wise WSA DRI production, imports, and exports data
     DRI_stats %>%
@@ -79,8 +105,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
              `EAF with DRI`=if_else(`EAF with scrap`<=0,EAF,`EAF with DRI`),
              `EAF with scrap`=if_else(`EAF with scrap`<0,0,`EAF with scrap`))%>%
       select(-EAF)%>%
-      left_join(iso_GCAM_regID,by="country_name")%>%
-      select(-GCAM_region_ID,-country_name,-region_GCAM3)-> All_steel
+      left_join(iso_GCAM_regID,by="country_name") -> All_steel_Ctry
 
 
     # ===================================================
@@ -89,20 +114,19 @@ module_energy_L1323.iron_steel <- function(command, ...) {
     # Recalculate steel production by technology across years to be consistent
     # with the iron and steel trade balance (consumption = production - exports + imports)
     # Change steel production to long format and aggregate to region level
-    All_steel %>%
-      left_join(iso_GCAM_regID, by = "iso") %>%
+    All_steel_Ctry %>%
       #aggregate the production to regional level
       group_by(GCAM_region_ID, year) %>%
       summarise(BLASTFUR=sum(BLASTFUR),`EAF with scrap`=sum(`EAF with scrap`),
-                `EAF with DRI`=sum(`EAF with DRI`))-> All_steel
+                `EAF with DRI`=sum(`EAF with DRI`))-> All_steel_R
 
       #Obtain the index of GCAM_regions and sub sectors that are calibrated to zero steel production in the base-year
-      All_steel %>%
+    All_steel_R %>%
         filter(year==MODEL_FINAL_BASE_YEAR & (`EAF with scrap`==0| BLASTFUR==0 | `EAF with DRI`==0)) %>%
         left_join(GCAM_region_names,by=c("GCAM_region_ID"))-> L1323.index
 
       #add a minimal steel production value (0.5% of the total) to technologies in the base-year where they are calibrated to zero
-      All_steel %>%
+      All_steel_R %>%
         mutate(BLASTFUR=if_else(BLASTFUR==0 & year == MODEL_FINAL_BASE_YEAR,(BLASTFUR+`EAF with scrap`+`EAF with DRI`)*0.005,BLASTFUR),
                `EAF with scrap`=if_else(`EAF with scrap`==0 & year == MODEL_FINAL_BASE_YEAR,(BLASTFUR+`EAF with scrap`+`EAF with DRI`)*0.005,`EAF with scrap`),
                `EAF with DRI`=if_else(`EAF with DRI`==0 & year == MODEL_FINAL_BASE_YEAR,(BLASTFUR+`EAF with scrap`+`EAF with DRI`)*0.005,`EAF with DRI`),
@@ -277,7 +301,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       add_units("Mt iron_steel") %>%
       add_comments("Outputs are collecting from World steel association and then aggregating to GCAM regions") %>%
       add_legacy_name("L1323.out_Mt_R_iron_steel_Yh") %>%
-      add_precursors( "energy/steel_prod_process", "energy/WSA_direct_reduced_iron_2008_2019.csv","common/iso_GCAM_regID",
+      add_precursors( "energy/steel_prod_process", "energy/WSA_direct_reduced_iron_2008_2021.csv","common/iso_GCAM_regID",
                       "LB1092.Tradebalance_iron_steel_Mt_R_Y","common/GCAM_region_names") ->
       L1323.out_Mt_R_iron_steel_Yh
 

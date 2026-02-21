@@ -1,0 +1,41 @@
+# General Options
+DEBUG = false
+DBPATH = D:\GCAM-Updata\Update\gcamv8.2\exe\data
+LOGPATH = .logs
+REPOPATH = D:\GCAM-Updata\Update\gcamv8.2\exe\repo
+LANG = English
+LANGKEYS = false
+FAIRLOCK = false
+CACHETIMEOUT = 3600
+
+# Client/Server Architecture
+HOST = localhost
+PORT = 1984
+SERVERPORT = 1984
+USER = 
+PASSWORD = 
+SERVERHOST = 
+PROXYHOST = 
+PROXYPORT = 0
+NONPROXYHOSTS = 
+IGNORECERT = false
+IGNOREHOSTNAME = false
+TIMEOUT = 30
+KEEPALIVE = 600
+PARALLEL = 8
+LOG = true
+LOGMSGMAXLEN = 1000
+LOGTRACE = true
+
+# HTTP Services
+WEBPATH = D:\GCAM-Updata\Update\gcamv8.2\exe\webapp
+GZIP = false
+RESTPATH = 
+RESTXQPATH = 
+PARSERESTXQ = 3
+RESTXQERRORS = true
+HTTPLOCAL = false
+STOPPORT = 8985
+AUTHMETHOD = Basic
+
+# Local Options

@@ -1,5 +1,5 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
-
+# V8
 #' module_gcamchina_electricity_xml
 #'
 #' Construct XML data structure for \code{electricity_CHINA.xml}.
@@ -10,9 +10,11 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{electricity_CHINA.xml}. The corresponding file in the
 #' original data system was \code{batch_electricity_CHINA_xml.R} (gcamchina XML).
+#' 11TH sEP 2025 xsl modified "L223.StubTechMarket_backup_CHINA" related part
+#'
 module_gcamchina_electricity_xml <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
-    return(c("L223.Supplysector_elec_GRIDR",
+    MODULE_INPUTS <- c("L223.Supplysector_elec_GRIDR",
              "L223.SubsectorShrwtFllt_elec_GRIDR",
              "L223.SubsectorInterp_elec_GRIDR",
              "L223.SubsectorLogit_elec_GRIDR",
@@ -37,7 +39,6 @@ module_gcamchina_electricity_xml <- function(command, ...) {
              "L223.StubTechFixOut_hydro_CHINA",
              "L223.StubTechProd_elec_CHINA",
              "L223.StubTechMarket_elec_CHINA",
-             "L223.StubTechMarket_backup_CHINA",
              "L223.StubTechElecMarket_backup_CHINA",
              "L223.StubTechCapFactor_elec_wind_CHINA",
              "L223.StubTechCapFactor_elec_solar_CHINA",
@@ -67,9 +68,14 @@ module_gcamchina_electricity_xml <- function(command, ...) {
              "L2232.TechCoef_elecownuse_GRIDR",
              "L2232.Production_imports_GRIDR",
              "L2232.Production_elec_gen_GRIDR",
-             "L2232.StubTechElecMarket_backup_CHINA"))
+             "L2232.StubTechElecMarket_backup_CHINA")
 
 
+    if(energy.ELEC_USE_BACKUP) {
+      MODULE_INPUTS <- c(MODULE_INPUTS, "L223.StubTechMarket_backup_CHINA")
+    }
+
+    return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "electricity_CHINA.xml"))
   } else if(command == driver.MAKE) {
@@ -106,7 +112,9 @@ module_gcamchina_electricity_xml <- function(command, ...) {
     L223.StubTechFixOut_hydro_CHINA <- get_data(all_data, "L223.StubTechFixOut_hydro_CHINA")
     L223.StubTechProd_elec_CHINA <- get_data(all_data, "L223.StubTechProd_elec_CHINA")
     L223.StubTechMarket_elec_CHINA <- get_data(all_data, "L223.StubTechMarket_elec_CHINA")
-    L223.StubTechMarket_backup_CHINA <- get_data(all_data, "L223.StubTechMarket_backup_CHINA")
+    if(energy.ELEC_USE_BACKUP) {
+      L223.StubTechMarket_backup_CHINA <- get_data(all_data, "L223.StubTechMarket_backup_CHINA")
+    }
     L223.StubTechElecMarket_backup_CHINA <- get_data(all_data, "L223.StubTechElecMarket_backup_CHINA")
     L223.StubTechCapFactor_elec_wind_CHINA <- get_data(all_data, "L223.StubTechCapFactor_elec_wind_CHINA")
     L223.StubTechCapFactor_elec_solar_CHINA <- get_data(all_data, "L223.StubTechCapFactor_elec_solar_CHINA")
@@ -163,7 +171,6 @@ module_gcamchina_electricity_xml <- function(command, ...) {
       add_xml_data(L223.StubTechFixOut_hydro_CHINA, "StubTechFixOut") %>%
       add_xml_data(L223.StubTechProd_elec_CHINA, "StubTechProd") %>%
       add_xml_data(L223.StubTechMarket_elec_CHINA, "StubTechMarket") %>%
-      add_xml_data(L223.StubTechMarket_backup_CHINA, "StubTechMarket") %>%
       add_xml_data(L223.StubTechElecMarket_backup_CHINA, "StubTechElecMarket") %>%
       add_xml_data(L223.StubTechCapFactor_elec_wind_CHINA, "StubTechCapFactor") %>%
       add_xml_data(L223.StubTechCapFactor_elec_solar_CHINA, "StubTechCapFactor") %>%
@@ -211,7 +218,6 @@ module_gcamchina_electricity_xml <- function(command, ...) {
                      "L223.StubTechFixOut_hydro_CHINA",
                      "L223.StubTechProd_elec_CHINA",
                      "L223.StubTechMarket_elec_CHINA",
-                     "L223.StubTechMarket_backup_CHINA",
                      "L223.StubTechElecMarket_backup_CHINA",
                      "L223.StubTechCapFactor_elec_wind_CHINA",
                      "L223.StubTechCapFactor_elec_solar_CHINA",
@@ -235,6 +241,15 @@ module_gcamchina_electricity_xml <- function(command, ...) {
                      "L2232.Production_elec_gen_GRIDR",
                      "L2232.StubTechElecMarket_backup_CHINA") ->
       electricity_CHINA.xml
+
+    if(energy.ELEC_USE_BACKUP) {
+      electricity_CHINA.xml %>%
+        add_xml_data(L223.StubTechMarket_backup_CHINA, "StubTechMarket") %>%
+        add_precursors("L223.StubTechMarket_backup_CHINA") ->
+        electricity_CHINA.xml
+    } else {
+      # DO NOTHING
+    }
 
     return_data(electricity_CHINA.xml)
   } else {

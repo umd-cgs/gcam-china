@@ -1,0 +1,40 @@
+# File: L245.SubsectorShrwtFllt_CHINA.csv
+# Title: Share weight for subsector municipal water
+# Units: NA
+# Description: Shareweights of 1 for all states due to no competition)
+# Column types: cccnn
+# ----------
+region,supplysector,subsector,year.fillout,share.weight
+AH,municipal water,municipal water,1975,1
+BJ,municipal water,municipal water,1975,1
+CQ,municipal water,municipal water,1975,1
+FJ,municipal water,municipal water,1975,1
+GD,municipal water,municipal water,1975,1
+GS,municipal water,municipal water,1975,1
+GX,municipal water,municipal water,1975,1
+GZ,municipal water,municipal water,1975,1
+HA,municipal water,municipal water,1975,1
+HB,municipal water,municipal water,1975,1
+HE,municipal water,municipal water,1975,1
+HI,municipal water,municipal water,1975,1
+HK,municipal water,municipal water,1975,1
+HL,municipal water,municipal water,1975,1
+HN,municipal water,municipal water,1975,1
+JL,municipal water,municipal water,1975,1
+JS,municipal water,municipal water,1975,1
+JX,municipal water,municipal water,1975,1
+LN,municipal water,municipal water,1975,1
+MC,municipal water,municipal water,1975,1
+NM,municipal water,municipal water,1975,1
+NX,municipal water,municipal water,1975,1
+QH,municipal water,municipal water,1975,1
+SC,municipal water,municipal water,1975,1
+SD,municipal water,municipal water,1975,1
+SH,municipal water,municipal water,1975,1
+SN,municipal water,municipal water,1975,1
+SX,municipal water,municipal water,1975,1
+TJ,municipal water,municipal water,1975,1
+XJ,municipal water,municipal water,1975,1
+XZ,municipal water,municipal water,1975,1
+YN,municipal water,municipal water,1975,1
+ZJ,municipal water,municipal water,1975,1

@@ -1,3 +1,4 @@
+# tip:gcam V8 28/08/2025 xsl add GCAM3 related information based on gcam-china v7
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
 #' module_energy_L2321.cement

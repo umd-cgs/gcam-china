@@ -42,7 +42,8 @@ module_gcamchina_regional_biomass_xml <- function(command, ...) {
              "L2261.StubTechMarket_cement_CHINA",
              "L2261.StubTechMarket_bld_CHINA"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c(XML = "regional_biomass_CHINA.xml"))
+    return(c(XML = "regional_biomass_CHINA.xml",
+             XML = "regional_biomass_nobuilding_CHINA.xml"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -147,7 +148,73 @@ module_gcamchina_regional_biomass_xml <- function(command, ...) {
                      "L2261.StubTechMarket_bld_CHINA") ->
       regional_biomass_CHINA.xml
 
-    return_data(regional_biomass_CHINA.xml)
+
+    #
+    create_xml("regional_biomass_nobuilding_CHINA.xml") %>%
+      add_xml_data(L2261.DeleteSupplysector_bio_CHINA, "DeleteSupplysector") %>%
+      add_node_equiv_xml("sector") %>%
+      add_logit_tables_xml(L2261.Supplysector_bio_CHINA, "Supplysector") %>%
+      add_xml_data(L2261.SubsectorShrwtFllt_bio_CHINA, "SubsectorShrwtFllt") %>%
+      add_xml_data(L2261.SubsectorInterp_bio_CHINA, "SubsectorInterp") %>%
+      add_logit_tables_xml(L2261.SubsectorLogit_bio_CHINA, "SubsectorLogit") %>%
+      add_xml_data(L2261.StubTech_bio_CHINA, "StubTech") %>%
+      add_xml_data(L2261.StubTechMarket_bio_CHINA, "StubTechMarket") %>%
+      # add_xml_data(L2261.StubTechCoef_bioOil_CHINA,"StubTechCoef") %>% # this file has nan value. See file Aglu/IIASA_biofuel_production
+      add_xml_data(L2261.StubTechShrwt_rbO_CHINA, "StubTechShrwt") %>%
+      add_xml_data(L2261.StubTechFractSecOut_bio_CHINA, "StubTechFractSecOut") %>%
+      add_xml_data(L2261.StubTechFractProd_bio_CHINA, "StubTechFractProd") %>%
+      add_xml_data(L2261.StubTechFractCalPrice_bio_CHINA, "StubTechFractCalPrice") %>%
+      add_xml_data(L2261.StubTechCalInput_bio_CHINA, "StubTechCalInput") %>%
+      add_xml_data(L2261.StubTechInterp_bio_CHINA, "StubTechInterp") %>%
+      add_xml_data(L2261.Rsrc_DDGS_CHINA, "Rsrc") %>%
+      add_xml_data(L2261.RsrcPrice_DDGS_CHINA, "RsrcPrice") %>%
+      add_xml_data(L2261.Tech_rbm_CHINA, "Tech") %>%
+      add_xml_data(L2261.TechShrwt_rbm_CHINA, "TechShrwt") %>%
+      add_xml_data(L2261.TechCoef_rbm_CHINA, "TechCoef") %>%
+      add_xml_data(L2261.Tech_dbm_CHINA, "Tech") %>%
+      add_xml_data(L2261.TechShrwt_dbm_CHINA, "TechShrwt") %>%
+      add_xml_data(L2261.TechEff_dbm_CHINA, "TechEff") %>%
+      add_xml_data(L2261.TechCost_dbm_CHINA, "TechCost") %>%
+      add_xml_data(L2261.CarbonCoef_bio_CHINA, "CarbonCoef") %>%
+      add_xml_data(L2261.StubTechMarket_en_CHINA, "StubTechMarket") %>%
+      add_xml_data_generate_levels(L2261.StubTechMarket_elecS_CHINA %>%
+                                     rename(stub.technology = technology),
+                                   "StubTechMarket","subsector","nesting-subsector",1,FALSE) %>%
+      add_xml_data(L2261.StubTechMarket_ind_CHINA, "StubTechMarket") %>%
+      add_xml_data(L2261.StubTechMarket_cement_CHINA, "StubTechMarket") %>%
+      #add_xml_data(L2261.StubTechMarket_bld_CHINA, "StubTechMarket") %>%
+      add_precursors("L2261.DeleteSupplysector_bio_CHINA",
+                     "L2261.Supplysector_bio_CHINA",
+                     "L2261.SubsectorShrwtFllt_bio_CHINA",
+                     "L2261.SubsectorInterp_bio_CHINA",
+                     "L2261.SubsectorLogit_bio_CHINA",
+                     "L2261.StubTech_bio_CHINA",
+                     "L2261.StubTechMarket_bio_CHINA",
+                     "L2261.StubTechCoef_bioOil_CHINA",
+                     "L2261.StubTechShrwt_rbO_CHINA",
+                     "L2261.StubTechFractSecOut_bio_CHINA",
+                     "L2261.StubTechFractProd_bio_CHINA",
+                     "L2261.StubTechFractCalPrice_bio_CHINA",
+                     "L2261.StubTechCalInput_bio_CHINA",
+                     "L2261.StubTechInterp_bio_CHINA",
+                     "L2261.Rsrc_DDGS_CHINA",
+                     "L2261.RsrcPrice_DDGS_CHINA",
+                     "L2261.Tech_rbm_CHINA",
+                     "L2261.TechShrwt_rbm_CHINA",
+                     "L2261.TechCoef_rbm_CHINA",
+                     "L2261.Tech_dbm_CHINA",
+                     "L2261.TechShrwt_dbm_CHINA",
+                     "L2261.TechEff_dbm_CHINA",
+                     "L2261.TechCost_dbm_CHINA",
+                     "L2261.CarbonCoef_bio_CHINA",
+                     "L2261.StubTechMarket_en_CHINA",
+                     "L2261.StubTechMarket_elecS_CHINA",
+                     "L2261.StubTechMarket_ind_CHINA",
+                     "L2261.StubTechMarket_cement_CHINA",
+                     "L2261.StubTechMarket_bld_CHINA") ->
+      regional_biomass_nobuilding_CHINA.xml
+
+    return_data(regional_biomass_CHINA.xml,regional_biomass_nobuilding_CHINA.xml)
   } else {
     stop("Unknown command")
   }

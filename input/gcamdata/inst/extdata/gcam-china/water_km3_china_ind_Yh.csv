@@ -1,0 +1,15 @@
+# File: water_km3_china_ind_Yh.csv
+# Title: china water withdrawal and consumption for industry
+# Units: km3
+# Column types: cncn
+# ----------
+iso,year,water_type,water_km3
+chn,1990,water withdrawals,20.00239378
+chn,2005,water withdrawals,49.97286704
+chn,2010,water withdrawals,74.43426162
+chn,2015,water withdrawals,70.52380246
+chn,1990,water consumption,12.77717001
+chn,2005,water consumption,31.81918032
+chn,2010,water consumption,39.31581459
+chn,2015,water consumption,35.38319064
+chn,2021,water consumption,35.38319064

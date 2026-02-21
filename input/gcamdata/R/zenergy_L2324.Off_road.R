@@ -22,10 +22,6 @@
 #' @author Yang Liu Sep 2019, Molly Charles 2020-21, 2022 modifications from Jay Fuhrman, Siddarth Durga, Page Kyle
 module_energy_L2324.Off_road <- function(command, ...) {
 
-  INCOME_ELASTICITY_OUTPUTS <- c("GCAM3",
-                                 paste0("gSSP", 1:5),
-                                 paste0("SSP", 1:5))
-
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "common/GCAM_region_names",
              FILE = "energy/calibrated_techs",
@@ -136,10 +132,11 @@ module_energy_L2324.Off_road <- function(command, ...) {
 #      anti_join(L2324.rm_heat_techs_R, by = c("region", "subsector")) -> # Remove non-existent heat subsectors from each region
       L2324.SubsectorShrwtFllt_Off_road
 
+    #29th SEP xsl change 2020 to 2021
     #change the share weight in regions where baseyear biomass share weight is 1
     L2324.SubsectorShrwtFllt_Off_road %>%
       filter(region %in% energy.OFF_ROAD.BIOMASS_GROWTH,subsector=="biomass",supplysector == "agricultural energy use") %>%
-      mutate(year.fillout = 2020,share.weight=0.15) ->
+      mutate(year.fillout = 2021,share.weight=0.15) ->
       L2324.SubsectorShrwtFllt_Off_road_add
 
     L2324.SubsectorShrwtFllt_Off_road %>%
@@ -153,15 +150,15 @@ module_energy_L2324.Off_road <- function(command, ...) {
       write_to_all_regions(LEVEL2_DATA_NAMES[["SubsectorInterp"]], GCAM_region_names) ->
       #anti_join(L2324.rm_heat_techs_R, by = c("region", "subsector")) -> # Remove non-existent heat subsectors from each region
       L2324.SubsectorInterp_Off_road
-
+    # 29th SEP xsl change 2020 to 2021
     #change interplate for the regions where baseyear biomass share weight is 1
     L2324.SubsectorInterp_Off_road %>%
       filter(region %in% energy.OFF_ROAD.BIOMASS_GROWTH,subsector=="biomass",supplysector == "agricultural energy use") %>%
-      mutate(from.year=2015,to.year = 2020,interpolation.function="linear") ->
+      mutate(from.year=2015,to.year = 2021,interpolation.function="linear") ->
       L2324.SubsectorInterp_Off_road_add
 
     L2324.SubsectorInterp_Off_road_add %>%
-      mutate(from.year=2020,to.year = 2100,interpolation.function="linear") ->
+      mutate(from.year=2021,to.year = 2100,interpolation.function="linear") ->
       L2324.SubsectorInterp_Off_road_add2
 
     L2324.SubsectorInterp_Off_road %>%
@@ -277,7 +274,7 @@ module_energy_L2324.Off_road <- function(command, ...) {
     # filters base years from original and then appends future years
     L2324.globaltech_retirement_base %>%
       mutate(year = as.integer(year)) %>%
-      filter(year == max(MODEL_BASE_YEARS)) %>%
+      filter(year == MODEL_FINAL_BASE_YEAR) %>%
       bind_rows(L2324.globaltech_retirement_future) ->
       L2324.globaltech_retirement
 

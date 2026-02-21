@@ -1,7 +1,7 @@
 # File: A323.UnlimitRsrcPrice_CHINA.csv
-# Title: Information about scrap resources price in China, 3000 CNY/ton based on the current Chinese scrap price, and converting it to US dollars（1$ = 7 ¥） and then discounting it to 1975
+# Title: Information about scrap resources price in China, 3000 CNY/ton based on the current Chinese scrap price, and converting it to US dollars��1$ = 7 ���� and then discounting it to 1975
 # Units: 1975$/kg
-# Source: Prices estimated
+# Source: Prices estimated 24/08/2025 xsl copy 2015 to 2021
 # Column types: ccin
 # ----------
 region,unlimited.resource,year,price
@@ -160,3 +160,34 @@ XJ,scrap,2015,0.114889706
 XZ,scrap,2015,0.114889706
 YN,scrap,2015,0.114889706
 ZJ,scrap,2015,0.114889706
+AH,scrap,2021,0.114889706
+BJ,scrap,2021,0.114889706
+CQ,scrap,2021,0.114889706
+FJ,scrap,2021,0.114889706
+GD,scrap,2021,0.114889706
+GS,scrap,2021,0.114889706
+GX,scrap,2021,0.114889706
+GZ,scrap,2021,0.114889706
+HA,scrap,2021,0.114889706
+HB,scrap,2021,0.114889706
+HE,scrap,2021,0.114889706
+HI,scrap,2021,0.114889706
+HL,scrap,2021,0.114889706
+HN,scrap,2021,0.114889706
+JL,scrap,2021,0.114889706
+JS,scrap,2021,0.114889706
+JX,scrap,2021,0.114889706
+LN,scrap,2021,0.114889706
+NM,scrap,2021,0.114889706
+NX,scrap,2021,0.114889706
+QH,scrap,2021,0.114889706
+SC,scrap,2021,0.114889706
+SD,scrap,2021,0.114889706
+SH,scrap,2021,0.114889706
+SN,scrap,2021,0.114889706
+SX,scrap,2021,0.114889706
+TJ,scrap,2021,0.114889706
+XJ,scrap,2021,0.114889706
+XZ,scrap,2021,0.114889706
+YN,scrap,2021,0.114889706
+ZJ,scrap,2021,0.114889706

@@ -1,54 +1,54 @@
 # File: A323.globaltech_cost.csv
-# Title: Default costs
+# Title: Default costs 24/08/2025 xsl copy 2015 to 2021
 # Units: 1975$/kg(for iron and steel, coke) or 1975$/GJ (for other industry sector)
-# Column types: ccccnnnnn
+# Column types: ccccnnnnnn
 # ---------
-supplysector,subsector,technology,minicam.non.energy.input,1971,2015,2030,2060,2100
-chemical energy use,biomass,biomass,non-energy,3,3,3,3,3
-agricultural energy use,biomass,biomass,non-energy,18.84,18.84,18.84,18.84,18.84
-mining energy use,biomass,biomass,non-energy,37.05,37.05,37.05,37.05,37.05
-construction energy use,biomass,biomass,non-energy,55.56,55.56,55.56,55.56,55.56
-iron and steel,BLASTFUR,Biomass-based,non-energy,0.08321,0.08321,0.08321,0.08321,0.08321
-iron and steel,BLASTFUR,BLASTFUR,non-energy,0.11223572,0.11223572,0.11223572,0.11223572,0.11223572
-iron and steel,BLASTFUR,BLASTFUR CCS,non-energy,0.13723572,0.13723572,0.13723572,0.13723572,0.13723572
-chemical,chemical,chemical,non-energy,25,25,25,25,25
-chemical energy use,coal,coal,non-energy,3,3,3,3,3
-chemical feedstocks,coal,coal,non-energy,3,3,3,3,3
-agricultural energy use,coal,coal,non-energy,5,5,5,5,5
-mining energy use,coal,coal,non-energy,5,5,5,5,5
-construction energy use,coal,coal,non-energy,5,5,5,5,5
-construction feedstocks,coal,coal,non-energy,0.995098039,0.995098039,0.995098039,0.995098039,0.995098039
-chemical energy use,coal,coal CCS,non-energy,3.5,3.5,3.5,3.5,3.5
-coke,coke,coke,non-energy,0.004595588,0.004595588,0.004595588,0.004595588,0.004595588
-coke,coke,coke CCS,non-energy,0.00844668,0.00844668,0.00844668,0.00844668,0.00844668
-construction,construction,construction,non-energy,3,3,3,3,3
-agricultural energy use,district heat,district heat,non-energy,5,5,5,5,5
-chemical energy use,district heat,district heat,non-energy,3,3,3,3,3
-construction energy use,district heat,district heat,non-energy,5,5,5,5,5
-mining energy use,district heat,district heat,non-energy,5,5,5,5,5
-iron and steel,EAF with DRI,EAF with DRI,non-energy,0.12137964,0.12137964,0.12137964,0.12137964,0.12137964
-iron and steel,EAF with DRI,EAF with DRI CCS,non-energy,0.122384151,0.122384151,0.122384151,0.122384151,0.122384151
-iron and steel,EAF with scrap,EAF with scrap,non-energy,0.0737324,0.0737324,0.04423944,0.04423944,0.04423944
-chemical energy use,electricity,electricity,non-energy,0.824509804,0.824509804,0.544666667,0.054466667,0.054466667
-agricultural energy use,electricity,electricity,non-energy,29.7672,29.7672,29.7672,29.7672,29.7672
-mining energy use,electricity,electricity,non-energy,58.539,58.539,58.539,58.539,58.539
-construction energy use,electricity,electricity,non-energy,87.7848,87.7848,87.7848,87.7848,87.7848
-chemical energy use,gas,gas,non-energy,3,3,3,3,3
-chemical feedstocks,gas,gas,non-energy,3,3,3,3,3
-agricultural energy use,gas,gas,non-energy,18.84,18.84,18.84,18.84,18.84
-mining energy use,gas,gas,non-energy,37.05,37.05,37.05,37.05,37.05
-construction energy use,gas,gas,non-energy,55.56,55.56,55.56,55.56,55.56
-construction feedstocks,gas,gas,non-energy,18.84,18.84,18.84,18.84,18.84
-chemical energy use,gas,gas CCS,non-energy,3.5,3.5,3.5,3.5,3.5
-chemical energy use,hydrogen,hydrogen,non-energy,3,3,3,3,3
-agricultural energy use,hydrogen,hydrogen,non-energy,22.608,22.608,22.608,22.608,22.608
-mining energy use,hydrogen,hydrogen,non-energy,44.46,44.46,44.46,44.46,44.46
-construction energy use,hydrogen,hydrogen,non-energy,66.672,66.672,66.672,66.672,66.672
-iron and steel,EAF with DRI,Hydrogen-based DRI,non-energy,0.097785,0.097785,0.097785,0.097785,0.097785
-chemical energy use,liquid,liquid,non-energy,3,3,3,3,3
-chemical feedstocks,liquid,liquid,non-energy,3,3,3,3,3
-agricultural energy use,liquid,liquid,non-energy,18.84,18.84,18.84,18.84,18.84
-mining energy use,liquid,liquid,non-energy,37.05,37.05,37.05,37.05,37.05
-construction energy use,liquid,liquid,non-energy,55.56,55.56,55.56,55.56,55.56
-construction feedstocks,liquid,liquid,non-energy,18.84,18.84,18.84,18.84,18.84
-chemical energy use,liquid,liquid CCS,non-energy,3.5,3.5,3.5,3.5,3.5
+supplysector,subsector,technology,minicam.non.energy.input,1971,2015,2021,2030,2060,2100
+chemical energy use,biomass,biomass,non-energy,3,3,3,3,3,3
+agricultural energy use,biomass,biomass,non-energy,18.84,18.84,18.84,18.84,18.84,18.84
+mining energy use,biomass,biomass,non-energy,37.05,37.05,37.05,37.05,37.05,37.05
+construction energy use,biomass,biomass,non-energy,55.56,55.56,55.56,55.56,55.56,55.56
+iron and steel,BLASTFUR,Biomass-based,non-energy,0.08321,0.08321,0.08321,0.08321,0.08321,0.08321
+iron and steel,BLASTFUR,BLASTFUR,non-energy,0.11223572,0.11223572,0.11223572,0.11223572,0.11223572,0.11223572
+iron and steel,BLASTFUR,BLASTFUR CCS,non-energy,0.13723572,0.13723572,0.13723572,0.13723572,0.13723572,0.13723572
+chemical,chemical,chemical,non-energy,25,25,25,25,25,25
+chemical energy use,coal,coal,non-energy,3,3,3,3,3,3
+chemical feedstocks,coal,coal,non-energy,3,3,3,3,3,3
+agricultural energy use,coal,coal,non-energy,5,5,5,5,5,5
+mining energy use,coal,coal,non-energy,5,5,5,5,5,5
+construction energy use,coal,coal,non-energy,5,5,5,5,5,5
+construction feedstocks,coal,coal,non-energy,0.995098039,0.995098039,0.995098039,0.995098039,0.995098039,0.995098039
+chemical energy use,coal,coal CCS,non-energy,3.5,3.5,3.5,3.5,3.5,3.5
+coke,coke,coke,non-energy,0.004595588,0.004595588,0.004595588,0.004595588,0.004595588,0.004595588
+coke,coke,coke CCS,non-energy,0.00844668,0.00844668,0.00844668,0.00844668,0.00844668,0.00844668
+construction,construction,construction,non-energy,3,3,3,3,3,3
+agricultural energy use,district heat,district heat,non-energy,5,5,5,5,5,5
+chemical energy use,district heat,district heat,non-energy,3,3,3,3,3,3
+construction energy use,district heat,district heat,non-energy,5,5,5,5,5,5
+mining energy use,district heat,district heat,non-energy,5,5,5,5,5,5
+iron and steel,EAF with DRI,EAF with DRI,non-energy,0.12137964,0.12137964,0.12137964,0.12137964,0.12137964,0.12137964
+iron and steel,EAF with DRI,EAF with DRI CCS,non-energy,0.122384151,0.122384151,0.122384151,0.122384151,0.122384151,0.122384151
+iron and steel,EAF with scrap,EAF with scrap,non-energy,0.0737324,0.0737324,0.0737324,0.04423944,0.04423944,0.04423944
+chemical energy use,electricity,electricity,non-energy,0.824509804,0.824509804,0.824509804,0.544666667,0.054466667,0.054466667
+agricultural energy use,electricity,electricity,non-energy,29.7672,29.7672,29.7672,29.7672,29.7672,29.7672
+mining energy use,electricity,electricity,non-energy,58.539,58.539,58.539,58.539,58.539,58.539
+construction energy use,electricity,electricity,non-energy,87.7848,87.7848,87.7848,87.7848,87.7848,87.7848
+chemical energy use,gas,gas,non-energy,3,3,3,3,3,3
+chemical feedstocks,gas,gas,non-energy,3,3,3,3,3,3
+agricultural energy use,gas,gas,non-energy,18.84,18.84,18.84,18.84,18.84,18.84
+mining energy use,gas,gas,non-energy,37.05,37.05,37.05,37.05,37.05,37.05
+construction energy use,gas,gas,non-energy,55.56,55.56,55.56,55.56,55.56,55.56
+construction feedstocks,gas,gas,non-energy,18.84,18.84,18.84,18.84,18.84,18.84
+chemical energy use,gas,gas CCS,non-energy,3.5,3.5,3.5,3.5,3.5,3.5
+chemical energy use,hydrogen,hydrogen,non-energy,3,3,3,3,3,3
+agricultural energy use,hydrogen,hydrogen,non-energy,22.608,22.608,22.608,22.608,22.608,22.608
+mining energy use,hydrogen,hydrogen,non-energy,44.46,44.46,44.46,44.46,44.46,44.46
+construction energy use,hydrogen,hydrogen,non-energy,66.672,66.672,66.672,66.672,66.672,66.672
+iron and steel,EAF with DRI,Hydrogen-based DRI,non-energy,0.097785,0.097785,0.097785,0.097785,0.097785,0.097785
+chemical energy use,liquid,liquid,non-energy,3,3,3,3,3,3
+chemical feedstocks,liquid,liquid,non-energy,3,3,3,3,3,3
+agricultural energy use,liquid,liquid,non-energy,18.84,18.84,18.84,18.84,18.84,18.84
+mining energy use,liquid,liquid,non-energy,37.05,37.05,37.05,37.05,37.05,37.05
+construction energy use,liquid,liquid,non-energy,55.56,55.56,55.56,55.56,55.56,55.56
+construction feedstocks,liquid,liquid,non-energy,18.84,18.84,18.84,18.84,18.84,18.84
+chemical energy use,liquid,liquid CCS,non-energy,3.5,3.5,3.5,3.5,3.5,3.5

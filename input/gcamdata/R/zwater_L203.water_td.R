@@ -31,7 +31,7 @@ module_water_L203.water_td <- function(command, ...) {
              "L1233.wcons_km3_R_elec",
              "L133.water_demand_livestock_R_B_W_km3",
              "L125.LC_bm2_R_GLU",
-             "L132.water_km3_R_ind_Yh",
+             "L173.water_all_km3_R_ind_Yh",
              "L145.municipal_water_R_W_Yh_km3",
              "L165.ag_IrrEff_R",
              "L171.share_R_desal_basin",
@@ -70,7 +70,7 @@ module_water_L203.water_td <- function(command, ...) {
     L1233.wcons_km3_R_elec <- get_data(all_data, "L1233.wcons_km3_R_elec", strip_attributes = TRUE)
     L133.water_demand_livestock_R_B_W_km3 <- get_data(all_data, "L133.water_demand_livestock_R_B_W_km3", strip_attributes = TRUE)
     L125.LC_bm2_R_GLU <- get_data(all_data, "L125.LC_bm2_R_GLU", strip_attributes = TRUE)
-    L132.water_km3_R_ind_Yh <- get_data(all_data, "L132.water_km3_R_ind_Yh", strip_attributes = TRUE)
+    L173.water_all_km3_R_ind_Yh <- get_data(all_data, "L173.water_all_km3_R_ind_Yh", strip_attributes = TRUE)
     L145.municipal_water_R_W_Yh_km3 <- get_data(all_data, "L145.municipal_water_R_W_Yh_km3", strip_attributes = TRUE)
     L165.ag_IrrEff_R <- get_data(all_data, "L165.ag_IrrEff_R", strip_attributes = TRUE)
     L171.share_R_desal_basin <- get_data(all_data, "L171.share_R_desal_basin", strip_attributes = TRUE)
@@ -165,7 +165,7 @@ module_water_L203.water_td <- function(command, ...) {
     # Subsector share-weight interpolation (for competition between basins - fixed share-weight interpolation)
     L203.SubsectorInterp_watertd <- L203.SubsectorLogit_watertd %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = MODEL_FINAL_BASE_YEAR,
              to.year = max(MODEL_YEARS),
              interpolation.function = "fixed") %>%
       select(LEVEL2_DATA_NAMES[["SubsectorInterp"]])
@@ -176,6 +176,9 @@ module_water_L203.water_td <- function(command, ...) {
     # as the water flow volume divided by the conveyance efficiency.
     L203.ag_IrrEff_R <- left_join(L165.ag_IrrEff_R, GCAM_region_names, by = "GCAM_region_ID") %>%
       select(region, conveyance.eff)
+
+    #L203.ag_IrrEff_R <- L203.ag_IrrEff_R %>%
+    #  mutate(conveyance.eff = if_else(region == "China", 1, conveyance.eff))
 
     L203.TechCoef_watertd <- L203.water_td_info %>%
       repeat_add_columns(tibble(year = MODEL_YEARS)) %>%
@@ -191,7 +194,7 @@ module_water_L203.water_td <- function(command, ...) {
     # read in a default value of 1, with a fixed interpolation rule from the final model base year
     L203.TechInterp_watertd <- L203.water_td_info %>%
       mutate(apply.to = "share-weight",
-             from.year = max(MODEL_BASE_YEARS),
+             from.year = MODEL_FINAL_BASE_YEAR,
              to.year = max(MODEL_YEARS),
              interpolation.function = "fixed") %>%
       select(LEVEL2_DATA_NAMES[["TechInterp"]])
@@ -229,7 +232,7 @@ module_water_L203.water_td <- function(command, ...) {
 
     # Prepare the water withdrawals by industry and municipal sectors for merging, merge, and deduct
     # the input of desalinated water above to calibrate the input from "water withdrawals"
-    L203.water_km3_R_ind_Yh <- mutate(L132.water_km3_R_ind_Yh, water.sector = water.MANUFACTURING) %>%
+    L203.water_km3_R_ind_Yh <- mutate(L173.water_all_km3_R_ind_Yh, water.sector = water.MANUFACTURING) %>%
       filter(water_type == "water withdrawals") %>%
       rename(total_water_km3 = water_km3)
 
@@ -260,7 +263,7 @@ module_water_L203.water_td <- function(command, ...) {
       mutate(water_type = "water withdrawals")
     L203.water_km3_elec <- bind_rows(L1233.wdraw_km3_R_elec, L1233.wcons_km3_R_elec) %>%
       mutate(water.sector = "Electricity")
-    L203.water_km3_ind <- L132.water_km3_R_ind_Yh %>%
+    L203.water_km3_ind <- L173.water_all_km3_R_ind_Yh %>%
       rename(value = water_km3) %>%
       mutate(water.sector = water.MANUFACTURING)
     L203.water_km3_livestock <- L133.water_demand_livestock_R_B_W_km3 %>%
@@ -295,6 +298,12 @@ module_water_L203.water_td <- function(command, ...) {
              tech.share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
       set_subsector_shrwt(value_col = "calOutputValue") %>%
       select(LEVEL2_DATA_NAMES[["Production"]])
+
+    #South Asia, GangesR, calibration (20250620)
+    #L203.Production_watertd <- L203.Production_watertd %>%
+    #  mutate(calOutputValue = if_else(
+    #    region == "South Asia" & supplysector == "water_td_elec_W" & subsector == "GangesR" & technology == "water withdrawals" & year == 1990,
+    #    0.06611, calOutputValue))
 
     # Final step - build desalination pass-through sectors, for tracking the use of desalinated water by basin
     L203.R_desal_basin <- L171.share_R_desal_basin %>%
@@ -425,7 +434,7 @@ module_water_L203.water_td <- function(command, ...) {
                      "L110.in_km3_water_primary",
                      "L1233.wdraw_km3_R_elec",
                      "L1233.wcons_km3_R_elec",
-                     "L132.water_km3_R_ind_Yh",
+                     "L173.water_all_km3_R_ind_Yh",
                      "L133.water_demand_livestock_R_B_W_km3",
                      "L145.municipal_water_R_W_Yh_km3",
                      "L171.share_R_desal_basin",

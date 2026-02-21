@@ -1,0 +1,8 @@
+# File: L245.DeleteSupplysector_CHINA.csv
+# Title: DeleteSupplysector_CHINA
+# Units: NA
+# Description:  Remove the China municipal demands to make way for province level
+# Column types: ccc
+# ----------
+region,supplysector,energy.final.demand
+China,municipal water,municipal water

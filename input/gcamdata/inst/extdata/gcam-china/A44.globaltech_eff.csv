@@ -1,9 +1,9 @@
 # File: A44.globaltech_eff.csv
 # Title: Building default input efficiencies
-# Units: Unitless
+# Units: Unitless 24/08/2025 xsl copy 2020 to 2021
 # Column types: ccccnnnnnnnnnn
 # ----------
-supplysector,subsector,technology,minicam.energy.input,1971,1990,2005,2020,2035,2050,2065,2080,2095,2100
+supplysector,subsector,technology,minicam.energy.input,1971,1990,2005,2021,2035,2050,2065,2080,2095,2100
 resid_rural heating modern,traditional biomass,trad wood furnace,traditional biomass,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15
 resid_rural heating modern,coal,coal furnace,delivered coal,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438
 resid_rural heating modern,biomass,wood furnace,delivered biomass,0.4,0.4,0.4,0.406,0.412,0.418,0.425,0.431,0.438,0.438

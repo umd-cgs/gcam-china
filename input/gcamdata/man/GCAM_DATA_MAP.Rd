@@ -6,7 +6,7 @@
 \title{GCAM_DATA_MAP}
 \format{
 A tibble with columns: name (chunk that produces the data), output (name of the data object),
-precursors (colon seperated list of precursors), title, units, comments, flags (typically metadata for processing)
+precursors (colon separated list of precursors), title, units, comments, flags (typically metadata for processing)
 }
 \usage{
 GCAM_DATA_MAP

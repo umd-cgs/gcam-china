@@ -1,0 +1,40 @@
+# File: L245.PerCapitaBased_CHINA.csv
+# Title: PerCapitaBased_CHINA
+# Units: NA
+# Description: Final energy demand category repeated for all provinces
+# Column types: ccn
+# ----------
+region,energy.final.demand,perCapitaBased
+AH,municipal water,1
+BJ,municipal water,1
+CQ,municipal water,1
+FJ,municipal water,1
+GD,municipal water,1
+GS,municipal water,1
+GX,municipal water,1
+GZ,municipal water,1
+HA,municipal water,1
+HB,municipal water,1
+HE,municipal water,1
+HI,municipal water,1
+HK,municipal water,1
+HL,municipal water,1
+HN,municipal water,1
+JL,municipal water,1
+JS,municipal water,1
+JX,municipal water,1
+LN,municipal water,1
+MC,municipal water,1
+NM,municipal water,1
+NX,municipal water,1
+QH,municipal water,1
+SC,municipal water,1
+SD,municipal water,1
+SH,municipal water,1
+SN,municipal water,1
+SX,municipal water,1
+TJ,municipal water,1
+XJ,municipal water,1
+XZ,municipal water,1
+YN,municipal water,1
+ZJ,municipal water,1

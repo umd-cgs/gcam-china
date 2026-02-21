@@ -1,0 +1,8 @@
+# File: L245.DeleteFinalDemand_CHINA.csv
+# Title: DeleteFinalDemand_CHINA
+# Units: NA
+# Description: Remove the China municipal demands to make way for province level
+# Column types: cc
+# ----------
+region,energy.final.demand
+China,municipal water

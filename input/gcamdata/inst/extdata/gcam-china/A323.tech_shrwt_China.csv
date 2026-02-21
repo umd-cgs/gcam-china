@@ -1,8 +1,8 @@
 # File: A323.tech_shrwt_China.csv
 # Title: Passthough default shareweights which affects the distribution of national demand across provinces.
 # Units: Unitless
-# Column types: cccii
-# ----------
+# Column types: ccciii
+# ---------- xsl add 2021
 supplysector,subsector,technology,1971,2100
 iron and steel,iron and steel,iron and steel,1,1
 coke,coke,coke,1,1

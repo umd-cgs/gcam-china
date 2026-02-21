@@ -54,11 +54,11 @@ module_gcamchina_L1323.detailed_industry <- function(command, ...) {
 
    #split feedstock and energy use
    L1323.in_EJ_province_detailed_industry_F_Y %>%
-      filter(supplysector %in% c("chemical feedstock","construction feedstocks") ) ->
+      filter(supplysector %in% c("chemical feedstocks","construction feedstocks") ) ->
       L1323.in_EJ_province_detailed_industry_F_Y_feedstock
 
    L1323.in_EJ_province_detailed_industry_F_Y %>%
-      filter(!(supplysector %in% c("chemical feedstock","construction feedstocks")) ) ->
+      filter(!(supplysector %in% c("chemical feedstocks","construction feedstocks")) ) ->
       L1323.in_EJ_province_detailed_industry_F_Y
 
     #IO

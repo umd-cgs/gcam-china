@@ -1,13 +1,14 @@
 # File: future_hydro_gen_EJ.csv
 # Title: Planned hydro electricity generation
 # Units: EJ
-# Description: Planned hydro electricity generation
-# Source:  WEO 2019 Current Policies Scenario
+# Description: Planned hydro electricity generation,
+# Source:2020,2021 values are derived from NEA; 2025 value are derived from WEO 2019 Current Policies Scenario; other value are derived from WEO2023 Stated Policies Scenario."
 # Column types: nn
 # ----------
 year,value
-2020,4.334532374
+2020,4.878365731
+2021,4.823974082
 2025,4.636690647
-2030,4.996402878
-2035,5.309352518
-2040,5.571942446
+2030,5.253419726
+2035,5.1825054
+2040,4.854024

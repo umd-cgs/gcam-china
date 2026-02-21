@@ -565,7 +565,7 @@ module_gcamchina_L2323.detailed_industry <- function(command, ...) {
       add_units("NA") %>%
       add_comments("Added detailed_industry supplysector") %>%
       add_legacy_name("L2323.Supplysector_detailed_industry") %>%
-      add_precursors("gcam-china/calibrated_techs", "gcam-china/A323.sector") ->
+      add_precursors("gcam-china/calibrated_techs", "gcam-china/A323.sector","gcam-china/A323.sector_China") ->
       L2323.Supplysector_detailed_industry
 
     L2323.FinalEnergyKeyword_detailed_industry %>%
