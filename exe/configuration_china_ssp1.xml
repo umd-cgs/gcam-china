@@ -23,8 +23,8 @@
 		<Value name = "resources">../input/gcamdata/xml/resources.xml</Value>
 		<Value name = "energy_supply">../input/gcamdata/xml/en_supply.xml</Value>
 		<Value name = "energy_transformation">../input/gcamdata/xml/en_transformation.xml</Value>
-		<Value name = "electricity">../input/gcamdata/xml/electricity.xml</Value>
-		<!--Value name = "elec_water_base">../input/gcamdata/xml/electricity.xml</Value-->
+		<!--Value name = "electricity">../input/gcamdata/xml/electricity.xml</Value-->
+		<Value name = "elec_water_base">../input/gcamdata/xml/electricity_water.xml</Value>
 		<Value name = "heat">../input/gcamdata/xml/heat.xml</Value>
 		<Value name = "hydrogen">../input/gcamdata/xml/hydrogen.xml</Value>
 		<Value name = "energy_distribution">../input/gcamdata/xml/en_distribution.xml</Value>
@@ -89,7 +89,7 @@
 		<Value name = "ind_water">../input/gcamdata/xml/water_demand_industry.xml</Value>
 		<Value name = "an_water">../input/gcamdata/xml/water_demand_livestock.xml</Value>
 		<Value name = "municipal_water">../input/gcamdata/xml/water_demand_municipal.xml</Value>
-		<Value name = "primary_ene_water">../input/gcamdata/xml/water_demand_primary.xml</Value-->
+		<Value name = "primary_ene_water">../input/gcamdata/xml/water_demand_primary.xml</Value>
 
 		<Value name = "ind_urb_proc">../input/gcamdata/xml/ind_urb_processing_sectors.xml</Value>
 		<Value name = "nonco2_energy">../input/gcamdata/xml/all_energy_emissions.xml</Value>
@@ -99,7 +99,7 @@
 		<Value name = "nonco2_aglu_prot">../input/gcamdata/xml/all_protected_unmgd_emissions.xml</Value>
 		<Value name = "nonco2_em_controls">../input/gcamdata/xml/emission_factor_controls.xml</Value>
 
-		<Value name = "nonco2_TradBio">../input/gcamdata/xml/ssp2_emissions_factors_tradBio.xml</Value--> 
+		<Value name = "nonco2_TradBio">../input/gcamdata/xml/ssp2_emissions_factors_tradBio.xml</Value> 
 		
 		<!-- Global nonCO2 GHG MAC files -->
 		<Value name = "nonco2_energy">../input/gcamdata/xml/all_energy_emissions_MAC.xml</Value>
@@ -115,7 +115,7 @@
 		
 		<Value name = "bio_feedstock_limit">../input/gcamdata/xml/liquids_limits.xml</Value>
 		<Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget.xml</Value>
-		<!--Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value-->
+		<Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value-->
 		<Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
 		<Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
 		<Value name="wind">../input/gcamdata/xml/wind_adv.xml</Value>

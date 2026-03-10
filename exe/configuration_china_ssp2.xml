@@ -23,8 +23,8 @@
 		<Value name = "resources">../input/gcamdata/xml/resources.xml</Value>
 		<Value name = "energy_supply">../input/gcamdata/xml/en_supply.xml</Value>
 		<Value name = "energy_transformation">../input/gcamdata/xml/en_transformation.xml</Value>
-		<Value name = "electricity">../input/gcamdata/xml/electricity.xml</Value>
-		<!--Value name = "elec_water_base">../input/gcamdata/xml/electricity.xml</Value-->
+		<!--Value name = "electricity">../input/gcamdata/xml/electricity.xml</Value-->
+		<Value name = "elec_water_base">../input/gcamdata/xml/electricity_water.xml</Value>
 		<Value name = "heat">../input/gcamdata/xml/heat.xml</Value>
 		<Value name = "hydrogen">../input/gcamdata/xml/hydrogen.xml</Value>
 		<Value name = "energy_distribution">../input/gcamdata/xml/en_distribution.xml</Value>
@@ -112,7 +112,7 @@
 		
 		<Value name = "bio_feedstock_limit">../input/gcamdata/xml/liquids_limits.xml</Value>
 		<Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget.xml</Value>
-		<!--Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value-->
+		<Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value>
 		<Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
 		<Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
 		<Value name="ccs">../input/gcamdata/xml/ccs_supply_low.xml</Value>
