@@ -6,7 +6,7 @@ REM before loading GCAM.
 REM Users may set the following location to the appropriate Java Runtime installation location
 REM instead of trying to detect the appropriate location.  This may be necessary if the default
 REM Java version is the 32-bit runtime.
-SET JAVA_HOME=C:\Program Files\Java\jre1.8.0_461
+REM SET JAVA_HOME=C:\Program Files\Java\jre1.8.0_461
 
 
 REM Attempt to use XMLDBDriver which will print the java.home property of the Java Runtime

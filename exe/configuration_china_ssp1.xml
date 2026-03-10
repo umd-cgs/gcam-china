@@ -162,7 +162,6 @@
 		<Value name = "neg_emiss_china">../input/gcamdata/xml/negative_emissions_budget_CHINA.xml</Value>
 		<Value name = "regional_biomass">../input/gcamdata/xml/regional_biomass_CHINA.xml</Value>
 
-
 		<!--WATER DATA-->
 		<Value name = "water_td_china">../input/gcamdata/xml/water_td_CHINA.xml</Value>
 		<Value name = "municipal_water_china">../input/gcamdata/xml/water_demand_municipal_CHINA.xml</Value>
