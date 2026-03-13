@@ -5370,7 +5370,7 @@ A user can adjust the query to search for any of:
             </supplyDemandQuery>
         </queryGroup>
     </queryGroup>
-    <queryGroup name="GCAM USA">
+    <queryGroup name="GCAM China">
         <queryGroup name="primary energy">
             <supplyDemandQuery title="primary energy consumption by region (direct equivalent)">
                 <axis1 name="fuel">input[@name]</axis1>
@@ -5463,15 +5463,6 @@ A user can adjust the query to search for any of:
                 </labelRewriteList>
             </supplyDemandQuery>
         </queryGroup>
-        <queryGroup name="industry">
-            <supplyDemandQuery title="industry water withdrawals and consumption">
-                <axis1 name="input">input</axis1>
-                <axis2 name="Year">physical-output[@vintage]</axis2>
-                <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and (@name='industry' or (exists(child::keyword[@final-energy='industry'])))]//
-                *[@type='output' and contains(@name,'water_td')]/physical-output/node()</xPath>
-                <comments/>
-            </supplyDemandQuery>
-        </queryGroup>
         <queryGroup name="energy transformation">
             <queryGroup name="electricity">
                 <supplyDemandQuery title="elec gen by region (no CHP)">
@@ -5505,7 +5496,7 @@ A user can adjust the query to search for any of:
                         physical-output/node()</xPath>
                     <comments/>
                 </supplyDemandQuery>
-                <supplyDemandQuery title="elec gen by gen tech and cooling tech (incl cogen)">
+                <supplyDemandQuery title="elec gen by gen tech (incl cogen)">
                     <axis1 name="technology">technology</axis1>
                     <axis2 name="Year">physical-output[@vintage]</axis2>
                     <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' and (@name='electricity' or 
@@ -5735,15 +5726,6 @@ A user can adjust the query to search for any of:
                     <comments/>
                 </supplyDemandQuery>
                 <supplyDemandQuery title="elec share-weights by gen tech">
-                    <axis1 name="subsector">subsector</axis1>
-                    <axis2 name="Year">share-weight</axis2>
-                    <xPath buildList="true" dataName="share-weight" group="false" sumAll="false">*[@type='sector' and (@name='electricity' or @name='base load generation' or 
-               @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]//
-               *[@type='subsector' and not (@name='elect_td_bld' or @name='biomass' or @name='coal' or @name='gas' or @name='geothermal' or 
-               @name='grid_storage' or @name='hydro' or @name='nuclear' or @name='refined liquids' or @name='solar' or @name='wind')]/share-weight/node()</xPath>
-                    <comments/>
-                </supplyDemandQuery>
-                <supplyDemandQuery title="elec share-weights by cooling tech">
                     <axis1 name="technology">technology</axis1>
                     <axis2 name="Year">technology</axis2>
                     <xPath buildList="true" dataName="share-weight" group="false" sumAll="false">*[@type='sector' and (@name='electricity' or @name='base load generation' or 
