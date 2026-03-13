@@ -77,7 +77,7 @@ xcuserdata
 .Rproj.user
 input/gcamdata/inst/extdata/emissions/CEDS/desktop.ini
 exe/exe.rar
-exe/debug
+exe/debug*
 exe/log-gcam-run
 add-on
 *.command
