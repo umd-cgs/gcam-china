@@ -5465,16 +5465,6 @@ A user can adjust the query to search for any of:
         </queryGroup>
         <queryGroup name="energy transformation">
             <queryGroup name="electricity">
-                <supplyDemandQuery title="elec gen by region (no CHP)">
-                    <axis1 name="region">region</axis1>
-                    <axis2 name="Year">physical-output[@vintage]</axis2>
-                    <xPath buildList="true" dataName="output" group="false" sumAll="true">*[@type='sector' (:collapse:)]//
-               *[@type='technology' (:collapse:) and not (@name='elect_td_bld')]/
-               *[@type='output' (:collapse:)  and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
-               @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
-               physical-output/node()</xPath>
-                    <comments/>
-                </supplyDemandQuery>
                 <supplyDemandQuery title="elec gen by subsector">
                     <axis1 name="subsector">subsector</axis1>
                     <axis2 name="Year">physical-output[@vintage]</axis2>
@@ -5482,18 +5472,6 @@ A user can adjust the query to search for any of:
                @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
                *[@type='subsector' and not (@name='elect_td_bld')]//*[@type='output' (:collapse:)]/
                physical-output/node()</xPath>
-                    <comments/>
-                </supplyDemandQuery>
-                <supplyDemandQuery title="elec gen by gen tech (cogen only)">
-                    <axis1 name="technology">technology</axis1>
-                    <axis2 name="Year">physical-output[@vintage]</axis2>
-                    <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' (:collapse:) and (@name='electricity' or 
-                        @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or 
-                        @name='elect_td_bld' or @name='industrial energy use')]/
-                        *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
-                        *[@type='output' (:collapse:) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
-                        @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
-                        physical-output/node()</xPath>
                     <comments/>
                 </supplyDemandQuery>
                 <supplyDemandQuery title="elec gen by gen tech (incl cogen)">
