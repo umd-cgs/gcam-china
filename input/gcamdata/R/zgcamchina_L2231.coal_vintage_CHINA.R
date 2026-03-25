@@ -71,7 +71,7 @@ module_gcamchina_L2231.coal_vintage <- function(command, ...) {
     provNamesMapping <- get_data(all_data, "gcam-china/province_names_mappings", strip_attributes = TRUE)
 
 
-    gcamchina.COAL_VINTAGE_LABELS <- c("before 1990", "1991-1995","1996-2000", "2001-2005", "2006-2010", "2011-2015","2015-2021")
+    gcamchina.COAL_VINTAGE_LABELS <- c("before 1990", "1991-1995","1996-2000", "2001-2005", "2006-2010", "2011-2015","2016-2021")
     gcamchina.AVG_COAL_PLANT_LIFETIME <- 40
     MODEL_BASE_YEARS <- c(1975,1990,2005,2010,2015,2021)
     gcamchina.COAL_RETIRE_STEEPNESS<- 0.3
@@ -82,19 +82,19 @@ module_gcamchina_L2231.coal_vintage <- function(command, ...) {
 gen_dist_prov %>%
   dplyr::rename("before 1990" = "install<=1990", "1991-1995" = "1990<install<=1995",
                 "1996-2000" = "1995<install<=2000","2001-2005" = "2000<install<=2005",
-                "2006-2010" = "2005<install<=2010","2011-2015" = "2010<install<=2015","2015-2021" = "2015<install<=2021") %>%
+                "2006-2010" = "2005<install<=2010","2011-2015" = "2010<install<=2015","2016-2021" = "2015<install<=2021") %>%
   dplyr::mutate(province.name = gsub("Ningxia Hui","Ningxia", province.name)) %>%
   dplyr::filter(province.name != "Hong Kong") %>%
   dplyr::left_join(provNamesMapping) %>%
   tidyr::gather(key = vintage.bin, value = generation, gcamchina.COAL_VINTAGE_LABELS) %>%
   dplyr::mutate(generation = ifelse(is.na(generation), 0, generation),
-                Operating.Year = as.numeric(substr(vintage.bin, nchar(vintage.bin)-3, nchar(vintage.bin))),  #每?? vintage ?????谢??? ????????????????一??投??
+                Operating.Year = as.numeric(substr(vintage.bin, nchar(vintage.bin)-3, nchar(vintage.bin))),
                 Retirement.Year = Operating.Year + gcamchina.AVG_COAL_PLANT_LIFETIME,
                 lifetime = gcamchina.AVG_COAL_PLANT_LIFETIME - (max(MODEL_BASE_YEARS) - Operating.Year)) %>%
   dplyr::select("province", "vintage.bin", "generation", "lifetime", "Operating.Year") %>%
   group_by(province) %>%
   mutate(share.vintage = generation / sum(generation),
-         share.vintage = ifelse(is.na(share.vintage), 1/(length(gcamchina.COAL_VINTAGE_LABELS)), share.vintage)) %>%   #每??省?荩????梅??缂????姆????荻?
+         share.vintage = ifelse(is.na(share.vintage), 1/(length(gcamchina.COAL_VINTAGE_LABELS)), share.vintage)) %>%   #�???�??�?????�???�?????�?????�??
   ungroup() ->
   L2231.coal_vintage_gen_2021
 
@@ -124,9 +124,9 @@ L2231.coal_vintage_gen_2021 %>%
 # ##check if historically there is not much correlation between efficiency of a generator in China and its vintage.
 
 
-L2231.StubTechProd_coal_vintage_CHINA %>%      #?????????莼???只??2015????
+L2231.StubTechProd_coal_vintage_CHINA %>%
   select(region, supplysector, subsector, year, stub.technology, stub.technology.new) %>%
-  complete(nesting(region, supplysector, subsector, stub.technology, stub.technology.new), year = MODEL_BASE_YEARS)%>%   #??????year锟斤拷展???????械?????
+  complete(nesting(region, supplysector, subsector, stub.technology, stub.technology.new), year = MODEL_BASE_YEARS)%>%   #??????year锟斤拷展???????�??????
   left_join(L2234.StubTechEff_elecS_CHINA,
             by = c("region", "supplysector", "subsector", "stub.technology", "year"))%>%
   filter(complete.cases(.))%>%
@@ -140,7 +140,7 @@ L2231.StubTechProd_coal_vintage_CHINA %>%      #?????????莼???只??2015????
 
 # Changed markets to be based off of L223.StubTechMarket_elec_CHINA, rather than L2231.StubTechEff_coal_vintage_CHINA,
 # so that the markets are at provincial level rather than electrical grid region level
-L2231.StubTechProd_coal_vintage_CHINA %>%  #????????CCS
+L2231.StubTechProd_coal_vintage_CHINA %>%
   filter(year == max(MODEL_BASE_YEARS)) %>%
   select(LEVEL2_DATA_NAMES[["StubTechYr"]], stub.technology.new) %>%
   complete(nesting(region, supplysector, subsector, stub.technology, stub.technology.new), year = MODEL_FUTURE_YEARS)%>%
@@ -255,7 +255,7 @@ L2231.GlobalTech %>%
             by = c("sector.name", "subsector.name", "stub.technology" = "technology", "year")) %>%
   mutate(half.life = ifelse(Operating.Year == min(unique(L2231.GlobalTech$Operating.Year), na.rm = T),
                             lifetime - 2*vintage_timestep,
-                            lifetime - vintage_timestep),      #???系????鄹???
+                            lifetime - vintage_timestep),
          # half life has to at minimum be one time period past calibration year
          lifetime = ifelse(half.life <= 0, vintage_timestep + vintage_timestep, lifetime),
          half.life = ifelse(half.life <= 0, vintage_timestep, half.life),

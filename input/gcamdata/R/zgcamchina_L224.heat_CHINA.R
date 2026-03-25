@@ -299,7 +299,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
     L224.StubTechSecOut_elec_china_no_gas %>%
       left_join(
         L2231.StubTechProd_coal_vintage_CHINA %>%
-          filter(year == max(MODEL_BASE_YEARS)) %>%  #?????æ¬ ?åª??è¦2015????shareweight
+          filter(year == max(MODEL_BASE_YEARS)) %>%  #?????æ¬??å???è¦?2015????shareweight
           select(-calOutputValue) %>%
           spread(key = "stub.technology", value = tech.share.weight),
         by = c("region", "subsector", "supplysector", "year")
@@ -309,7 +309,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
               `coal_base_conv pul 2001-2005` = case_when(stub.technology == "coal_base_conv pul" ~ 1),
               `coal_base_conv pul 2006-2010` = case_when(stub.technology == "coal_base_conv pul" ~ 1),
               `coal_base_conv pul 2011-2015` = case_when(stub.technology == "coal_base_conv pul" ~ 1),
-              `coal_base_conv pul 2015-2021` = case_when(stub.technology == "coal_base_conv pul" ~ 1),
+              `coal_base_conv pul 2016-2021` = case_when(stub.technology == "coal_base_conv pul" ~ 1),
               `coal_base_conv pul before 1990` = case_when(stub.technology == "coal_base_conv pul" ~ 1),
               `coal_base_conv pul` = case_when(stub.technology == "coal_base_conv pul" ~ 1),
               `coal_int_conv pul 1991-1995` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
@@ -317,7 +317,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
               `coal_int_conv pul 2001-2005` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
               `coal_int_conv pul 2006-2010` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
               `coal_int_conv pul 2011-2015` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
-              `coal_int_conv pul 2015-2021` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
+              `coal_int_conv pul 2016-2021` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
               `coal_int_conv pul before 1990` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
               `coal_int_conv pul` = case_when(stub.technology == "coal_int_conv pul" ~ 1),
               `coal_peak_conv pul 1991-1995` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
@@ -325,7 +325,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
               `coal_peak_conv pul 2001-2005` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
               `coal_peak_conv pul 2006-2010` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
               `coal_peak_conv pul 2011-2015` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
-              `coal_peak_conv pul 2015-2021` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
+              `coal_peak_conv pul 2016-2021` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
               `coal_peak_conv pul before 1990` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
               `coal_peak_conv pul` = case_when(stub.technology == "coal_peak_conv pul" ~ 1),
               `coal_subpeak_conv pul 1991-1995` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1),
@@ -333,7 +333,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
               `coal_subpeak_conv pul 2001-2005` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1),
               `coal_subpeak_conv pul 2006-2010` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1),
               `coal_subpeak_conv pul 2011-2015` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1),
-              `coal_subpeak_conv pul 2015-2021` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1),
+              `coal_subpeak_conv pul 2016-2021` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1),
               `coal_subpeak_conv pul before 1990` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1),
               `coal_subpeak_conv pul` = case_when(stub.technology == "coal_subpeak_conv pul" ~ 1)
       ) %>%
