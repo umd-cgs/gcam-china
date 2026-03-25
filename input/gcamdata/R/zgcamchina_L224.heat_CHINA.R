@@ -299,7 +299,7 @@ module_gcamchina_L224_China.heat <- function(command, ...) {
     L224.StubTechSecOut_elec_china_no_gas %>%
       left_join(
         L2231.StubTechProd_coal_vintage_CHINA %>%
-          filter(year == max(MODEL_BASE_YEARS)) %>%  #?????æ¬??å???è¦?2015????shareweight
+          filter(year == max(MODEL_BASE_YEARS)) %>% 
           select(-calOutputValue) %>%
           spread(key = "stub.technology", value = tech.share.weight),
         by = c("region", "subsector", "supplysector", "year")

@@ -94,7 +94,7 @@ gen_dist_prov %>%
   dplyr::select("province", "vintage.bin", "generation", "lifetime", "Operating.Year") %>%
   group_by(province) %>%
   mutate(share.vintage = generation / sum(generation),
-         share.vintage = ifelse(is.na(share.vintage), 1/(length(gcamchina.COAL_VINTAGE_LABELS)), share.vintage)) %>%   #æ¯???çœ??è?????æ¢???ç¼?????å§?????è??
+         share.vintage = ifelse(is.na(share.vintage), 1/(length(gcamchina.COAL_VINTAGE_LABELS)), share.vintage)) %>%
   ungroup() ->
   L2231.coal_vintage_gen_2021
 
@@ -126,7 +126,7 @@ L2231.coal_vintage_gen_2021 %>%
 
 L2231.StubTechProd_coal_vintage_CHINA %>%
   select(region, supplysector, subsector, year, stub.technology, stub.technology.new) %>%
-  complete(nesting(region, supplysector, subsector, stub.technology, stub.technology.new), year = MODEL_BASE_YEARS)%>%   #??????yearé”Ÿæ–¤æ‹·å±•???????æ¢??????
+  complete(nesting(region, supplysector, subsector, stub.technology, stub.technology.new), year = MODEL_BASE_YEARS)%>%
   left_join(L2234.StubTechEff_elecS_CHINA,
             by = c("region", "supplysector", "subsector", "stub.technology", "year"))%>%
   filter(complete.cases(.))%>%
